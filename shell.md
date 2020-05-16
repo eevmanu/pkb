@@ -754,6 +754,25 @@ $ sudo tcpdump \
         'src google.com and tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'
 ```
 
+- [How do I measure request and response times at once using cURL?](https://stackoverflow.com/questions/18215389/how-do-i-measure-request-and-response-times-at-once-using-curl)
+
+    Create a new file, `curl-format.txt`, and paste in:
+    ```
+        time_namelookup:            %{time_namelookup}s     \n
+        time_connect:               %{time_connect}s        \n
+        time_appconnect:            %{time_appconnect}s     \n
+        time_pretransfer:           %{time_pretransfer}s    \n
+        time_redirect:              %{time_redirect}s       \n
+        time_starttransfer:         %{time_starttransfer}s  \n
+                                    ------------------------\n
+        time_total:                 %{time_total}s          \n
+    ```
+
+    Make a request:
+    ```bash
+    $ curl -w "@curl-format.txt" -o /dev/null -s "http://wordpress.com/"
+    ```
+
 - list `network` interfaces
 
 ```bash
