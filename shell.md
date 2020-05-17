@@ -942,6 +942,22 @@ Device     Start       End   Sectors   Size Type
 # verify disk is detected
 # verify disk has partitions
 ```
+
+- [smartmontools](https://www.smartmontools.org/) - ontains two utility programs (smartctl and smartd) to control and monitor storage systems using the Self-Monitoring, Analysis and Reporting Technology System (SMART) built into most modern ATA/SATA, SCSI/SAS and NVMe disks.
+
+```bash
+# 7.1	2019-12-30 @ (2020-05-17 18:45:51)
+$ apt install -s smartmontools
+...
+Inst smartmontools (6.4+svn4214-1 Ubuntu:16.04/xenial [amd64])
+...
+
+# install it
+$ apt install smartmontools
+
+# use it
+$ sudo smartctl -d scsi --all /dev/sda
+```
 ## Resources
 
 - Extra tools
