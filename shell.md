@@ -998,6 +998,31 @@ bInterfaceSubClass 6 SCSI
 bInterfaceProtocol 98
 iInterface 0
 ```
+
+- `dmesg`
+
+```
+$ dmesg
+...
+[24392.072927] usb 2-3: new SuperSpeed USB device number 10 using xhci_hcd
+[24392.096204] usb 2-3: New USB device found, idVendor=2109, idProduct=0715
+[24392.096217] usb 2-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[24392.096225] usb 2-3: Product: VLI Product String
+[24392.096231] usb 2-3: Manufacturer: VLI Manufacture String
+[24392.096237] usb 2-3: SerialNumber: 000000123ADA
+[24392.100232] scsi host9: uas
+[24392.108615] scsi 9:0:0:0: Direct-Access CT250MX5 00SSD1 M3CR PQ: 0 ANSI: 6
+[24392.110751] sd 9:0:0:0: [sda] 488397168 512-byte logical blocks: (250 GB/233 GiB)
+[24392.110769] sd 9:0:0:0: [sda] 4096-byte physical blocks
+[24392.110822] sd 9:0:0:0: Attached scsi generic sg0 type 0
+[24392.111653] sd 9:0:0:0: [sda] Write Protect is off
+[24392.111671] sd 9:0:0:0: [sda] Mode Sense: 2f 00 00 00
+[24392.111965] sd 9:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[24392.116725] sda:
+[24392.118849] sd 9:0:0:0: [sda] Attached SCSI disk
+...
+```
+
 ## Resources
 
 - Extra tools
