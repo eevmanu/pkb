@@ -929,12 +929,15 @@ $ sudo update-rc.d -f nginx disable
     - [neofetch](https://github.com/dylanaraps/neofetch) - A command-line system information tool written in bash 3.2+
     - [pi-hole](https://github.com/pi-hole/pi-hole) - A black hole for Internet advertisements
     - [logex](https://github.com/kennyparsons/logex) - A bash-based, terminal notes/logging utility
+
 - Learn more commands
     - [pure-bash-bible](https://github.com/dylanaraps/pure-bash-bible) - A collection of pure bash alternatives to external processes.
     - [Command-line-text-processing](https://github.com/learnbyexample/Command-line-text-processing) -  From finding text to search and replace, from sorting to beautifying text and more
     - [terminals-are-sexy](https://github.com/k4m4/terminals-are-sexy) - A curated list of Terminal frameworks, plugins & resources for CLI lovers.
+
 - Zsh
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish shell like syntax highlighting for Zsh
     - [spaceship-prompt](https://github.com/denysdovhan/spaceship-prompt) - A Zsh prompt for Astronauts
+
 - Performance tools
     - [perf-tools](https://github.com/brendangregg/perf-tools) - Performance analysis tools based on Linux perf_events (aka perf) and ftrace
