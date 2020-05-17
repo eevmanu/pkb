@@ -654,6 +654,4 @@ $ wget http://cdn.geekbench.com/Geekbench-5.1.0-Linux.tar.gz
 - mtr
 - nethogs
 
-- [exa](https://github.com/ogham/exa) - A modern version of `ls`
-- [fd](https://github.com/sharkdp/fd) - A simple, fast and user-friendly alternative to 'find'
-
+- [FiraCode](https://github.com/tonsky/FiraCode) - Free monospaced font with programming ligatures
