@@ -930,6 +930,7 @@ $ sudo update-rc.d -f nginx disable
 - Extra tools
     - [neofetch](https://github.com/dylanaraps/neofetch) - A command-line system information tool written in bash 3.2+
     - [pi-hole](https://github.com/pi-hole/pi-hole) - A black hole for Internet advertisements
+    - [logex](https://github.com/kennyparsons/logex) - A bash-based, terminal notes/logging utility
 - Learn more commands
     - [pure-bash-bible](https://github.com/dylanaraps/pure-bash-bible) - A collection of pure bash alternatives to external processes.
     - [Command-line-text-processing](https://github.com/learnbyexample/Command-line-text-processing) -  From finding text to search and replace, from sorting to beautifying text and more
