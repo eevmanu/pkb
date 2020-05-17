@@ -923,6 +923,25 @@ $ sudo nginx -c /etc/nginx/nginx.conf -t
 $ sudo update-rc.d -f nginx disable
 ```
 
+- `fdisk`
+
+```bash
+$ sudo fdisk -l
+# e.g. example of portable SSD
+...
+Disk /dev/sda: 232,9 GiB, 250059350016 bytes, 488397168 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 33553920 bytes
+Disklabel type: gpt
+Disk identifier: 3A5CEFCE-3945-4681-98F1-9189291166D5
+
+Device     Start       End   Sectors   Size Type
+/dev/sda1   2048 488397134 488395087 232,9G Linux filesystem
+
+# verify disk is detected
+# verify disk has partitions
+```
 ## Resources
 
 - Extra tools
