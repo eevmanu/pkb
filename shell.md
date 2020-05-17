@@ -969,6 +969,35 @@ $ lsscsi
 [9:0:0:0]    disk    CT250MX5 00SSD1           M3CR  /dev/sda
 ```
 
+- `lsusb`
+
+```
+$ lsusb
+Bus 002 Device 005: ID 2109:0715 VIA Labs, Inc.
+...
+
+$ lsusb -t
+/: Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci_hcd/6p, 5000M
+|__ Port 3: Dev 5, If 0, Class=Mass Storage, Driver=uas, 5000M
+...
+
+$ lsusb -v -d 2109:0715 | grep -i interface
+Couldn't open device, some information will be missing
+bDeviceClass 0 (Defined at Interface level)
+bNumInterfaces 1
+Interface Descriptor:
+bInterfaceNumber 0
+bInterfaceClass 8 Mass Storage
+bInterfaceSubClass 6 SCSI
+bInterfaceProtocol 80 Bulk-Only
+iInterface 0
+Interface Descriptor:
+bInterfaceNumber 0
+bInterfaceClass 8 Mass Storage
+bInterfaceSubClass 6 SCSI
+bInterfaceProtocol 98
+iInterface 0
+```
 ## Resources
 
 - Extra tools
