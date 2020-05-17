@@ -958,6 +958,17 @@ $ apt install smartmontools
 # use it
 $ sudo smartctl -d scsi --all /dev/sda
 ```
+
+- `lsscsi` - list all SCSI devices (or hosts) currently on system
+
+```bash
+# install it
+$ apt install lsscsi
+
+$ lsscsi
+[9:0:0:0]    disk    CT250MX5 00SSD1           M3CR  /dev/sda
+```
+
 ## Resources
 
 - Extra tools
