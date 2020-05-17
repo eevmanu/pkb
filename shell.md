@@ -929,6 +929,17 @@ $ sudo update-rc.d -f nginx disable
     - [neofetch](https://github.com/dylanaraps/neofetch) - A command-line system information tool written in bash 3.2+
     - [pi-hole](https://github.com/pi-hole/pi-hole) - A black hole for Internet advertisements
     - [logex](https://github.com/kennyparsons/logex) - A bash-based, terminal notes/logging utility
+    - [exa](https://github.com/ogham/exa) - A modern version of `ls`
+    - [fd](https://github.com/sharkdp/fd) - A simple, fast and user-friendly alternative to 'find'
+    - [bat](https://github.com/sharkdp/bat) - A cat(1) clone with wings.
+    - [ripgrep](https://github.com/BurntSushi/ripgrep) - ripgrep recursively searches directories for a regex pattern
+    - [fzf](https://github.com/junegunn/fzf) - A command-line fuzzy finder
+    - [xsv](https://github.com/BurntSushi/xsv) - A fast CSV command line toolkit written in Rust.
+    - [coreutils](https://github.com/uutils/coreutils) - Cross-platform Rust rewrite of the GNU coreutils
+    - [hyperfine](https://github.com/sharkdp/hyperfine) - A command-line benchmarking tool
+    - [monolith](https://github.com/Y2Z/monolith) - CLI tool for saving complete web pages as a single HTML file
+    - [sd](https://github.com/chmln/sd) - Intuitive find & replace CLI (sed alternative)
+    - [flamegraph](https://github.com/flamegraph-rs/flamegraph) - Easy flamegraphs for Rust projects and everything else, without Perl or pipes <3
 
 - Learn more commands
     - [pure-bash-bible](https://github.com/dylanaraps/pure-bash-bible) - A collection of pure bash alternatives to external processes.
