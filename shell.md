@@ -925,8 +925,6 @@ $ sudo update-rc.d -f nginx disable
 
 ## Resources
 
-- Fonts
-    - [FiraCode](https://github.com/tonsky/FiraCode) - Free monospaced font with programming ligatures
 - Extra tools
     - [neofetch](https://github.com/dylanaraps/neofetch) - A command-line system information tool written in bash 3.2+
     - [pi-hole](https://github.com/pi-hole/pi-hole) - A black hole for Internet advertisements
