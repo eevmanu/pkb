@@ -461,6 +461,10 @@ $ sudo dd \
     status=progress \
     if=/path/to/ubuntu-18.04.3-desktop-amd64.iso \
     of=/dev/sda
+
+# dont forget to umount previously USB before burning iso
+# assuming /dev/sda1 is partition inside USB (/dev/sda)
+$ sudo umount /dev/sda1
 ```
 
 - force creation of file and create intermediate folders even when don't exist
