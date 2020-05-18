@@ -586,6 +586,31 @@ $ jupyter notebook
   - [How To Install Java with Apt on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-20-04)
 
 
+## Save data to my SSD before format
+
+```
+$ du -sh Documents/
+$ du -sh Downloads/
+$ du -sh Music/
+$ du -sh Pictures/
+$ du -sh Projects/
+$ du -sh Videos/
+
+$ sudo rsync -aPv --delete $HOME/Documents/ /media/$USER/manu/Documents/
+$ sudo rsync -aPv --delete $HOME/Downloads/ /media/$USER/manu/Downloads/
+$ sudo rsync -aPv --delete $HOME/Music/ /media/$USER/manu/Music/
+$ sudo rsync -aPv --delete $HOME/Pictures/ /media/$USER/manu/Pictures/
+$ sudo rsync -aPv --delete $HOME/Projects/ /media/$USER/manu/Projects/
+$ sudo rsync -aPv --delete $HOME/Videos/ /media/$USER/manu/Videos/
+
+$ sudo rsync -aPv /media/$USER/manu/Documents/ $HOME/Documents/
+$ sudo rsync -aPv /media/$USER/manu/Downloads/ $HOME/Downloads/
+$ sudo rsync -aPv /media/$USER/manu/Music/ $HOME/Music/
+$ sudo rsync -aPv /media/$USER/manu/Pictures/ $HOME/Pictures/
+$ sudo rsync -aPv /media/$USER/manu/Projects/ $HOME/Projects/
+$ sudo rsync -aPv /media/$USER/manu/Videos/ $HOME/Videos/
+```
+
 ## Troubleshooting
 
 - Spotify - [SOLVED: Spotify desktop client communication failed | Mike Dixson](https://mikedixson.com/2014/11/solved-spotify-desktop-client-communication-failed/)
