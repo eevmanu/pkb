@@ -82,6 +82,8 @@ $ df -h
 
 # file space on specific path
 $ du -shc *
+# e.g.
+$ du -sh $HOME/Downloads/
 
 # max depth of analysis
 $ du --max-depth=1 -h -BM
