@@ -272,18 +272,22 @@ $ pdfunit {{ file 1 }}.pdf {{ file 2 }}.pdf ... out.pdf
 $ date
 ```
 
-- `rsync`
+- [rsync](https://linux.die.net/man/1/rsync)
     - [How To Use Rsync to Sync Local and Remote Directories on a VPS](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps)
 
 ```bash
--a # keey file properties
--n # make a test
--v # verbose
--r # recursive
--z # compress
--P # partial progress
+-a # --archive archive mode; equals -rlptgoD (no -H,-A,-X)
+-r # --dry-run recurse into directories
+-n # --partial perform a trial run with no changes made
+-P # --progress same as --partial --progress
+-z # compress file data during the transfer (only in slow connections)
+-v # --verbose increase verbosity
+--delete # delete extraneous files from dest dirs
 
-$ rsync -avrP
+$ rsync -anPv SRC ... [DEST]
+# e.g.
+$ rsync -aPv --delete $HOME/Documents/ /media/$USER/manu/Documents/
+$ rsync -aPv /media/$USER/manu/Documents/ $HOME/Documents/
 ```
 
 - `wget`
