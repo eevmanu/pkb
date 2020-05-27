@@ -347,20 +347,20 @@
     - create new item in menu
         - adding **.desktop** file in */usr/share/applications/*
 
-            ```
-            [Desktop Entry]
-            Name=Git Cola
-            Comment=The highly caffeinated Git GUI
-            Comment[zh_TW]=高咖啡因含量的 Git 圖形介面
-            TryExec=git-cola
-            Exec=$HOME/bin/git-cola --prompt
-            Icon=git-cola
-            StartupNotify=true
-            Terminal=false
-            Type=Application
-            Categories=Development;RevisionControl;
-            X-KDE-SubstituteUID=false
-            ```
+        ```
+        [Desktop Entry]
+        Name=Git Cola
+        Comment=The highly caffeinated Git GUI
+        Comment[zh_TW]=高咖啡因含量的 Git 圖形介面
+        TryExec=git-cola
+        Exec=$HOME/bin/git-cola --prompt
+        Icon=git-cola
+        StartupNotify=true
+        Terminal=false
+        Type=Application
+        Categories=Development;RevisionControl;
+        X-KDE-SubstituteUID=false
+        ```
 
 - [htop](https://github.com/hishamhm/htop) - htop is an interactive text-mode process viewer for Unix systems. It aims to be a better 'top'.
 
