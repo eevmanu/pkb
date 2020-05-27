@@ -472,7 +472,7 @@
     # -L {{ number }}, where {{ number }} is level of depth
     # -p Print the protections for each file.
 
-    $ apt install tree
+    $ sudo apt install tree
     ```
 
 - [docker](https://github.com/moby/moby)
