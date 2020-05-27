@@ -167,11 +167,23 @@ non capital first letter private
 - [go please - official language server for the Go language](https://github.com/golang/tools/blob/master/gopls/README.md)
     - [User Guide](https://github.com/golang/tools/blob/master/gopls/doc/user.md)
 
-Roadmap & Interview Questions
-- [Go Developer Roadmap](https://github.com/Alikhll/golang-developer-roadmap)
-- [Golang Software Engineer Roadmap](https://github.com/dzyanis/roadmap)
-- [Ultimate Go study guide](https://github.com/hoanhan101/ultimate-go)
-- [116+ Coding Interview Problems with Detailed Solutions](https://github.com/hoanhan101/algo)
+Interesting tools:
+- [fzf](https://github.com/junegunn/fzf) - fuzzy finder
+- [rclone](https://github.com/rclone/rclone) - rsync for cloud storage
+- [dive](https://github.com/wagoodman/dive) - A tool for exploring each layer in a docker image
+- [ngrok](https://github.com/inconshreveable/ngrok) - Introspected tunnels to localhost
+- [logrus](https://github.com/sirupsen/logrus) - Structured, pluggable logging for Go
+- [vegeta](https://github.com/tsenart/vegeta) - HTTP load testing tool and library
+- [hey](https://github.com/rakyll/hey) - HTTP load generator, ApacheBench (ab) replacement, formerly known as rakyll/boom
+- [goreplay](https://github.com/buger/goreplay) - capturing and replaying live HTTP traffic
+- [annie](https://github.com/iawia002/annie) - Fast, simple and clean video downloader
+- [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
+- [pspy](https://github.com/DominicBreuker/pspy) - Monitor linux processes without root permissions
+- [migrate](https://github.com/golang-migrate/migrate) - Database migrations. CLI and Golang library.
+- [go-fault](https://github.com/github/go-fault) - Fault injection library in Go using standard http middleware
+- [grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway) - gRPC to JSON proxy generator following the gRPC HTTP spec
+- [viper](https://github.com/spf13/viper) - Go configuration with fangs
+- [validator](https://github.com/go-playground/validator) - Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving
 
 Interesting Github Repos
 - [Go (Golang) Clean Architecture based on Reading Uncle Bob's Clean Architecture](https://github.com/bxcodec/go-clean-arch)
@@ -181,6 +193,18 @@ Interesting Github Repos
 - [Awesome Go](https://github.com/avelino/awesome-go)
 - [Write webapps without a framework in Go](https://github.com/thewhitetulip/web-dev-golang-anti-textbook)
 - [build a web with golang](https://github.com/astaxie/build-web-application-with-golang)
+- [TheAlgorithms](https://github.com/TheAlgorithms/Go) - Algorithms Implemented in GoLang
+
+Roadmap & Interview Questions
+- [Go Developer Roadmap](https://github.com/Alikhll/golang-developer-roadmap)
+- [Golang Software Engineer Roadmap](https://github.com/dzyanis/roadmap)
+- [Ultimate Go study guide](https://github.com/hoanhan101/ultimate-go)
+- [116+ Coding Interview Problems with Detailed Solutions](https://github.com/hoanhan101/algo)
+
+Performance:
+- [go-perfbook](https://github.com/dgryski/go-perfbook) - Thoughts on Go performance optimization
+- [cadvisor](https://github.com/google/cadvisor) - Analyzes resource usage and performance characteristics of running containers.
+- [goproxy](https://github.com/snail007/goproxy) - Proxy is a high performance HTTP(S) proxies, SOCKS5 proxies,WEBSOCKET, TCP, UDP proxy server implemented by golang
 
 Interesting articles:
 - [Allocation efficiency in high-performance Go services](https://segment.com/blog/allocation-efficiency-in-high-performance-go-services/)
@@ -189,21 +213,3 @@ Interesting articles:
 Interesting people:
 - [Ben Johnson](https://medium.com/@benbjohnson)
 - [Jaana Dogan](https://rakyll.org)
-
-Interesting tools:
-- [fzf](https://github.com/junegunn/fzf) - fuzzy finder
-- [rclone](https://github.com/rclone/rclone) - rsync for cloud storage
-- [dive](https://github.com/wagoodman/dive) - A tool for exploring each layer in a docker image
-- [ngrok](https://github.com/inconshreveable/ngrok) - Introspected tunnels to localhost
-- [logrus](https://github.com/sirupsen/logrus) - Structured, pluggable logging for Go
-- [vegeta](https://github.com/tsenart/vegeta) - HTTP load testing tool and library
-- [goreplay](https://github.com/buger/goreplay) - capturing and replaying live HTTP traffic
-- [annie](https://github.com/iawia002/annie) - Fast, simple and clean video downloader
-- [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
-- [pspy](https://github.com/DominicBreuker/pspy) - Monitor linux processes without root permissions
-- [migrate](https://github.com/golang-migrate/migrate) - Database migrations. CLI and Golang library.
-
-Performance:
-- [go-perfbook](https://github.com/dgryski/go-perfbook) - Thoughts on Go performance optimization
-- [cadvisor](https://github.com/google/cadvisor) - Analyzes resource usage and performance characteristics of running containers.
-- [goproxy](https://github.com/snail007/goproxy) - Proxy is a high performance HTTP(S) proxies, SOCKS5 proxies,WEBSOCKET, TCP, UDP proxy server implemented by golang
