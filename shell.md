@@ -4,790 +4,790 @@
 
 - `Shutdown`
 
-```bash
-# in 200 minutes
-$ sudo shutdown -h +200
+    ```bash
+    # in 200 minutes
+    $ sudo shutdown -h +200
 
-# now
-$ shutdown -h now
-```
+    # now
+    $ shutdown -h now
+    ```
 
 - `Trim` lines from command output
 
-```bash
-# get first N lines
-$ {{ command }} | head -n {{ N }}
+    ```bash
+    # get first N lines
+    $ {{ command }} | head -n {{ N }}
 
-# get last N lines
-$ {{ command }} | tail -n {{ N }}
-```
+    # get last N lines
+    $ {{ command }} | tail -n {{ N }}
+    ```
 
 - Find `pattern` in command output
 
-```bash
-$ {{ command }} | grep {{ pattern }}
-```
+    ```bash
+    $ {{ command }} | grep {{ pattern }}
+    ```
 
 - Extract `tar` or `gz` file
 
-```bash
-$ tar -zxvf /path/to/{{ filename }}.tar.gz
-```
+    ```bash
+    $ tar -zxvf /path/to/{{ filename }}.tar.gz
+    ```
 
 - Extract `gz` or `zip` file
 
-```bash
-$ gunzip file.gz
-```
+    ```bash
+    $ gunzip file.gz
+    ```
 
 - Copy files and folders
 
-```bash
-$ cp -avr \
-    {{ /path/to/source/folder/or/file }} \
-    {{ /path/to/destination/folder/or/file }}
-```
+    ```bash
+    $ cp -avr \
+        {{ /path/to/source/folder/or/file }} \
+        {{ /path/to/destination/folder/or/file }}
+    ```
 
 - `MySQL` backup
 
-```bash
-$ mysqldump \
-    --host {{ host }} \
-    -u {{ user }} \
-    -B {{ db name }} \
-    -p \
-        > {{ filename }}.sql
-```
+    ```bash
+    $ mysqldump \
+        --host {{ host }} \
+        -u {{ user }} \
+        -B {{ db name }} \
+        -p \
+            > {{ filename }}.sql
+    ```
 
 - List all `init` services
 
-```bash
-$ service --status-all
-```
+    ```bash
+    $ service --status-all
+    ```
 
 - Remove `init` services from autostart
 
-```bash
-$ update-rc.d -f {{ service name }} remove
+    ```bash
+    $ update-rc.d -f {{ service name }} remove
 
-# e.g.
-$ update-rc.d -f nginx remove
-```
+    # e.g.
+    $ update-rc.d -f nginx remove
+    ```
 
 - Info about folder and file `sizes`
 
-```bash
-# file space on whole system
-$ df -h
+    ```bash
+    # file space on whole system
+    $ df -h
 
-# file space on specific path
-$ du -shc *
-# e.g.
-$ du -sh $HOME/Downloads/
+    # file space on specific path
+    $ du -shc *
+    # e.g.
+    $ du -sh $HOME/Downloads/
 
-# max depth of analysis
-$ du --max-depth=1 -h -BM
+    # max depth of analysis
+    $ du --max-depth=1 -h -BM
 
-# folder space usage of disk
-$ du -sh
+    # folder space usage of disk
+    $ du -sh
 
-# Sorting files according to size recursively
-$ du -ah . | grep -v "/$" | sort -rh
-```
+    # Sorting files according to size recursively
+    $ du -ah . | grep -v "/$" | sort -rh
+    ```
 
 - `ssh`
 
-```bash
-# show active connections
-$ who -a
-```
+    ```bash
+    # show active connections
+    $ who -a
+    ```
 
 - `ip`: new version of `ifconfig`
 
-```bash
-$ ip a
-```
+    ```bash
+    $ ip a
+    ```
 
 - `ss`: new version of `netstat -tupln`
 
-```bash
-$ ss
+    ```bash
+    $ ss
 
-# check if a local `port` is being used
-# e.g.: check port 80
-$ sudo ss -tulpn | grep :80
-```
+    # check if a local `port` is being used
+    # e.g.: check port 80
+    $ sudo ss -tulpn | grep :80
+    ```
 
 - `ssh-keygen`
 
-```bash
-# add ip to `know_hosts`
-$ ssh-keygen \
-    -R {{ any ip }} \
-    -f $HOME/.ssh/known_hosts
+    ```bash
+    # add ip to `know_hosts`
+    $ ssh-keygen \
+        -R {{ any ip }} \
+        -f $HOME/.ssh/known_hosts
 
-# generate a SSH key
-$ ssh-keygen \
-    -t rsa \
-    -b 2048 \
-    -f $HOME/.ssh/{{ name you want }}
-```
+    # generate a SSH key
+    $ ssh-keygen \
+        -t rsa \
+        -b 2048 \
+        -f $HOME/.ssh/{{ name you want }}
+    ```
 
 - List `Ubuntu packages`
 
-```bash
-# new version
-$ apt list --installed
+    ```bash
+    # new version
+    $ apt list --installed
 
-# old version
-$ dpkg --get-selections | grep -v deinstall
+    # old version
+    $ dpkg --get-selections | grep -v deinstall
 
-# list installed packages related to `postgres`
-$ dpkg --get-selections | grep postgres
+    # list installed packages related to `postgres`
+    $ dpkg --get-selections | grep postgres
 
-# list installed packages at a specific time
-# and save it on a file which name contains timestamp
-$ dpkg --get-selections | \
-    grep -v deinstall > \
-    ~/Packages/"$(date +%F_%T)".packages
+    # list installed packages at a specific time
+    # and save it on a file which name contains timestamp
+    $ dpkg --get-selections | \
+        grep -v deinstall > \
+        ~/Packages/"$(date +%F_%T)".packages
 
-# TODO
-# after each `sudo apt-get upgrade`
-$ dpkg --get-selections | \
-    grep -v deinstall > \
-    ~/Packages/"$(date +%F_%T)".packages
-$ diff \
-    $(ls -1 | tail -n 1) \ # first last
-    $(ls -1 | tail -n 2 | head -n 1) \ # second last
-        > ~/Packages/"$(date +%F_%T)".packagesdiff
-```
+    # TODO
+    # after each `sudo apt-get upgrade`
+    $ dpkg --get-selections | \
+        grep -v deinstall > \
+        ~/Packages/"$(date +%F_%T)".packages
+    $ diff \
+        $(ls -1 | tail -n 1) \ # first last
+        $(ls -1 | tail -n 2 | head -n 1) \ # second last
+            > ~/Packages/"$(date +%F_%T)".packagesdiff
+    ```
 
 - Delete / Remove `package`
 
-```bash
-$ sudo apt remove {{ package }}
+    ```bash
+    $ sudo apt remove {{ package }}
 
-$ sudo apt purge {{ package }}
-```
+    $ sudo apt purge {{ package }}
+    ```
 
 - list `apt` package archives (repositories)
 
-```bash
-# added by OS
-$ cat /etc/apt/sources.list
+    ```bash
+    # added by OS
+    $ cat /etc/apt/sources.list
 
-# added by user
-$ ls -la /etc/apt/sources.list.d/
-```
+    # added by user
+    $ ls -la /etc/apt/sources.list.d/
+    ```
 
 - Create `soft` / `symbolic` link
 
-```bash
-$ ln -s {{ target filename }} {{ symbolic filename }}
-```
+    ```bash
+    $ ln -s {{ target filename }} {{ symbolic filename }}
+    ```
 
 - `User management`
 
-```bash
-# show actual user
-$ echo $USER
+    ```bash
+    # show actual user
+    $ echo $USER
 
-# list groups of actual user
-$ groups
-$ groups $(echo $USER)
+    # list groups of actual user
+    $ groups
+    $ groups $(echo $USER)
 
-# list groups of specific user
-$ groups {{ user }}
+    # list groups of specific user
+    $ groups {{ user }}
 
-# list all groups in system
-$ cat /etc/group
+    # list all groups in system
+    $ cat /etc/group
 
-# list users from group {{ group name }}
-$ grep -i --color '{{ group name }}' /etc/group
+    # list users from group {{ group name }}
+    $ grep -i --color '{{ group name }}' /etc/group
 
-# list all users
-$ cat /etc/passwd
+    # list all users
+    $ cat /etc/passwd
 
-# add actual user to group {{ group name }}
-$ groupadd {{ group name }}
+    # add actual user to group {{ group name }}
+    $ groupadd {{ group name }}
 
-# delete actual user from group {{ group name }}
-$ groupdel {{ group name }}
+    # delete actual user from group {{ group name }}
+    $ groupdel {{ group name }}
 
-# add user to a group
-$ usermod -aG {{ group name }} {{ user name }}
+    # add user to a group
+    $ usermod -aG {{ group name }} {{ user name }}
 
-# delete user
-$ userdel {{ user name }}
-```
+    # delete user
+    $ userdel {{ user name }}
+    ```
 
 - Change file `ownership`
 
-```bash
-# change owner and group of a folder, this is recusively
-$ sudo chown -R {{ owner }}:{{ group }} /path/to/folder/
+    ```bash
+    # change owner and group of a folder, this is recusively
+    $ sudo chown -R {{ owner }}:{{ group }} /path/to/folder/
 
-# change group of a folder, this is recursively
-$ sudo chown -R :{{ group }} /path/to/folder/
+    # change group of a folder, this is recursively
+    $ sudo chown -R :{{ group }} /path/to/folder/
 
-# change owner of a folder, this is recursively
-$ sudo chown -R {{ owner }}: /path/to/folder/
-```
+    # change owner of a folder, this is recursively
+    $ sudo chown -R {{ owner }}: /path/to/folder/
+    ```
 
 - `find`
 
-```bash
-# search files and folders which match pattern in local working directory
-$ find /path/to/start/search \
-    -maxdepth 1 \
-    -name "{{ pattern in regex }}"
-# e.g.
-$ find . -maxdepth 1 -name "*bin*"
+    ```bash
+    # search files and folders which match pattern in local working directory
+    $ find /path/to/start/search \
+        -maxdepth 1 \
+        -name "{{ pattern in regex }}"
+    # e.g.
+    $ find . -maxdepth 1 -name "*bin*"
 
-# search only folders
-$ find /path/to/start/search \
-    -type d \
-    -name "{{ pattern in regex }}"
-# e.g.
-$ find . -type d -name "*.pdf"
+    # search only folders
+    $ find /path/to/start/search \
+        -type d \
+        -name "{{ pattern in regex }}"
+    # e.g.
+    $ find . -type d -name "*.pdf"
 
-# delete recursively all files which match pattern
-$ find /path/to/start/search \
-    -name "{{ pattern in regex }}" \
-    -delete
-# e.g.
-$ find . -name '*.pyc' -delete
+    # delete recursively all files which match pattern
+    $ find /path/to/start/search \
+        -name "{{ pattern in regex }}" \
+        -delete
+    # e.g.
+    $ find . -name '*.pyc' -delete
 
-# search files and folders
-$ find . -name "{{ pattern in regex }}"
-```
+    # search files and folders
+    $ find . -name "{{ pattern in regex }}"
+    ```
 
 - join `jpg` files into `pdf`
 
-```bash
-$ convert *.jpg pictures.pdf
-```
+    ```bash
+    $ convert *.jpg pictures.pdf
+    ```
 
 - join `pdfs` into `pdf`
 
-```bash
-$ pdfunit {{ file 1 }}.pdf {{ file 2 }}.pdf ... out.pdf
-```
+    ```bash
+    $ pdfunit {{ file 1 }}.pdf {{ file 2 }}.pdf ... out.pdf
+    ```
 
 - get `time` and `timezone` from server
 
-```bash
-$ date
-```
+    ```bash
+    $ date
+    ```
 
 - [rsync](https://linux.die.net/man/1/rsync)
     - [How To Use Rsync to Sync Local and Remote Directories on a VPS](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps)
 
-```bash
--a # --archive archive mode; equals -rlptgoD (no -H,-A,-X)
--r # --dry-run recurse into directories
--n # --partial perform a trial run with no changes made
--P # --progress same as --partial --progress
--z # compress file data during the transfer (only in slow connections)
--v # --verbose increase verbosity
---delete # delete extraneous files from dest dirs
+    ```bash
+    -a # --archive archive mode; equals -rlptgoD (no -H,-A,-X)
+    -r # --dry-run recurse into directories
+    -n # --partial perform a trial run with no changes made
+    -P # --progress same as --partial --progress
+    -z # compress file data during the transfer (only in slow connections)
+    -v # --verbose increase verbosity
+    --delete # delete extraneous files from dest dirs
 
-$ rsync -anPv SRC ... [DEST]
-# e.g.
-$ rsync -aPv --delete $HOME/Documents/ /media/$USER/manu/Documents/
-$ rsync -aPv /media/$USER/manu/Documents/ $HOME/Documents/
-```
+    $ rsync -anPv SRC ... [DEST]
+    # e.g.
+    $ rsync -aPv --delete $HOME/Documents/ /media/$USER/manu/Documents/
+    $ rsync -aPv /media/$USER/manu/Documents/ $HOME/Documents/
+    ```
 
 - `wget`
 
-```bash
-# downaload full content of url
-$ wget \
-    --recursive \
-    --no-clobber \
-    --page-requisites \
-    --html-extension \
-    --convert-links \
-    --restrict-file-names=windows \
-    --domains {{ domain }} \
-    --no-parent \
-        {{ exactly url }}
+    ```bash
+    # downaload full content of url
+    $ wget \
+        --recursive \
+        --no-clobber \
+        --page-requisites \
+        --html-extension \
+        --convert-links \
+        --restrict-file-names=windows \
+        --domains {{ domain }} \
+        --no-parent \
+            {{ exactly url }}
 
-# download a file an assign a name
-$ wget -O {{ filename }} {{ url }}
-```
+    # download a file an assign a name
+    $ wget -O {{ filename }} {{ url }}
+    ```
 
 - `tree`
 
-```bash
-# show output recursively until a specific level of depth
-$ tree -L {{ depth level }}
-```
+    ```bash
+    # show output recursively until a specific level of depth
+    $ tree -L {{ depth level }}
+    ```
 
 - `history`
 
-```bash
-# show last executed commands
-$ history
-```
+    ```bash
+    # show last executed commands
+    $ history
+    ```
 
 - `ngrok`
 
-```bash
-# redirect what I have on port 5000 to a specific subdomain
-$ ngrok http -subdomain={{ any name }} 5000
-# e.g.
-$ ngrok http -subdomain=randomdomain 5000
-```
+    ```bash
+    # redirect what I have on port 5000 to a specific subdomain
+    $ ngrok http -subdomain={{ any name }} 5000
+    # e.g.
+    $ ngrok http -subdomain=randomdomain 5000
+    ```
 
 - `SSH` tunneling for internet
     - [Setting up an SSH Tunnel with Your Linode for Safe Browsing](https://www.linode.com/docs/networking/ssh/setting-up-an-ssh-tunnel-with-your-linode-for-safe-browsing)
 
-```bash
-$ ssh -D 12345 {{ user }}@{{ ip or domain }}
-```
+    ```bash
+    $ ssh -D 12345 {{ user }}@{{ ip or domain }}
+    ```
 
 - `scp`: moving files between servers
 
-```bash
-# move files from local to virtual machine
-# (instance AWS or droplet DO)
-$ scp \
-    /path/of/file/or/folder/to/copy \
-    {{ user }}@{{ ip or hostname }}:/path/of/VM/where/to/paste
-# if key file is needed
-$ scp \
-    -i /path/to/key.pem \
-    /path/of/file/or/folder/to/copy \
-    {{ user }}@{{ ip or hostname }}:/path/of/VM/where/to/paste
+    ```bash
+    # move files from local to virtual machine
+    # (instance AWS or droplet DO)
+    $ scp \
+        /path/of/file/or/folder/to/copy \
+        {{ user }}@{{ ip or hostname }}:/path/of/VM/where/to/paste
+    # if key file is needed
+    $ scp \
+        -i /path/to/key.pem \
+        /path/of/file/or/folder/to/copy \
+        {{ user }}@{{ ip or hostname }}:/path/of/VM/where/to/paste
 
-# move files from virtual machine to local
-# (instance AWS or droplet DO)
-$ scp \
-    {{ user }}@{{ ip or hostname }}:/path/of/file/or/folder/to/copy \
-    /path/of/local/machine/where/to/paste
-# if key file is needed
-$ scp \
-    -i /path/to/key.pem \
-    {{ user }}@{{ ip or hostname }}:/path/of/file/or/folder/to/copy \
-    /path/of/local/machine/where/to/paste
-```
+    # move files from virtual machine to local
+    # (instance AWS or droplet DO)
+    $ scp \
+        {{ user }}@{{ ip or hostname }}:/path/of/file/or/folder/to/copy \
+        /path/of/local/machine/where/to/paste
+    # if key file is needed
+    $ scp \
+        -i /path/to/key.pem \
+        {{ user }}@{{ ip or hostname }}:/path/of/file/or/folder/to/copy \
+        /path/of/local/machine/where/to/paste
+    ```
 
 - `curl`
 
-```bash
-$ curl \
-    -vX POST {{ url }} \
-    -d @{{ filename }} \
-    --header "Content-Type: application/json"
-```
+    ```bash
+    $ curl \
+        -vX POST {{ url }} \
+        -d @{{ filename }} \
+        --header "Content-Type: application/json"
+    ```
 
 - cut part of a `video`
 
-```bash
-# ss -> since
-# t -> how much
-$ ffmpeg \
-    -i {{ input video }} \
-    -ss 00:00:00 \
-    -t 00:00:30 \
-    -c copy \
-        {{ output video }}
-```
+    ```bash
+    # ss -> since
+    # t -> how much
+    $ ffmpeg \
+        -i {{ input video }} \
+        -ss 00:00:00 \
+        -t 00:00:30 \
+        -c copy \
+            {{ output video }}
+    ```
 
 - allowed format video for `twitter` upload
 
-```bash
-$ ffmpeg \
-    -r 10 \
-    -i {{ input video }} \
-    -vcodec libx264 \
-    -pix_fmt yuv420p \
-    -acodec aac \
-    -strict -2 \
-        {{ output video }}
-```
+    ```bash
+    $ ffmpeg \
+        -r 10 \
+        -i {{ input video }} \
+        -vcodec libx264 \
+        -pix_fmt yuv420p \
+        -acodec aac \
+        -strict -2 \
+            {{ output video }}
+    ```
 
 - remove `audio` from `video`
 
-```bash
-$ ffmpeg \
-    -i {{ input video }} \
-    -c copy \
-    -an \
-        {{ output video }}
-```
+    ```bash
+    $ ffmpeg \
+        -i {{ input video }} \
+        -c copy \
+        -an \
+            {{ output video }}
+    ```
 
 - `ls`
 
-```bash
-# listing only directories on shell
-$ ls -d */
+    ```bash
+    # listing only directories on shell
+    $ ls -d */
 
-# h for human readable
-$ ls -lah
-```
+    # h for human readable
+    $ ls -lah
+    ```
 
 - Convert `wav` to `mp3`
 
-```bash
-# first install lima package
-# $ sudo apt install lime
+    ```bash
+    # first install lima package
+    # $ sudo apt install lime
 
-$ lame \
-    -b 320 \
-    -h {{ input filename }}.wav \
-    {{ output filename }}.mp3
-```
+    $ lame \
+        -b 320 \
+        -h {{ input filename }}.wav \
+        {{ output filename }}.mp3
+    ```
 
 - `sort` lines from file and count `uniques`
 
-```bash
-$ sort {{ file }} | \
-    uniq -c | \
-    wc -l
-```
+    ```bash
+    $ sort {{ file }} | \
+        uniq -c | \
+        wc -l
+    ```
 
 - create file with `timestamp` as part of filename
 
-```bash
-$ touch $(timestamp)filename
-```
+    ```bash
+    $ touch $(timestamp)filename
+    ```
 
 - install `iso` in a `usb`
 
-```bash
-dd \
-    bs=1M \
-    status=progress \
-    if=/path/to/file.iso \
-    of=/dev/sda
+    ```bash
+    dd \
+        bs=1M \
+        status=progress \
+        if=/path/to/file.iso \
+        of=/dev/sda
 
-# e.g.
-$ sudo dd \
-    bs=1M \
-    status=progress \
-    if=/path/to/ubuntu-18.04.3-desktop-amd64.iso \
-    of=/dev/sda
+    # e.g.
+    $ sudo dd \
+        bs=1M \
+        status=progress \
+        if=/path/to/ubuntu-18.04.3-desktop-amd64.iso \
+        of=/dev/sda
 
-# dont forget to umount previously USB before burning iso
-# assuming /dev/sda1 is partition inside USB (/dev/sda)
-$ sudo umount /dev/sda1
-```
+    # dont forget to umount previously USB before burning iso
+    # assuming /dev/sda1 is partition inside USB (/dev/sda)
+    $ sudo umount /dev/sda1
+    ```
 
 - force creation of file and create intermediate folders even when don't exist
 
-```bash
-$ mkdir -p /path/where/folder/are/created/if/not/exist
-```
+    ```bash
+    $ mkdir -p /path/where/folder/are/created/if/not/exist
+    ```
 
 - [View CSV Data as table from the Command Line](https://chrisjean.com/view-csv-data-from-the-command-line/)
 
-```bash
-$ cat file.csv | \
-    sed -e 's/,,/, ,/g' | \
-    column -s, -t | \
-    less -#5 -N -S
-```
+    ```bash
+    $ cat file.csv | \
+        sed -e 's/,,/, ,/g' | \
+        column -s, -t | \
+        less -#5 -N -S
+    ```
 
 - search `pattern` in all files (recursively) from working directory
 
-```bash
-$ grep -rn '{{ pattern }}'
-```
+    ```bash
+    $ grep -rn '{{ pattern }}'
+    ```
 
 - `awk`
 
-```bash
-# print columns 2 and 4 of previous output
-$ {{ command }} | awk '{{ print $2 $4 }}'
+    ```bash
+    # print columns 2 and 4 of previous output
+    $ {{ command }} | awk '{{ print $2 $4 }}'
 
-# e.g.
-$ cat filename.txt | awk '{{ print $2 $4 }}'
-$ awk '{{ print $2 $4 }}' filename.txt
-```
+    # e.g.
+    $ cat filename.txt | awk '{{ print $2 $4 }}'
+    $ awk '{{ print $2 $4 }}' filename.txt
+    ```
 
 - validate `json` files (with `python`)
 
-```bash
-$ python -m json.tool {{ file.json }} > /dev/null
-$ cat {{ file.json }} | python -m json.tool > /dev/null
-```
+    ```bash
+    $ python -m json.tool {{ file.json }} > /dev/null
+    $ cat {{ file.json }} | python -m json.tool > /dev/null
+    ```
 
 - `nc`
 
-```bash
-# test connection to an ip and port
-$ nc -zv {{ ip }} {{ port }}
-# e.g.: check if port 80 is open on router
-# router's ip is 192.168.0.1 on local network
-$ nc -zv 192.168.0.1 80
+    ```bash
+    # test connection to an ip and port
+    $ nc -zv {{ ip }} {{ port }}
+    # e.g.: check if port 80 is open on router
+    # router's ip is 192.168.0.1 on local network
+    $ nc -zv 192.168.0.1 80
 
-# test connection to an ip and a group of ports
-$ nc -zv {{ ip }} {{ port number start }}-{{ port number end }}
-# e.g.: check open ports from range on router
-# router's ip is 192.168.0.1 on local network
-$ nc -zv 192.168.0.1 1-500
-```
+    # test connection to an ip and a group of ports
+    $ nc -zv {{ ip }} {{ port number start }}-{{ port number end }}
+    # e.g.: check open ports from range on router
+    # router's ip is 192.168.0.1 on local network
+    $ nc -zv 192.168.0.1 1-500
+    ```
 
 - `clear` file content
 
-```bash
-$ > {{ /path/to/file }}
-# e.g.: clear logs
-$ > /etc/router/errors.log
-```
+    ```bash
+    $ > {{ /path/to/file }}
+    # e.g.: clear logs
+    $ > /etc/router/errors.log
+    ```
 
 - check if you have network issues
     - [How To Use Traceroute and MTR to Diagnose Network Issues](https://www.digitalocean.com/community/tutorials/how-to-use-traceroute-and-mtr-to-diagnose-network-issues)
     - [mtr @ Github](https://github.com/traviscross/mtr)
     - [nethogs @ Github](https://github.com/raboof/nethogs)
 
-```bash
-# -------------------- traceroute --------------------
-$ traceroute -n {{ domain or ip }}
+    ```bash
+    # -------------------- traceroute --------------------
+    $ traceroute -n {{ domain or ip }}
 
-# -------------------- mtr --------------------
-# install mtr
-$ git clone https://github.com/traviscross/mtr
-# and follow https://github.com/traviscross/mtr#installing
+    # -------------------- mtr --------------------
+    # install mtr
+    $ git clone https://github.com/traviscross/mtr
+    # and follow https://github.com/traviscross/mtr#installing
 
-$ mtr --curses {{ domaing or ip }}
+    $ mtr --curses {{ domaing or ip }}
 
-# -------------------- nethogs --------------------
-# install nethogs
-$ git clone https://github.com/raboof/nethogs
-$ cd nethogs
-$ make
-$ sudo ./src/nethogs
-$ cp ./src/nethogs $HOME/bin
+    # -------------------- nethogs --------------------
+    # install nethogs
+    $ git clone https://github.com/raboof/nethogs
+    $ cd nethogs
+    $ make
+    $ sudo ./src/nethogs
+    $ cp ./src/nethogs $HOME/bin
 
-$ nethogs
-```
+    $ nethogs
+    ```
 
 - check `memory` usage
 
-```bash
-$ free
+    ```bash
+    $ free
 
-$ free -m
+    $ free -m
 
-$ free -htw
+    $ free -htw
 
-$ /proc/meminfo
+    $ /proc/meminfo
 
-$ vmstat
+    $ vmstat
 
-$ top / htop
+    $ top / htop
 
-$ dmidecode
-```
+    $ dmidecode
+    ```
 
 - `ps`
 
-```bash
-# a = lift only yourself restriction
-# x = lift must have tty restriction
-# u = display user oriented format
-# Z = add a column of security data
-# e = show env vars after command
-# ww = wide output
+    ```bash
+    # a = lift only yourself restriction
+    # x = lift must have tty restriction
+    # u = display user oriented format
+    # Z = add a column of security data
+    # e = show env vars after command
+    # ww = wide output
 
-# e.g.
-$ ps faux
-$ ps faxuZeww
-$ ps axuZeww
-$ ps xww
+    # e.g.
+    $ ps faux
+    $ ps faxuZeww
+    $ ps axuZeww
+    $ ps xww
 
-# check process as tree
-$ ps --forest
+    # check process as tree
+    $ ps --forest
 
-# see threads from process by its id
-$ ps -T -p {{ process id }}
-```
+    # see threads from process by its id
+    $ ps -T -p {{ process id }}
+    ```
 
 - `top`
 
-```bash
-# see process threads by process id
-$ top -H -p {{ process id }}
-```
+    ```bash
+    # see process threads by process id
+    $ top -H -p {{ process id }}
+    ```
 
 - `htop`
     - htop -> setup -> display options -> activate tree view + show custom thread names
 
 - change `DNS` server locally
 
-```bash
-$ cat /etc/resolv.conf
-$ sudo resolvconf -u
-$ sudo cp \
-    /etc/resolvconf/resolv.conf.d/head \
-    /etc/resolvconf/resolv.conf.d/head.orig
-$ sudo nano /etc/resolvconf/resolv.conf.d/head
-$ nslookup google.com
+    ```bash
+    $ cat /etc/resolv.conf
+    $ sudo resolvconf -u
+    $ sudo cp \
+        /etc/resolvconf/resolv.conf.d/head \
+        /etc/resolvconf/resolv.conf.d/head.orig
+    $ sudo nano /etc/resolvconf/resolv.conf.d/head
+    $ nslookup google.com
 
-# to test which DNS is using
-$ nslookup {{ domain }} {{ dns server ip }}
-$ dig @{{ dns server ip }} {{ domain }}
-```
+    # to test which DNS is using
+    $ nslookup {{ domain }} {{ dns server ip }}
+    $ dig @{{ dns server ip }} {{ domain }}
+    ```
 
 - restart `wifi` kernel driver
 
-```bash
-# remove it
-$ sudo modprobe -r iwlwifi
+    ```bash
+    # remove it
+    $ sudo modprobe -r iwlwifi
 
-# add again
-$ sudo modprobe iwlwifi
-```
+    # add again
+    $ sudo modprobe iwlwifi
+    ```
 
 - compare `binary` files, (more info [here](https://superuser.com/a/968863/944220))
 
-```bash
-$ diff -y <(xxd {{ file 1 }}) <(xxd {{ file 2 }})
-$ colordiff -y <(xxd {{ file 1 }}) <(xxd {{ file 2 }})
-```
+    ```bash
+    $ diff -y <(xxd {{ file 1 }}) <(xxd {{ file 2 }})
+    $ colordiff -y <(xxd {{ file 1 }}) <(xxd {{ file 2 }})
+    ```
 
 - download `youtube` playlist in `mp4` format (and bypass errors)
 
-```bash
-$ youtube-dl \
-    -i \
-    -f mp4 \
-    -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' \
-        {{ youtube playlist url }}
+    ```bash
+    $ youtube-dl \
+        -i \
+        -f mp4 \
+        -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' \
+            {{ youtube playlist url }}
 
-$ youtube-dl \
-    -i \
-    --yes-playlist \
-        {{ youtube playlist url }}
-```
+    $ youtube-dl \
+        -i \
+        --yes-playlist \
+            {{ youtube playlist url }}
+    ```
 
 - recommendation on partition sizes for a fresh ubuntu install
     - [Dual Boot Windows 10 Alongside Pop!_OS](https://support.system76.com/articles/dual-booting/)
     - [DiskSpace @ Ubuntu](https://help.ubuntu.com/community/DiskSpace)
 
-```bash
-# RECOMMENDATION!!
-# /boot   1 GB
-# swap    16 GB
-# /       33 GB
-# /home   the rest
+    ```bash
+    # RECOMMENDATION!!
+    # /boot   1 GB
+    # swap    16 GB
+    # /       33 GB
+    # /home   the rest
 
-# to verify it
-$ sudo lsblk -fm
-# e.g.
-NAME FSTYPE LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINT  SIZE OWNER GROUP MODE
-nvme0n1
-│                                                                                 477G root  disk  brw-rw----
-├─nvme0n1p1
-│    vfat         850E-5CCC                             392.1M    21% /boot/efi   500M root  disk  brw-rw----
-├─nvme0n1p2
-│    ext4         ________-____-____-____-____________   39.2G    13% /          48.8G root  disk  brw-rw----
-├─nvme0n1p3
-│    swap         ________-____-____-____-____________                           15.6G root  disk  brw-rw----
-│ └─cryptswap
-│    swap         ________-____-____-____-____________                [SWAP]     15.6G root  disk  brw-rw----
-└─nvme0n1p4
-     ext4         ________-____-____-____-____________    342G    10% /home       412G root  disk  brw-rw----
+    # to verify it
+    $ sudo lsblk -fm
+    # e.g.
+    NAME FSTYPE LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINT  SIZE OWNER GROUP MODE
+    nvme0n1
+    │                                                                                 477G root  disk  brw-rw----
+    ├─nvme0n1p1
+    │    vfat         850E-5CCC                             392.1M    21% /boot/efi   500M root  disk  brw-rw----
+    ├─nvme0n1p2
+    │    ext4         ________-____-____-____-____________   39.2G    13% /          48.8G root  disk  brw-rw----
+    ├─nvme0n1p3
+    │    swap         ________-____-____-____-____________                           15.6G root  disk  brw-rw----
+    │ └─cryptswap
+    │    swap         ________-____-____-____-____________                [SWAP]     15.6G root  disk  brw-rw----
+    └─nvme0n1p4
+        ext4         ________-____-____-____-____________    342G    10% /home       412G root  disk  brw-rw----
 
-```
+    ```
 
 - understand `sudo su -` (more info [here](https://askubuntu.com/a/376386/879600))
 
 - `apt search` (more info [here](https://www.debian.org/doc/manuals/aptitude/ch02s02s02.en.html))
 
-```bash
-$ apt search {{ any term }}
-# i - the package is installed and all its dependencies are satisfied.
-# c - the package was removed, but its configuration files are still present.
-# p - the package and all its configuration files were removed, or the package was never installed.
-# v - the package is virtual.
-# B - the package has broken dependencies.
-# u - the package has been unpacked but not configured.
-# C - half-configured: the package's configuration was interrupted.
-# H - half-installed: the package's installation was interrupted.
-# W - triggers-awaited: the package awaits trigger processing by another package.
-# T - triggers-pending: The package has had an update triggered due to changes in another package.
-```
+    ```bash
+    $ apt search {{ any term }}
+    # i - the package is installed and all its dependencies are satisfied.
+    # c - the package was removed, but its configuration files are still present.
+    # p - the package and all its configuration files were removed, or the package was never installed.
+    # v - the package is virtual.
+    # B - the package has broken dependencies.
+    # u - the package has been unpacked but not configured.
+    # C - half-configured: the package's configuration was interrupted.
+    # H - half-installed: the package's installation was interrupted.
+    # W - triggers-awaited: the package awaits trigger processing by another package.
+    # T - triggers-pending: The package has had an update triggered due to changes in another package.
+    ```
 
 - `kernel` version
 
-```bash
-$ uname -r
-```
+    ```bash
+    $ uname -r
+    ```
 
 - get `ubuntu` release name from `linux mint` installation
 
-```bash
-$ cat /etc/upstream-release/lsb-release | \
-    grep DISTRIB_CODENAME | \
-    cut -d'=' -f2
-xenial
+    ```bash
+    $ cat /etc/upstream-release/lsb-release | \
+        grep DISTRIB_CODENAME | \
+        cut -d'=' -f2
+    xenial
 
-$ cat /etc/os-release | \
-    grep UBUNTU_CODENAME | \
-    cut -d"=" -f2
-xenial
-```
+    $ cat /etc/os-release | \
+        grep UBUNTU_CODENAME | \
+        cut -d"=" -f2
+    xenial
+    ```
 
 - show `policy` settings from a package (`Ubuntu`)
 
-```bash
-apt policy {{ package name }}
-```
+    ```bash
+    apt policy {{ package name }}
+    ```
 
 - list all `iptables` rules
 
-```bash
-# from `filter` table
-$ sudo iptables -t filter -L -v -n -x --line-numbers
+    ```bash
+    # from `filter` table
+    $ sudo iptables -t filter -L -v -n -x --line-numbers
 
-# from `nat` table
-$ sudo iptables -t nat -L -v -n -x --line-numbers
-```
+    # from `nat` table
+    $ sudo iptables -t nat -L -v -n -x --line-numbers
+    ```
 
 - reset `iptables` table packet counts and aggregate size
 
-```bash
-# for `filter` table
-$ sudo iptables -t filter -Z
+    ```bash
+    # for `filter` table
+    $ sudo iptables -t filter -Z
 
-# for `nat` table
-$ sudo iptables -t nat -Z
+    # for `nat` table
+    $ sudo iptables -t nat -Z
 
-# for `filter` and `nat` table
-$ sudo iptables -t filter -Z && sudo iptables -t nat -Z
-```
+    # for `filter` and `nat` table
+    $ sudo iptables -t filter -Z && sudo iptables -t nat -Z
+    ```
 
 - install `specific` version of package with `apt`
 
-```bash
-$ apt install {{ package name }}={{ version number }}
-```
+    ```bash
+    $ apt install {{ package name }}={{ version number }}
+    ```
 
 - track `packets` on an interface
 
-```bash
-# icmp
-$ sudo tcpdump \
-    -i {{ interface name }} \
-    icmp
+    ```bash
+    # icmp
+    $ sudo tcpdump \
+        -i {{ interface name }} \
+        icmp
 
-# http
-$ sudo tcpdump \
-    -A \
-    -s 0 \
-    -i {{ interface name }} \
-    -vv \
-        'tcp port 80'
-$ sudo tcpdump \
-    -A \
-    -s 0 \
-    -i {{ interface name }} \
-        'src google.com and tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'
-```
+    # http
+    $ sudo tcpdump \
+        -A \
+        -s 0 \
+        -i {{ interface name }} \
+        -vv \
+            'tcp port 80'
+    $ sudo tcpdump \
+        -A \
+        -s 0 \
+        -i {{ interface name }} \
+            'src google.com and tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'
+    ```
 
 - [How do I measure request and response times at once using cURL?](https://stackoverflow.com/questions/18215389/how-do-i-measure-request-and-response-times-at-once-using-curl)
 
@@ -810,253 +810,252 @@ $ sudo tcpdump \
 
 - list `network` interfaces
 
-```bash
-$ ip link show
+    ```bash
+    $ ip link show
 
-$ nmcli device status
+    $ nmcli device status
 
-$ nmcli connection show
+    $ nmcli connection show
 
-$ netstat -i
+    $ netstat -i
 
-$ ifconfig -a
-```
+    $ ifconfig -a
+    ```
 
 - show `routing` table
 
-```bash
-$ route -n
-```
+    ```bash
+    $ route -n
+    ```
 
 - `ARP` (Address Resolution Protocol) entries (mostly dynamic)
   - created when an IP address is resolved to a MAC address
   - so computer can effectively communicate with the IP address
 
-```bash
-# -v, --verbose
-# -a     Use alternate BSD style output format (with no fixed columns).
-# -e     Use default Linux style output format (with fixed columns).
-# -n, --numeric
-$ arp -v -a -e -n
+    ```bash
+    # -v, --verbose
+    # -a     Use alternate BSD style output format (with no fixed columns).
+    # -e     Use default Linux style output format (with fixed columns).
+    # -n, --numeric
+    $ arp -v -a -e -n
 
-# from specific interface
-$ arp -i {{ interface name }}
-```
+    # from specific interface
+    $ arp -i {{ interface name }}
+    ```
 
 - list `DNS` nameservers in my system
 
-```bash
-$ ip r
+    ```bash
+    $ ip r
 
-$ nmcli device show {{ interfacename }} | grep IP4.DNS
-```
+    $ nmcli device show {{ interfacename }} | grep IP4.DNS
+    ```
 
 - repeat command each `N` seconds
 
-```bash
-$ watch -n {{ N }} {{ any command }}
+    ```bash
+    $ watch -n {{ N }} {{ any command }}
 
-# if command needs root permissions, `sudo` at the beginning
-$ sudo watch -n {{ N }} {{ any command }}
-```
+    # if command needs root permissions, `sudo` at the beginning
+    $ sudo watch -n {{ N }} {{ any command }}
+    ```
 
 - translate `hostnames` or `domain names` to `IP`
 
-```bash
-cat /etc/hosts
-cat /etc/hostname
-```
+    ```bash
+    cat /etc/hosts
+    cat /etc/hostname
+    ```
 
 - `Filesystem Hierarchy Standard` for `binary` files
 
+    ```
+    # Personal comprehension about it
+    # not neccesary correct
+    # this is how I make it understandable for me
 
-```
-# Personal comprehension about it
-# not neccesary correct
-# this is how I make it understandable for me
-
-/bin
-/sbin
-/usr
-    /usr/bin
-        binaries with $USER execute permission
-    /usr/sbin
-        binaries with $ROOT execute permission
-    /usr/share
-        "share": architecture independent files, not related to "lib", "lib32", "lib64"
-    /usr/local
-        copy of /usr but "locally"
-        /usr/local/bin
-            binaries with $USER execute permission
-        /usr/local/sbin
-            binaries with $ROOT execute permission
-            not included in $PATH (by default)
-        /usr/local/share
-            "share": architecture independent files, not related to "lib", "lib32", "lib64"
-        /usr/local/{{ your package }}
-            /usr/local/{{ your package }}/bin
-            /usr/local/{{ your package }}/lib
-            /usr/local/{{ your package }}/share
-/snap
-    /snap/bin
-        symlinks snap apps binaries with $USER execute permission
-/opt
-
-$HOME
-    $HOME/bin
-        binaries with $USER execute permission
-    $HOME/.local
-        $HOME/.local/bin
-            binaries with $USER execute permission
-        $HOME/.local/share
-            "share": architecture independent files, not related to "lib", "lib32", "lib64"
-
--------------------------------------------------------------------------
-
-/
-Primary hierarchy root and root directory of the entire file system hierarchy.
+    /bin
+    /sbin
     /usr
-    Secondary hierarchy for read-only user data; contains the majority of (multi-)user utilities and applications
-    Locally installed software must be placed within /usr/local rather than /usr unless it is being installed to replace or upgrade software in /usr
+        /usr/bin
+            binaries with $USER execute permission
+        /usr/sbin
+            binaries with $ROOT execute permission
+        /usr/share
+            "share": architecture independent files, not related to "lib", "lib32", "lib64"
         /usr/local
-        Tertiary hierarchy for local data, specific to this host. Typically has further subdirectories, e.g., bin, lib, share.
-        The original idea behind '/usr/local' was to have a separate ('local') '/usr' directory on every machine besides '/usr'
-        The /usr/local hierarchy is for use by the system administrator when installing software locally
-    /home
-    Users' home directories, containing saved files, personal settings, etc.
-        /home/$USER
-            $HOME/.local
-            is a place where a user can install software for their own use
-```
+            copy of /usr but "locally"
+            /usr/local/bin
+                binaries with $USER execute permission
+            /usr/local/sbin
+                binaries with $ROOT execute permission
+                not included in $PATH (by default)
+            /usr/local/share
+                "share": architecture independent files, not related to "lib", "lib32", "lib64"
+            /usr/local/{{ your package }}
+                /usr/local/{{ your package }}/bin
+                /usr/local/{{ your package }}/lib
+                /usr/local/{{ your package }}/share
+    /snap
+        /snap/bin
+            symlinks snap apps binaries with $USER execute permission
+    /opt
+
+    $HOME
+        $HOME/bin
+            binaries with $USER execute permission
+        $HOME/.local
+            $HOME/.local/bin
+                binaries with $USER execute permission
+            $HOME/.local/share
+                "share": architecture independent files, not related to "lib", "lib32", "lib64"
+
+    -------------------------------------------------------------------------
+
+    /
+    Primary hierarchy root and root directory of the entire file system hierarchy.
+        /usr
+        Secondary hierarchy for read-only user data; contains the majority of (multi-)user utilities and applications
+        Locally installed software must be placed within /usr/local rather than /usr unless it is being installed to replace or upgrade software in /usr
+            /usr/local
+            Tertiary hierarchy for local data, specific to this host. Typically has further subdirectories, e.g., bin, lib, share.
+            The original idea behind '/usr/local' was to have a separate ('local') '/usr' directory on every machine besides '/usr'
+            The /usr/local hierarchy is for use by the system administrator when installing software locally
+        /home
+        Users' home directories, containing saved files, personal settings, etc.
+            /home/$USER
+                $HOME/.local
+                is a place where a user can install software for their own use
+    ```
 
 - `httpie`
 
-```bash
-# bypass SSL validation
-$ http --verify=no {{ url }}
+    ```bash
+    # bypass SSL validation
+    $ http --verify=no {{ url }}
 
-# only response headers
-$ http -h {{ url }}
+    # only response headers
+    $ http -h {{ url }}
 
-# follow redirects
-$ http --follow {{ url }}
-```
+    # follow redirects
+    $ http --follow {{ url }}
+    ```
 
 - `nginx`
 
-```bash
-# restart nginx updating config
-$ sudo nginx -s reload
+    ```bash
+    # restart nginx updating config
+    $ sudo nginx -s reload
 
-# see compiled modules
-$ sudo nginx -V
+    # see compiled modules
+    $ sudo nginx -V
 
-# test nginx conf
-$ sudo nginx -c /etc/nginx/nginx.conf -t
+    # test nginx conf
+    $ sudo nginx -c /etc/nginx/nginx.conf -t
 
-# avoid auto start when init computer
-$ sudo update-rc.d -f nginx disable
-```
+    # avoid auto start when init computer
+    $ sudo update-rc.d -f nginx disable
+    ```
 
 - `fdisk`
 
-```bash
-$ sudo fdisk -l
-# e.g. example of portable SSD
-...
-Disk /dev/sda: 232,9 GiB, 250059350016 bytes, 488397168 sectors
-Units: sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 4096 bytes
-I/O size (minimum/optimal): 4096 bytes / 33553920 bytes
-Disklabel type: gpt
-Disk identifier: 3A5CEFCE-3945-4681-98F1-9189291166D5
+    ```bash
+    $ sudo fdisk -l
+    # e.g. example of portable SSD
+    ...
+    Disk /dev/sda: 232,9 GiB, 250059350016 bytes, 488397168 sectors
+    Units: sectors of 1 * 512 = 512 bytes
+    Sector size (logical/physical): 512 bytes / 4096 bytes
+    I/O size (minimum/optimal): 4096 bytes / 33553920 bytes
+    Disklabel type: gpt
+    Disk identifier: 3A5CEFCE-3945-4681-98F1-9189291166D5
 
-Device     Start       End   Sectors   Size Type
-/dev/sda1   2048 488397134 488395087 232,9G Linux filesystem
+    Device     Start       End   Sectors   Size Type
+    /dev/sda1   2048 488397134 488395087 232,9G Linux filesystem
 
-# verify disk is detected
-# verify disk has partitions
-```
+    # verify disk is detected
+    # verify disk has partitions
+    ```
 
 - [smartmontools](https://www.smartmontools.org/) - ontains two utility programs (smartctl and smartd) to control and monitor storage systems using the Self-Monitoring, Analysis and Reporting Technology System (SMART) built into most modern ATA/SATA, SCSI/SAS and NVMe disks.
 
-```bash
-# 7.1	2019-12-30 @ (2020-05-17 18:45:51)
-$ apt install -s smartmontools
-...
-Inst smartmontools (6.4+svn4214-1 Ubuntu:16.04/xenial [amd64])
-...
+    ```bash
+    # 7.1	2019-12-30 @ (2020-05-17 18:45:51)
+    $ apt install -s smartmontools
+    ...
+    Inst smartmontools (6.4+svn4214-1 Ubuntu:16.04/xenial [amd64])
+    ...
 
-# install it
-$ apt install smartmontools
+    # install it
+    $ apt install smartmontools
 
-# use it
-$ sudo smartctl -d scsi --all /dev/sda
-```
+    # use it
+    $ sudo smartctl -d scsi --all /dev/sda
+    ```
 
 - `lsscsi` - list all SCSI devices (or hosts) currently on system
 
-```bash
-# install it
-$ apt install lsscsi
+    ```bash
+    # install it
+    $ apt install lsscsi
 
-$ lsscsi
-[9:0:0:0]    disk    CT250MX5 00SSD1           M3CR  /dev/sda
-```
+    $ lsscsi
+    [9:0:0:0]    disk    CT250MX5 00SSD1           M3CR  /dev/sda
+    ```
 
 - `lsusb`
 
-```
-$ lsusb
-Bus 002 Device 005: ID 2109:0715 VIA Labs, Inc.
-...
+    ```bash
+    $ lsusb
+    Bus 002 Device 005: ID 2109:0715 VIA Labs, Inc.
+    ...
 
-$ lsusb -t
-/: Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci_hcd/6p, 5000M
-|__ Port 3: Dev 5, If 0, Class=Mass Storage, Driver=uas, 5000M
-...
+    $ lsusb -t
+    /: Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci_hcd/6p, 5000M
+    |__ Port 3: Dev 5, If 0, Class=Mass Storage, Driver=uas, 5000M
+    ...
 
-$ lsusb -v -d 2109:0715 | grep -i interface
-Couldn't open device, some information will be missing
-bDeviceClass 0 (Defined at Interface level)
-bNumInterfaces 1
-Interface Descriptor:
-bInterfaceNumber 0
-bInterfaceClass 8 Mass Storage
-bInterfaceSubClass 6 SCSI
-bInterfaceProtocol 80 Bulk-Only
-iInterface 0
-Interface Descriptor:
-bInterfaceNumber 0
-bInterfaceClass 8 Mass Storage
-bInterfaceSubClass 6 SCSI
-bInterfaceProtocol 98
-iInterface 0
-```
+    $ lsusb -v -d 2109:0715 | grep -i interface
+    Couldn't open device, some information will be missing
+    bDeviceClass 0 (Defined at Interface level)
+    bNumInterfaces 1
+    Interface Descriptor:
+    bInterfaceNumber 0
+    bInterfaceClass 8 Mass Storage
+    bInterfaceSubClass 6 SCSI
+    bInterfaceProtocol 80 Bulk-Only
+    iInterface 0
+    Interface Descriptor:
+    bInterfaceNumber 0
+    bInterfaceClass 8 Mass Storage
+    bInterfaceSubClass 6 SCSI
+    bInterfaceProtocol 98
+    iInterface 0
+    ```
 
 - `dmesg`
 
-```
-$ dmesg
-...
-[24392.072927] usb 2-3: new SuperSpeed USB device number 10 using xhci_hcd
-[24392.096204] usb 2-3: New USB device found, idVendor=2109, idProduct=0715
-[24392.096217] usb 2-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
-[24392.096225] usb 2-3: Product: VLI Product String
-[24392.096231] usb 2-3: Manufacturer: VLI Manufacture String
-[24392.096237] usb 2-3: SerialNumber: 000000123ADA
-[24392.100232] scsi host9: uas
-[24392.108615] scsi 9:0:0:0: Direct-Access CT250MX5 00SSD1 M3CR PQ: 0 ANSI: 6
-[24392.110751] sd 9:0:0:0: [sda] 488397168 512-byte logical blocks: (250 GB/233 GiB)
-[24392.110769] sd 9:0:0:0: [sda] 4096-byte physical blocks
-[24392.110822] sd 9:0:0:0: Attached scsi generic sg0 type 0
-[24392.111653] sd 9:0:0:0: [sda] Write Protect is off
-[24392.111671] sd 9:0:0:0: [sda] Mode Sense: 2f 00 00 00
-[24392.111965] sd 9:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
-[24392.116725] sda:
-[24392.118849] sd 9:0:0:0: [sda] Attached SCSI disk
-...
-```
+    ```bash
+    $ dmesg
+    ...
+    [24392.072927] usb 2-3: new SuperSpeed USB device number 10 using xhci_hcd
+    [24392.096204] usb 2-3: New USB device found, idVendor=2109, idProduct=0715
+    [24392.096217] usb 2-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+    [24392.096225] usb 2-3: Product: VLI Product String
+    [24392.096231] usb 2-3: Manufacturer: VLI Manufacture String
+    [24392.096237] usb 2-3: SerialNumber: 000000123ADA
+    [24392.100232] scsi host9: uas
+    [24392.108615] scsi 9:0:0:0: Direct-Access CT250MX5 00SSD1 M3CR PQ: 0 ANSI: 6
+    [24392.110751] sd 9:0:0:0: [sda] 488397168 512-byte logical blocks: (250 GB/233 GiB)
+    [24392.110769] sd 9:0:0:0: [sda] 4096-byte physical blocks
+    [24392.110822] sd 9:0:0:0: Attached scsi generic sg0 type 0
+    [24392.111653] sd 9:0:0:0: [sda] Write Protect is off
+    [24392.111671] sd 9:0:0:0: [sda] Mode Sense: 2f 00 00 00
+    [24392.111965] sd 9:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+    [24392.116725] sda:
+    [24392.118849] sd 9:0:0:0: [sda] Attached SCSI disk
+    ...
+    ```
 
 ## Resources
 
