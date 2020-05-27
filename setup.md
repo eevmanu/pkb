@@ -372,6 +372,15 @@
     Move Status to right
     ```
 
+- [xclip](https://github.com/astrand/xclip) - for `myts` personal commands
+
+    ```bash
+    # $ sudo apt install xclip
+    # (2020-05-27 14:33:23)
+    # Inst xclip (0.13-1 Ubuntu:20.04/focal [amd64])
+    $ sudo apt install xclip
+    ```
+
 - [htop](https://github.com/hishamhm/htop) - htop is an interactive text-mode process viewer for Unix systems. It aims to be a better 'top'.
 
     ```bash
