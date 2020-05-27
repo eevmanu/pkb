@@ -41,8 +41,12 @@ $ sudo apt update
 $ sudo apt install python3.8
 ```
 
-- Install `pip` (more info [here](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py))
-    - Check latest version of [pip](https://github.com/pypa/pip/releases)
+- `pip`:
+    - [Installing with get-pip.py](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
+    - [User Guide](https://pip.pypa.io/en/stable/user_guide/)
+    - [releases @ Github](https://github.com/pypa/pip/releases)
+    - [What is the purpose of “pip install --user …”?](https://stackoverflow.com/questions/42988977/what-is-the-purpose-of-pip-install-user)
+    - [Default to --user #1668 @ Github](https://github.com/pypa/pip/issues/1668)
 
 ```bash
 # AVOID install from apt packages
