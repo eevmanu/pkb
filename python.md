@@ -64,12 +64,47 @@ $ /path/to/python3.8 get-pip.py
 
 # install pip for your user (inside $HOME)
 $ /path/to/python3.8 get-pip.py --user
+# --user
+# Install to the Python user install directory for your platform.
+# Typically ~/.local/, or %APPDATA%Python on Windows.
+# (See the Python documentation for site.USER_BASE for full details.)
+
+# After install with --user
+$ ls -la $(which pip)
+-rwxrwxr-x 1 $USER $USER 223 May 23 21:00 $HOME/.local/bin/pip
+$ ls -la $(which pip3)
+-rwxrwxr-x 1 $USER $USER 223 May 23 21:00 $HOME/.local/bin/pip3
+$ ls -la $(which pip3.8)
+-rwxrwxr-x 1 $USER $USER 223 May 23 21:00 $HOME/.local/bin/pip3.8
 
 # this will create a pip command appended with python version
 $ pip3.8
 
 # avoid warning because of locale
 $ export LC_ALL=C
+
+# Troubleshooting
+# > Defaulting to user installation because normal site-packages is not writeable
+# /usr/local/lib/pythonX.X/site-packages don't exist
+# maybe because you install pip with --user
+# https://stackoverflow.com/questions/122327/how-do-i-find-the-location-of-my-python-site-packages-directory
+$ python3 -c 'import site; print(site.getsitepackages())'
+['/usr/local/lib/python3.8/dist-packages', '/usr/lib/python3/dist-packages', '/usr/lib/python3.8/dist-packages']
+$ python3 -m site
+sys.path = [
+    '$HOME',
+    '/usr/lib/python38.zip',
+    '/usr/lib/python3.8',
+    '/usr/lib/python3.8/lib-dynload',
+    '$HOME/.local/lib/python3.8/site-packages',
+    '/usr/local/lib/python3.8/dist-packages',
+    '/usr/lib/python3/dist-packages',
+]
+USER_BASE: '$HOME/.local' (exists)
+USER_SITE: '$HOME/.local/lib/python3.8/site-packages' (exists)
+ENABLE_USER_SITE: True
+$ python3 -m site --user-site
+$HOME/.local/lib/python3.8/site-packages
 ```
 
 - Change `pip3` command to `pip` **(optional)**
