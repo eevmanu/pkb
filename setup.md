@@ -331,7 +331,9 @@
     $ apt install gitg
 
     # extra tool -> git cola
-    $ apt install git-cola
+    # (2020-05-27 14:37:31)
+    # Inst git-cola (3.6-1 Ubuntu:20.04/focal [all])
+    $ sudo apt install git-cola
     ```
 
 - git-cola
