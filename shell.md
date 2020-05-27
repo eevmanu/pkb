@@ -1080,6 +1080,10 @@ $ dmesg
     - [pure-bash-bible](https://github.com/dylanaraps/pure-bash-bible) - A collection of pure bash alternatives to external processes.
     - [Command-line-text-processing](https://github.com/learnbyexample/Command-line-text-processing) -  From finding text to search and replace, from sorting to beautifying text and more
     - [terminals-are-sexy](https://github.com/k4m4/terminals-are-sexy) - A curated list of Terminal frameworks, plugins & resources for CLI lovers.
+    - [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line) - Master the command line, in one page
+    - [Linux Productivity Tools (2019) [pdf]](https://www.usenix.org/sites/default/files/conference/protected-files/lisa19_maheshwari.pdf)
+        - [Hacker news](https://news.ycombinator.com/item?id=23229241)
+        - [Github](https://github.com/ketancmaheshwari/lisa19)
 
 - Zsh
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish shell like syntax highlighting for Zsh
@@ -1087,3 +1091,6 @@ $ dmesg
 
 - Performance tools
     - [perf-tools](https://github.com/brendangregg/perf-tools) - Performance analysis tools based on Linux perf_events (aka perf) and ftrace
+
+- Posts
+    - [Command-line pro tips. Lots more in "The Art Of Command Line"](https://twitter.com/addyosmani/status/1264854298799665152)
