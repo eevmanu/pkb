@@ -166,8 +166,8 @@ myip() {
   curl -4 ifconfig.co
 }
 
-alias myupdate="apt update; apt list --upgradable -a"
-alias myupgrade="apt upgrade -y"
+alias myupdate="sudo apt update; apt list --upgradable -a"
+alias myupgrade="sudo apt upgrade -y"
 
 alias dw="cd $HOME/Downloads"
 
