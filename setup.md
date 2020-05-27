@@ -362,6 +362,16 @@
         X-KDE-SubstituteUID=false
         ```
 
+    - Settings
+
+    ```
+    GUI theme -> Flat dark grey
+    Icon theme -> Dark theme
+    Hide Branches
+    Hide Submodules
+    Move Status to right
+    ```
+
 - [htop](https://github.com/hishamhm/htop) - htop is an interactive text-mode process viewer for Unix systems. It aims to be a better 'top'.
 
     ```bash
