@@ -289,6 +289,9 @@ $ /path/to/python -m pip --version
 - Dependency Management
     - [Python Application Dependency Management in 2018](https://hynek.me/articles/python-app-deps-2018/)
 
-- Extra things
+- Extra tools
   - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python
+  - [docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) - Pi-hole in a docker container
+
+- Extra info
   - [cheat.sh](https://github.com/chubin/cheat.sh) - the only cheat sheet you need
