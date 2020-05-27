@@ -162,6 +162,14 @@ $ diff \
         > ~/Packages/"$(date +%F_%T)".packagesdiff
 ```
 
+- Delete / Remove `package`
+
+```bash
+$ sudo apt remove {{ package }}
+
+$ sudo apt purge {{ package }}
+```
+
 - list `apt` package archives (repositories)
 
 ```bash
@@ -564,6 +572,8 @@ $ free
 
 $ free -m
 
+$ free -htw
+
 $ /proc/meminfo
 
 $ vmstat
@@ -667,6 +677,21 @@ $ youtube-dl \
 
 # to verify it
 $ sudo lsblk -fm
+# e.g.
+NAME FSTYPE LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINT  SIZE OWNER GROUP MODE
+nvme0n1
+│                                                                                 477G root  disk  brw-rw----
+├─nvme0n1p1
+│    vfat         850E-5CCC                             392.1M    21% /boot/efi   500M root  disk  brw-rw----
+├─nvme0n1p2
+│    ext4         ________-____-____-____-____________   39.2G    13% /          48.8G root  disk  brw-rw----
+├─nvme0n1p3
+│    swap         ________-____-____-____-____________                           15.6G root  disk  brw-rw----
+│ └─cryptswap
+│    swap         ________-____-____-____-____________                [SWAP]     15.6G root  disk  brw-rw----
+└─nvme0n1p4
+     ext4         ________-____-____-____-____________    342G    10% /home       412G root  disk  brw-rw----
+
 ```
 
 - understand `sudo su -` (more info [here](https://askubuntu.com/a/376386/879600))
