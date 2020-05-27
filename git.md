@@ -263,6 +263,15 @@ git config --global --unset alias.st
 # avoid asking to reenter password for 1 hour = 3600 sec, local setting
 git config --local credential.helper "cache --timeout=3600"
 ```
+
+- Download repo's branch as tar file
+
+```shell
+$ wget https://github.com/{{ user }}/{{ repo }}/archive/{{ branch }}.tar.gz
+# e.g.
+$ wget https://github.com/jakubroztocil/httpie/archive/master.tar.gz
+```
+
 - Resources
     - [git-extras - GIT utilities -- repo summary, repl, changelog population, author commit percentages and more](https://github.com/tj/git-extras)
     - [git-secrets - Prevents you from committing secrets and credentials into git repositories](https://github.com/awslabs/git-secrets)
