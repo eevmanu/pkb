@@ -891,3 +891,11 @@ https://github.com/xournalpp/xournalpp
     # OFF
     $ sudo modprobe -r uvcvideo
     ```
+
+- Create soft link to `python` if no `python` in your OS
+
+    ```bash
+    # put in your $HOME `bin` folder
+    $ ln -s /usr/bin/python3 $HOME/bin/python
+    ```
+
