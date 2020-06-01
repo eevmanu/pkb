@@ -155,15 +155,24 @@ $ pip install -U pip setuptools wheel
 ```bash
 # step 1: install important packages
 $ pip install -U virtualenv virtualenvwrapper
+# (2020-06-01 16:43:58)
+# Successfully installed appdirs-1.4.4 distlib-0.3.0 filelock-3.0.12 virtualenv-20.0.21
+# Successfully installed stevedore-1.32.0 virtualenv-clone-0.5.4 virtualenvwrapper-4.8.4
+
 # don't remember this will make virtual envs use python version defined through pip
-# to check ti run:
+# to verify it:
+
 # - check shebang of virtualenv
 # $ which virtualenv
 # /path/to/virtualenv
 # $ head -n 1 /path/to/virtualenv
 # #!/usr/bin/python
+# #!/usr/bin/python3.8
+
 # - check pip version with python used on shebang
 # $ /usr/bin/python -m pip --version
+# pip 20.1.1 from $HOME/.local/lib/python3.8/site-packages/pip (python 3.8)
+
 
 # step 2: add config to load when launch a shell sessioon
 $ nano $HOME/.bashrc
