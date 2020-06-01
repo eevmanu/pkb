@@ -175,6 +175,11 @@ alias myupgrade="sudo apt upgrade -y"
 alias dw="cd $HOME/Downloads"
 
 alias gitft="git fetch --all; git fetch --prune"
+alias gitlg="git log \
+  --pretty=format:'[%C(auto)%h] - %d %s %Cgreen(%cr) %C(bold blue)<%an> %Creset' \
+  --graph \
+  --abbrev-commit"
+alias gitst="git status"
 
 alias ytmp3="youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0"
 
