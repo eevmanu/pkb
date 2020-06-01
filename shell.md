@@ -29,6 +29,7 @@
     ```
 
 - Extract `tar` or `gz` file
+    - [How to Extract (Unzip) Tar Gz File](https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/)
 
     ```bash
     $ tar -zxvf /path/to/{{ filename }}.tar.gz
