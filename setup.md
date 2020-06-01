@@ -899,3 +899,16 @@ https://github.com/xournalpp/xournalpp
     $ ln -s /usr/bin/python3 $HOME/bin/python
     ```
 
+- [Peek](https://github.com/phw/peek)
+
+    ```bash
+    $ sudo apt install ffmpeg
+    # gstreamer1.0-libav -> 1.16.2-2
+    $ sudo apt install gstreamer1.0-libav
+    # gstreamer1.0-plugins-good -> 1.16.2-1ubuntu2
+    # gstreamer1.0-plugins-ugly -> 1.16.2-2build1
+    $ sudo apt install gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly
+
+    $ flatpak install flathub com.uploadedlobster.peek
+    ```
+
