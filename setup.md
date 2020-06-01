@@ -416,6 +416,7 @@
 - [speedtest](https://github.com/sivel/speedtest-cli) - Command line interface for testing internet bandwidth using speedtest.net
 
     ```bash
+    # verify `env python` works
     # install in $HOME/bin
     $ wget -O $HOME/bin/speedtest https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
     $ chmod +x $HOME/bin/speedtest
@@ -511,9 +512,12 @@
 
 - [ffmpeg](https://ffmpeg.org/) - A complete, cross-platform solution to record, convert and stream audio and video.
     - [code @ Github](https://github.com/FFmpeg/FFmpeg)
+    - [Ubuntu 20.04 FFmpeg installation](https://linuxconfig.org/ubuntu-20-04-ffmpeg-installation)
 
     ```bash
-    $ apt install ffmpeg
+    # (2020-05-28 18:30:43)
+    # Conf ffmpeg (7:4.2.2-1ubuntu1 Ubuntu:20.04/focal [amd64])
+    $ sudo apt install ffmpeg
     ```
 
 - [jq](https://github.com/stedolan/jq) - Command-line JSON processor
