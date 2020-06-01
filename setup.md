@@ -943,3 +943,25 @@ https://github.com/xournalpp/xournalpp
             ```
 
     - Option 2: Install `gThumb`
+
+- [Screenkey](https://gitlab.com/screenkey/screenkey)
+
+    - [slop](https://github.com/naelstrof/slop)
+
+        ```bash
+        # (2020-06-01 17:50:59)
+        # slop is already the newest version (7.4-1ubuntu2).
+        $ sudo apt install slop
+        ```
+
+    ```bash
+    $ cd $HOME/bin-sources/
+    $ git clone https://gitlab.com/screenkey/screenkey
+    $ ./screenkey --show-settings
+    $ ./setup.py install --user --record files.txt
+    $ cat files.txt
+    $HOME/.local/lib/python3.8/site-packages/screenkey-1.1-py3.8.egg
+    $HOME/.local/bin/screenkey
+    $ which -a screenkey
+    $HOME/.local/bin/screenkey
+    ```
