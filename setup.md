@@ -575,8 +575,8 @@
     # don't forget to check where `Take a screenshot` default shortcut is
     # -d, delay time in miliseconds
     # -p, path where capture will be saved
-    /usr/local/bin/flameshot gui -d 500 -p {{ $HOME }}/Pictures
-    /usr/bin/flameshot gui -d 500 -p {{ $HOME }}/Pictures
+    /usr/local/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
+    /usr/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
 
     # easy way
     $ apt install flameshot
@@ -644,8 +644,8 @@
     $ cd $HOME
     $ rm -rf flameshot/
 
-    {{ $HOME }}/bin/flameshot gui -d 500 -p {{ $HOME }}/Pictures
-    /home/eevmanu/bin/flameshot gui -d 500 -p /home/eevmanu/Pictures
+    {{ $HOME }}/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
+    /home/eevmanu/bin/flameshot gui -d 100 -p /home/eevmanu/Pictures
 
     # flameshot.conf
     [General]
