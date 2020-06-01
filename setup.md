@@ -813,60 +813,60 @@
 
 - Internet speed monitor script
 
-```
-1. download speedtest-cli latest script
-    cd /home/{your_user} or cd ~/
-    * wget -O speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest_cli.py
-    * curl -Lo speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest_cli.py
-    chmod +x speedtest-cli
-2. add this snippet at final of 'speedtest' method
-    info = {
-        'dlspeed': (dlspeed / 1000 / 1000) * args.units[1],
-        'ulspeed': (ulspeed / 1000 / 1000) * args.units[1],
-        'ping': best.get('latency', 0),
-    }
-    from keen.client import KeenClient
-    client = KeenClient(
-        project_id='xxxx',
-        write_key='xxxx',
-        master_key='xxx',
-    )
-    client.add_event("speed_metrics", info)
-3. change location of this script in root of your home
-    to /home/{your_user}/speedtest-cli
-4. install packages for normal working with this script
-    sudo apt-get install libffi-dev
-    sudo pip install -U cffi
-    sudo pip install -U requests[security]
-    sudo pip install -U keen
-5. add this line to crontab
-    crontab -e
-    * * * * * /home/manuelsolorzano/speedtest-cli --simple
-    */5 * * * * /home/manuelsolorzano/speedtest-cli --simple # cada 5 minutos
-```
+    ```
+    1. download speedtest-cli latest script
+        cd /home/{your_user} or cd ~/
+        * wget -O speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest_cli.py
+        * curl -Lo speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest_cli.py
+        chmod +x speedtest-cli
+    2. add this snippet at final of 'speedtest' method
+        info = {
+            'dlspeed': (dlspeed / 1000 / 1000) * args.units[1],
+            'ulspeed': (ulspeed / 1000 / 1000) * args.units[1],
+            'ping': best.get('latency', 0),
+        }
+        from keen.client import KeenClient
+        client = KeenClient(
+            project_id='xxxx',
+            write_key='xxxx',
+            master_key='xxx',
+        )
+        client.add_event("speed_metrics", info)
+    3. change location of this script in root of your home
+        to /home/{your_user}/speedtest-cli
+    4. install packages for normal working with this script
+        sudo apt-get install libffi-dev
+        sudo pip install -U cffi
+        sudo pip install -U requests[security]
+        sudo pip install -U keen
+    5. add this line to crontab
+        crontab -e
+        * * * * * /home/manuelsolorzano/speedtest-cli --simple
+        */5 * * * * /home/manuelsolorzano/speedtest-cli --simple # cada 5 minutos
+    ```
 
 - Firefox nightly
 
-```bash
-$ cd $HOME/
-$ wget -O firefox.nightly.tar.bz2 "https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=linux64&lang=en-US"
-$ (sudo) mv firefox.nightly.tar.bz2 /opt/
-$ cd /opt/
-$ (sudo) tar -xvjf firefox.nightly.tar.bz2
-$ (sudo) rm firefox.nightly.tar.bz2
-$ cd $HOME/bin/
-$ ln -s /opt/firefox/firefox firefoxnightly
-```
+    ```bash
+    $ cd $HOME/
+    $ wget -O firefox.nightly.tar.bz2 "https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=linux64&lang=en-US"
+    $ (sudo) mv firefox.nightly.tar.bz2 /opt/
+    $ cd /opt/
+    $ (sudo) tar -xvjf firefox.nightly.tar.bz2
+    $ (sudo) rm firefox.nightly.tar.bz2
+    $ cd $HOME/bin/
+    $ ln -s /opt/firefox/firefox firefoxnightly
+    ```
 
 - [dbeaver](https://github.com/dbeaver/dbeaver) - Free universal database tool and SQL client
 - [neofetch](https://github.com/dylanaraps/neofetch) - A command-line system information tool written in bash 3.2+
 - [rclone](https://github.com/rclone/rclone) - rsync for cloud storage
 - [geekbench]
 
-```bash
-# TODO
-$ wget http://cdn.geekbench.com/Geekbench-5.1.0-Linux.tar.gz
-```
+    ```bash
+    # TODO
+    $ wget http://cdn.geekbench.com/Geekbench-5.1.0-Linux.tar.gz
+    ```
 
 - glances
 - traceroute
