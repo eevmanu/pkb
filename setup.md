@@ -1009,3 +1009,6 @@ https://github.com/xournalpp/xournalpp
     # install PulseAudio Volume Control
     $ sudo apt install pavucontrol
     ```
+
+- [TabNine](https://www.tabnine.com/)
+    - [Welcome](https://www.tabnine.com/welcome/)
