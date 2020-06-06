@@ -138,6 +138,7 @@
     This may help your eyes hurt less if you are working in front of the screen at night
 
 - [Chrome](https://www.google.com/chrome/)
+    - [How to restore the default Google search engine in Chrome?](https://superuser.com/questions/578228/how-to-restore-the-default-google-search-engine-in-chrome)
 
     ```bash
     $ wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
