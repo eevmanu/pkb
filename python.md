@@ -304,6 +304,10 @@ $ /path/to/python -m pip --version
 - Extra tools
   - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python
   - [docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) - Pi-hole in a docker container
+  - [healthchecks](https://github.com/healthchecks/healthchecks) - A Cron Monitoring Tool written in Python & Django healthchecks.io
 
 - Extra info
   - [cheat.sh](https://github.com/chubin/cheat.sh) - the only cheat sheet you need
+
+- Machine Learning
+  - [streamlit](https://github.com/streamlit/streamlit) - Streamlit — The fastest way to build custom ML tools streamlit.io
