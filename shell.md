@@ -930,6 +930,7 @@
     ```
 
 - `httpie`
+    - [http-prompt](https://github.com/eliangcs/http-prompt) - HTTPie + prompt_toolkit = an interactive command-line HTTP client featuring autocomplete and syntax highlighting http://http-prompt.com
 
     ```bash
     # bypass SSL validation
@@ -1084,6 +1085,7 @@
     - [Linux Productivity Tools (2019) [pdf]](https://www.usenix.org/sites/default/files/conference/protected-files/lisa19_maheshwari.pdf)
         - [Hacker news](https://news.ycombinator.com/item?id=23229241)
         - [Github](https://github.com/ketancmaheshwari/lisa19)
+    - The Beauty of Unix Pipelines - [Hacker News](https://news.ycombinator.com/item?id=23420786) - [Webpage](https://prithu.xyz/posts/unix-pipeline/)
 
 - Zsh
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - Fish shell like syntax highlighting for Zsh
