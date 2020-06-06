@@ -34,7 +34,6 @@
     # set this email to avoid put your real email in public commits
     # it could be find when `patch` option is clicked on your public commits
     git config --local user.email "eevmanu@users.noreply.github.com"
-
     ```
 
 - Commiting - [git commit](https://git-scm.com/docs/git-commit)
@@ -245,7 +244,13 @@
     $ wget https://github.com/jakubroztocil/httpie/archive/master.tar.gz
     ```
 
-- Resources
-    - [git-extras - GIT utilities -- repo summary, repl, changelog population, author commit percentages and more](https://github.com/tj/git-extras)
-    - [git-secrets - Prevents you from committing secrets and credentials into git repositories](https://github.com/awslabs/git-secrets)
-    - [git-standup - Recall what you did on the last working day.](https://github.com/kamranahmedse/git-standup)
+### Resources
+
+- [git-extras](https://github.com/tj/git-extras) - GIT utilities -- repo summary, repl, changelog population, author commit percentages and more
+- [git-secrets](https://github.com/awslabs/git-secrets) - Prevents you from committing secrets and credentials into git repositories
+- [git-standup](https://github.com/kamranahmedse/git-standup) - Recall what you did on the last working day.
+- [github-cheat-sheet](https://github.com/tiimgreen/github-cheat-sheet) - A list of cool features of Git and GitHub. http://git.io/sheet
+- [tips](https://github.com/git-tips/tips) - Most commonly used git tips and tricks. http://git.io/git-tips
+- [Git Command Explorer](https://gitexplorer.com/) - Find the right commands you need without digging through the web.
+- [Operaciones Git - Git Tips](https://gist.github.com/jelcaf/1404619) - Mini-trucos de Git para facilitarme la tarea
+- [git cheat sheet](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf)
