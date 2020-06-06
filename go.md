@@ -184,6 +184,9 @@ Interesting tools:
 - [grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway) - gRPC to JSON proxy generator following the gRPC HTTP spec
 - [viper](https://github.com/spf13/viper) - Go configuration with fangs
 - [validator](https://github.com/go-playground/validator) - Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving
+- [cue](https://github.com/cuelang/cue) - Validate and define text-based and dynamic configuration cuelang.org
+- [cron](https://github.com/robfig/cron) - a cron library for go
+- [webhook](https://github.com/adnanh/webhook) - webhook is a lightweight incoming webhook server to run shell commands
 
 Interesting Github Repos
 - [Go (Golang) Clean Architecture based on Reading Uncle Bob's Clean Architecture](https://github.com/bxcodec/go-clean-arch)
