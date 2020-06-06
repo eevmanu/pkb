@@ -283,8 +283,10 @@ $ /path/to/python -m pip --version
 
 ## Resources
 
-- Linters / ...
+- Linters / Checker
   - [pylint](https://github.com/PyCQA/pylint) - It's not just a linter that annoys you!
+  - [mypy](https://github.com/python/mypy/) - Optional static typing for Python 3 and 2 (PEP 484)
+  - [returns](https://github.com/dry-python/returns) - Make your functions return something meaningful, typed, and safe! returns.rtfd.io
 
 - Database
   - [databases](https://github.com/encode/databases) - Async database support for Python
