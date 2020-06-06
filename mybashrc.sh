@@ -151,20 +151,29 @@ HISTTIMEFORMAT='%F %T - '
 # ====================== EXTRAS
 
 myts() {
-  TMP="($(date +"%Y-%m-%d %H:%M:%S"))"
-  echo "${TMP}"
-  echo "${TMP}" | xclip -selection clipboard
-}
-mytswin() {
-  TMP="($(date +"%Y-%m-%d_%H-%M-%S"))"
-  echo "${TMP}"
-  echo "${TMP}" | xclip -selection clipboard
+  echo "$(date +"%Y-%m-%d_%H-%-%S")" | xclip -quiet -selection clipboard
+  # echo "$(date +"%Y-%m-%d %H:%M:%S")" | xclip -selection clipboard
 }
 myday() {
-  TMP="($(date +"%Y-%m-%d"))"
-  echo "${TMP}"
-  echo "${TMP}" | xclip -selection clipboard
+  echo "$(date +"%Y-%m-%d")" | xclip -quiet -selection clipboard
 }
+# TODO
+# mytsdk() {
+#   echo "$(date +"%Y-%m-%d_%H-%-%S")" | xclip -selection clipboard
+# }
+# [Desktop Entry]
+# Type=Application
+# Version=0.0.1
+# Name=My Timestamp
+# Comment=Copy timestamp to clipboard
+# Exec=mytsdk
+# Terminal=false
+# Categories=Utility;
+# touch $HOME/.local/share/applications/mytsdk.desktop
+# nano $HOME/.local/share/applications/mytsdk.desktop
+# update-desktop-database $HOME/.local/share/applications/
+
+
 myip() {
   curl -4 ifconfig.co
 }
