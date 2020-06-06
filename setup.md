@@ -314,6 +314,28 @@
     $ rm -rf bleachbit/
     ```
 
+- [marktext](https://github.com/marktext/marktext) - A simple and elegant markdown editor, available for Linux, macOS and Windows.
+    - Other option: [notable](https://github.com/notable/notable) - The Markdown-based note-taking app that doesn't suck.
+    - desktop file [example](https://github.com/marktext/marktext/blob/develop/resources/linux/marktext.desktop)
+    - fix issue with [icon](https://askubuntu.com/questions/333133/how-to-set-app-icon-in-the-desktop-file-of-an-ubuntu-touch-application)
+
+    ```bash
+    # 0.16.1
+    $ wget -O $HOME/bin/marktext https://github.com/marktext/marktext/releases/download/v0.16.1/marktext-x86_64.AppImage
+    $ chmod +x $HOME/bin/marktext
+    $ sha256sum $HOME/bin/marktext
+    # 373080e22e6c0aa9fa9394c91b6cf1036898a17595e629983912bbced89653ec
+
+    $ curl -L https://raw.githubusercontent.com/marktext/marktext/develop/resources/linux/marktext.desktop -o $HOME/.local/share/applications/marktext.desktop
+    # Update the Exec in desktop file to your real marktext command. Specify Path if necessary.
+    $ code $HOME/.local/share/applications/marktext.desktop
+    $ update-desktop-database $HOME/.local/share/applications/
+
+    $ mkdir $HOME/.icons
+    $ cd $HOME/.icons
+    $ wget -O marktext.png https://github.com/marktext/marktext/blob/develop/resources/icons/icon.png?raw=true
+    ```
+
 ## Extra Commands & Tools
 
 - [git](https://git-scm.com/)
