@@ -998,3 +998,14 @@ https://github.com/xournalpp/xournalpp
     $ which -a screenkey
     $HOME/.local/bin/screenkey
     ```
+
+- Record audio
+    - [How to set up Audacity](https://manual.audacityteam.org/man/how_to_set_up_audacity.html)
+    - [Tutorial - Recording Computer Playback on Linux](https://manual.audacityteam.org/man/tutorial_recording_computer_playback_on_linux.html)
+
+    ```bash
+    # install Audacity
+    $ flatpak install flathub org.audacityteam.Audacity
+    # install PulseAudio Volume Control
+    $ sudo apt install pavucontrol
+    ```
