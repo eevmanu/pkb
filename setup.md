@@ -1123,11 +1123,11 @@
 - [FiraCode](https://github.com/tonsky/FiraCode) - Free monospaced font with programming ligatures
 
 
-setup keyboard short to change keyboard layout
-verify all chrome extensions which needs *Allow access to file URLs*
-remember that shortcuts to change workspaces and move windows between workspaces are diff between OSes
+    setup keyboard short to change keyboard layout
+    verify all chrome extensions which needs *Allow access to file URLs*
+    remember that shortcuts to change workspaces and move windows between workspaces are diff between OSes
 
-https://github.com/xournalpp/xournalpp
+    https://github.com/xournalpp/xournalpp
 
 
 - Switch `on/off` **camera** on linux
