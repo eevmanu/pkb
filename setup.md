@@ -147,6 +147,25 @@
     ```
 
 - [Brave](https://brave.com/) - browser with real privacy
+    - [Install instructions for Linux](https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux)
+
+    ```bash
+    $ sudo apt install \
+        apt-transport-https \
+        curl
+    $ curl \
+        -s \
+            https://brave-browser-apt-nightly.s3.brave.com/brave-core-nightly.asc \
+    | \
+    sudo apt-key \
+        --keyring /etc/apt/trusted.gpg.d/brave-browser-prerelease.gpg \
+            add -
+    $ echo "deb [arch=amd64] https://brave-browser-apt-nightly.s3.brave.com/ stable main" \
+    | \
+    sudo tee /etc/apt/sources.list.d/brave-browser-nightly.list
+    $ sudo apt update
+    $ sudo apt install brave-browser-nightly
+    ```
 
 - [Dropbox daemon](https://www.dropbox.com/install-linux)
     - [How to install Dropbox through flatpak on CentOS 8.0](https://vitux.com/how-to-install-dropbox-through-flatpak-on-centos-8-0/)
