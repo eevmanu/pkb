@@ -139,6 +139,8 @@
 
 - [Chrome](https://www.google.com/chrome/)
     - [How to restore the default Google search engine in Chrome?](https://superuser.com/questions/578228/how-to-restore-the-default-google-search-engine-in-chrome)
+    - [Flags](chrome://flags/)
+    - [Config to avoid extra query params via Requestly](https://i.imgur.com/zzPO7rB.png)
 
     ```bash
     $ wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
