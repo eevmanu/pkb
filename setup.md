@@ -1227,3 +1227,29 @@
 
 - [TabNine](https://www.tabnine.com/)
     - [Welcome](https://www.tabnine.com/welcome/)
+
+- [ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium) - Google Chromium, sans integration with Google
+
+    - to install it
+
+        ```bash
+        $ echo 'deb http://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/ /' \
+            | \
+            sudo tee /etc/apt/sources.list.d/home:ungoogled_chromium.list
+        $ sudo wget \
+            -O "/etc/apt/trusted.gpg.d/home:ungoogled_chromium.asc" \
+            -nv \
+                https://download.opensuse.org/repositories/home:ungoogled_chromium/Ubuntu_Focal/Release.key
+        $ sudo apt update
+        $ sudo apt install ungoogled-chromium
+        # 2020-06-08
+        # Inst ungoogled-chromium (81.0.4044.138-1.focal1 home:ungoogled_chromium:download.opensuse.org [amd64])
+        ```
+
+    - to remove it
+
+        ```bash
+        $ apt remove ungoogled-chromium
+        $ apt purge ungoogled-chromium
+        $ apt autoremove
+        ```
