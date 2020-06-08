@@ -1216,6 +1216,7 @@
 - Record audio
     - [How to set up Audacity](https://manual.audacityteam.org/man/how_to_set_up_audacity.html)
     - [Tutorial - Recording Computer Playback on Linux](https://manual.audacityteam.org/man/tutorial_recording_computer_playback_on_linux.html)
+    - [audiomass](https://audiomass.co/) - open-source web based audio and waveform editing tool.
 
     ```bash
     # install Audacity
