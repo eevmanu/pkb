@@ -1108,7 +1108,7 @@
 - [dbeaver](https://github.com/dbeaver/dbeaver) - Free universal database tool and SQL client
 - [neofetch](https://github.com/dylanaraps/neofetch) - A command-line system information tool written in bash 3.2+
 - [rclone](https://github.com/rclone/rclone) - rsync for cloud storage
-- [geekbench]
+- [geekbench](https://www.geekbench.com/)
 
     ```bash
     # TODO
