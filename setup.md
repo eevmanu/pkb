@@ -1320,6 +1320,14 @@
         $ apt autoremove
         ```
 
+- [vnote](https://github.com/tamlok/vnote) - A note-taking application that knows programmers and Markdown better.
+
+    ```bash
+    $ cd $HOME/bin
+    $ wget -O vnote https://github.com/tamlok/vnote/releases/download/v2.9.1/VNote-2.9.1-x86_64.AppImage
+    $ chmod +x vnote
+    ```
+
 - [CopyQ](https://github.com/hluk/CopyQ) - Clipboard manager with advanced features
 
     ```bash
