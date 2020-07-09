@@ -167,6 +167,11 @@ non capital first letter private
 - [go please - official language server for the Go language](https://github.com/golang/tools/blob/master/gopls/README.md)
     - [User Guide](https://github.com/golang/tools/blob/master/gopls/doc/user.md)
 
+Benchmark:
+- [Go HTTP request router and web framework benchmark](https://github.com/julienschmidt/go-http-routing-benchmark)
+- [Go web framework benchmark](https://github.com/smallnest/go-web-framework-benchmark)
+- [Awesome Open Source - benchmark](https://awesomeopensource.com/projects/benchmark)
+
 Interesting tools:
 - [fzf](https://github.com/junegunn/fzf) - fuzzy finder
 - [rclone](https://github.com/rclone/rclone) - rsync for cloud storage
