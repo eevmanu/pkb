@@ -235,6 +235,11 @@
     ```bash
     # download deb and install
 
+    $ sudo update-alternatives --set editor /usr/bin/code-insiders
+
+    # if want to do it interactively
+    $ sudo update-alternatives --config editor
+
     # install via snap
     $ snap install code
     ```
