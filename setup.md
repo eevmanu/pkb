@@ -744,6 +744,40 @@
     but when build binary and execute ./flameshot gui, nothing appears, nothing work
     ```
 
+- [ksnip](https://github.com/ksnip/ksnip)
+    - Install using `.AppImage`
+
+        ```bash
+        $ cd $HOME
+        $ wget https://github.com/ksnip/ksnip/releases/download/v1.7.1/ksnip-1.7.1-x86_64.AppImage
+        $ mv ksnip-1.7.1-x86_64.AppImage ksnip
+        $ mv ksnip $HOME/bin
+        ```
+
+    - Setup shortcut
+
+        ```
+        Ksnip
+        {{ $HOME }}/bin/ksnip -r -d 0.1
+        Shift + Print or Print
+        ```
+
+    - Change config inside app
+
+        ```
+        - Saver -> Capture save location and filename
+            {{ $HOME }}/Pictures/ksnip_$Y$M$D-$T.png
+        - Imgur uploader -> Always copy Imgur link to clipboard
+        - Annotator -> Text Font -> Fira Code
+        - Annotator -> Numbering Font -> Fira Code
+        ```
+
+    - Path to config file
+
+        ```bash
+        $ cat $HOME/.config/ksnip/ksnip.conf
+        ```
+
 - [ngrok](https://ngrok.com/) - Public URLs for exposing your local web server.
 
     ```bash
