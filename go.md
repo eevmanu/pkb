@@ -167,6 +167,11 @@ non capital first letter private
 - [go please - official language server for the Go language](https://github.com/golang/tools/blob/master/gopls/README.md)
     - [User Guide](https://github.com/golang/tools/blob/master/gopls/doc/user.md)
 
+Frameworks:
+- [atreugo](https://github.com/savsgio/atreugo) - High performance and extensible micro web framework. Zero memory allocations in hot paths.
+- [fasthttp](https://github.com/valyala/fasthttp) - Fast HTTP package for Go. Tuned for high performance. Zero memory allocations in hot paths. Up to 10x faster than net/http
+- [fiber](https://github.com/gofiber/fiber) - Fiber is an Express inspired web framework written in Go with coffee gofiber.io
+
 Benchmark:
 - [Go HTTP request router and web framework benchmark](https://github.com/julienschmidt/go-http-routing-benchmark)
 - [Go web framework benchmark](https://github.com/smallnest/go-web-framework-benchmark)
