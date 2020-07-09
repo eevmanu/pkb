@@ -1320,6 +1320,14 @@
         $ apt autoremove
         ```
 
+- [CopyQ](https://github.com/hluk/CopyQ) - Clipboard manager with advanced features
+
+    ```bash
+    $ sudo add-apt-repository ppa:hluk/copyq
+    $ sudo apt update
+    $ sudo apt install copyq
+    ```
+
 - [Thinkorswim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.page)
     - [Learning Center](https://tlc.thinkorswim.com/center)
     - https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/PrepareZuluPlatform/AttachAPTRepositoryUbuntuOrDebianSys.htm
