@@ -302,6 +302,9 @@ $ /path/to/python -m pip --version
     - [Nameko](https://github.com/nameko/nameko)
     - [Japronto](https://github.com/squeaky-pl/japronto)
 
+- Benchmark
+  - [FrameworkBenchmarks](https://github.com/TechEmpower/FrameworkBenchmarks) - Source for the TechEmpower Framework Benchmarks project techempower.com/benchmarks
+
 - Dependency Management
   - [Python Application Dependency Management in 2018](https://hynek.me/articles/python-app-deps-2018/)
   - [Overview of python dependency management tools](https://modelpredict.com/python-dependency-management-tools)
