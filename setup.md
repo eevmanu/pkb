@@ -1319,6 +1319,13 @@
         $ apt purge ungoogled-chromium
         $ apt autoremove
         ```
+- [googler](https://github.com/jarun/googler)
+
+    ```bash
+    $ wget -O $HOME/bin/googler https://raw.githubusercontent.com/jarun/googler/v4.1/googler
+    $ chmod a+x $HOME/bin/googler
+    ```
+
 - [RealVNC]
     - Server, .deb install in Linux
     - Clien, apk in android
