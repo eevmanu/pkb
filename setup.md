@@ -230,7 +230,9 @@
     Don't forget to change Settings
 
 - [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux)
+    - [vscodium](https://github.com/VSCodium/vscodium)
     - Code Insiders
+    - [FAQ](https://code.visualstudio.com/docs/supporting/faq)
 
     ```bash
     # download deb and install
