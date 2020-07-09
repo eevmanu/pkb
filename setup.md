@@ -1319,3 +1319,42 @@
         $ apt purge ungoogled-chromium
         $ apt autoremove
         ```
+- [scrcpy](https://github.com/Genymobile/scrcpy) - Display and control your Android device
+    - Requirements
+        - On your android mobile, change USB preferences from: no data transfer -> file transfer
+        - On your android mobile, change developer options: active USB debugging
+            - [Google Pixel 3a: How to Enable Developer Options @ YouTube](https://www.youtube.com/watch?v=qzl8KLIxj2Y)
+        - Install `adb` (Optional: scrcpy from snap comes with scrcpy.adb)
+            - [Platform Tools](https://developer.android.com/studio/releases/platform-tools)
+            - [ADB](https://developer.android.com/studio/command-line/adb.html)
+            - [platform-tools-latest-linux.zip](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
+            - [How to install adb windows mac](https://beebom.com/how-to-install-adb-windows-mac/)
+            - [Install adb windows macos linux](https://www.xda-developers.com/install-adb-windows-macos-linux/)
+            - Version @ 2020-06-25
+                ```
+                $ ./adb version
+                Android Debug Bridge version 1.0.41
+                Version 30.0.3-6597393
+                Installed as /home/eevmanu/platform-tools/adb
+                ```
+
+    - Install it via `snap` ([github repo](https://github.com/sisco311/scrcpy-snap))
+        ```
+        $ sudo snap install scrcpy
+        ```
+    - Verify port is not being used
+        ```
+        $ sudo ss -tulpn | grep :5555
+        ```
+    - How to use ([useful link](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/))
+        ```
+        $ scrcpy.adb start-server
+        $ scrcpy.adb devices
+        $ scrcpy.adb tcpip 5555
+        $ scrcpy.adb connect {{ android IP }}:5555
+        $ scrcpy -b2M -m800
+        $ scrcpy.adb kill-server
+        ```
+    - Considerations
+        - Don't forget to allow connection on android phone
+        - client (scrcpy) and server (scrcpy.adb) should be from same version, otherwise won't work
