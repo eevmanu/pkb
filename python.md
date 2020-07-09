@@ -288,8 +288,13 @@ $ /path/to/python -m pip --version
   - [mypy](https://github.com/python/mypy/) - Optional static typing for Python 3 and 2 (PEP 484)
   - [returns](https://github.com/dry-python/returns) - Make your functions return something meaningful, typed, and safe! returns.rtfd.io
 
-- Database
+- Data & Databases
   - [databases](https://github.com/encode/databases) - Async database support for Python
+  - [faker](https://github.com/joke2k/faker) - Faker is a Python package that generates fake data for you. http://faker.rtfd.org
+  - [pydantic](https://github.com/samuelcolvin/pydantic) - Data parsing and validation using Python type hints pydantic-docs.helpmanual.io
+  - [schematics](https://github.com/schematics/schematics) - Python Data Structures for Humans™. http://schematics.readthedocs.org
+  - [cerberus](https://github.com/pyeve/cerberus) - Lightweight, extensible data validation library for Python http://python-cerberus.org
+  - [glom](https://github.com/mahmoud/glom) - comet Python's nested data operator (and CLI), for all your declarative restructuring needs. Got data? Glom it! comet glom.readthedocs.io
 
 - Web frameworks (!= web server)
     - [Web frameworks for Python, most starred on Github](https://github.com/mingrammer/python-web-framework-stars)
