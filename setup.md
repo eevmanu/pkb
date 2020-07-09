@@ -1320,6 +1320,88 @@
         $ apt autoremove
         ```
 
+- [Thinkorswim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.page)
+    - [Learning Center](https://tlc.thinkorswim.com/center)
+    - https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/PrepareZuluPlatform/AttachAPTRepositoryUbuntuOrDebianSys.htm
+    - https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOnLinuxUsingAPTRepository.htm
+    - https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOLinuxUsingZuluDockerRegistry.htm
+    - Install Zulu OpenJDK 8
+        - Import Azul's public key.
+            ```bash
+            $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9
+            ```
+        - Add the Azul package to the Ubuntu APT repository.
+            ```bash
+            $ sudo apt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'
+            ```
+        - Update the information about available packages.
+            ```bash
+            $ sudo apt update
+            ```
+        - Install `zulu`
+            ```bash
+            # 2020-06-09
+            # Conf zulu-8 (8.46.0.19 Azul Systems, Inc., Ubuntu Repository:1.0/azulsystems [amd64])
+            $ sudo apt install zulu-8
+            $ sudo find /usr -name '*zulu*'
+            /usr/lib/jvm/.zulu-8-amd64.jinfo
+            /usr/lib/jvm/zulu-8-amd64
+            /usr/share/app-install/desktop/zulucrypt-gui:zulucrypt-gui.desktop
+            /usr/share/app-install/desktop/zulumount-gui:zulumount-gui.desktop
+            ```
+        - Verify `java` version
+            ```bash
+            $ java -version
+            openjdk version "1.8.0_252"
+            OpenJDK Runtime Environment (Zulu 8.46.0.19-CA-linux64) (build 1.8.0_252-b14)
+            OpenJDK 64-Bit Server VM (Zulu 8.46.0.19-CA-linux64) (build 25.252-b14, mixed mode)
+            $ sudo update-alternatives --config java
+            There is only one alternative in link group java (providing /usr/bin/java): /usr/lib/jvm/zulu-8-amd64/jre/bin/java
+            Nothing to configure.
+            $ sudo update-alternatives --config javac
+            There is only one alternative in link group javac (providing /usr/bin/javac): /usr/lib/jvm/zulu-8-amd64/bin/javac
+            Nothing to configure.
+            ```
+    - Install Thinkorswim.sh
+        - Dowload it
+            ```bash
+            $ wget https://mediaserver.thinkorswim.com/installer/InstFiles/thinkorswim_installer.sh
+            ```
+        - Allow to execute
+            ```bash
+            $ chmod a+x thinkorswim_installer.sh
+            ```
+        - Verify it
+            ```bash
+            $ sha256sum thinkorswim_installer.sh
+            f5ce65c9f764c8fcc2698f050eadb2be30d0484260657f63a6f739ab06cbef1c  thinkorswim_installer.sh
+            $ sha512sum thinkorswim_installer.sh
+            4c5ae6a3d306ee021ec4ccd51e6e268fcb01a65f9dd24f1703a4384d7bfb360d069baab03a0c2fadcffc20e0d9021905aa9b9559781dc601703943597b9fdc7f  thinkorswim_installer.sh
+            ```
+        - Run it
+            ```bash
+            $ ./thinkorswim_installer.sh
+            ```
+        - Follow all steps, only change folder to `$HOME/.local/opt/thinkorswim`
+        - Add binary to PATH
+            ```
+            $ ln -s $HOME/.local/opt/thinkorswim/thinkorswim $HOME/bin/thinkorswim
+            ```
+        - `.desktop` file example
+            ```
+            #!/usr/bin/env xdg-open
+            [Desktop Entry]
+            Type=Application
+            Name=thinkorswim
+            Exec=thinkorswim
+            Icon={{ $HOME }}.local/opt/thinkorswim/.install4j/thinkorswim.png
+            ```
+        - Create `.desktop` file in `$HOME/.local/share/applications/` and update applications
+            ```bash
+            $ nano $HOME/.local/share/applications/thinkorswim.desktop
+            $ update-desktop-database $HOME/.local/share/applications/
+            ```
+
 - [figma-linux](https://github.com/figma-linux/figma-linux)
 
     ```bash
