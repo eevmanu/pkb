@@ -307,9 +307,23 @@ $ /path/to/python -m pip --version
   - [Overview of python dependency management tools](https://modelpredict.com/python-dependency-management-tools)
 
 - Extra tools
+  - [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python. butterfly python-httpx.org
   - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python
   - [docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) - Pi-hole in a docker container
   - [healthchecks](https://github.com/healthchecks/healthchecks) - A Cron Monitoring Tool written in Python & Django healthchecks.io
+  - [pyperclip](https://github.com/asweigart/pyperclip) - Python module for cross-platform clipboard functions. pypi.python.org/pypi/pyperclip
+  - reloading
+    - [reloading](https://github.com/julvo/reloading) - Change Python code while it's running using a reloading loop
+    - [watchgod](https://github.com/samuelcolvin/watchgod) - Simple, modern file watching and code reload in python.
+    - [hotreload](https://github.com/say4n/hotreload) - hot reload your python code!
+    - [aiohttp-devtools](https://github.com/aio-libs/aiohttp-devtools) - dev tools for aiohttp
+  - task queue
+    - [celery](https://github.com/celery/celery)
+    - [faust](https://github.com/robinhood/faust)
+  - extract pdf
+    - [pdftabextract](https://github.com/WZBSocialScienceCenter/pdftabextract) - A set of tools for extracting tables from PDF files helping to do data mining on (OCR-processed) scanned documents. https://datascience.blog.wzb.eu/2017/…
+  - finance
+    - [yfinance](https://github.com/ranaroussi/yfinance) - Yahoo! Finance market data downloader (+faster Pandas Datareader) https://aroussi.com/post/python-yahoo…
 
 - Extra info
   - [cheat.sh](https://github.com/chubin/cheat.sh) - the only cheat sheet you need
