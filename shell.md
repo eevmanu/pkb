@@ -28,12 +28,25 @@
     $ {{ command }} | grep {{ pattern }}
     ```
 
-- Extract `tar` or `gz` file
+- Extract `tar.gz` file
     - [How to Extract (Unzip) Tar Gz File](https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/)
 
     ```bash
-    $ tar -zxvf /path/to/{{ filename }}.tar.gz
+    $ tar \
+        -xzv \
+        -f /path/to/{{ filename }}.tar.gz
+    -x  --extract
+    -z  --gzip
+    -v  --verbose
+    -f  --file
     ```
+
+- Extract `tar.xz` file
+
+    ```
+    $ tar -xf {{ path to file }}
+    ```
+
 
 - Extract `gz` or `zip` file
 
@@ -109,7 +122,7 @@
     $ ip a
     ```
 
-- `ss`: new version of `netstat -tupln`
+- `ss`: new version of `$ sudo netstat -tupln` or `$ sudo netstat -peanut`
 
     ```bash
     $ ss
@@ -378,9 +391,12 @@
 
     ```bash
     $ curl \
-        -vX POST {{ url }} \
-        -d @{{ filename }} \
-        --header "Content-Type: application/json"
+        -X POST \
+        --request POST \
+        --data @{{ filename }} \
+        --verbose \
+        --header "Content-Type: application/json" \
+            {{ url }}
     ```
 
 - cut part of a `video`
