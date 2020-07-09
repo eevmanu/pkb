@@ -936,6 +936,7 @@
 
 ## Resource
 
+- [How To Delete A Repository And GPG Key In Ubuntu](https://www.ostechnix.com/how-to-delete-a-repository-and-gpg-key-in-ubuntu/)
 
 ## TODO
 
