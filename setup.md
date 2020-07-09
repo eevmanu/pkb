@@ -595,6 +595,7 @@
 - [jq](https://github.com/stedolan/jq) - Command-line JSON processor
 
 - [wrk](https://github.com/wg/wrk)
+    - [awesome-http-benchmark](https://github.com/denji/awesome-http-benchmark) - HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful)
 
     ```bash
     # Install
