@@ -624,6 +624,10 @@
     # install direct from github
     $ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
     $ sudo chmod a+rx /usr/local/bin/youtube-dl
+    # download with wget
+    # install on $HOME/bin (could be $HOME/.local/bin)
+    $ wget https://yt-dl.org/downloads/latest/youtube-dl -O $HOME/bin/youtube-dl
+    $ chmod a+rx $HOME/bin/youtube-dl
     ```
 
 - [flameshot](https://github.com/lupoDharkael/flameshot) - Powerful yet simple to use screenshot software
