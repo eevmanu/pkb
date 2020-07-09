@@ -1059,6 +1059,13 @@
     ...
     ```
 
+- check if port is being used by pid
+    ```bash
+    $ sudo netstat -peanut | grep ":{{ $PID }} "
+    # e.g.
+    $ sudo netstat -peanut | grep ":8000 "
+    ```
+
 ## Resources
 
 - Extra tools
