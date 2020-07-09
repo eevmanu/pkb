@@ -254,3 +254,5 @@
 - [Git Command Explorer](https://gitexplorer.com/) - Find the right commands you need without digging through the web.
 - [Operaciones Git - Git Tips](https://gist.github.com/jelcaf/1404619) - Mini-trucos de Git para facilitarme la tarea
 - [git cheat sheet](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf)
+- [Easily rename your Git default branch from 'master' to 'main' ](https://twitter.com/shanselman/status/1269838158650195968)
+    - [Easily rename your Git default branch from master to main](https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx)
