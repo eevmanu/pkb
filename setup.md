@@ -1319,6 +1319,19 @@
         $ apt purge ungoogled-chromium
         $ apt autoremove
         ```
+
+- [figma-linux](https://github.com/figma-linux/figma-linux)
+
+    ```bash
+    $ cd $HOME
+    $ wget \
+        -O figma-linux \
+        https://github.com/Figma-Linux/figma-linux/releases/download/v0.6.2/figma-linux-0.6.2.AppImage
+    $ chmod a+x figma-linux
+    $ mv figma-linux $HOME/bin
+    #TODO desktop file
+    ```
+
 - [googler](https://github.com/jarun/googler)
 
     ```bash
