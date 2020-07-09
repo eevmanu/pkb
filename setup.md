@@ -1315,9 +1315,14 @@
     - to remove it
 
         ```bash
-        $ apt remove ungoogled-chromium
-        $ apt purge ungoogled-chromium
-        $ apt autoremove
+        # remove links with apt
+        $ sudo rm /etc/apt/trusted.gpg.d/home\:ungoogled_chromium.asc
+        $ sudo rm /etc/apt/sources.list.d/home\:ungoogled_chromium.list
+        $ sudo rm /etc/apt/sources.list.d/home\:ungoogled_chromium.list.save
+
+        $ sudo apt remove ungoogled-chromium
+        $ sudo apt purge ungoogled-chromium
+        $ sudo apt autoremove
         ```
 
 - [vnote](https://github.com/tamlok/vnote) - A note-taking application that knows programmers and Markdown better.
