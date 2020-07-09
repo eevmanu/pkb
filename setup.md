@@ -1319,6 +1319,13 @@
         $ apt purge ungoogled-chromium
         $ apt autoremove
         ```
+- [RealVNC]
+    - Server, .deb install in Linux
+    - Clien, apk in android
+    https://www.cyberciti.biz/faq/linux-command-to-suspend-hibernate-laptop-netbook-pc/
+    https://www.zealfortechnology.com/2018/08/install-and-configure-realvnc-in-linux.html
+
+
 - [scrcpy](https://github.com/Genymobile/scrcpy) - Display and control your Android device
     - Requirements
         - On your android mobile, change USB preferences from: no data transfer -> file transfer
