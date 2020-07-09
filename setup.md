@@ -153,6 +153,7 @@
     - [How to restore the default Google search engine in Chrome?](https://superuser.com/questions/578228/how-to-restore-the-default-google-search-engine-in-chrome)
     - [Flags](chrome://flags/)
     - [Config to avoid extra query params via Requestly](https://i.imgur.com/zzPO7rB.png)
+    - [[Help] Subframe: Google Drive randomly spiking CPU usage](https://www.reddit.com/r/chrome/comments/foehds/help_subframe_google_drive_randomly_spiking_cpu/)
 
     ```bash
     $ wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
