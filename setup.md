@@ -1295,10 +1295,16 @@
     - [Welcome](https://www.tabnine.com/welcome/)
 
 - [ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium) - Google Chromium, sans integration with Google
-
+    - [ungoogled-chromium from home:ungoogled_chromium project @ opensuse](https://software.opensuse.org/download/package?package=ungoogled-chromium&project=home:ungoogled_chromium)
     - to install it
 
         ```bash
+        # Recommended (because collides with Azul JDK)
+        # Focal (20.04) version
+        $ wget \
+            https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/amd64/ungoogled-chromium_81.0.4044.138-1.focal1_amd64.deb \
+            -O $HOME/ungoogled_chromium.deb
+
         $ echo 'deb http://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/ /' \
             | \
             sudo tee /etc/apt/sources.list.d/home:ungoogled_chromium.list
