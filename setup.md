@@ -13,6 +13,17 @@
     $ du -sh $HOME/Videos/
     ```
 
+- Verify change by number of files in a folder
+
+    ```bash
+    $ tree /media/$USER/manu/Documents/ | wc -l
+    $ tree /media/$USER/manu/Downloads/ | wc -l
+    $ tree /media/$USER/manu/Music/ | wc -l
+    $ tree /media/$USER/manu/Pictures/ | wc -l
+    $ tree /media/$USER/manu/Projects/ | wc -l
+    $ tree /media/$USER/manu/Videos/ | wc -l
+    ```
+
 - Backup folders into external drive
 
     ```bash
