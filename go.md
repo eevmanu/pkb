@@ -2,94 +2,97 @@
 
 ## [Install](https://golang.org/doc/install#install)
 
+- Check latest go version [here](https://golang.org/dl/)
+
 - Download, verify and install and delete unneeded files
 
-```shell
-cd $HOME
-
-wget -O go.tar.gz https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz
-
-sha256sum go.tar.gz
-
-sudo rm -rf /usr/local/go/
-
-sudo tar --directory=/usr/local/ -xzf go.tar.gz
-
-rm go.tar.gz
-```
+    ```bash
+    $ cd $HOME
+    $ wget -O go.tar.gz https://golang.org/dl/go1.14.6.linux-amd64.tar.gz
+    # OR
+    $ wget -O go.tar.gz https://dl.google.com/go/go1.14.6.linux-amd64.tar.gz
+    $ echo "5c566ddc2e0bcfc25c26a5dc44a440fcc0177f7350c1f01952b34d5989a0d287 go.tar.gz" | sha256sum --check
+    go.tar.gz: OK
+    $ sudo rm -rf /usr/local/go/
+    $ sudo tar --directory=/usr/local/ -xzf go.tar.gz
+    $ rm go.tar.gz
+    ```
 
 - Add Go instalation path to $PATH and
 
-```shell
-# add below line to $HOME/.bashrc or $HOME/.profile
-export PATH=$PATH:/usr/local/go/bin
-```
+    ```bash
+    # add below line to $HOME/.bashrc or $HOME/.profile
+    export PATH=$PATH:/usr/local/go/bin
+    ```
+
+- Create a `go` folder in `$HOME` and `bin` folder inside it
+
+    ```bash
+    $ mkdir -p $HOME/go/
+    $ mkdir -p $HOME/go/bin/
+    ```
 
 - Add $GOPATH
+    - [Optional environment variables](https://golang.org/doc/install/source#environment)
 
-[Optional environment variables](https://golang.org/doc/install/source#environment)
+    ```bash
+    # add below line to $HOME/.bashrc or $HOME/.profile
+    export GOPATH=$HOME/go
 
-```shell
-# add below line to $HOME/.bashrc or $HOME/.profile
-export GOPATH=$HOME/go
-
-# sourcing new change, if change was added to $HOME/.bashrc file
-source $HOME/.bashrc
-```
+    # sourcing new change, if change was added to $HOME/.bashrc file
+    $ source $HOME/.bashrc
+    ```
 
 ## [Uninstall](https://golang.org/doc/install#uninstall)
 
 - Remove lines below from `$HOME/.bashrc` or `$HOME/.profile`
 
-```shell
-export PATH=$PATH:/usr/local/go/bin
-
-export GOPATH=$HOME/go
-
-export PATH=$PATH:$(go env GOPATH)/bin
-```
+    ```bash
+    export PATH=$PATH:/usr/local/go/bin
+    export GOPATH=$HOME/go
+    export PATH=$PATH:$(go env GOPATH)/bin
+    ```
 
 - Remove installation path and GOPATH folders
 
-```shell
-sudo rm -rf /usr/local/go/
-
-rm -rf $HOME/go/
-```
+    ```bash
+    $ sudo rm -rf /usr/local/go/
+    $ rm -rf $HOME/go/
+    ```
 
 ## Commands
 
-```shell
+```bash
 # build binary object file from code
 # (for libraries don't produce an executable file)
-go build
+$ go build
 
 # move binary object file to $GOPATH/bin/
-go install
+$ go install
 # e.g.
-go install github.com/eevmanu/xxxx
+$ go install github.com/eevmanu/xxxx
 # inside just one file with yyyy.go filename, distinct from folder name
 
 # remove binary object files from $GOPATH/src/.../project/
 # internally go install use go clean
-go clean
+$ go clean
 
-go test
+$ go test
 # e.g.
-go tests github.com/eevmanu/learninggo
+$ go tests github.com/eevmanu/learninggo
 
-go run
+$ go run
 
-go get
+$ go get
 
-go env
+$ go env
 
-go vet
+$ go vet
 
-go generate
+$ go generate
 
 # check for shadowed variables
-go tool vet --shadow
+$ go tool vet --shadow
 ```
 
 ## Extra tools
@@ -98,10 +101,10 @@ go tool vet --shadow
 
 - [golangci-lint](https://github.com/golangci/golangci-lint)
 
-```shell
-# to install
-curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
-```
+    ```bash
+    # to install
+    $ curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
+    ```
 
 - [Staticcheck](https://github.com/dominikh/go-tools)
 
@@ -113,9 +116,9 @@ curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/insta
 
 - [delve](https://github.com/go-delve/delve)
 
-```shell
-go get -uv github.com/go-delve/delve/cmd/dlv
-```
+    ```bash
+    $ go get -uv github.com/go-delve/delve/cmd/dlv
+    ```
 
 - [spew](https://github.com/davecgh/go-spew)
 
@@ -127,19 +130,19 @@ go get -uv github.com/go-delve/delve/cmd/dlv
 
 - Create alternative folder to use as `GOPATH` for this modules
 
-```shell
-mkdir $HOME/vscodetools
-```
+    ```bash
+    $ mkdir $HOME/vscodetools
+    ```
 
 - Change vscode settings
 
-```
-{
-    ...
-    "go.toolsGopath": "/home/eevmanu/vscodetools",
-    ...
-}
-```
+    ```json
+    {
+        ...
+        "go.toolsGopath": "/home/eevmanu/vscodetools",
+        ...
+    }
+    ```
 
 - Open vscode and run `Go: Install/Update Tools`
 
