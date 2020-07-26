@@ -64,9 +64,9 @@ alias pip39=pip3.9
 
 # ====================== Go
 
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin # <- bin of GOROOT
 export GOPATH="$HOME/go"
-export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:$(go env GOPATH)/bin # <- bin of GOPATH or GOBIN by default
 
 alias gosrc="cd $HOME/go/src"
 
