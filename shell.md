@@ -1121,3 +1121,4 @@
     - [Command-line pro tips. Lots more in "The Art Of Command Line"](https://twitter.com/addyosmani/status/1264854298799665152)
     - [Tip: Use curly braces in the command-line to quickly create multiple related files with less typing](https://twitter.com/addyosmani/status/1265693572033961984)
         - [Yeah, it is also useful for renaming, create file backup, etc...](https://twitter.com/PrestanceDesign/status/1265709922341326853)
+    - [How to know what program is listening on a given port?](https://askubuntu.com/questions/278448/how-to-know-what-program-is-listening-on-a-given-port)
