@@ -203,6 +203,15 @@
     git diff HEAD HEAD^1
     ```
 
+    - Git diff at word or char level - [reference](https://makandracards.com/makandra/28067-git-diff-per-word-or-character)
+
+        ```bash
+        # word by word
+        $ git diff --color-words /path/to/file1 /path/to/file2
+        # char by char
+        $ git diff --color-words=. /path/to/file1 /path/to/file2
+        ```
+
 - Reset - [git reset](https://git-scm.com/docs/git-reset)
 
     ```bash
