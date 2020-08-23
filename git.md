@@ -244,6 +244,12 @@
     $ wget https://github.com/jakubroztocil/httpie/archive/master.tar.gz
     ```
 
+- Miswrite `git`
+
+    ```bash
+    alias gti="git"
+    ```
+
 ### Resources
 
 - [git-extras](https://github.com/tj/git-extras) - GIT utilities -- repo summary, repl, changelog population, author commit percentages and more
