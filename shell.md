@@ -2,6 +2,21 @@
 
 ## Useful commands
 
+- List only directories in a path
+
+    ```bash
+    $ l -d */
+    $ ls -CF -d */
+
+    # listing only directories on shell
+    $ ls -d */
+
+    # h for human readable
+    $ ls -lah
+
+    $ ls -d .*
+    ```
+
 - `Shutdown`
 
     ```bash
