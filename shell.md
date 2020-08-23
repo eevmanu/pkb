@@ -579,7 +579,7 @@
     $ nc -zv 192.168.0.1 1-500
     ```
 
-- `clear` file content
+- `clear` file content (create new file and if exists, clean it)
 
     ```bash
     $ > {{ /path/to/file }}
@@ -689,6 +689,12 @@
 
     # add again
     $ sudo modprobe iwlwifi
+    ```
+
+- restart `shell`
+
+    ```bash
+    $ exec "$SHELL"
     ```
 
 - compare `binary` files, (more info [here](https://superuser.com/a/968863/944220))
