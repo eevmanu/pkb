@@ -467,16 +467,6 @@
             {{ output video }}
     ```
 
-- `ls`
-
-    ```bash
-    # listing only directories on shell
-    $ ls -d */
-
-    # h for human readable
-    $ ls -lah
-    ```
-
 - Convert `wav` to `mp3`
 
     ```bash
