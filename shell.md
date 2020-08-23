@@ -63,10 +63,16 @@
     ```
 
 
-- Extract `gz` or `zip` file
+- Extract `gz` file
 
     ```bash
     $ gunzip file.gz
+    ```
+
+- Extract `zip` file
+
+    ```bash
+    $ unzip file.zip
     ```
 
 - Copy files and folders
