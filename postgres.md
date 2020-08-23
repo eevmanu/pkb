@@ -599,6 +599,8 @@ Password                -> mypass
 - [The Statistics Collector](https://www.postgresql.org/docs/12/monitoring-stats.html)
 
 
+- [PostgreSQL beginner guide - connecting, remote access, psql CLI and troubleshooting connection](https://knowledgepill.it/posts/postgresql-basics-guide/) - [hacker news](https://news.ycombinator.com/item?id=24036132)
+
 - [PostgreSQL Wiki](https://wiki.postgresql.org/wiki/Main_Page)
     - [Apt](https://wiki.postgresql.org/wiki/Apt)
     - [Don't do this](https://wiki.postgresql.org/wiki/Don%27t_Do_This)
