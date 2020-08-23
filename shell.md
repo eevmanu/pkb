@@ -1120,6 +1120,25 @@
     $ sudo netstat -peanut | grep ":8000 "
     ```
 
+- `$XDG_DATA_DIRS` environment variable: defines the preference-ordered set of base directories to search for data files like `.desktop` file or icon files
+
+    ```bash
+    # my output on 2020-08-03
+    $ echo $XDG_DATA_DIRS
+    /usr/share/pop:{{ $HOME }}/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+    ```
+
+- Clipboard in / out
+
+    ```bash
+    # ci = clipboard in, co = clipboard out
+    # xclip so this works in gui apps too
+    alias ci="xclip -selection clipboard"
+    alias co="xclip -selection clipboard -o"
+    ```
+
+
+
 ## Resources
 
 - Extra tools
