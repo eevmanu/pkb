@@ -21,8 +21,15 @@
 - Add Go instalation path to $PATH and
 
     ```bash
-    # add below line to $HOME/.bashrc or $HOME/.profile
+    # add lines below to $HOME/.bashrc or $HOME/.profile
+    # option 1
     export PATH=$PATH:/usr/local/go/bin
+    # option 2
+    export GOROOT=/usr/local/go
+    export PATH=$PATH:$GOROOT/bin
+
+    # and source it, e.g. for $HOME/.bashrc
+    $ source $HOME/.bashrc
     ```
 
 - Create a `go` folder in `$HOME` and `bin` folder inside it
@@ -36,8 +43,14 @@
     - [Optional environment variables](https://golang.org/doc/install/source#environment)
 
     ```bash
-    # add below line to $HOME/.bashrc or $HOME/.profile
+    # add lines below to $HOME/.bashrc or $HOME/.profile
+    # option 1
     export GOPATH=$HOME/go
+    export PATH=$PATH:$GOPATH/bin
+    # option 2
+    export GOPATH="$HOME/go"
+    export GOBIN="$GOPATH/bin"
+    export PATH=$PATH:$GOBIN
 
     # sourcing new change, if change was added to $HOME/.bashrc file
     $ source $HOME/.bashrc
@@ -48,9 +61,13 @@
 - Remove lines below from `$HOME/.bashrc` or `$HOME/.profile`
 
     ```bash
-    export PATH=$PATH:/usr/local/go/bin
-    export GOPATH=$HOME/go
-    export PATH=$PATH:$(go env GOPATH)/bin
+    export GOROOT=/usr/local/go
+    export GOPATH="$HOME/go"
+    export GOBIN="$GOPATH/bin"
+
+    export PATH=$PATH:$GOROOT/bin
+    export PATH=$PATH:$GOPATH/bin
+    # export PATH=$PATH:$GOBIN
     ```
 
 - Remove installation path and GOPATH folders
@@ -58,6 +75,8 @@
     ```bash
     $ sudo rm -rf /usr/local/go/
     $ rm -rf $HOME/go/
+    # https://golang.org/cmd/go/#hdr-Build_and_test_caching
+    $ rm -rf $HOME/.cache/go-build/
     ```
 
 ## Commands
@@ -126,7 +145,36 @@ $ go tool vet --shadow
 
 - [litter](https://github.com/sanity-io/litter)
 
-### VSCode Tools
+### VSCode GO extension
+
+- [Extension](https://marketplace.visualstudio.com/items?itemName=golang.Go)
+
+- [Settings](https://github.com/golang/vscode-go/blob/master/docs/settings.md)
+
+- [Tools](https://github.com/golang/vscode-go/blob/master/docs/tools.md)
+
+    ```bash
+    # 2020-07-27
+    gocode
+    gopkgs
+    go-outline
+    go-symbols
+    guru
+    gorename
+    gotests
+    gomodifytags
+    impl
+    fillstruct
+    goplay
+    godoctor
+    dlv
+    gocode-gomod
+    godef
+    goreturns
+    golint
+    ```
+
+- [Modules](https://github.com/golang/vscode-go/blob/master/docs/modules.md)
 
 - Create alternative folder to use as `GOPATH` for this modules
 
@@ -134,17 +182,24 @@ $ go tool vet --shadow
     $ mkdir $HOME/vscodetools
     ```
 
-- Change vscode settings
+- Change on VSCode settings path for Go Tools
+    - Path for User Settings
+        - `$HOME/.config/Code - Insiders/User/settings.json`
+        - `$HOME/.config/Code/User/settings.json`
 
     ```json
     {
         ...
-        "go.toolsGopath": "/home/eevmanu/vscodetools",
+        "go.toolsGopath": "{{ $HOME }}/vscodetools",
         ...
     }
     ```
 
-- Open vscode and run `Go: Install/Update Tools`
+- Open VSCode and run `Go: Install/Update Tools`
+
+### Go Language Server
+
+- [Docs related to VSCode](https://github.com/golang/tools/blob/master/gopls/doc/vscode.md)
 
 ------------------------------------------------------------------------------------------------
 
