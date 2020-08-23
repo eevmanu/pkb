@@ -303,6 +303,17 @@
     $ convert *.jpg pictures.pdf
     ```
 
+- convert `pdf` into single image file
+    - [How to convert PDF to Image?](https://askubuntu.com/questions/50170/how-to-convert-pdf-to-image)
+
+    ```bash
+    $ pdftoppm input.pdf {{ outputname }} -png
+    # e.g.
+    $ pdftoppm input.pdf output -png
+    $ pdftoppm input.pdf {{ outputname }} -png -f {{ page number }} -singlefile
+
+    ```
+
 - join `pdfs` into `pdf`
 
     ```bash
