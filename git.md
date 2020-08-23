@@ -243,6 +243,9 @@
 
     # avoid asking to reenter password for 1 hour = 3600 sec, local setting
     git config --local credential.helper "cache --timeout=3600"
+
+    # https://git-scm.com/docs/git-config#Documentation/git-config.txt-helpautoCorrect
+    git config --global help.autocorrect 1
     ```
 
 - Download repo's branch as tar file
