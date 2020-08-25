@@ -1732,3 +1732,8 @@
     - Considerations
         - Don't forget to allow connection on android phone
         - client (scrcpy) and server (scrcpy.adb) should be from same version, otherwise won't work
+- [LibreOffice]
+    - [how do I change from inches to cm in page setup etc [closed]](https://ask.libreoffice.org/en/question/178466/how-do-i-change-from-inches-to-cm-in-page-setup-etc/)
+    - [How to hide default print range/page break lines after clearing a print range?](https://ask.libreoffice.org/en/question/71003/how-to-hide-default-print-rangepage-break-lines-after-clearing-a-print-range/)
+
+
