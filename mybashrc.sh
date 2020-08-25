@@ -15,6 +15,9 @@ PATH="$PATH:$HOME/.local/bin"
 # install my personal stuffs I want to add in my PATH
 PATH="$PATH:$HOME/bin"
 
+# if install `snap`
+# PATH="$PAHT:/snap/bin"
+
 # add exiftool bin to PATH
 # https://exiftool.org/install.html#Unix
 # docs - https://exiftool.org/exiftool_pod.html
