@@ -170,6 +170,7 @@
     - [Flags](chrome://flags/)
     - [Config to avoid extra query params via Requestly](https://i.imgur.com/zzPO7rB.png)
     - [[Help] Subframe: Google Drive randomly spiking CPU usage](https://www.reddit.com/r/chrome/comments/foehds/help_subframe_google_drive_randomly_spiking_cpu/)
+    - [Enable sharing page via QR Code](chrome://flags/#sharing-qr-code-generator)
 
     ```bash
     $ wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
