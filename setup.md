@@ -266,11 +266,9 @@
     - [How to change indentation in Visual Studio Code?](https://stackoverflow.com/questions/34174207/how-to-change-indentation-in-visual-studio-code)
 
     ```bash
-    # download deb and install
-
-    $ sudo update-alternatives --set editor /usr/bin/code-insiders
-
-    # if want to do it interactively
+    # set code (or code-insiders) as default editor manually
+    $ sudo update-alternatives --set editor /usr/bin/code
+    # set code (or code-insiders) as default editor interactively
     $ sudo update-alternatives --config editor
 
     # install via snap
