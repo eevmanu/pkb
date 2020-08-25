@@ -435,6 +435,12 @@
     $ wget -O marktext.png https://github.com/marktext/marktext/blob/develop/resources/icons/icon.png?raw=true
     ```
 
+    - Directories used:
+
+        ```bash
+        $HOME/.config/marktext
+        ```
+
 ## Extra Commands & Tools
 
 - [git](https://git-scm.com/)
