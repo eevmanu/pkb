@@ -29,18 +29,18 @@ PATH="$HOME/bin/exiftool:$PATH"
 
 # ====================== Python
 
-# "virtualenv + virtualenvwrapper"
-# export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-# export VIRTUALENVWRAPPER_PYTHON=$HOME/bin/python
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=$HOME/Envs
-mkdir -p $WORKON_HOME
-# source /usr/local/bin/virtualenvwrapper.sh
-source $HOME/.local/bin/virtualenvwrapper.sh
 # if `pip` installed locally
 # add $HOME/.local/bin/ to $PATH
 # PATH="$PATH:$HOME/.local/bin"
 
+# # "virtualenv + virtualenvwrapper"
+# # export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+# # export VIRTUALENVWRAPPER_PYTHON=$HOME/bin/python
+# export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+# export WORKON_HOME=$HOME/Envs
+# mkdir -p $WORKON_HOME
+# # source /usr/local/bin/virtualenvwrapper.sh
+# source $HOME/.local/bin/virtualenvwrapper.sh
 
 # "pipenv"
 # export PIPENV_VENV_IN_PROJECT=True
