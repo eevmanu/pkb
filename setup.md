@@ -895,34 +895,125 @@
 
         ```bash
         $ cd $HOME
-        $ wget https://github.com/ksnip/ksnip/releases/download/v1.7.1/ksnip-1.7.1-x86_64.AppImage
-        $ mv ksnip-1.7.1-x86_64.AppImage ksnip
+        $ wget -O ksnip https://github.com/ksnip/ksnip/releases/download/v1.7.3/ksnip-1.7.3-x86_64.AppImage
+        $ chmod +x ksnip
         $ mv ksnip $HOME/bin
         ```
 
-    - Setup shortcut
+        - Download icon files
 
-        ```
-        Ksnip
-        {{ $HOME }}/bin/ksnip -r -d 0.1
-        Shift + Print or Print
-        ```
+            ```bash
+            $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.svg
+            $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.ico
+            # Copy 64x64 and 128x128 png file from flatpak installation
+            ```
 
-    - Change config inside app
+        - Create folder hierarchy for `icon` files
+            - [Icon size to provide for unity .desktop, and the syntax to reference it](https://askubuntu.com/questions/393104/icon-size-to-provide-for-unity-desktop-and-the-syntax-to-reference-it)
 
-        ```
-        - Saver -> Capture save location and filename
-            {{ $HOME }}/Pictures/ksnip_$Y$M$D-$T.png
-        - Imgur uploader -> Always copy Imgur link to clipboard
-        - Annotator -> Text Font -> Fira Code
-        - Annotator -> Numbering Font -> Fira Code
-        ```
+            ```bash
+            # $HOME/.icons or $HOME/.local/share/icons
+            $ mkdir $HOME/.icons/hicolor/64x64/apps/
+            $ mkdir $HOME/.icons/hicolor/128x128/apps/
+            ```
 
-    - Path to config file
+        - Copy icon files respectively
 
-        ```bash
-        $ cat $HOME/.config/ksnip/ksnip.conf
-        ```
+            ```bash
+            $ cp ksnip_64x64.png $HOME/.icons/hicolor/64x64/apps/ksnip.png
+            $ cp ksnip_128x128.png $HOME/.icons/hicolor/128x128/apps/ksnip.png
+            ```
+
+        - Move icon files downloaded from github
+
+            ```bash
+            $ mv ksnip.icon .icons/
+            $ mv ksnip.svg .icons/
+            ```
+
+        - Setup shortcut
+
+            ```
+            Ksnip
+            {{ $HOME }}/bin/ksnip -r -d 0.1
+            Shift + Print or Print
+            ```
+
+        - Change config inside app
+
+            ```
+            [Application]
+            ApplicationStyle=Fusion
+            AutoCopyToClipboardNewCaptures=true
+            CloseToTray=false
+            MinimizeToTray=false
+            PromptSaveBeforeExit=false
+            RememberLastSaveDirectory=true
+            SaveDirectory={{ $HOME }}/Pictures
+            SaveFilename=$Y-$M-$D_$T
+            StartMinimizedToTray=false
+            UseTabs=false
+            UseTrayIcon=false
+
+            [ImageGrabber]
+            LastRectArea=@Rect(2341 182 1058 426)
+
+            [Imgur]
+            AlwaysCopyToClipboard=true
+            ForceAnonymous=true
+            OpenLinkDirectlyToImage=true
+
+            [MainWindow]
+            Position=@Point(2253 69)
+
+            [Painter]
+            ItemShadowEnabled=false
+            NumberFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@>\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0K\x10)
+            RotateWatermark=false
+            TextFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@(\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0\x32\x10)
+
+            [UploadScript]
+            UploadScriptStoOnStdErr=false
+
+            ```
+
+        - Path to config file
+
+            ```bash
+            $ cat $HOME/.config/ksnip/ksnip.conf
+            ```
+
+        - Create `.desktop` file on `$HOME/.local/share/applications/ksnip.desktop`
+
+            ```
+            #!/usr/bin/env xdg-open
+            [Desktop Entry]
+            Type=Application
+            Exec={{ $HOME }}/bin/ksnip
+            Name=ksnip
+            GenericName=ksnip Screenshot Tool
+            Comment=Qt based cross-platform screenshot tool that provides many annotation features for your screenshots.
+            Icon=ksnip
+            Terminal=false
+            StartupNotify=true
+            Categories=Utility;
+            ```
+
+        - Update manually desktop file database
+
+            ```bash
+            $ update-desktop-database $HOME/.local/share/applications/
+            ```
+
+        - Uninstall and remove completely
+
+            ```bash
+            $ rm -rf $HOME/.local/share/ksnip
+            $ rm -rf $HOME/.config/ksnip
+            $ rm $HOME/bin/ksnip
+            ```
+
+    - Install it via flatpak
 
 - [ngrok](https://ngrok.com/) - Public URLs for exposing your local web server.
 
