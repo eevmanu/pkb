@@ -260,6 +260,10 @@
     - [vscodium](https://github.com/VSCodium/vscodium)
     - Code Insiders
     - [FAQ](https://code.visualstudio.com/docs/supporting/faq)
+    - [How can you export the Visual Studio Code extension list?](https://stackoverflow.com/questions/35773299/how-can-you-export-the-visual-studio-code-extension-list) @ stackoverflow
+    - [How do I remove VS Code & settings from Ubuntu?](https://superuser.com/questions/1113022/how-do-i-remove-vs-code-settings-from-ubuntu)
+    - [User and Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings)
+    - [How to change indentation in Visual Studio Code?](https://stackoverflow.com/questions/34174207/how-to-change-indentation-in-visual-studio-code)
 
     ```bash
     # download deb and install
