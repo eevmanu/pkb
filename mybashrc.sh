@@ -10,8 +10,8 @@
 # ====================== "bin" folders
 
 # add user bin directories to PATH
-# install pip in local $HOME folder
 PATH="$PATH:$HOME/.local/bin"
+
 # install my personal stuffs I want to add in my PATH
 PATH="$PATH:$HOME/bin"
 
@@ -34,6 +34,10 @@ export WORKON_HOME=$HOME/Envs
 mkdir -p $WORKON_HOME
 # source /usr/local/bin/virtualenvwrapper.sh
 source $HOME/.local/bin/virtualenvwrapper.sh
+# if `pip` installed locally
+# add $HOME/.local/bin/ to $PATH
+# PATH="$PATH:$HOME/.local/bin"
+
 
 # "pipenv"
 # export PIPENV_VENV_IN_PROJECT=True
