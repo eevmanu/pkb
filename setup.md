@@ -854,7 +854,6 @@
     $ rm -rf flameshot/
 
     {{ $HOME }}/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
-    /home/eevmanu/bin/flameshot gui -d 100 -p /home/eevmanu/Pictures
 
     # flameshot.conf
     [General]
@@ -863,6 +862,18 @@
     filenamePattern=fs_%Y-%m-%d_%H-%M-%S
     showDesktopNotification=true
     startupLaunch=true
+
+    # another example of flameshot.conf
+    [General]
+    closeAfterScreenshot=false
+    disabledTrayIcon=false
+    drawColor=#ff0000
+    drawThickness=1
+    filenamePattern=fs_%Y-%m-%d_%H-%M-%S
+    savePath={{ $HOME }}/Pictures
+    showDesktopNotification=false
+    startupLaunch=true
+    uiColor=#930096
     ```
 
     ```
@@ -872,6 +883,12 @@
     from command declaration in custom keyboard shortcut is not a problem
     but when build binary and execute ./flameshot gui, nothing appears, nothing work
     ```
+
+    - Directories used:
+
+        ```bash
+        $HOME/.config/Dharkael/flameshot.ini
+        ```
 
 - [ksnip](https://github.com/ksnip/ksnip)
     - Install using `.AppImage`
