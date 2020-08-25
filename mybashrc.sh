@@ -162,10 +162,38 @@ HISTTIMEFORMAT='%F %T - '
 
 # ===============================================
 
+# =============== Git
+
+# in case miswrite `git`
+alias gti="git"
+
+git config --global alias.st status
+alias gitst="git status"
+
+gitlogformat="log \
+  --pretty=format:'[%C(auto)%h] - %d %s %Cgreen(%cr) %C(bold blue)<%an> %Creset' \
+  --graph \
+  --abbrev-commit"
+git config --global alias.lg "$gitlogformat"
+alias gitlg="git $gitlogformat"
+
+alias gitft="git fetch --all; git fetch --prune"
+
+# ===============================================
+
+# ====================== Manage updates
+
+alias myupdate="sudo apt update; apt list --upgradable"
+# -a give to much info (rows / versions) for code and code-insiders
+# alias myupdate="sudo apt update; apt list --upgradable -a"
+alias myupgrade="sudo apt upgrade -y; sudo apt autoremove -y"
+
+# ===============================================
+
 # ====================== EXTRAS
 
 myts() {
-  echo "$(date +"%Y-%m-%d_%H-%-%S")" | xclip -quiet -selection clipboard
+  echo "$(date +"%Y-%m-%d_%H-%M-%S")" | xclip -quiet -selection clipboard
   # echo "$(date +"%Y-%m-%d %H:%M:%S")" | xclip -selection clipboard
 }
 myday() {
@@ -187,24 +215,15 @@ myday() {
 # nano $HOME/.local/share/applications/mytsdk.desktop
 # update-desktop-database $HOME/.local/share/applications/
 
-
 myip() {
   curl -4 ifconfig.co
 }
 
-alias myupdate="sudo apt update; apt list --upgradable -a"
-alias myupgrade="sudo apt upgrade -y"
-
 alias dw="cd $HOME/Downloads"
 
-alias gitft="git fetch --all; git fetch --prune"
-alias gitlg="git log \
-  --pretty=format:'[%C(auto)%h] - %d %s %Cgreen(%cr) %C(bold blue)<%an> %Creset' \
-  --graph \
-  --abbrev-commit"
-alias gitst="git status"
-
 alias ytmp3="youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0"
+
+alias open=xdg-open
 
 # ===============================================
 
