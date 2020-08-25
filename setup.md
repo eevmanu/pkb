@@ -346,6 +346,12 @@
     $ flatpak install flathub us.zoom.Zoom
     ```
 
+    - Directories used:
+
+        ```bash
+        $HOME/.var/app/us.zoom.Zoom/
+        ```
+
 - [Skype](https://www.skype.com/en/get-skype/download-skype-for-desktop/)
 
     ```bash
