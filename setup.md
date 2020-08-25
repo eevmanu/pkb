@@ -1161,12 +1161,17 @@
 ### VS Code
 
 - [[mitigated] Linux: Ctrl+Shift+E cannot be used as keybinding anymore](https://github.com/microsoft/vscode/issues/48480)
-    - go to terminal type `ibus-setup`
-    - go to Emoji tab, press the `...` next to Emoji choice to get `select keyboard shortcut for switching` window
-    - use the delete button to delete the shortcut and leave nothing there, press OK
-    - Close
-    - Try typing `GTK_IM_MODULE=ibus` code into the terminal. This should work!
-    - If it does just alias this as I put in the post above
+    - Steps:
+        - Run `ibus-setup` on a terminal
+        - Go to `Emoji` tab
+        - Press `...` button next to `Emoji annotation`, this choice is to get `select keyboard shortcut for switching` window
+        - Press `delete` button to delete shortcut and leave nothing there
+        - Press OK
+        - Repeat process for `Unicode code point`
+        - Close
+        - Run `GTK_IM_MODULE=ibus` on a terminal. This should work!
+        - If it does just alias this as I put in the post above
+    - The idea is to remove content on shorcuts which appears [here](https://i.imgur.com/PMxFsuh.png)
 
 ## Resource
 
