@@ -14,7 +14,11 @@
     # h for human readable
     $ ls -lah
 
+    # list only folders which start name with dot '.'
     $ ls -d .*
+
+    # sorted by date
+    $ ls -t
     ```
 
 - `Shutdown`
