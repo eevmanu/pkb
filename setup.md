@@ -125,17 +125,27 @@
     Setting up gnome-tweak-tool (3.34.0-2ubuntu1) ...
     ```
 
-- Snapcraft
-    - [Install on Ubuntu](https://snapcraft.io/docs/installing-snap-on-ubuntu)
 
-    ```bash
-    $ sudo apt update
-    $ sudo apt install snapd
-    ```
+- Linux software distributions
 
-- flatpak
+    - [Snapcraft](https://snapcraft.io/)
+        - [Install on Ubuntu](https://snapcraft.io/docs/installing-snap-on-ubuntu)
 
-- appimage
+        ```bash
+        $ sudo apt update
+        $ sudo apt install snapd
+        ```
+
+    - [flatpak](https://flatpak.org/)
+
+        - Directories used:
+
+            ```bash
+            $HOME/.cache/flatpak
+            $HOME/.local/share/flatpak
+            ```
+
+    - [AppImage](https://appimage.org/)
 
 - [Flux](https://justgetflux.com/) - Better lighting for your computer
     - [code](https://github.com/xflux-gui/fluxgui)
