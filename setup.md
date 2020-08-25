@@ -461,43 +461,106 @@
     # (2020-05-27 14:37:31)
     # Inst git-cola (3.6-1 Ubuntu:20.04/focal [all])
     $ sudo apt install git-cola
+    # settings file: $HOME/.config/git-cola/settings
     ```
 
-- git-cola
-    - dowload it (if lastest version is not in ubuntu packages:)
-        - check latest version [here](https://github.com/git-cola/git-cola/releases/latest)
-        - download source code [tar.gz](https://github.com/git-cola/git-cola/archive/v3.6.tar.gz)
-    - decompress it
-    - install it (follow `README.md`)
-        - don't forget to have `bin` folder inside your `$HOME`
-        - don't forget to include your `bin` folder in your `$PATH`
-    - create new item in menu
-        - adding **.desktop** file in */usr/share/applications/*
+- [git-cola](https://github.com/git-cola/git-cola) - The highly caffeinated Git GUI
+    - Clone repo (if you already have it, update it)
 
         ```
-        [Desktop Entry]
-        Name=Git Cola
-        Comment=The highly caffeinated Git GUI
-        Comment[zh_TW]=高咖啡因含量的 Git 圖形介面
-        TryExec=git-cola
-        Exec=$HOME/bin/git-cola --prompt
-        Icon=git-cola
-        StartupNotify=true
-        Terminal=false
-        Type=Application
-        Categories=Development;RevisionControl;
-        X-KDE-SubstituteUID=false
+        $ mkdir -p $HOME/bin-sources/
+        $ cd $HOME/bin-sources/
+        $ git clone https://github.com/git-cola/git-cola
+        ```
+
+    - Install dependencies
+
+        ```
+        $ pip install PyQt5
+        ```
+
+    - Create soft links inside `$HOME/bin` folder
+
+        ```
+        $ ln -s $HOME/bin-sources/git-cola/bin/git-cola $HOME/bin/
+        $ ln -s $HOME/bin-sources/git-cola/bin/git-dag $HOME/bin/
+        ```
+
+    - Create **.desktop** file into */usr/share/applications/* or *$HOME/.local/share/applications*
+
+        ```bash
+        $ touch $HOME/.local/share/applications/git-cola.desktop
+        $ touch $HOME/.local/share/applications/git-dag.desktop
+        ```
+
+        - `git-cola.desktop` file content (example [here](https://github.com/git-cola/git-cola/blob/main/share/applications/git-cola.desktop))
+
+            ```
+            [Desktop Entry]
+            Name=Git Cola
+            Comment=The highly caffeinated Git GUI
+            Comment[zh_TW]=高咖啡因含量的 Git 圖形介面
+            TryExec=git-cola
+            Exec=$HOME/bin/git-cola --prompt
+            Icon=git-cola
+            StartupNotify=true
+            Terminal=false
+            Type=Application
+            Categories=Development;RevisionControl;
+            X-KDE-SubstituteUID=false
+            ```
+
+        - `git-dag.desktop` file content (example [here](https://github.com/git-cola/git-cola/blob/main/share/applications/git-dag.desktop))
+
+            ```
+            [Desktop Entry]
+            Name=Git DAG
+            Comment=Git DAG visualizer
+            Exec=git-dag --prompt
+            Icon=git-cola
+            StartupNotify=true
+            Terminal=false
+            Type=Application
+            Categories=Development;RevisionControl;
+            X-KDE-SubstituteUID=false
+            ```
+
+    - Add icons
+
+        ```bash
+        $ wget \
+            -O $HOME/.local/share/icons/git-cola \
+            https://raw.githubusercontent.com/git-cola/git-cola/main/share/git-cola/icons/dark/git-cola.ico
+        ```
+
+    - Update info about applictions (new desktop and icon files)
+
+        ```bash
+        $ update-desktop-database $HOME/.local/share/applications/
+        ```
+
+    - Remove everything
+
+        ```bash
+        $ rm $HOME/.local/share/icons/git-cola
+        $ rm $HOME/.local/share/applications/git-cola.desktop
+        $ rm $HOME/.local/share/applications/git-dag.desktop
+        $ rm $HOME/bin-sources/git-cola/bin/git-cola
+        $ rm $HOME/bin-sources/git-cola/bin/git-dag
+        $ rm -rf $HOME/bin-sources/git-cola/
         ```
 
     - Settings
 
-    ```
-    GUI theme -> Flat dark grey
-    Icon theme -> Dark theme
-    Hide Branches
-    Hide Submodules
-    Move Status to right
-    ```
+        ```
+        GUI theme -> Flat dark grey
+        Icon theme -> Dark theme
+        Hide Branches
+        Hide Submodules
+        Move Status to right
+        ```
+
+    - Settings folder path - `$HOME/.config/git-cola/settings`
 
 - [xclip](https://github.com/astrand/xclip) - for `myts` personal commands
 
