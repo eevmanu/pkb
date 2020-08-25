@@ -283,6 +283,13 @@
     ```bash
     # install via flatpak
     $ flatpak install flathub org.telegram.desktop
+
+    # icon saved here
+    $HOME/.local/share/icons/telegram.png
+
+    # folders used for Telegram via Flatpak
+    $HOME/.local/share/TelegramDesktop/
+    $HOME/.var/app/org.telegram.desktop
     ```
 
 - [Slack](https://slack.com/intl/en-pe/downloads/linux)
