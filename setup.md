@@ -1627,6 +1627,26 @@
         $HOME/.local/share/VNote/
         $HOME/.local/share/VNote-2.9.1-x86_64.AppImage/
         ```
+
+- multiple whatsapp locally, options:
+    - [franz](https://github.com/meetfranz/franz)
+    - [ferdi](https://github.com/getferdi/ferdi)
+    - [altus](https://github.com/amanharwara/altus)
+    - [ttth](https://github.com/yafp/ttth)
+    - [ramboxapp](https://github.com/ramboxapp/community-edition)
+    - [hamsket](https://github.com/TheGoddessInari/hamsket)
+
+- Math equations - https://flathub.org/apps/details/org.octave.Octave
+    - [ZeGrapher](https://github.com/AdelKS/ZeGrapher)
+
+- Personal finance
+    - [GNU Cash](https://flathub.org/apps/details/org.gnucash.GnuCash)
+    - [firefly-iii](https://github.com/firefly-iii/firefly-iii)
+
+- GRPC - BloomRPC
+
+- [Stacer](https://github.com/oguzhaninan/Stacer) - Linux System Optimizer and Monitoring
+
 - [CopyQ](https://github.com/hluk/CopyQ) - Clipboard manager with advanced features
 
     ```bash
@@ -1930,3 +1950,14 @@
     - [How to hide default print range/page break lines after clearing a print range?](https://ask.libreoffice.org/en/question/71003/how-to-hide-default-print-rangepage-break-lines-after-clearing-a-print-range/)
 
 
+
+- [KDEConnect](https://community.kde.org/KDEConnect) - control your phone remotely
+- [espanso](https://github.com/federico-terzi/espanso) - Cross-platform Text Expander written in Rust
+
+- Video editors
+    - [shotcut](https://github.com/mltframework/shotcut) - cross-platform (Qt), open-source (GPLv3) video editor
+    - [kdenlive](https://github.com/KDE/kdenlive) - Free and open source video editor, based on MLT Framework and KDE Frameworks 5
+
+- Launchers
+    - [albert](https://github.com/albertlauncher/albert)
+    - [Ulauncher](https://github.com/Ulauncher/Ulauncher)
