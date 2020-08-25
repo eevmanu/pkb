@@ -1,5 +1,7 @@
 Extensions
 
+- Go - golang.go
+
 Editor UI
 - Night Coder - a5hk.night-coder
 - Atom One Dark Theme - akamud.vscode-theme-onedark
