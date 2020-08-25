@@ -59,9 +59,13 @@ fi
 
 # ====================== Go
 
-export PATH=$PATH:/usr/local/go/bin # <- bin of GOROOT
+export GOROOT=/usr/local/go
 export GOPATH="$HOME/go"
-export PATH=$PATH:$(go env GOPATH)/bin # <- bin of GOPATH or GOBIN by default
+export GOBIN="$GOPATH/bin"
+# export PATH=$PATH:$(go env GOPATH)/bin
+# export PATH=$PATH:$GOBIN
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin
 
 alias gosrc="cd $HOME/go/src"
 
@@ -99,6 +103,7 @@ alias dcstop="docker-compose stop"
 alias dcrun="docker-compose run"
 alias dcrm="docker-compose rm -f"
 alias dclogs="docker-compose logs -ft --tail=10"
+
 # function dclogs() {
 #   if [ $# -eq 0 ]; then
 #     docker-compose logs -ft --tail=10
@@ -106,7 +111,6 @@ alias dclogs="docker-compose logs -ft --tail=10"
 #     docker-compose logs -ft --tail=10 $1
 #   fi
 # }
-
 
 # ===============================================
 
