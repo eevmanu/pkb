@@ -611,6 +611,9 @@
     $ cp htop $HOME/bin
     $ cd $HOME
     $ rm -rf htop/
+
+    # config file
+    $HOME/.config/htop/htoprc
     ```
 
 - [speedtest](https://github.com/sivel/speedtest-cli) - Command line interface for testing internet bandwidth using speedtest.net
@@ -1064,6 +1067,8 @@
     $ apt install gufw
     ```
 
+- [opensnitch](https://github.com/evilsocket/opensnitch) - OpenSnitch is a GNU/Linux port of the Little Snitch application firewall
+
 - [exiftool](https://github.com/exiftool/exiftool) - meta information reader/writer
 
     ```bash
@@ -1463,6 +1468,12 @@
     $ flatpak install flathub com.uploadedlobster.peek
     ```
 
+    - Directories used:
+
+        ```bash
+        $HOME/.var/app/com.uploadedlobster.peek/
+        ```
+
 - Preview images
     - [What's the best way to preview many images?](https://www.reddit.com/r/pop_os/comments/gmefd2/whats_the_best_way_to_preview_many_images/)
 
@@ -1517,6 +1528,8 @@
     $HOME/.local/bin/screenkey
     ```
 
+    - Config file: `$HOME/.config/screenkey.json`
+
 - Record audio
     - [How to set up Audacity](https://manual.audacityteam.org/man/how_to_set_up_audacity.html)
     - [Tutorial - Recording Computer Playback on Linux](https://manual.audacityteam.org/man/tutorial_recording_computer_playback_on_linux.html)
@@ -1529,8 +1542,21 @@
     $ sudo apt install pavucontrol
     ```
 
+    - Directories used:
+
+        ```bash
+        $HOME/.var/app/org.audacityteam.Audacity/
+        ```
+
 - [TabNine](https://www.tabnine.com/)
     - [Welcome](https://www.tabnine.com/welcome/)
+
+    - Directories used:
+
+        ```bash
+        $HOME/.config/TabNine/
+        $HOME/.local/share/TabNine/
+        ```
 
 - [ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium) - Google Chromium, sans integration with Google
     - [ungoogled-chromium from home:ungoogled_chromium project @ opensuse](https://software.opensuse.org/download/package?package=ungoogled-chromium&project=home:ungoogled_chromium)
@@ -1577,6 +1603,14 @@
     $ chmod +x vnote
     ```
 
+    - Directories which uses
+
+        ```
+        $HOME/.cache/VNote-2.9.1-x86_64.AppImage/
+        $HOME/.local/share/vnote/
+        $HOME/.local/share/VNote/
+        $HOME/.local/share/VNote-2.9.1-x86_64.AppImage/
+        ```
 - [CopyQ](https://github.com/hluk/CopyQ) - Clipboard manager with advanced features
 
     ```bash
