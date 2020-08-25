@@ -117,16 +117,31 @@ alias dclogs="docker-compose logs -ft --tail=10"
 # ====================== Colorful ever-changing prompt
 
 # https://twitter.com/captainsafia/status/868104255059750913
-# Step 1:
-# sudo apt install athena-jot
-# Step 2:
 function prompt_party {
-  PS1="\[\033[38;5;$(jot -r 1 1 256)m\]\u\[\033[00m\]"
-  PS1="$PS1\[\033[38;5;$(jot -r 1 1 256)m\]@\[\033[00m\]"
-  PS1="$PS1\[\033[38;5;$(jot -r 1 1 256)m\]\h\[\033[00m\] "
-  PS1="$PS1\[\033[38;5;$(jot -r 1 1 256)m\]\w\[\033[00m\]> "
+  # when using virtual envs
+  # match string until first space so could catch another string
+  ENV_NAME=`echo $PS1 | awk '{print $1}'`
+  ENV_NAME="$ENV_NAME "
+
+  # sudo apt install athena-jot
+  # PS1="\[\033[38;5;$(jot -r 1 1 256)m\]\u\[\033[00m\]"
+  # PS1="$PS1\[\033[38;5;$(jot -r 1 1 256)m\]@\[\033[00m\]"
+  # PS1="$PS1\[\033[38;5;$(jot -r 1 1 256)m\]\h\[\033[00m\] "
+  # PS1="$PS1\[\033[38;5;$(jot -r 1 1 256)m\]\w\[\033[00m\]> "
+
+  # with shuf
+  # PS1="\[\033[38;5;$(shuf -i1-256 -n1)m\]\u\[\033[00m\]"
+  # PS1="$PS1\[\033[38;5;$(shuf -i1-256 -n1)m\]@\[\033[00m\]"
+  # PS1="$PS1\[\033[38;5;$(shuf -i1-256 -n1)m\]\h\[\033[00m\] "
+  # PS1="$PS1\[\033[38;5;$(shuf -i1-256 -n1)m\]\w\[\033[00m\]> "
+
+  # with RANDOM
+  PS1="\[\033[38;5;$(($(($RANDOM%$256))+1))m\]\u\[\033[00m\]"
+  PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]@\[\033[00m\]"
+  PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]\h\[\033[00m\] "
+  PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]\w\[\033[00m\]> "
+  PS1="$ENV_NAME$PS1"
 }
-# Step 3:
 PROMPT_COMMAND=prompt_party
 
 # ===============================================
