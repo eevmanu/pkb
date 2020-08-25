@@ -55,28 +55,6 @@ fi
 # "pipenv"
 # export PIPENV_VENV_IN_PROJECT=True
 
-# alias pyXY=pythonX.Y
-# alias pipXY=pipX.Y
-# e.g.
-alias py27=python2.7
-alias py27v="python2.7 --version"
-alias pip27=pip2.7
-alias py35=python3.5
-alias py35v="python3.5 --version"
-alias pip35=pip3.5
-alias py36=python3.6
-alias py36v="python3.6 --version"
-alias pip36=pip3.6
-alias py37=python3.7
-alias py37v="python3.7 --version"
-alias pip37=pip3.7
-alias py38=python3.8
-alias py38v="python3.8 --version"
-alias pip38=pip3.8
-alias py39=python3.9
-alias py39v="python3.9 --version"
-alias pip39=pip3.9
-
 # ===============================================
 
 # ====================== Go
