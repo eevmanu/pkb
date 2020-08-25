@@ -46,6 +46,11 @@
     $ sudo rsync -aPv /media/$USER/manu/Videos/ $HOME/Videos/
     ```
 
+- Resources
+    - [restic](https://github.com/restic/restic)
+    - [duplicacy](https://github.com/gilbertchen/duplicacy) - A new generation cloud backup tool
+    - [timeshift](https://github.com/teejee2008/timeshift) - System restore tool for Linux.
+
 ## Steps after install PopOS
 
 - Be aware of new shortcuts
