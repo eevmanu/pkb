@@ -148,8 +148,8 @@ PROMPT_COMMAND=prompt_party
 
 # =============== "history" command
 
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=1000000
+HISTFILESIZE=2000000
 HISTINGORE='ls:bg:fg:history'
 HISTTIMEFORMAT='%F %T - '
 
