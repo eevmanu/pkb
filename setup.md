@@ -1177,6 +1177,8 @@
 
 - [How To Delete A Repository And GPG Key In Ubuntu](https://www.ostechnix.com/how-to-delete-a-repository-and-gpg-key-in-ubuntu/)
 
+-----------------------------------------------------------------------------------------------------------------
+
 ## TODO
 
 - Internet speed monitor script
@@ -1436,6 +1438,15 @@
 
 - [FiraCode](https://github.com/tonsky/FiraCode) - Free monospaced font with programming ligatures
 
+- Setup keyboard shortcut to change keyboard layout
+    - Steps:
+        - Install Gnome Tweaks
+        - Open it
+        - Go to `Keyboard & Mouse`
+        - Click on `Additional Layout Options`
+        - Unfold `Switching to another layout`
+        - Check `Alt+Space` option, like [here](https://i.imgur.com/aSZxajn.png)
+        - Close
 
     setup keyboard short to change keyboard layout
     verify all chrome extensions which needs *Allow access to file URLs*
