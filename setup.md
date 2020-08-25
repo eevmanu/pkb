@@ -415,7 +415,7 @@
 
 - [marktext](https://github.com/marktext/marktext) - A simple and elegant markdown editor, available for Linux, macOS and Windows.
     - Other option: [notable](https://github.com/notable/notable) - The Markdown-based note-taking app that doesn't suck.
-    - desktop file [example](https://github.com/marktext/marktext/blob/develop/resources/linux/marktext.desktop)
+    - `.desktop` file [example](https://github.com/marktext/marktext/blob/develop/resources/linux/marktext.desktop)
     - fix issue with [icon](https://askubuntu.com/questions/333133/how-to-set-app-icon-in-the-desktop-file-of-an-ubuntu-touch-application)
 
     ```bash
@@ -426,7 +426,7 @@
     # 373080e22e6c0aa9fa9394c91b6cf1036898a17595e629983912bbced89653ec
 
     $ curl -L https://raw.githubusercontent.com/marktext/marktext/develop/resources/linux/marktext.desktop -o $HOME/.local/share/applications/marktext.desktop
-    # Update the Exec in desktop file to your real marktext command. Specify Path if necessary.
+    # Update the Exec in .desktop file to your real marktext command. Specify Path if necessary.
     $ code $HOME/.local/share/applications/marktext.desktop
     $ update-desktop-database $HOME/.local/share/applications/
 
