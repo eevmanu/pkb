@@ -1666,6 +1666,11 @@
             $ nano $HOME/.local/share/applications/thinkorswim.desktop
             $ update-desktop-database $HOME/.local/share/applications/
             ```
+    - Directories used:
+
+        ```bash
+        $HOME/.thinkorswim/
+        ```
 
 - [figma-linux](https://github.com/figma-linux/figma-linux)
 
@@ -1676,8 +1681,15 @@
         https://github.com/Figma-Linux/figma-linux/releases/download/v0.6.2/figma-linux-0.6.2.AppImage
     $ chmod a+x figma-linux
     $ mv figma-linux $HOME/bin
+
     #TODO desktop file
     ```
+
+    - Directories used:
+
+        ```bash
+        $HOME/.config/figma-linux
+        ```
 
 - [googler](https://github.com/jarun/googler)
 
@@ -1686,7 +1698,7 @@
     $ chmod a+x $HOME/bin/googler
     ```
 
-- [RealVNC]
+- [RealVNC](https://realvnc.com)
     - Server, .deb install in Linux
     - Clien, apk in android
     https://www.cyberciti.biz/faq/linux-command-to-suspend-hibernate-laptop-netbook-pc/
@@ -1709,7 +1721,7 @@
                 $ ./adb version
                 Android Debug Bridge version 1.0.41
                 Version 30.0.3-6597393
-                Installed as /home/eevmanu/platform-tools/adb
+                Installed as {{ $HOME }}/platform-tools/adb
                 ```
 
     - Install it via `snap` ([github repo](https://github.com/sisco311/scrcpy-snap))
@@ -1732,6 +1744,21 @@
     - Considerations
         - Don't forget to allow connection on android phone
         - client (scrcpy) and server (scrcpy.adb) should be from same version, otherwise won't work
+
+- [bashtop](https://github.com/aristocratos/bashtop)
+
+    ```bash
+    # to download or update it
+    $ wget -O $HOME/bin/bashtop https://raw.githubusercontent.com/aristocratos/bashtop/master/bashtop
+    ```
+
+    - consider [bpytop](https://github.com/aristocratos/bpytop)
+    - Directories used:
+
+        ```bash
+        $HOME/.config/bashtop
+        ```
+
 
 - [droidcam](https://www.dev47apps.com/)
     - [Linux instructions](https://www.dev47apps.com/droidcam/linux/)
