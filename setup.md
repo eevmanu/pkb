@@ -1585,6 +1585,14 @@
     $ sudo apt install copyq
     ```
 
+    - Directories used:
+
+        ```
+        $HOME/.config/copyq
+        $HOME/.local/share/copyq
+        $HOME/.var/app/com.github.hluk.copyq
+        ```
+
 - [Thinkorswim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.page)
     - [Learning Center](https://tlc.thinkorswim.com/center)
     - https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/PrepareZuluPlatform/AttachAPTRepositoryUbuntuOrDebianSys.htm
