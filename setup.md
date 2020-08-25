@@ -226,6 +226,15 @@
     $ flatpak install flathub com.dropbox.Client
     ```
 
+    - Add to Startup Applications
+        - In PopOS, be sure to have Gnome Tweaks, if not, install it
+        - Open Gnome Tweaks
+        - Go to option Startup Applications
+        - Click in `+` to add a application
+        - Click on search icon to search dropbox
+        - Enter `dropbox` (should appear if was installed via flatpak)
+        - Confirm to add it
+
 - [Spotify](https://www.spotify.com/download/linux/)
 
     ```bash
