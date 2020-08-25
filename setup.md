@@ -330,18 +330,23 @@
 
     ```bash
     $ wget http://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
+
     # uncompress and delete previous file
     $ gzip -d FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
+
     # untar
     $ tar xzvf FoxitReader.enu.setup.2.4.4.0911.x64.run.tar
+
     # assign permissions, if needed
     $ chmod a+x FoxitReader*.run
+
     # run installer
     $ ./FoxitReader.enu.setup.2.4.4.0911\(r057d814\).x64.run
+
     # select any of the following paths as Installation Folder:
-    - $HOME/opt/foxitsoftware/foxitreader
-    - $HOME/.opt/foxitsoftware/foxitreader
-    - /opt/foxitsoftware/foxitreader
+    $HOME/opt/foxitsoftware/foxitreader
+    $HOME/.opt/foxitsoftware/foxitreader
+    /opt/foxitsoftware/foxitreader
     ```
 
 - [Zoom](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_adcc0b66-b2f4-468b-bc7a-12c182f354b7)
@@ -738,15 +743,15 @@
     $ cp wrk $HOME/bin/wrk
 
     # How to use it
-    -c, --connections: total number of HTTP connections to keep open with
-                    each thread handling N = connections/threads
-    -d, --duration:    duration of the test, e.g. 2s, 2m, 2h
-    -t, --threads:     total number of threads to use
-    -s, --script:      LuaJIT script, see SCRIPTING
-    -H, --header:      HTTP header to add to request, e.g. "User-Agent: wrk"
-        --latency:     print detailed latency statistics
-        --timeout:     record a timeout if a response is not received within
-                    this amount of time.
+    # -c, --connections: total number of HTTP connections to keep open with
+    #                 each thread handling N = connections/threads
+    # -d, --duration:    duration of the test, e.g. 2s, 2m, 2h
+    # -t, --threads:     total number of threads to use
+    # -s, --script:      LuaJIT script, see SCRIPTING
+    # -H, --header:      HTTP header to add to request, e.g. "User-Agent: wrk"
+    #     --latency:     print detailed latency statistics
+    #     --timeout:     record a timeout if a response is not received within
+    #                 this amount of time.
     ```
 
 - [wrk2](https://github.com/giltene/wrk2)
@@ -1211,8 +1216,8 @@
         sudo pip install -U keen
     5. add this line to crontab
         crontab -e
-        * * * * * /home/manuelsolorzano/speedtest-cli --simple
-        */5 * * * * /home/manuelsolorzano/speedtest-cli --simple # cada 5 minutos
+        * * * * * /path/to/speedtest-cli --simple # each min
+        */5 * * * * /path/to/speedtest-cli --simple # each 5 mins
     ```
 
 - Firefox
@@ -1448,12 +1453,10 @@
         - Check `Alt+Space` option, like [here](https://i.imgur.com/aSZxajn.png)
         - Close
 
-    setup keyboard short to change keyboard layout
-    verify all chrome extensions which needs *Allow access to file URLs*
-    remember that shortcuts to change workspaces and move windows between workspaces are diff between OSes
+- Check which Chrome Extensions needs *Allow access to file URLs*
+- remember that shortcuts to change workspaces and move windows between workspaces are diff between OSes
 
-    https://github.com/xournalpp/xournalpp
-
+- [Xournal++](https://github.com/xournalpp/xournalpp) - handwriting notetaking software
 
 - Switch `on/off` **camera** on linux
 
@@ -1464,7 +1467,7 @@
     $ sudo modprobe -r uvcvideo
     ```
 
-- Create soft link to `python` if no `python` in your OS
+- Create soft link to `python` binary (at local `$HOME/bin`) if no `python` cmd in your OS
 
     ```bash
     # put in your $HOME `bin` folder
@@ -1936,7 +1939,7 @@
         Categories=GNOME;GTK;Video;
         ```
 
-- [GIMP]
+- [GIMP](https://www.gimp.org/)
     - [Glimpse](https://github.com/glimpse-editor/glimpse/) - GIMP alternative
 
     - Directories used:
@@ -1945,7 +1948,7 @@
         $HOME/.var/app/org.gimp.GIMP/
         ```
 
-- [LibreOffice]
+- [LibreOffice](https://www.libreoffice.org/)
     - [how do I change from inches to cm in page setup etc [closed]](https://ask.libreoffice.org/en/question/178466/how-do-i-change-from-inches-to-cm-in-page-setup-etc/)
     - [How to hide default print range/page break lines after clearing a print range?](https://ask.libreoffice.org/en/question/71003/how-to-hide-default-print-rangepage-break-lines-after-clearing-a-print-range/)
 
