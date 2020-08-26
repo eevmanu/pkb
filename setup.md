@@ -77,51 +77,44 @@
 
 ## Steps after install PopOS
 
-- Be aware of new shortcuts
-    - [Pop!_OS Keyboard Shortcuts](https://support.system76.com/articles/pop-keyboard-shortcuts/)
+- [Keyboard Shortcuts](https://support.system76.com/articles/pop-keyboard-shortcuts/)
 
-- Change Region & Language -> Formats -> United States (English)
+- Settings
+    - Region & Language -> Formats -> United States (English)
+    - Region & Language -> Input Sources -> Add **Spanish (Latin American)**
 
-- Add to Spanish (Latin American) to Input Sources
+- Fonts
 
-- Deactivate animations
+    - Default on **PopOS**
+        - Standard font: Source Code Pro
+        - Serif font: Serif
+        - Sans-serif font: Sans
+        - Fixed-width font: Monospace
 
-- Install fonts
+    - [font @ GitHub](https://github.com/search?q=font&s=stars&type=Repositories)
     - [Fira Code](https://github.com/tonsky/FiraCode)
     - [Hack](https://github.com/source-foundry/Hack)
     - [Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
     - [Cascadia Code](https://github.com/microsoft/cascadia-code)
     - [Fonts for System76](https://github.com/pop-os/fonts)
-    - [Go fonts](https://blog.golang.org/go-fonts)
     - [Inter](https://github.com/rsms/inter)
-    - [Best 20 Fonts for Ubuntu](https://linuxhint.com/best_fonts_ubuntu_linux/)
 
-- Default fonts on `PopOS`
-    - [List of monospaced typefaces](https://en.wikipedia.org/wiki/List_of_monospaced_typefaces)
+    - Resources
+        - [Go fonts](https://blog.golang.org/go-fonts)
+        - [Best 20 Fonts for Ubuntu](https://linuxhint.com/best_fonts_ubuntu_linux/)
+        - [List of monospaced typefaces](https://en.wikipedia.org/wiki/List_of_monospaced_typefaces)
 
-    ```
-    Standard font -> Source Code Pro
-    Serif font -> Serif
-    Sans-serif font -> Sans
-    Fixed-width font -> Monospace
-    ```
+- Extra commands
 
-- Python extra commands in `PopOS`
+    - **Python** related
 
-    ```bash
-    $ py3clean
-    $ py3compile
-    $ py3versions
-    $ pydoc3.8
-    ```
+        ```bash
+        $ py3clean
+        $ py3compile
+        $ py3versions
+        $ pydoc3.8
+        ```
 
-## Apps
-
-- `synaptic` - Graphical package manager
-
-    ```bash
-    $ apt install synaptic
-    ```
 
 - `Gnome` update manager
 
