@@ -2090,3 +2090,48 @@
         ```
 
     - [Using it](https://albertlauncher.github.io/docs/using/)
+
+
+- [Keepassxc](https://keepassxc.org/) - [github](https://github.com/keepassxreboot/keepassxc) - cross-platform community-driven port of the Windows application “Keepass Password Safe”.
+
+    - Installation Steps
+
+        ```bash
+        $ wget -O $HOME/bin/keepassxc https://github.com/keepassxreboot/keepassxc/releases/download/2.6.1/KeePassXC-2.6.1-x86_64.AppImage
+        $ chmod +x $HOME/bin/keepassxc
+        ```
+
+    - `.desktop` file @ `$HOME/.local/share/applications/keepassxc.desktop`
+
+        ```
+        [Desktop Entry]
+        Name=KeePassXC
+        GenericName=Password Manager
+        Comment=Community-driven port of the Windows application “KeePass Password Safe”
+        Exec=keepassxc %f
+        TryExec=keepassxc
+        Icon=keepassxc
+        StartupWMClass=keepassxc
+        StartupNotify=true
+        Terminal=false
+        Type=Application
+        Version=1.0
+        Categories=Utility;Security;Qt;
+        MimeType=application/x-keepass2;
+        ```
+
+    - Add `icon` files
+
+        ```bash
+        $ wget -O .icons/keepassxc.svg https://github.com/keepassxreboot/keepassxc/raw/develop/share/icons/application/scalable/apps/keepassxc.svg
+        ```
+
+    - Refresh configurations to detect new `.desktop` file
+
+        ```bash
+        $ update-desktop-database $HOME/.local/share/applications/
+        ```
+
+    - Resources
+        - [How do I use the KeePassXC CLI tool with the AppImage?](https://keepassxc.org/docs/#faq-appsnap-appimage-cli)
+        - [KeepassXC Question about CLI](https://www.reddit.com/r/KeePass/comments/a5tjx2/keepassxc_question_about_cli/)
