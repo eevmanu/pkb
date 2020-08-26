@@ -152,6 +152,7 @@
 - **GNOME** extensions
     - [Ubuntu AppIndicators](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/) - for application indicators zone in menu bar
     - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
+        - Behaviour -> Use keyboards shortcuts to activate apps -> Turn off (because use **Super+Q** which is used to close program)
     - [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
     - [AlternateTab](https://extensions.gnome.org/extension/15/alternatetab/)
     - [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)
