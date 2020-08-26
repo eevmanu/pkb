@@ -736,6 +736,12 @@
     - [install @ ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
     - [post setup as non root user](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user)
 
+    - in case you have problem downloading **Docker’s official GPG key**
+
+        ```bash
+        $ sudo wget -O /etc/apt/trusted.gpg.d/docker.asc "https://download.docker.com/linux/ubuntu/gpg"
+        ```
+
 - [docker-compose](https://github.com/docker/compose)
 
     ```bash
