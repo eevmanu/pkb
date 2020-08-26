@@ -115,8 +115,7 @@
         $ pydoc3.8
         ```
 
-
-- `Gnome` update manager
+- **GNOME** Update Manager
 
     ```bash
     # to search if is already installed
@@ -130,9 +129,7 @@
     $ sudo apt install update-manager
     ```
 
-- `Gnome` tweak tool
-    - [How do I change fonts and adjust their size?](https://askubuntu.com/questions/19770/how-do-i-change-fonts-and-adjust-their-size)
-    - Interface text -> Fira Sans book 10 (default)
+- **GNOME** Tweaks Tool
 
     ```bash
     $ sudo apt install gnome-tweak-tool
@@ -140,8 +137,41 @@
     Setting up gir1.2-handy-0.0:amd64 (0.0.13-1) ...
     Setting up gnome-tweaks (3.34.0-2ubuntu1) ...
     Setting up gnome-tweak-tool (3.34.0-2ubuntu1) ...
+    ...
     ```
 
+    - General -> Animations -> Turn off
+    - Interface text -> Fira Sans book 10 (default)
+
+    - [How do I change fonts and adjust their size?](https://askubuntu.com/questions/19770/how-do-i-change-fonts-and-adjust-their-size)
+
+- **GNOME** Shell integration
+    - [chrome extension](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
+
+- **GNOME** extensions
+    - [Ubuntu AppIndicators](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/) - for application indicators zone in menu bar
+    - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
+    - [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
+    - [AlternateTab](https://extensions.gnome.org/extension/15/alternatetab/)
+    - [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)
+    - [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/)
+        - [install dependencies](https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet#prerequisites)
+            ```bash
+            $ sudo apt install gir1.2-gtop-2.0 gir1.2-nm-1.0 gir1.2-clutter-1.0
+            ```
+        - reboot gnome shell if needed (`Alt + F2` and input `r` in the prompt)
+    - [Multi Monitors Add-On](https://extensions.gnome.org/extension/921/multi-monitors-add-on/)
+    - [Todo list](https://extensions.gnome.org/extension/162/todo-list/)
+
+    - [Dynamic Panel Transparency](https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/)
+
+## Apps
+
+- `synaptic` - Graphical package manager
+
+    ```bash
+    $ apt install synaptic
+    ```
 
 - Linux software distributions
 
