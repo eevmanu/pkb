@@ -60,7 +60,7 @@
 
 - Restore folders from external drive
 
-    ```
+    ```bash
     $ sudo rsync -aPv /media/$USER/manu/Documents/ $HOME/Documents/
     $ sudo rsync -aPv /media/$USER/manu/Downloads/ $HOME/Downloads/
     $ sudo rsync -aPv /media/$USER/manu/Music/ $HOME/Music/
@@ -70,7 +70,8 @@
     ```
 
 - Resources
-    - [restic](https://github.com/restic/restic)
+    - [backup @ GitHub](https://github.com/search?q=backup&s=stars&type=Repositories)
+    - [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
     - [duplicacy](https://github.com/gilbertchen/duplicacy) - A new generation cloud backup tool
     - [timeshift](https://github.com/teejee2008/timeshift) - System restore tool for Linux.
 
