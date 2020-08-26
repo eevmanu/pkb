@@ -74,6 +74,7 @@
     - [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
     - [duplicacy](https://github.com/gilbertchen/duplicacy) - A new generation cloud backup tool
     - [timeshift](https://github.com/teejee2008/timeshift) - System restore tool for Linux.
+    - [rclone](https://github.com/rclone/rclone) - rsync for cloud storage
 
 ## Steps after install PopOS
 
@@ -1188,9 +1189,6 @@
   - [How To Install Oracle Java 14 (JDK 14) On Ubuntu, Debian Or Linux Mint From APT PPA Repository](https://www.linuxuprising.com/2020/03/how-to-install-oracle-java-14-jdk14-on.html)
   - [How To Install Java with Apt on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-20-04)
 
-
-
-
 ## Troubleshooting
 
 ### Spotify
@@ -1235,13 +1233,18 @@
 
 - Internet speed monitor script
 
-    ```
-    1. download speedtest-cli latest script
-        cd /home/{your_user} or cd ~/
-        * wget -O speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest_cli.py
-        * curl -Lo speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest_cli.py
-        chmod +x speedtest-cli
-    2. add this snippet at final of 'speedtest' method
+    - Download latest **speedtest** script
+
+        ```bash
+        $ cd $HOME
+        $ wget -O $HOME/bin/speedtest https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
+        $ curl -Lo $HOME/bin/speedtest https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
+        $ chmod +x $HOME/bin/speedtest
+        ```
+
+    - Add this **snippet** at final of 'speedtest' method
+
+        ```python
         info = {
             'dlspeed': (dlspeed / 1000 / 1000) * args.units[1],
             'ulspeed': (ulspeed / 1000 / 1000) * args.units[1],
@@ -1254,18 +1257,26 @@
             master_key='xxx',
         )
         client.add_event("speed_metrics", info)
-    3. change location of this script in root of your home
-        to /home/{your_user}/speedtest-cli
-    4. install packages for normal working with this script
-        sudo apt-get install libffi-dev
-        sudo pip install -U cffi
-        sudo pip install -U requests[security]
-        sudo pip install -U keen
-    5. add this line to crontab
-        crontab -e
+        ```
+
+    - Install needed packages
+
+        ```bash
+        $ sudo apt-get install libffi-dev
+        $ pip install -U cffi
+        $ pip install -U requests[security]
+        $ pip install -U keen
+        ```
+
+    - Add **cronjob** to **crontab**
+
+        ```
+        $ crontab -e
+        ...
         * * * * * /path/to/speedtest-cli --simple # each min
         */5 * * * * /path/to/speedtest-cli --simple # each 5 mins
-    ```
+        ...
+        ```
 
 - Firefox
     - [How to install Firefox Developer Edition on Linux](https://linuxconfig.org/how-to-install-firefox-developer-edition-on-linux)
@@ -1474,8 +1485,9 @@
 
 
 - [dbeaver](https://github.com/dbeaver/dbeaver) - Free universal database tool and SQL client
+
 - [neofetch](https://github.com/dylanaraps/neofetch) - A command-line system information tool written in bash 3.2+
-- [rclone](https://github.com/rclone/rclone) - rsync for cloud storage
+
 - [geekbench](https://www.geekbench.com/)
 
     ```bash
@@ -1500,8 +1512,9 @@
         - Check `Alt+Space` option, like [here](https://i.imgur.com/aSZxajn.png)
         - Close
 
-- Check which Chrome Extensions needs *Allow access to file URLs*
-- remember that shortcuts to change workspaces and move windows between workspaces are diff between OSes
+- Check which Chrome Extensions needs **Allow access to file URLs**
+
+- Remember shortcuts to change workspaces and move windows between workspaces are diff between OSes
 
 - [Xournal++](https://github.com/xournalpp/xournalpp) - handwriting notetaking software
 
@@ -1512,13 +1525,6 @@
     $ sudo modprobe uvcvideo
     # OFF
     $ sudo modprobe -r uvcvideo
-    ```
-
-- Create soft link to `python` binary (at local `$HOME/bin`) if no `python` cmd in your OS
-
-    ```bash
-    # put in your $HOME `bin` folder
-    $ ln -s /usr/bin/python3 $HOME/bin/python
     ```
 
 - [Peek](https://github.com/phw/peek)
@@ -1541,6 +1547,7 @@
         ```
 
 - Preview images
+
     - [What's the best way to preview many images?](https://www.reddit.com/r/pop_os/comments/gmefd2/whats_the_best_way_to_preview_many_images/)
 
     - Option 1: Nautilus
@@ -1597,6 +1604,7 @@
     - Config file: `$HOME/.config/screenkey.json`
 
 - Record audio
+
     - [How to set up Audacity](https://manual.audacityteam.org/man/how_to_set_up_audacity.html)
     - [Tutorial - Recording Computer Playback on Linux](https://manual.audacityteam.org/man/tutorial_recording_computer_playback_on_linux.html)
     - [audiomass](https://audiomass.co/) - open-source web based audio and waveform editing tool.
@@ -1615,6 +1623,7 @@
         ```
 
 - [TabNine](https://www.tabnine.com/)
+
     - [Welcome](https://www.tabnine.com/welcome/)
 
     - Directories used:
@@ -1625,7 +1634,9 @@
         ```
 
 - [ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium) - Google Chromium, sans integration with Google
+
     - [ungoogled-chromium from home:ungoogled_chromium project @ opensuse](https://software.opensuse.org/download/package?package=ungoogled-chromium&project=home:ungoogled_chromium)
+
     - to install it
 
         ```bash
@@ -1714,24 +1725,36 @@
         ```
 
 - [Thinkorswim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.page)
+
     - [Learning Center](https://tlc.thinkorswim.com/center)
+
+    <!-- TODO name this links -->
     - https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/PrepareZuluPlatform/AttachAPTRepositoryUbuntuOrDebianSys.htm
     - https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOnLinuxUsingAPTRepository.htm
     - https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOLinuxUsingZuluDockerRegistry.htm
+
     - Install Zulu OpenJDK 8
+
         - Import Azul's public key.
+
             ```bash
             $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9
             ```
+
         - Add the Azul package to the Ubuntu APT repository.
+
             ```bash
             $ sudo apt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'
             ```
+
         - Update the information about available packages.
+
             ```bash
             $ sudo apt update
             ```
+
         - Install `zulu`
+
             ```bash
             # 2020-06-09
             # Conf zulu-8 (8.46.0.19 Azul Systems, Inc., Ubuntu Repository:1.0/azulsystems [amd64])
@@ -1742,7 +1765,9 @@
             /usr/share/app-install/desktop/zulucrypt-gui:zulucrypt-gui.desktop
             /usr/share/app-install/desktop/zulumount-gui:zulumount-gui.desktop
             ```
+
         - Verify `java` version
+
             ```bash
             $ java -version
             openjdk version "1.8.0_252"
@@ -1755,32 +1780,46 @@
             There is only one alternative in link group javac (providing /usr/bin/javac): /usr/lib/jvm/zulu-8-amd64/bin/javac
             Nothing to configure.
             ```
+
     - Install Thinkorswim.sh
+
         - Dowload it
+
             ```bash
             $ wget https://mediaserver.thinkorswim.com/installer/InstFiles/thinkorswim_installer.sh
             ```
+
         - Allow to execute
+
             ```bash
             $ chmod a+x thinkorswim_installer.sh
             ```
+
         - Verify it
+
             ```bash
             $ sha256sum thinkorswim_installer.sh
             f5ce65c9f764c8fcc2698f050eadb2be30d0484260657f63a6f739ab06cbef1c  thinkorswim_installer.sh
             $ sha512sum thinkorswim_installer.sh
             4c5ae6a3d306ee021ec4ccd51e6e268fcb01a65f9dd24f1703a4384d7bfb360d069baab03a0c2fadcffc20e0d9021905aa9b9559781dc601703943597b9fdc7f  thinkorswim_installer.sh
             ```
+
         - Run it
+
             ```bash
             $ ./thinkorswim_installer.sh
             ```
+
         - Follow all steps, only change folder to `$HOME/.local/opt/thinkorswim`
+
         - Add binary to PATH
-            ```
+
+            ```bash
             $ ln -s $HOME/.local/opt/thinkorswim/thinkorswim $HOME/bin/thinkorswim
             ```
+
         - `.desktop` file example
+
             ```
             #!/usr/bin/env xdg-open
             [Desktop Entry]
@@ -1789,11 +1828,14 @@
             Exec=thinkorswim
             Icon={{ $HOME }}.local/opt/thinkorswim/.install4j/thinkorswim.png
             ```
+
         - Create `.desktop` file in `$HOME/.local/share/applications/` and update applications
+
             ```bash
             $ nano $HOME/.local/share/applications/thinkorswim.desktop
             $ update-desktop-database $HOME/.local/share/applications/
             ```
+
     - Directories used:
 
         ```bash
@@ -1802,16 +1844,18 @@
 
 - [figma-linux](https://github.com/figma-linux/figma-linux)
 
-    ```bash
-    $ cd $HOME
-    $ wget \
-        -O figma-linux \
-        https://github.com/Figma-Linux/figma-linux/releases/download/v0.6.2/figma-linux-0.6.2.AppImage
-    $ chmod a+x figma-linux
-    $ mv figma-linux $HOME/bin
+    - Instructions to install it
 
-    #TODO desktop file
-    ```
+        ```bash
+        $ cd $HOME
+        $ wget \
+            -O figma-linux \
+            https://github.com/Figma-Linux/figma-linux/releases/download/v0.6.2/figma-linux-0.6.2.AppImage
+        $ chmod a+x figma-linux
+        $ mv figma-linux $HOME/bin
+        ```
+
+    <!-- TODO instructions to create desktop file -->
 
     - Directories used:
 
@@ -1827,13 +1871,17 @@
     ```
 
 - [RealVNC](https://realvnc.com)
+
     - Server, .deb install in Linux
     - Clien, apk in android
-    https://www.cyberciti.biz/faq/linux-command-to-suspend-hibernate-laptop-netbook-pc/
-    https://www.zealfortechnology.com/2018/08/install-and-configure-realvnc-in-linux.html
+
+    <!-- TODO -->
+    - https://www.cyberciti.biz/faq/linux-command-to-suspend-hibernate-laptop-netbook-pc/
+    - https://www.zealfortechnology.com/2018/08/install-and-configure-realvnc-in-linux.html
 
 
 - [scrcpy](https://github.com/Genymobile/scrcpy) - Display and control your Android device
+
     - Requirements
         - On your android mobile, change USB preferences from: no data transfer -> file transfer
         - On your android mobile, change developer options: active USB debugging
@@ -1845,7 +1893,7 @@
             - [How to install adb windows mac](https://beebom.com/how-to-install-adb-windows-mac/)
             - [Install adb windows macos linux](https://www.xda-developers.com/install-adb-windows-macos-linux/)
             - Version @ 2020-06-25
-                ```
+                ```bash
                 $ ./adb version
                 Android Debug Bridge version 1.0.41
                 Version 30.0.3-6597393
@@ -1853,15 +1901,20 @@
                 ```
 
     - Install it via `snap` ([github repo](https://github.com/sisco311/scrcpy-snap))
-        ```
+
+        ```bash
         $ sudo snap install scrcpy
         ```
+
     - Verify port is not being used
-        ```
+
+        ```bash
         $ sudo ss -tulpn | grep :5555
         ```
+
     - How to use ([useful link](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/))
-        ```
+
+        ```bash
         $ scrcpy.adb start-server
         $ scrcpy.adb devices
         $ scrcpy.adb tcpip 5555
@@ -1869,7 +1922,9 @@
         $ scrcpy -b2M -m800
         $ scrcpy.adb kill-server
         ```
+
     - Considerations
+
         - Don't forget to allow connection on android phone
         - client (scrcpy) and server (scrcpy.adb) should be from same version, otherwise won't work
 
@@ -1889,6 +1944,7 @@
 
 
 - [droidcam](https://www.dev47apps.com/)
+
     - [Linux instructions](https://www.dev47apps.com/droidcam/linux/)
 
         ```bash
@@ -1987,6 +2043,7 @@
         ```
 
 - [GIMP](https://www.gimp.org/)
+
     - [Glimpse](https://github.com/glimpse-editor/glimpse/) - GIMP alternative
 
     - Directories used:
@@ -1996,6 +2053,7 @@
         ```
 
 - [LibreOffice](https://www.libreoffice.org/)
+
     - [how do I change from inches to cm in page setup etc [closed]](https://ask.libreoffice.org/en/question/178466/how-do-i-change-from-inches-to-cm-in-page-setup-etc/)
     - [How to hide default print range/page break lines after clearing a print range?](https://ask.libreoffice.org/en/question/71003/how-to-hide-default-print-rangepage-break-lines-after-clearing-a-print-range/)
 
