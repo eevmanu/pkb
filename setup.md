@@ -16,12 +16,35 @@
 - Verify change by number of files in a folder
 
     ```bash
-    $ tree /media/$USER/manu/Documents/ | wc -l
-    $ tree /media/$USER/manu/Downloads/ | wc -l
-    $ tree /media/$USER/manu/Music/ | wc -l
-    $ tree /media/$USER/manu/Pictures/ | wc -l
-    $ tree /media/$USER/manu/Projects/ | wc -l
-    $ tree /media/$USER/manu/Videos/ | wc -l
+    $ tree $HOME/Documents/ | wc -l && tree /media/$USER/manu/Documents/ | wc -l && echo "$(date +"%Y-%m-%d")"
+    696
+    696
+    2020-08-25
+
+    $ tree $HOME/Downloads/ | wc -l && tree /media/$USER/manu/Downloads/ | wc -l && echo "$(date +"%Y-%m-%d")"
+    351
+    320
+    2020-08-25
+
+    $ tree $HOME/Music/ | wc -l && tree /media/$USER/manu/Music/ | wc -l && echo "$(date +"%Y-%m-%d")"
+    15
+    15
+    2020-08-25
+
+    $ tree $HOME/Pictures/ | wc -l && tree /media/$USER/manu/Pictures/ | wc -l && echo "$(date +"%Y-%m-%d")"
+    1204
+    144
+    2020-08-25
+
+    $ tree $HOME/Projects/ | wc -l && tree /media/$USER/manu/Projects/ | wc -l && echo "$(date +"%Y-%m-%d")"
+    8959
+    1173
+    2020-08-25
+
+    $ tree $HOME/Videos/ | wc -l && tree /media/$USER/manu/Videos/ | wc -l && echo "$(date +"%Y-%m-%d")"
+    184
+    198
+    2020-08-25
     ```
 
 - Backup folders into external drive
