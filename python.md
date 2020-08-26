@@ -236,6 +236,16 @@
 
 ## Setup
 
+### Soft link to python if your machine only have python3
+
+Create soft link to `python` binary in `$HOME/bin` if no `python` cmd in your OS
+
+`$HOME/bin` should be at `$PATH`
+
+```bash
+$ ln -s /usr/bin/python3 $HOME/bin/python
+```
+
 ### Install pip in locally (in your home directory)
 
 - Verify `python` version and installation path
