@@ -1961,6 +1961,20 @@
     - [shotcut](https://github.com/mltframework/shotcut) - cross-platform (Qt), open-source (GPLv3) video editor
     - [kdenlive](https://github.com/KDE/kdenlive) - Free and open source video editor, based on MLT Framework and KDE Frameworks 5
 
-- Launchers
-    - [albert](https://github.com/albertlauncher/albert)
-    - [Ulauncher](https://github.com/Ulauncher/Ulauncher)
+- [Albert](https://github.com/albertlauncher/albert)
+    - Installation process
+
+        ```bash
+        $ curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
+
+        $ echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
+
+        $ sudo wget \
+            -O "/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc" \
+            -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key
+
+        $ sudo apt update
+        $ sudo apt install albert
+        ```
+
+    - [Using it](https://albertlauncher.github.io/docs/using/)
