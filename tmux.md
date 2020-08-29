@@ -42,3 +42,4 @@ tmux attach -t {name}
 - [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect) - Persists tmux environment across system restarts.
 - [tpm](https://github.com/tmux-plugins/tpm) - Tmux Plugin Manager
 - [.tmux](https://github.com/gpakosz/.tmux) - Oh My Tmux! Pretty & versatile tmux configuration
+- [Aprende Tmux en Y minutos](https://learnxinyminutes.com/docs/es-es/tmux/)
