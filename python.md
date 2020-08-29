@@ -509,9 +509,17 @@ If you're going to use for one project, install on a virtual environment
 
 ## Resources
 
-- Linters / Code formatters / Checker
+- Linters
+    - [pycodestyle]()
     - [pylint](https://github.com/PyCQA/pylint) - It's not just a linter that annoys you!
+
+- Code formatters
+    - [black](https://github.com/psf/black)
+
+- Static Type Checker
     - [mypy](https://github.com/python/mypy/) - Optional static typing for Python 3 and 2 (PEP 484)
+    - [pyright](https://github.com/microsoft/pyright) - Static type checker for Python
+        - [pylance-release](https://github.com/microsoft/pylance-release) - Documentation and issues for Pylance
     - [returns](https://github.com/dry-python/returns) - Make your functions return something meaningful, typed, and safe! returns.rtfd.io
 
 - Data & Databases
@@ -534,7 +542,6 @@ If you're going to use for one project, install on a virtual environment
 - Debug
     - [PySnooper](https://github.com/cool-RR/PySnooper) - Never use print for debugging again
     - [stackprinter](https://github.com/cknd/stackprinter) - Debugging-friendly exceptions for Python
-
 
 - Benchmark
     - [FrameworkBenchmarks](https://github.com/TechEmpower/FrameworkBenchmarks) - Source for the TechEmpower Framework Benchmarks project techempower.com/benchmarks
