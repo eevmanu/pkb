@@ -71,10 +71,13 @@
 
 - Resources
     - [backup @ GitHub](https://github.com/search?q=backup&s=stars&type=Repositories)
+    - [sync @ GitHub](https://github.com/search?q=sync&s=stars&type=Repositories)
+    - [syncthing](https://github.com/syncthing/syncthing) - Open Source Continuous File Synchronization
+        - [Syncing your Files Across ALL your Computers via Syncthing](https://www.youtube.com/watch?v=J1bCWv14zYg)
+    - [rclone](https://github.com/rclone/rclone) - "rsync for cloud storage" - Google Drive, Amazon Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Cloudfiles, Google Cloud Storage, Yandex Files
     - [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
     - [duplicacy](https://github.com/gilbertchen/duplicacy) - A new generation cloud backup tool
     - [timeshift](https://github.com/teejee2008/timeshift) - System restore tool for Linux.
-    - [rclone](https://github.com/rclone/rclone) - rsync for cloud storage
 
 ## Steps after install PopOS
 
