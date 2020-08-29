@@ -480,6 +480,30 @@
     $ rm -rf bleachbit/
     ```
 
+- [Joplin](https://github.com/laurent22/joplin) - Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS. Forum: discourse.joplinapp.org
+    - Installation process
+        - Download latest `AppImage` version
+            ```bash
+            ~ $ wget https://github.com/laurent22/joplin/releases/download/v1.0.236/Joplin-1.0.236.AppImage
+            ```
+        - Give permission to execute
+            ```bash
+            ~ $ chmod +x Joplin-1.0.236.AppImage
+            ```
+        - Move to `$HOME/bin` folder
+            ```bash
+            ~ $ mv Joplin-1.0.236.AppImage $HOME/bin
+            ```
+        - Create soft link to simple command
+            ```bash
+            $ ln -s $HOME/bin/Joplin-1.0.236.AppImage $HOME/bin/joplin
+            ```
+        - Create `.desktop` file
+            ```bash
+            # TODO
+            ```
+
+
 - [marktext](https://github.com/marktext/marktext) - A simple and elegant markdown editor, available for Linux, macOS and Windows.
     - Other option: [notable](https://github.com/notable/notable) - The Markdown-based note-taking app that doesn't suck.
     - `.desktop` file [example](https://github.com/marktext/marktext/blob/develop/resources/linux/marktext.desktop)
@@ -506,6 +530,23 @@
 
         ```bash
         $HOME/.config/marktext
+        ```
+
+- [vnote](https://github.com/tamlok/vnote) - A note-taking application that knows programmers and Markdown better.
+
+    ```bash
+    $ cd $HOME/bin
+    $ wget -O vnote https://github.com/tamlok/vnote/releases/download/v2.9.1/VNote-2.9.1-x86_64.AppImage
+    $ chmod +x vnote
+    ```
+
+    - Directories which uses
+
+        ```
+        $HOME/.cache/VNote-2.9.1-x86_64.AppImage/
+        $HOME/.local/share/vnote/
+        $HOME/.local/share/VNote/
+        $HOME/.local/share/VNote-2.9.1-x86_64.AppImage/
         ```
 
 ## Extra Commands & Tools
@@ -1680,23 +1721,6 @@
         $ sudo apt remove ungoogled-chromium
         $ sudo apt purge ungoogled-chromium
         $ sudo apt autoremove
-        ```
-
-- [vnote](https://github.com/tamlok/vnote) - A note-taking application that knows programmers and Markdown better.
-
-    ```bash
-    $ cd $HOME/bin
-    $ wget -O vnote https://github.com/tamlok/vnote/releases/download/v2.9.1/VNote-2.9.1-x86_64.AppImage
-    $ chmod +x vnote
-    ```
-
-    - Directories which uses
-
-        ```
-        $HOME/.cache/VNote-2.9.1-x86_64.AppImage/
-        $HOME/.local/share/vnote/
-        $HOME/.local/share/VNote/
-        $HOME/.local/share/VNote-2.9.1-x86_64.AppImage/
         ```
 
 - multiple whatsapp locally, options:
