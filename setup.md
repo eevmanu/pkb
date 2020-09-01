@@ -1284,7 +1284,7 @@
 
 - Internet speed monitor script
 
-    - Download latest **speedtest** script
+    - Download latest [speedtest](https://github.com/sivel/speedtest-cli) script
 
         ```bash
         $ cd $HOME
@@ -1328,6 +1328,51 @@
         */5 * * * * /path/to/speedtest-cli --simple # each 5 mins
         ...
         ```
+
+    - Get `json` output
+
+        ```
+        $ speedtest --json --single
+        ```
+
+        - output example
+
+            ```json
+            {
+                "download": 92807569.08109826,
+                "upload": 9310265.771436416,
+                "ping": 14.002,
+                "server": {
+                    "url": "http://speedtest11.amx.com.pe:8080/speedtest/upload.php",
+                    "lat": "",
+                    "lon": "-",
+                    "name": "",
+                    "country": "",
+                    "cc": "",
+                    "sponsor": "",
+                    "id": "",
+                    "host": "speedtest11.amx.com.pe:8080",
+                    "d": 1.6140678358667562,
+                    "latency": 14.002
+                },
+                "timestamp": "2020-09-01T03:47:54.290416Z",
+                "bytes_sent": 11739136,
+                "bytes_received": 116184700,
+                "share": null,
+                "client": {
+                    "ip": "",
+                    "lat": "",
+                    "lon": "",
+                    "isp": "",
+                    "isprating": "3.7",
+                    "rating": "",
+                    "ispdlavg": "",
+                    "ispulavg": "",
+                    "loggedin": "",
+                    "country": ""
+                }
+            }
+            ```
 
 - Firefox
     - [How to install Firefox Developer Edition on Linux](https://linuxconfig.org/how-to-install-firefox-developer-edition-on-linux)
