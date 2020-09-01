@@ -433,6 +433,9 @@
 
     ```bash
     $ wget -O teamviewer.deb https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+
+    $ sudo teamviewer repo disable
+    $ sudo teamviewer repo default
     ```
 
 - [OBS Studio](https://github.com/obsproject/obs-studio)
