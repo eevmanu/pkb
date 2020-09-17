@@ -2155,6 +2155,10 @@
 
 
 
+- [krisp.ai](https://krisp.ai/)
+    - [NoiseTorch](https://github.com/lawl/NoiseTorch)
+
+
 - [KDEConnect](https://community.kde.org/KDEConnect) - control your phone remotely
 - [espanso](https://github.com/federico-terzi/espanso) - Cross-platform Text Expander written in Rust
 
