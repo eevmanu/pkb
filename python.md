@@ -580,10 +580,23 @@ If you're going to use for one project, install on a virtual environment
     - extract pdf
         - [pdftabextract](https://github.com/WZBSocialScienceCenter/pdftabextract) - A set of tools for extracting tables from PDF files helping to do data mining on (OCR-processed) scanned documents. https://datascience.blog.wzb.eu/2017/…
     - finance
-        - [yfinance](https://github.com/ranaroussi/yfinance) - Yahoo! Finance market data downloader (+faster Pandas Datareader) https://aroussi.com/post/python-yahoo…
+        - [yfinance](https://github.com/ranaroussi/yfinance) - Yahoo! Finance market data downloader (+faster Pandas Datareader) https://aroussi.com/post/python-yahoo
+    - profiler
+        - [vprof](https://github.com/nvdv/vprof) - Visual profiler for Python
+    - plotting
+        - [bokeh](https://github.com/bokeh/bokeh) - Interactive Data Visualization in the browser, from Python
+        - [matplotlib](https://github.com/matplotlib/matplotlib) - matplotlib: plotting with Python
+        - [pyecharts](https://github.com/pyecharts/pyecharts) - Python Echarts Plotting Library
+        - [plotly](https://github.com/plotly/plotly.py) - The interactive graphing library for Python (includes Plotly Express)
+        - [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using matplotlib
+        - [chartify](https://github.com/spotify/chartify) - Python library that makes it easy for data scientists to create charts.
+    - documentation
+        - [mkdocs](https://github.com/mkdocs/mkdocs) - Project documentation with Markdown.
+        - [sphinx](https://github.com/sphinx-doc/sphinx) - Main repository for the Sphinx documentation builder
 
 - Extra info
     - [cheat.sh](https://github.com/chubin/cheat.sh) - the only cheat sheet you need
+    - [pysheeet](https://github.com/crazyguitar/pysheeet) - Python Cheat Sheet
 
 - Machine Learning
     - [streamlit](https://github.com/streamlit/streamlit) - Streamlit — The fastest way to build custom ML tools streamlit.io
