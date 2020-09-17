@@ -116,6 +116,9 @@ echo "" > $(docker inspect --format='{{.LogPath}}' {{ container name or id }})
 echo "" > $(docker inspect --format='{{.LogPath}}' ubuntu)
 ```
 
+- Resources
+    - [Minimum differentiation granularity of different data sources](https://i.imgur.com/P6oxP4N.png)
+
 ### Metrics
 
 - [Runtime metrics](https://docs.docker.com/config/containers/runmetrics/)
@@ -258,7 +261,7 @@ docker inspect \
 #     visited in sorted key order.
 docker inspect \
     -f '{{range .NetworkSettings.Networks}}{{ .IPAddress }}{{end}}' \
-        {{ container name or id }}
+        "{{ container name or id }}"
 
 # Running a container using "postgres" image and passing path to data
 #   -v, --volume list                    Bind mount a volume
@@ -381,6 +384,7 @@ docker-compose up \
     - [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
     - [Release notes @ Docker](https://docs.docker.com/engine/release-notes/)
     - [Release notes @ Github](https://github.com/moby/moby/releases)
+    - [docker-ce](https://github.com/docker/docker-ce)
 
 - [Docker architecture](https://docs.docker.com/get-started/overview/#docker-architecture)
 
