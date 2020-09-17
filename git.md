@@ -1,10 +1,14 @@
 # Git
 
-- Rules for great git commit message
-    - Separate **subject** from **body** with a *blank line*
-    - Limit the **subject** (max 70 characters)
-    - Use the imperative mood in the subject
-    - Use the body to explain **what** and **why** vs. ~how~
+## Rules for great git commit message
+
+- Separate **subject** from **body** with a *blank line*
+- Limit the **subject** (max 70 characters)
+- Use the imperative mood in the subject
+- Use the body to explain **what** and **why** vs. ~how~
+- [Writing system software: code comments.](http://antirez.com/news/124) - [backup](https://web.archive.org/web/20200910150753/http://antirez.com/news/124)
+
+## Commands
 
 - Settings - [git config](https://git-scm.com/docs/git-config)
 
@@ -274,3 +278,5 @@
 - [git cheat sheet](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf)
 - [Easily rename your Git default branch from 'master' to 'main' ](https://twitter.com/shanselman/status/1269838158650195968)
     - [Easily rename your Git default branch from master to main](https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx)
+- [A survey of git best practices](https://xdg.me/blog/a-survey-of-git-best-practices/)
+- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
