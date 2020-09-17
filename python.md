@@ -548,6 +548,9 @@ If you're going to use for one project, install on a virtual environment
 
 - Logging
     - [Ultimate Guide to Python Debugging](https://martinheinz.dev/blog/24) - [hacker news](https://news.ycombinator.com/item?id=23386537)
+    - [Python logging tutorial](http://zetcode.com/python/logging/)
+    - [LogRecord attributes](https://docs.python.org/3/library/logging.html#logrecord-attributes)
+    - [Logging Levels](https://docs.python.org/3/library/logging.html#logging-levels)
 
 - Debug
     - [PySnooper](https://github.com/cool-RR/PySnooper) - Never use print for debugging again
