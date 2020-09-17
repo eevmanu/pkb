@@ -145,6 +145,8 @@ $ go tool vet --shadow
 
 - [litter](https://github.com/sanity-io/litter)
 
+- [gops](https://github.com/google/gops)
+
 ### VSCode GO extension
 
 - [Extension](https://marketplace.visualstudio.com/items?itemName=golang.Go)
@@ -256,6 +258,7 @@ Interesting tools:
 - [cron](https://github.com/robfig/cron) - a cron library for go
 - [webhook](https://github.com/adnanh/webhook) - webhook is a lightweight incoming webhook server to run shell commands
 - [godotenv](https://github.com/joho/godotenv) - A Go port of Ruby's dotenv library (Loads environment variables from `.env`.)
+- [croc](https://github.com/schollz/croc) - Easily and securely send things from one computer to another crocodile package
 
 Interesting Github Repos
 - [Go (Golang) Clean Architecture based on Reading Uncle Bob's Clean Architecture](https://github.com/bxcodec/go-clean-arch)
