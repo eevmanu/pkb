@@ -585,5 +585,12 @@ If you're going to use for one project, install on a virtual environment
 - Machine Learning
     - [streamlit](https://github.com/streamlit/streamlit) - Streamlit — The fastest way to build custom ML tools streamlit.io
 
+- stackoverflow
+    - [How to save a dictionary to a file?](https://stackoverflow.com/questions/19201290/how-to-save-a-dictionary-to-a-file)
 
-- [The Best of the Best Practices (BOBP) Guide for Python](https://gist.github.com/sloria/7001839)
+- Interesting posts
+    - [The Best of the Best Practices (BOBP) Guide for Python](https://gist.github.com/sloria/7001839)
+    - [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
+    - [Save a dictionary to a file](https://pythonspot.com/save-a-dictionary-to-a-file/)
+    - [EAFP - Easier to ask for forgiveness than permission](https://docs.python.org/3/glossary.html#term-eafp)
+    - [Python args and kwargs: Demystified](https://realpython.com/python-kwargs-and-args/)
