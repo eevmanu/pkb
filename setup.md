@@ -2228,3 +2228,23 @@
     - Resources
         - [How do I use the KeePassXC CLI tool with the AppImage?](https://keepassxc.org/docs/#faq-appsnap-appimage-cli)
         - [KeepassXC Question about CLI](https://www.reddit.com/r/KeePass/comments/a5tjx2/keepassxc_question_about_cli/)
+
+- [Virtualbox](https://www.virtualbox.org/)
+    - Installation steps [here](https://www.virtualbox.org/wiki/Linux_Downloads)
+    - [Changelog](https://www.virtualbox.org/wiki/Changelog)
+    - [Linux build instructions](https://www.virtualbox.org/wiki/Linux%20build%20instructions)
+    - Extra packages when installed (6.1.10 <-> 6.1.14)
+        ```
+            libpython2-stdlib
+            libpython2.7-minimal
+            libpython2.7-stdlib
+            libsdl1.2debian
+            python-is-python2
+            python2
+            python2-minimal
+            python2.7
+            python2.7-minimal
+        ```
+    - Windows 10:
+        - [Open Virtualization Format - OVA](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/)
+        - [ISO](https://www.microsoft.com/en-us/software-download/windows10ISO)
