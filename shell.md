@@ -572,6 +572,9 @@
     ```bash
     $ python -m json.tool {{ file.json }} > /dev/null
     $ cat {{ file.json }} | python -m json.tool > /dev/null
+    $ echo "{{ json string }}" | python -m json.tool > /dev/null
+    # when fail
+    Expecting value: line 1 column 1 (char 0)
     ```
 
 - `nc`
