@@ -534,10 +534,11 @@
     $ sudo umount /dev/sda1
     ```
 
-- force creation of file and create intermediate folders even when don't exist
+- create file and intermediate folders if don't exist whole path
 
     ```bash
-    $ mkdir -p /path/where/folder/are/created/if/not/exist
+    $ mkdir -p /path/to/folder/which/contains/file/not/exist/
+    $ touch /path/to/folder/which/contains/file/not/exist/file.txt
     ```
 
 - [View CSV Data as table from the Command Line](https://chrisjean.com/view-csv-data-from-the-command-line/)
