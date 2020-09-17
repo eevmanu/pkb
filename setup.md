@@ -682,7 +682,7 @@
     $ sudo apt install xclip
     ```
 
-- [htop](https://github.com/hishamhm/htop) - htop is an interactive text-mode process viewer for Unix systems. It aims to be a better 'top'.
+- [htop](https://github.com/htop-dev/htop) - htop - an interactive process viewer
 
     ```bash
     # easy way
