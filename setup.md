@@ -1221,7 +1221,7 @@
     ```
 
 - [iotop](https://linux.die.net/man/1/iotop)
-- [iftop](https://linux.die.net/man/8/iftop)
+
 - [perf top](https://linux.die.net/man/1/perf-top)
 - `ncdu`
 - `nmon`
@@ -1608,6 +1608,10 @@
 - traceroute
 - mtr
 - nethogs
+- nload
+- CBM - Monitoring Network Bandwidth and Speed in Linux
+- iperf
+- [iftop](https://linux.die.net/man/8/iftop)
 
 - [FiraCode](https://github.com/tonsky/FiraCode) - Free monospaced font with programming ligatures
 
