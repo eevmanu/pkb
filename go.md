@@ -281,6 +281,8 @@ Performance:
 Interesting articles:
 - [Allocation efficiency in high-performance Go services](https://segment.com/blog/allocation-efficiency-in-high-performance-go-services/)
 - [Style guideline for Go packages](https://rakyll.org/style-packages/)
+- [Even in Go, concurrency is still not easy (with an example)](https://utcc.utoronto.ca/~cks/space/blog/programming/GoConcurrencyStillNotEasy)
+- [Are you a Go black belt?](https://bitfieldconsulting.com/golang/black-belt)
 
 Interesting people:
 - [Ben Johnson](https://medium.com/@benbjohnson)
