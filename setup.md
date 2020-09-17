@@ -831,6 +831,16 @@
     ```
 
 - [jq](https://github.com/stedolan/jq) - Command-line JSON processor
+    - Download and install binary
+        ```bash
+        $ wget -O $HOME/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
+        $ chmod +x $HOME/bin/jq
+        ```
+    - Usage
+        - Pretty print **ugly** json
+            ```bash
+            $ jq . {{ json file }}
+            ```
 
 - [wrk](https://github.com/wg/wrk)
     - [awesome-http-benchmark](https://github.com/denji/awesome-http-benchmark) - HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful)
