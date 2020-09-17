@@ -368,7 +368,7 @@ $ ln -s /usr/bin/python3 $HOME/bin/python
     ```bash
     $ python -m venv {{ /path/to/env }}
     # e.g.:
-    $ python -m venv ./myenv/
+    $ python -m venv env
     ```
 
 - Activate environment
