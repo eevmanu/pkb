@@ -413,6 +413,9 @@ If you're going to use for one project, install on a virtual environment
         ```
 
 - [pylint](https://github.com/PyCQA/pylint)
+    - [Readable pylint messages](https://github.com/janjur/readable-pylint-messages/blob/master/README.md)
+    - [@ Visual Studio Code Docs](https://code.visualstudio.com/docs/python/linting#_pylint)
+    - [PyLint Messages - all codes](http://pylint-messages.wikidot.com/all-codes)
 
 ### Code formatters
 
