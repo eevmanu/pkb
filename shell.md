@@ -497,6 +497,16 @@
         wc -l
     ```
 
+- counting with `wc`
+
+    ```bash
+    # count lines
+    $ {{incoming input }} | wc -l
+
+    # count characters
+    $ {{incoming input }} | wc -m
+    ```
+
 - create file with `timestamp` as part of filename
 
     ```bash
