@@ -435,6 +435,12 @@
             {{ url }}
     ```
 
+    - download a file
+
+        ```bash
+        $ curl http://some.url --output some.file
+        ```
+
 - cut part of a `video`
 
     ```bash
