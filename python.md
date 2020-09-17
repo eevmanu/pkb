@@ -513,7 +513,7 @@ If you're going to use for one project, install on a virtual environment
 ## Resources
 
 - Linters
-    - [pycodestyle]()
+    - [pycodestyle](https://github.com/PyCQA/pycodestyle) - https://github.com/PyCQA/pycodestyle
     - [pylint](https://github.com/PyCQA/pylint) - It's not just a linter that annoys you!
 
 - Code formatters
