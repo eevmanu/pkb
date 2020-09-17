@@ -525,6 +525,13 @@ If you're going to use for one project, install on a virtual environment
         - [pylance-release](https://github.com/microsoft/pylance-release) - Documentation and issues for Pylance
     - [returns](https://github.com/dry-python/returns) - Make your functions return something meaningful, typed, and safe! returns.rtfd.io
 
+- PEP related
+    - [PEP 8](https://www.python.org/dev/peps/pep-0008/)
+    - [PEP 257](https://www.python.org/dev/peps/pep-0257/) -- Docstring Conventions
+    - [elements-of-python-style](https://github.com/amontalenti/elements-of-python-style) - Goes beyond PEP8 to discuss what makes Python code feel great. A Strunk & White for Python.
+    - [Google Python Style Guide](https://github.com/google/styleguide/blob/gh-pages/pyguide.md)
+    - [Khan Python Style Guide](https://github.com/Khan/style-guides/blob/master/style/python.md)
+
 - Data & Databases
     - [databases](https://github.com/encode/databases) - Async database support for Python
     - [faker](https://github.com/joke2k/faker) - Faker is a Python package that generates fake data for you. http://faker.rtfd.org
