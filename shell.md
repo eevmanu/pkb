@@ -688,12 +688,25 @@
         /etc/resolvconf/resolv.conf.d/head \
         /etc/resolvconf/resolv.conf.d/head.orig
     $ sudo nano /etc/resolvconf/resolv.conf.d/head
+    nameserver 8.8.8.8
+    nameserver 8.8.4.4
+    nameserver 1.1.1.1
     $ nslookup google.com
 
     # to test which DNS is using
+    $ nmcli device show
+    ...
+    IP4.DNS[1]:         xxx.xxx.xxx.xxx
+    ...
     $ nslookup {{ domain }} {{ dns server ip }}
     $ dig @{{ dns server ip }} {{ domain }}
+    $ resolvectl status
+    $ systemd-resolve --status
     ```
+
+    - Articles / Resources:
+        - [DNS Resolvers Performance compared: CloudFlare x Google x Quad9 x OpenDNS](https://medium.com/@nykolas.z/dns-resolvers-performance-compared-cloudflare-x-google-x-quad9-x-opendns-149e803734e5) - [hn](https://news.ycombinator.com/item?id=16732820)
+        - [dnsperftest](https://github.com/cleanbrowsing/dnsperftest) - DNS Performance test
 
 - restart `wifi` kernel driver
 
