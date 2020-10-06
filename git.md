@@ -266,6 +266,77 @@
     alias gti="git"
     ```
 
+## Github
+
+### Setup
+
+#### SSH Key
+
+- Check in your github account any [SSH keys](https://github.com/settings/keys), more info [here](https://docs.github.com/en/github/authenticating-to-github/checking-for-existing-ssh-keys)
+
+    ```bash
+    $ ls -la $HOME/.ssh
+    ```
+
+- If don't have anyone, [generate one](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+    ```bash
+    $ ssh-keygen \
+        -t rsa \
+        -b 4096 \
+        -C "{{ your github username }}@users.noreply.github.com" \
+        -f $HOME/.ssh/{{ name you want }}
+    # e.g.:
+    $ ssh-keygen \
+        -t rsa \
+        -b 4096 \
+        -C "eevmanu@users.noreply.github.com" \
+        -f $HOME/.ssh/github
+
+    # after that, create a good passphrase
+    ```
+
+    - [ssh-keygen(1) - Linux man page](https://linux.die.net/man/1/ssh-keygen)
+
+- If key was added in `$HOME/.ssh`, don't need to add that identity, otherwise, add it
+
+    ```bash
+    $ ssh-add ~/.ssh/id_rsa
+    ```
+
+- Verify which identities are attached to you ssh-agent
+
+    ```bash
+    $ ssh-add -l
+    $ ssh-add -L
+    ```
+
+    - [How to list keys added to ssh-agent with ssh-add?](https://unix.stackexchange.com/questions/58969/how-to-list-keys-added-to-ssh-agent-with-ssh-add)
+    - [ssh-add(1) - Linux man page](https://linux.die.net/man/1/ssh-add)
+
+- If needed, to remove an identity from ssh agent
+
+    ```bash
+    $ ssh-add -d
+    $ ssh-add -D
+    ```
+
+- Add previous generated SSH key to GitHub, steps [here](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
+
+- [Test connection](https://docs.github.com/en/github/authenticating-to-github/testing-your-ssh-connection)
+
+    ```bash
+    $ ssh -T git@github.com
+    # enter your passphrase
+    ```
+
+- If you want to change passphrase, check [here](https://docs.github.com/en/github/authenticating-to-github/working-with-ssh-key-passphrases)
+
+#### GPG Key
+
+<!-- TODO -->
+- [Managing commit signature verification](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification)
+
 ### Resources
 
 - [git-extras](https://github.com/tj/git-extras) - GIT utilities -- repo summary, repl, changelog population, author commit percentages and more
