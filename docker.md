@@ -428,4 +428,10 @@ docker-compose up \
 
 - [How to copy folders to docker image from Dockerfile?](https://stackoverflow.com/questions/37789984/how-to-copy-folders-to-docker-image-from-dockerfile)
 - [Best practices for building containers](https://cloud.google.com/solutions/best-practices-for-building-containers)
-- [10 best practices for creating good docker images](https://www.artindustrial-it.com/2017/09/20/10-best-practices-for-creating-good-docker-images/)
+- Stack Overflow - Interesting questions
+    - [How to copy folders to docker image from Dockerfile?](https://stackoverflow.com/questions/37789984/how-to-copy-folders-to-docker-image-from-dockerfile)
+
+- Articles
+    - [Best practices for building containers](https://cloud.google.com/solutions/best-practices-for-building-containers)
+    - [10 best practices for creating good docker images](https://www.artindustrial-it.com/2017/09/20/10-best-practices-for-creating-good-docker-images/)
+    - [Docker Image Size - How To Keep It Small?](https://phoenixnap.com/kb/docker-image-size)
