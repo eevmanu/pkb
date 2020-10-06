@@ -426,8 +426,6 @@ docker-compose up \
     - [tini](https://github.com/krallin/tini) - A tiny but valid `init` for containers
     - [scope](https://github.com/weaveworks/scope) - Monitoring, visualisation & management for Docker & Kubernetes
 
-- [How to copy folders to docker image from Dockerfile?](https://stackoverflow.com/questions/37789984/how-to-copy-folders-to-docker-image-from-dockerfile)
-- [Best practices for building containers](https://cloud.google.com/solutions/best-practices-for-building-containers)
 - Stack Overflow - Interesting questions
     - [How to copy folders to docker image from Dockerfile?](https://stackoverflow.com/questions/37789984/how-to-copy-folders-to-docker-image-from-dockerfile)
 
