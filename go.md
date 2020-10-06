@@ -207,25 +207,24 @@ $ go tool vet --shadow
 
 ## Resources
 
-capital first letter public
+Language things
+- capital first letter public
+- non capital first letter private
 
-non capital first letter private
-
-- [Why Go](https://github.com/golang/go/wiki/WhyGo)
+Leaning:
 - [Effective Go](https://golang.org/doc/effective_go.html)
+- [Gophercises](https://gophercises.com/)
 
-
+Setup VS Code:
 - [Go in Visual Studio Code](https://code.visualstudio.com/docs/languages/go)
 - [Go extension for Visual Studio Code](https://github.com/microsoft/vscode-go)
     - [GOPATH in the VS Code Go extension](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
     - [Debugging Go code using VS Code](https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code)
-
-
-- [Modules](https://github.com/golang/go/wiki/Modules)
-
-
-- [go please - official language server for the Go language](https://github.com/golang/tools/blob/master/gopls/README.md)
-    - [User Guide](https://github.com/golang/tools/blob/master/gopls/doc/user.md)
+- Modules:
+    - [Modules](https://github.com/golang/go/wiki/Modules)
+- Language server:
+    - [go please - official language server for the Go language](https://github.com/golang/tools/blob/master/gopls/README.md)
+        - [User Guide](https://github.com/golang/tools/blob/master/gopls/doc/user.md)
 
 Frameworks:
 - [atreugo](https://github.com/savsgio/atreugo) - High performance and extensible micro web framework. Zero memory allocations in hot paths.
@@ -237,7 +236,13 @@ Benchmark:
 - [Go web framework benchmark](https://github.com/smallnest/go-web-framework-benchmark)
 - [Awesome Open Source - benchmark](https://awesomeopensource.com/projects/benchmark)
 
-Interesting tools:
+Data related tools:
+- [pq](https://github.com/lib/pq) - Pure Go Postgres driver for database/sql
+- [migrate](https://github.com/golang-migrate/migrate) - Database migrations. CLI and Golang library.
+- [sqlboiler](https://github.com/volatiletech/sqlboiler) - Generate a Go ORM tailored to your database schema.
+- [prest](https://github.com/prest/prest) - pREST (PostgreSQL REST), simplify and accelerate development, zap instant, realtime, high-performance on any Postgres application, existing or new
+
+Extra tools:
 - [fzf](https://github.com/junegunn/fzf) - fuzzy finder
 - [rclone](https://github.com/rclone/rclone) - rsync for cloud storage
 - [dive](https://github.com/wagoodman/dive) - A tool for exploring each layer in a docker image
@@ -249,7 +254,6 @@ Interesting tools:
 - [annie](https://github.com/iawia002/annie) - Fast, simple and clean video downloader
 - [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
 - [pspy](https://github.com/DominicBreuker/pspy) - Monitor linux processes without root permissions
-- [migrate](https://github.com/golang-migrate/migrate) - Database migrations. CLI and Golang library.
 - [go-fault](https://github.com/github/go-fault) - Fault injection library in Go using standard http middleware
 - [grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway) - gRPC to JSON proxy generator following the gRPC HTTP spec
 - [viper](https://github.com/spf13/viper) - Go configuration with fangs
@@ -259,6 +263,15 @@ Interesting tools:
 - [webhook](https://github.com/adnanh/webhook) - webhook is a lightweight incoming webhook server to run shell commands
 - [godotenv](https://github.com/joho/godotenv) - A Go port of Ruby's dotenv library (Loads environment variables from `.env`.)
 - [croc](https://github.com/schollz/croc) - Easily and securely send things from one computer to another crocodile package
+- [gqlgen](https://github.com/99designs/gqlgen) - go generate based graphql server library
+- [graphql-go](https://github.com/graph-gophers/graphql-go) - GraphQL server with a focus on ease of use
+- [tamago](https://github.com/f-secure-foundry/tamago) - bare metal Go for ARM SoCs
+- [riot](https://github.com/go-ego/riot) - Go Open Source, Distributed, Simple and efficient Search Engine
+
+Concurrency - Parallelism - Multiprocessing - Multithreading - Asynchronous(async/await):
+- 2020-09-29 - [Go: A Tale of Concurrency ( A Beginners Guide )](https://medium.com/@yashaswi_nayak/go-a-tale-of-concurrency-a-beginners-guide-b8976b26feb)
+    - [Wrote an article/tutorial on Concurrency. Beginner Friendly!](https://www.reddit.com/r/golang/comments/j1xij2/wrote_an_articletutorial_on_concurrency_beginner/)
+- 2018-03-04 - [Concurrency in Go](https://www.youtube.com/watch?v=LvgVSSpwND8)
 
 Interesting Github Repos
 - [Go (Golang) Clean Architecture based on Reading Uncle Bob's Clean Architecture](https://github.com/bxcodec/go-clean-arch)
@@ -286,7 +299,20 @@ Interesting articles:
 - [Style guideline for Go packages](https://rakyll.org/style-packages/)
 - [Even in Go, concurrency is still not easy (with an example)](https://utcc.utoronto.ca/~cks/space/blog/programming/GoConcurrencyStillNotEasy)
 - [Are you a Go black belt?](https://bitfieldconsulting.com/golang/black-belt)
+- 2020-09-25 - [Developing price and currency handling for Go](https://bojanz.github.io/price-currency-handling-go/) - [reddit](https://www.reddit.com/r/golang/comments/izk4kz/developing_price_and_currency_handling_for_go/)
+
+Reddit:
+- [What are the most useful functions / methods etc. to know when learning Go as a second language?](https://www.reddit.com/r/golang/comments/j29uph/what_are_the_most_useful_functions_methods_etc_to/)
+- [What is var _ type = &type{} used for?](https://www.reddit.com/r/golang/comments/j0b73d/what_is_var_type_type_used_for/)
+
+Youtube:
+- [Data structures and Algorithms in Go - Playlist](https://www.youtube.com/playlist?list=PL0q7mDmXPZm7s7weikYLpNZBKk5dCoWm6)
 
 Interesting people:
 - [Ben Johnson](https://medium.com/@benbjohnson)
 - [Jaana Dogan](https://rakyll.org)
+
+Final Articles / Resources:
+- [Qix - Go](https://github.com/ty4z2008/Qix/blob/master/golang.md)
+- [Why Go](https://github.com/golang/go/wiki/WhyGo)
+- 2019-11-25 - [Choosing Go at American Express](https://americanexpress.io/choosing-go/)
