@@ -198,7 +198,7 @@
     https://backlog.com/git-tutorial/using-branches/git-switch-branches/
     ```
 
-![explain HEAD](https://i.imgur.com/mSD77uh.png "explain HEAD")
+    ![explain HEAD](https://i.imgur.com/mSD77uh.png "explain HEAD")
 
 - Diff - [git diff](https://git-scm.com/docs/git-diff)
 
