@@ -1260,10 +1260,12 @@
 - Performance tools
     - [perf-tools](https://github.com/brendangregg/perf-tools) - Performance analysis tools based on Linux perf_events (aka perf) and ftrace
 
-- Posts
-    - [Command-line pro tips. Lots more in "The Art Of Command Line"](https://twitter.com/addyosmani/status/1264854298799665152)
-    - [Tip: Use curly braces in the command-line to quickly create multiple related files with less typing](https://twitter.com/addyosmani/status/1265693572033961984)
-        - [Yeah, it is also useful for renaming, create file backup, etc...](https://twitter.com/PrestanceDesign/status/1265709922341326853)
-    - [How to know what program is listening on a given port?](https://askubuntu.com/questions/278448/how-to-know-what-program-is-listening-on-a-given-port)
-    - [Understanding Shell Script's idiom: 2>&1](https://www.brianstorti.com/understanding-shell-script-idiom-redirect/)
-        - `1>` equal to `>` and `1>>` equal to `>>`
+Final Articles / Posts:
+- [Command-line pro tips. Lots more in "The Art Of Command Line"](https://twitter.com/addyosmani/status/1264854298799665152)
+- [Tip: Use curly braces in the command-line to quickly create multiple related files with less typing](https://twitter.com/addyosmani/status/1265693572033961984)
+    - [Yeah, it is also useful for renaming, create file backup, etc...](https://twitter.com/PrestanceDesign/status/1265709922341326853)
+- [How to know what program is listening on a given port?](https://askubuntu.com/questions/278448/how-to-know-what-program-is-listening-on-a-given-port)
+- [Understanding Shell Script's idiom: 2>&1](https://www.brianstorti.com/understanding-shell-script-idiom-redirect/)
+    - `1>` equal to `>` and `1>>` equal to `>>`
+- [bash cheat sheet: what (), {}, $(()), $(), ${}, [], [[]] mean](https://twitter.com/b0rk/status/1312573876640063488)
+    - [brackets cheatsheet](https://wizardzines.com/comics/brackets-cheatsheet/)
