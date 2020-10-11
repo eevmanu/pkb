@@ -679,34 +679,93 @@
 - `htop`
     - htop -> setup -> display options -> activate tree view + show custom thread names
 
-- change `DNS` server locally
+- Change `DNS` permanently in your laptop or server (locally)
 
-    ```bash
-    $ cat /etc/resolv.conf
-    $ sudo resolvconf -u
-    $ sudo cp \
-        /etc/resolvconf/resolv.conf.d/head \
-        /etc/resolvconf/resolv.conf.d/head.orig
-    $ sudo nano /etc/resolvconf/resolv.conf.d/head
-    nameserver 8.8.8.8
-    nameserver 8.8.4.4
-    nameserver 1.1.1.1
-    $ nslookup google.com
+    - Check your DNS nameservers in use:
 
-    # to test which DNS is using
-    $ nmcli device show
-    ...
-    IP4.DNS[1]:         xxx.xxx.xxx.xxx
-    ...
-    $ nslookup {{ domain }} {{ dns server ip }}
-    $ dig @{{ dns server ip }} {{ domain }}
-    $ resolvectl status
-    $ systemd-resolve --status
-    ```
+        ```bash
+        $ systemd-resolve --status
+        $ resolvectl status
+        Global
+        ...
+        Link ... (...)
+        ...
+        Link ... (xxxx)
+            Current Scopes: DNS
+        ...
+        Current DNS Server: 192.168.1.1
+               DNS Servers: 192.168.1.1
+        ...
+        # when it's done
+        ...
+        Current DNS Server: 1.1.1.1
+               DNS Servers: 1.1.1.1
+                            8.8.8.8
+                            192.168.1.1
+        $ resolvectl dns enp1s0f1
+        Link 2 (enp1s0f1): 192.168.1.1
+
+        # Other usefule commands
+        $ sudo resolvconf --enable-updates
+        $ systemctl status resolvconf.service
+        $ service resolvconf status
+        ```
+
+    - New way, using **netplan**
+
+        - Create yaml file in netplan path: `/etc/netplan`
+
+            ```bash
+            # /etc/netplan/test.yaml
+            network:
+              version: 2
+              ethernets:
+                enp1s0f1:
+                  dhcp4: true
+                  nameservers:
+                    addresses: ["1.1.1.1", "8.8.8.8"]
+            ```
+
+        - Apply new configuration
+
+            ```bash
+            $ sudo netplan --debug apply
+
+            # to test a configuration and revet after 5 seconds
+            $ sudo netplan try --debug --timeout 5
+            ```
+
+        - Check which DNS name server you're using
+
+            ```bash
+            $ resolvectl dns enp1s0f1
+            Link 2 (enp1s0f1): 192.168.1.1
+
+            $ nslookup google.com | grep Server
+            Server:     127.0.0.53
+
+            # to test which DNS is using
+            $ nmcli device show {{ interface name }} | grep DNS
+            IP4.DNS[1]:         192.168.1.1
+
+            $ nslookup {{ domain }} {{ dns server ip }}
+            $ nslookup google.com 127.0.0.53
+            $ nslookup google.com 192.168.1.1
+            $ nslookup google.com 1.1.1.1
+            $ nslookup google.com 8.8.8.8
+
+            $ dig @{{ dns server ip }} {{ domain }}
+            $ dig @127.0.0.53 google.com
+            $ dig @192.168.1.1 google.com
+            $ dig @1.1.1.1 google.com
+            $ dig @8.8.8.8 google.com
+            ```
 
     - Articles / Resources:
         - [DNS Resolvers Performance compared: CloudFlare x Google x Quad9 x OpenDNS](https://medium.com/@nykolas.z/dns-resolvers-performance-compared-cloudflare-x-google-x-quad9-x-opendns-149e803734e5) - [hn](https://news.ycombinator.com/item?id=16732820)
         - [dnsperftest](https://github.com/cleanbrowsing/dnsperftest) - DNS Performance test
+        - [Set permanent DNS nameservers on Ubuntu/Debian with resolv.conf](https://www.ricmedia.com/set-permanent-dns-nameservers-ubuntu-debian-resolv-conf/)
+        - [Set custom DNS servers on Ubuntu 18.04 or 20.04](https://www.ricmedia.com/set-custom-dns-servers-on-ubuntu-18-or-20/)
 
 - restart `wifi` kernel driver
 
