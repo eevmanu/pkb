@@ -589,62 +589,65 @@ To test it
 
 ## Resources
 
-Basic Stuffs (installation, basic usage, etc..):
-- [How To Install and Use PostgreSQL on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
-- [psql — PostgreSQL interactive terminal](https://www.postgresql.org/docs/11/app-psql.html)
-- [The Statistics Collector](https://www.postgresql.org/docs/12/monitoring-stats.html)
+- Basic Stuffs (installation, basic usage, etc..):
+    - [How To Install and Use PostgreSQL on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
+    - [psql — PostgreSQL interactive terminal](https://www.postgresql.org/docs/11/app-psql.html)
+    - [The Statistics Collector](https://www.postgresql.org/docs/12/monitoring-stats.html)
 
-[PostgreSQL Wiki](https://wiki.postgresql.org/wiki/Main_Page):
-- [Apt](https://wiki.postgresql.org/wiki/Apt)
-- [Don't do this](https://wiki.postgresql.org/wiki/Don%27t_Do_This)
-- [Database Administration and Maintenance](https://wiki.postgresql.org/wiki/Database_Administration_and_Maintenance)
-    - [Index Maintenance](https://wiki.postgresql.org/wiki/Index_Maintenance)
-    - [Corruption](https://wiki.postgresql.org/wiki/Corruption)
-    - [Performance Analysis Tools](https://wiki.postgresql.org/wiki/Performance_Analysis_Tools)
-    - [Tuning Your PostgreSQL Server](https://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server)
-- [Performance Optimization](https://wiki.postgresql.org/wiki/Performance_Optimization)
-    - [Slow Query Questions](https://wiki.postgresql.org/wiki/Slow_Query_Questions)
-- [Feature Matrix](https://www.postgresql.org/about/featurematrix/)
+- [《Wiki》](https://wiki.postgresql.org/wiki/Main_Page):
+    - [Apt](https://wiki.postgresql.org/wiki/Apt)
+    - [Don't do this](https://wiki.postgresql.org/wiki/Don%27t_Do_This)
+    - [Database Administration and Maintenance](https://wiki.postgresql.org/wiki/Database_Administration_and_Maintenance)
+        - [Index Maintenance](https://wiki.postgresql.org/wiki/Index_Maintenance)
+        - [Corruption](https://wiki.postgresql.org/wiki/Corruption)
+        - [Performance Analysis Tools](https://wiki.postgresql.org/wiki/Performance_Analysis_Tools)
+        - [Tuning Your PostgreSQL Server](https://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server)
+    - [Performance Optimization](https://wiki.postgresql.org/wiki/Performance_Optimization)
+        - [Slow Query Questions](https://wiki.postgresql.org/wiki/Slow_Query_Questions)
+    - [Feature Matrix](https://www.postgresql.org/about/featurematrix/)
 
-Extra Tools:
-- [《explain.depesz.com》](https://explain.depesz.com/) - PostgreSQL's explain analyze made readable
-- [《pghero》](https://github.com/ankane/pghero) - A performance dashboard for Postgres
-- [《pome》](https://github.com/rach/pome) - A Postgres Metrics Dashboard
-- [《pev》](https://github.com/AlexTatiyants/pev) - Postgres Explain Visualizer
-- [《pev2》](https://github.com/dalibo/pev2)
-- [《gocmdpev》](https://github.com/simon-engledew/gocmdpev) - A command-line GO Postgres query visualizer
-- [《pg_flame》](https://github.com/mgartner/pg_flame) - A flamegraph generator for Postgres EXPLAIN ANALYZE output
-- [《postgresqltuner》](https://github.com/jfcoz/postgresqltuner) - analyse your PostgreSQL database configuration, and give tuning advice
-- [《pgcenter》](https://github.com/lesovsky/pgcenter) - Command-line admin tool for observing and troubleshooting Postgres
-- [《pgmetrics》](https://github.com/rapidloop/pgmetrics) - Collect and display information and stats from a running PostgreSQL server
-- [《dexter》](https://github.com/ankane/dexter) - The automatic indexer for Postgres
-- [《stolon》](https://github.com/sorintlab/stolon) - PostgreSQL cloud native High Availability and more.
+- Extra Tools:
+    - [《explain.depesz.com》](https://explain.depesz.com/) - PostgreSQL's explain analyze made readable
+    - [《pghero》](https://github.com/ankane/pghero) - A performance dashboard for Postgres
+    - [《pome》](https://github.com/rach/pome) - A Postgres Metrics Dashboard
+    - [《pev》](https://github.com/AlexTatiyants/pev) - Postgres Explain Visualizer
+    - [《pev2》](https://github.com/dalibo/pev2)
+    - [《gocmdpev》](https://github.com/simon-engledew/gocmdpev) - A command-line GO Postgres query visualizer
+    - [《pg_flame》](https://github.com/mgartner/pg_flame) - A flamegraph generator for Postgres EXPLAIN ANALYZE output
+    - [《postgresqltuner》](https://github.com/jfcoz/postgresqltuner) - analyse your PostgreSQL database configuration, and give tuning advice
+    - [《pgcenter》](https://github.com/lesovsky/pgcenter) - Command-line admin tool for observing and troubleshooting Postgres
+    - [《pgmetrics》](https://github.com/rapidloop/pgmetrics) - Collect and display information and stats from a running PostgreSQL server
+    - [《dexter》](https://github.com/ankane/dexter) - The automatic indexer for Postgres
+    - [《stolon》](https://github.com/sorintlab/stolon) - PostgreSQL cloud native High Availability and more.
 
-Database visualizer:
-- [《dbeaver》](https://github.com/dbeaver/dbeaver)
-- [《TablePlus》](https://tableplus.com/)
-    - [Linux](https://tableplus.com/linux)
-- [《pgweb》](https://github.com/sosedoff/pgweb) - Cross-platform client for PostgreSQL databases
+- Database visualizer:
+    - [《dbeaver》](https://github.com/dbeaver/dbeaver)
+    - [《TablePlus》](https://tableplus.com/)
+        - [Linux](https://tableplus.com/linux)
+    - [《pgweb》](https://github.com/sosedoff/pgweb) - Cross-platform client for PostgreSQL databases
 
-PostgreSQL events - Sessions:
-- [PGOpen2019 Sessions](https://postgresql.us/events/pgopen2019/sessions/)
-- [PGOpen2018 Sessions](https://postgresql.us/events/pgopen2018/sessions/)
-- [Sessions from PostgreSQL US events besides PGOpen](https://www.google.com/search?q=site:https://postgresql.us/events/+inurl:session)
+- PostgreSQL events - Sessions:
+    - [PGOpen2019 Sessions](https://postgresql.us/events/pgopen2019/sessions/)
+    - [PGOpen2018 Sessions](https://postgresql.us/events/pgopen2018/sessions/)
+    - [Sessions from PostgreSQL US events besides PGOpen](https://www.google.com/search?q=site:https://postgresql.us/events/+inurl:session)
 
-Interesting talks:
-- [Explaining EXPLAIN: A Deep-Dive Into EXPLAIN Plans](https://speakerdeck.com/richyen/explaining-explain-a-deep-dive-into-explain-plans)
-- [Advanced Data Types](https://andreas.scherbaum.la/writings/Advanced_Datatypes_PgDaySF_2020.pdf)
-- [Timeseries data in Postgres with updates](https://www.slideshare.net/GGordonWorleyIII/pgday-sf-2020-timeseries-data-in-postgres-with-updates)
+- Interesting talks:
+    - [Explaining EXPLAIN: A Deep-Dive Into EXPLAIN Plans](https://speakerdeck.com/richyen/explaining-explain-a-deep-dive-into-explain-plans)
+    - [Advanced Data Types](https://andreas.scherbaum.la/writings/Advanced_Datatypes_PgDaySF_2020.pdf)
+    - [Timeseries data in Postgres with updates](https://www.slideshare.net/GGordonWorleyIII/pgday-sf-2020-timeseries-data-in-postgres-with-updates)
 
-Stack Overflow interesting questions:
-- [connect to a DB using psycopg2 without password](https://stackoverflow.com/a/48910290/3889948)
+- Interesting blogs from people / groups / companies:
+    - [blog](https://github.com/digoal/blog) - Everything about database,business.(Most for PostgreSQL).
 
-Final Articles / Resources:
-- [PostgreSQL @ Docker Hub](https://hub.docker.com/_/postgres)
-- [PostgreSQL beginner guide - connecting, remote access, psql CLI and troubleshooting connection](https://knowledgepill.it/posts/postgresql-basics-guide/) - [hacker news](https://news.ycombinator.com/item?id=24036132)
-- [Qix - PostgreSQL](https://github.com/ty4z2008/Qix/blob/master/pg.md)
-- [Qix - Database System](https://github.com/ty4z2008/Qix/blob/master/db.md)
-- [《awesome-postgres》](https://github.com/dhamaniasad/awesome-postgres) - A curated list of awesome PostgreSQL software, libraries, tools and resources
-- [PostgreSQL vs. Oracle: Difference in Costs, Ease of Use & Functionality](https://www.reddit.com/r/PostgreSQL/comments/hqnafk/postgresql_vs_oracle_difference_in_costs_ease_of/)
-    - [10 things Oracle over PostgreSQL](https://www.reddit.com/r/PostgreSQL/comments/hqnafk/postgresql_vs_oracle_difference_in_costs_ease_of/fy0x0ic/)
-- [Postgres Weekly - Archives](https://postgresweekly.com/issues)
+- Stack Overflow interesting questions:
+    - [connect to a DB using psycopg2 without password](https://stackoverflow.com/a/48910290/3889948)
+
+- Final Articles / Posts / Resources:
+    - [PostgreSQL @ Docker Hub](https://hub.docker.com/_/postgres)
+    - [PostgreSQL beginner guide - connecting, remote access, psql CLI and troubleshooting connection](https://knowledgepill.it/posts/postgresql-basics-guide/) - [hacker news](https://news.ycombinator.com/item?id=24036132)
+    - [Qix - PostgreSQL](https://github.com/ty4z2008/Qix/blob/master/pg.md)
+    - [Qix - Database System](https://github.com/ty4z2008/Qix/blob/master/db.md)
+    - [《awesome-postgres》](https://github.com/dhamaniasad/awesome-postgres) - A curated list of awesome PostgreSQL software, libraries, tools and resources
+    - [PostgreSQL vs. Oracle: Difference in Costs, Ease of Use & Functionality](https://www.reddit.com/r/PostgreSQL/comments/hqnafk/postgresql_vs_oracle_difference_in_costs_ease_of/)
+        - [10 things Oracle over PostgreSQL](https://www.reddit.com/r/PostgreSQL/comments/hqnafk/postgresql_vs_oracle_difference_in_costs_ease_of/fy0x0ic/)
+    - [Postgres Weekly - Archives](https://postgresweekly.com/issues)
