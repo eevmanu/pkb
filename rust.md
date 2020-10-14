@@ -3,25 +3,27 @@
 
 ## Resources
 
-- [Rust](https://www.reddit.com/r/rust/) @ Reddit
-- [rustup](https://github.com/rust-lang/rustup) - The Rust toolchain installer
+- Developer Tools:
+    - [rustup](https://github.com/rust-lang/rustup) - The Rust toolchain installer
 
-- Interesting Github repos
-    - [rust blog](https://github.com/pretzelhammer/rust-blog) - Educational blog posts for Rust beginners
-
-- Blogs
-    - [readrust](https://readrust.net/)
-    - [Rust Blog Official](https://blog.rust-lang.org/)
-
-- Youtube
-    - [Jon Gjengset](https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ)
-
-- Books
-    - [The Rust Programming Language (Covers Rust 2018)](https://www.amazon.com/dp/B07SRQ97RD/)
+- Learn / 101:
+    - [rust-learning](https://github.com/ctjhoa/rust-learning) - A bunch of links to blog posts, articles, videos, etc for learning Rust
 
 - Search:
     - [sonic](https://github.com/valeriansaliou/sonic) - Fast, lightweight & schema-less search backend. An alternative to Elasticsearch that runs on a few MBs of RAM.
     - [MeiliSearch](https://github.com/meilisearch/MeiliSearch) - Lightning Fast, Ultra Relevant, and Typo-Tolerant Search Engine
+
+- Interesting blogs from people / groups / companies:
+    - [rust blog](https://github.com/pretzelhammer/rust-blog) - Educational blog posts for Rust beginners
+    - [readrust](https://readrust.net/)
+    - [Rust Blog Official](https://blog.rust-lang.org/)
+    - [r/Rust](https://www.reddit.com/r/rust/)
+
+- Youtube:
+    - [Jon Gjengset](https://www.youtube.com/channel/UC_iD0xppBwwsrM9DegC5cQQ)
+
+- Books:
+    - [The Rust Programming Language (Covers Rust 2018)](https://www.amazon.com/dp/B07SRQ97RD/)
 
 - Extra Tools
     - [rust-raspberrypi-OS-tutorials](https://github.com/rust-embedded/rust-raspberrypi-OS-tutorials) - Learn to write an embedded OS in Rust
