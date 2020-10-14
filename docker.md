@@ -39,6 +39,8 @@ docker ps
 # list all containers (including not running ones)
 docker ps -a
 
+docker ps -a --format="table {{.ID}}\t{{.Command}}\t{{.Names}}"
+
 # list all containers (including file sizes)
 docker ps -s
 ```
