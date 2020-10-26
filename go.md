@@ -346,9 +346,13 @@ $ go tool vet --shadow
     - 2020-09-29 - [Go: A Tale of Concurrency ( A Beginners Guide )](https://medium.com/@yashaswi_nayak/go-a-tale-of-concurrency-a-beginners-guide-b8976b26feb)
         - [Wrote an article/tutorial on Concurrency. Beginner Friendly!](https://www.reddit.com/r/golang/comments/j1xij2/wrote_an_articletutorial_on_concurrency_beginner/)
     - 2020-10-21 - [When Too Much Concurrency Slows You Down (Golang)](https://www.reddit.com/r/golang/comments/jfi21j/when_too_much_concurrency_slows_you_down_golang/)
+    - 2020-09-01 - [Even in Go, concurrency is still not easy (with an example)](https://utcc.utoronto.ca/~cks/space/blog/programming/GoConcurrencyStillNotEasy) - [archive](https://web.archive.org/web/20201026045240/https://utcc.utoronto.ca/~cks/space/blog/programming/GoConcurrencyStillNotEasy) - [hn](https://news.ycombinator.com/item?id=24359650)
     - 2020-02-19 - [Advanced Go concurrency primitives](https://www.reddit.com/r/golang/comments/f6fzv2/advanced_go_concurrency_primitives/)
     - 2020-01-14 - [A Pragmatic Introduction To Concurrency In Go](https://www.reddit.com/r/golang/comments/eoxctc/a_pragmatic_introduction_to_concurrency_in_go/)
     - 2019-06-01 - [Golang channels and goroutines. Vividly.](https://www.youtube.com/watch?v=nwwbUtZvsFc)
+    - 2019-05-17 - [Understanding real-world concurrency bugs in Go](https://blog.acolyer.org/2019/05/17/understanding-real-world-concurrency-bugs-in-go/) - [archive](https://web.archive.org/web/20201026045040/https://blog.acolyer.org/2019/05/17/understanding-real-world-concurrency-bugs-in-go/)
+        - 2019-03-02 - [hn](https://news.ycombinator.com/item?id=19280927)
+        - 2019-05-17 - [hn](https://news.ycombinator.com/item?id=19939718)
     - 2019-05-02 - [Concurrency in Golang: A Simple, Practical Example](https://www.youtube.com/watch?v=3atNYmqXyV4)
     - 2019-04-20 - [Concurrent Design Patterns in Go](https://www.reddit.com/r/golang/comments/bfgvpv/concurrent_design_patterns_in_go/)
     - 2019-04-01 - [Go advanced concurrency patterns](https://www.reddit.com/r/golang/comments/b80dlt/go_advanced_concurrency_patterns/)
@@ -357,6 +361,8 @@ $ go tool vet --shadow
     - 2017-09-24 - [Concurrency and Parallelism in Golang](https://medium.com/@tilaklodha/concurrency-and-parallelism-in-golang-5333e9a4ba64)
     - 2017-07-24 - [GopherCon 2017: Kavya Joshi - Understanding Channels](https://www.youtube.com/watch?v=KBZlN0izeiY)
     - 2014-03-13 - [Go Concurrency Patterns: Pipelines and cancellation](https://blog.golang.org/pipelines)
+    - [loong/go-concurrency-exercises](https://github.com/loong/go-concurrency-exercises)
+    - [alextanhongpin/go-advance-concurrency](https://github.com/alextanhongpin/go-advance-concurrency)
 
 - Generics
     - [Summary of Go Generics Discussions](https://docs.google.com/document/d/1vrAy9gMpMoS3uaVphB32uVXX4pi-HnNjkMEgyAHX4N4/)
