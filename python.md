@@ -775,4 +775,5 @@ If you're going to use for one project, install on a virtual environment
         - [Debugging Cheat Sheet](https://www.reddit.com/r/Python/comments/iehths/debugging_cheat_sheet/)
         - [Python Software Foundation Newsletter](https://us19.campaign-archive.com/home/?u=5697f493c3a48994f504d4deb&id=167eaa449b)
     - Dated
+        - 2020-10-05 - [Python 3.9: Cool New Features for You to Try](https://realpython.com/python39-new-features/)
         - 2020-01-15 - [Ultimate Setup for Your Next Python Project](https://towardsdatascience.com/ultimate-setup-for-your-next-python-project-179bda8a7c2c)
