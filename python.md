@@ -737,10 +737,20 @@ If you're going to use for one project, install on a virtual environment
 - YouTube:
     - Videos:
         - [The Amazing Mutable Immutable Tuple and Other Philosophic Digressions](https://www.youtube.com/watch?v=EVBq1boGP6s)
+        - 2017-08-02 - [What Does It Take To Be An Expert At Python?](https://www.youtube.com/watch?v=7lmCu8wz8ro)
+            - TLDR:
+                - Metaclasses
+                - Decorator
+                - Generator
+                - Context manager
+            - [What Does It Take to Be An Expert At Python Notebook](https://github.com/austin-taylor/code-vault/blob/master/python_expert_notebook.ipynb)
     - Playlists:
-        - [Microsoft Developer - Python for Beginners](https://www.youtube.com/playlist?list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6)
-        - [Corey Schafer - Flask Tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH)
-        - [KeepCoding - Cursos de programación - Curso Introducción a Python & Django](https://www.youtube.com/playlist?list=PLQpe1zyko1phY_8XwZOQSdoyKf9nv7kMl)
+        - [Microsoft Developer | Python for Beginners](https://www.youtube.com/playlist?list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6)
+        - [Corey Schafer | Flask Tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH)
+        - [KeepCoding | Cursos de programación - Curso Introducción a Python & Django](https://www.youtube.com/playlist?list=PLQpe1zyko1phY_8XwZOQSdoyKf9nv7kMl)
+        - [Real Python | Python – Intermediate and Advanced Features](https://www.youtube.com/playlist?list=PLP8GkvaIxJP0VAXF3USi9U4JnpxUvQXHx)
+        - [Python Engineer | Advanced Python - Complete Course](https://www.youtube.com/playlist?list=PLqnslRFeH2UqLwzS0AwKDKLrpYBKzLBy2)
+        - [Tech With Tim | Expert Python Tutorials](https://www.youtube.com/playlist?list=PLzMcBGfZo4-kwmIcMDdXSuy_wSqtU-xDP)
 
 - Books:
     - [Python Basics: A Practical Introduction to Python 3](https://realpython.com/products/python-basics-book/)
