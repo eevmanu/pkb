@@ -174,36 +174,25 @@ $ go tool vet --shadow
 
 ## Extra tools
 
-### Linters
+- Linters:
+    - [golangci/golangci-lint](https://github.com/golangci/golangci-lint) - Fast linters Runner for Go
+        ```bash
+        # to install
+        $ curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
+        ```
+    - [dominikh/go-tools - Staticcheck](https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck) - Go static analysis, detecting bugs, performance issues, and much more.
+    - [mgechev/revive](https://github.com/mgechev/revive) - ~6x faster, stricter, configurable, extensible, and beautiful drop-in replacement for golint.
+    - [kisielk/errcheck](https://github.com/kisielk/errcheck) - errcheck checks that you checked errors.
 
-- [golangci-lint](https://github.com/golangci/golangci-lint)
-
-    ```bash
-    # to install
-    $ curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
-    ```
-
-- [Staticcheck](https://github.com/dominikh/go-tools)
-
-- [revive](https://github.com/mgechev/revive)
-
-- [errcheck](https://github.com/kisielk/errcheck)
-
-### Debugger
-
-- [delve](https://github.com/go-delve/delve)
-
-    ```bash
-    $ go get -uv github.com/go-delve/delve/cmd/dlv
-    ```
-
-- [spew](https://github.com/davecgh/go-spew)
-
-- [q](https://github.com/y0ssar1an/q)
-
-- [litter](https://github.com/sanity-io/litter)
-
-- [gops](https://github.com/google/gops)
+- Debugger / Logging / Tracing / ...:
+    - [go-delve/delve](https://github.com/go-delve/delve) - Delve is a debugger for the Go programming language.
+        ```bash
+        $ go get -uv github.com/go-delve/delve/cmd/dlv
+        ```
+    - [davecgh/go-spew](https://github.com/davecgh/go-spew) - Implements a deep pretty printer for Go data structures to aid in debugging
+    - [y0ssar1an/q](https://github.com/y0ssar1an/q) - Quick and dirty debugging output for tired Go programmers
+    - [sanity-io/litter](https://github.com/sanity-io/litter) - Litter is a pretty printer library for Go data structures to aid in debugging and testing.
+    - [google/gops](https://github.com/google/gops) - A tool to list and diagnose Go processes currently running on your system
 
 ### VSCode GO extension
 
