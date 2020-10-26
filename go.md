@@ -200,28 +200,34 @@ $ go tool vet --shadow
 
 - [Settings](https://github.com/golang/vscode-go/blob/master/docs/settings.md)
 
-- [Tools](https://github.com/golang/vscode-go/blob/master/docs/tools.md)
+- [List of Tools](https://github.com/golang/vscode-go/blob/master/docs/tools.md)
 
-    ```bash
-    # 2020-07-27
-    gocode
-    gopkgs
-    go-outline
-    go-symbols
-    guru
-    gorename
-    gotests
-    gomodifytags
-    impl
-    fillstruct
-    goplay
-    godoctor
-    dlv
-    gocode-gomod
-    godef
-    goreturns
-    golint
+    <details>
+    <summary>
+    Updated as 2020-07-27
+    </summary>
+
     ```
+    - dlv
+    - fillstruct
+    - go-outline
+    - go-symbols
+    - gocode
+    - gocode-gomod
+    - godef
+    - godoctor
+    - golint
+    - gomodifytags
+    - gopkgs
+    - goplay
+    - gorename
+    - goreturns
+    - gotests
+    - guru
+    - impl
+    ```
+
+    </details>
 
 - [Modules](https://github.com/golang/vscode-go/blob/master/docs/modules.md)
 
@@ -232,9 +238,6 @@ $ go tool vet --shadow
     ```
 
 - Change on VSCode settings path for Go Tools
-    - Path for User Settings
-        - `$HOME/.config/Code - Insiders/User/settings.json`
-        - `$HOME/.config/Code/User/settings.json`
 
     ```json
     {
@@ -243,6 +246,18 @@ $ go tool vet --shadow
         ...
     }
     ```
+
+    <details>
+    <summary>
+    User Settings
+    </summary>
+
+    ```bash
+    $HOME/.config/Code - Insiders/User/settings.json
+    $HOME/.config/Code/User/settings.json
+    ```
+
+    </details>
 
 - Open VSCode and run `Go: Install/Update Tools`
 
