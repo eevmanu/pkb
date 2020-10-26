@@ -310,31 +310,37 @@ $ go tool vet --shadow
     - [prest](https://github.com/prest/prest) - pREST (PostgreSQL REST), simplify and accelerate development, zap instant, realtime, high-performance on any Postgres application, existing or new
 
 - Extra tools:
-    - [fzf](https://github.com/junegunn/fzf) - fuzzy finder
-    - [rclone](https://github.com/rclone/rclone) - rsync for cloud storage
-    - [dive](https://github.com/wagoodman/dive) - A tool for exploring each layer in a docker image
-    - [ngrok](https://github.com/inconshreveable/ngrok) - Introspected tunnels to localhost
-    - [logrus](https://github.com/sirupsen/logrus) - Structured, pluggable logging for Go
-    - [vegeta](https://github.com/tsenart/vegeta) - HTTP load testing tool and library
-    - [hey](https://github.com/rakyll/hey) - HTTP load generator, ApacheBench (ab) replacement, formerly known as rakyll/boom
-    - [goreplay](https://github.com/buger/goreplay) - capturing and replaying live HTTP traffic
-    - [annie](https://github.com/iawia002/annie) - Fast, simple and clean video downloader
-    - [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
-    - [pspy](https://github.com/DominicBreuker/pspy) - Monitor linux processes without root permissions
-    - [go-fault](https://github.com/github/go-fault) - Fault injection library in Go using standard http middleware
-    - [grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway) - gRPC to JSON proxy generator following the gRPC HTTP spec
-    - [viper](https://github.com/spf13/viper) - Go configuration with fangs
-    - [validator](https://github.com/go-playground/validator) - Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving
-    - [cue](https://github.com/cuelang/cue) - Validate and define text-based and dynamic configuration cuelang.org
-    - [cron](https://github.com/robfig/cron) - a cron library for go
-    - [webhook](https://github.com/adnanh/webhook) - webhook is a lightweight incoming webhook server to run shell commands
-    - [godotenv](https://github.com/joho/godotenv) - A Go port of Ruby's dotenv library (Loads environment variables from `.env`.)
-    - [croc](https://github.com/schollz/croc) - Easily and securely send things from one computer to another crocodile package
-    - [gqlgen](https://github.com/99designs/gqlgen) - go generate based graphql server library
-    - [graphql-go](https://github.com/graph-gophers/graphql-go) - GraphQL server with a focus on ease of use
-    - [tamago](https://github.com/f-secure-foundry/tamago) - bare metal Go for ARM SoCs
-    - [riot](https://github.com/go-ego/riot) - Go Open Source, Distributed, Simple and efficient Search Engine
+    - [junegunn/fzf](https://github.com/junegunn/fzf) - fuzzy finder
+    - [rclone/rclone](https://github.com/rclone/rclone) - rsync for cloud storage
+    - [wagoodman/dive](https://github.com/wagoodman/dive) - A tool for exploring each layer in a docker image
+    - [inconshreveable/ngrok](https://github.com/inconshreveable/ngrok) - Introspected tunnels to localhost
+    - [sirupsen/logrus](https://github.com/sirupsen/logrus) - Structured, pluggable logging for Go
+    - [uber-go/zap](https://github.com/uber-go/zap) - Blazing fast, structured, leveled logging in Go.
+    - [tsenart/vegeta](https://github.com/tsenart/vegeta) - HTTP load testing tool and library
+    - [rakyll/hey](https://github.com/rakyll/hey) - HTTP load generator, ApacheBench (ab) replacement, formerly known as rakyll/boom
+    - [buger/goreplay](https://github.com/buger/goreplay) - capturing and replaying live HTTP traffic
+    - [iawia002/annie](https://github.com/iawia002/annie) - Fast, simple and clean video downloader
+    - [restic/restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
+    - [DominicBreuker/pspy](https://github.com/DominicBreuker/pspy) - Monitor linux processes without root permissions
+    - [github/go-fault](https://github.com/github/go-fault) - Fault injection library in Go using standard http middleware
+    - [grpc-ecosystem/grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway) - gRPC to JSON proxy generator following the gRPC HTTP spec
+    - [spf13/viper](https://github.com/spf13/viper) - Go configuration with fangs
+    - [go-playground/validator](https://github.com/go-playground/validator) - Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving
+    - [cuelang/cue](https://github.com/cuelang/cue) - Validate and define text-based and dynamic configuration cuelang.org
+    - [robfig/cron](https://github.com/robfig/cron) - a cron library for go
+    - [adnanh/webhook](https://github.com/adnanh/webhook) - webhook is a lightweight incoming webhook server to run shell commands
+    - [joho/godotenv](https://github.com/joho/godotenv) - A Go port of Ruby's dotenv library (Loads environment variables from `.env`.)
+    - [schollz/croc](https://github.com/schollz/croc) - Easily and securely send things from one computer to another crocodile package
+    - [99designs/gqlgen](https://github.com/99designs/gqlgen) - go generate based graphql server library
+    - [graph-gophers/graphql-go](https://github.com/graph-gophers/graphql-go) - GraphQL server with a focus on ease of use
+    - [f-secure-foundry/tamago](https://github.com/f-secure-foundry/tamago) - bare metal Go for ARM SoCs
+    - [go-ego/riot](https://github.com/go-ego/riot) - Go Open Source, Distributed, Simple and efficient Search Engine
     - [robaho/go-trader](https://github.com/robaho/go-trader) - financial exchange written in Go, designed for algorithmic trading tests
+    - [TykTechnologies/tyk](https://github.com/TykTechnologies/tyk) - Tyk Open Source API Gateway written in Go
+    - [photoprism/photoprism](https://github.com/photoprism/photoprism) - Personal Photo Management powered by Go and Google TensorFlow
+    - [emirpasic/gods](https://github.com/emirpasic/gods) - GoDS (Go Data Structures). Containers (Sets, Lists, Stacks, Maps, Trees), Sets (HashSet, TreeSet, LinkedHashSet), Lists (ArrayList, SinglyLinkedList, DoublyLinkedList), Stacks (LinkedListStack, ArrayStack), Maps (HashMap, TreeMap, HashBidiMap, TreeBidiMap, LinkedHashMap), Trees (RedBlackTree, AVLTree, BTree, BinaryHeap), Comparators, Iterators, …
+    - [mitchellh/mapstructure](https://github.com/mitchellh/mapstructure) - Go library for decoding generic map values into native Go structures and vice versa.
+    - [crowdsecurity/crowdsec](https://github.com/crowdsecurity/crowdsec) - An open-source, lightweight agent to detect and respond to bad behaviours. It also automatically benefits from our global community-wide IP reputation database.
 
 - Concurrency - Parallelism - Multiprocessing - Multithreading - Asynchronous(async/await):
     - 2020-09-29 - [Go: A Tale of Concurrency ( A Beginners Guide )](https://medium.com/@yashaswi_nayak/go-a-tale-of-concurrency-a-beginners-guide-b8976b26feb)
