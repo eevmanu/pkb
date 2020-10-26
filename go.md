@@ -377,7 +377,7 @@ $ go tool vet --shadow
     - [PacktPublishing/Learn-Data-Structures-and-Algorithms-with-Golang](https://github.com/PacktPublishing/Learn-Data-Structures-and-Algorithms-with-Golang) - Learn Data Structures and Algorithms with Golang, published by Packt
     - [openset/leetcode](https://github.com/openset/leetcode) - LeetCode Problems' Solutions
 
-- Roadmap & Interview Questions
+- Roadmap / Study Guides / Interview Questions
     - [Go Developer Roadmap](https://github.com/Alikhll/golang-developer-roadmap)
     - [Golang Software Engineer Roadmap](https://github.com/dzyanis/roadmap)
     - [Ultimate Go study guide](https://github.com/hoanhan101/ultimate-go)
@@ -396,6 +396,7 @@ $ go tool vet --shadow
     - 2020-09-25 - [Developing price and currency handling for Go](https://bojanz.github.io/price-currency-handling-go/) - [reddit](https://www.reddit.com/r/golang/comments/izk4kz/developing_price_and_currency_handling_for_go/)
 
 - Reddit:
+
     - [What are the most useful functions / methods etc. to know when learning Go as a second language?](https://www.reddit.com/r/golang/comments/j29uph/what_are_the_most_useful_functions_methods_etc_to/)
     - [What is var _ type = &type{} used for?](https://www.reddit.com/r/golang/comments/j0b73d/what_is_var_type_type_used_for/)
 
