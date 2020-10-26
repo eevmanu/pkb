@@ -594,6 +594,9 @@ If you're going to use for one project, install on a virtual environment
     - Benchmarks
         - [FrameworkBenchmarks](https://github.com/TechEmpower/FrameworkBenchmarks) - Source for the TechEmpower Framework Benchmarks project techempower.com/benchmarks
 
+- Django:
+    - [DjangoBlog](https://github.com/liangliangyy/DjangoBlog) - Django-based blog system
+
 - Data related tools (orm, database, etc...):
     - [databases](https://github.com/encode/databases) - Async database support for Python
     - [faker](https://github.com/joke2k/faker) - Faker is a Python package that generates fake data for you. http://faker.rtfd.org
