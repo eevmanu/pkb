@@ -577,6 +577,9 @@ If you're going to use for one project, install on a virtual environment
         - [pyright](https://github.com/microsoft/pyright) - Static type checker for Python
             - [pylance-release](https://github.com/microsoft/pylance-release) - Documentation and issues for Pylance
         - [returns](https://github.com/dry-python/returns) - Make your functions return something meaningful, typed, and safe! returns.rtfd.io
+        - [facebook/pyre-check](https://github.com/facebook/pyre-check) - Performant type-checking for python.
+            - [pysa](https://pyre-check.org/docs/pysa-basics/) -
+            - [Taint Analysis](https://github.com/facebook/pyre-check/tree/master/stubs/taint)
 
 - Best Practices & Style Guides:
     - [The Best of the Best Practices (BOBP) Guide for Python](https://gist.github.com/sloria/7001839)
