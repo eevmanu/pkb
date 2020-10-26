@@ -282,6 +282,8 @@ $ ln -s /usr/bin/python3 $HOME/bin/python
 
 ### Pyenv
 
+#### Installing
+
 - Clone `pyenv` repo into `$HOME/.pyenv`
 
     ```bash
@@ -323,7 +325,7 @@ $ ln -s /usr/bin/python3 $HOME/bin/python
     $ pyenv install 3.7.8
     ```
 
-- Commands (and its output) to verify if `pyenv` installation works
+- Commands (and its output) to verify if `pyenv` installation works, more info [here](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md)
 
     ```bash
     $ pyenv global
@@ -359,6 +361,24 @@ $ ln -s /usr/bin/python3 $HOME/bin/python
 
     $ pyenv which
     Usage: pyenv which <command>
+    ```
+
+#### Upgrading
+
+- To latest development version (latest commit in github repo)
+
+    ```bash
+    $ cd $(pyenv root)
+    $ git pull
+    ```
+
+- To specific version as tag
+
+    ```bash
+    $ cd $(pyenv root)
+    $ git fetch
+    $ git tag
+    $ git checkout v1.2.21
     ```
 
 ### Venv
@@ -399,7 +419,7 @@ If you're going to use for one project, install on a virtual environment
 
     - Config for VSCode
 
-        ```shell
+        ```bash
             # Workspace settings file
             # pycodestyle path to python binary path used
             ...
@@ -425,7 +445,7 @@ If you're going to use for one project, install on a virtual environment
 
     - Config for VSCode
 
-        ```shell
+        ```bash
             # Workspace settings file
             ...
             "python.formatting.provider": "black",
