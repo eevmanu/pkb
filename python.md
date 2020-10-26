@@ -566,6 +566,9 @@ If you're going to use for one project, install on a virtual environment
     - [PEP 619](https://www.python.org/dev/peps/pep-0619/) - Python 3.10 Release Schedule
         - [Python 3.10.0 alpha 1](https://www.python.org/downloads/release/python-3100a1/) release notes
 
+- [Discuss @ Python.org](https://discuss.python.org/)
+- [Python Ideas Mailing list](https://mail.python.org/archives/list/python-ideas@python.org/)
+
 - Coding Tools:
     - Linters
         - [pycodestyle](https://github.com/PyCQA/pycodestyle) - https://github.com/PyCQA/pycodestyle
