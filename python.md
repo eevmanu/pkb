@@ -613,7 +613,8 @@ If you're going to use for one project, install on a virtual environment
     - [asyncpg](https://github.com/MagicStack/asyncpg) - A fast PostgreSQL Database Client Library for Python/asyncio.
     - [records](https://github.com/kennethreitz-archive/records) - SQL for Humans™
     - [edgedb](https://github.com/edgedb/edgedb) - The next generation relational database.
-    - Resources related:
+    - [sqlmapproject/sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool
+    - Resources:
         - 2020-10-01 - [Python has a Built-in Database — Here’s How to use it](https://towardsdatascience.com/python-has-a-built-in-database-heres-how-to-use-it-47826c10648a)
 
 - Scraping & related:
