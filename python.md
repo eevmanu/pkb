@@ -689,7 +689,10 @@ If you're going to use for one project, install on a virtual environment
     - [path](https://github.com/jaraco/path) - Object-oriented file system path manipulation
         - [pathlib](https://docs.python.org/3/library/pathlib.html) added on 3.4
         - [What does this package do? - Episode 4: Pathlib](https://www.youtube.com/watch?v=YwhOUyTxXVE)
-    - [DjangoBlog](https://github.com/liangliangyy/DjangoBlog) - Django-based blog system
+    - [hardikvasa/google-images-download](https://github.com/hardikvasa/google-images-download) - Python Script to download hundreds of images from 'Google Images'. It is a ready-to-run code!
+    - [hooram/ownphotos](https://github.com/hooram/ownphotos) - Self hosted alternative to Google Photos
+    - [gilesknap/gphotos-sync](https://github.com/gilesknap/gphotos-sync) - Google Photos and Albums backup with Google Photos Library API
+    - [ytdl-org/youtube-dl](https://github.com/ytdl-org/youtube-dl) - Command-line program to download videos from YouTube.com and other video sites
     - Reloading:
         - [reloading](https://github.com/julvo/reloading) - Change Python code while it's running using a reloading loop
         - [watchgod](https://github.com/samuelcolvin/watchgod) - Simple, modern file watching and code reload in python.
