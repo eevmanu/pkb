@@ -345,8 +345,19 @@ $ go tool vet --shadow
 - Concurrency - Parallelism - Multiprocessing - Multithreading - Asynchronous(async/await):
     - 2020-09-29 - [Go: A Tale of Concurrency ( A Beginners Guide )](https://medium.com/@yashaswi_nayak/go-a-tale-of-concurrency-a-beginners-guide-b8976b26feb)
         - [Wrote an article/tutorial on Concurrency. Beginner Friendly!](https://www.reddit.com/r/golang/comments/j1xij2/wrote_an_articletutorial_on_concurrency_beginner/)
+    - 2020-10-21 - [When Too Much Concurrency Slows You Down (Golang)](https://www.reddit.com/r/golang/comments/jfi21j/when_too_much_concurrency_slows_you_down_golang/)
+    - 2020-02-19 - [Advanced Go concurrency primitives](https://www.reddit.com/r/golang/comments/f6fzv2/advanced_go_concurrency_primitives/)
+    - 2020-01-14 - [A Pragmatic Introduction To Concurrency In Go](https://www.reddit.com/r/golang/comments/eoxctc/a_pragmatic_introduction_to_concurrency_in_go/)
+    - 2019-06-01 - [Golang channels and goroutines. Vividly.](https://www.youtube.com/watch?v=nwwbUtZvsFc)
+    - 2019-05-02 - [Concurrency in Golang: A Simple, Practical Example](https://www.youtube.com/watch?v=3atNYmqXyV4)
+    - 2019-04-20 - [Concurrent Design Patterns in Go](https://www.reddit.com/r/golang/comments/bfgvpv/concurrent_design_patterns_in_go/)
+    - 2019-04-01 - [Go advanced concurrency patterns](https://www.reddit.com/r/golang/comments/b80dlt/go_advanced_concurrency_patterns/)
+    - 2018-04-15 - [Concurrency Patterns In Go](https://www.youtube.com/watch?v=YEKjSzIwAdA)
     - 2018-03-04 - [Concurrency in Go](https://www.youtube.com/watch?v=LvgVSSpwND8)
     - 2017-09-24 - [Concurrency and Parallelism in Golang](https://medium.com/@tilaklodha/concurrency-and-parallelism-in-golang-5333e9a4ba64)
+    - 2017-07-24 - [GopherCon 2017: Kavya Joshi - Understanding Channels](https://www.youtube.com/watch?v=KBZlN0izeiY)
+    - 2014-03-13 - [Go Concurrency Patterns: Pipelines and cancellation](https://blog.golang.org/pipelines)
+
 
 - Interesting Github Repos
     - [Go (Golang) Clean Architecture based on Reading Uncle Bob's Clean Architecture](https://github.com/bxcodec/go-clean-arch)
