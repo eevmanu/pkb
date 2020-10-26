@@ -416,7 +416,7 @@ docker-compose up \
 
 - Github
     - [docker-cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
-    - [awesome-docker](https://github.com/veggiemonk/awesome-docker)
+    - [veggiemonk/awesome-docker](https://github.com/veggiemonk/awesome-docker) - A curated list of Docker resources and projects
     - [docker_practice](https://github.com/yeasy/docker_practice)
     - [docker-bench-security](https://github.com/docker/docker-bench-security) - script that checks for dozens of common best-practices around deploying Docker containers in production.
     - [docker-slim](https://github.com/docker-slim/docker-slim) - DockerSlim (docker-slim): Don't change anything in your Docker container image and minify it by up to 30x (and for compiled languages even more) making it secure too! (free and open source)

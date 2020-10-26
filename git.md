@@ -298,7 +298,7 @@
 
     - [ssh-keygen(1) - Linux man page](https://linux.die.net/man/1/ssh-keygen)
 
-- If key was added in `$HOME/.ssh`, don't need to add that identity, otherwise, add it
+- If key was added in `$HOME/.ssh`, don't need to add that identity, otherwise, add it:
 
     ```bash
     $ ssh-add ~/.ssh/id_rsa
