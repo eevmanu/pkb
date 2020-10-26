@@ -617,10 +617,11 @@ If you're going to use for one project, install on a virtual environment
         - 2020-10-01 - [Python has a Built-in Database — Here’s How to use it](https://towardsdatascience.com/python-has-a-built-in-database-heres-how-to-use-it-47826c10648a)
 
 - Scraping & related:
-    - [autoscraper](https://github.com/alirezamika/autoscraper) - A Smart, Automatic, Fast and Lightweight Web Scraper for Python
-    - [parsel](https://github.com/scrapy/parsel) - Parsel lets you extract data from XML/HTML documents using XPath or CSS selectors
-    - [pdftabextract](https://github.com/WZBSocialScienceCenter/pdftabextract) - A set of tools for extracting tables from PDF files helping to do data mining on (OCR-processed) scanned documents. https://datascience.blog.wzb.eu/2017/…
-    - [scraperx](https://github.com/xtream1101/scraperx) - Library for scraping websites or apis at any scale
+    - [alirezamika/autoscraper](https://github.com/alirezamika/autoscraper) - A Smart, Automatic, Fast and Lightweight Web Scraper for Python
+    - [scrapy/parsel](https://github.com/scrapy/parsel) - Parsel lets you extract data from XML/HTML documents using XPath or CSS selectors
+    - [WZBSocialScienceCenter/pdftabextract](https://github.com/WZBSocialScienceCenter/pdftabextract) - A set of tools for extracting tables from PDF files helping to do data mining on (OCR-processed) scanned documents. https://datascience.blog.wzb.eu/2017/…
+    - [xtream1101/scraperx](https://github.com/xtream1101/scraperx) - Library for scraping websites or apis at any scale
+    - [asweigart/pyautogui](https://github.com/asweigart/pyautogui) - A cross-platform GUI automation Python module for human beings. Used to programmatically control the mouse & keyboard.
 
 - Logging:
     - [Ultimate Guide to Python Debugging](https://martinheinz.dev/blog/24) - [hacker news](https://news.ycombinator.com/item?id=23386537)
