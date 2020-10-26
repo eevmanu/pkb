@@ -358,6 +358,8 @@ $ go tool vet --shadow
     - 2017-07-24 - [GopherCon 2017: Kavya Joshi - Understanding Channels](https://www.youtube.com/watch?v=KBZlN0izeiY)
     - 2014-03-13 - [Go Concurrency Patterns: Pipelines and cancellation](https://blog.golang.org/pipelines)
 
+- Generics
+    - [Summary of Go Generics Discussions](https://docs.google.com/document/d/1vrAy9gMpMoS3uaVphB32uVXX4pi-HnNjkMEgyAHX4N4/)
 
 - Interesting Github Repos
     - [Go (Golang) Clean Architecture based on Reading Uncle Bob's Clean Architecture](https://github.com/bxcodec/go-clean-arch)
