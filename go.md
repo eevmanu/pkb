@@ -401,18 +401,25 @@ $ go tool vet --shadow
     - [What is var _ type = &type{} used for?](https://www.reddit.com/r/golang/comments/j0b73d/what_is_var_type_type_used_for/)
 
 - Youtube:
+    - Video:
+        - 2020-07-18 - [Brian Kernighan: UNIX, C, AWK, AMPL, and Go Programming | Lex Fridman Podcast #109](https://www.youtube.com/watch?v=O9upVbGSBFo)
     - Playlists:
-        - [sentdex - Go Language Programming Practical Basics Tutorial](https://www.youtube.com/playlist?list=PLQVvvaa0QuDeF3hP0wQoSxpkqgRcgxMqX)
-        - [Bitfumes - Go Lang for Beginner](https://www.youtube.com/playlist?list=PLe30vg_FG4OSrCDx0FkjraSLEb19LIuN4)
-        - [Nic Jackson - Building Microservices with Go](https://www.youtube.com/playlist?list=PLmD8u-IFdreyh6EUfevBcbiuCKzFk0EW_)
-        - [Tensor Programming - Go Microservices](https://www.youtube.com/playlist?list=PLJbE2Yu2zumAixEws7gtptADSLmZ_pscP)
-        - [ProgrammingKnowledge - Go Programming Language Tutorial | Golang Tutorial For Beginners | Go Language Training](https://www.youtube.com/playlist?list=PLS1QulWo1RIaRoN4vQQCYHWDuubEU8Vij)
-        - [krunal shimpi - Build REST API in Golang using Echo web framework](https://www.youtube.com/playlist?list=PLhyfDOou2eQ1AJsAIRqaEUwx0blZ0UKG2)
-        - [Ardan Labs - Go Syntax [LiveBytes]](https://www.youtube.com/playlist?list=PLADD_vxzPcZATO4tDU_nHApxTEJyxskiS)
-        - [Junmin Lee - Data structures and Algorithms in Go](https://www.youtube.com/playlist?list=PL0q7mDmXPZm7s7weikYLpNZBKk5dCoWm6)
-        - [G Coding Academy - Curso GO (Golang Español) - De 0 a 100](https://www.youtube.com/playlist?list=PLl_hIu4u7P64MEJpR3eVwQ1l_FtJq4a5g)
-        - [tomas lingotti - Concurrencia en Golang](https://www.youtube.com/playlist?list=PLp7DJUzKQx1IwDmUbyalbcLKWElaf4psB)
-        - [Alexys Lozada - Patrones de diseño con Go](https://www.youtube.com/playlist?list=PLfHn_OMWQAHD12-BbcbLR9zDHvH6t93o4)
+        - 2017-11-12 - 485k - sentdex: [Go Language Programming Practical Basics Tutorial](https://www.youtube.com/playlist?list=PLQVvvaa0QuDeF3hP0wQoSxpkqgRcgxMqX)
+        - 2020-06-06 - 51k - Tech With Tim: [Golang Tutorials](https://www.youtube.com/playlist?list=PLzMcBGfZo4-mtY_SE3HuzQJzuj4VlUG0q)
+        - 2020-02-25 - 6k - Bitfumes: [Go Lang for Beginner](https://www.youtube.com/playlist?list=PLe30vg_FG4OSrCDx0FkjraSLEb19LIuN4)
+        - 2020-10-22 - 5k - ProgrammingKnowledge: [Go Programming Language Tutorial | Golang Tutorial For Beginners | Go Language Training](https://www.youtube.com/playlist?list=PLS1QulWo1RIaRoN4vQQCYHWDuubEU8Vij)
+        - 2020-10-19 - 3.4k - Ardan Labs: [Go Syntax [LiveBytes]](https://www.youtube.com/playlist?list=PLADD_vxzPcZATO4tDU_nHApxTEJyxskiS)
+
+        - 2020-10-03 - 3.9k -  Junmin Lee: [Data structures and Algorithms in Go](https://www.youtube.com/playlist?list=PL0q7mDmXPZm7s7weikYLpNZBKk5dCoWm6)
+
+        - 2018-10-28 - 10k - Tensor Programming: [Go Microservices](https://www.youtube.com/playlist?list=PLJbE2Yu2zumAixEws7gtptADSLmZ_pscP)
+        - 2020-06-20 - 47k - Nic Jackson: [Building Microservices with Go](https://www.youtube.com/playlist?list=PLmD8u-IFdreyh6EUfevBcbiuCKzFk0EW_)
+        - 2020-06-12 - 5k - krunal shimpi: [Build REST API in Golang using Echo web framework](https://www.youtube.com/playlist?list=PLhyfDOou2eQ1AJsAIRqaEUwx0blZ0UKG2)
+
+        - G Coding Academy: [Curso GO (Golang Español) - De 0 a 100](https://www.youtube.com/playlist?list=PLl_hIu4u7P64MEJpR3eVwQ1l_FtJq4a5g)
+        - tomas lingotti: [Concurrencia en Golang](https://www.youtube.com/playlist?list=PLp7DJUzKQx1IwDmUbyalbcLKWElaf4psB)
+        - Alexys Lozada: [Patrones de diseño con Go](https://www.youtube.com/playlist?list=PLfHn_OMWQAHD12-BbcbLR9zDHvH6t93o4)
+
         - [GopherCon UK - GopherCon UK 2019](https://www.youtube.com/playlist?list=PLDWZ5uzn69ezokLCB-nGgYInxL0uP1PeZ)
         - [Gopher Academy - GopherCon 2019](https://www.youtube.com/playlist?list=PL2ntRZ1ySWBdDyspRTNBIKES1Y-P__59_)
         - [Gopher Academy - GopherCon 2017 - Lightning Talks](https://www.youtube.com/playlist?list=PL2ntRZ1ySWBfhRZj3BDOrKdHzoafHsKHU)
