@@ -295,6 +295,9 @@ $ go tool vet --shadow
     - [fasthttp](https://github.com/valyala/fasthttp) - Fast HTTP package for Go. Tuned for high performance. Zero memory allocations in hot paths. Up to 10x faster than net/http
     - [fiber](https://github.com/gofiber/fiber) - Fiber is an Express inspired web framework written in Go with coffee gofiber.io
 
+- Project structures:
+    - [golang-standards/project-layout](https://github.com/golang-standards/project-layout) - Standard Go Project Layout
+
 - Benchmark:
     - [Go HTTP request router and web framework benchmark](https://github.com/julienschmidt/go-http-routing-benchmark)
     - [Go web framework benchmark](https://github.com/smallnest/go-web-framework-benchmark)
