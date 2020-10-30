@@ -521,26 +521,42 @@
     $ touch $(timestamp)filename
     ```
 
-- install `iso` in a `usb`
+- install `iso` in a `usb` (check `fdisk` section if needed)
 
     ```bash
-    dd \
+    # IMPORTANT!!!
+    # dont forget to umount USD previously before burning iso
+    # assuming /dev/sda1 is partition inside USB (/dev/sda)
+    $ sudo umount /dev/sda1
+
+    # should not appear as mounted drive
+    $ ls -la /media/$USER
+
+    # check what is it mounted and from where
+    $ cat /proc/mounts
+    ...
+    /dev/sda3 /media/$USER/writable ext4 rw,nosuid,nodev,relatime 0 0
+
+    $ dd \
         bs=1M \
         status=progress \
         if=/path/to/file.iso \
         of=/dev/sda
 
-    # e.g.
+    # e.g.:
     $ sudo dd \
         bs=1M \
         status=progress \
         if=/path/to/ubuntu-18.04.3-desktop-amd64.iso \
         of=/dev/sda
 
-    # dont forget to umount previously USB before burning iso
-    # assuming /dev/sda1 is partition inside USB (/dev/sda)
-    $ sudo umount /dev/sda1
+    # format USB
+    sudo dd bs=1M status=progress if=/dev/zero of=/dev/sda
     ```
+
+    - [How to Create a Bootable Windows 10 USB in Linux](https://itsfoss.com/bootable-windows-usb-linux/)
+    - [How to Format a USB Disk as exFAT on Linux](https://itsfoss.com/format-exfat-linux/)
+        - [Why is it that I am unable to format my pendrive in exfat using gparted?](https://askubuntu.com/questions/771668/why-is-it-that-i-am-unable-to-format-my-pendrive-in-exfat-using-gparted)
 
 - create file and intermediate folders if don't exist whole path
 
