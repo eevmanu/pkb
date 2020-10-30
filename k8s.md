@@ -32,6 +32,13 @@ $ kubectl logs -f --tail=10 {{ }}
     - [The Kubernetes Learning Resources List](https://docs.google.com/spreadsheets/d/10NltoF_6y3mBwUzQ4bcQLQfCE1BWSgUDcJXy-Qp2JEU/) by [kubernauts](https://twitter.com/kubernauts)
     - 2020-01-07 - [A Practical Step-by-Step Guide to Understanding Kubernetes](https://medium.com/better-programming/a-practical-step-by-step-guide-to-understanding-kubernetes-d8be7f82e533)
 
+
+- Operators:
+    - [kubernetes/kops](https://github.com/kubernetes/kops) - Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+    - [zalando/postgres-operator](https://github.com/zalando/postgres-operator)
+    - [CrunchyData/postgres-operator](https://github.com/CrunchyData/postgres-operator)
+    - [prometheus-operator/prometheus-operator](https://github.com/prometheus-operator/prometheus-operator) - Prometheus Operator creates/configures/manages Prometheus clusters atop Kubernetes
+    - [operator-framework/operator-sdk](https://github.com/operator-framework/operator-sdk) - SDK for building Kubernetes applications. Provides high level APIs, useful abstractions, and project scaffolding.
 - Github:
     - [pixie](https://github.com/pixie-labs/pixie) - Instant Kubernetes-Native Application Observability
 
