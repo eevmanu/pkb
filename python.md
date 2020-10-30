@@ -792,9 +792,6 @@ Resources:
     - Benchmarks
         - [FrameworkBenchmarks](https://github.com/TechEmpower/FrameworkBenchmarks) - Source for the TechEmpower Framework Benchmarks project techempower.com/benchmarks
 
-- Django:
-    - [DjangoBlog](https://github.com/liangliangyy/DjangoBlog) - Django-based blog system
-
 - Data related tools (orm, database, etc...):
     - [databases](https://github.com/encode/databases) - Async database support for Python
     - [faker](https://github.com/joke2k/faker) - Faker is a Python package that generates fake data for you. http://faker.rtfd.org
@@ -831,10 +828,11 @@ Resources:
     - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python
     - [playwright-python](https://github.com/microsoft/playwright-python) - Python version of the Playwright testing and automation library - [web](https://playwright.dev/).
 
-- Debug / Logs:
+- Debugging:
     - [PySnooper](https://github.com/cool-RR/PySnooper) - Never use print for debugging again
     - [stackprinter](https://github.com/cknd/stackprinter) - Debugging-friendly exceptions for Python
     - [loguru](https://github.com/Delgan/loguru) - Python logging made (stupidly) simple
+    - [getsentry/sentry](https://github.com/getsentry/sentry) - Sentry is cross-platform application monitoring, with a focus on error reporting.
 
 - Concurrency / Parallelism / Multiprocessing / Multithreading / Asynchronous (async/await) related:
     - Non-dated
@@ -875,6 +873,35 @@ Resources:
     - [gbeced/pyalgotrade](https://github.com/gbeced/pyalgotrade) - Python Algorithmic Trading Library
     - [tradytics/eiten](https://github.com/tradytics/eiten) - Statistical and Algorithmic Investing Strategies for Everyone
 
+- Profiler:
+    - [vprof](https://github.com/nvdv/vprof) - Visual profiler for Python
+    - [emeryberger/scalene](https://github.com/emeryberger/scalene) - Scalene: a high-performance, high-precision CPU and memory profiler for Python
+    - [joerick/pyinstrument](https://github.com/joerick/pyinstrument) - bicyclist Call stack profiler for Python. Shows you why your code is slow!
+    - [jrfonseca/gprof2dot](https://github.com/jrfonseca/gprof2dot) - Converts profiling output to a dot graph.
+
+- Task queue / Async tasks / Background tasks / Distributed tasks / Scheduled tasks / Retry failed tasks ...:
+    - [celery](https://github.com/celery/celery)
+    - [faust](https://github.com/robinhood/faust)
+    - [coleifer/huey](https://github.com/coleifer/huey) - a little task queue for python
+    - [rq/rq](https://github.com/rq/rq) - Simple job queues for Python
+        - [Parallels/rq-dashboard](https://github.com/Parallels/rq-dashboard) - Flask-based web front-end for monitoring RQ queues
+        - [rq/rq-scheduler](https://github.com/rq/rq-scheduler) - A lightweight library that adds job scheduling capabilities to RQ (Redis Queue)
+    - [Bogdanp/dramatiq](https://github.com/Bogdanp/dramatiq) - A fast and reliable background task processing library for Python 3.
+    - [Koed00/django-q](https://github.com/Koed00/django-q) - A multiprocessing distributed task queue for Django
+    - [agronholm/apscheduler](https://github.com/agronholm/apscheduler) - Task scheduling library for Python
+    - [The uWSGI Spooler](https://uwsgi-docs.readthedocs.io/en/latest/Spooler.html)
+        - [unbit/uwsgi/](https://github.com/unbit/uwsgi/)
+    - Resources:
+        - Non-dated:
+            -
+        - Dated:
+            - 2020-10-20 - [The best practice of celery with Django](https://levelup.gitconnected.com/the-best-practice-of-celery-with-django-d383eee1151)
+            - 2020-07-08 - [Managing asynchronous backend tasks with Django and Celery](https://medium.com/procogia/managing-asynchronous-backend-tasks-with-django-and-celery-d71078228741)
+            - 2020-07-03 - [Huey as a minimal task queue for Django](https://www.untangled.dev/2020/07/01/huey-minimal-task-queue-django/)
+            - 2020-05-15 - [Breaking Down Celery ≥4.x With Python and Django](https://medium.com/better-programming/breaking-down-celery-4-x-with-python-and-django-e95eeb7de2a6)
+            - 2019-06-19 - [Alec Clowes - Building a Celery alternative in Django on Kubernetes](https://www.youtube.com/watch?v=fdY6G2u8tRs)
+            - 2013-05-01 - [Messaging at Scale at Instagram by Rick Branson](https://speakerdeck.com/pyconslides/messaging-at-scale-at-instagram-by-rick-branson?slide=76)
+
 - Extra tools:
     - [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python. butterfly
     - [docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) - Pi-hole in a docker container
@@ -893,11 +920,6 @@ Resources:
         - [watchgod](https://github.com/samuelcolvin/watchgod) - Simple, modern file watching and code reload in python.
         - [hotreload](https://github.com/say4n/hotreload) - hot reload your python code!
         - [aiohttp-devtools](https://github.com/aio-libs/aiohttp-devtools) - dev tools for aiohttp
-    - Task queue:
-        - [celery](https://github.com/celery/celery)
-        - [faust](https://github.com/robinhood/faust)
-    - Profiler:
-        - [vprof](https://github.com/nvdv/vprof) - Visual profiler for Python
     - Plotting:
         - [bokeh](https://github.com/bokeh/bokeh) - Interactive Data Visualization in the browser, from Python
         - [matplotlib](https://github.com/matplotlib/matplotlib) - matplotlib: plotting with Python
@@ -945,7 +967,6 @@ Resources:
     - Playlists:
         - [Microsoft Developer | Python for Beginners](https://www.youtube.com/playlist?list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6)
         - [Corey Schafer | Flask Tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH)
-        - [KeepCoding | Cursos de programación - Curso Introducción a Python & Django](https://www.youtube.com/playlist?list=PLQpe1zyko1phY_8XwZOQSdoyKf9nv7kMl)
         - [Real Python | Python – Intermediate and Advanced Features](https://www.youtube.com/playlist?list=PLP8GkvaIxJP0VAXF3USi9U4JnpxUvQXHx)
         - [Python Engineer | Advanced Python - Complete Course](https://www.youtube.com/playlist?list=PLqnslRFeH2UqLwzS0AwKDKLrpYBKzLBy2)
         - [Tech With Tim | Expert Python Tutorials](https://www.youtube.com/playlist?list=PLzMcBGfZo4-kwmIcMDdXSuy_wSqtU-xDP)
