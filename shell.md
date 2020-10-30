@@ -304,8 +304,16 @@
 - join `jpg` files into `pdf`
 
     ```bash
+    # if policy is not allowing to execute operation
+    $ sudo mv /etc/ImageMagick-6/policy.xml /etc/ImageMagick-6/policy.xml.off
+    $ sudo mv /etc/ImageMagick-6/policy.xml.off /etc/ImageMagick-6/policy.xml
+
+
+    # need to install imagemagick
     $ convert *.jpg pictures.pdf
     ```
+
+    - [ImageMagick not authorized to convert PDF to an image](https://stackoverflow.com/questions/52861946/imagemagick-not-authorized-to-convert-pdf-to-an-image)
 
 - convert `pdf` into single image file
     - [How to convert PDF to Image?](https://askubuntu.com/questions/50170/how-to-convert-pdf-to-image)
