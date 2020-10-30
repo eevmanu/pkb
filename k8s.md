@@ -50,13 +50,16 @@ $ kubectl logs -f --tail=10 {{ }}
     - [pixie](https://github.com/pixie-labs/pixie) - Instant Kubernetes-Native Application Observability
 
 - YouTube:
+    - Video:
+        - [CNCF [Cloud Native Computing Foundation] - Webinar: You can be a Kubernetes contributor too!](https://www.youtube.com/watch?v=o68ff5NokR8)
     - Playlists:
         - [KodeKloud - Kubernetes for the Absolute Beginners](https://www.youtube.com/playlist?list=PL2We04F3Y_43dAehLMT5GxJhtk3mJtkl5)
         - [TheDevOpsSchool - Certified Kubernetes Administrator (CKA) 2019 Tutorials](https://www.youtube.com/playlist?list=PLDhScTEBdP8wE9gl8PkZu5dfHSCNI0UvL)
         - [Jérôme Petazzoni - [2019.03] Kubernetes workshop at QCON London](https://www.youtube.com/playlist?list=PLBAFXs0YjviJwCoxSUkUPhsSxDJzpZbJd)
-        - [Microsoft Azure - Kubernetes Basics](https://www.youtube.com/playlist?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT)
+        - [Microsoft Azure](https://www.youtube.com/c/MicrosoftAzure) - [Kubernetes Basics](https://www.youtube.com/playlist?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT)
         - [Google Cloud Platform - Kubernetes Best Practices](https://www.youtube.com/playlist?list=PLIivdWyY5sqL3xfXz5xJvwzFW_tlQB_GB)
         - [edureka! - Kubernetes Tutorial for Beginners](https://www.youtube.com/playlist?list=PL9ooVrP1hQOF907pPru97cKY9nKwOrDTP)
+        - [TechWorld with Nana] -- [Complete Kubernetes Tutorial for Beginners](https://www.youtube.com/playlist?list=PLy7NrYWoggjziYQIDorlXjTvvwweTYoNC)
 
 - Needs contribution:
     - [kubernetes/test-infra](https://github.com/kubernetes/test-infra) - Test infrastructure for the Kubernetes project.
@@ -77,4 +80,5 @@ $ kubectl logs -f --tail=10 {{ }}
     - [kubernetes-sigs/metrics-server](https://github.com/kubernetes-sigs/metrics-server)
 
 
+- Useful Articles / Posts:
     - 2019-12-12 - [Demystifying Kubernetes as a service – How Alibaba cloud manages 10,000s of Kubernetes clusters](https://www.cncf.io/blog/2019/12/12/demystifying-kubernetes-as-a-service-how-does-alibaba-cloud-manage-10000s-of-kubernetes-clusters/)
