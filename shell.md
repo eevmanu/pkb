@@ -339,7 +339,6 @@
     ```
 
 - [rsync](https://linux.die.net/man/1/rsync)
-    - [How To Use Rsync to Sync Local and Remote Directories on a VPS](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps)
 
     ```bash
     -a # --archive archive mode; equals -rlptgoD (no -H,-A,-X)
@@ -351,10 +350,14 @@
     --delete # delete extraneous files from dest dirs
 
     $ rsync -anPv SRC ... [DEST]
+
     # e.g.
     $ rsync -aPv --delete $HOME/Documents/ /media/$USER/manu/Documents/
     $ rsync -aPv /media/$USER/manu/Documents/ $HOME/Documents/
+    $ rsync -ah --progress {{ SOURCE }} {{ DESTINATION }}
     ```
+    - Resources:
+        - [How To Use Rsync to Sync Local and Remote Directories on a VPS](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps)
 
 - `wget`
 
