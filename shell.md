@@ -1099,7 +1099,7 @@
     $ sudo update-rc.d -f nginx disable
     ```
 
-- `fdisk`
+- `fdisk` - allows to check info about disks connected
 
     ```bash
     $ sudo fdisk -l
@@ -1242,6 +1242,7 @@
     - [monolith](https://github.com/Y2Z/monolith) - CLI tool for saving complete web pages as a single HTML file
     - [sd](https://github.com/chmln/sd) - Intuitive find & replace CLI (sed alternative)
     - [flamegraph](https://github.com/flamegraph-rs/flamegraph) - Easy flamegraphs for Rust projects and everything else, without Perl or pipes <3
+    - [dbohdan/structured-text-tools](https://github.com/dbohdan/structured-text-tools) - A list of command line tools for manipulating structured text data
 
 - Learn more commands
     - [pure-bash-bible](https://github.com/dylanaraps/pure-bash-bible) - A collection of pure bash alternatives to external processes.
@@ -1269,3 +1270,4 @@ Final Articles / Posts:
     - `1>` equal to `>` and `1>>` equal to `>>`
 - [bash cheat sheet: what (), {}, $(()), $(), ${}, [], [[]] mean](https://twitter.com/b0rk/status/1312573876640063488)
     - [brackets cheatsheet](https://wizardzines.com/comics/brackets-cheatsheet/)
+- [Julia Evans @bork - parameter expansion](https://wizardzines.com/comics/parameter-expansion/)
