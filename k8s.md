@@ -15,7 +15,21 @@ $ kubectl logs -f --tail=10 {{ }}
 ### Resources
 
 - Learning:
-    - [kubernetes-basicLearning](https://github.com/knrt10/kubernetes-basicLearning/) - Understand kubernetes step by step. A simple repo for beginners
+    - [kelseyhightower/kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way/) - Bootstrap Kubernetes the hard way on Google Cloud Platform. No scripts.
+    - [kubernetes/minikube](https://github.com/kubernetes/minikube) - Run Kubernetes locally
+    - [helm/helm](https://github.com/helm/helm) - The Kubernetes Package Manager
+    - [helm/charts](https://github.com/helm/charts) - Curated applications for Kubernetes
+    - [rancher/k3s](https://github.com/rancher/k3s) - Lightweight Kubernetes
+    - [google/gvisor](https://github.com/google/gvisor) - Application Kernel for Containers
+    - [GoogleContainerTools/skaffold](https://github.com/GoogleContainerTools/skaffold) - Easy and Repeatable Kubernetes Development
+    - [kubernetes-sigs/kubespray](https://github.com/kubernetes-sigs/kubespray) - Deploy a Production Ready Kubernetes Cluster
+    - [derailed/k9s](https://github.com/derailed/k9s) - Kubernetes CLI To Manage Your Clusters In Style!
+    - [lensapp/lens](https://github.com/lensapp/lens) - Lens - The Kubernetes IDE
+    - [kubernetes/dashboard](https://github.com/kubernetes/dashboard) - General-purpose web UI for Kubernetes clusters
+    - [ahmetb/kubectx](https://github.com/ahmetb/kubectx) - Faster way to switch between clusters and namespaces in kubectl
+    - [knrt10/kubernetes-basicLearning](https://github.com/knrt10/kubernetes-basicLearning/) - Understand kubernetes step by step. A simple repo for beginners
+    - [hobby-kube/guide](https://github.com/hobby-kube/guide) - Kubernetes clusters for the hobbyist.
+    - [The Kubernetes Learning Resources List](https://docs.google.com/spreadsheets/d/10NltoF_6y3mBwUzQ4bcQLQfCE1BWSgUDcJXy-Qp2JEU/) by [kubernauts](https://twitter.com/kubernauts)
     - 2020-01-07 - [A Practical Step-by-Step Guide to Understanding Kubernetes](https://medium.com/better-programming/a-practical-step-by-step-guide-to-understanding-kubernetes-d8be7f82e533)
 
 - Github:
