@@ -46,8 +46,27 @@ $ kubectl logs -f --tail=10 {{ }}
     - [vitessio/vitess](https://github.com/vitessio/vitess) - Vitess is a database clustering system for horizontal scaling of MySQL.
     - [rook/rook](https://github.com/rook/rook) - Storage Orchestration for Kubernetes
 
+- Security:
+    - [docker/docker-bench-security](https://github.com/docker/docker-bench-security) - script that checks for dozens of common best-practices around deploying Docker containers in production.
+    - [quay/clair](https://github.com/quay/clair) - Vulnerability Static Analysis for Containers
+    - [aquasecurity/trivy](https://github.com/aquasecurity/trivy) - A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+
+- Gateway / Proxy:
+    - [traefik/traefik](https://github.com/traefik/traefik) - The Cloud Native Application Proxy
+    - [Kong/kong](https://github.com/Kong/kong) - The Cloud-Native API Gateway
+    - [istio/istio](https://github.com/istio/istio) - Connect, secure, control, and observe services.
+
+- IaaS:
+    - [pulumi/pulumi](https://github.com/pulumi/pulumi) - Pulumi - Modern Infrastructure as Code. Any cloud, any language
+
 - Github:
     - [pixie](https://github.com/pixie-labs/pixie) - Instant Kubernetes-Native Application Observability
+    - [kubernetes/test-infra](https://github.com/kubernetes/test-infra) - Test infrastructure for the Kubernetes project.
+    - [kubeedge/kubeedge](https://github.com/kubeedge/kubeedge) - Kubernetes Native Edge Computing Framework (project under CNCF)
+    - [LeCoupa/awesome-cheatsheets](https://github.com/LeCoupa/awesome-cheatsheets) - Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
+    - [ramitsurana/awesome-kubernetes](https://github.com/ramitsurana/awesome-kubernetes) - A curated list for awesome kubernetes sources
+    - [kubeflow/kubeflow](https://github.com/kubeflow/kubeflow) - Machine Learning Toolkit for Kubernetes
+    - [GoogleContainerTools/kaniko](https://github.com/GoogleContainerTools/kaniko) - Build Container Images In Kubernetes
 
 - YouTube:
     - Video:
