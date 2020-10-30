@@ -12,6 +12,30 @@ $ kubectl config use-context {{ }}
 $ kubectl logs -f --tail=10 {{ }}
 ```
 
+### Microservice Terminology
+
+- api gateway
+- load balancer
+- reverse proxy
+- forward proxy (or proxy)
+- service discovery
+- service registry
+- service proxy
+- service mesh (smart proxies)
+    - data plane (move the data)
+    - control plane (apply the desired policies by pushing configuration out to the smart proxies)
+    - linkerd as daemon set
+    - envoy as sidecar container
+    - istio
+- sidecar proxy
+
+- Resources
+    - [What Is A Reverse Proxy? | Proxy Servers Explained](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/)
+    - [SO: What is service discovery, and why do you need it?](https://stackoverflow.com/questions/37148836/what-is-service-discovery-and-why-do-you-need-it)
+    - 2015 - [Service Discovery in a Microservices Architecture](https://www.nginx.com/blog/service-discovery-in-a-microservices-architecture/)
+    - [What is a “mesh”?](https://devops.stackexchange.com/questions/5374/what-is-a-mesh)
+    - [SO: What is a service mesh?](https://stackoverflow.com/questions/60150198/what-is-a-service-mesh)
+
 ### Resources
 
 - Learning:
