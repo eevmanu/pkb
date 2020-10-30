@@ -30,5 +30,23 @@ $ kubectl logs -f --tail=10 {{ }}
         - [Google Cloud Platform - Kubernetes Best Practices](https://www.youtube.com/playlist?list=PLIivdWyY5sqL3xfXz5xJvwzFW_tlQB_GB)
         - [edureka! - Kubernetes Tutorial for Beginners](https://www.youtube.com/playlist?list=PL9ooVrP1hQOF907pPru97cKY9nKwOrDTP)
 
-- Final Articles / Posts / Resources:
+- Needs contribution:
+    - [kubernetes/test-infra](https://github.com/kubernetes/test-infra) - Test infrastructure for the Kubernetes project.
+    - [kubernetes/enhancements](https://github.com/kubernetes/enhancements) - Enhancements tracking repo for Kubernetes
+    - [testgrid - k8s](https://testgrid.k8s.io/) -
+    - [kubernetes-sigs/aws-alb-ingress-controller](https://github.com/kubernetes-sigs/aws-alb-ingress-controller)
+    - [kubernetes-sigs/aws-iam-authenticator](https://github.com/kubernetes-sigs/aws-iam-authenticator)
+    - [kubernetes-sigs/bootkube](https://github.com/kubernetes-sigs/bootkube)
+    - [kubernetes-sigs/cluster-api](https://github.com/kubernetes-sigs/cluster-api)
+    - [kubernetes-sigs/descheduler](https://github.com/kubernetes-sigs/descheduler)
+    - [kubernetes-sigs/external-dns](https://github.com/kubernetes-sigs/external-dns)
+    - [kubernetes-sigs/kind](https://github.com/kubernetes-sigs/kind)
+    - [kubernetes-sigs/krew](https://github.com/kubernetes-sigs/krew)
+    - [kubernetes-sigs/kubebuilder](https://github.com/kubernetes-sigs/kubebuilder)
+    - [kubernetes-sigs/kubefed](https://github.com/kubernetes-sigs/kubefed)
+    - [kubernetes-sigs/kubespray](https://github.com/kubernetes-sigs/kubespray)
+    - [kubernetes-sigs/kustomize](https://github.com/kubernetes-sigs/kustomize)
+    - [kubernetes-sigs/metrics-server](https://github.com/kubernetes-sigs/metrics-server)
+
+
     - 2019-12-12 - [Demystifying Kubernetes as a service – How Alibaba cloud manages 10,000s of Kubernetes clusters](https://www.cncf.io/blog/2019/12/12/demystifying-kubernetes-as-a-service-how-does-alibaba-cloud-manage-10000s-of-kubernetes-clusters/)
