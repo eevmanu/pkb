@@ -793,6 +793,14 @@
         - [dnsperftest](https://github.com/cleanbrowsing/dnsperftest) - DNS Performance test
         - [Set permanent DNS nameservers on Ubuntu/Debian with resolv.conf](https://www.ricmedia.com/set-permanent-dns-nameservers-ubuntu-debian-resolv-conf/)
         - [Set custom DNS servers on Ubuntu 18.04 or 20.04](https://www.ricmedia.com/set-custom-dns-servers-on-ubuntu-18-or-20/)
+        - [No wired connection - Wired unmanaged ubuntu 18.04](https://askubuntu.com/questions/1039233/no-wired-connection-wired-unmanaged-ubuntu-18-04)
+            - [add `renderer: NetworkManager` line](https://askubuntu.com/a/1178044/879600), run `sudo netplan apply` and / or run `sudo systemctl restart network-manager`
+
+    - Tools:
+        - [Which DNS](https://which.nameserve.rs/)
+        - [DNS Leak test](https://www.dnsleaktest.com/)
+        - [IP Leak](https://ipleak.net/)
+        - [nip.io](https://nip.io/) - [github](https://github.com/exentriquesolutions/nip.io)
 
 - restart `wifi` kernel driver
 
@@ -802,6 +810,9 @@
 
     # add again
     $ sudo modprobe iwlwifi
+
+    # restart whole network manager
+    $ sudo systemctl restart network-manager
     ```
 
 - restart `shell`
