@@ -415,18 +415,18 @@ docker-compose up \
 - [Storage overview](https://docs.docker.com/storage/)
 
 - Github
-    - [docker-cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
+    - [wsargent/docker-cheat-sheet](https://github.com/wsargent/docker-cheat-sheet)
     - [veggiemonk/awesome-docker](https://github.com/veggiemonk/awesome-docker) - A curated list of Docker resources and projects
-    - [docker_practice](https://github.com/yeasy/docker_practice)
-    - [docker-bench-security](https://github.com/docker/docker-bench-security) - script that checks for dozens of common best-practices around deploying Docker containers in production.
-    - [docker-slim](https://github.com/docker-slim/docker-slim) - DockerSlim (docker-slim): Don't change anything in your Docker container image and minify it by up to 30x (and for compiled languages even more) making it secure too! (free and open source)
-    - [ctop](https://github.com/bcicen/ctop) - Top-like interface for container metrics
-    - [dockerfiles](https://github.com/jessfraz/dockerfiles) - Various Dockerfiles I use on the desktop and on servers.
-    - [distroless](https://github.com/GoogleContainerTools/distroless) - Language focused docker images, minus the operating system.
-    - [goreleaser](https://github.com/goreleaser/goreleaser) - Deliver Go binaries as fast and easily as possible
-    - [supercronic](https://github.com/aptible/supercronic) - Cron for containers
-    - [tini](https://github.com/krallin/tini) - A tiny but valid `init` for containers
-    - [scope](https://github.com/weaveworks/scope) - Monitoring, visualisation & management for Docker & Kubernetes
+    - [yeasy/docker_practice](https://github.com/yeasy/docker_practice) - Learn and understand Docker technologies, with real DevOps practice!
+    - [docker/docker-bench-security](https://github.com/docker/docker-bench-security) - script that checks for dozens of common best-practices around deploying Docker containers in production.
+    - [docker/docker-slim](https://github.com/docker-slim/docker-slim) - DockerSlim (docker-slim): Don't change anything in your Docker container image and minify it by up to 30x (and for compiled languages even more) making it secure too! (free and open source)
+    - [bcicen/ctop](https://github.com/bcicen/ctop) - Top-like interface for container metrics
+    - [jessfraz/dockerfiles](https://github.com/jessfraz/dockerfiles) - Various Dockerfiles I use on the desktop and on servers.
+    - [GoogleContainerTools/distroless](https://github.com/GoogleContainerTools/distroless) - Language focused docker images, minus the operating system.
+    - [goreleaser/goreleaser](https://github.com/goreleaser/goreleaser) - Deliver Go binaries as fast and easily as possible
+    - [aptible/supercronic](https://github.com/aptible/supercronic) - Cron for containers
+    - [krallin/tini](https://github.com/krallin/tini) - A tiny but valid `init` for containers
+    - [weaveworks/scope](https://github.com/weaveworks/scope) - Monitoring, visualisation & management for Docker & Kubernetes
 
 - Stack Overflow - Interesting questions
     - [How to copy folders to docker image from Dockerfile?](https://stackoverflow.com/questions/37789984/how-to-copy-folders-to-docker-image-from-dockerfile)

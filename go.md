@@ -394,15 +394,10 @@ $ go tool vet --shadow
     - [cadvisor](https://github.com/google/cadvisor) - Analyzes resource usage and performance characteristics of running containers.
     - [goproxy](https://github.com/snail007/goproxy) - Proxy is a high performance HTTP(S) proxies, SOCKS5 proxies,WEBSOCKET, TCP, UDP proxy server implemented by golang
 
-- Interesting articles:
-    - [Allocation efficiency in high-performance Go services](https://segment.com/blog/allocation-efficiency-in-high-performance-go-services/)
-    - [Style guideline for Go packages](https://rakyll.org/style-packages/)
-    - [Even in Go, concurrency is still not easy (with an example)](https://utcc.utoronto.ca/~cks/space/blog/programming/GoConcurrencyStillNotEasy)
-    - [Are you a Go black belt?](https://bitfieldconsulting.com/golang/black-belt)
-    - 2020-09-25 - [Developing price and currency handling for Go](https://bojanz.github.io/price-currency-handling-go/) - [reddit](https://www.reddit.com/r/golang/comments/izk4kz/developing_price_and_currency_handling_for_go/)
+- Unikernel
+    - [icexin/eggos](https://github.com/icexin/eggos) - A Go unikernel running on x86 bare metal
 
 - Reddit:
-
     - [What are the most useful functions / methods etc. to know when learning Go as a second language?](https://www.reddit.com/r/golang/comments/j29uph/what_are_the_most_useful_functions_methods_etc_to/)
     - [What is var _ type = &type{} used for?](https://www.reddit.com/r/golang/comments/j0b73d/what_is_var_type_type_used_for/)
 
@@ -441,6 +436,16 @@ $ go tool vet --shadow
 - Podcasts:
     - [Changelog - Go Time](https://changelog.com/gotime)
     - [Sourcegraph Podcast](https://about.sourcegraph.com/podcast), [YT playlist](https://www.youtube.com/playlist?list=PL6zLuuRVa1_jf5GDl61SvEOXvwvKS1IXA)
+
+- News sources:
+    - [Changelog News - Go Topic](https://changelog.com/topic/go)
+
+- Highlighted articles:
+    - [Allocation efficiency in high-performance Go services](https://segment.com/blog/allocation-efficiency-in-high-performance-go-services/)
+    - [Style guideline for Go packages](https://rakyll.org/style-packages/)
+    - [Even in Go, concurrency is still not easy (with an example)](https://utcc.utoronto.ca/~cks/space/blog/programming/GoConcurrencyStillNotEasy)
+    - [Are you a Go black belt?](https://bitfieldconsulting.com/golang/black-belt)
+    - 2020-09-25 - [Developing price and currency handling for Go](https://bojanz.github.io/price-currency-handling-go/) - [reddit](https://www.reddit.com/r/golang/comments/izk4kz/developing_price_and_currency_handling_for_go/)
 
 - Final Articles / Posts:
     - Non dated:
