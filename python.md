@@ -1,86 +1,156 @@
 # Python
 
-- Check your `python` version
+## Basic stuffs
+
+Check version:
+
+```bash
+$ python --version
+
+$ python3 --version
+```
+
+Get `python` binary paths
+
+```bash
+$ which python
+/usr/bin/python
+
+$ which python3
+/path/to/python3
+```
+
+Install from `ppa:deadsnakes/ppa` repository, more info [here](https://python.tutorials24x7.com/blog/how-to-install-python-3-8-on-ubuntu-1804-lts)
+
+```bash
+# update available packages
+$ sudo apt update
+
+# install prerequisites to use add-apt-repository
+$ sudo apt install software-properties-common
+
+# add `deadsnakes` package archive
+$ sudo add-apt-repository ppa:deadsnakes/ppa
+
+# update available packages, including last package archive included
+$ sudo apt update
+
+# install python 3.8
+$ sudo apt install python3.8
+```
+
+Start up a minimal http server
+
+```bash
+# Python 3
+$ python3.7 -m http.server 8000 --bind 0.0.0.0
+
+# Python 2
+$ python -m SimpleHTTPServer
+```
+
+## [pip](https://github.com/pypa/pip) - The Python package installer
+
+Download it:
+
+```bash
+$ wget https://bootstrap.pypa.io/get-pip.py
+```
+
+Prefer to not install it via `apt` packages:
+
+```bash
+$ sudo apt install python3-pip
+```
+
+Install `pip` for your user (inside `$HOME`) using the path to your core python binary
+
+```bash
+# --user
+# Install to the Python user install directory for your platform.
+# Typically ~/.local/, or %APPDATA%Python on Windows.
+# (See the Python documentation for site.USER_BASE for full details.)
+$ $(which python) get-pip.py --user
+$ $(which python3) get-pip.py --user
+```
+
+Verify paths to `pip` if `pip` was installed successfully for your user
+
+```bash
+$ ls -la $(which pip)
+-rwxrwxr-x 1 $USER $USER 223 ............ $HOME/.local/bin/pip
+$ ls -la $(which pip3)
+-rwxrwxr-x 1 $USER $USER 223 ............ $HOME/.local/bin/pip3
+$ ls -la $(which pip3.8)
+-rwxrwxr-x 1 $USER $USER 223 ............ $HOME/.local/bin/pip3.8
+
+# this will create a pip command appended to the python version used to install it
+$ pip3.8
+```
+
+Change `pip3` to `pip` (*dirty trick*) **[OPTIONAL]**
+
+```bash
+$ pip --version
+pip 20.1 from /usr/local/lib/python2.7/dist-packages/pip (python 2.7)
+
+$ pip3 --version
+pip 20.1 from /usr/local/lib/python3.7/dist-packages/pip (python 3.7)
+
+$ which -a pip
+/usr/local/bin/pip
+/usr/bin/pip
+
+$ which -a pip2
+/usr/local/bin/pip2
+/usr/bin/pip2
+
+$ which -a pip3
+/usr/local/bin/pip3
+/usr/bin/pip3
+
+$ ls -la /usr/bin/pip*
+-rwxr-xr-x 1 root root 283 ............ /usr/bin/pip2
+
+$ ls -la /usr/local/bin/pip*
+-rwxr-xr-x 1 root root 223 ............ /usr/local/bin/pip
+-rwxr-xr-x 1 root root 223 ............ /usr/local/bin/pip2
+-rwxr-xr-x 1 root root 223 ............ /usr/local/bin/pip2.7
+-rwxr-xr-x 1 root root 223 ............ /usr/local/bin/pip3
+-rwxr-xr-x 1 root root 216 ............ /usr/local/bin/pip3.5
+-rwxr-xr-x 1 root root 218 ............ /usr/local/bin/pip3.6
+-rwxr-xr-x 1 root root 223 ............ /usr/local/bin/pip3.7
+-rwxr-xr-x 1 root root 206 ............ /usr/local/bin/pipenv
+
+$ cp /path/to/pip3 /path/to/pip
+```
+
+Update `pip` and *core packages*: **setuptools**, **wheel**
+
+```bash
+$ pip install -U pip setuptools wheel
+```
+
+### Troubleshooting
+
+Avoid warnings because of `locale`
+
+```bash
+$ export LC_ALL=C
+```
+
+Warning: `> Defaulting to user installation because normal site-packages is not writeable`
+
+Idea behind (because `pip` was installed with `--user` parameter)
+- Don't have `/usr/local/lib/pythonX.Y/site-packages`
+- Don't have `/usr/lib/python3/site-packages`
+- Have `$HOME/.local/lib/pythonX.Y/site-packages`
+
+Things to verify:
+
+- Global `site-packages`:
 
     ```bash
-    $ python --version
-
-    $ python3 --version
-    ```
-
-- Check your `python` binary paths
-
-    ```bash
-    $ which python
-    /usr/bin/python
-
-    $ which python3
-    /path/to/python3
-    ```
-
-- Install `python` from `ppa:deadsnakes/ppa` repository (more info [here](https://python.tutorials24x7.com/blog/how-to-install-python-3-8-on-ubuntu-1804-lts))
-
-    ```bash
-    # update available packages
-    $ sudo apt update
-
-    # install prerequisites to use add-apt-repository
-    $ sudo apt install software-properties-common
-
-    # add `deadsnakes` package archive
-    $ sudo add-apt-repository ppa:deadsnakes/ppa
-
-    # update available packages, including last package archive included
-    $ sudo apt update
-
-    # install python 3.8
-    $ sudo apt install python3.8
-    ```
-
-- [pip](https://github.com/pypa/pip) - The Python package installer
-
-    ```bash
-    # AVOID install from apt packages
-    # $ sudo apt install python3-pip
-
-    # download get-pip.py file
-    $ wget https://bootstrap.pypa.io/get-pip.py
-
-    # get path from python3.8 binary
-    $ which python3.8
-    /path/to/python3.8
-
-    # install with your python version you want, e.g. Python 3.8
-    $ /path/to/python3.8 get-pip.py
-
-    # install pip for your user (inside $HOME)
-    $ /path/to/python3.8 get-pip.py --user
-    # --user
-    # Install to the Python user install directory for your platform.
-    # Typically ~/.local/, or %APPDATA%Python on Windows.
-    # (See the Python documentation for site.USER_BASE for full details.)
-
-    # After install with --user
-    $ ls -la $(which pip)
-    -rwxrwxr-x 1 $USER $USER 223 May 23 21:00 $HOME/.local/bin/pip
-    $ ls -la $(which pip3)
-    -rwxrwxr-x 1 $USER $USER 223 May 23 21:00 $HOME/.local/bin/pip3
-    $ ls -la $(which pip3.8)
-    -rwxrwxr-x 1 $USER $USER 223 May 23 21:00 $HOME/.local/bin/pip3.8
-
-    # this will create a pip command appended with python version
-    $ pip3.8
-
-    # avoid warning because of locale
-    $ export LC_ALL=C
-
-    # Troubleshooting
-    # > Defaulting to user installation because normal site-packages is not writeable
-    # /usr/local/lib/pythonX.Y/site-packages don't exist OR
-    # /usr/lib/python3/site-packages
-    # $HOME/.local/lib/pythonX.Y/site-packages exists
-    # maybe because you install pip with --user
-    # https://stackoverflow.com/questions/122327/how-do-i-find-the-location-of-my-python-site-packages-directory
     $ python3 -c 'import site; print(site.getsitepackages())'
     ['/usr/local/lib/python3.8/dist-packages', '/usr/lib/python3/dist-packages', '/usr/lib/python3.8/dist-packages']
 
@@ -97,177 +167,276 @@
     USER_BASE: '$HOME/.local' (exists)
     USER_SITE: '$HOME/.local/lib/python3.8/site-packages' (exists)
     ENABLE_USER_SITE: True
+    ```
 
+- Local `site-packages`:
+
+    ```bash
     $ python3 -m site --user-site
     $HOME/.local/lib/python3.8/site-packages
     ```
 
-    - [Installing with get-pip.py](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
-    - [User Guide](https://pip.pypa.io/en/stable/user_guide/)
-    - [Releases @ Github](https://github.com/pypa/pip/releases)
+### Resources
 
-    - Troubleshooting / Resources
-        - [What is the purpose of “pip install --user …”?](https://stackoverflow.com/questions/42988977/what-is-the-purpose-of-pip-install-user)
-        - [Default to --user #1668 @ Github](https://github.com/pypa/pip/issues/1668)
+- [Installing with get-pip.py](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
+- [User Guide](https://pip.pypa.io/en/stable/user_guide/)
+- [Github: Releases](https://github.com/pypa/pip/releases)
+- [How do I find the location of my Python site-packages directory?](https://stackoverflow.com/questions/122327/how-do-i-find-the-location-of-my-python-site-packages-directory)
+- [What is the purpose of “pip install --user …”?](https://stackoverflow.com/questions/42988977/what-is-the-purpose-of-pip-install-user)
+- [Default to --user #1668 @ Github](https://github.com/pypa/pip/issues/1668)
+
+## Virtual environments
+
+### virtualenv & virtualenvwrapper
+
+Install `virtualenv` & `virtualenvwrapper`
+
+```bash
+$ pip install -U virtualenv virtualenvwrapper
+# (2020-06-01 16:43:58)
+# Successfully installed appdirs-1.4.4 distlib-0.3.0 filelock-3.0.12 virtualenv-20.0.21
+# Successfully installed stevedore-1.32.0 virtualenv-clone-0.5.4 virtualenvwrapper-4.8.4
+```
+
+Verify `shebang` of `virtualenv` executable file
+
+```bash
+$ which virtualenv
+/path/to/virtualenv
+
+$ head -n 1 /path/to/virtualenv
+#!/usr/bin/python
+
+# OR
+$ head -n 1 /path/to/virtualenv
+#!/usr/bin/python3.8
+```
+
+Verify pip executable used to install those packages is the right one
+
+```bash
+$ /usr/bin/python -m pip --version
+pip 20.1.1 from $HOME/.local/lib/python3.8/site-packages/pip (python 3.8)
+```
+
+Add extra configuration to your `.bashrc` file
+
+```bash
+$ nano $HOME/.bashrc
+# ---- while editing---
+...
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
+export WORKON_HOME=$HOME/Envs
+mkdir -p $WORKON_HOME
+source /usr/local/bin/virtualenvwrapper.sh
+...
+```
+
+Load extra configurations to shell
+
+```bash
+$ source $HOME/.bashrc
+```
+
+Management commands
+
+```bash
+# create a virtual environment
+$ mkvirtualenv
+$ mkvirtualenv -p python3.8 {{ virtualenv name }}
+$ mkvirtualenv -p /usr/bin/python3.8 {{ virtualenv name }}
+$ mkvirtualenv --python=python3.8 {{ virtualenv name }}
+$ mkvirtualenv --python=/usr/bin/python3.8 {{ virtualenv name }}
+
+# after creating a virtual environment, don't forget to update pip setuptools and wheel packages
+# $ pip install -U pip setuptools wheel
+
+# enter to a virtual environment
+$ workon {{ name of virutal environment }}
+({{ name of virtual environment }})$
+
+# logout off virtual environment
+({{ name of virtual environment }})$ deactivate
+
+# delete a virtual environment
+$ rmvirtualenv
+
+# list all virtual environment
+$ lsvirtualenv
+
+# change working directory to virtual environment folder
+$ cdvirtualenv
+```
+
+### Pyenv
+
+#### Setup
+
+Clone `pyenv` github repo into `$HOME/.pyenv`
+
+```bash
+$  git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
+```
+
+Define environment variables needed
+
+```bash
+# inside your .bashrc file
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+```
+
+Add `pyenv init` validation to my shell
+
+```bash
+# inside your .bashrc file
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
+```
+
+Restart your shell
+
+```bash
+$ exec $SHELL
+```
+
+Install [Python dependencies](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
+
+```bash
+$ sudo apt-get update && \
+    sudo apt-get install \
+        --no-install-recommends \
+            make \
+            build-essential \
+            libssl-dev \
+            zlib1g-dev \
+            libbz2-dev \
+            libreadline-dev \
+            libsqlite3-dev \
+            wget \
+            curl \
+            llvm \
+            libncurses5-dev \
+            xz-utils \
+            tk-dev \
+            libxml2-dev \
+            libxmlsec1-dev \
+            libffi-dev \
+            liblzma-dev
+```
+
+List all available versions
+
+```bash
+$ pyenv install -l
+```
+
+Install version you want
+
+```bash
+$ pyenv install 3.7.8
+```
+
+List all your available versions installed in your system
+
+```bash
+$ pyenv versions
+* system (set by $HOME/.pyenv/version)
+  3.6.11
+  3.6.12
+  3.8.5
+  3.9.0
+```
+
+Show version in local context
+
+```bash
+$ pyenv local
+3.8.5
+# or this when is not set
+pyenv: no local version configured for this directory
+```
+
+Set a version for local context
+
+```bash
+$ pyenv local 3.9.0
+
+$ pyenv versions
+  system
+  3.6.11
+  3.6.12
+  3.8.5
+* 3.9.0 (set by /path/to/a/folder/.python-version)
+
+$ cat .python-version
+3.9.0
+```
+
+Check which version (and binary) is executing `pip` in a specific context
+
+```bash
+$ pyenv which pip
+$HOME/.pyenv/versions/3.8.5/bin/pip
+$HOME/.local/bin/pip
+```
+
+#### Update
+
+Latest development version (latest commit in github repo)
+
+```bash
+$ cd $(pyenv root)
+$ git pull
+```
+
+Specific version (using tag)
+
+```bash
+$ cd $(pyenv root)
+$ git fetch
+$ git tag
+$ git checkout v1.2.21
+```
 
 
-- Change `pip3` command to `pip` **(optional)**
 
-    ```bash
-    $ pip --version
-    pip 20.1 from /usr/local/lib/python2.7/dist-packages/pip (python 2.7)
+## Personal setup
 
-    $ pip3 --version
-    pip 20.1 from /usr/local/lib/python3.7/dist-packages/pip (python 3.7)
+### Basics
 
-    $ which -a pip
-    /usr/local/bin/pip
-    /usr/bin/pip
+Create `python` executable command, if your machine only have `python3`, in `$HOME/bin`
 
-    $ which -a pip2
-    /usr/local/bin/pip2
-    /usr/bin/pip2
-
-    $ which -a pip3
-    /usr/local/bin/pip3
-    /usr/bin/pip3
-
-    $ ls -la /usr/bin/pip*
-    -rwxr-xr-x 1 root root 283 Nov 10  2016 /usr/bin/pip2
-
-    $ ls -la /usr/local/bin/pip*
-    -rwxr-xr-x 1 root root 223 May  6 02:50 /usr/local/bin/pip
-    -rwxr-xr-x 1 root root 223 May  6 01:40 /usr/local/bin/pip2
-    -rwxr-xr-x 1 root root 223 May  6 01:40 /usr/local/bin/pip2.7
-    -rwxr-xr-x 1 root root 223 May  6 02:50 /usr/local/bin/pip3
-    -rwxr-xr-x 1 root root 216 Nov 22  2018 /usr/local/bin/pip3.5
-    -rwxr-xr-x 1 root root 218 Nov 22  2018 /usr/local/bin/pip3.6
-    -rwxr-xr-x 1 root root 223 May  6 02:50 /usr/local/bin/pip3.7
-    -rwxr-xr-x 1 root root 206 Feb  5  2017 /usr/local/bin/pipenv
-
-    $ cp /path/to/pip3 /path/to/pip
-    ```
-
-- Update `pip` and core packages: setuptools, wheel
-
-    ```bash
-    $ pip install -U pip setuptools wheel
-    ```
-
-- Working with virtual environments: instal and setup `virtualenv` & `virtualenvwrapper`
-
-    ```bash
-    # step 1: install important packages
-    $ pip install -U virtualenv virtualenvwrapper
-    # (2020-06-01 16:43:58)
-    # Successfully installed appdirs-1.4.4 distlib-0.3.0 filelock-3.0.12 virtualenv-20.0.21
-    # Successfully installed stevedore-1.32.0 virtualenv-clone-0.5.4 virtualenvwrapper-4.8.4
-
-    # don't remember this will make virtual envs use python version defined through pip
-    # to verify it:
-
-    # - check shebang of virtualenv
-    # $ which virtualenv
-    # /path/to/virtualenv
-    # $ head -n 1 /path/to/virtualenv
-    # #!/usr/bin/python
-    # #!/usr/bin/python3.8
-
-    # - check pip version with python used on shebang
-    # $ /usr/bin/python -m pip --version
-    # pip 20.1.1 from $HOME/.local/lib/python3.8/site-packages/pip (python 3.8)
-
-    # step 2: add config to load when launch a shell sessioon
-    $ nano $HOME/.bashrc
-    # add below lines at the end of $HOME/.bashrc file
-    export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
-    export WORKON_HOME=$HOME/Envs
-    mkdir -p $WORKON_HOME
-    source /usr/local/bin/virtualenvwrapper.sh
-
-    # step 3: load it
-    $ source $HOME/.bashrc
-    ```
-
-- Working with virtual environments: management commands
-
-    ```bash
-    # create a virtual environment
-    $ mkvirtualenv
-    $ mkvirtualenv -p python3.8 {{ virtualenv name }}
-    $ mkvirtualenv -p /usr/bin/python3.8 {{ virtualenv name }}
-    $ mkvirtualenv --python=python3.8 {{ virtualenv name }}
-    $ mkvirtualenv --python=/usr/bin/python3.8 {{ virtualenv name }}
-    # don't forget to update pip core packages inside virtual envs
-    # $ pip install -U pip setuptools wheel
-
-    # enter to a virtual environment
-    $ workon {{ virutal env name }}
-
-    # logout off virtual environment
-    $ deactivate
-
-    # delete a virtual environment
-    $ rmvirtualenv
-
-    # list all virtual environment
-    $ lsvirtualenv
-
-    # change working directory to virtual environment folder
-    $ cdvirtualenv
-    ```
-
-- Install extra python packages (`Python.h`) for avoid posterior problems, like with [glances](https://github.com/nicolargo/glances)
-
-    ```bash
-    $ apt install python-dev
-    $ apt install python3-dev
-    ```
-
-- Start up a minimal http server
-
-    ```bash
-    # Python 3
-    $ python3.7 -m http.server 8000 --bind 0.0.0.0
-
-    # Python 2
-    $ python -m SimpleHTTPServer
-    ```
-
-## Setup
-
-### Soft link to python if your machine only have python3
-
-Create soft link to `python` binary in `$HOME/bin` if no `python` cmd in your OS
-
-`$HOME/bin` should be at `$PATH`
+Important: `$HOME/bin` should be inside `$PATH`
 
 ```bash
 $ ln -s /usr/bin/python3 $HOME/bin/python
 ```
 
-### Install pip in locally (in your home directory)
+Install `pip` locally (in `$USER` home directory)
 
-- Verify `python` version and installation path
+- Verify which `python` executable version you want to use (through its installation path)
 
     ```bash
     $ which python3.8
     /path/to/python3.8
     ```
 
-- Verify `pip` version and installation path considering which python binary you're using
+- Verify which `pip` executable version you want to use (through its installation path)
 
     ```bash
     $ /path/to/python3.8 -m pip --version
     ```
 
-- Run `pip` installer
+- Execute `pip` installer with `--user` parameter
 
     ```bash
     $ /path/to/python3.8 get-pip.py --user
     ```
 
-- Check if `pip` was installed in right folders
+- Check if `pip` was installed in right places
 
     ```bash
     # where binaries are saved
@@ -280,255 +449,155 @@ $ ln -s /usr/bin/python3 $HOME/bin/python
     $ ls ${HOME}/.cache/pip/
     ```
 
-### Pyenv
-
-#### Installing
-
-- Clone `pyenv` repo into `$HOME/.pyenv`
-
-    ```bash
-    $  git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
-    ```
-
-- Define useful environment variables
-
-    ```bash
-    # at your .bashrc
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    ```
-
-- Add `pyenv init` validation to my shell
-
-    ```bash
-    # at your .bashrc
-    if command -v pyenv 1>/dev/null 2>&1; then
-        eval "$(pyenv init -)"
-        eval "$(pyenv virtualenv-init -)"
-    fi
-    ```
-
-- Restart `$SHELL`
-
-    ```bash
-    $ exec $SHELL
-    ```
-
-- Install [Python dependencies](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
-
-- Install Python versions you want
-
-    ```bash
-    # list all available versions
-    $ pyenv install -l
-
-    $ pyenv install 3.7.8
-    ```
-
-- Commands (and its output) to verify if `pyenv` installation works, more info [here](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md)
-
-    ```bash
-    $ pyenv global
-    system
-
-    $ pyenv version
-    system (set by $HOME/.pyenv/version)
-
-    $ pyenv versions
-    * system (set by $HOME/.pyenv/version)
-
-    $ pyenv shell
-    pyenv: no shell-specific version configured
-
-    $ pyenv local
-    pyenv: no local version configured for this directory
-
-    $ pyenv exec
-    Usage: pyenv exec <command> [arg1 arg2...]
-
-    $ pyenv prefix
-    $HOME
-
-    $ pyenv rehash
-
-    $ pyenv root
-    $HOME/.pyenv
-
-    $ pyenv shims
-
-    $ pyenv whence
-    Usage: pyenv whence [--path] <command>
-
-    $ pyenv which
-    Usage: pyenv which <command>
-    ```
-
-#### Upgrading
-
-- To latest development version (latest commit in github repo)
-
-    ```bash
-    $ cd $(pyenv root)
-    $ git pull
-    ```
-
-- To specific version as tag
-
-    ```bash
-    $ cd $(pyenv root)
-    $ git fetch
-    $ git tag
-    $ git checkout v1.2.21
-    ```
 
 ### Venv
 
-- Create a environment
+Create a environment
 
-    ```bash
-    $ python -m venv {{ /path/to/env }}
-    # e.g.:
-    $ python -m venv env
-    ```
+```bash
+$ python -m venv {{ /path/to/env }}
+# e.g.:
+$ python -m venv env
+```
 
-- Activate environment
+Activate environment
 
-    ```bash
-    $ source {{ /path/to/env }}/bin/activate
-    ```
+```bash
+$ source {{ /path/to/env }}/bin/activate
+```
 
-- Deactivate environment
+Deactivate environment
 
-    ```bash
-    $ deactivate
-    ```
+```bash
+$ deactivate
+```
 
-- Update `pip`, `setuptools` & `wheel`, after creating new environment
+Update `pip`, `setuptools` & `wheel`, after creating new environment
 
-    ```bash
-    # activate environment
-    $ source myenv/bin/activate
-    $ pip install -U pip setuptools wheel
-    ```
+```bash
+# activate environment
+$ source myenv/bin/activate
+$ pip install -U pip setuptools wheel
+```
 
 ### Linters
 
 If you're going to use for one project, install on a virtual environment
 
-- [pycodestyle](https://github.com/PyCQA/pycodestyle)
+[pycodestyle](https://github.com/PyCQA/pycodestyle)
 
-    - Config for VSCode
+- Config for VSCode
 
-        ```bash
-            # Workspace settings file
-            # pycodestyle path to python binary path used
-            ...
-            "python.pythonPath": "/path/to/project/venv/bin/python",
-            ...
-            "python.linting.pycodestyleEnabled": true,
-            "python.linting.pycodestyleArgs": [
-                "--max-line-length=80"
-            ],
-            ...
-        ```
+    ```bash
+        # Workspace settings file
+        # pycodestyle path to python binary path used
+        ...
+        "python.pythonPath": "/path/to/project/venv/bin/python",
+        ...
+        "python.linting.pycodestyleEnabled": true,
+        "python.linting.pycodestyleArgs": [
+            "--max-line-length=80"
+        ],
+        ...
+    ```
 
-- [pylint](https://github.com/PyCQA/pylint)
-    - [Readable pylint messages](https://github.com/janjur/readable-pylint-messages/blob/master/README.md)
-    - [@ Visual Studio Code Docs](https://code.visualstudio.com/docs/python/linting#_pylint)
-    - [PyLint Messages - all codes](http://pylint-messages.wikidot.com/all-codes)
+[pylint](https://github.com/PyCQA/pylint)
+
+- [Readable pylint messages](https://github.com/janjur/readable-pylint-messages/blob/master/README.md)
+- [@ Visual Studio Code Docs](https://code.visualstudio.com/docs/python/linting#_pylint)
+- [PyLint Messages - all codes](http://pylint-messages.wikidot.com/all-codes)
 
 ### Code formatters
 
-If you're going to use for one project, install on a virtual environment
+If you're going to use for one project, install on an isolated virtual environment (or on each virtual environment per project)
 
-- [black](https://github.com/psf/black)
+[black](https://github.com/psf/black)
 
-    - Config for VSCode
+- Config for VSCode
 
-        ```bash
-            # Workspace settings file
-            ...
-            "python.formatting.provider": "black",
-            "python.formatting.blackPath": "/path/to/project/venv/bin/black",
-            "python.formatting.blackArgs": [
-                "--line-length=80"
-            ],
-            ...
-        ```
+    ```bash
+        # Workspace settings file
+        ...
+        "python.formatting.provider": "black",
+        "python.formatting.blackPath": "/path/to/project/venv/bin/black",
+        "python.formatting.blackArgs": [
+            "--line-length=80"
+        ],
+        ...
+    ```
 
 ## Debugging
 
-- Add trace to start debug from a line
+Add trace to start debug from a line
 
-    ```python
-    import pdb; pdb.set_trace()
-    ```
+```python
+import pdb; pdb.set_trace()
+```
 
-- Important commands
+Important commands
 
-    ```text
-    s(tep)
-    n(ext)
-    unt(il) [lineno]
-    r(eturn)
-    c(ont(inue))
-    j(ump) lineno
-    ```
+```text
+s(tep)
+n(ext)
+unt(il) [lineno]
+r(eturn)
+c(ont(inue))
+j(ump) lineno
+```
 
-- Adding traceback in `exception` clause:
+Adding traceback in `exception` clause:
 
-    ```python
+```python
+try:
+    ...
+except:
     traceback.print_exc(file=sys.stderr)
-    ```
-
-## Django
-
-- Load specific settings to Django `commands`
-
-    ```bash
-    # option 1
-    export DJANGO_SETTINGS_MODULE={{ module.to.django.settings }}
-    python manage.py {{ any command }}
-
-    # option 2
-    DJANGO_SETTINGS_MODULE={{ module.to.django.settings }} python manage.py {{ any command }}
-    ```
+    ...
+```
 
 ## Troubleshooting
 
-- Install `python` packages with `pip --user` (install `pip` in `$HOME/.local/bin` and python packages in `$HOME/.local/lib/pythonX.X`)
+Install extra python packages (`Python.h`) for avoid posterior problems, like with [glances](https://github.com/nicolargo/glances)
 
-    ```bash
-    # If you find an error like this -> https://github.com/pypa/pip/issues/5599
+```bash
+$ apt install python-dev
+$ apt install python3-dev
+```
 
-    # Remove everything related to python on $HOME/.local/bin and $HOME/.local/lib
-    $ rm .local/bin/.easy_install*
-    $ rm .local/bin/easy_install*
-    $ rm .local/bin/.wheel*
-    $ rm .local/bin/wheel*
-    $ rm .local/bin/.pip*
-    $ rm .local/bin/pip*
-    $ rm .local/lib/python*
+Install `python` packages with `pip --user` (install `pip` in `$HOME/.local/bin` and python packages in `$HOME/.local/lib/pythonX.X`)
 
-    # Install pip with python version (with sudo)
-    $ wget https://bootstrap.pypa.io/get-pip.py
-    $ sudo /usr/bin/python3.X get-pip.py
-    ```
+- [ImportError in system pip wrappers after an upgrade](https://github.com/pypa/pip/issues/5599)
 
-- While updating `setuptools` (2020-08-18)
+```bash
+# Remove everything related to python on $HOME/.local/bin and $HOME/.local/lib
+$ rm .local/bin/.easy_install*
+$ rm .local/bin/easy_install*
+$ rm .local/bin/.wheel*
+$ rm .local/bin/wheel*
+$ rm .local/bin/.pip*
+$ rm .local/bin/pip*
+$ rm .local/lib/python*
 
-    ```bash
-    $ pip install -U setuptools
-    Defaulting to user installation because normal site-packages is not writeable
-    Collecting setuptools
-    Using cached setuptools-49.6.0-py3-none-any.whl (803 kB)
-    Installing collected packages: setuptools
-    ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.
+# Install pip with python version (with sudo)
+$ wget https://bootstrap.pypa.io/get-pip.py
+$ sudo /usr/bin/python3.X get-pip.py
+```
 
-    We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
+Warning message while updating `setuptools` on 2020-08-18
 
-    launchpadlib 1.10.13 requires testresources, which is not installed.
-    ```
+```bash
+$ pip install -U setuptools
+Defaulting to user installation because normal site-packages is not writeable
+Collecting setuptools
+Using cached setuptools-49.6.0-py3-none-any.whl (803 kB)
+Installing collected packages: setuptools
+ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.
+
+We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
+
+launchpadlib 1.10.13 requires testresources, which is not installed.
+```
+
 
 ## Resources
 
