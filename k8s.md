@@ -56,6 +56,19 @@ $ kubectl logs -f --tail=10 {{ }}
     - [The Kubernetes Learning Resources List](https://docs.google.com/spreadsheets/d/10NltoF_6y3mBwUzQ4bcQLQfCE1BWSgUDcJXy-Qp2JEU/) by [kubernauts](https://twitter.com/kubernauts)
     - 2020-01-07 - [A Practical Step-by-Step Guide to Understanding Kubernetes](https://medium.com/better-programming/a-practical-step-by-step-guide-to-understanding-kubernetes-d8be7f82e533)
 
+- [Concepts](https://kubernetes.io/docs/concepts/)
+    - Overview
+    - Cluster Architecture
+    - Containers
+    - Workloads
+    - Services, Load Balancing, and Networking
+    - Storage
+    - Configuration
+    - Security
+    - Policies
+    - Scheduling and Eviction
+    - Cluster Administration
+    - Extending Kubernetes
 
 - Operators:
     - [kubernetes/kops](https://github.com/kubernetes/kops) - Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
