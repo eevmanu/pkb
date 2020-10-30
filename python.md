@@ -598,6 +598,102 @@ We recommend you use --use-feature=2020-resolver to test your packages with the 
 launchpadlib 1.10.13 requires testresources, which is not installed.
 ```
 
+## Interview tips
+
+### Iterator
+
+Object that implements `__iter__`, which is expected to return an iterator object.
+
+Object that implements `next()`
+
+Expected to return the next element of the iterable object that returned it.
+
+Raise a `StopIteration` exception when no more elements are available
+
+Use cases: loops, to construct lists
+
+Be aware, calling `iter()` on dictionary return an iterator and allows to loop over its keys.
+
+Resources:
+- Python Wiki - [Iterator](https://wiki.python.org/moin/Iterator)
+- Functional Programming HOWTO - [Iterators](https://docs.python.org/3/howto/functional.html#iterators)
+
+### Generator
+
+Class of functions that simplify the task of writing iterators and return an iterator that returns a stream of values.
+
+Differences between:
+- `list comprehension`: returns list, surronded by brackets []
+- `generator expression`: returns iterator, surronded by parentheses (), flexible to be call inside a function
+
+Use of `yield` statement
+
+Consider reviewing `itertools` and `functools`
+
+Resources:
+- Functional Programming HOWTO - [Generators](https://docs.python.org/3/howto/functional.html#Generators)
+- Expressions - [Generator expressions](https://docs.python.org/3/reference/expressions.html#generator-expressions)
+- Python Wiki - [Generators](https://wiki.python.org/moin/Generators)
+- [PEP 525 -- Asynchronous Generators](https://www.python.org/dev/peps/pep-0525/)
+
+### Functional programming
+
+Ways to declare operators
+
+Lambda expressions declare style
+
+### Decorators
+
+Is a software design pattern which dynamically alter the functionality of a function, method, or class without having to directly use subclasses or change the source code of the function being decorated
+
+Is possible to use decorator in a class (with a function works)?:
+- [Python decorator best practice, using a class vs a function](https://stackoverflow.com/questions/10294014/python-decorator-best-practice-using-a-class-vs-a-functional)
+- [Difference between decorator classes and decorator functions](https://stackoverflow.com/questions/4650333/difference-between-decorator-classes-and-decorator-functions)
+
+Resources:
+- Python Wiki - [Decorators](https://wiki.python.org/moin/PythonDecorators)
+- [Glossary](https://docs.python.org/3/glossary.html) - search for **decorator**
+- [PEP 614 -- Relaxing Grammar Restrictions On Decorators](https://www.python.org/dev/peps/pep-0614/)
+
+### GIL - global interpreter lock
+
+Mechanism used by cpython to assure only one thread execute python bytecode at time
+
+Locking interpreter makes easier for the interpreter to be multi-threaded, at expense of much paralellism afforded by multiprocessor machines
+
+### Context Manager
+
+Object that defines the runtime context to be established when executing a with statement
+
+Handles the entry into, the exit from, the desired runtime context
+
+Could include saving and restoring global state, locking and unlocking resources, etc.
+
+Methods: `__enter__()` and `__exit__()` <- context manager types
+
+Is also possible to use it as decorator
+
+Resources:
+- [With Statement Context Managers](https://docs.python.org/2.5/ref/context-managers.html)
+- [Context Manager Types](https://docs.python.org/2.5/lib/typecontextmanager.html)
+- [PEP 343 -- The "with" Statement](https://www.python.org/dev/peps/pep-0343/)
+- [contextlib — Utilities for with-statement contexts](https://docs.python.org/3/library/contextlib.html)
+- Data Model - [With Statement Context Managers](https://docs.python.org/3/reference/datamodel.html#with-statement-context-managers)
+
+### Function-based views vs Class-based views
+
+CBV
+- avoid spaguetti code
+- avoid duplicated code
+- pretty similar behaviour betweens Views
+
+FBV
+- more flexible
+- more control
+
+Resources:
+- [Class Based Views VS Function Based Views](https://stackoverflow.com/questions/14788181/class-based-views-vs-function-based-views)
+- [Classy Class-Based Views.](http://ccbv.co.uk/)
 
 ## Resources
 
