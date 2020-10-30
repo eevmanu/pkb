@@ -17,34 +17,34 @@
 
     ```bash
     $ tree $HOME/Documents/ | wc -l && tree /media/$USER/manu/Documents/ | wc -l && echo "$(date +"%Y-%m-%d")"
-    696
-    696
-    2020-08-25
+    960
+    960
+    2020-10-24
 
     $ tree $HOME/Downloads/ | wc -l && tree /media/$USER/manu/Downloads/ | wc -l && echo "$(date +"%Y-%m-%d")"
-    351
-    320
-    2020-08-25
+    389
+    389
+    2020-10-24
 
     $ tree $HOME/Music/ | wc -l && tree /media/$USER/manu/Music/ | wc -l && echo "$(date +"%Y-%m-%d")"
     15
     15
-    2020-08-25
+    2020-10-24
 
     $ tree $HOME/Pictures/ | wc -l && tree /media/$USER/manu/Pictures/ | wc -l && echo "$(date +"%Y-%m-%d")"
-    1204
-    144
-    2020-08-25
+    15613
+    15613
+    2020-10-24
 
     $ tree $HOME/Projects/ | wc -l && tree /media/$USER/manu/Projects/ | wc -l && echo "$(date +"%Y-%m-%d")"
-    8959
-    1173
-    2020-08-25
+    11574
+    11574
+    2020-10-24
 
     $ tree $HOME/Videos/ | wc -l && tree /media/$USER/manu/Videos/ | wc -l && echo "$(date +"%Y-%m-%d")"
-    184
-    198
-    2020-08-25
+    192
+    192
+    2020-10-24
     ```
 
 - Backup folders into external drive
