@@ -39,6 +39,13 @@ $ kubectl logs -f --tail=10 {{ }}
     - [CrunchyData/postgres-operator](https://github.com/CrunchyData/postgres-operator)
     - [prometheus-operator/prometheus-operator](https://github.com/prometheus-operator/prometheus-operator) - Prometheus Operator creates/configures/manages Prometheus clusters atop Kubernetes
     - [operator-framework/operator-sdk](https://github.com/operator-framework/operator-sdk) - SDK for building Kubernetes applications. Provides high level APIs, useful abstractions, and project scaffolding.
+
+- Databases / Storage:
+    - [etcd-io/etcd](https://github.com/etcd-io/etcd) - Distributed reliable key-value store for the most critical data of a distributed system.
+    - [minio/minio](https://github.com/minio/minio) - High Performance, Kubernetes Native Object Storage
+    - [vitessio/vitess](https://github.com/vitessio/vitess) - Vitess is a database clustering system for horizontal scaling of MySQL.
+    - [rook/rook](https://github.com/rook/rook) - Storage Orchestration for Kubernetes
+
 - Github:
     - [pixie](https://github.com/pixie-labs/pixie) - Instant Kubernetes-Native Application Observability
 
