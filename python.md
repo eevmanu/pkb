@@ -939,12 +939,14 @@ Resources:
     - Dated
         - 2020-09-06 - [Show HN: Parallelise pipelines of Python async iterables](https://news.ycombinator.com/item?id=24390116)
         - 2020-07-06 - [Speeding Up Python with Concurrency, Parallelism, and asyncio](https://testdriven.io/blog/concurrency-parallelism-asyncio/)
+        - 2020-06-09 - [Python Multi-Threading vs Multi-Processing](https://towardsdatascience.com/python-multi-threading-vs-multi-processing-1e2561eb8a24)
         - 2020-05-06 - [Concurrency In Python For Network I/O - Synchronous, Threading, Multiprocessing and Asynchronous IO](https://www.nagekar.com/2020/05/python-io-benchmarks.html)
             - Synchronous with `requests` module
-            - Parallel with `multiprocessing` module
             - Threaded with `threading` module
+            - Parallel with `multiprocessing` module
             - Event loop based with `asyncio` module
         - 2020-05-03 - [Neuromancer Blues: Threading vs Multiprocessing](https://www.datasciencecentral.com/profiles/blogs/neuromancer-blues-threading-vs-multiprocessing)
+        - 2020-03-13 - [Threading Tutorial #1 - Concurrency, Threading and Parallelism Explained](https://www.youtube.com/watch?v=olYdb0DdGtM)
         - 2020-02-16 - [A better way for asynchronous programming: asyncio over multi-threading](https://towardsdatascience.com/a-better-way-for-asynchronous-programming-asyncio-over-multi-threading-3457d82b3295)
         - 2019-09-07 - [Multiprocessing vs. Threading in Python: What Every Data Scientist Needs to Know](https://blog.floydhub.com/multiprocessing-vs-threading-in-python-what-every-data-scientist-needs-to-know/)
 
