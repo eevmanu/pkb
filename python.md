@@ -873,7 +873,6 @@ Resources:
 - Web frameworks (!= web server):
     - [Web frameworks for Python, most starred on Github](https://github.com/mingrammer/python-web-framework-stars)
     - [Sanic](https://github.com/huge-success/sanic)
-    - [nameko/nameko](https://github.com/nameko/nameko) - Python framework for building microservices
     - [Japronto](https://github.com/squeaky-pl/japronto)
     - [starlette](https://github.com/encode/starlette) - The little ASGI framework that shines.
     - [pallets/flask](https://github.com/pallets/flask) - The Python micro framework for building web applications.
@@ -883,8 +882,11 @@ Resources:
     - [tiangolo/fastapi](https://github.com/tiangolo/fastapi) - FastAPI framework, high performance, easy to learn, fast to code, ready for production
         - [tiangolo/full-stack-fastapi-postgresql](https://github.com/tiangolo/full-stack-fastapi-postgresql) - Full stack, modern web application generator. Using FastAPI, PostgreSQL as database, Docker, automatic HTTPS and more.
         - [mjhea0/awesome-fastapi](https://github.com/mjhea0/awesome-fastapi) - A curated list of awesome things related to FastAPI
+    - [nameko/nameko](https://github.com/nameko/nameko) - Python framework for building microservices
+
     - Benchmarks
-        - [FrameworkBenchmarks](https://github.com/TechEmpower/FrameworkBenchmarks) - Source for the TechEmpower Framework Benchmarks project techempower.com/benchmarks
+        - [TechEmpower/FrameworkBenchmarks](https://github.com/TechEmpower/FrameworkBenchmarks) - Source for the TechEmpower Framework Benchmarks project techempower.com/benchmarks
+        - [the-benchmarker/web-frameworks](https://github.com/the-benchmarker/web-frameworks) - Which is the fastest web framework?
 
 - Data related tools (orm, database, etc...):
     - [databases](https://github.com/encode/databases) - Async database support for Python
