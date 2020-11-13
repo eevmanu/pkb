@@ -998,6 +998,10 @@ Resources:
             - 2019-06-19 - [Alec Clowes - Building a Celery alternative in Django on Kubernetes](https://www.youtube.com/watch?v=fdY6G2u8tRs)
             - 2013-05-01 - [Messaging at Scale at Instagram by Rick Branson](https://speakerdeck.com/pyconslides/messaging-at-scale-at-instagram-by-rick-branson?slide=76)
 
+- Name mangling - [google](https://www.google.com/search?q=python+name+mangling)
+    - [What is the meaning of single and double underscore before an object name?](https://stackoverflow.com/questions/1301346/what-is-the-meaning-of-single-and-double-underscore-before-an-object-name)
+    - [Python Name Mangling and How to Use Underscores](https://medium.com/analytics-vidhya/python-name-mangling-and-how-to-use-underscores-e67b529f744f)
+
 - Extra tools:
     - [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python. butterfly
     - [docker-pi-hole](https://github.com/pi-hole/docker-pi-hole) - Pi-hole in a docker container
