@@ -933,6 +933,23 @@ Resources:
 - Concurrency / Parallelism / Multiprocessing / Multithreading / Asynchronous (async/await) related:
     - Non-dated
         - [Python Docs: multiprocessing — Process-based parallelism](https://docs.python.org/3/library/multiprocessing.html)
+    - Python Docs related
+        - The Python Standard Library
+            - Networking and Interprocess Communication
+                - [asyncio — Asynchronous I/O](https://docs.python.org/3/library/asyncio.html)
+                    - [Coroutines and Tasks](https://docs.python.org/3/library/asyncio-task.html)
+            - [Concurrent Execution](https://docs.python.org/3/library/concurrency.html)
+                - [threading — Thread-based parallelism](https://docs.python.org/3/library/threading.html)
+                - [multiprocessing — Process-based parallelism](https://docs.python.org/3/library/multiprocessing.html)
+                    - [multiprocessing.shared_memory — Provides shared memory for direct access across processes](https://docs.python.org/3/library/multiprocessing.shared_memory.html)
+                - [concurrent.futures — Launching parallel tasks](https://docs.python.org/3/library/concurrent.futures.html) - Execute computations concurrently using threads or processes.
+                    - a generic wrapper which handle parallelism based on process and/or threads
+                - [subprocess — Subprocess management](https://docs.python.org/3/library/subprocess.html)
+                - [sched — Event scheduler](https://docs.python.org/3/library/sched.html)
+                - [queue — A synchronized queue class](https://docs.python.org/3/library/queue.html)
+        - The Python Language Reference - 3. Data model - [3.4. Coroutines](https://docs.python.org/3/reference/datamodel.html#coroutines)
+        - The Python Language Reference - 8. Compound statements - [8.8. Coroutines](https://docs.python.org/3/reference/compound_stmts.html#coroutines)
+        - [PEP 492 -- Coroutines with async and await syntax](https://www.python.org/dev/peps/pep-0492/)
     - Stackoverflow questions related:
         - [What is the difference between concurrency and parallelism?](https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism)
         - [What is the difference between concurrent programming and parallel programming?](https://stackoverflow.com/questions/1897993/what-is-the-difference-between-concurrent-programming-and-parallel-programming)
