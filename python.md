@@ -931,8 +931,13 @@ Resources:
     - [getsentry/sentry](https://github.com/getsentry/sentry) - Sentry is cross-platform application monitoring, with a focus on error reporting.
 
 - Concurrency / Parallelism / Multiprocessing / Multithreading / Asynchronous (async/await) related:
-    - Non-dated
-        - [Python Docs: multiprocessing — Process-based parallelism](https://docs.python.org/3/library/multiprocessing.html)
+    - Some facts:
+        - any process, at minimum, has 1 thread
+        - any core, with intel hyper threading, has capacity to switch between x threads at high speed, e.g.: i7 6500u 2 cores 4 threads 2 thread x core
+        - concurrent code means code able to execute between multiple threas in a single core (not necessary multiple cores) - nondeterministic composition
+        - parallel code means code able to execute between multiple cores - asymptotic efficiency
+        - in case you want to run multicore code despite GIL, use **concurrent.futures.ProcessPoolExecutor** or **multiprocessing**
+        - in case you want to simulate parallelism based on threas, you have **asyncio**, **concurrent.futures.ThreadPoolExecutor** or **threading**
     - Python Docs related
         - The Python Standard Library
             - Networking and Interprocess Communication
