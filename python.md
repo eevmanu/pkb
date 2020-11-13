@@ -622,19 +622,106 @@ Resources:
 
 Class of functions that simplify the task of writing iterators and return an iterator that returns a stream of values.
 
-Differences between:
-- `list comprehension`: returns list, surronded by brackets []
-- `generator expression`: returns iterator, surronded by parentheses (), flexible to be call inside a function
-
 Use of `yield` statement
 
 Consider reviewing `itertools` and `functools`
 
+Types of comprehension
+
+**List Comprehension**
+
+Returns list, surronded by brackets []
+
+**Nested List Comprehension**
+
+**Dictionary comprehension**
+
+```python
+# --- Example 1 ---
+dict1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+# Double each value in the dictionary
+double_dict1 = {k:v*2 for (k,v) in dict1.items() if v>2 if v%2 == 0}
+dict1_tripleCond = {k:('even' if v%2==0 else 'odd') for (k,v) in dict1.items()}
+
+
+# --- Example 2 ---
+# Initialize `fahrenheit` dictionary
+fahrenheit = {'t1':-30, 't2':-20, 't3':-10, 't4':0}
+# Get the corresponding `celsius` values
+celsius = list(map(lambda x: (float(5)/9)*(x-32), fahrenheit.values()))
+# Create the `celsius` dictionary
+celsius_dict = dict(zip(fahrenheit.keys(), celsius))
+
+# --- Example 3 ---
+nested_dict = {'first':{'a':1}, 'second':{'b':2}}
+float_dict = {outer_k: {float(inner_v) for (inner_k, inner_v) in outer_v.items()} for (outer_k, outer_v) in nested_dict.items()}
+```
+
+**Set Comprehensions**
+
+```python
+sentence = "The cat in the hat had two sidekicks, thing one and thing two."
+words = sentence.lower().replace('.', '').replace(',', '').split()
+unique_words = {word for word in words}
+```
+
+**Generator Expression**
+
+Returns iterator, surronded by parentheses (), flexible to be call inside a function
+
+```python
+lc_example = [n**2 for n in [1, 2, 3, 4, 5]]
+
+genex_example = (n**2 for n in [1, 2, 3, 4, 5])
+
+>>> type(genex_example)
+<class 'generator'>
+```
+
+**Generator Function**
+
+```python
+# Regular function
+def function_a():
+    return "a"
+
+# Generator function
+def generator_a():
+    yield "a"
+
+# --------------------------------------
+
+function_a()
+>>> "a"
+
+generator_a()
+>>> <generator object a at 0x000001565469DA98>
+
+# --------------------------------------
+
+# Asking the generator what the next item is
+next(a())
+>>> "a"
+
+# Do not do this
+next(a)
+```
+
 Resources:
-- Functional Programming HOWTO - [Generators](https://docs.python.org/3/howto/functional.html#Generators)
-- Expressions - [Generator expressions](https://docs.python.org/3/reference/expressions.html#generator-expressions)
+- Python HOWTOs - Functional Programming HOWTO - [Generators](https://docs.python.org/3/howto/functional.html#generators)
+- The Python Language Reference - 6. Expressions - [6.2.8. Generator expressions](https://docs.python.org/3/reference/expressions.html#generator-expressions)
 - Python Wiki - [Generators](https://wiki.python.org/moin/Generators)
+- [Python Dictionary Comprehension Tutorial](https://www.datacamp.com/community/tutorials/python-dictionary-comprehension)
+- [Set Comprehension in Python 3 for Beginners](https://medium.com/swlh/set-comprehension-in-python3-for-beginners-80561a9b4007)
+- [Comprehending the ‘Comprehensions’ in Python](https://towardsdatascience.com/comprehending-the-concept-of-comprehensions-in-python-c9dafce5111)
+- [Python Generators](https://www.dataquest.io/blog/python-generators-tutorial/)
+- [7 Handy Use Cases Of Dictionary Comprehensions In Python](https://towardsdatascience.com/7-handy-use-cases-of-dictionary-comprehensions-in-python-f7c37e462d92)
+- [PEP 274 -- Dict Comprehensions](https://www.python.org/dev/peps/pep-0274/)
+- [PEP 289 -- Generator Expressions](https://www.python.org/dev/peps/pep-0289/)
+- [PEP 342 -- Coroutines via Enhanced Generators](https://www.python.org/dev/peps/pep-0342/)
+- [PEP 479 -- Change StopIteration handling inside generators](https://www.python.org/dev/peps/pep-0479/)
 - [PEP 525 -- Asynchronous Generators](https://www.python.org/dev/peps/pep-0525/)
+- [PEP 530 -- Asynchronous Comprehensions](https://www.python.org/dev/peps/pep-0530/)
 
 ### Functional programming
 
