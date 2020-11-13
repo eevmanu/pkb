@@ -1110,14 +1110,45 @@ Resources:
     - [python-project-blueprint](https://github.com/MartinHeinz/python-project-blueprint) - Blueprint/Boilerplate For Python Projects
 
 - YouTube:
+    - [PyCon 2020](https://www.youtube.com/channel/UCMjMBMGt0WJQLeluw6qNJuA)
+        - [Tutorial: Sebastian Witowski - Modern Python Developer's Toolkit](https://www.youtube.com/watch?v=WkUBx3g2QfQ)
+        - [Talk: Conor Hoekstra - Beautiful Python Refactoring](https://www.youtube.com/watch?v=W-lZttZhsUY)
+        - [Talk: Anthony Shaw - Why is Python slow?](https://www.youtube.com/watch?v=I4nkgJdVZFA)
+        - [Goodbye Print, Hello Debugger! - Nina Zakharenko - Talk](https://www.youtube.com/watch?v=5AYIe-3cD-s)
+        - [Tutorial: Santiago Basulto - Python Concurrency: from beginner to pro](https://www.youtube.com/watch?v=18B1pznaU1o)
+        - [Tutorial: Kimberly Fessel - It's Officially Legal so Let's Scrape the Web](https://www.youtube.com/watch?v=RUQWPJ1T6Zc)
+        - [Talk: Hannah Stepanek - Let's talk Databases in Python: SQLAlchemy and Alembic](https://www.youtube.com/watch?v=36yw8VC3KU8)
+        - [Tutorial: Geir Arne Hjelle - Introduction to Decorators: Power Up Your Python Code](https://www.youtube.com/watch?v=T8CQwGIsrx4)
+        - [Talk: Łukasz Langa - AsyncIO + Music](https://www.youtube.com/watch?v=02CLD-42VdI)
+        - [Talk: Dean Wampler - Ray: A System for High-performance, Distributed Python Applications](https://www.youtube.com/watch?v=tqUe0gcfqAU)
+        - [Optimize Python & Django apps with Postgres superpowers – Louise Grandjonc – Sponsor Workshop](https://www.youtube.com/watch?v=dyBLGjCQJHs)
+        - [Talk: Chris Seto - Big O No: Django ORM runtime complexity and how to avoid it using LATERAL JOINS](https://www.youtube.com/watch?v=GJUL3glrKvA)
+        - [Tutorial: Mike Müller - Migration from Python 2 to 3](https://www.youtube.com/watch?v=JgIgEjASOlk)
+        - [Charla: Luis Diego Conejo Alpizar - Historias de debug en clase de Python Avanzado](https://www.youtube.com/watch?v=UYpnyUyzpSY)
+        - [Charla: Eric Nahuel Horvat - Integraciones con Asyncio](https://www.youtube.com/watch?v=IGokXFTVRzQ)
+        - [Charla: David Mauricio Delgado Ruiz - Datos, Python y humanos](https://www.youtube.com/watch?v=76j-C2DQRec)
+    - [PyCon 2019](https://www.youtube.com/channel/UCxs2IIVXaEHHA4BtTiWZ2mQ)
+        - [Ariel Ortiz - Design Patterns in Python for the Untrained Eye - PyCon 2019](https://www.youtube.com/watch?v=o1FZ_Bd4DSM)
+        - [Reuven M. Lerner - Practical decorators - PyCon 2019](https://www.youtube.com/watch?v=MjHpMCIvwsY)
+        - [Łukasz Langa - Life Is Better Painted Black, or: How to Stop Worrying and Embrace Auto-Formatting](https://www.youtube.com/watch?v=esZLCuWs_2Y)
+        - [Lynn Root - Advanced asyncio: Solving Real-world Production Problems - PyCon 2019](https://www.youtube.com/watch?v=bckD_GK80oY)
+        - [Eric Snow - to GIL or not to GIL: the Future of Multi-Core (C)Python - PyCon 2019](https://www.youtube.com/watch?v=7RlqbHCCVyc)
+        - [Mario Corchero - Exceptional Exceptions - How to properly raise, handle and create them.](https://www.youtube.com/watch?v=V2fGAv2R5j8)
+        - [Vinayak Mehta - Extracting tabular data from PDFs with Camelot & Excalibur - PyCon 2019](https://www.youtube.com/watch?v=Irf6kdl0lAA)
+        - [Pamela McANulty - Things I Wish They Told Me About The Multiprocessing Module in Python 3](https://www.youtube.com/watch?v=5dMOYf0b_20)
+        - [Jérôme Petazzoni, AJ Bowen - Getting started with Kubernetes and container orchestration](https://www.youtube.com/watch?v=J08MrW2NC1Y)
+        - [Mariatta, Andrew Svetlov - Hands-on Intro to aiohttp - PyCon 2019](https://www.youtube.com/watch?v=OxzVApXKWYM)
+        - [Erin Allard - Ace Your Technical Interview Using Python - PyCon 2019](https://www.youtube.com/watch?v=NltGUUi23zc)
+        - [Aaron Gee-Clough - Django Channels in practice - PyCon 2019](https://www.youtube.com/watch?v=j6IOuD5WD8c)
+        - [Jess Shapiro - Everything at Once: Python's Many Concurrency Models - PyCon 2019](https://www.youtube.com/watch?v=w2nKIGhXPAM)
+        - [Neil Chazin - Strategies for testing Async code - PyCon 2019](https://www.youtube.com/watch?v=aQ6rpLRJsXs)
+        - [Adam Englander - Practical API Security - PyCon 2019](https://www.youtube.com/watch?v=LgoGcr8xUiI)
+        - [Historia de un ingeniero junior: Mi experiencia construyendo un pipeline de ETL usando Python](https://www.youtube.com/watch?v=giFwg-kU9kE)
+        - [Fridolín Pokorný - Thoth - how to recommend the best possible libraries for your application](https://www.youtube.com/watch?v=CRnKC6-cFY4)
     - Videos:
         - [The Amazing Mutable Immutable Tuple and Other Philosophic Digressions](https://www.youtube.com/watch?v=EVBq1boGP6s)
         - 2017-08-02 - [What Does It Take To Be An Expert At Python?](https://www.youtube.com/watch?v=7lmCu8wz8ro)
-            - TLDR:
-                - Metaclasses
-                - Decorator
-                - Generator
-                - Context manager
+            - TLDR: Metaclasses, Decorator, Generator, Context manager
             - [What Does It Take to Be An Expert At Python Notebook](https://github.com/austin-taylor/code-vault/blob/master/python_expert_notebook.ipynb)
     - Playlists:
         - [Microsoft Developer | Python for Beginners](https://www.youtube.com/playlist?list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6)
