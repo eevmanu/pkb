@@ -933,8 +933,17 @@ Resources:
 - Concurrency / Parallelism / Multiprocessing / Multithreading / Asynchronous (async/await) related:
     - Non-dated
         - [Python Docs: multiprocessing — Process-based parallelism](https://docs.python.org/3/library/multiprocessing.html)
+    - Stackoverflow questions related:
         - [What is the difference between concurrency and parallelism?](https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism)
         - [What is the difference between concurrent programming and parallel programming?](https://stackoverflow.com/questions/1897993/what-is-the-difference-between-concurrent-programming-and-parallel-programming)
+        - [concurrent.futures.ProcessPoolExecutor vs multiprocessing.pool.Pool [duplicate]](https://stackoverflow.com/questions/38311431/concurrent-futures-processpoolexecutor-vs-multiprocessing-pool-pool)
+        - [Concurrent.futures vs Multiprocessing in Python 3](https://stackoverflow.com/questions/20776189/concurrent-futures-vs-multiprocessing-in-python-3)
+        - [Difference between multiprocessing, asyncio and concurrency.futures in python](https://stackoverflow.com/questions/61351844/difference-between-multiprocessing-asyncio-and-concurrency-futures-in-python)
+        - [Can concurrent.futures.Future be converted to asyncio.Future?](https://stackoverflow.com/questions/54096301/can-concurrent-futures-future-be-converted-to-asyncio-future)
+        - [When you need to use AsyncIO and ThreadPoolExecutor, do you need to call loop.close() manually?](https://stackoverflow.com/questions/59199218/when-you-need-to-use-asyncio-and-threadpoolexecutor-do-you-need-to-call-loop-cl)
+        - [Why is asyncio.Future incompatible with concurrent.futures.Future?](https://stackoverflow.com/questions/43882301/why-is-asyncio-future-incompatible-with-concurrent-futures-future)
+        - [What is the difference between concurrent.futures and asyncio.futures?](https://stackoverflow.com/questions/29902908/what-is-the-difference-between-concurrent-futures-and-asyncio-futures)
+    - Non-dated
         - [Haskell Wiki - Parallelism vs. Concurrency](https://wiki.haskell.org/Parallelism_vs._Concurrency)
     - Dated
         - 2020-09-06 - [Show HN: Parallelise pipelines of Python async iterables](https://news.ycombinator.com/item?id=24390116)
