@@ -784,6 +784,13 @@ Resources:
 
 ## Resources
 
+- [The Python Tutorial](https://docs.python.org/3/tutorial/index.html)
+    - [5. Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
+- [The Python Standard Library](https://docs.python.org/3/library/index.html)
+- [The Python Language Reference](https://docs.python.org/3/reference/index.html)
+    - [3. Data model](https://docs.python.org/3/reference/datamodel.html)
+- [Glossary](https://docs.python.org/3/glossary.html)
+
 - What's New:
     - [3.0](https://docs.python.org/3.0/whatsnew/3.0.html)
     - [3.1](https://docs.python.org/3.1/whatsnew/3.1.html)
