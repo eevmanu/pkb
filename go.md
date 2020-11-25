@@ -492,9 +492,19 @@ $ go tool vet --shadow
     - [Are you a Go black belt?](https://bitfieldconsulting.com/golang/black-belt)
     - 2020-09-25 - [Developing price and currency handling for Go](https://bojanz.github.io/price-currency-handling-go/) - [reddit](https://www.reddit.com/r/golang/comments/izk4kz/developing_price_and_currency_handling_for_go/)
 
+- Why Go / Success stories
+    - 2020-06-01 - [PayPal Taps Go to Modernize and Scale](https://go.dev/solutions/paypal/) - [reddit](https://www.reddit.com/r/golang/comments/ilr81s/paypal_taps_go_to_modernize_and_scale_in_our/)
+
+- [Conferences](https://github.com/golang/go/wiki/Conferences)
+
+- Release notes / Changelog / Updates:
+    - 2020-09-06 - [TIL: make+copy to clone a slice is optimized in Go 1.15, which is not mentioned in 1.15 release notes.](https://www.reddit.com/r/golang/comments/inorfa/til_makecopy_to_clone_a_slice_is_optimized_in_go/)
+    - 2020-04-26 - [What's coming in Go 1.15](https://docs.google.com/presentation/d/1veyF0y6Ynr6AFzd9gXi4foaURlgbMxM-tmB4StDrdAM/) - [reddit](https://www.reddit.com/r/golang/comments/g8d8jk/whats_coming_in_go_115_slides_by_daniel_mart%C3%AD/)
+
 - Final Articles / Posts:
     - Non dated:
         - [Qix - Go](https://github.com/ty4z2008/Qix/blob/master/golang.md)
         - [Why Go](https://github.com/golang/go/wiki/WhyGo)
     - Dated:
+        - 2020-11-05 - [Combining DDD, CQRS, and Clean Architecture by refactoring a Go project](https://threedots.tech/post/ddd-cqrs-clean-architecture-combined/) - [reddit](https://www.reddit.com/r/golang/comments/join3w/combining_ddd_cqrs_and_clean_architecture_by/)
         - 2019-11-25 - [Choosing Go at American Express](https://americanexpress.io/choosing-go/)
