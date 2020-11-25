@@ -70,6 +70,123 @@ Doesn't yet support Composite Primary Keys
 - Interesting repos:
     - [DjangoBlog](https://github.com/liangliangyy/DjangoBlog) - Django-based blog system
 
+- Reddit:
+    - [Learning Django - Beginner Mistakes I Made That You Can Avoid](https://www.reddit.com/r/django/comments/eld87j/learning_django_beginner_mistakes_i_made_that_you/)
+        - Official Documentation Vs Tutorials
+        - Django Version
+        - Using Git and GitHub
+        - Using .gitignore File
+        - Brush Up Your Front End Skills
+        - Using Virtual Environment
+        - Using Separate settings.py Files For Development & Production
+        - Creating Custom User Models
+        - Using Social logins
+        - Designing your Models
+        - Function Based Views Vs Class Based Views
+        - Routing and URLs
+        - Handling Static and Media files in Production
+        - Handling Permissions For Different Users
+        - Creating Custom Middlewares
+        - Improving Security Of Website
+        - Protecting Your Admin Interface
+        - Protecting Secret Key and Other Critical Data
+        - Making Responsive Websites
+        - Writing Tests
+        - Using REST APIs
+        - Setting DEBUG=False Before Deployment
+        - Deploying The Project
+    - [Django in Production - From Zero To Hero.](https://www.reddit.com/r/django/comments/fcwoay/django_in_production_from_zero_to_hero/)
+        - [YT playlist](https://www.youtube.com/playlist?list=PLlM3i4cwc8zBRQOGXuLrCLNfpVOuVLuwZ)
+        - Part 1 - VPS up and running with secure SSH configuration and access in just 11 minutes.
+        - Part 2 - Nginx theory, installation and configuration
+        - Part 3 - a short introduction to Ansible and how it is useful for automation of Django deployments
+        - Part 4 - install and configure DB manually and with Ansible
+        - Part 5 - is the most important and most interesting - it focuses on configuring gunicorn + nginx on production VPS [<-- my favorite part :) ]
+    - [A few months ago I asked the Django community here if anyone would be open to talk about their tech stack and lessons learned from using Django in production on a podcast I started. You crushed it! Here's some of the results](https://www.reddit.com/r/django/comments/ifrcd6/a_few_months_ago_i_asked_the_django_community/)
+    - [Dockerizing Django with Postgres, Gunicorn, and Nginx](https://www.reddit.com/r/django/comments/h8u5cf/dockerizing_django_with_postgres_gunicorn_and/)
+        - [post](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/)
+            ```bash
+            # https://docs.python.org/3/using/cmdline.html
+
+            # Prevents Python from writing pyc files to disc (equivalent to python -B option)
+            PYTHONDONTWRITEBYTECODE 1
+
+            # Prevents Python from buffering stdout and stderr (equivalent to python -u option)
+            PYTHONUNBUFFERED 1
+            ```
+    - [Advanced Django Tutorials](https://www.reddit.com/r/django/comments/hwgrcb/advanced_django_tutorials/)
+        - testing
+        - caching
+        - best practices
+        - deployment
+        - containerizing
+        - securing
+        - implementing Celery
+    - 2020-06-20 - [Architecture diagram for Django application deployment and CI/CD pipeline using AWS Fargate, CDK and GitLab CI](https://www.reddit.com/r/django/comments/hcrdod/architecture_diagram_for_django_application/)
+    - 2020-08-04 - [Django 3.1 release notes | Django documentation](https://www.reddit.com/r/django/comments/i3fjns/django_31_release_notes_django_documentation/)
+        - Asynchronous views
+        - Asynchronous middleware
+        - Asynchronous tests and test client
+        - JSONField for all supported database backends
+        - Django now includes models.JSONField and forms.JSONField
+        - Both fields support the use of custom JSON encoders and decoders
+    - 2020-05-25 - [A tour of Django server setups](https://www.reddit.com/r/django/comments/gq8nil/a_tour_of_django_server_setups/) - [archive](https://web.archive.org/web/20201120042024/https://mattsegal.dev/django-prod-architectures.html) - [image](https://i.imgur.com/V1pZB5q.png)
+    - 2020-03-12 - [Comprehensive Guide to ASGI in Django 3.0 and its Performance](https://www.reddit.com/r/django/comments/fhjpso/comprehensive_guide_to_asgi_in_django_30_and_its/)
+        - [A Guide to ASGI in Django 3.0 and its Performance](https://arunrocks.com/a-guide-to-asgi-in-django-30-and-its-performance/)
+        - Django 3.0 - ASGI Server
+        - Django 3.1 - Async Views (see an example below)
+        - Django 3.2/4.0 - Async ORM
+    - 2020-01-02 - [Django web security checklist before deployment](https://www.reddit.com/r/django/comments/ej025x/django_web_security_checklist_before_deployment/) - [archive](https://web.archive.org/web/20200220012934/https://reversepython.net/lab/django-web-security-checklist-deployment/)
+        - Checklist:
+            - Deployment Checklist
+            - The Mozilla Observatory
+            - Cross site request forgery (CSRF) protection
+            - Cross-site Scripting (XSS)
+            - Django Admin Security
+            - SSL Redirect
+            - Content Security Policy (CSP)
+            - HTTP Strict Transport Security
+        - Related:
+            - [FallibleInc/security-guide-for-developers](https://github.com/FallibleInc/security-guide-for-developers) - Security Guide for Developers
+            - [trimstray/nginx-admins-handbook](https://github.com/trimstray/nginx-admins-handbook) - How to improve NGINX performance, security, and other important things.
+            - [digitalocean/nginxconfig.io](https://github.com/digitalocean/nginxconfig.io) - NGINX config generator on steroids
+            - [imthenachoman/How-To-Secure-A-Linux-Server](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server)
+            - [docker/docker-bench-security](https://github.com/docker/docker-bench-security) - The Docker Bench for Security is a script that checks for dozens of common best-practices around deploying Docker containers in production.
+    - 2020-09-23 - [How to build a React application in a Django project (Part 4 of "Modern JavaScript for Django Developers")](https://www.reddit.com/r/django/comments/j1y4yc/how_to_build_a_react_application_in_a_django/)
+        - Part 1: Organizing your Front-End Codebase in a Django Project
+        - Part 2: A Crash Course in Modern JavaScript Tooling
+        - Part 3: Integrating a Modern JavaScript Pipeline into a Django Application
+        - Part 4: How to build a React application in a Django project
+    - 2020-06-09 - [Django Cheat Sheet - Hope someone needs it!](https://www.reddit.com/r/django/comments/gzhfec/django_cheat_sheet_hope_someone_needs_it/)
+        - Django: Create Project
+        - Django: Template Inheritance Cheat Sheet
+        - Install Django Rest Framework
+        - Django: Shell Cheat Sheet
+        - Django: Rest Framework Serialization Cheat Sheet
+        - DjangoL Passing Data into Viet Cheat Sheet
+        - Django: Rest Framework Views Cheat Sheet
+        - Django: Building a Page Cheat Sheet
+        - Working with Django Models
+        - Install Django
+    - 2020-11-08 - [A user story](https://www.reddit.com/r/django/comments/jqn34o/a_user_story/) - example of a test
+    - 2020-08-17 - [Async Views in Django 3.1](https://www.reddit.com/r/django/comments/ibcz1h/async_views_in_django_31/)
+        - 2020-09-22 - [Async Views in Django 3.1](https://testdriven.io/blog/django-async-views/)
+    - 2020-10-15 - [A great Docker/Celery/Redis tutorial](https://www.reddit.com/r/django/comments/jc1arx/a_great_dockerceleryredis_tutorial/)
+    - 2020-10-19 - [Fast full-text search with Django and Postgres](https://www.reddit.com/r/django/comments/je5ofk/fast_fulltext_search_with_django_and_postgres/)
+    - 2020-10-10 - [A video about the server setup of a Django project in production and development.](https://www.reddit.com/r/django/comments/j8pk3c/a_video_about_the_server_setup_of_a_django/)
+    - 2020-01-16 - [What public apps do you use with most/all of your Django projects?](https://www.reddit.com/r/django/comments/epooab/what_public_apps_do_you_use_with_mostall_of_your/)
+    - 2020-10-24 - [Free Django Resources for Beginners](https://www.reddit.com/r/django/comments/jhb3tf/free_django_resources_for_beginners/)
+    - 2020-11-04 - [Understand Django: User Authentication](https://www.reddit.com/r/django/comments/jnza1l/understand_django_user_authentication/) - [post](https://www.mattlayman.com/understand-django/user-authentication/) - [archive](https://web.archive.org/web/20201109165400/https://www.mattlayman.com/understand-django/user-authentication/)
+    - 2020-10-23 - [Instagram runs on Django!! A Journey We All Can Learn From](https://www.reddit.com/r/django/comments/jgqo7w/instagram_runs_on_django_a_journey_we_all_can/)
+    - 2020-11-16 - [[Showcase] Collaborative Code Editing using Django Channels](https://www.reddit.com/r/django/comments/jv29xt/showcase_collaborative_code_editing_using_django/)
+    - 2020-11-13 - [What happens when Django receives multiple requests?](https://www.reddit.com/r/django/comments/jtdw85/what_happens_when_django_receives_multiple/)
+    - 2020-11-02 - [Five Advanced Django Tips](https://www.reddit.com/r/django/comments/jmo82b/five_advanced_django_tips/)
+        - Using Q Objects for Complex Queries
+        - Optimize Database Calls with Prefetch Related and Select Related
+        - Annotate Querysets to Fetch Specific Values
+        - Use Prefetch Objects to Control Your Prefetch Related
+        - Define Custom Query Sets and Model Managers for Code Reuse
+
 - YouTube:
     - Videos:
         - [Create a Twitter-like App with Python Django JavaScript and React. Full TUTORIAL](https://www.youtube.com/watch?v=f1R_bykXHGE)
