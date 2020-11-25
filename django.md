@@ -66,6 +66,7 @@ Doesn't yet support Composite Primary Keys
     - [celery/django-celery](https://github.com/celery/django-celery) - Old Celery integration project for Django
     - [rq/django-rq](https://github.com/rq/django-rq) - A simple app that provides django integration for RQ (Redis Queue)
     - [Koed00/django-q](https://github.com/Koed00/django-q) - A multiprocessing distributed task queue for Django
+    - [modlinltd/django-advanced-filters](https://github.com/modlinltd/django-advanced-filters) - Add advanced filtering abilities to Django admin
 
 - Interesting repos:
     - [DjangoBlog](https://github.com/liangliangyy/DjangoBlog) - Django-based blog system
@@ -188,6 +189,8 @@ Doesn't yet support Composite Primary Keys
         - Define Custom Query Sets and Model Managers for Code Reuse
 
 - YouTube:
+    - Channels
+        - [Corey Schafer](https://www.youtube.com/c/Coreyms)
     - Videos:
         - [Create a Twitter-like App with Python Django JavaScript and React. Full TUTORIAL](https://www.youtube.com/watch?v=f1R_bykXHGE)
         - [Django REST Framework Full Course For Beginners | Build REST API With Django](https://www.youtube.com/watch?v=B38aDwUpcFc)
@@ -204,7 +207,10 @@ Doesn't yet support Composite Primary Keys
 - Final Articles / Posts
     - [r/django/](https://www.reddit.com/r/django/)
     - [rnevius/rnevius.github.io - Django Request Response Cycle](https://github.com/rnevius/rnevius.github.io/blob/master/assets/django_request_response_cycle.pdf)
-    - [testdrive.io - Django](https://testdriven.io/blog/topics/django/)
+    - [testdrive.io - Django](https://testdriven.io/blog/topics/django/) (intermediate / advanced)
+        - [Asynchronous Tasks with Django and Celery](https://testdriven.io/blog/django-and-celery/)
+    - [How to get Django and ReactJS to work together?](https://stackoverflow.com/questions/41867055/how-to-get-django-and-reactjs-to-work-together)
+    - 2020-07-24 - [Is Django too slow?](https://mattsegal.dev/is-django-too-slow.html) - [archive](https://web.archive.org/web/20201022063130/https://mattsegal.dev/is-django-too-slow.html)
     - 2020-05-25 - [A tour of Django server setups](https://mattsegal.dev/django-prod-architectures.html) - [reddit](https://www.reddit.com/r/django/comments/gq8nil/a_tour_of_django_server_setups/)
     - 2020-03-10 - [A Guide to ASGI in Django 3.0 and its Performance](https://arunrocks.com/a-guide-to-asgi-in-django-30-and-its-performance/)
     - 2020-01-07 - [Learning Django - Beginner Mistakes I Made That You Can Avoid](https://www.reddit.com/r/django/comments/eld87j/learning_django_beginner_mistakes_i_made_that_you/)
