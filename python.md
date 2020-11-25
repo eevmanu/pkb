@@ -752,6 +752,35 @@ Lambda expressions declare style
 
 Is a software design pattern which dynamically alter the functionality of a function, method, or class without having to directly use subclasses or change the source code of the function being decorated
 
+Example:
+
+```python
+from time import perf_counter_ns
+
+
+def timed(func):
+    def timing_wrapper(*args, **kwargs):
+        start = perf_counter_ns()
+        ret = func(*args, **kwargs)
+        diff = perf_counter_ns() - start
+        print(f'{func.__name__} took {diff} NS to run')
+        return ret
+    return timing_wrapper
+
+@timed
+def remove_duplicates_list(values):
+    seen = set()
+    return [seen.add(value) or value for value in values if value not in seen]
+
+@timed
+def remove_duplicates_set(values):
+    return list(set(values))
+
+
+print(remove_duplicates_list([1, 2, 6, 1, 7, 1, 9, 4, 2]))
+print(remove_duplicates_set([1, 2, 6, 1, 7, 1, 9, 4, 2]))
+```
+
 Is possible to use decorator in a class (with a function works)?:
 - [Python decorator best practice, using a class vs a function](https://stackoverflow.com/questions/10294014/python-decorator-best-practice-using-a-class-vs-a-functional)
 - [Difference between decorator classes and decorator functions](https://stackoverflow.com/questions/4650333/difference-between-decorator-classes-and-decorator-functions)
