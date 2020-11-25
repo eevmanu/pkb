@@ -453,7 +453,6 @@ $ go tool vet --shadow
         - 2020-10-22 - 5k - ProgrammingKnowledge: [Go Programming Language Tutorial | Golang Tutorial For Beginners | Go Language Training](https://www.youtube.com/playlist?list=PLS1QulWo1RIaRoN4vQQCYHWDuubEU8Vij)
         - 2020-10-19 - 3.4k - Ardan Labs: [Go Syntax [LiveBytes]](https://www.youtube.com/playlist?list=PLADD_vxzPcZATO4tDU_nHApxTEJyxskiS)
 
-        - 2020-10-03 - 3.9k -  Junmin Lee: [Data structures and Algorithms in Go](https://www.youtube.com/playlist?list=PL0q7mDmXPZm7s7weikYLpNZBKk5dCoWm6)
 
         - 2018-10-28 - 10k - Tensor Programming: [Go Microservices](https://www.youtube.com/playlist?list=PLJbE2Yu2zumAixEws7gtptADSLmZ_pscP)
         - 2020-06-20 - 47k - Nic Jackson: [Building Microservices with Go](https://www.youtube.com/playlist?list=PLmD8u-IFdreyh6EUfevBcbiuCKzFk0EW_)
