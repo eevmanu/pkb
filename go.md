@@ -440,6 +440,13 @@ $ go tool vet --shadow
 - Reddit:
     - [What are the most useful functions / methods etc. to know when learning Go as a second language?](https://www.reddit.com/r/golang/comments/j29uph/what_are_the_most_useful_functions_methods_etc_to/)
     - [What is var _ type = &type{} used for?](https://www.reddit.com/r/golang/comments/j0b73d/what_is_var_type_type_used_for/)
+    - [The best description on when to use a pointer and when to pass by value in GO I've seen!!!](https://www.reddit.com/r/golang/comments/gldrek/the_best_description_on_when_to_use_a_pointer_and/)
+    - [How well do you know Go history?](https://www.reddit.com/r/golang/comments/hzfksf/how_well_do_you_know_go_history/)
+    - 2020-07-11 - [What feature of Go is used very often by experienced programmers, but not so much by a newbie?](https://www.reddit.com/r/golang/comments/hp4mk3/what_feature_of_go_is_used_very_often_by/)
+    - []()
+    - []()
+    - []()
+    - []()
 
 - Youtube:
     - Video:
