@@ -643,6 +643,8 @@ Types of comprehension
 
 Returns list, surronded by brackets []
 
+[6.2.5. List displays](https://docs.python.org/3/reference/expressions.html#list-displays)
+
 **Nested List Comprehension**
 
 **Dictionary comprehension**
@@ -668,6 +670,8 @@ nested_dict = {'first':{'a':1}, 'second':{'b':2}}
 float_dict = {outer_k: {float(inner_v) for (inner_k, inner_v) in outer_v.items()} for (outer_k, outer_v) in nested_dict.items()}
 ```
 
+[6.2.7. Dictionary displays](https://docs.python.org/3/reference/expressions.html#dictionary-displays)
+
 **Set Comprehensions**
 
 ```python
@@ -675,6 +679,8 @@ sentence = "The cat in the hat had two sidekicks, thing one and thing two."
 words = sentence.lower().replace('.', '').replace(',', '').split()
 unique_words = {word for word in words}
 ```
+
+[6.2.6. Set displays](https://docs.python.org/3/reference/expressions.html#set-displays)
 
 **Generator Expression**
 
@@ -688,6 +694,8 @@ genex_example = (n**2 for n in [1, 2, 3, 4, 5])
 >>> type(genex_example)
 <class 'generator'>
 ```
+
+[6.2.8. Generator expressions](https://docs.python.org/3/reference/expressions.html#generator-expressions)
 
 **Generator Function**
 
