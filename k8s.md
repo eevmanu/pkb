@@ -104,6 +104,17 @@ $ kubectl logs -f --tail=10 {{ }}
     - [ramitsurana/awesome-kubernetes](https://github.com/ramitsurana/awesome-kubernetes) - A curated list for awesome kubernetes sources
     - [kubeflow/kubeflow](https://github.com/kubeflow/kubeflow) - Machine Learning Toolkit for Kubernetes
     - [GoogleContainerTools/kaniko](https://github.com/GoogleContainerTools/kaniko) - Build Container Images In Kubernetes
+- CKA / CKAD
+    - 2020-10-19 - [The Ultimate Guide to pass the New CKA exam released at September 2020](https://www.reddit.com/r/kubernetes/comments/jdzv77/the_ultimate_guide_to_pass_the_new_cka_exam/)
+    - 2020-09-24 - [CKAD Certification Exam Preparation Guide and Tips](https://kloudnative.blogspot.com/2020/09/ckad-certification-exam-preparation.html)
+    - Github:
+        - [dgkanatsios/CKAD-exercises](https://github.com/dgkanatsios/CKAD-exercises) - A set of exercises to prepare for Certified Kubernetes Application Developer exam by Cloud Native Computing Foundation
+        - [walidshaari/Kubernetes-Certified-Administrator](https://github.com/walidshaari/Kubernetes-Certified-Administrator) - Online resources that will help you prepare for taking the CNCF CKA 2020 "Kubernetes Certified Administrator" Certification exam. with time, This is not likely the comprehensive up to date list - please make a pull request if there something that should be added here.
+        - [kodekloudhub/certified-kubernetes-administrator-course](https://github.com/kodekloudhub/certified-kubernetes-administrator-course) - Certified Kubernetes Administrator - CKA Course
+        - [twajr/ckad-prep-notes](https://github.com/twajr/ckad-prep-notes) - List of resources and notes for passing the Certified Kubernetes Application Developer (CKAD) exam.
+        - [lucassha/CKAD-resources](https://github.com/lucassha/CKAD-resources) - Study materials for k8s CKAD
+    - YouTube
+        - [TheDevOpsSchool - Certified Kubernetes Administrator (CKA) 2019 Tutorials](https://www.youtube.com/playlist?list=PLDhScTEBdP8wE9gl8PkZu5dfHSCNI0UvL)
 
 - YouTube:
     - Video:
