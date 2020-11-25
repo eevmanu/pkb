@@ -869,6 +869,18 @@ Resources:
         - [Why must dictionary keys be immutable?](https://docs.python.org/3/faq/design.html#why-must-dictionary-keys-be-immutable)
 - [Glossary](https://docs.python.org/3/glossary.html)
 
+- Python Wiki - This is hosted on an Oregon State University Open Source Lab VM. Marc-André Lemburg owns it. [source](http://infra.psf.io/overview/#details-of-various-services)
+    - [This is an index of all pages in this Wiki.](https://wiki.python.org/moin/TitleIndex)
+    - [TimeComplexity](https://wiki.python.org/moin/TimeComplexity)
+    - [Concurrency](https://wiki.python.org/moin/Concurrency)
+    - [Parallel Processing and Multiprocessing in Python](https://wiki.python.org/moin/ParallelProcessing)
+    - [Porting Python Code to 3.x](https://wiki.python.org/moin/PortingPythonToPy3k)
+    - [Powerful Python One-Liners](https://wiki.python.org/moin/Powerful%20Python%20One-Liners)
+    - [Python speed](https://wiki.python.org/moin/PythonSpeed)
+        - [Performance Tips](https://wiki.python.org/moin/PythonSpeed/PerformanceTips)
+    - [Beginner's Guide to Python](https://wiki.python.org/moin/BeginnersGuide)
+    - [Advanced Books](https://wiki.python.org/moin/AdvancedBooks)
+
 - What's New:
     - [3.0](https://docs.python.org/3.0/whatsnew/3.0.html)
     - [3.1](https://docs.python.org/3.1/whatsnew/3.1.html)
