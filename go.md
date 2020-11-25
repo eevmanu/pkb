@@ -405,6 +405,9 @@ $ go tool vet --shadow
     - YT Playlist - Junmin Lee - [Data structures and Algorithms in Go](https://www.youtube.com/playlist?list=PL0q7mDmXPZm7s7weikYLpNZBKk5dCoWm6) - [reddit](https://www.reddit.com/r/golang/comments/j121fo/if_you_want_to_learn_data_structures_in_go/)
         - 2020-10-03 - 3.9k views
 
+- Design patterns:
+    - [tmrts/go-patterns](https://github.com/tmrts/go-patterns) - Curated list of Go design patterns, recipes and idioms
+    - 2020-09-04 - [Learn Go by Building a Bus Service](https://medium.com/better-programming/learn-go-by-building-a-bus-service-6c11e7b81b92) - [reddit](https://www.reddit.com/r/golang/comments/iml937/i_wrote_a_piece_about_lightweight_design_patterns/)
 
 - Interesting Github Repos
     - [Go (Golang) Clean Architecture based on Reading Uncle Bob's Clean Architecture](https://github.com/bxcodec/go-clean-arch)
