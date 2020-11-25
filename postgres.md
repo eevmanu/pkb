@@ -650,7 +650,8 @@ To test it
     - [Timeseries data in Postgres with updates](https://www.slideshare.net/GGordonWorleyIII/pgday-sf-2020-timeseries-data-in-postgres-with-updates)
 
 - Interesting blogs from people / groups / companies:
-    - [blog](https://github.com/digoal/blog) - Everything about database,business.(Most for PostgreSQL).
+    - [digoal/blog](https://github.com/digoal/blog) - Everything about database,business.(Most for PostgreSQL).
+
 - YouTube:
     - Videos:
         - 2020-10-20 - [Percona live ONLINE Open Source Database Conference - Database Talks and Tutorials](https://www.youtube.com/watch?v=tKxMEqd0V5s)
