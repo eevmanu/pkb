@@ -1087,6 +1087,11 @@ Resources:
         - 2017-05-21 - [Miguel Grinberg Asynchronous Python for the Complete Beginner PyCon 2017](https://www.youtube.com/watch?v=iG6fr81xHKA)
         - 2016-08-04 - [Yury Selivanov - async/await in Python 3.5 and why it is awesome](https://www.youtube.com/watch?v=m28fiN9y_r8)
         - 2017-05-21 - [Yury Selivanov asyncawait and asyncio in Python 3 6 and beyond PyCon 2017](https://www.youtube.com/watch?v=2ZFFv-wZ8_g)
+        - [Async IO in Python: A Complete Walkthrough](https://realpython.com/async-io-python/)
+        - async function return a [callable](https://docs.python.org/3/library/typing.html#typing.Callable)
+        - async-await is helpful when your program does practically nothing except wait for IO, and when IO is relatively quick (e.g. glue between a web server and database).
+        - The async/await paradigm works well in languages where handing off and sharing data between threads are cheap and easy. Python is not one of them.
+        - [timofurrer/awesome-asyncio](https://github.com/timofurrer/awesome-asyncio) - A curated list of awesome Python asyncio frameworks, libraries, software and resources
         - [python-trio/trio](https://github.com/python-trio/trio) - Trio – a friendly Python library for async concurrency and I/O
             - [What is the core difference between asyncio and trio?](https://stackoverflow.com/questions/49482969/what-is-the-core-difference-between-asyncio-and-trio)
             - 2020-11-01 - [Trio: Structured Concurrency for Python](https://www.youtube.com/watch?v=y408pjAoxes)
@@ -1100,9 +1105,15 @@ Resources:
         - [When you need to use AsyncIO and ThreadPoolExecutor, do you need to call loop.close() manually?](https://stackoverflow.com/questions/59199218/when-you-need-to-use-asyncio-and-threadpoolexecutor-do-you-need-to-call-loop-cl)
         - [Why is asyncio.Future incompatible with concurrent.futures.Future?](https://stackoverflow.com/questions/43882301/why-is-asyncio-future-incompatible-with-concurrent-futures-future)
         - [What is the difference between concurrent.futures and asyncio.futures?](https://stackoverflow.com/questions/29902908/what-is-the-difference-between-concurrent-futures-and-asyncio-futures)
+        - [What are the differences between the threading and multiprocessing modules?](https://stackoverflow.com/questions/18114285/what-are-the-differences-between-the-threading-and-multiprocessing-modules)
+        - [Multiprocessing vs Threading Python [duplicate]](https://stackoverflow.com/questions/3044580/multiprocessing-vs-threading-python/)
+        - [Threading pool similar to the multiprocessing Pool?](https://stackoverflow.com/questions/3033952/threading-pool-similar-to-the-multiprocessing-pool)
+        - [How does asyncio actually work?](https://stackoverflow.com/questions/49005651/how-does-asyncio-actually-work)
+        - [How does asyncio (python) work? [duplicate]](https://stackoverflow.com/questions/30341823/how-does-asyncio-python-work)
     - Non-dated
         - [Haskell Wiki - Parallelism vs. Concurrency](https://wiki.haskell.org/Parallelism_vs._Concurrency)
     - Dated
+        - 2009 - [A Curious Course on Coroutines and Concurrency](http://www.dabeaz.com/coroutines/Coroutines.pdf) - [archive](https://web.archive.org/web/20201111222718/http://dabeaz.com/coroutines/Coroutines.pdf)
         - 2020-09-06 - [Show HN: Parallelise pipelines of Python async iterables](https://news.ycombinator.com/item?id=24390116)
         - 2020-07-06 - [Speeding Up Python with Concurrency, Parallelism, and asyncio](https://testdriven.io/blog/concurrency-parallelism-asyncio/)
         - 2020-06-09 - [Python Multi-Threading vs Multi-Processing](https://towardsdatascience.com/python-multi-threading-vs-multi-processing-1e2561eb8a24)
