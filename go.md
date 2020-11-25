@@ -481,6 +481,12 @@ $ go tool vet --shadow
 - News sources:
     - [Changelog News - Go Topic](https://changelog.com/topic/go)
 
+- Best practices & Style Guide:
+    - [Style guideline for Go packages](https://rakyll.org/style-packages/)
+    - [uber-go/guide/](https://github.com/uber-go/guide) - The Uber Go Style Guide.
+    - [dgryski/awesome-go-style](https://github.com/dgryski/awesome-go-style) - A collection of Go style guides
+    - 2020-10-24 - [Style guide for Go code](https://www.reddit.com/r/golang/comments/jh3syk/style_guide_for_go_code/)
+
 - Highlighted articles:
     - [Allocation efficiency in high-performance Go services](https://segment.com/blog/allocation-efficiency-in-high-performance-go-services/)
     - [Are you a Go black belt?](https://bitfieldconsulting.com/golang/black-belt)
