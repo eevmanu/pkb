@@ -295,13 +295,26 @@ $ go tool vet --shadow
         - [go please - official language server for the Go language](https://github.com/golang/tools/blob/master/gopls/README.md)
             - [User Guide](https://github.com/golang/tools/blob/master/gopls/doc/user.md)
 
+- Interfaces:
+    - [Evertras/go-interface-examples](https://github.com/Evertras/go-interface-examples)
+        - [Defining interfaces locally](https://github.com/Evertras/go-interface-examples/tree/master/local-interfaces) - [reddit](https://www.reddit.com/r/golang/comments/hha3pa/why_you_should_write_interfaces_perpackage/)
+    - [golang/go](https://github.com/golang/go) - [Wiki/CodeReviewComments - Interfaces](https://github.com/golang/go/wiki/CodeReviewComments#interfaces)
+    - [tweet](https://twitter.com/davecheney/status/942593128355192832) - #golang top tip: the consumer should define the interface. If you’re defining an interface and an implementation in the same package, you may be doing it wrong.
+
+- Channels:
+    - use case - passing data between goroutines [source](https://www.reddit.com/r/golang/comments/hp4mk3/what_feature_of_go_is_used_very_often_by/fxre9b2/)
+
+- Project structures:
+    - [golang-standards/project-layout](https://github.com/golang-standards/project-layout) - Standard Go Project Layout
+    - 2020-07-06 - [HOW I STRUCTURE GO PACKAGES](https://bencane.com/stories/2020/07/06/how-i-structure-go-packages/) - [reddit](https://www.reddit.com/r/golang/comments/hm34kq/how_i_structure_go_packages/)
+
+- Error handling:
+    - 2020-07-06 - [Why Go's Error Handling is Awesome](https://rauljordan.com/2020/07/06/why-go-error-handling-is-awesome.html) - [reddit](https://www.reddit.com/r/golang/comments/hmnhkz/why_gos_error_handling_is_awesome/)
+
 - Frameworks:
     - [atreugo](https://github.com/savsgio/atreugo) - High performance and extensible micro web framework. Zero memory allocations in hot paths.
     - [fasthttp](https://github.com/valyala/fasthttp) - Fast HTTP package for Go. Tuned for high performance. Zero memory allocations in hot paths. Up to 10x faster than net/http
     - [fiber](https://github.com/gofiber/fiber) - Fiber is an Express inspired web framework written in Go with coffee gofiber.io
-
-- Project structures:
-    - [golang-standards/project-layout](https://github.com/golang-standards/project-layout) - Standard Go Project Layout
 
 - Benchmark:
     - [Go HTTP request router and web framework benchmark](https://github.com/julienschmidt/go-http-routing-benchmark)
