@@ -1011,9 +1011,31 @@ Resources:
     - [The Most Diabolical Python Antipattern](https://realpython.com/the-most-diabolical-python-antipattern/)
     - [onelivesleft/PrettyErrors](https://github.com/onelivesleft/PrettyErrors) - Prettify Python exception output to make it legible. - [reddit](https://www.reddit.com/r/Python/comments/jui7zw/prettyerrors_a_module_to_format_exception_reports/)
 
-- Testing:
+- Testing
     - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python
     - [playwright-python](https://github.com/microsoft/playwright-python) - Python version of the Playwright testing and automation library - [web](https://playwright.dev/).
+    - [Testing](https://wiki.python.org/moin/Testing)
+        - unit tests - your Python code is limited by specific function and methods
+        - performance - measure performance over the time
+        - fuzz testing - overload your inputs with garbage to see the response
+        - web testing - code is server-side and expected output is web stuff
+        - acceptance - write testing logic once, and run it over a set of desired output
+    - [PythonTestingToolsTaxonomy](https://wiki.python.org/moin/PythonTestingToolsTaxonomy)
+    - [Test Driven Development](https://wiki.python.org/moin/TestDrivenDevelopment)
+        - TDD is not a testing methodology; it is a design methodology.
+        - write UnitTests for the code before you write the code itself.
+    - [CodeCoverage](https://wiki.python.org/moin/CodeCoverage)
+        - quantitative measure of finding out how much of the code has been executed
+        - Subconcepts:
+            - Statement coverage
+            - Line coverage
+            - Condition coverage
+            - Decision coverage
+            - Multiple condition coverage
+            - Path coverage
+            - ...
+    - [nedbat/coveragepy](https://github.com/nedbat/coveragepy) - Code coverage measurement for Python
+    - Python Wiki - [pytest](https://wiki.python.org/moin/pytest)
 
 - Debugging:
     - [PySnooper](https://github.com/cool-RR/PySnooper) - Never use print for debugging again
