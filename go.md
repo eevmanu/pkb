@@ -391,6 +391,11 @@ $ go tool vet --shadow
 
 - Generics
     - [Summary of Go Generics Discussions](https://docs.google.com/document/d/1vrAy9gMpMoS3uaVphB32uVXX4pi-HnNjkMEgyAHX4N4/)
+    - 2020-09-21 - [Type Parameters - Draft Design](https://go.googlesource.com/proposal/+/refs/heads/master/design/go2draft-type-parameters.md)
+    - [golang/go](https://github.com/golang/go) - [dev.go2go branch](https://github.com/golang/go/blob/dev.go2go/README.go2go.md)
+    - [The go2go Playground](https://go2goplay.golang.org/)
+    - 2020-08-29 - [Generics examples by Go Team 🔥️](https://www.reddit.com/r/golang/comments/iiuhc1/generics_examples_by_go_team/)
+
 
 - Interesting Github Repos
     - [Go (Golang) Clean Architecture based on Reading Uncle Bob's Clean Architecture](https://github.com/bxcodec/go-clean-arch)
