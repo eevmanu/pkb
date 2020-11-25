@@ -24,6 +24,7 @@
 
 - Books:
     - [The Rust Programming Language (Covers Rust 2018)](https://www.amazon.com/dp/B07SRQ97RD/)
+    - [nnethercote/perf-book/](https://github.com/nnethercote/perf-book) - The Rust Performance Book - [reddit](https://www.reddit.com/r/rust/comments/jvmb8u/the_rust_performance_book/)
 
 - Extra Tools
     - [rust-raspberrypi-OS-tutorials](https://github.com/rust-embedded/rust-raspberrypi-OS-tutorials) - Learn to write an embedded OS in Rust
