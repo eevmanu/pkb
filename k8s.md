@@ -98,6 +98,11 @@ $ kubectl logs -f --tail=10 {{ }}
 - IaaS:
     - [pulumi/pulumi](https://github.com/pulumi/pulumi) - Pulumi - Modern Infrastructure as Code. Any cloud, any language
 
+- Cheat Sheet
+    - [kubectl](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+    - [LeCoupa/awesome-cheatsheets](https://github.com/LeCoupa/awesome-cheatsheets) - Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
+        - [tools/kubernetes](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/kubernetes.md)
+
 - Github:
     - [pixie](https://github.com/pixie-labs/pixie) - Instant Kubernetes-Native Application Observability
     - [kubernetes/test-infra](https://github.com/kubernetes/test-infra) - Test infrastructure for the Kubernetes project.
