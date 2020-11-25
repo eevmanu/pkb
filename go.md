@@ -417,6 +417,14 @@ $ go tool vet --shadow
     - [avelino/awesome-go](https://github.com/avelino/awesome-go)
     - [Write webapps without a framework in Go](https://github.com/thewhitetulip/web-dev-golang-anti-textbook)
     - [build a web with golang](https://github.com/astaxie/build-web-application-with-golang)
+    - [uber-go/fx](https://github.com/uber-go/fx) - A dependency injection based application framework for Go.
+    - [uber/cadence](https://github.com/uber/cadence) - Cadence is a distributed, scalable, durable, and highly available orchestration engine to execute asynchronous long-running business logic in a scalable and resilient way.
+    - [SuperPaintman/the-evolution-of-a-go-programmer](https://github.com/SuperPaintman/the-evolution-of-a-go-programmer) - [reddit](https://www.reddit.com/r/golang/comments/f1hy9a/the_evolution_of_a_go_programmer/)
+    - []()
+    - []()
+    - []()
+    - []()
+
 - Roadmap / Study Guides / Training / Interview Questions / Exercises / Problems / Examples
     - [Alikhll/golang-developer-roadmap](https://github.com/Alikhll/golang-developer-roadmap) - Roadmap to becoming a Go developer in 2020
     - [dzyanis/roadmap](https://github.com/dzyanis/roadmap) - Software Engineer Roadmap (alpha) - [golang roadmap](https://github.com/dzyanis/roadmap/blob/master/stacks/go/data/roadmap.png)
