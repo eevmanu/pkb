@@ -619,6 +619,8 @@ To test it
     - [《pgmetrics》](https://github.com/rapidloop/pgmetrics) - Collect and display information and stats from a running PostgreSQL server
     - [《dexter》](https://github.com/ankane/dexter) - The automatic indexer for Postgres
     - [《stolon》](https://github.com/sorintlab/stolon) - PostgreSQL cloud native High Availability and more.
+    - [《pganalyze》](https://pganalyze.com/) - Deep insights into Postgres
+    - [《pgmustard》](https://www.pgmustard.com/) - Helps you review Postgres query plans quickly
 
 - Database visualizer:
     - [《dbeaver》](https://github.com/dbeaver/dbeaver)
