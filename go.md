@@ -412,12 +412,9 @@ $ go tool vet --shadow
 - Interesting Github Repos
     - [Go (Golang) Clean Architecture based on Reading Uncle Bob's Clean Architecture](https://github.com/bxcodec/go-clean-arch)
     - [Learn Go with test-driven development](https://github.com/quii/learn-go-with-tests)
-    - [Ultimate Go - Design Guidelines](https://github.com/ardanlabs/gotraining/blob/master/topics/go/README.md#design-guidelines)
-    - [Go design patterns](https://github.com/tmrts/go-patterns)
-    - [Awesome Go](https://github.com/avelino/awesome-go)
+    - [avelino/awesome-go](https://github.com/avelino/awesome-go)
     - [Write webapps without a framework in Go](https://github.com/thewhitetulip/web-dev-golang-anti-textbook)
     - [build a web with golang](https://github.com/astaxie/build-web-application-with-golang)
-    - [TheAlgorithms](https://github.com/TheAlgorithms/Go) - Algorithms Implemented in GoLang
     - [halfrost/LeetCode-Go](https://github.com/halfrost/LeetCode-Go) - Solutions to LeetCode by Go, 100% test coverage, runtime beats 100% / LeetCode
     - [greyireland/algorithm-pattern](https://github.com/greyireland/algorithm-pattern) - Algorithm template, the most scientific way to brush questions, the fastest way to brush questions, you deserve it
     - [donng/Play-with-Data-Structures](https://github.com/donng/Play-with-Data-Structures) - 慕课 liuyubobobo「玩转数据结构」课程的 Go 语言实现版本
