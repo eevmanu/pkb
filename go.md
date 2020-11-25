@@ -176,6 +176,7 @@ $ go tool vet --shadow
 
 - Linters:
     - [golangci/golangci-lint](https://github.com/golangci/golangci-lint) - Fast linters Runner for Go
+        - [linters](https://golangci-lint.run/usage/linters/)
         ```bash
         # to install
         $ curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
