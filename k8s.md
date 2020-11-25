@@ -87,6 +87,8 @@ $ kubectl logs -f --tail=10 {{ }}
     - [docker/docker-bench-security](https://github.com/docker/docker-bench-security) - script that checks for dozens of common best-practices around deploying Docker containers in production.
     - [quay/clair](https://github.com/quay/clair) - Vulnerability Static Analysis for Containers
     - [aquasecurity/trivy](https://github.com/aquasecurity/trivy) - A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+    - 2020-11-09 - [Kubernetes Security Is Not Container Security](https://blog.alcide.io/kubernetes-security-is-not-container-security) - [archive](https://web.archive.org/web/20201122212942/https://blog.alcide.io/kubernetes-security-is-not-container-security) - [reddit](https://www.reddit.com/r/netsec/comments/jsvc6f/kubernetes_security_is_not_container_security/)
+        - RedHat - [What is DevSecOps?](https://www.redhat.com/en/topics/devops/what-is-devsecops)
 
 - Gateway / Proxy:
     - [traefik/traefik](https://github.com/traefik/traefik) - The Cloud Native Application Proxy
