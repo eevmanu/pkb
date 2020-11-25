@@ -344,6 +344,7 @@ $ go tool vet --shadow
     - [grpc-ecosystem/grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway) - gRPC to JSON proxy generator following the gRPC HTTP spec
     - [spf13/viper](https://github.com/spf13/viper) - Go configuration with fangs
     - [go-playground/validator](https://github.com/go-playground/validator) - Go Struct and Field validation, including Cross Field, Cross Struct, Map, Slice and Array diving
+    - [orijtech/structslop](https://github.com/orijtech/structslop) - [post](https://medium.com/orijtech-developers/efficient-struct-packing-guided-pass-for-go-92255872ec72)
     - [cuelang/cue](https://github.com/cuelang/cue) - Validate and define text-based and dynamic configuration cuelang.org
     - [robfig/cron](https://github.com/robfig/cron) - a cron library for go
     - [adnanh/webhook](https://github.com/adnanh/webhook) - webhook is a lightweight incoming webhook server to run shell commands
@@ -388,6 +389,7 @@ $ go tool vet --shadow
         - [errgroup](https://godoc.org/golang.org/x/sync/errgroup)
         - [semaphore](https://godoc.org/golang.org/x/sync/semaphore)
     - 2020-09-29 - [Go: A Tale of Concurrency ( A Beginners Guide )](https://medium.com/swlh/go-a-tale-of-concurrency-a-beginners-guide-b8976b26feb) - [reddit](https://www.reddit.com/r/golang/comments/j1xij2/wrote_an_articletutorial_on_concurrency_beginner/)
+    - [Even in Go, concurrency is still not easy (with an example)](https://utcc.utoronto.ca/~cks/space/blog/programming/GoConcurrencyStillNotEasy)
 
 - Generics
     - [Summary of Go Generics Discussions](https://docs.google.com/document/d/1vrAy9gMpMoS3uaVphB32uVXX4pi-HnNjkMEgyAHX4N4/)
