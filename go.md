@@ -396,6 +396,15 @@ $ go tool vet --shadow
     - [The go2go Playground](https://go2goplay.golang.org/)
     - 2020-08-29 - [Generics examples by Go Team 🔥️](https://www.reddit.com/r/golang/comments/iiuhc1/generics_examples_by_go_team/)
 
+- Data structures / Algorithm
+    - [donng/Play-with-Data-Structures](https://github.com/donng/Play-with-Data-Structures) - 慕课 liuyubobobo「玩转数据结构」课程的 Go 语言实现版本
+    - [PacktPublishing/Learn-Data-Structures-and-Algorithms-with-Golang](https://github.com/PacktPublishing/Learn-Data-Structures-and-Algorithms-with-Golang) - Learn Data Structures and Algorithms with Golang, published by Packt
+    - [greyireland/algorithm-pattern](https://github.com/greyireland/algorithm-pattern) - Algorithm template, the most scientific way to brush questions, the fastest way to brush questions, you deserve it
+    - [dreddsa5dies/algorithm](https://github.com/dreddsa5dies/algorithm) - The repository algorithms implemented on the Go
+    - [TheAlgorithms/Go](https://github.com/TheAlgorithms/Go) - Algorithms Implemented in GoLang
+    - YT Playlist - Junmin Lee - [Data structures and Algorithms in Go](https://www.youtube.com/playlist?list=PL0q7mDmXPZm7s7weikYLpNZBKk5dCoWm6) - [reddit](https://www.reddit.com/r/golang/comments/j121fo/if_you_want_to_learn_data_structures_in_go/)
+        - 2020-10-03 - 3.9k views
+
 
 - Interesting Github Repos
     - [Go (Golang) Clean Architecture based on Reading Uncle Bob's Clean Architecture](https://github.com/bxcodec/go-clean-arch)
