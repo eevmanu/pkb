@@ -361,7 +361,9 @@ $ go tool vet --shadow
     - [crowdsecurity/crowdsec](https://github.com/crowdsecurity/crowdsec) - An open-source, lightweight agent to detect and respond to bad behaviours. It also automatically benefits from our global community-wide IP reputation database.
 
 - Concurrency - Parallelism - Multiprocessing - Multithreading - Asynchronous(async/await):
-    - 2020-09-29 - [Go: A Tale of Concurrency ( A Beginners Guide )](https://medium.com/@yashaswi_nayak/go-a-tale-of-concurrency-a-beginners-guide-b8976b26feb)
+    - A Tour of Go - [Goroutines](https://tour.golang.org/concurrency/1)
+    - 2013-01-16 - [Concurrency is not parallelism](https://blog.golang.org/concurrency-is-not-parallelism)
+    - 2012-07-02 - [Google I/O 2012 - Go Concurrency Patterns](https://www.youtube.com/watch?v=f6kdp27TYZs)
         - [Wrote an article/tutorial on Concurrency. Beginner Friendly!](https://www.reddit.com/r/golang/comments/j1xij2/wrote_an_articletutorial_on_concurrency_beginner/)
     - 2020-10-21 - [When Too Much Concurrency Slows You Down (Golang)](https://www.reddit.com/r/golang/comments/jfi21j/when_too_much_concurrency_slows_you_down_golang/)
     - 2020-09-01 - [Even in Go, concurrency is still not easy (with an example)](https://utcc.utoronto.ca/~cks/space/blog/programming/GoConcurrencyStillNotEasy) - [archive](https://web.archive.org/web/20201026045240/https://utcc.utoronto.ca/~cks/space/blog/programming/GoConcurrencyStillNotEasy) - [hn](https://news.ycombinator.com/item?id=24359650)
@@ -381,6 +383,11 @@ $ go tool vet --shadow
     - 2014-03-13 - [Go Concurrency Patterns: Pipelines and cancellation](https://blog.golang.org/pipelines)
     - [loong/go-concurrency-exercises](https://github.com/loong/go-concurrency-exercises)
     - [alextanhongpin/go-advance-concurrency](https://github.com/alextanhongpin/go-advance-concurrency)
+    - 2020-02-19 - [Advanced Go Concurrency](https://encore.dev/blog/advanced-go-concurrency) - [reddit](https://www.reddit.com/r/golang/comments/f6fzv2/advanced_go_concurrency_primitives/)
+        - [singleflight](https://godoc.org/golang.org/x/sync/singleflight)
+        - [errgroup](https://godoc.org/golang.org/x/sync/errgroup)
+        - [semaphore](https://godoc.org/golang.org/x/sync/semaphore)
+    - 2020-09-29 - [Go: A Tale of Concurrency ( A Beginners Guide )](https://medium.com/swlh/go-a-tale-of-concurrency-a-beginners-guide-b8976b26feb) - [reddit](https://www.reddit.com/r/golang/comments/j1xij2/wrote_an_articletutorial_on_concurrency_beginner/)
 
 - Generics
     - [Summary of Go Generics Discussions](https://docs.google.com/document/d/1vrAy9gMpMoS3uaVphB32uVXX4pi-HnNjkMEgyAHX4N4/)
