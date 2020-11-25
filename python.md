@@ -1009,6 +1009,7 @@ Resources:
     - [Logging Levels](https://docs.python.org/3/library/logging.html#logging-levels)
     - [A little log decorator for debugging, more info in comments](https://www.reddit.com/r/Python/comments/ijkdem/a_little_log_decorator_for_debugging_more_info_in/)
     - [The Most Diabolical Python Antipattern](https://realpython.com/the-most-diabolical-python-antipattern/)
+    - [onelivesleft/PrettyErrors](https://github.com/onelivesleft/PrettyErrors) - Prettify Python exception output to make it legible. - [reddit](https://www.reddit.com/r/Python/comments/jui7zw/prettyerrors_a_module_to_format_exception_reports/)
 
 - Testing:
     - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python
