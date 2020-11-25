@@ -1307,5 +1307,10 @@ Resources:
         - [Debugging Cheat Sheet](https://www.reddit.com/r/Python/comments/iehths/debugging_cheat_sheet/)
         - [Python Software Foundation Newsletter](https://us19.campaign-archive.com/home/?u=5697f493c3a48994f504d4deb&id=167eaa449b)
     - Dated
+        - 2020-11-07 - [73 Examples to Help You Master Python's f-strings](https://miguendes.me/73-examples-to-help-you-master-pythons-f-strings) - [reddit](https://www.reddit.com/r/Python/comments/jpojgg/73_examples_to_help_you_master_pythons_fstrings/)
+        - 2020-10-30 - [25 Best GitHub Repos for Python Developers](https://thecarrots.io/blog/25-best-github-repos-for-python-developers) - [reddit](https://www.reddit.com/r/Python/comments/jms9d8/25_of_the_most_useful_python_repos/)
+        - 2020-10-23 - [How to write a great Dockerfile for Python apps](https://www.pybootcamp.com/blog/how-to-write-dockerfile-python-apps/) - [reddit](https://www.reddit.com/r/Python/comments/ji9nu7/how_to_write_a_great_dockerfile_for_python/)
+        - 2020-10-22 - [Flask vs django | easy expert comparison](https://hinty.io/ivictbor/flask-vs-django-easy-expert-comparison/) - [reddit](https://www.reddit.com/r/programming/comments/jg0xoc/flask_vs_django_easy_comparison/)
+        - 2020-10-22 - [How to quickly remove duplicates from a list?](https://www.reddit.com/r/Python/comments/jfx7wy/how_to_quickly_remove_duplicates_from_a_list/)
         - 2020-10-05 - [Python 3.9: Cool New Features for You to Try](https://realpython.com/python39-new-features/)
         - 2020-01-15 - [Ultimate Setup for Your Next Python Project](https://towardsdatascience.com/ultimate-setup-for-your-next-python-project-179bda8a7c2c)
