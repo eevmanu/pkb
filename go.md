@@ -415,19 +415,18 @@ $ go tool vet --shadow
     - [avelino/awesome-go](https://github.com/avelino/awesome-go)
     - [Write webapps without a framework in Go](https://github.com/thewhitetulip/web-dev-golang-anti-textbook)
     - [build a web with golang](https://github.com/astaxie/build-web-application-with-golang)
+- Roadmap / Study Guides / Training / Interview Questions / Exercises / Problems / Examples
+    - [Alikhll/golang-developer-roadmap](https://github.com/Alikhll/golang-developer-roadmap) - Roadmap to becoming a Go developer in 2020
+    - [dzyanis/roadmap](https://github.com/dzyanis/roadmap) - Software Engineer Roadmap (alpha) - [golang roadmap](https://github.com/dzyanis/roadmap/blob/master/stacks/go/data/roadmap.png)
+    - [ardanlabs/gotraining-studyguide](https://github.com/ardanlabs/gotraining-studyguide) - [reddit](https://www.reddit.com/r/golang/comments/g918ul/ultimate_go_study_guide_for_beginning_and/)
+    - [hoanhan101/algo](https://github.com/hoanhan101/algo) - 101+ coding interview problems in Go - [reddit](https://www.reddit.com/r/golang/comments/el4vut/101_coding_interview_problems_with_detailed/)
+        - 2020-01-06 - [web](https://hoanhan.co/101-challenges)
+    - [inancgumus/learngo](https://github.com/inancgumus/learngo) - 1000+ Hand-Crafted Go Examples, Exercises, and Quizzes - [reddit](https://www.reddit.com/r/golang/comments/gl1jo2/learn_go_1000_handcrafted_go_exercises_and/)
+    - [austingebauer/go-leetcode](https://github.com/austingebauer/go-leetcode) - A collection of 100+ popular LeetCode problems solved in Go. - [reddit](https://www.reddit.com/r/golang/comments/fqu0nf/100_leetcode_solutions_in_go/)
     - [halfrost/LeetCode-Go](https://github.com/halfrost/LeetCode-Go) - Solutions to LeetCode by Go, 100% test coverage, runtime beats 100% / LeetCode
-    - [greyireland/algorithm-pattern](https://github.com/greyireland/algorithm-pattern) - Algorithm template, the most scientific way to brush questions, the fastest way to brush questions, you deserve it
-    - [donng/Play-with-Data-Structures](https://github.com/donng/Play-with-Data-Structures) - 慕课 liuyubobobo「玩转数据结构」课程的 Go 语言实现版本
-    - [dreddsa5dies/algorithm](https://github.com/dreddsa5dies/algorithm) - The repository algorithms implemented on the Go
-    - [PacktPublishing/Learn-Data-Structures-and-Algorithms-with-Golang](https://github.com/PacktPublishing/Learn-Data-Structures-and-Algorithms-with-Golang) - Learn Data Structures and Algorithms with Golang, published by Packt
     - [openset/leetcode](https://github.com/openset/leetcode) - LeetCode Problems' Solutions
-
-- Roadmap / Study Guides / Interview Questions
-    - [Go Developer Roadmap](https://github.com/Alikhll/golang-developer-roadmap)
-    - [Golang Software Engineer Roadmap](https://github.com/dzyanis/roadmap)
-    - [Ultimate Go study guide](https://github.com/hoanhan101/ultimate-go)
-    - [116+ Coding Interview Problems with Detailed Solutions](https://github.com/hoanhan101/algo)
-
+    - [ardanlabs/gotraining](https://github.com/ardanlabs/gotraining) - Go Training Class Material
+        - [Ultimate Go](https://github.com/ardanlabs/gotraining/tree/master/topics/go) - [Design Guidelines](https://github.com/ardanlabs/gotraining/tree/master/topics/go#design-guidelines)
 - Performance:
     - [go-perfbook](https://github.com/dgryski/go-perfbook) - Thoughts on Go performance optimization
     - [cadvisor](https://github.com/google/cadvisor) - Analyzes resource usage and performance characteristics of running containers.
