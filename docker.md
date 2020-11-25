@@ -430,9 +430,14 @@ docker-compose up \
     - [aptible/supercronic](https://github.com/aptible/supercronic) - Cron for containers
     - [krallin/tini](https://github.com/krallin/tini) - A tiny but valid `init` for containers
     - [weaveworks/scope](https://github.com/weaveworks/scope) - Monitoring, visualisation & management for Docker & Kubernetes
+    - [ubc-library-rc/intro-docker](https://github.com/ubc-library-rc/intro-docker) - Research Commons workshop "Intro to Docker" - [Resources](https://ubc-library-rc.github.io/intro-docker/resources/)
 
 - Stack Overflow - Interesting questions
     - [How to copy folders to docker image from Dockerfile?](https://stackoverflow.com/questions/37789984/how-to-copy-folders-to-docker-image-from-dockerfile)
+
+- YouTube
+    - Playlists
+        - Thetips4you - [Docker](https://www.youtube.com/playlist?list=PLVx1qovxj-amqyqHceAhkcsopzi4PFcKc)
 
 - Articles
     - [Best practices for building containers](https://cloud.google.com/solutions/best-practices-for-building-containers)
