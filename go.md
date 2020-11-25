@@ -470,7 +470,9 @@ $ go tool vet --shadow
     - [gopher-reading-list](https://github.com/enocom/gopher-reading-list) - A curated selection of blog posts on Go
 
 - Books:
-    - [GoBooks](https://github.com/dariubs/GoBooks) - List of Golang books
+    - [dariubs/GoBooks](https://github.com/dariubs/GoBooks) - List of Golang books
+    - [karlseguin/the-little-go-book](https://github.com/karlseguin/the-little-go-book)
+    - 2020-06-11 - [How To Code in Go eBook](https://www.digitalocean.com/community/books/how-to-code-in-go-ebook)
 
 - Podcasts:
     - [Changelog - Go Time](https://changelog.com/gotime)
