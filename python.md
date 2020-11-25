@@ -854,6 +854,19 @@ Resources:
 - [The Python Standard Library](https://docs.python.org/3/library/index.html)
 - [The Python Language Reference](https://docs.python.org/3/reference/index.html)
     - [3. Data model](https://docs.python.org/3/reference/datamodel.html)
+    - [6. Expressions](https://docs.python.org/3/reference/expressions.html)
+- [Python HOWTOs](https://docs.python.org/3/howto/index.html)
+- [Python Frequently Asked Questions](https://docs.python.org/3/faq/index.html)
+    - [Design and History FAQ](https://docs.python.org/3/faq/design.html)
+        - [Why are Python strings immutable?](https://docs.python.org/3/faq/design.html#why-are-python-strings-immutable)
+        - [How are lists implemented in CPython?](https://docs.python.org/3/faq/design.html#how-are-lists-implemented-in-cpython)
+            - lists are really variable-length arrays
+            - makes indexing a list a[i] an operation whose cost is independent of the size of the list or the value of the index.
+        - [How are dictionaries implemented in CPython?](https://docs.python.org/3/faq/design.html#how-are-dictionaries-implemented-in-cpython)
+            - dictionaries are implemented as resizable hash tables
+            - compared to B-trees, this gives better performance for lookup (the most common operation by far) under most circumstances, and the implementation is simpler.
+            - this means that dictionaries take constant time – O(1), in Big-O notation – to retrieve a key.
+        - [Why must dictionary keys be immutable?](https://docs.python.org/3/faq/design.html#why-must-dictionary-keys-be-immutable)
 - [Glossary](https://docs.python.org/3/glossary.html)
 
 - What's New:
