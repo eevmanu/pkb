@@ -17,6 +17,10 @@ Option 2:
 $ DJANGO_SETTINGS_MODULE={{ module.to.django.settings }} python manage.py {{ any command }}
 ```
 
+Doesn't yet support Composite Primary Keys
+- [Multi-Column Primary Key support](https://code.djangoproject.com/wiki/MultipleColumnPrimaryKeys)
+- [Add support for multiple-column primary keys](https://code.djangoproject.com/ticket/373)
+
 ### Resources
 
 - Relase notes
