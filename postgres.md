@@ -631,6 +631,17 @@ To test it
     - [PGOpen2018 Sessions](https://postgresql.us/events/pgopen2018/sessions/)
     - [Sessions from PostgreSQL US events besides PGOpen](https://www.google.com/search?q=site:https://postgresql.us/events/+inurl:session)
 
+- Consistency
+    - 2020-06 - [Consistency Models](https://jepsen.io/consistency) - [hn](https://news.ycombinator.com/item?id=23555224)
+    - 2020-05 - [Jepsen Disputes MongoDB’s Data Consistency Claims](https://www.infoq.com/news/2020/05/Jepsen-MongoDB-4-2-6/) - [hn](https://news.ycombinator.com/item?id=23285249)
+    - [What are the differences between NoSQL and a traditional RDBMS?](https://dba.stackexchange.com/questions/5/what-are-the-differences-between-nosql-and-a-traditional-rdbms)
+    - [What is the reasoning behind the CAP theorem?](https://dba.stackexchange.com/questions/4513/what-is-the-reasoning-behind-the-cap-theorem)
+    - [Consistency in ACID and CAP theorem, are they the same?](https://dba.stackexchange.com/questions/31260/consistency-in-acid-and-cap-theorem-are-they-the-same)
+    - [CAP theorem - Availability and Partition Tolerance](https://stackoverflow.com/questions/12346326/cap-theorem-availability-and-partition-tolerance/)
+    - [Transactions across REST microservices?](https://stackoverflow.com/questions/30213456/transactions-across-rest-microservices/)
+    - [Eventual consistency in plain English](https://stackoverflow.com/questions/10078540/eventual-consistency-in-plain-english/)
+    - [“Eventual Consistency” vs “Strong Eventual Consistency” vs “Strong Consistency”?](https://stackoverflow.com/questions/29381442/eventual-consistency-vs-strong-eventual-consistency-vs-strong-consistency)
+
 - Interesting talks:
     - [Explaining EXPLAIN: A Deep-Dive Into EXPLAIN Plans](https://speakerdeck.com/richyen/explaining-explain-a-deep-dive-into-explain-plans)
     - [Advanced Data Types](https://andreas.scherbaum.la/writings/Advanced_Datatypes_PgDaySF_2020.pdf)
