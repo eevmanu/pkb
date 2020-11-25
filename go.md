@@ -269,11 +269,6 @@ $ go tool vet --shadow
 
 ## Resources
 
-- Language specific rules:
-    - Naming convention
-        - uppercase (capital) on first letter to declare ____ as public
-        - lowercase on first letter to declare ____ as private
-
 - Learn / 101:
     - [A Tour of Go](https://tour.golang.org/)
     - [Effective Go](https://golang.org/doc/effective_go.html)
@@ -283,6 +278,10 @@ $ go tool vet --shadow
     - [Go by Example](https://gobyexample.com/)
     - 2020-03-18 - [Getting started with Go guide](https://dominicstpierre.com/getting-started-with-go-guide) - [reddit](https://www.reddit.com/r/golang/comments/fkw2rx/i_wrote_a_guide_for_beginners_wanting_to_get/) - [archive](https://web.archive.org/web/20201125045730/https://dominicstpierre.com/getting-started-with-go-guide)
 
+- Language specific rules:
+    - Naming convention
+        - uppercase (capital) on first letter to declare ____ as public
+        - lowercase on first letter to declare ____ as private
 
 - Setup VS Code:
     - [Go in Visual Studio Code](https://code.visualstudio.com/docs/languages/go)
