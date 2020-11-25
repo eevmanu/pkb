@@ -1219,6 +1219,9 @@ Resources:
     - [billryan/algorithm-exercise](https://github.com/billryan/algorithm-exercise) - Data Structure and Algorithm notes
     - [joowani/binarytree](https://github.com/joowani/binarytree) - Python Library for Studying Binary Trees
     - [MTrajK/coding-problems](https://github.com/MTrajK/coding-problems) - Solutions for various coding/algorithmic problems and many useful resources for learning algorithms and data structures
+    - [dabeaz-course/practical-python](https://github.com/dabeaz-course/practical-python) - Practical Python Programming (course by @dabeaz)
+    - [faif/python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns/idioms in Python
+    - [satwikkansal/wtfpython](https://github.com/satwikkansal/wtfpython) - What the f*ck Python?
 
 - Cheat Sheets:
     - [cheat.sh](https://github.com/chubin/cheat.sh) - the only cheat sheet you need
