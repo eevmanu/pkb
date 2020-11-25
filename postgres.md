@@ -662,7 +662,12 @@ To test it
 - Stack Overflow interesting questions:
     - [connect to a DB using psycopg2 without password](https://stackoverflow.com/a/48910290/3889948)
 
-- Final Articles / Posts / Resources:
+- Release notes / news:
+    - [News Archive](https://www.postgresql.org/about/newsarchive/)
+        - [pgAdmin 4 v4.28 Released](https://www.postgresql.org/about/news/pgadmin-4-v428-released-2114/)
+        - [PostgreSQL 13.1, 12.5, 11.10, 10.15, 9.6.20, and 9.5.24 Released!](https://www.postgresql.org/about/news/postgresql-131-125-1110-1015-9620-and-9524-released-2111/)
+
+- Final Articles / Posts:
     - [PostgreSQL @ Docker Hub](https://hub.docker.com/_/postgres)
     - [PostgreSQL beginner guide - connecting, remote access, psql CLI and troubleshooting connection](https://knowledgepill.it/posts/postgresql-basics-guide/) - [hacker news](https://news.ycombinator.com/item?id=24036132)
     - [Qix - PostgreSQL](https://github.com/ty4z2008/Qix/blob/master/pg.md)
