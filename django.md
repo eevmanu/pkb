@@ -35,6 +35,10 @@ $ DJANGO_SETTINGS_MODULE={{ module.to.django.settings }} python manage.py {{ any
     - 2019-02-13 - [2.0.13 on dev branch](https://docs.djangoproject.com/en/dev/releases/2.0.13/)
     - 2017-12-02 - [2.0.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/2.0/)
 
+- Cheat sheets:
+    - [LeCoupa/awesome-cheatsheets](https://github.com/LeCoupa/awesome-cheatsheets) - Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
+        - [backend/django](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/backend/django.py)
+
 - Extra tools:
     - [encode/django-rest-framework](https://github.com/encode/django-rest-framework) - Web APIs for Django.
     - [pydanny/cookiecutter-django](https://github.com/pydanny/cookiecutter-django) - Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly.
