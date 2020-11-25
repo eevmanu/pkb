@@ -1256,7 +1256,6 @@ Resources:
         - [Reuven M. Lerner - Practical decorators - PyCon 2019](https://www.youtube.com/watch?v=MjHpMCIvwsY)
         - [Łukasz Langa - Life Is Better Painted Black, or: How to Stop Worrying and Embrace Auto-Formatting](https://www.youtube.com/watch?v=esZLCuWs_2Y)
         - [Lynn Root - Advanced asyncio: Solving Real-world Production Problems - PyCon 2019](https://www.youtube.com/watch?v=bckD_GK80oY)
-        - [Eric Snow - to GIL or not to GIL: the Future of Multi-Core (C)Python - PyCon 2019](https://www.youtube.com/watch?v=7RlqbHCCVyc)
         - [Mario Corchero - Exceptional Exceptions - How to properly raise, handle and create them.](https://www.youtube.com/watch?v=V2fGAv2R5j8)
         - [Vinayak Mehta - Extracting tabular data from PDFs with Camelot & Excalibur - PyCon 2019](https://www.youtube.com/watch?v=Irf6kdl0lAA)
         - [Pamela McANulty - Things I Wish They Told Me About The Multiprocessing Module in Python 3](https://www.youtube.com/watch?v=5dMOYf0b_20)
