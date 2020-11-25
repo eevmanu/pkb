@@ -622,9 +622,20 @@ Resources:
 
 Class of functions that simplify the task of writing iterators and return an iterator that returns a stream of values.
 
-Use of `yield` statement
+Generators are objects that allow us to suspend the execution of a python function.
+
+Is a co routine (persistent subroutines), in the way functions and procedures are subroutines.
+
+Use of `yield` statement (hold execution and persist value)
 
 Consider reviewing `itertools` and `functools`
+
+Methods:
+- `__next()__` -> `next()`
+- [`send()`](https://docs.python.org/3/reference/expressions.html#generator.send) - Resumes the execution and “sends” a value into the generator function.
+- [`throw()`](https://docs.python.org/3/reference/expressions.html#generator.throw) - Raises an exception of type `type` at the point where the generator was paused, and returns the next value yielded by the generator function.
+- [`close()`](https://docs.python.org/3/reference/expressions.html#generator.close) - Raises a GeneratorExit at the point where the generator function was paused.
+
 
 Types of comprehension
 
