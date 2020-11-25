@@ -107,10 +107,12 @@ $ kubectl logs -f --tail=10 {{ }}
     - [pixie](https://github.com/pixie-labs/pixie) - Instant Kubernetes-Native Application Observability
     - [kubernetes/test-infra](https://github.com/kubernetes/test-infra) - Test infrastructure for the Kubernetes project.
     - [kubeedge/kubeedge](https://github.com/kubeedge/kubeedge) - Kubernetes Native Edge Computing Framework (project under CNCF)
-    - [LeCoupa/awesome-cheatsheets](https://github.com/LeCoupa/awesome-cheatsheets) - Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
     - [ramitsurana/awesome-kubernetes](https://github.com/ramitsurana/awesome-kubernetes) - A curated list for awesome kubernetes sources
     - [kubeflow/kubeflow](https://github.com/kubeflow/kubeflow) - Machine Learning Toolkit for Kubernetes
     - [GoogleContainerTools/kaniko](https://github.com/GoogleContainerTools/kaniko) - Build Container Images In Kubernetes
+    - [cncf/landscape](https://github.com/cncf/landscape) - The Cloud Native Interactive Landscape filters and sorts hundreds of projects and products, and shows details including GitHub stars, funding or market cap, first and last commits, contributor counts, headquarters location, and recent tweets.
+
+
 - CKA / CKAD
     - 2020-10-19 - [The Ultimate Guide to pass the New CKA exam released at September 2020](https://www.reddit.com/r/kubernetes/comments/jdzv77/the_ultimate_guide_to_pass_the_new_cka_exam/)
     - 2020-09-24 - [CKAD Certification Exam Preparation Guide and Tips](https://kloudnative.blogspot.com/2020/09/ckad-certification-exam-preparation.html)
@@ -126,9 +128,9 @@ $ kubectl logs -f --tail=10 {{ }}
 - YouTube:
     - Video:
         - [CNCF [Cloud Native Computing Foundation] - Webinar: You can be a Kubernetes contributor too!](https://www.youtube.com/watch?v=o68ff5NokR8)
+        - [Monitoring your GKE costs](https://www.youtube.com/watch?v=lC7LSUlZ4A8)
     - Playlists:
         - [KodeKloud - Kubernetes for the Absolute Beginners](https://www.youtube.com/playlist?list=PL2We04F3Y_43dAehLMT5GxJhtk3mJtkl5)
-        - [TheDevOpsSchool - Certified Kubernetes Administrator (CKA) 2019 Tutorials](https://www.youtube.com/playlist?list=PLDhScTEBdP8wE9gl8PkZu5dfHSCNI0UvL)
         - [Jérôme Petazzoni - [2019.03] Kubernetes workshop at QCON London](https://www.youtube.com/playlist?list=PLBAFXs0YjviJwCoxSUkUPhsSxDJzpZbJd)
         - [Microsoft Azure](https://www.youtube.com/c/MicrosoftAzure) - [Kubernetes Basics](https://www.youtube.com/playlist?list=PLLasX02E8BPCrIhFrc_ZiINhbRkYMKdPT)
         - [Google Cloud Platform - Kubernetes Best Practices](https://www.youtube.com/playlist?list=PLIivdWyY5sqL3xfXz5xJvwzFW_tlQB_GB)
@@ -146,13 +148,13 @@ $ kubectl logs -f --tail=10 {{ }}
     - [kubernetes-sigs/descheduler](https://github.com/kubernetes-sigs/descheduler)
     - [kubernetes-sigs/external-dns](https://github.com/kubernetes-sigs/external-dns)
     - [kubernetes-sigs/kind](https://github.com/kubernetes-sigs/kind)
+        - [kind](https://kind.sigs.k8s.io/) is a tool for running local Kubernetes clusters using Docker container “nodes”.
     - [kubernetes-sigs/krew](https://github.com/kubernetes-sigs/krew)
     - [kubernetes-sigs/kubebuilder](https://github.com/kubernetes-sigs/kubebuilder)
     - [kubernetes-sigs/kubefed](https://github.com/kubernetes-sigs/kubefed)
     - [kubernetes-sigs/kubespray](https://github.com/kubernetes-sigs/kubespray)
     - [kubernetes-sigs/kustomize](https://github.com/kubernetes-sigs/kustomize)
     - [kubernetes-sigs/metrics-server](https://github.com/kubernetes-sigs/metrics-server)
-
 
 - Useful Articles / Posts:
     - 2019-12-12 - [Demystifying Kubernetes as a service – How Alibaba cloud manages 10,000s of Kubernetes clusters](https://www.cncf.io/blog/2019/12/12/demystifying-kubernetes-as-a-service-how-does-alibaba-cloud-manage-10000s-of-kubernetes-clusters/)
