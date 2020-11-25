@@ -638,6 +638,15 @@ To test it
 
 - Interesting blogs from people / groups / companies:
     - [blog](https://github.com/digoal/blog) - Everything about database,business.(Most for PostgreSQL).
+- YouTube:
+    - Videos:
+        - 2020-10-20 - [Percona live ONLINE Open Source Database Conference - Database Talks and Tutorials](https://www.youtube.com/watch?v=tKxMEqd0V5s)
+            - Panel: Running Databases in Containers - [10:30:00](https://youtu.be/tKxMEqd0V5s?t=37800) - [11:35:00](https://youtu.be/tKxMEqd0V5s?t=41700)
+        - 2020-10-11 - [Hussein Nasser - PostgreSQL 13 Has Some Performance Boosts! Let us discuss it!](https://www.youtube.com/watch?v=wMbTHFXImzI)
+        - 2020-09-30 - [Hussein Nasser - Database Indexing Explained (with PostgreSQL)](https://www.youtube.com/watch?v=-qNSXK7s7_w)
+        - 2020-09-24 - [2ndQuadrant PostgreSQL - Webinar: New Features in PostgreSQL 13 by Peter Eisentraut](https://www.youtube.com/watch?v=wIRbpkQbioY)
+        - 2018-10-22 - [Learn Database Administration - PostgreSQL Database Administration (DBA) for Beginners](https://www.youtube.com/watch?v=aUfPf-clLLs)
+        - 2018-08-24 - [PostgreSQL Indexing : How, why, and when.](https://www.youtube.com/watch?v=clrtT_4WBAw)
 
 - Stack Overflow interesting questions:
     - [connect to a DB using psycopg2 without password](https://stackoverflow.com/a/48910290/3889948)
