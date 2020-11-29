@@ -1324,3 +1324,8 @@ Resources:
         - 2020-10-22 - [How to quickly remove duplicates from a list?](https://www.reddit.com/r/Python/comments/jfx7wy/how_to_quickly_remove_duplicates_from_a_list/)
         - 2020-10-05 - [Python 3.9: Cool New Features for You to Try](https://realpython.com/python39-new-features/)
         - 2020-01-15 - [Ultimate Setup for Your Next Python Project](https://towardsdatascience.com/ultimate-setup-for-your-next-python-project-179bda8a7c2c)
+
+- Blogs / People to follow:
+    - [Miguel Grinberg](https://blog.miguelgrinberg.com/)
+    - [David Beazley](https://twitter.com/dabeaz)
+    - [Dan Bader](https://dbader.org/)
