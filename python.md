@@ -1119,9 +1119,12 @@ Resources:
     - Non-dated
         - [Haskell Wiki - Parallelism vs. Concurrency](https://wiki.haskell.org/Parallelism_vs._Concurrency)
     - Dated
-        - 2009 - [A Curious Course on Coroutines and Concurrency](http://www.dabeaz.com/coroutines/Coroutines.pdf) - [archive](https://web.archive.org/web/20201111222718/http://dabeaz.com/coroutines/Coroutines.pdf)
+        - 2020-09-08 - [Sync vs. Async Python: What is the Difference?](https://blog.miguelgrinberg.com/post/sync-vs-async-python-what-is-the-difference)
         - 2020-09-06 - [Show HN: Parallelise pipelines of Python async iterables](https://news.ycombinator.com/item?id=24390116)
         - 2020-07-06 - [Speeding Up Python with Concurrency, Parallelism, and asyncio](https://testdriven.io/blog/concurrency-parallelism-asyncio/)
+        - 2020-06-12 - [Async Python is not faster](http://calpaterson.com/async-python-is-not-faster.html)
+            - [hacker news](https://news.ycombinator.com/item?id=23496994) - [r/coding](https://www.reddit.com/r/coding/comments/h7sada/async_python_is_not_faster/) - [r/programming](https://www.reddit.com/r/programming/comments/h7izx2/async_python_is_not_faster/) - [r/python](https://www.reddit.com/r/Python/comments/h7j025/async_python_is_not_faster/)
+            - 2020-09-15 - [Ignore All Web Performance Benchmarks, Including This One](https://blog.miguelgrinberg.com/post/ignore-all-web-performance-benchmarks-including-this-one)
         - 2020-06-09 - [Python Multi-Threading vs Multi-Processing](https://towardsdatascience.com/python-multi-threading-vs-multi-processing-1e2561eb8a24)
         - 2020-05-06 - [Concurrency In Python For Network I/O - Synchronous, Threading, Multiprocessing and Asynchronous IO](https://www.nagekar.com/2020/05/python-io-benchmarks.html)
             - Synchronous with `requests` module
@@ -1132,6 +1135,7 @@ Resources:
         - 2020-03-13 - [Threading Tutorial #1 - Concurrency, Threading and Parallelism Explained](https://www.youtube.com/watch?v=olYdb0DdGtM)
         - 2020-02-16 - [A better way for asynchronous programming: asyncio over multi-threading](https://towardsdatascience.com/a-better-way-for-asynchronous-programming-asyncio-over-multi-threading-3457d82b3295)
         - 2019-09-07 - [Multiprocessing vs. Threading in Python: What Every Data Scientist Needs to Know](https://blog.floydhub.com/multiprocessing-vs-threading-in-python-what-every-data-scientist-needs-to-know/)
+        - 2009 - [A Curious Course on Coroutines and Concurrency](http://www.dabeaz.com/coroutines/Coroutines.pdf) - [archive](https://web.archive.org/web/20201111222718/http://dabeaz.com/coroutines/Coroutines.pdf)
 
 - Machine Learning & related:
     - [streamlit](https://github.com/streamlit/streamlit) - Streamlit — The fastest way to build custom ML tools streamlit.io
