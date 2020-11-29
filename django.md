@@ -24,20 +24,45 @@ Doesn't yet support Composite Primary Keys
 ### Resources
 
 - Relase notes
+
+- [Relase notes](https://docs.djangoproject.com/en/dev/releases/)
     - 2021-04-XX - [3.2.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/3.2/)
+        - [Python compatibility](https://docs.djangoproject.com/en/dev/releases/3.2/#python-compatibility)
+            - Django 3.2 supports Python 3.6, 3.7, 3.8, and 3.9
     - 2020-11-02 - [3.1.3 on dev branch](https://docs.djangoproject.com/en/dev/releases/3.1.3/)
-    - 2020-08-04 - [3.1.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/3.1/)
+    - 2020-08-04 - [3.1.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/3.1/) - [HN](https://news.ycombinator.com/item?id=24048046)
+        - [Python compatibility](https://docs.djangoproject.com/en/dev/releases/3.1/#python-compatibility)
+            - Django 3.1 supports Python 3.6, 3.7, 3.8, and 3.9 (as of 3.1.3)
     - 2020-11-02 - [3.0.11 on dev branch](https://docs.djangoproject.com/en/dev/releases/3.0.11/)
-    - 2019-12-02 - [3.0.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/3.0/)
-        <details><summary>recommended version</summary>
-        2020-10-17 - oldest supported Python version is 3.6 (oldest version doesn't reach End Of Line)
-        </details>
+    - 2019-12-02 - [3.0.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/3.0/) - [HN](https://news.ycombinator.com/item?id=21681732)
+        - 2020-10-17 - django version that supports at LEAST oldest Python version which doesn't reach end of line EOL which is Python 3.6
+        - [Python compatibility](https://docs.djangoproject.com/en/dev/releases/3.0/#python-compatibility)
+            - Django 3.0 supports Python 3.6, 3.7, 3.8, and 3.9 (since 3.0.11)
+            - The Django 2.2.x series is the last to support Python 3.5.
     - 2020-11-02 - [2.2.17 on dev branch](https://docs.djangoproject.com/en/dev/releases/2.2.17/)
-    - 2019-04-01 - [2.2.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/2.2/)
+        - 2020-11-25 - django version that supports at MOST Python most recent version: 3.9
+    - 2019-04-01 - [2.2.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/2.2/) - [HN](https://news.ycombinator.com/item?id=19542975)
+        - [Python compatibility](https://docs.djangoproject.com/en/dev/releases/2.2/#python-compatibility)
+            - Django 2.2 supports Python 3.5, 3.6, 3.7, 3.8 (since 2.2.8), and 3.9 (since 2.2.17).
     - 2019-12-02 - [2.1.15 on dev branch](https://docs.djangoproject.com/en/dev/releases/2.1.15/)
-    - 2018-08-01 - [2.1.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/2.1/)
+    - 2018-08-01 - [2.1.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/2.1/) - [HN](https://news.ycombinator.com/item?id=17663030)
+        - [Python compatibility](https://docs.djangoproject.com/en/dev/releases/2.1/#python-compatibility)
+            - Django 2.1 supports Python 3.5, 3.6, and 3.7.
+            - Django 2.0 is the last version to support Python 3.4
     - 2019-02-13 - [2.0.13 on dev branch](https://docs.djangoproject.com/en/dev/releases/2.0.13/)
-    - 2017-12-02 - [2.0.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/2.0/)
+    - 2017-12-02 - [2.0.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/2.0/) - [HN](https://news.ycombinator.com/item?id=15832170)
+        - [Python compatibility](https://docs.djangoproject.com/en/dev/releases/2.0/#python-compatibility)
+            - Django 2.0 supports Python 3.4, 3.5, 3.6, and 3.7.
+            - The Django 1.11.x series is the last to support Python 2.7.
+            - Django 2.0 will be the last release series to support Python 3.4.
+            - end-of-life for Django 2.0 (April 2019)
+            - end-of-life for Django 1.11 LTS (supported until April 2020)
+            - end-of-life for Python 3.4 is March 2019
+    - 2017-04-04 - [1.11.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/1.11/) - [HN](https://news.ycombinator.com/item?id=14034218)
+        - [Python compatibility](https://docs.djangoproject.com/en/dev/releases/1.11/#python-compatibility)
+            - Django 1.11 requires Python 2.7, 3.4, 3.5, 3.6, or 3.7 (since 1.11.17)
+            - The Django 1.11.x series is the last to support Python 2
+            - Django 2.0, will only support Python 3.4+
 
 - Cheat sheets:
     - [LeCoupa/awesome-cheatsheets](https://github.com/LeCoupa/awesome-cheatsheets) - Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
