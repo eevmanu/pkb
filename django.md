@@ -69,8 +69,12 @@ Doesn't yet support Composite Primary Keys
 - Best Practices / Style Guides:
     - [HackSoftware/Django-Styleguide](https://github.com/HackSoftware/Django-Styleguide) - Django styleguide used in HackSoft projects
 
+- Cheat sheets / Learn / 101:
     - [LeCoupa/awesome-cheatsheets](https://github.com/LeCoupa/awesome-cheatsheets) - Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
         - [backend/django](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/backend/django.py)
+    - [Classy Class-Based Views.](https://ccbv.co.uk/)
+    - [Django Crash Course Commands](https://gist.github.com/bradtraversy/06538da5924882b2cf30fa6310d505b1)
+    - [Newbie mistakes](https://code.djangoproject.com/wiki/NewbieMistakes) - [HN](https://news.ycombinator.com/item?id=17416676)
 
 - Extra tools:
     - [encode/django-rest-framework](https://github.com/encode/django-rest-framework) - Web APIs for Django.
