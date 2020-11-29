@@ -741,6 +741,7 @@ Resources:
 - [PEP 479 -- Change StopIteration handling inside generators](https://www.python.org/dev/peps/pep-0479/)
 - [PEP 525 -- Asynchronous Generators](https://www.python.org/dev/peps/pep-0525/)
 - [PEP 530 -- Asynchronous Comprehensions](https://www.python.org/dev/peps/pep-0530/)
+- 2016-04-07 - [bearfrieze/comprehensions.md](https://gist.github.com/bearfrieze/a746c6f12d8bada03589) - Comprehensions in Python the Jedi way
 
 ### Functional programming
 
