@@ -23,7 +23,9 @@ Doesn't yet support Composite Primary Keys
 
 ### Resources
 
-- Relase notes
+- Documentation
+    - [Upgrading Django to a newer version](https://docs.djangoproject.com/en/dev/howto/upgrade-version/)
+    - [Django Deprecation Timeline](https://docs.djangoproject.com/en/dev/internals/deprecation/)
 
 - [Relase notes](https://docs.djangoproject.com/en/dev/releases/)
     - 2021-04-XX - [3.2.0 on dev branch](https://docs.djangoproject.com/en/dev/releases/3.2/)
