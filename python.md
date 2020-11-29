@@ -1250,6 +1250,7 @@ Resources:
 - YouTube:
     - [PyCon 2020](https://www.youtube.com/channel/UCMjMBMGt0WJQLeluw6qNJuA)
         - [Tutorial: Sebastian Witowski - Modern Python Developer's Toolkit](https://www.youtube.com/watch?v=WkUBx3g2QfQ)
+            - 2020-11-09 - [Concise guide to efficient Python tooling](https://keramitas.io/2020/11/09/concise-guide-to-efficient-python-tooling.html)
         - [Talk: Conor Hoekstra - Beautiful Python Refactoring](https://www.youtube.com/watch?v=W-lZttZhsUY)
         - [Talk: Anthony Shaw - Why is Python slow?](https://www.youtube.com/watch?v=I4nkgJdVZFA)
         - [Goodbye Print, Hello Debugger! - Nina Zakharenko - Talk](https://www.youtube.com/watch?v=5AYIe-3cD-s)
