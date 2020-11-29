@@ -101,8 +101,9 @@ Doesn't yet support Composite Primary Keys
     - [Koed00/django-q](https://github.com/Koed00/django-q) - A multiprocessing distributed task queue for Django
     - [modlinltd/django-advanced-filters](https://github.com/modlinltd/django-advanced-filters) - Add advanced filtering abilities to Django admin
 
-- Interesting repos:
-    - [DjangoBlog](https://github.com/liangliangyy/DjangoBlog) - Django-based blog system
+- Interesting projects:
+    - [liangliangyy/DjangoBlog](https://github.com/liangliangyy/DjangoBlog) - Django-based blog system
+    - [wsvincent/awesome-django](https://github.com/wsvincent/awesome-django) - A curated list of awesome things related to Django
 
 - Tutorials:
     - 2020-04-14 - [Using VueJS alongside Django](https://tkainrad.dev/posts/use-vuejs-with-django/) - [HN](https://news.ycombinator.com/item?id=22870273)
