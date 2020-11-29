@@ -1321,6 +1321,7 @@ Resources:
         - [Debugging Cheat Sheet](https://www.reddit.com/r/Python/comments/iehths/debugging_cheat_sheet/)
         - [Python Software Foundation Newsletter](https://us19.campaign-archive.com/home/?u=5697f493c3a48994f504d4deb&id=167eaa449b)
     - Dated
+        - 2020-11-14 - [gene1wood/all_aws_lambda_modules_python.md](https://gist.github.com/gene1wood/4a052f39490fae00e0c3) - AWS Lambda function to list all available Python modules for Python 2.7 3.6 and 3.7
         - 2020-11-07 - [73 Examples to Help You Master Python's f-strings](https://miguendes.me/73-examples-to-help-you-master-pythons-f-strings) - [reddit](https://www.reddit.com/r/Python/comments/jpojgg/73_examples_to_help_you_master_pythons_fstrings/)
         - 2020-10-30 - [25 Best GitHub Repos for Python Developers](https://thecarrots.io/blog/25-best-github-repos-for-python-developers) - [reddit](https://www.reddit.com/r/Python/comments/jms9d8/25_of_the_most_useful_python_repos/)
         - 2020-10-23 - [How to write a great Dockerfile for Python apps](https://www.pybootcamp.com/blog/how-to-write-dockerfile-python-apps/) - [reddit](https://www.reddit.com/r/Python/comments/ji9nu7/how_to_write_a_great_dockerfile_for_python/)
