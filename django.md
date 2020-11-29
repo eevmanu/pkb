@@ -66,7 +66,9 @@ Doesn't yet support Composite Primary Keys
             - The Django 1.11.x series is the last to support Python 2
             - Django 2.0, will only support Python 3.4+
 
-- Cheat sheets:
+- Best Practices / Style Guides:
+    - [HackSoftware/Django-Styleguide](https://github.com/HackSoftware/Django-Styleguide) - Django styleguide used in HackSoft projects
+
     - [LeCoupa/awesome-cheatsheets](https://github.com/LeCoupa/awesome-cheatsheets) - Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
         - [backend/django](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/backend/django.py)
 
