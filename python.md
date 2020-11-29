@@ -1281,6 +1281,8 @@ Resources:
         - [Adam Englander - Practical API Security - PyCon 2019](https://www.youtube.com/watch?v=LgoGcr8xUiI)
         - [Historia de un ingeniero junior: Mi experiencia construyendo un pipeline de ETL usando Python](https://www.youtube.com/watch?v=giFwg-kU9kE)
         - [Fridolín Pokorný - Thoth - how to recommend the best possible libraries for your application](https://www.youtube.com/watch?v=CRnKC6-cFY4)
+    - [PyCon 2018]()
+        - [Adam Englander - Practical API Security - PyCon 2018](https://www.youtube.com/watch?v=wXnvEzw4hHI)
     - Videos:
         - [The Amazing Mutable Immutable Tuple and Other Philosophic Digressions](https://www.youtube.com/watch?v=EVBq1boGP6s)
         - 2017-08-02 - [What Does It Take To Be An Expert At Python?](https://www.youtube.com/watch?v=7lmCu8wz8ro)
