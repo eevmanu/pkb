@@ -315,6 +315,7 @@ $ go tool vet --shadow
     - [atreugo](https://github.com/savsgio/atreugo) - High performance and extensible micro web framework. Zero memory allocations in hot paths.
     - [fasthttp](https://github.com/valyala/fasthttp) - Fast HTTP package for Go. Tuned for high performance. Zero memory allocations in hot paths. Up to 10x faster than net/http
     - [fiber](https://github.com/gofiber/fiber) - Fiber is an Express inspired web framework written in Go with coffee gofiber.io
+    - [goadesign/goa](https://github.com/goadesign/goa) - Design-based APIs and microservices in Go
 
 - Benchmark:
     - [Go HTTP request router and web framework benchmark](https://github.com/julienschmidt/go-http-routing-benchmark)
