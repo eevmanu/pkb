@@ -76,19 +76,40 @@ Doesn't yet support Composite Primary Keys
     - [Django Crash Course Commands](https://gist.github.com/bradtraversy/06538da5924882b2cf30fa6310d505b1)
     - [Newbie mistakes](https://code.djangoproject.com/wiki/NewbieMistakes) - [HN](https://news.ycombinator.com/item?id=17416676)
 
-- Extra tools:
-    - [encode/django-rest-framework](https://github.com/encode/django-rest-framework) - Web APIs for Django.
-    - [pydanny/cookiecutter-django](https://github.com/pydanny/cookiecutter-django) - Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly.
+- Optimization / Profiling / Logging / Debugging:
+    - [Django ORM Optimization Cheat Sheet](https://gist.github.com/levidyrek/6db1cf88b953f3f006bf678a0f09da8e)
+    - 2017-06-04 - [Django project optimization guide (part 1)](https://dizballanze.com/django-project-optimization-part-1/) - [HN](https://news.ycombinator.com/item?id=14592699)
+    - [Django logging example](https://gist.github.com/ipmb/0618f44dc5270f9a2be2826d0d933ed7)
+    - [Remote debugging in Docker (for Django apps)](https://gist.github.com/veuncent/1e7fcfe891883dfc52516443a008cfcb)
+    - [Fix: Django Debug Toolbar not showing when using with Docker.](https://gist.github.com/douglasmiranda/9de51aaba14543851ca3)
     - [jazzband/django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) - A configurable set of panels that display various debug information about the current request/response.
-    - [pennersr/django-allauth](https://github.com/pennersr/django-allauth) - Integrated set of Django applications addressing authentication, registration, account management as well as 3rd part...
+    - [jazzband/django-silk](https://github.com/jazzband/django-silk) - Silky smooth profiling for Django
+
+- Celery:
+    - [Celery tasks error handling example](https://gist.github.com/darklow/c70a8d1147f05be877c3)
+
+- Django Rest Framework - Web APIs for Django.
+    - [github](https://github.com/encode/django-rest-framework)
+    - [Classy Django REST Framework.](http://www.cdrf.co/)
+    - [How to use Serializers in the Django Python web framework](https://opensource.com/article/20/11/django-rest-framework-serializers) - [archive](https://web.archive.org/web/20201126033324/https://opensource.com/article/20/11/django-rest-framework-serializers)
+
+- Data / Databases:
+    - 2020-07-25 - [Surviving Django, if you care about databases](https://www.varrazzo.com/blog/2020/07/25/surviving-django/) - [HN](https://news.ycombinator.com/item?id=24074520)
+    - 2017-12-22 - [Full-Text Search in Django with PostgreSQL](https://www.paulox.net/2017/12/22/full-text-search-in-django-with-postgresql/) - [HN](https://news.ycombinator.com/item?id=16085873)
+
+- Async:
+    - 2020-08-14 - [Django Async: What's new and what's next?](https://deepsource.io/blog/django-async-support/) - [HN](https://news.ycombinator.com/item?id=24160608)
+
+- Useful extensions / apps:
+    - [pydanny/cookiecutter-django](https://github.com/pydanny/cookiecutter-django) - Cookiecutter Django is a framework for jumpstarting production-ready Django projects quickly.
     - [django-extensions/django-extensions](https://github.com/django-extensions/django-extensions) - This is a repository for collecting global custom management extensions for the Django Framework.
+    - [pennersr/django-allauth](https://github.com/pennersr/django-allauth) - Integrated set of Django applications addressing authentication, registration, account management as well as 3rd part...
     - [django/channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django
     - [django-crispy-forms/django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms) - The best way to have DRY Django forms. The app provides a tag and filter that lets you quickly render forms in a div …
     - [adamchainz/django-cors-headers](https://github.com/adamchainz/django-cors-headers) - Django app for handling the server headers required for Cross-Origin Resource Sharing (CORS)
     - [carltongibson/django-filter](https://github.com/carltongibson/django-filter) - A generic system for filtering Django QuerySets based on user selections
     - [graphql-python/graphene-django](https://github.com/graphql-python/graphene-django) - Integrate GraphQL into your Django project.
     - [django-haystack/django-haystack](https://github.com/django-haystack/django-haystack) - Modular search for Django
-    - [jazzband/django-silk](https://github.com/jazzband/django-silk) - Silky smooth profiling for Django
     - [joke2k/django-environ](https://github.com/joke2k/django-environ) - Django-environ allows you to utilize 12factor inspired environment variables to configure your Django application.
     - [darklow/django-suit](https://github.com/darklow/django-suit) - Modern theme for Django admin interface
     - [jazzband/django-model-utils](https://github.com/jazzband/django-model-utils) - Django model mixins and utilities.
@@ -299,9 +320,11 @@ Doesn't yet support Composite Primary Keys
     - [testdrive.io - Django](https://testdriven.io/blog/topics/django/) (intermediate / advanced)
         - [Asynchronous Tasks with Django and Celery](https://testdriven.io/blog/django-and-celery/)
     - [How to get Django and ReactJS to work together?](https://stackoverflow.com/questions/41867055/how-to-get-django-and-reactjs-to-work-together)
+    - 2018-06-25 - [How to Structure Django Projects](https://www.jamesbeith.co.uk/blog/how-to-structure-django-projects/) - [HN](https://news.ycombinator.com/item?id=17408958)
     - 2020-07-24 - [Is Django too slow?](https://mattsegal.dev/is-django-too-slow.html) - [archive](https://web.archive.org/web/20201022063130/https://mattsegal.dev/is-django-too-slow.html)
     - 2020-05-25 - [A tour of Django server setups](https://mattsegal.dev/django-prod-architectures.html) - [reddit](https://www.reddit.com/r/django/comments/gq8nil/a_tour_of_django_server_setups/)
     - 2020-03-10 - [A Guide to ASGI in Django 3.0 and its Performance](https://arunrocks.com/a-guide-to-asgi-in-django-30-and-its-performance/)
     - 2020-01-07 - [Learning Django - Beginner Mistakes I Made That You Can Avoid](https://www.reddit.com/r/django/comments/eld87j/learning_django_beginner_mistakes_i_made_that_you/)
     - 2019-12-21 - [Django web security checklist before deployment](https://web.archive.org/web/20200220012934/https://reversepython.net/lab/django-web-security-checklist-deployment/)
     - 2019-10-22 - [A Django REST framework view inheritance diagram](https://www.reddit.com/r/django/comments/dlk6v8/a_django_rest_framework_view_inheritance_diagram/) - [backup](https://i.imgur.com/ueoM3sy.png)
+    - 2017-10-11 - [My essential django package list](https://spapas.github.io/2017/10/11/essential-django-packages/) - [HN](https://news.ycombinator.com/item?id=15448739)
