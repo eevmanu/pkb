@@ -789,6 +789,10 @@ Resources:
 - Python Wiki - [Decorators](https://wiki.python.org/moin/PythonDecorators)
 - [Glossary](https://docs.python.org/3/glossary.html) - search for **decorator**
 - [PEP 614 -- Relaxing Grammar Restrictions On Decorators](https://www.python.org/dev/peps/pep-0614/)
+- [Python decorator guide](https://gist.github.com/Zearin/2f40b7b9cfc51132851a)
+- 2019-06-04 - [The Ultimate Guide to Python Decorators, Part I: Function Registration](https://blog.miguelgrinberg.com/post/the-ultimate-guide-to-python-decorators-part-i-function-registration)
+- 2019-10-22 - [The Ultimate Guide to Python Decorators, Part II: Altering Function Behavior](https://blog.miguelgrinberg.com/post/the-ultimate-guide-to-python-decorators-part-ii-altering-function-behavior)
+- 2019-12-21 - [The Ultimate Guide to Python Decorators, Part III: Decorators with Arguments](https://blog.miguelgrinberg.com/post/the-ultimate-guide-to-python-decorators-part-iii-decorators-with-arguments)
 
 ### GIL - global interpreter lock
 
