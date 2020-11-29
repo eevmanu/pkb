@@ -71,6 +71,11 @@ Doesn't yet support Composite Primary Keys
 - Interesting repos:
     - [DjangoBlog](https://github.com/liangliangyy/DjangoBlog) - Django-based blog system
 
+- Tutorials:
+    - 2020-04-14 - [Using VueJS alongside Django](https://tkainrad.dev/posts/use-vuejs-with-django/) - [HN](https://news.ycombinator.com/item?id=22870273)
+    - 2019-09-10 - [Setting up Django and your web server with uWSGI and nginx](https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html) - [github](https://github.com/unbit/uwsgi-docs/blob/master/tutorials/Django_and_nginx.rst)
+    - [Guide on how to create and set up a Dockerized web app using Django REST APIs and ReactJS](https://gist.github.com/genomics-geek/98929a9e7ba9602fed7bfa4a5a1c5c4e)
+
 - Reddit:
     - [Learning Django - Beginner Mistakes I Made That You Can Avoid](https://www.reddit.com/r/django/comments/eld87j/learning_django_beginner_mistakes_i_made_that_you/)
         - Official Documentation Vs Tutorials
