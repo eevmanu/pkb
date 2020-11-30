@@ -33,3 +33,6 @@
     - [sled](https://github.com/spacejam/sled) - the champagne of beta embedded databases
     - [dust](https://github.com/bootandy/dust) - A more intuitive version of du in rust
     - [juniper](https://github.com/graphql-rust/juniper) - GraphQL server library for Rust
+
+- Featured posts:
+    - 2020-09-08 - [When to use Rust and when to use Go](https://blog.logrocket.com/when-to-use-rust-and-when-to-use-golang/) - [archive](https://web.archive.org/web/20201126032636/https://blog.logrocket.com/when-to-use-rust-and-when-to-use-golang/)
