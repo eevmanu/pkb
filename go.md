@@ -524,3 +524,4 @@ $ go tool vet --shadow
     - Dated:
         - 2020-11-05 - [Combining DDD, CQRS, and Clean Architecture by refactoring a Go project](https://threedots.tech/post/ddd-cqrs-clean-architecture-combined/) - [reddit](https://www.reddit.com/r/golang/comments/join3w/combining_ddd_cqrs_and_clean_architecture_by/)
         - 2019-11-25 - [Choosing Go at American Express](https://americanexpress.io/choosing-go/)
+        - 2018-02-02 - [posener/go-shebang-story.md](https://gist.github.com/posener/73ffd326d88483df6b1cb66e8ed1e0bd) - Story: Writing Scripts with Go
