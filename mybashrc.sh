@@ -52,12 +52,12 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 # PYENV_VERSION
 
-# "pipenv"
+# pipenv
 # export PIPENV_VENV_IN_PROJECT=True
 
 # ===============================================
 
-# ====================== Go
+# ====================== Go (Golang)
 
 export GOROOT=/usr/local/go
 export GOPATH="$HOME/go"
@@ -184,7 +184,7 @@ alias gitft="git fetch --all; git fetch --prune"
 # ====================== Manage updates
 
 alias myupdate="sudo apt update; apt list --upgradable"
-# -a give to much info (rows / versions) for code and code-insiders
+# -a gives too much info (rows / versions) for some packages, like code and code-insiders
 # alias myupdate="sudo apt update; apt list --upgradable -a"
 alias myupgrade="sudo apt upgrade -y; sudo apt autoremove -y"
 
