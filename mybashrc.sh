@@ -39,18 +39,33 @@ PATH="$PATH:$HOME/bin"
 
 # ====================== Python
 
-# if `pip` installed locally
+# pip
+# if `pip` is installed locally
 # add $HOME/.local/bin/ to $PATH
 # PATH="$PATH:$HOME/.local/bin"
 
-# # "virtualenv + virtualenvwrapper"
-# # export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-# # export VIRTUALENVWRAPPER_PYTHON=$HOME/bin/python
+# virtualenv + virtualenvwrapper
+# ------------------------------------------------
+# when `python` command location is at /usr/bin/python and, most commonly, point to Python 2
+# and pip is installed globally
+# export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+# export WORKON_HOME=$HOME/Envs
+# mkdir -p $WORKON_HOME
+# source /usr/local/bin/virtualenvwrapper.sh
+# ------------------------------------------------
+# when `python` command location is at /usr/bin/python and, most commonly, point to Python 3
+# and pip is installed globally
 # export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 # export WORKON_HOME=$HOME/Envs
 # mkdir -p $WORKON_HOME
-# # source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
+# ------------------------------------------------
+# when pip is installed locally
+# export VIRTUALENVWRAPPER_PYTHON=$HOME/bin/python
+# export WORKON_HOME=$HOME/Envs
+# mkdir -p $WORKON_HOME
 # source $HOME/.local/bin/virtualenvwrapper.sh
+# ------------------------------------------------
 
 # pyenv
 # PYENV_DEBUG
