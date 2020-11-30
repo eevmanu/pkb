@@ -39,3 +39,7 @@
 - 2020-07-20 - [How Postman Engineering Does Microservices Today](https://blog.postman.com/postman-engineering-microservices-example/)
 - 2020-09-30 - [2020 State of the API Report](https://www.postman.com/state-of-api/) - [blog post](https://blog.postman.com/announcing-2020-state-of-api-report/)
 
+
+- Blogs:
+    - [Postman](https://blog.postman.com/) - The Collaboration Platform for API Development
+    - [Stoplight](https://stoplight.io/blog/) - Design, Document & Build Quality APIs Faster
