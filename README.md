@@ -1,5 +1,15 @@
 
 Collapsible Section in Markdown
+- [Python](./python.md)
+    - [Django](./django.md)
+- [Go](./go.md)
+- [Rust](./rust.md)
+- [API Design](./api-design.md)
+- [Docker](./docker.md)
+- [Kubernetes](./k8s.md)
+- [PostgreSQL](./postgres.md)
+- [Git](./git.md)
+- []()
 
 - [Gist 1](https://gist.github.com/joyrexus/16041f2426450e73f5df9391f7f7ae5f)
 - [Gist 2](https://gist.github.com/pierrejoubert73/902cc94d79424356a8d20be2b382e1ab)
