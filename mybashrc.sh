@@ -221,6 +221,7 @@ myip() {
 
 alias dw="cd $HOME/Downloads"
 
+alias ytmp4="youtube-dl -f 'mp4[height=720]+bestaudio'"
 alias ytmp3="youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0"
 
 alias open=xdg-open
