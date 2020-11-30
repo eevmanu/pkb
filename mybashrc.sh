@@ -16,21 +16,24 @@
 
 # ====================== "bin" folders
 
-# add user bin directories to PATH
+# add bin directory from user's $HOME to $PATH
 PATH="$PATH:$HOME/.local/bin"
 
-# install my personal stuffs I want to add in my PATH
+# add personal bin folder (where I put personal useful binaries) to $PATH
 PATH="$PATH:$HOME/bin"
 
-# if install `snap`
-# PATH="$PAHT:/snap/bin"
+# if `snap` is installed
+# add snap bin folder to $PATH
+# PATH="$PATH:/snap/bin"
 
-# add exiftool bin to PATH
+# add exiftool bin folder to $PATH
+# if you don't have `su` access, you can run ExifTool in your own account by
+# moving "exiftool" and its "lib" directory to any convenient location,
+# preferably somewhere in your PATH.
+# PATH="$PATH:$HOME/bin/exiftool"
 # https://exiftool.org/install.html#Unix
 # docs - https://exiftool.org/exiftool_pod.html
 # releases - https://github.com/exiftool/exiftool/releases
-# If you don't have su access, you can run ExifTool in your own account by moving "exiftool" and its "lib" directory to any convenient location, preferably somewhere in your PATH.
-PATH="$HOME/bin/exiftool:$PATH"
 
 # ===============================================
 
