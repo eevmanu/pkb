@@ -1,11 +1,18 @@
-# To import this file from .bashrc
-# 1. add sourcing on $HOME/.bashrc file (https://stackoverflow.com/questions/4952177/include-additional-files-in-bashrc)
-# at the end of $HOME/.bashrc file, add:
+# INSTRUCTIONS
+
+# To load this instructions in your terminal
+
+# 1.
+# source this file at user'sn $HOME/.bashrc file
+# (https://stackoverflow.com/questions/4952177/include-additional-files-in-bashrc)
+# add lines below at the end of $HOME/.bashrc file
 # if [ -f $HOME/mybashrc.sh ]; then
 #     . $HOME/mybashrc.sh
 # fi
-# 2. create symbolic file
-# ln -sT $(pwd)/mybashrc.sh $HOME/mybashrc.sh
+
+# 2.
+# create a symbolic file at user's $HOME folder, pointing to this file
+# $ ln -sT $(pwd)/mybashrc.sh $HOME/mybashrc.sh
 
 # ====================== "bin" folders
 
