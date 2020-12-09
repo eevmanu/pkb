@@ -270,6 +270,53 @@ $ go tool vet --shadow
 
 ## Resources
 
+- Structure:
+    - Learn / 101:
+    - Language specific rules:
+    - Setup VS Code:
+
+    - Project structures:
+
+    - Interfaces:
+    - Channels:
+    - Concurrency - Parallelism - Multiprocessing - Multithreading - Asynchronous(async/await):
+
+    - Error handling:
+    - Web Frameworks:
+    - Testing:
+
+    - Data related tools:
+    - Data structures / Algorithm
+
+    - Best practices & Style Guide:
+    - Roadmap / Study Guides / Training / Interview Questions / Exercises / Problems / Examples
+    - Design patterns:
+
+    - Benchmark:
+    - Performance:
+
+    - Generics
+    - Unikernel
+
+    - Extra tools:
+
+    - News sources:
+    - Reddit:
+    - Youtube:
+    - Books:
+    - Podcasts:
+
+    - Why Go / Success stories
+
+    - Conferences
+
+    - Release notes / Changelog / Updates about the language:
+    - Interesting blogs from people / groups / companies:
+
+    - Highlighted posts:
+    - Final posts:
+
+
 - Learn / 101:
     - [A Tour of Go](https://tour.golang.org/)
     - [Effective Go](https://golang.org/doc/effective_go.html)
@@ -279,7 +326,7 @@ $ go tool vet --shadow
     - [Go by Example](https://gobyexample.com/)
     - 2020-03-18 - [Getting started with Go guide](https://dominicstpierre.com/getting-started-with-go-guide) - [reddit](https://www.reddit.com/r/golang/comments/fkw2rx/i_wrote_a_guide_for_beginners_wanting_to_get/) - [archive](https://web.archive.org/web/20201125045730/https://dominicstpierre.com/getting-started-with-go-guide)
 
-- Language specific rules:
+- Rules about Go:
     - Naming convention
         - uppercase (capital) on first letter to declare ____ as public
         - lowercase on first letter to declare ____ as private
@@ -306,7 +353,7 @@ $ go tool vet --shadow
 
 - Project structures:
     - [golang-standards/project-layout](https://github.com/golang-standards/project-layout) - Standard Go Project Layout
-    - 2020-07-06 - [HOW I STRUCTURE GO PACKAGES](https://bencane.com/stories/2020/07/06/how-i-structure-go-packages/) - [reddit](https://www.reddit.com/r/golang/comments/hm34kq/how_i_structure_go_packages/)
+    - 2020-07-06 - [How I structure Go packages](https://bencane.com/stories/2020/07/06/how-i-structure-go-packages/) - [reddit](https://www.reddit.com/r/golang/comments/hm34kq/how_i_structure_go_packages/)
 
 - Error handling:
     - 2020-07-06 - [Why Go's Error Handling is Awesome](https://rauljordan.com/2020/07/06/why-go-error-handling-is-awesome.html) - [reddit](https://www.reddit.com/r/golang/comments/hmnhkz/why_gos_error_handling_is_awesome/)
@@ -316,6 +363,11 @@ $ go tool vet --shadow
     - [fasthttp](https://github.com/valyala/fasthttp) - Fast HTTP package for Go. Tuned for high performance. Zero memory allocations in hot paths. Up to 10x faster than net/http
     - [fiber](https://github.com/gofiber/fiber) - Fiber is an Express inspired web framework written in Go with coffee gofiber.io
     - [goadesign/goa](https://github.com/goadesign/goa) - Design-based APIs and microservices in Go
+    - [Write webapps without a framework in Go](https://github.com/thewhitetulip/web-dev-golang-anti-textbook)
+    - [build a web with golang](https://github.com/astaxie/build-web-application-with-golang)
+
+- Testing:
+    - [Learn Go with test-driven development](https://github.com/quii/learn-go-with-tests)
 
 - Benchmark:
     - [Go HTTP request router and web framework benchmark](https://github.com/julienschmidt/go-http-routing-benchmark)
@@ -361,6 +413,14 @@ $ go tool vet --shadow
     - [emirpasic/gods](https://github.com/emirpasic/gods) - GoDS (Go Data Structures). Containers (Sets, Lists, Stacks, Maps, Trees), Sets (HashSet, TreeSet, LinkedHashSet), Lists (ArrayList, SinglyLinkedList, DoublyLinkedList), Stacks (LinkedListStack, ArrayStack), Maps (HashMap, TreeMap, HashBidiMap, TreeBidiMap, LinkedHashMap), Trees (RedBlackTree, AVLTree, BTree, BinaryHeap), Comparators, Iterators, …
     - [mitchellh/mapstructure](https://github.com/mitchellh/mapstructure) - Go library for decoding generic map values into native Go structures and vice versa.
     - [crowdsecurity/crowdsec](https://github.com/crowdsecurity/crowdsec) - An open-source, lightweight agent to detect and respond to bad behaviours. It also automatically benefits from our global community-wide IP reputation database.
+    - [cespare/reflex](https://github.com/cespare/reflex) - Run a command when files change
+    - [oxequa/realize](https://github.com/oxequa/realize) - Realize is the #1 Golang Task Runner which enhance your workflow by automating the most common tasks and using the best performing Golang live reloading.
+    - [avelino/awesome-go](https://github.com/avelino/awesome-go)
+    - [uber-go/fx](https://github.com/uber-go/fx) - A dependency injection based application framework for Go.
+    - [uber/cadence](https://github.com/uber/cadence) - Cadence is a distributed, scalable, durable, and highly available orchestration engine to execute asynchronous long-running business logic in a scalable and resilient way.
+    - []() -
+    - []() -
+    - []() -
 
 - Concurrency - Parallelism - Multiprocessing - Multithreading - Asynchronous(async/await):
     - A Tour of Go - [Goroutines](https://tour.golang.org/concurrency/1)
@@ -412,20 +472,6 @@ $ go tool vet --shadow
     - [tmrts/go-patterns](https://github.com/tmrts/go-patterns) - Curated list of Go design patterns, recipes and idioms
     - 2020-09-04 - [Learn Go by Building a Bus Service](https://medium.com/better-programming/learn-go-by-building-a-bus-service-6c11e7b81b92) - [reddit](https://www.reddit.com/r/golang/comments/iml937/i_wrote_a_piece_about_lightweight_design_patterns/)
 
-- Interesting Github Repos
-    - [Go (Golang) Clean Architecture based on Reading Uncle Bob's Clean Architecture](https://github.com/bxcodec/go-clean-arch)
-    - [Learn Go with test-driven development](https://github.com/quii/learn-go-with-tests)
-    - [avelino/awesome-go](https://github.com/avelino/awesome-go)
-    - [Write webapps without a framework in Go](https://github.com/thewhitetulip/web-dev-golang-anti-textbook)
-    - [build a web with golang](https://github.com/astaxie/build-web-application-with-golang)
-    - [uber-go/fx](https://github.com/uber-go/fx) - A dependency injection based application framework for Go.
-    - [uber/cadence](https://github.com/uber/cadence) - Cadence is a distributed, scalable, durable, and highly available orchestration engine to execute asynchronous long-running business logic in a scalable and resilient way.
-    - [SuperPaintman/the-evolution-of-a-go-programmer](https://github.com/SuperPaintman/the-evolution-of-a-go-programmer) - [reddit](https://www.reddit.com/r/golang/comments/f1hy9a/the_evolution_of_a_go_programmer/)
-    - []()
-    - []()
-    - []()
-    - []()
-
 - Roadmap / Study Guides / Training / Interview Questions / Exercises / Problems / Examples
     - [Alikhll/golang-developer-roadmap](https://github.com/Alikhll/golang-developer-roadmap) - Roadmap to becoming a Go developer in 2020
     - [dzyanis/roadmap](https://github.com/dzyanis/roadmap) - Software Engineer Roadmap (alpha) - [golang roadmap](https://github.com/dzyanis/roadmap/blob/master/stacks/go/data/roadmap.png)
@@ -438,6 +484,8 @@ $ go tool vet --shadow
     - [openset/leetcode](https://github.com/openset/leetcode) - LeetCode Problems' Solutions
     - [ardanlabs/gotraining](https://github.com/ardanlabs/gotraining) - Go Training Class Material
         - [Ultimate Go](https://github.com/ardanlabs/gotraining/tree/master/topics/go) - [Design Guidelines](https://github.com/ardanlabs/gotraining/tree/master/topics/go#design-guidelines)
+    - [SuperPaintman/the-evolution-of-a-go-programmer](https://github.com/SuperPaintman/the-evolution-of-a-go-programmer) - [reddit](https://www.reddit.com/r/golang/comments/f1hy9a/the_evolution_of_a_go_programmer/)
+
 - Performance:
     - [go-perfbook](https://github.com/dgryski/go-perfbook) - Thoughts on Go performance optimization
     - [cadvisor](https://github.com/google/cadvisor) - Analyzes resource usage and performance characteristics of running containers.
@@ -497,11 +545,12 @@ $ go tool vet --shadow
 - News sources:
     - [Changelog News - Go Topic](https://changelog.com/topic/go)
 
-- Best practices & Style Guide:
+- Best practices / Style Guide:
     - [Style guideline for Go packages](https://rakyll.org/style-packages/)
     - [uber-go/guide/](https://github.com/uber-go/guide) - The Uber Go Style Guide.
     - [dgryski/awesome-go-style](https://github.com/dgryski/awesome-go-style) - A collection of Go style guides
     - 2020-10-24 - [Style guide for Go code](https://www.reddit.com/r/golang/comments/jh3syk/style_guide_for_go_code/)
+    - [Go (Golang) Clean Architecture based on Reading Uncle Bob's Clean Architecture](https://github.com/bxcodec/go-clean-arch)
 
 - Highlighted articles:
     - [Allocation efficiency in high-performance Go services](https://segment.com/blog/allocation-efficiency-in-high-performance-go-services/)
@@ -511,7 +560,8 @@ $ go tool vet --shadow
 - Why Go / Success stories
     - 2020-06-01 - [PayPal Taps Go to Modernize and Scale](https://go.dev/solutions/paypal/) - [reddit](https://www.reddit.com/r/golang/comments/ilr81s/paypal_taps_go_to_modernize_and_scale_in_our/)
 
-- [Conferences](https://github.com/golang/go/wiki/Conferences)
+- Conferences
+    - golang/go - Wiki - [Conferences](https://github.com/golang/go/wiki/Conferences)
 
 - Release notes / Changelog / Updates:
     - 2020-09-06 - [TIL: make+copy to clone a slice is optimized in Go 1.15, which is not mentioned in 1.15 release notes.](https://www.reddit.com/r/golang/comments/inorfa/til_makecopy_to_clone_a_slice_is_optimized_in_go/)
