@@ -321,7 +321,11 @@ $ go tool vet --shadow
     - [A Tour of Go](https://tour.golang.org/)
     - [Effective Go](https://golang.org/doc/effective_go.html)
     - [Gophercises](https://gophercises.com/)
-    - [Go 101](https://go101.org/article/101.html) - [github](https://github.com/go101/go101)
+    - [Go 101](https://go101.org/article/101.html)
+        - [github](https://github.com/go101/go101)
+        - [Go Tips 101](https://go101.org/article/tips.html)
+        - [Go Details 101](https://go101.org/article/details.html)
+        - [Go FAQ 101](https://go101.org/article/unofficial-faq.html)
     - [Go Code Review Comments](https://github.com/golang/go/wiki/CodeReviewComments)
     - [Go by Example](https://gobyexample.com/)
     - 2020-03-18 - [Getting started with Go guide](https://dominicstpierre.com/getting-started-with-go-guide) - [reddit](https://www.reddit.com/r/golang/comments/fkw2rx/i_wrote_a_guide_for_beginners_wanting_to_get/) - [archive](https://web.archive.org/web/20201125045730/https://dominicstpierre.com/getting-started-with-go-guide)
@@ -528,10 +532,11 @@ $ go tool vet --shadow
         - [Gopher Academy - GopherCon 2019](https://www.youtube.com/playlist?list=PL2ntRZ1ySWBdDyspRTNBIKES1Y-P__59_)
         - [Gopher Academy - GopherCon 2017 - Lightning Talks](https://www.youtube.com/playlist?list=PL2ntRZ1ySWBfhRZj3BDOrKdHzoafHsKHU)
 
-- Interesting blogs from people / groups / companies:
+- People / groups / companies to follow:
     - [Ben Johnson](https://medium.com/@benbjohnson)
     - [Jaana Dogan](https://rakyll.org)
     - [gopher-reading-list](https://github.com/enocom/gopher-reading-list) - A curated selection of blog posts on Go
+    - [Go 101](https://twitter.com/go100and1)
 
 - Books:
     - [dariubs/GoBooks](https://github.com/dariubs/GoBooks) - List of Golang books
@@ -564,6 +569,8 @@ $ go tool vet --shadow
     - golang/go - Wiki - [Conferences](https://github.com/golang/go/wiki/Conferences)
 
 - Release notes / Changelog / Updates:
+    - 2020-07-18 - [reflect: allow multiple keys in key:value pair in struct tag]()
+        - [tweet](https://twitter.com/go100and1/status/1333773730519031808)
     - 2020-09-06 - [TIL: make+copy to clone a slice is optimized in Go 1.15, which is not mentioned in 1.15 release notes.](https://www.reddit.com/r/golang/comments/inorfa/til_makecopy_to_clone_a_slice_is_optimized_in_go/)
     - 2020-04-26 - [What's coming in Go 1.15](https://docs.google.com/presentation/d/1veyF0y6Ynr6AFzd9gXi4foaURlgbMxM-tmB4StDrdAM/) - [reddit](https://www.reddit.com/r/golang/comments/g8d8jk/whats_coming_in_go_115_slides_by_daniel_mart%C3%AD/)
 
