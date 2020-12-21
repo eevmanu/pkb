@@ -144,6 +144,77 @@ GitHub:
 </details>
 
 
+## Things to do after install PopOS
+
+Be aware of [Pop!_OS Keyboard Shortcuts](https://support.system76.com/articles/pop-keyboard-shortcuts/)
+
+Add `Spanish (Latin American)` keyboard layout
+
+- `Settings` -> `Keyboard` -> `Input Sources` -> Add `Spanish (Latin American)`
+
+Set my preferred global `Format`
+
+- `Settings` -> `Region & Language` -> `Formats` -> set `United States (English)`
+
+Change system `Fonts`:
+
+- Default on **PopOS**:
+
+    | Property          | Value             |
+    | ----------------- | ----------------- |
+    | Standard font     | Source Code Pro   |
+    | Serif font        | Serif             |
+    | Sans-serif font   | Sans              |
+    | Fixed-width font  | Monospace         |
+
+- Optional fonts to consider:
+    - [most starred repo with `font`](https://github.com/search?q=font&s=stars&type=Repositories)
+    - [tonsky/FiraCode](https://github.com/tonsky/FiraCode)
+    - [source-foundry/Hack](https://github.com/source-foundry/Hack)
+    - [adobe-fonts/source-code-pro](https://github.com/adobe-fonts/source-code-pro)
+    - [microsoft/cascadia-code](https://github.com/microsoft/cascadia-code)
+    - [pop-os/fonts](https://github.com/pop-os/fonts)
+    - [rsms/inter](https://github.com/rsms/inter)
+
+- Related links:
+    - [Go fonts](https://blog.golang.org/go-fonts)
+    - [Best 20 Fonts for Ubuntu](https://linuxhint.com/best_fonts_ubuntu_linux/)
+    - [List of monospaced typefaces](https://en.wikipedia.org/wiki/List_of_monospaced_typefaces)
+
+`Python` scripts
+
+```bash
+$ py3clean
+$ py3compile
+$ py3versions
+$ pydoc3.8
+```
+
+**GNOME** `Update Manager`
+
+- Search if package is already installed
+
+```bash
+$ apt search update-manager
+...
+update-manager/focal-updates,focal-updates,now 1:20.04.10 all [installed]
+GNOME application that manages apt updates
+...
+
+# test install with '-s' option also help with it
+$ apt install -s update-manager
+```
+
+- Install it
+
+```bash
+$ sudo apt install update-manager
+```
+
+**GNOME** `Tweaks Tool`
+
+- Install it
+
     ```bash
     $ sudo apt install gnome-tweak-tool
     ...
@@ -153,31 +224,79 @@ GitHub:
     ...
     ```
 
-    - General -> Animations -> Turn off
-    - Interface text -> Fira Sans book 10 (default)
+- Things to do after install it:
+    - `General` -> `Animations` -> `Turn off`
+    - `Interface text` -> Fira Sans book 10 (default)
+        - [How do I change fonts and adjust their size?](https://askubuntu.com/questions/19770/how-do-i-change-fonts-and-adjust-their-size)
+    - Setup keyboard shortcut (`Alt` +  `Space`) to change keyboard layout
+        - Steps:
+            - Install `Gnome Tweaks`
+            - Open it
+            - Go to `Keyboard & Mouse`
+            - Click on `Additional Layout Options`
+            - Unfold `Switching to another layout`
+            - Check `Alt+Space` option - [img](https://i.imgur.com/aSZxajn.png)
 
-    - [How do I change fonts and adjust their size?](https://askubuntu.com/questions/19770/how-do-i-change-fonts-and-adjust-their-size)
 
-- **GNOME** Shell integration
-    - [chrome extension](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
+**GNOME** `Shell integration`: install [chrome extension](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
 
-- **GNOME** extensions
-    - [Ubuntu AppIndicators](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/) - for application indicators zone in menu bar
-    - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
-        - Behaviour -> Use keyboards shortcuts to activate apps -> Turn off (because use **Super+Q** which is used to close program)
-    - [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
-    - [AlternateTab](https://extensions.gnome.org/extension/15/alternatetab/)
-    - [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)
-    - [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/)
-        - [install dependencies](https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet#prerequisites)
-            ```bash
-            $ sudo apt install gir1.2-gtop-2.0 gir1.2-nm-1.0 gir1.2-clutter-1.0
-            ```
-        - reboot gnome shell if needed (`Alt + F2` and input `r` in the prompt)
-    - [Multi Monitors Add-On](https://extensions.gnome.org/extension/921/multi-monitors-add-on/)
-    - [Todo list](https://extensions.gnome.org/extension/162/todo-list/)
+**GNOME** `extensions` to install:
 
-    - [Dynamic Panel Transparency](https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/)
+- [Ubuntu AppIndicators](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/) - for application indicators zone in menu bar
+
+- [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
+
+    - Behaviour -> Use keyboards shortcuts to activate apps -> Turn off (because use **Super+Q** which is used to close program)
+
+- [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
+
+- [AlternateTab](https://extensions.gnome.org/extension/15/alternatetab/)
+
+- [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)
+
+- [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/)
+
+    Install [prerequisites / dependencies](https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet#prerequisites)
+
+    ```bash
+    $ sudo apt install \
+        gir1.2-gtop-2.0 \
+        gir1.2-nm-1.0 \
+        gir1.2-clutter-1.0
+    ```
+
+    Reboot gnome shell if needed (`Alt + F2` and input `r` in the prompt)
+
+- [Multi Monitors Add-On](https://extensions.gnome.org/extension/921/multi-monitors-add-on/)
+
+- [Todo list](https://extensions.gnome.org/extension/162/todo-list/)
+
+- [Dynamic Panel Transparency](https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/)
+
+- Complete list of extensions:
+
+    ```
+    - Alt Tab: Raise First Window
+    - AlternateTab
+    - Always Show Workspaces
+    - Dash to Dock
+    - Desktop Icons
+    - Dynamic Panel Transparency
+    - Multi Monitors Add-On
+    - Pop Battery Icon Fix
+    - Pop Shell
+    - Pop Shop Details
+    - Sound Input & Output Device Chooser
+    - system-monitor
+    - System76 Power
+    - Tweaks in System Menu
+    - Ubuntu AppIndicators
+    ```
+
+Related links:
+
+- [Things to do after installing Pop!_OS 20.04 (Apps, Settings, and Tweaks)](https://mutschler.eu/linux/install-guides/pop-os-post-install/) - [archive](https://web.archive.org/web/20201217152053/https://mutschler.eu/linux/install-guides/pop-os-post-install/)
+
 
 ## Apps
 
