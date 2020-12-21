@@ -735,26 +735,50 @@ Add to `Startup Applications`
 - Enter `dropbox` (should appear if was installed via `flatpak`)
 - Confirm to add it
 
-- [Spotify](https://www.spotify.com/download/linux/)
+### [Spotify](https://www.spotify.com/download/linux/)
 
-    ```bash
-    # install via Snap
-    $ snap install spotify
+Install via `flatpak` (recommended / preferred way)
 
-    # install via flatpak
-    $ flatpak install flathub com.spotify.Client
+```bash
+$ flatpak install flathub com.spotify.Client
+```
 
-    # install via apt packages
-    $ curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
-    $ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-    $ sudo apt-get update && sudo apt-get install spotify-client
+Install via `Snap`
 
-    # to completely remove it
-    $ rm -rf $HOME/.config/spotify/*
-    $ rm -rf $HOME/.cache/spotify/*
-    ```
+```bash
+$ snap install spotify
+```
 
-    Don't forget to change Settings
+Install via package repository
+
+```bash
+# add apt key
+$ curl -sS https://download.spotify.com/debian/pubkey.gpg | \
+    sudo apt-key add -
+
+# add package repository url
+$ echo "deb http://repository.spotify.com stable non-free" | \
+    sudo tee /etc/apt/sources.list.d/spotify.list
+
+# update package repository and install it
+$ sudo apt update && \
+    sudo apt install spotify-client
+```
+
+Uninstall / Remove it
+
+```bash
+$ sudo apt remove spotify-client
+$ sudo apt purge spotify-client
+$ rm -rf $HOME/.config/spotify/*
+$ rm -rf $HOME/.cache/spotify/*
+```
+
+Personal Settings
+<!-- TODO -->
+
+Related links
+- [archive](https://web.archive.org/web/20201221183349/https://www.spotify.com/pe/download/linux/)
 
 - [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux)
     - [vscodium](https://github.com/VSCodium/vscodium)
