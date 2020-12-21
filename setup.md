@@ -877,29 +877,45 @@ $ snap install vlc
 Related links
 - [VLC media player for Ubuntu](https://www.videolan.org/vlc/download-ubuntu.html)
 
-- [Foxit reader](https://www.foxitsoftware.com/pdf-reader/) - Industry’s Most Powerful PDF Reader
-    - [other options](https://linuxconfig.org/pdf-viewer-list-on-ubuntu-20-04-focal-fossa-linux)
+### [Foxit reader](https://www.foxitsoftware.com/pdf-reader/)
 
-    ```bash
-    $ wget http://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
+Industry’s Most Powerful PDF Reader
 
-    # uncompress and delete previous file
-    $ gzip -d FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
+Download `.tar.gz` file
 
-    # untar
-    $ tar xzvf FoxitReader.enu.setup.2.4.4.0911.x64.run.tar
+```bash
+$ wget https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
+```
 
-    # assign permissions, if needed
-    $ chmod a+x FoxitReader*.run
+Uncompress it
 
-    # run installer
-    $ ./FoxitReader.enu.setup.2.4.4.0911\(r057d814\).x64.run
+```bash
+$ gzip -d FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
 
-    # select any of the following paths as Installation Folder:
-    $HOME/opt/foxitsoftware/foxitreader
-    $HOME/.opt/foxitsoftware/foxitreader
-    /opt/foxitsoftware/foxitreader
-    ```
+$ tar xzvf FoxitReader.enu.setup.2.4.4.0911.x64.run.tar
+```
+
+Assign permissions to `.run` file
+
+```bash
+$ chmod u+x FoxitReader*.run
+```
+
+Run installer
+
+```bash
+$ ./FoxitReader.enu.setup.2.4.4.0911\(r057d814\).x64.run
+```
+
+Choose any of the following paths as `Installation Folder`
+- `$HOME/.local/opt/foxitsoftware/foxitreader`
+- `/opt/foxitsoftware/foxitreader`
+
+Alternatives
+- [Master PDF Editor](https://code-industry.net/free-pdf-editor/)
+
+Related links
+- 2020-05-12 - [PDF viewer list on Ubuntu 20.04 Focal Fossa Linux](https://linuxconfig.org/pdf-viewer-list-on-ubuntu-20-04-focal-fossa-linux)
 
 - [Zoom](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_adcc0b66-b2f4-468b-bc7a-12c182f354b7)
 
