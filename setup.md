@@ -859,14 +859,23 @@ $ snap install --classic slack
 Related links
 - [Release notes for Linux](https://slack.com/intl/en-us/release-notes/linux)
 
-- [VLC](https://github.com/videolan/vlc)
+### [VLC](https://github.com/videolan/vlc)
 
-    ```bash
-    $ apt install vlc
+Install via `apt`
 
-    # https://www.videolan.org/vlc/download-ubuntu.html
-    $ snap install vlc
-    ```
+```bash
+$ sudo apt install vlc
+```
+
+Install via `Snap`
+
+```bash
+
+$ snap install vlc
+```
+
+Related links
+- [VLC media player for Ubuntu](https://www.videolan.org/vlc/download-ubuntu.html)
 
 - [Foxit reader](https://www.foxitsoftware.com/pdf-reader/) - Industry’s Most Powerful PDF Reader
     - [other options](https://linuxconfig.org/pdf-viewer-list-on-ubuntu-20-04-focal-fossa-linux)
