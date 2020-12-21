@@ -543,6 +543,24 @@ Setup Amazon Echo device as speaker
 
 [System76 - Support - Solve Wireless Issues](https://support.system76.com/articles/wireless/)
 
+## Revert upgrading PopOS verison
+
+Assuming you already click on `Download` button from `Settings` - `OS Upgrade` section
+
+Detect on which `apt` important files put new version on
+
+```bash
+# groovy is ubuntu 20.10
+$ grep -r groovy /etc/apt/
+...
+```
+
+Comment those lines and replace it with actual version you're using
+
+Run `apt update`
+
+Activate all PPA files where commented by `Download` button action
+
 
 ## Apps
 
