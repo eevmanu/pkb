@@ -838,19 +838,26 @@ Related links
 - [Wiki](https://github.com/telegramdesktop/tdesktop/wiki)
   - [Keyboard Shortcuts](https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts)
 
-- [Slack](https://slack.com/intl/en-pe/downloads/linux)
-    - [Release notes for Linux](https://slack.com/intl/en-pe/release-notes/linux)
+### [Slack](https://slack.com/intl/en-us/downloads/linux)
 
-    ```bash
-    # install via deb file
-    $ wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.4.2-amd64.deb
+Install via `.deb`
 
-    # install via snap
-    $ snap install slack
-    # https://snapcraft.io/docs/snap-confinement
-    $ snap install slack --classic
-    $ snap install --classic slack
-    ```
+```bash
+$ wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.4.2-amd64.deb
+```
+
+Install via `Snap`
+
+```bash
+$ snap install slack
+
+# https://snapcraft.io/docs/snap-confinement
+$ snap install slack --classic
+$ snap install --classic slack
+```
+
+Related links
+- [Release notes for Linux](https://slack.com/intl/en-us/release-notes/linux)
 
 - [VLC](https://github.com/videolan/vlc)
 
