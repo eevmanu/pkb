@@ -815,22 +815,28 @@ Related links:
 - [How do I remove VS Code & settings from Ubuntu?](https://superuser.com/questions/1113022/how-do-i-remove-vs-code-settings-from-ubuntu)
 - [How to change indentation in Visual Studio Code?](https://stackoverflow.com/questions/34174207/how-to-change-indentation-in-visual-studio-code)
 
-- [Telegram](https://telegram.org/dl/desktop/linux)
-    - [Changelog](https://desktop.telegram.org/changelog)
-    - [Wiki of Telegram @ Github](https://github.com/telegramdesktop/tdesktop/wiki)
-    - [Keyboard Shortcuts @ Github](https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts)
+### [Telegram](https://telegram.org/dl/desktop/linux)
 
-    ```bash
-    # install via flatpak
-    $ flatpak install flathub org.telegram.desktop
+Install via `flatpak`
 
-    # icon saved here
-    $HOME/.local/share/icons/telegram.png
+```bash
+$ flatpak install flathub org.telegram.desktop
+```
 
-    # folders used for Telegram via Flatpak
-    $HOME/.local/share/TelegramDesktop/
-    $HOME/.var/app/org.telegram.desktop
-    ```
+Telegram icon location - `$HOME/.local/share/icons/telegram.png`
+
+Telegram folders used via `flatpak` installation
+
+```bash
+# folders used for Telegram via Flatpak
+$HOME/.local/share/TelegramDesktop/
+$HOME/.var/app/org.telegram.desktop/
+```
+
+Related links
+- [Changelog - Version history](https://desktop.telegram.org/changelog)
+- [Wiki](https://github.com/telegramdesktop/tdesktop/wiki)
+  - [Keyboard Shortcuts](https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts)
 
 - [Slack](https://slack.com/intl/en-pe/downloads/linux)
     - [Release notes for Linux](https://slack.com/intl/en-pe/release-notes/linux)
