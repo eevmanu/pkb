@@ -939,15 +939,19 @@ Install via [`Snap`](https://snapcraft.io/zoom-client)
 $ snap install zoom-client
 ```
 
-- [Skype](https://www.skype.com/en/get-skype/download-skype-for-desktop/)
+### [Skype](https://www.skype.com/en/get-skype/download-skype-for-desktop/)
 
-    ```bash
-    # install via deb file
-    $ wget https://repo.skype.com/latest/skypeforlinux-64.deb
+Install via `.deb`
 
-    # install via snap
-    $ snap install skype
-    ```
+```bash
+$ wget https://repo.skype.com/latest/skypeforlinux-64.deb
+```
+
+Install via `Snap`
+
+```bash
+$ snap install skype
+```
 
 - [TeamViewer](https://www.teamviewer.com/en/download/linux/)
 
