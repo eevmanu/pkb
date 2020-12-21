@@ -917,23 +917,27 @@ Alternatives
 Related links
 - 2020-05-12 - [PDF viewer list on Ubuntu 20.04 Focal Fossa Linux](https://linuxconfig.org/pdf-viewer-list-on-ubuntu-20-04-focal-fossa-linux)
 
-- [Zoom](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_adcc0b66-b2f4-468b-bc7a-12c182f354b7)
+### [Zoom](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux)
+
+Install [using the terminal](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_89c268b4-2a68-4e4c-882f-441e374b87cb)
+
+Install via `flatpak`
+
+```bash
+$ flatpak install flathub us.zoom.Zoom
+```
+
+- Directories used by `flatpak`
 
     ```bash
-    # download deb and install
-
-    # install via snap (https://snapcraft.io/zoom-client)
-    $ snap install zoom-client
-
-    # install via flatpak
-    $ flatpak install flathub us.zoom.Zoom
+    $HOME/.var/app/us.zoom.Zoom/
     ```
 
-    - Directories used:
+Install via [`Snap`](https://snapcraft.io/zoom-client)
 
-        ```bash
-        $HOME/.var/app/us.zoom.Zoom/
-        ```
+```bash
+$ snap install zoom-client
+```
 
 - [Skype](https://www.skype.com/en/get-skype/download-skype-for-desktop/)
 
