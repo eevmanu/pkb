@@ -586,107 +586,126 @@ $HOME/.local/share/flatpak
 
 ## Apps
 
-- `synaptic` - Graphical package manager
+### Synaptic
 
-    ```bash
-    $ apt install synaptic
-    ```
+Graphical package manager
 
-- Linux software distributions
+```bash
+$ apt install synaptic
+```
 
-    - [Snapcraft](https://snapcraft.io/)
-        - [Install on Ubuntu](https://snapcraft.io/docs/installing-snap-on-ubuntu)
+### [Flux](https://justgetflux.com/)
 
-        ```bash
-        $ sudo apt update
-        $ sudo apt install snapd
-        ```
+Better lighting for your computer
 
-    - [flatpak](https://flatpak.org/)
+[GitHub repo](https://github.com/xflux-gui/fluxgui)
 
-        - Directories used:
+List of package dependencies
 
-            ```bash
-            $HOME/.cache/flatpak
-            $HOME/.local/share/flatpak
-            ```
+```text
+- gir1.2-appindicator3-0.1
+- gir1.2-gtk-3.0
+- git
+- libcanberra-gtk-module
+- libxxf86vm1
+- python-appindicator
+- python-gconf
+- python-glade2
+- python-gtk2
+- python-pexpect
+- python-xdg
+- python3-distutils
+- python3-pexpect
+```
 
-    - [AppImage](https://appimage.org/)
+Install it
 
-- [Flux](https://justgetflux.com/) - Better lighting for your computer
-    - [code](https://github.com/xflux-gui/fluxgui)
+```bash
+$ sudo add-apt-repository ppa:nathan-renniewaldock/flux
+$ sudo apt update
+$ sudo apt install fluxgui
+```
 
-    ```bash
-    # install dependent packages
-    # gir1.2-appindicator3-0.1
-    # gir1.2-gtk-3.0
-    # git
-    # libcanberra-gtk-module
-    # libxxf86vm1
-    # python-appindicator
-    # python-gconf
-    # python-glade2
-    # python-gtk2
-    # python-pexpect
-    # python-xdg
-    # python3-distutils
-    # python3-pexpect
+Alternatives
 
-    $ sudo add-apt-repository ppa:nathan-renniewaldock/flux
-    $ sudo apt update
-    $ sudo apt install fluxgui
-    ```
+- [jonls/redshift](https://github.com/jonls/redshift)
 
-- [Redshift](https://github.com/jonls/redshift) - adjusts the color temperature of your screen according to your surroundings.
+- Gnome - [Night light](https://www.gnome.org/news/2017/03/gnome-3-24-released/attachment/night-light/)
 
-    This may help your eyes hurt less if you are working in front of the screen at night
+### [Chrome](https://www.google.com/chrome/)
 
-- [Chrome](https://www.google.com/chrome/)
-    - [How to restore the default Google search engine in Chrome?](https://superuser.com/questions/578228/how-to-restore-the-default-google-search-engine-in-chrome)
-    - [Flags](chrome://flags/)
-    - [Config to avoid extra query params via Requestly](https://i.imgur.com/zzPO7rB.png)
-    - [[Help] Subframe: Google Drive randomly spiking CPU usage](https://www.reddit.com/r/chrome/comments/foehds/help_subframe_google_drive_randomly_spiking_cpu/)
-    - [Enable sharing page via QR Code](chrome://flags/#sharing-qr-code-generator)
+Download it
 
-    ```bash
-    $ wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    ```
+```bash
+$ wget \
+    -O chrome.deb \
+    https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+```
+
+Useful Extensions
+- [Canvas Blocker (Fingerprint protect)](https://chrome.google.com/webstore/detail/canvas-blocker-fingerprin/nomnklagbgmgghhjidfhnoelnjfndfpd/)
+    - [Browser leaks - HTML5 Canvas Fingerprinting](https://browserleaks.com/canvas)
+- [ClearUrls](https://gitlab.com/KevinRoebert/ClearUrls)
+- [Cookie-AutoDelete](https://github.com/Cookie-AutoDelete/Cookie-AutoDelete)
+
+Personal settings
+- [How to restore the default Google search engine in Chrome?](https://superuser.com/questions/578228/how-to-restore-the-default-google-search-engine-in-chrome)
+- [Chrome Flags in your machine](chrome://flags/)
+- [Config to avoid extra query params via Requestly](https://i.imgur.com/zzPO7rB.png)
+- [[Help] Subframe: Google Drive randomly spiking CPU usage](https://www.reddit.com/r/chrome/comments/foehds/help_subframe_google_drive_randomly_spiking_cpu/)
+- [Enable sharing page via QR Code](chrome://flags/#sharing-qr-code-generator)
+- To allow downloads from Google Drive, add drive.google.com to **Sites that can always use cookies**, mark **Including third-party cookies on this site**.
+
+Alternatives
 
 - [Brave](https://brave.com/) - browser with real privacy
-    - [Install instructions for Linux](https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux)
+
+    [Install instructions for Linux](https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux)
+
+    Install dependencies
+
+    ```
+    $ sudo apt install \
+        apt-transport-https \
+        curl
+    ```
+
+    Add apt key
 
     ```bash
-        $ sudo apt install \
-            apt-transport-https \
-            curl
+    $ curl --silent https://brave-browser-apt-nightly.s3.brave.com/brave-core-nightly.asc | \
+        sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-prerelease.gpg add -
+    ```
 
-        $ curl \
-            --silent \
-                https://brave-browser-apt-nightly.s3.brave.com/brave-core-nightly.asc \
-        | \
-            sudo apt-key \
-                --keyring /etc/apt/trusted.gpg.d/brave-browser-prerelease.gpg \
-                    add -
+    Add package repository url
 
-        $ echo \
-            "deb [arch=amd64] https://brave-browser-apt-nightly.s3.brave.com/ stable main" \
-        | \
-            sudo tee \
-                /etc/apt/sources.list.d/brave-browser-nightly.list
+    ```bash
+    $ echo "deb [arch=amd64] https://brave-browser-apt-nightly.s3.brave.com/ stable main" | \
+        sudo tee /etc/apt/sources.list.d/brave-browser-nightly.list
+    ```
 
-        $ sudo apt update
+    Update package repository
 
-        $ sudo apt install brave-browser-nightly
+    ```bash
+    $ sudo apt update
+    ```
 
-        # to remove it
+    Install -it
 
-        $ sudo apt remove brave-browser-nightly
+    ```bash
+    $ sudo apt install brave-browser-nightly
+    ```
 
-        $ sudo apt purge brave-browser-nightly
+    Uninstall / Remove it
 
-        $ sudo rm /etc/apt/sources.list.d/brave-browser-nightly.list*
+    ```bash
+    $ sudo apt remove brave-browser-nightly
 
-        $ sudo rm /etc/apt/trusted.gpg.d/brave-browser-prerelease.gpg*
+    $ sudo apt purge brave-browser-nightly
+
+    $ sudo rm /etc/apt/sources.list.d/brave-browser-nightly.list*
+
+    $ sudo rm /etc/apt/trusted.gpg.d/brave-browser-prerelease.gpg*
     ```
 
 - [Dropbox daemon](https://www.dropbox.com/install-linux)
