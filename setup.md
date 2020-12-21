@@ -561,6 +561,28 @@ Run `apt update`
 
 Activate all PPA files where commented by `Download` button action
 
+## Linux software distributions
+
+### [Snapcraft](https://snapcraft.io/)
+
+[Install on Ubuntu](https://snapcraft.io/docs/installing-snap-on-ubuntu)
+
+```bash
+$ sudo apt update
+$ sudo apt install snapd
+```
+
+
+### [flatpak](https://flatpak.org/)
+
+Directories used:
+
+```bash
+$HOME/.cache/flatpak
+$HOME/.local/share/flatpak
+```
+
+### [AppImage](https://appimage.org/)
 
 ## Apps
 
