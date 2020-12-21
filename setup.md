@@ -537,8 +537,6 @@ Setup Amazon Echo device as speaker
     - [Bluetooth speaker no sound in Ubuntu 16.04](https://askubuntu.com/questions/763539/bluetooth-speaker-no-sound-in-ubuntu-16-04)
     - [A2DP sink without pulseaudio](https://stackoverflow.com/questions/12338621/a2dp-sink-without-pulseaudio)
 
-
-
 ### Wireless
 
 [System76 - Support - Solve Wireless Issues](https://support.system76.com/articles/wireless/)
@@ -708,27 +706,34 @@ Alternatives
     $ sudo rm /etc/apt/trusted.gpg.d/brave-browser-prerelease.gpg*
     ```
 
-- [Dropbox daemon](https://www.dropbox.com/install-linux)
-    - [How to install Dropbox through flatpak on CentOS 8.0](https://vitux.com/how-to-install-dropbox-through-flatpak-on-centos-8-0/)
+### [Dropbox](https://www.dropbox.com/install-linux)
 
-    ```bash
-    $ wget -O dropbox.deb https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb
+Install via `.deb` file
 
-    # https://www.dropbox.com/install-linux
-    $ cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+```bash
+$ wget -O dropbox.deb https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb
+```
 
-    # install via flatpak
-    $ flatpak install flathub com.dropbox.Client
-    ```
+Dropbox Headless Install via command line
 
-    - Add to Startup Applications
-        - In PopOS, be sure to have Gnome Tweaks, if not, install it
-        - Open Gnome Tweaks
-        - Go to option Startup Applications
-        - Click in `+` to add a application
-        - Click on search icon to search dropbox
-        - Enter `dropbox` (should appear if was installed via flatpak)
-        - Confirm to add it
+```bash
+
+$ cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+```
+
+Install via `flatpak`
+
+```bash
+$ flatpak install flathub com.dropbox.Client
+```
+
+Add to `Startup Applications`
+- Open `Gnome Tweaks`
+- Go to option `Startup Applications`
+- Click in `+` to add a application
+- Click on search icon
+- Enter `dropbox` (should appear if was installed via `flatpak`)
+- Confirm to add it
 
 - [Spotify](https://www.spotify.com/download/linux/)
 
