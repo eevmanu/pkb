@@ -1733,3 +1733,6 @@ Alternatives
 ## Resource
 
 - [How To Delete A Repository And GPG Key In Ubuntu](https://www.ostechnix.com/how-to-delete-a-repository-and-gpg-key-in-ubuntu/)
+- [Lissy93/personal-security-checklist](https://github.com/Lissy93/personal-security-checklist) - A curated checklist of 300+ tips for protecting digital security and privacy in 2020
+- [The Spamhaus project](https://www.spamhaus.org/) - track email spammers and spam-related activity
+- 2020-03-19 - [Using Cloudflare Gateway to Stay Productive (and turn off distractions) While Working Remotely](https://blog.cloudflare.com/using-cloudflare-gateway-to-stay-productive-and-turn-off-distractions-while-working-remotely/)
