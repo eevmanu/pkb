@@ -261,13 +261,17 @@ $ pydoc3.8
 
 **GNOME** `extensions` to install
 
-- [Ubuntu AppIndicators](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/) - for application indicators zone in menu bar
+- [Ubuntu AppIndicators](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/)
 
 - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
 
-    - Behaviour -> Use keyboards shortcuts to activate apps -> Turn off (because use **Super+Q** which is used to close program)
+    Avoid overwrite **Super+Q** used to close program
 
-- [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
+    - Open `Tweaks` app
+    - Go to `Extensions` tab
+    - Click on `Dash to dock` config
+    - Go to `Behaviour` tab
+    - Turn off `Use keyboards shortcuts to activate apps` option
 
 - [AlternateTab](https://extensions.gnome.org/extension/15/alternatetab/)
 
@@ -310,9 +314,234 @@ $ pydoc3.8
     - Ubuntu AppIndicators
     ```
 
-Related links
+PulseAudio
 
-- [Things to do after installing Pop!_OS 20.04 (Apps, Settings, and Tweaks)](https://mutschler.eu/linux/install-guides/pop-os-post-install/) - [archive](https://web.archive.org/web/20201217152053/https://mutschler.eu/linux/install-guides/pop-os-post-install/)
+- Simulate before install
+
+    ```bash
+    $ apt install -s pulseaudio
+    ...
+    pulseaudio is already the newest version (1:13.99.1-1ubuntu3.8).
+    ...
+    ```
+
+- Install it
+
+    ```bash
+    $ sudo apt install pulseaudio -y
+    ```
+
+- Show `daemon` config file
+
+    ```bash
+    $ cat /etc/pulse/daemon.conf
+    ```
+
+- Show default `Startup Script` config file
+
+    ```bash
+    $ cat /etc/pulse/default.pa
+    ```
+
+- Components:
+
+    - Sound Server app - [GitLab](https://gitlab.freedesktop.org/pulseaudio/pulseaudio)
+
+    - Preferences app - [pulseaudio/paprefs](https://freedesktop.org/software/pulseaudio/paprefs/) - [GitLab](https://gitlab.freedesktop.org/pulseaudio/paprefs)
+
+        ```bash
+        $ sudo apt install paprefs
+        ```
+
+    - System Tray app - [GitHub](https://github.com/christophgysin/pasystray)
+
+        ```bash
+        $ sudo apt install pasystray
+        ```
+
+    - Volume Control app - [pulseaudio/pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/) - [GitLab](https://gitlab.freedesktop.org/pulseaudio/pavucontrol/)
+
+        ```bash
+        $ sudo apt install pavucontrol
+        ```
+
+- Commands:
+
+    - Get version
+
+        ```bash
+        $ pulseaudio --version
+        pulseaudio 13.99.1
+        ```
+
+    - Increase verbosity level
+
+        ```bash
+        $ pulseaudio -v
+        I: [pulseaudio] main.c: setrlimit(RLIMIT_NICE, (31, 31)) failed: Operation not permitted
+        I: [pulseaudio] main.c: setrlimit(RLIMIT_RTPRIO, (9, 9)) failed: Operation not permitted
+        I: [pulseaudio] core-util.c: Successfully gained nice level -11.
+        I: [pulseaudio] main.c: This is PulseAudio 13.99.1
+        I: [pulseaudio] main.c: Page size is 4096 bytes
+        I: [pulseaudio] main.c: Machine ID is 71f96618bfd3c8e3e7f624765ec218e6.
+        I: [pulseaudio] main.c: Using runtime directory /run/user/1000/pulse.
+        I: [pulseaudio] main.c: Using state directory /home/$USER/.config/pulse.
+        I: [pulseaudio] main.c: Using modules directory /usr/lib/pulse-13.99.1/modules.
+        I: [pulseaudio] main.c: Running in system mode: no
+        E: [pulseaudio] pid.c: Daemon already running.
+        E: [pulseaudio] main.c: pa_pid_file_create() failed.
+        ```
+
+    - List of cards attached
+
+        ```bash
+        $ pacmd list-cards
+        ```
+
+    - List of available modules
+
+        ```bash
+        $ ls /usr/lib | grep pulse
+        pulse-13.99.1
+
+        $ ls /usr/lib/pulse-13.99.1/modules/
+        ```
+
+- Debugging:
+
+    - Get logs from `rsyslog`
+
+        ```bash
+        $ cat /var/log/syslog* | grep -i pulse
+        $ cat /var/log/syslog* | grep -i audio
+        ```
+
+    - Get logs from `journalctl`
+
+        ```bash
+        # https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs
+        $ journalctl --pager-end
+        $ journalctl --follow
+        ```
+
+- Related links
+
+  - [Things to do after installing Pop!_OS 20.04 (Apps, Settings, and Tweaks)](https://mutschler.eu/linux/install-guides/pop-os-post-install/) - [archive](https://web.archive.org/web/20201217152053/https://mutschler.eu/linux/install-guides/pop-os-post-install/)
+
+## Issue to be aware
+
+### Bluetooth
+
+Setup Amazon Echo device as speaker
+
+- Location of config files
+
+    ```bash
+    $ ls /etc/bluetooth/
+    input.conf  main.conf  network.conf
+    ```
+
+- Try with [Blueman]((https://github.com/blueman-project/blueman))
+
+    <!-- TODO move to apps when apps is clean -->
+
+    Blueman is a GTK+ Bluetooth Manager
+
+    Simulate if already installed
+
+    ```bash
+    $ apt install -s blueman
+    ...
+    Inst libayatana-indicator3-7 (0.6.3-1 Ubuntu:20.04/focal [amd64])
+    Inst libayatana-appindicator3-1 (0.5.4-2 Ubuntu:20.04/focal [amd64])
+    Inst gir1.2-ayatanaappindicator3-0.1 (0.5.4-2 Ubuntu:20.04/focal [amd64])
+    Inst blueman (2.2-git1601238013r3bcd6003-python3.8-1 cschramm.eu [amd64])
+    ...
+    ```
+
+    Install dependencies
+
+    ```bash
+    $ sudo apt install \
+        apt-transport-https \
+        curl
+    ```
+
+    Add [APT repository](https://blueman.cschramm.eu/debian/) with git snapshots
+
+    ```bash
+    $ curl https://blueman.cschramm.eu/debian/blueman.gpg.key | \
+        sudo apt-key add -
+    ```
+
+    Set right `python` version to use in APT repository
+
+    ```bash
+    # create file
+    $ sudo touch /etc/apt/sources.list.d/blueman.list
+
+    # edit it
+    $ sudo nano /etc/apt/sources.list.d/blueman.list
+
+    # add lines below
+    deb https://cschramm.eu/blueman/debian/ python3.8 main
+    deb-src https://cschramm.eu/blueman/debian/ python3.8 main
+    ```
+
+    Start `blueman` applet with `debug` logs
+
+    ```bash
+    $ blueman-applet --loglevel debug
+    ```
+
+    Error: `AttributeError: 'NetConf' object has no attribute 'ip4_address'` - [img](https://i.imgur.com/pD8Ukd1.png)
+
+    ```
+    g-dbus-error-quark: GDBus.Error:org.freedesktop.DBus.Error.Failed: Traceback (most recent call last):
+    File "/usr/lib/python3/dist-packages/blueman/main/DbusService.py", line 126, in _handle_method_call
+        ok(method(*args))
+    File "/usr/lib/python3/dist-packages/blueman/plugins/mechanism/Network.py", line 56, in _reload_network
+        if nc.ip4_address is None or nc.ip4_mask is None:
+    AttributeError: 'NetConf' object has no attribute 'ip4_address'
+    (0)
+    ```
+
+    Related links
+
+    - Github Wiki: [Troubleshooting](https://github.com/blueman-project/blueman/wiki/Troubleshooting)
+
+- Steps
+    - Connect laptop to speaker (not viceversa)
+    - After connect, if output device selected is on bluetooth speaker, move to another device and move back to check it works properly
+    - When disconnected, remove both devices from sides as `known device`.
+    - Reconnect again from laptop to speaker (not viceversa)
+
+- Guides
+    - [Pair Your Phone or Bluetooth Speaker to Your Echo Device](https://www.amazon.com/gp/help/customer/display.html?nodeId=GG8S76D3BYTGC424)
+    - [Can't send audio to Amazon Echo via Bluetooth](https://bugs.launchpad.net/ubuntu/+source/bluez/+bug/1691556)
+    - [Ubuntu – Amazon Echo “Alexa” now only shows up as an input device](https://itectec.com/ubuntu/ubuntu-amazon-echo-alexa-now-only-shows-up-as-an-input-device/)
+    - [Amazon Echo Plus as bluetooth speaker on Ubuntu 20.04](https://manuelfedele.github.io/guides/2020/05/02/amazon-echo-plus-as-ubuntu-20.04-bluetooth-speaker.html)
+
+- Troubleshooting
+    - [Troubleshoot Bluetooth Issues](https://support.system76.com/articles/bluetooth/)
+    - [BluetoothUser a2dp](https://wiki.debian.org/BluetoothUser/a2dp)
+    - ArchLinux - [PulseAudio/Troubleshooting](https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting)
+    - [blueman-project/blueman - Troubleshooting](https://github.com/blueman-project/blueman/wiki/Troubleshooting)
+    - [pylover/a2dp.py](https://gist.github.com/pylover/d68be364adac5f946887b85e6ed6e7ae) - Fixing bluetooth stereo headphone/headset problem in ubuntu 16.04, 16.10 and also debian jessie, with bluez5.
+
+- Questions:
+    - [Ubuntu 20.04 bluetooth not working](https://askubuntu.com/questions/1231074/ubuntu-20-04-bluetooth-not-working)
+    - [PulseAudio fails to set card profile to 'a2dp_sink'. How can I see the logs and figure out whats wrong?](https://askubuntu.com/questions/765233/pulseaudio-fails-to-set-card-profile-to-a2dp-sink-how-can-i-see-the-logs-and)
+    - [Ubuntu Connects with Amazon Echo as Bluetooth Speaker not Treating that as Speaker](https://askubuntu.com/questions/1205930/ubuntu-connects-with-amazon-echo-as-bluetooth-speaker-not-treating-that-as-speak)
+    - [Bluetooth speaker connected but not listed in sound output](https://askubuntu.com/questions/824404/bluetooth-speaker-connected-but-not-listed-in-sound-output)
+    - [Bluetooth speaker no sound in Ubuntu 16.04](https://askubuntu.com/questions/763539/bluetooth-speaker-no-sound-in-ubuntu-16-04)
+    - [A2DP sink without pulseaudio](https://stackoverflow.com/questions/12338621/a2dp-sink-without-pulseaudio)
+
+
+
+### Wireless
+
+[System76 - Support - Solve Wireless Issues](https://support.system76.com/articles/wireless/)
 
 
 ## Apps
