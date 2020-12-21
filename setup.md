@@ -2,138 +2,147 @@
 
 ## Backup & Restore
 
-- Show folder size which want to backup
+Show sizes from list of folders you want to backup
 
-    ```bash
-    $ du -sh $HOME/Documents/
-    $ du -sh $HOME/Downloads/
-    $ du -sh $HOME/Music/
-    $ du -sh $HOME/Pictures/
-    $ du -sh $HOME/Projects/
-    $ du -sh $HOME/Videos/
-    ```
+```bash
+$ du -sh \
+    $HOME/Documents/ \
+    $HOME/Downloads/ \
+    $HOME/Music/ \
+    $HOME/Pictures/ \
+    $HOME/Projects/ \
+    $HOME/Videos/
+```
 
-- Verify change by number of files in a folder
+Check for big unneed files
 
-    ```bash
-    $ tree $HOME/Documents/ | wc -l && tree /media/$USER/manu/Documents/ | wc -l && echo "$(date +"%Y-%m-%d")"
-    960
-    960
-    2020-10-24
+```bash
+$ du -ah $HOME | \
+    grep -v "/$" | \
+    sort -rh > 1.txt
 
-    $ tree $HOME/Downloads/ | wc -l && tree /media/$USER/manu/Downloads/ | wc -l && echo "$(date +"%Y-%m-%d")"
-    389
-    389
-    2020-10-24
+# check top 200 and delete any file which is using huge space disk
+$ du -ah $HOME | \
+    grep -v "/$" | \
+    sort -rh | \
+    head -n 200 > 1.txt
 
-    $ tree $HOME/Music/ | wc -l && tree /media/$USER/manu/Music/ | wc -l && echo "$(date +"%Y-%m-%d")"
-    15
-    15
-    2020-10-24
+# check any huge unneed file from folders I backup
+$ du -ah \
+    $HOME/Documents/ \
+    $HOME/Downloads/ \
+    $HOME/Music/ \
+    $HOME/Pictures/ \
+    $HOME/Projects/ \
+    $HOME/Videos/ | \
+        grep -v "/$" | \
+        sort -rh > 2.txt
+```
 
-    $ tree $HOME/Pictures/ | wc -l && tree /media/$USER/manu/Pictures/ | wc -l && echo "$(date +"%Y-%m-%d")"
-    15613
-    15613
-    2020-10-24
+Verify changes in backup folders by number of files inside
 
-    $ tree $HOME/Projects/ | wc -l && tree /media/$USER/manu/Projects/ | wc -l && echo "$(date +"%Y-%m-%d")"
-    11574
-    11574
-    2020-10-24
+```bash
+$ tree $HOME/Documents/ | \
+    wc -l && tree /media/$USER/manu/Documents/ | \
+    wc -l && echo "$(date +"%Y-%m-%d")"
 
-    $ tree $HOME/Videos/ | wc -l && tree /media/$USER/manu/Videos/ | wc -l && echo "$(date +"%Y-%m-%d")"
-    192
-    192
-    2020-10-24
-    ```
+# for
+# $HOME/Downloads/
+# $HOME/Music/
+# $HOME/Pictures/
+# $HOME/Projects/
+# $HOME/Videos/
+```
 
-- Backup folders into external drive
+Backup folders to an external drive
 
-    ```bash
-    $ sudo rsync -aPv --delete $HOME/Documents/ /media/$USER/manu/Documents/
-    $ sudo rsync -aPv --delete $HOME/Downloads/ /media/$USER/manu/Downloads/
-    $ sudo rsync -aPv --delete $HOME/Music/ /media/$USER/manu/Music/
-    $ sudo rsync -aPv --delete $HOME/Pictures/ /media/$USER/manu/Pictures/
-    $ sudo rsync -aPv --delete $HOME/Projects/ /media/$USER/manu/Projects/
-    $ sudo rsync -aPv --delete $HOME/Videos/ /media/$USER/manu/Videos/
-    ```
+```bash
+$ sudo rsync -aPv --delete "$HOME/Documents/" "/media/$USER/manu/Documents/"
+$ sudo rsync -aPv --delete "$HOME/Downloads/" "/media/$USER/manu/Downloads/"
+$ sudo rsync -aPv --delete "$HOME/Music/"     "/media/$USER/manu/Music/"
+$ sudo rsync -aPv --delete "$HOME/Pictures/"  "/media/$USER/manu/Pictures/"
+$ sudo rsync -aPv --delete "$HOME/Projects/"  "/media/$USER/manu/Projects/"
+$ sudo rsync -aPv --delete "$HOME/Videos/"    "/media/$USER/manu/Videos/"
+```
 
-- Restore folders from external drive
+Restore folders from external drive
 
-    ```bash
-    $ sudo rsync -aPv /media/$USER/manu/Documents/ $HOME/Documents/
-    $ sudo rsync -aPv /media/$USER/manu/Downloads/ $HOME/Downloads/
-    $ sudo rsync -aPv /media/$USER/manu/Music/ $HOME/Music/
-    $ sudo rsync -aPv /media/$USER/manu/Pictures/ $HOME/Pictures/
-    $ sudo rsync -aPv /media/$USER/manu/Projects/ $HOME/Projects/
-    $ sudo rsync -aPv /media/$USER/manu/Videos/ $HOME/Videos/
-    ```
+```bash
+$ sudo rsync -aPv "/media/$USER/manu/Documents/" "$HOME/Documents/"
+$ sudo rsync -aPv "/media/$USER/manu/Downloads/" "$HOME/Downloads/"
+$ sudo rsync -aPv "/media/$USER/manu/Music/"     "$HOME/Music/"
+$ sudo rsync -aPv "/media/$USER/manu/Pictures/"  "$HOME/Pictures/"
+$ sudo rsync -aPv "/media/$USER/manu/Projects/"  "$HOME/Projects/"
+$ sudo rsync -aPv "/media/$USER/manu/Videos/"    "$HOME/Videos/"
+```
 
-- Resources
-    - [backup @ GitHub](https://github.com/search?q=backup&s=stars&type=Repositories)
-    - [sync @ GitHub](https://github.com/search?q=sync&s=stars&type=Repositories)
-    - [syncthing](https://github.com/syncthing/syncthing) - Open Source Continuous File Synchronization
-        - [Syncing your Files Across ALL your Computers via Syncthing](https://www.youtube.com/watch?v=J1bCWv14zYg)
-    - [rclone](https://github.com/rclone/rclone) - "rsync for cloud storage" - Google Drive, Amazon Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Cloudfiles, Google Cloud Storage, Yandex Files
-    - [restic](https://github.com/restic/restic) - Fast, secure, efficient backup program
-    - [duplicacy](https://github.com/gilbertchen/duplicacy) - A new generation cloud backup tool
-    - [timeshift](https://github.com/teejee2008/timeshift) - System restore tool for Linux.
+GitHub:
+- [most starred repo with `backup`](https://github.com/search?q=backup&s=stars&type=Repositories)
+- [most starred repo with `sync`](https://github.com/search?q=sync&s=stars&type=Repositories)
+<!-- details open -->
+- <details >
+    <summary>
+    <a href="https://github.com/syncthing/syncthing">
+    syncthing/syncthing
+    </a>
+    <!--
+    <code>
+    if want code inside summary block
+    </code>
+     -->
+    </summary>
 
-## Steps after install PopOS
+    Open Source Continuous File Synchronization
 
-- [Keyboard Shortcuts](https://support.system76.com/articles/pop-keyboard-shortcuts/)
+    YouTube:
+    - [Syncing your Files Across ALL your Computers via Syncthing](https://www.youtube.com/watch?v=J1bCWv14zYg)
 
-- Settings
-    - Region & Language -> Formats -> United States (English)
-    - Region & Language -> Input Sources -> Add **Spanish (Latin American)**
+</details>
 
-- Fonts
+- <details>
+    <summary>
+    <a href="https://github.com/rclone/rclone">
+    rclone/rclone
+    </a>
+    </summary>
 
-    - Default on **PopOS**
-        - Standard font: Source Code Pro
-        - Serif font: Serif
-        - Sans-serif font: Sans
-        - Fixed-width font: Monospace
+    "rsync for cloud storage" - Google Drive, Amazon Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Cloudfiles, Google Cloud Storage, Yandex Files
 
-    - [font @ GitHub](https://github.com/search?q=font&s=stars&type=Repositories)
-    - [Fira Code](https://github.com/tonsky/FiraCode)
-    - [Hack](https://github.com/source-foundry/Hack)
-    - [Source Code Pro](https://github.com/adobe-fonts/source-code-pro)
-    - [Cascadia Code](https://github.com/microsoft/cascadia-code)
-    - [Fonts for System76](https://github.com/pop-os/fonts)
-    - [Inter](https://github.com/rsms/inter)
+</details>
 
-    - Resources
-        - [Go fonts](https://blog.golang.org/go-fonts)
-        - [Best 20 Fonts for Ubuntu](https://linuxhint.com/best_fonts_ubuntu_linux/)
-        - [List of monospaced typefaces](https://en.wikipedia.org/wiki/List_of_monospaced_typefaces)
+- <details>
+    <summary>
+    <a href="https://github.com/restic/restic">
+    restic/restic
+    </a>
+    </summary>
 
-- Extra commands
+    Fast, secure, efficient backup program
 
-    - **Python** related
+</details>
 
-        ```bash
-        $ py3clean
-        $ py3compile
-        $ py3versions
-        $ pydoc3.8
-        ```
+- <details>
+    <summary>
+    <a href="https://github.com/gilbertchen/duplicacy">
+    gilbertchen/duplicacy
+    </a>
+    </summary>
 
-- **GNOME** Update Manager
+    A new generation cloud backup tool
 
-    ```bash
-    # to search if is already installed
-    $ apt search update-manager
-    ...
-    update-manager/focal-updates,focal-updates,now 1:20.04.10 all [installed]
-    GNOME application that manages apt updates
-    ...
+</details>
 
-    # to install it
-    $ sudo apt install update-manager
-    ```
+- <details>
+    <summary>
+    <a href="https://github.com/teejee2008/timeshift">
+    teejee2008/timeshift
+    </a>
+    </summary>
 
-- **GNOME** Tweaks Tool
+    System restore tool for Linux.
+
+</details>
+
 
     ```bash
     $ sudo apt install gnome-tweak-tool
