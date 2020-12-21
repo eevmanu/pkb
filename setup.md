@@ -575,7 +575,17 @@ Related links:
     $ sudo apt install obs-studio
     ```
 
-- [Kazam](https://github.com/hzbd/kazam) - A screencasting program created with design in mind
+- [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/) - SimpleScreenRecorder is a Linux program that I've created to record programs and games.
+    - [github](https://github.com/MaartenBaert/ssr)
+    - installation process
+        ```
+        $ sudo apt-add-repository ppa:maarten-baert/simplescreenrecorder
+        $ sudo apt-get update
+        $ sudo apt-get install simplescreenrecorder
+        ```
+    - Alternatives:
+        - [Kazam](https://github.com/hzbd/kazam) - A screencasting program created with design in mind
+        - 2020-06-10 - [5 Tools To Record Your Linux Desktop (Screencast) In 2020](https://www.linuxuprising.com/2020/01/4-tools-to-record-your-linux-desktop.html)
 
 - [Cheese](https://gitlab.gnome.org/GNOME/cheese) - Take photos and videos with your webcam, with fun graphical effects
   - [Ubuntu](apt://cheese)
