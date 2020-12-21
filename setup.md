@@ -4,6 +4,7 @@
 
 Show sizes from list of folders you want to backup
 
+<!-- adding code section is like adding an identation level -->
 ```bash
 $ du -sh \
     $HOME/Documents/ \
@@ -76,9 +77,8 @@ $ sudo rsync -aPv "/media/$USER/manu/Projects/"  "$HOME/Projects/"
 $ sudo rsync -aPv "/media/$USER/manu/Videos/"    "$HOME/Videos/"
 ```
 
-GitHub:
-- [most starred repo with `backup`](https://github.com/search?q=backup&s=stars&type=Repositories)
-- [most starred repo with `sync`](https://github.com/search?q=sync&s=stars&type=Repositories)
+Tools to consider
+<!-- TODO maybe turn this into a table -->
 <!-- details open -->
 - <details >
     <summary>
@@ -143,6 +143,9 @@ GitHub:
 
 </details>
 
+Related links
+- [most starred repo with `backup`](https://github.com/search?q=backup&s=stars&type=Repositories)
+- [most starred repo with `sync`](https://github.com/search?q=sync&s=stars&type=Repositories)
 
 ## Things to do after install PopOS
 
@@ -154,11 +157,11 @@ Add `Spanish (Latin American)` keyboard layout
 
 Set my preferred global `Format`
 
-- `Settings` -> `Region & Language` -> `Formats` -> set `United States (English)`
+- `Settings` -> `Region & Language` -> `Formats` -> Set `United States (English)`
 
-Change system `Fonts`:
+Change system `Fonts`
 
-- Default on **PopOS**:
+- Default on **PopOS**
 
     | Property          | Value             |
     | ----------------- | ----------------- |
@@ -167,14 +170,14 @@ Change system `Fonts`:
     | Sans-serif font   | Sans              |
     | Fixed-width font  | Monospace         |
 
-- Optional fonts to consider:
-    - [most starred repo with `font`](https://github.com/search?q=font&s=stars&type=Repositories)
+- Optional fonts to consider
     - [tonsky/FiraCode](https://github.com/tonsky/FiraCode)
     - [source-foundry/Hack](https://github.com/source-foundry/Hack)
     - [adobe-fonts/source-code-pro](https://github.com/adobe-fonts/source-code-pro)
     - [microsoft/cascadia-code](https://github.com/microsoft/cascadia-code)
     - [pop-os/fonts](https://github.com/pop-os/fonts)
     - [rsms/inter](https://github.com/rsms/inter)
+    - [most starred repo with `font`](https://github.com/search?q=font&s=stars&type=Repositories)
 
 - Related links:
     - [Go fonts](https://blog.golang.org/go-fonts)
@@ -184,9 +187,21 @@ Change system `Fonts`:
 `Python` scripts
 
 ```bash
+# Clean up your Python bytecode.
+# https://github.com/bittner/pyclean
+# https://manpages.ubuntu.com/manpages/trusty/man1/py3clean.1.html
 $ py3clean
+
+# byte compile Python 3 source files
+# https://manpages.ubuntu.com/manpages/bionic/man1/py3compile.1.html
 $ py3compile
+
+# print python3 version information
+# https://manpages.ubuntu.com/manpages/bionic/man1/py3versions.1.html
 $ py3versions
+
+# the Python documentation tool
+# https://manpages.ubuntu.com/manpages/disco/man1/pydoc3.8.1.html
 $ pydoc3.8
 ```
 
@@ -194,22 +209,22 @@ $ pydoc3.8
 
 - Search if package is already installed
 
-```bash
-$ apt search update-manager
-...
-update-manager/focal-updates,focal-updates,now 1:20.04.10 all [installed]
-GNOME application that manages apt updates
-...
-
-# test install with '-s' option also help with it
-$ apt install -s update-manager
-```
+    ```bash
+    $ apt search update-manager
+    ...
+    update-manager/focal-updates,focal-updates,now 1:20.04.10 all [installed]
+    GNOME application that manages apt updates
+    ...
+    ```
 
 - Install it
 
-```bash
-$ sudo apt install update-manager
-```
+    ```bash
+    # simulate install
+    $ apt install -s update-manager
+
+    $ sudo apt install update-manager
+    ```
 
 **GNOME** `Tweaks Tool`
 
@@ -225,22 +240,26 @@ $ sudo apt install update-manager
     ```
 
 - Things to do after install it:
-    - `General` -> `Animations` -> `Turn off`
-    - `Interface text` -> Fira Sans book 10 (default)
-        - [How do I change fonts and adjust their size?](https://askubuntu.com/questions/19770/how-do-i-change-fonts-and-adjust-their-size)
-    - Setup keyboard shortcut (`Alt` +  `Space`) to change keyboard layout
-        - Steps:
-            - Install `Gnome Tweaks`
-            - Open it
-            - Go to `Keyboard & Mouse`
-            - Click on `Additional Layout Options`
-            - Unfold `Switching to another layout`
-            - Check `Alt+Space` option - [img](https://i.imgur.com/aSZxajn.png)
+
+    `General` -> `Animations` -> `Turn off`
+
+    `Interface text` -> Fira Sans book 10 (default)
+
+    - [How do I change fonts and adjust their size?](https://askubuntu.com/questions/19770/how-do-i-change-fonts-and-adjust-their-size)
+
+    Setup keyboard shortcut (`Alt` +  `Space`) to change keyboard layout
+
+    - Install `Gnome Tweaks`
+    - Open it
+    - Go to `Keyboard & Mouse`
+    - Click on `Additional Layout Options`
+    - Unfold `Switching to another layout`
+    - Check `Alt+Space` option - [img](https://i.imgur.com/aSZxajn.png)
 
 
-**GNOME** `Shell integration`: install [chrome extension](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
+**GNOME** `Shell integration` - install [chrome extension](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
 
-**GNOME** `extensions` to install:
+**GNOME** `extensions` to install
 
 - [Ubuntu AppIndicators](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/) - for application indicators zone in menu bar
 
@@ -269,11 +288,9 @@ $ sudo apt install update-manager
 
 - [Multi Monitors Add-On](https://extensions.gnome.org/extension/921/multi-monitors-add-on/)
 
-- [Todo list](https://extensions.gnome.org/extension/162/todo-list/)
-
 - [Dynamic Panel Transparency](https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/)
 
-- Complete list of extensions:
+- [List of extensions installed locally](https://extensions.gnome.org/local/)
 
     ```
     - Alt Tab: Raise First Window
@@ -293,7 +310,7 @@ $ sudo apt install update-manager
     - Ubuntu AppIndicators
     ```
 
-Related links:
+Related links
 
 - [Things to do after installing Pop!_OS 20.04 (Apps, Settings, and Tweaks)](https://mutschler.eu/linux/install-guides/pop-os-post-install/) - [archive](https://web.archive.org/web/20201217152053/https://mutschler.eu/linux/install-guides/pop-os-post-install/)
 
