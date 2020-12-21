@@ -953,138 +953,274 @@ Install via `Snap`
 $ snap install skype
 ```
 
-- [TeamViewer](https://www.teamviewer.com/en/download/linux/)
+### [TeamViewer](https://www.teamviewer.com/en/download/linux/)
 
-    ```bash
-    $ wget -O teamviewer.deb https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+Install via `.deb`
 
-    $ sudo teamviewer repo disable
-    $ sudo teamviewer repo default
-    ```
+```bash
+$ wget \
+    -O teamviewer.deb \
+    https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+```
 
-- [OBS Studio](https://github.com/obsproject/obs-studio)
-    - [Install on Linux](https://obsproject.com/wiki/install-instructions#linux)
+Disable package repository url
 
-    ```bash
-    $ sudo add-apt-repository ppa:obsproject/obs-studio
-    $ sudo apt update
-    $ sudo apt install obs-studio
-    ```
+```bash
+$ sudo teamviewer repo disable
+```
 
-- [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/) - SimpleScreenRecorder is a Linux program that I've created to record programs and games.
-    - [github](https://github.com/MaartenBaert/ssr)
-    - installation process
-        ```
-        $ sudo apt-add-repository ppa:maarten-baert/simplescreenrecorder
-        $ sudo apt-get update
-        $ sudo apt-get install simplescreenrecorder
-        ```
-    - Alternatives:
-        - [Kazam](https://github.com/hzbd/kazam) - A screencasting program created with design in mind
-        - 2020-06-10 - [5 Tools To Record Your Linux Desktop (Screencast) In 2020](https://www.linuxuprising.com/2020/01/4-tools-to-record-your-linux-desktop.html)
+Set package repository url as default
 
-- [Cheese](https://gitlab.gnome.org/GNOME/cheese) - Take photos and videos with your webcam, with fun graphical effects
-  - [Ubuntu](apt://cheese)
+```bash
+$ sudo teamviewer repo default
+```
 
-- [Wireshark](https://www.wireshark.org/download.html) - world’s foremost and widely-used network protocol analyzer
-    - [Standard package](https://launchpad.net/ubuntu/+source/wireshark)
-    - [Latest stable PPA](https://launchpad.net/~wireshark-dev/+archive/ubuntu/stable)
-    - [How to Install and Use Wireshark on Ubuntu](https://linuxhint.com/install_wireshark_ubuntu/)
-    - [How to install Wireshark](https://askubuntu.com/questions/700712/how-to-install-wireshark)
-    - [code](https://github.com/wireshark/wireshark)
-    - [termshark](https://github.com/gcla/termshark) - A terminal UI for tshark, inspired by Wireshark
-    - [pyshark](https://github.com/KimiNewt/pyshark) - Python wrapper for tshark, allowing python packet parsing using wireshark dissectors
-    - [wirefilter](https://github.com/cloudflare/wirefilter) - An execution engine for Wireshark-like filters
+### [OBS Studio](https://obsproject.com/wiki/install-instructions#linux)
 
-    ```bash
-    $ sudo add-apt-repository ppa:wireshark-dev/stable
-    $ sudo apt update
-    $ sudo apt install wireshark
-    ```
+[GitHub](https://github.com/obsproject/obs-studio)
 
-- [BleachBit](https://github.com/bleachbit/bleachbit) - cleans files to free disk space and to maintain privacy.
+Install it
 
-    ```bash
-    # easy way
-    $ apt install bleachbit
+```bash
+$ sudo add-apt-repository ppa:obsproject/obs-studio
+$ sudo apt update
+$ sudo apt install obs-studio
+```
 
-    # hard way, using github
-    $ cd $HOME
-    $ git clone https://github.com/bleachbit/bleachbit
-    $ make -C po local
-    $ cp bleachbit.py $HOME/bin/bleachbit
-    $ cd $HOME
-    $ rm -rf bleachbit/
-    ```
+### [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/)
 
-- [Joplin](https://github.com/laurent22/joplin) - Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS. Forum: discourse.joplinapp.org
-    - Installation process
-        - Download latest `AppImage` version
-            ```bash
-            ~ $ wget https://github.com/laurent22/joplin/releases/download/v1.0.236/Joplin-1.0.236.AppImage
-            ```
-        - Give permission to execute
-            ```bash
-            ~ $ chmod +x Joplin-1.0.236.AppImage
-            ```
-        - Move to `$HOME/bin` folder
-            ```bash
-            ~ $ mv Joplin-1.0.236.AppImage $HOME/bin
-            ```
-        - Create soft link to simple command
-            ```bash
-            $ ln -s $HOME/bin/Joplin-1.0.236.AppImage $HOME/bin/joplin
-            ```
-        - Create `.desktop` file
-            ```bash
-            # TODO
-            ```
+Record programs and games.
+
+[GitHub](https://github.com/MaartenBaert/ssr)
+
+Install it
+
+```bash
+$ sudo apt-add-repository ppa:maarten-baert/simplescreenrecorder
+$ sudo apt-get update
+$ sudo apt-get install simplescreenrecorder
+```
+
+Alternatives
+- [hzbd/kazam](https://github.com/hzbd/kazam)
+- [GNOME/cheese](https://gitlab.gnome.org/GNOME/cheese)
+
+Related links
+- 2020-06-10 - [5 Tools To Record Your Linux Desktop (Screencast) In 2020](https://www.linuxuprising.com/2020/01/4-tools-to-record-your-linux-desktop.html)
 
 
-- [marktext](https://github.com/marktext/marktext) - A simple and elegant markdown editor, available for Linux, macOS and Windows.
-    - Other option: [notable](https://github.com/notable/notable) - The Markdown-based note-taking app that doesn't suck.
-    - `.desktop` file [example](https://github.com/marktext/marktext/blob/develop/resources/linux/marktext.desktop)
-    - fix issue with [icon](https://askubuntu.com/questions/333133/how-to-set-app-icon-in-the-desktop-file-of-an-ubuntu-touch-application)
+### [Wireshark](https://www.wireshark.org/download.html)
 
-    ```bash
-    # 0.16.1
-    $ wget -O $HOME/bin/marktext https://github.com/marktext/marktext/releases/download/v0.16.1/marktext-x86_64.AppImage
-    $ chmod +x $HOME/bin/marktext
-    $ sha256sum $HOME/bin/marktext
-    # 373080e22e6c0aa9fa9394c91b6cf1036898a17595e629983912bbced89653ec
+World’s foremost and widely-used network protocol analyzer
 
-    $ curl -L https://raw.githubusercontent.com/marktext/marktext/develop/resources/linux/marktext.desktop -o $HOME/.local/share/applications/marktext.desktop
-    # Update the Exec in .desktop file to your real marktext command. Specify Path if necessary.
-    $ code $HOME/.local/share/applications/marktext.desktop
-    $ update-desktop-database $HOME/.local/share/applications/
+[GitHub](https://github.com/wireshark/wireshark)
 
-    $ mkdir $HOME/.icons
-    $ cd $HOME/.icons
-    $ wget -O marktext.png https://github.com/marktext/marktext/blob/develop/resources/icons/icon.png?raw=true
-    ```
+Install it
 
-    - Directories used:
+```bash
+$ sudo add-apt-repository ppa:wireshark-dev/stable
+$ sudo apt update
+$ sudo apt install wireshark
+```
 
-        ```bash
-        $HOME/.config/marktext
-        ```
+Package repositories
+- [Standard package](https://launchpad.net/ubuntu/+source/wireshark)
+- [Latest stable PPA](https://launchpad.net/~wireshark-dev/+archive/ubuntu/stable)
 
-- [vnote](https://github.com/tamlok/vnote) - A note-taking application that knows programmers and Markdown better.
+Related tools
+- [gcla/termshark](https://github.com/gcla/termshark) - A terminal UI for tshark, inspired by Wireshark
+- [KimiNewt/pyshark](https://github.com/KimiNewt/pyshark) - Python wrapper for tshark, allowing python packet parsing using wireshark dissectors
+- [cloudflare/wirefilter](https://github.com/cloudflare/wirefilter) - An execution engine for Wireshark-like filters
 
-    ```bash
-    $ cd $HOME/bin
-    $ wget -O vnote https://github.com/tamlok/vnote/releases/download/v2.9.1/VNote-2.9.1-x86_64.AppImage
-    $ chmod +x vnote
-    ```
+Related links
+- [How to Install and Use Wireshark on Ubuntu](https://linuxhint.com/install_wireshark_ubuntu/)
+- [How to install Wireshark](https://askubuntu.com/questions/700712/how-to-install-wireshark)
 
-    - Directories which uses
+### [BleachBit](https://www.bleachbit.org/)
 
-        ```
-        $HOME/.cache/VNote-2.9.1-x86_64.AppImage/
-        $HOME/.local/share/vnote/
-        $HOME/.local/share/VNote/
-        $HOME/.local/share/VNote-2.9.1-x86_64.AppImage/
-        ```
+Cleans files to free disk space and to maintain privacy.
+
+[GitHub](https://github.com/bleachbit/bleachbit)
+
+Install via `apt`
+
+```bash
+$ sudo apt install bleachbit
+```
+
+Install from `master` branch
+
+```bash
+$ cd $HOME
+$ git clone https://github.com/bleachbit/bleachbit
+$ cd bleachbit/
+$ make -C po local
+$ cp bleachbit.py $HOME/bin/bleachbit
+$ rm -rf $HOME/bleachbit/
+```
+
+### Markdown editor apps
+
+#### [Joplin](https://joplinapp.org/)
+
+An open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS. Forum: discourse.joplinapp.org
+
+[GitHub](https://github.com/laurent22/joplin)
+
+Download `AppImage` file
+
+```bash
+$ wget https://github.com/laurent22/joplin/releases/download/v1.0.236/Joplin-1.0.236.AppImage
+```
+
+Give permissions to execute
+
+```bash
+$ chmod u+x Joplin-1.0.236.AppImage
+```
+
+Move to **executable files** folder
+
+```bash
+$ mv Joplin-1.0.236.AppImage $HOME/bin
+```
+
+Create soft link to simplify command
+
+```bash
+$ ln -s $HOME/bin/Joplin-1.0.236.AppImage $HOME/bin/joplin
+```
+
+Create `.desktop` file
+
+```bash
+# TODO
+```
+
+#### [Marktext](https://marktext.app/)
+
+A simple and elegant markdown editor, available for Linux, macOS and Windows.
+
+[GitHub](https://github.com/marktext/marktext)
+
+Download `AppImage` file
+
+```bash
+$ wget \
+    -O $HOME/bin/marktext \
+    https://github.com/marktext/marktext/releases/download/v0.16.1/marktext-x86_64.AppImage
+```
+
+Verify file
+
+```bash
+$ echo "373080e22e6c0aa9fa9394c91b6cf1036898a17595e629983912bbced89653ec $HOME/bin/marktext" | sha256sum --check --status
+```
+
+Assign permissions
+
+```bash
+$ chmod u+x $HOME/bin/marktext
+```
+
+Download `.desktop` file
+
+```bash
+$ curl \
+    --location https://raw.githubusercontent.com/marktext/marktext/develop/resources/linux/marktext.desktop \
+    --output $HOME/.local/share/applications/marktext.desktop
+
+$ wget \
+    -O $HOME/.local/share/applications/marktext.desktop \
+    https://raw.githubusercontent.com/marktext/marktext/develop/resources/linux/marktext.desktop
+```
+
+Update `Exec` path in `.desktop` file
+
+```bash
+$ nano $HOME/.local/share/applications/marktext.desktop
+
+# on this line
+Exec=marktext %F
+# complete full path of marktext
+```
+
+Build cache database of MIME types handled by desktop files
+
+```bash
+$ update-desktop-database $HOME/.local/share/applications/
+```
+
+Update icon
+
+```bash
+$ mkdir $HOME/.icons
+$ cd $HOME/.icons
+$ wget \
+    -O marktext.png \
+    https://github.com/marktext/marktext/blob/develop/resources/icons/icon.png?raw=true
+```
+
+Config folder - `$HOME/.config/marktext`
+
+Related links
+- Fix issue with [icon](https://askubuntu.com/questions/333133/how-to-set-app-icon-in-the-desktop-file-of-an-ubuntu-touch-application)
+
+#### [vnote](https://vnotex.github.io/vnote/en_us/)
+
+A note-taking application that knows programmers and Markdown better.
+
+[GitHub](https://github.com/tamlok/vnote)
+
+Download `AppImage` file
+
+```bash
+$ wget \
+    -O $HOME/bin/vnote \
+    https://github.com/tamlok/vnote/releases/download/v2.9.1/VNote-2.9.1-x86_64.AppImage
+```
+
+Give permissiones to `AppImage` file
+
+```bash
+$ chmod u+x $HOME/bin/vnote
+```
+
+Directories needed
+- `$HOME/.cache/VNote-2.9.1-x86_64.AppImage/`
+- `$HOME/.local/share/vnote/`
+- `$HOME/.local/share/VNote/`
+- `$HOME/.local/share/VNote-2.9.1-x86_64.AppImage/`
+
+#### More alternatives
+
+To manage a Personal Knowledge Base:
+
+- [Athens](https://github.com/athensresearch/athens)
+- [Emvi](https://emvi.com/)
+- [Froost](https://froosthq.com/)
+- [Fibery](https://fibery.io/)
+- [Jetbrains Space](https://www.jetbrains.com/space/)
+- [Notable app](https://notable.app/) - [GitHub](https://github.com/notable/notable)
+- [Notion clone](https://github.com/konstantinmuenster/notion-clone)
+- [Notion](https://www.notion.so/)
+    - [Notion for studens & teachers](https://www.notion.so/Notion-for-students-teachers-adc631df15ee4ab9a7a33dd50f4c16fe)
+    - [Guides & tutorials](https://www.notion.so/guides/)
+    - [How Notion Uses Notion](https://www.notion.so/How-Notion-Uses-Notion-616f41d2f5124f3185cf1c36d267c07e)
+- [Org-roam](https://www.orgroam.com/) - [github](https://github.com/org-roam/org-roam)
+- [Obsidian](https://obsidian.md/)
+    - [kmaasrud/awesome-obsidian](https://github.com/kmaasrud/awesome-obsidian)
+- [Outline](https://www.getoutline.com/)
+- [Qatalog](https://qatalog.com/)
+- [Roam Research](https://roamresearch.com/)
+- [Supernotes app](https://supernotes.app/)
+- [Trilium notes](https://github.com/zadam/trilium)
+- [TiddlyWiki](https://tiddlywiki.com/)
+- [Wiki js](https://wiki.js.org/)
+- [Zettlr](https://www.zettlr.com/) - [github](https://github.com/Zettlr/Zettlr)
+- [Zim](https://zim-wiki.org/) - A Desktop Wiki
+- [Zotero](https://www.zotero.org/)
+- [ZETTELKASTEN - The Archive](https://zettelkasten.de/the-archive/)
 
 ## Extra Commands & Tools
 
