@@ -1685,21 +1685,54 @@ Usage
     $ jq . {{ json file }}
     ```
 
+### wrk
+
+Modern HTTP benchmarking tool
+
+[GitHub](https://github.com/wg/wrk)
+
+Install from `master` branch
+
+```bash
+$ cd $HOME
+$ git clone https://github.com/wg/wrk
+$ cd wrk
+$ make
+$ cp wrk $HOME/bin/wrk
+```
+
+Usage
+
+```
+# -c  --connections: total number of HTTP connections to keep open with
+#                    each thread handling N = connections/threads
+# -d  --duration:    duration of the test, e.g. 2s, 2m, 2h
+# -t  --threads:     total number of threads to use
+# -s  --script:      LuaJIT script, see SCRIPTING
+# -H  --header:      HTTP header to add to request, e.g. "User-Agent: wrk"
+#     --latency:     print detailed latency statistics
+#     --timeout:     record a timeout if a response is not received within
+#                    this amount of time.
+```
+
+Alternatives
+
 - [wrk2](https://github.com/giltene/wrk2)
 
+    A constant throughput, correct latency recording variant of wrk
+
+    Install from `GitHub`
+
     ```bash
-    # Install
     $ git clone https://github.com/giltene/wrk2
     $ cd wrk2
     $ make
-    # hope no errors on output
-    # copy `wrk` binary to your local `bin` folder as `wrk2`
     $ cp wrk $HOME/bin/wrk2
-
-    # How to use it, same as wrk
     ```
 
-- [youtube-dl](https://github.com/ytdl-org/youtube-dl) - Command-line program to download videos from YouTube.com and other video sites
+Related links
+- [denji/awesome-http-benchmark](https://github.com/denji/awesome-http-benchmark) - HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful)
+
 
     ```bash
     # install via pip
