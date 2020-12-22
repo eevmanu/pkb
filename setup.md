@@ -2014,66 +2014,41 @@ $ mv $HOME/ngrok $HOME/bin/
 $ rm ngrok.zip
 ```
 
+### httpstat
 
-    # install where `pip` points (Python)
-    $ pip install httpstat
-    ```
+It's like curl -v, with graphs and colors
 
-- [hwinfo](https://github.com/openSUSE/hwinfo) - Hardware information tool
+[GitHub](https://github.com/davecheney/httpstat)
 
-    ```bash
-    # easy way, via apt packages
-    $ apt install hwinfo
+Download `.sh` file and install it
 
-    $ hwinfo --disk
-    ...
-    Device Files: /dev/nvme0n1, /dev/disk/by-id/nvme-Samsung_SSD_950_PRO_512GB_S2GMNX0H413184R
-    ...
-    ```
+```bash
+# install in $HOME/bin
+$ wget \
+    -O $HOME/bin/httpstat \
+    https://raw.githubusercontent.com/b4b4r07/httpstat/master/httpstat.sh
 
-- [ufw](https://help.ubuntu.com/community/UFW) - Uncomplicated Firewall
-    - [Gufw](https://help.ubuntu.com/community/Gufw) - firewall powered by UFW
+$ chmod u+x $HOME/bin/httpstat
+```
 
-    ```bash
-    $ apt install ufw
-    $ apt install gufw
-    ```
+Install via `go`
 
-- [opensnitch](https://github.com/evilsocket/opensnitch) - OpenSnitch is a GNU/Linux port of the Little Snitch application firewall
+```bash
+# install on $GOPATH/bin folder
+$ go get github.com/davecheney/httpstat
+```
 
-- [exiftool](https://github.com/exiftool/exiftool) - meta information reader/writer
+Install via `pip`
 
-    ```bash
-    # set date time on pictures
-    $ exiftool -AllDates="2015:09:22 12:00:00"
-    ```
+```bash
+$ pip install httpstat
+```
 
-- [powertop](https://github.com/fenrus75/powertop) - The Linux PowerTOP tool
+Similar tools
+- in [bash](https://github.com/b4b4r07/httpstat)
+- in [Go](https://github.com/davecheney/httpstat)
+- in [Python](https://github.com/reorx/httpstat)
 
-    ```bash
-    # Packages needed
-    # Pciutils-devel -> libpci-dev
-    # Ncurses-devel -> libncurses5-dev
-    # Libnl-devel -> libnl-genl-3-dev
-    # autopoint
-    # dh-autoreconf
-    # autoconf-archive
-
-    # download it
-    $ wget https://01.org/sites/default/files/downloads/powertop-2.12.tar.gz
-    # or
-    $ git clone https://github.com/fenrus75/powertop
-    $ git checkout v2.12
-
-    # install in $HOME/bin
-    $ cd powertop/
-    $ ./autogen.sh
-    $ ./configure
-    $ make
-    $ cp src/powertop $HOME/bin
-    $ cd $HOME
-    $ rm -rf powertop/
-    ```
 
 - [iotop](https://linux.die.net/man/1/iotop)
 
