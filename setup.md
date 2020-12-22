@@ -2151,6 +2151,16 @@ Related tools
 - [ncdu](https://dev.yorhel.nl/ncdu) - Ncdu is a disk usage analyzer with an ncurses interface.
 - [nmon](http://nmon.sourceforge.net/pmwiki.php) - Nigel's performance Monitor for Linux
 - [bmon](https://linux.die.net/man/1/bmon) - Portable bandwidth monitor and rate estimator - [GitHub](https://github.com/tgraf/bmon)
+
+### [AWS CLI](https://aws.amazon.com/cli/)
+
+[GitHub](https://github.com/aws/aws-cli)
+
+Related links
+- [Installing, updating, and uninstalling the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
+- [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
+- [open-guides/og-aws](https://github.com/open-guides/og-aws) - :books: Amazon Web Services — a practical guide
+
 ## Troubleshooting
 
 ### Spotify
