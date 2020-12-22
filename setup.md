@@ -343,7 +343,7 @@ PulseAudio
     $ cat /etc/pulse/default.pa
     ```
 
-- Components:
+- Components
 
     - Sound Server app - [GitLab](https://gitlab.freedesktop.org/pulseaudio/pulseaudio)
 
@@ -365,7 +365,7 @@ PulseAudio
         $ sudo apt install pavucontrol
         ```
 
-- Commands:
+- Commands
 
     - Get version
 
@@ -407,7 +407,7 @@ PulseAudio
         $ ls /usr/lib/pulse-13.99.1/modules/
         ```
 
-- Debugging:
+- Debugging
 
     - Get logs from `rsyslog`
 
@@ -425,8 +425,7 @@ PulseAudio
         ```
 
 - Related links
-
-  - [Things to do after installing Pop!_OS 20.04 (Apps, Settings, and Tweaks)](https://mutschler.eu/linux/install-guides/pop-os-post-install/) - [archive](https://web.archive.org/web/20201217152053/https://mutschler.eu/linux/install-guides/pop-os-post-install/)
+    - [Things to do after installing Pop!_OS 20.04 (Apps, Settings, and Tweaks)](https://mutschler.eu/linux/install-guides/pop-os-post-install/) - [archive](https://web.archive.org/web/20201217152053/https://mutschler.eu/linux/install-guides/pop-os-post-install/)
 
 ## Issue to be aware
 
@@ -452,9 +451,6 @@ Setup Amazon Echo device as speaker
     ```bash
     $ apt install -s blueman
     ...
-    Inst libayatana-indicator3-7 (0.6.3-1 Ubuntu:20.04/focal [amd64])
-    Inst libayatana-appindicator3-1 (0.5.4-2 Ubuntu:20.04/focal [amd64])
-    Inst gir1.2-ayatanaappindicator3-0.1 (0.5.4-2 Ubuntu:20.04/focal [amd64])
     Inst blueman (2.2-git1601238013r3bcd6003-python3.8-1 cschramm.eu [amd64])
     ...
     ```
@@ -507,7 +503,6 @@ Setup Amazon Echo device as speaker
     ```
 
     Related links
-
     - Github Wiki: [Troubleshooting](https://github.com/blueman-project/blueman/wiki/Troubleshooting)
 
 - Steps
@@ -563,22 +558,21 @@ Activate all PPA files where commented by `Download` button action
 
 ### [Snapcraft](https://snapcraft.io/)
 
-[Install on Ubuntu](https://snapcraft.io/docs/installing-snap-on-ubuntu)
+Install it
 
 ```bash
 $ sudo apt update
 $ sudo apt install snapd
 ```
 
+Related links
+- [Install on Ubuntu](https://snapcraft.io/docs/installing-snap-on-ubuntu)
 
 ### [flatpak](https://flatpak.org/)
 
-Directories used:
-
-```bash
-$HOME/.cache/flatpak
-$HOME/.local/share/flatpak
-```
+Directories used
+- `$HOME/.cache/flatpak`
+- `$HOME/.local/share/flatpak`
 
 ### [AppImage](https://appimage.org/)
 
@@ -596,7 +590,7 @@ $ apt install synaptic
 
 Better lighting for your computer
 
-[GitHub repo](https://github.com/xflux-gui/fluxgui)
+[GitHub](https://github.com/xflux-gui/fluxgui)
 
 List of package dependencies
 
@@ -658,8 +652,6 @@ Alternatives
 
 - [Brave](https://brave.com/) - browser with real privacy
 
-    [Install instructions for Linux](https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux)
-
     Install dependencies
 
     ```
@@ -688,7 +680,7 @@ Alternatives
     $ sudo apt update
     ```
 
-    Install -it
+    Install it
 
     ```bash
     $ sudo apt install brave-browser-nightly
@@ -705,6 +697,9 @@ Alternatives
 
     $ sudo rm /etc/apt/trusted.gpg.d/brave-browser-prerelease.gpg*
     ```
+
+    Related links
+    - [Install instructions for Linux](https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux)
 
 ### [Dropbox](https://www.dropbox.com/install-linux)
 
@@ -775,7 +770,8 @@ $ rm -rf $HOME/.cache/spotify/*
 ```
 
 Personal Settings
-<!-- TODO -->
+
+TODO
 
 Related links
 - [archive](https://web.archive.org/web/20201221183349/https://www.spotify.com/pe/download/linux/)
@@ -836,14 +832,16 @@ $HOME/.var/app/org.telegram.desktop/
 Related links
 - [Changelog - Version history](https://desktop.telegram.org/changelog)
 - [Wiki](https://github.com/telegramdesktop/tdesktop/wiki)
-  - [Keyboard Shortcuts](https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts)
+    - [Keyboard Shortcuts](https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts)
 
 ### [Slack](https://slack.com/intl/en-us/downloads/linux)
 
 Install via `.deb`
 
 ```bash
-$ wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.4.2-amd64.deb
+$ wget \
+    -O $HOME/slack.deb \
+    https://downloads.slack-edge.com/linux_releases/slack-desktop-4.4.2-amd64.deb
 ```
 
 Install via `Snap`
