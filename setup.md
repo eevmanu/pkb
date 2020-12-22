@@ -1657,26 +1657,32 @@ $ sudo apt install ffmpeg
 Related links
 - [Ubuntu 20.04 FFmpeg installation](https://linuxconfig.org/ubuntu-20-04-ffmpeg-installation)
 
+### jq
+
+Command-line JSON processor
+
+[GitHub](https://github.com/stedolan/jq)
+
+Download binary
+
+```bash
+$ wget \
+    -O $HOME/bin/jq \
+    https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
+```
+
+Assign permissions
+
+```bash
+$ chmod u+x $HOME/bin/jq
+```
+
+Usage
+
+- Pretty print **ugly** json
 
     ```bash
-    # Install
-    $ git clone https://github.com/wg/wrk
-    $ cd wrk
-    $ make
-    # hope no errors on output
-    # copy `wrk` binary to your local `bin` folder
-    $ cp wrk $HOME/bin/wrk
-
-    # How to use it
-    # -c, --connections: total number of HTTP connections to keep open with
-    #                 each thread handling N = connections/threads
-    # -d, --duration:    duration of the test, e.g. 2s, 2m, 2h
-    # -t, --threads:     total number of threads to use
-    # -s, --script:      LuaJIT script, see SCRIPTING
-    # -H, --header:      HTTP header to add to request, e.g. "User-Agent: wrk"
-    #     --latency:     print detailed latency statistics
-    #     --timeout:     record a timeout if a response is not received within
-    #                 this amount of time.
+    $ jq . {{ json file }}
     ```
 
 - [wrk2](https://github.com/giltene/wrk2)
