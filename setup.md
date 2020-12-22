@@ -1751,6 +1751,125 @@ $ wget \
 $ chmod u+rx $HOME/bin/youtube-dl
 ```
 
+### flameshot
+
+Powerful yet simple to use screenshot software
+
+[GitHub](https://github.com/lupoDharkael/flameshot)
+
+- [Install @ Ubuntu](https://flameshot.js.org/#/getting-start?id=debianubuntu)
+
+```bash
+# add `Super + Print` as keyboard shortcut
+# add `Print` as keyboard shortcut but
+# don't forget to check where `Take a screenshot` default shortcut is
+# -d, delay time in miliseconds
+# -p, path where capture will be saved
+/usr/local/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
+/usr/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
+
+# easy way
+$ apt install flameshot
+
+# when installed in clean pop os 20.04 v6
+$ apt install qtchooser
+
+# when installed in clean pop os 20.04 v6
+# installed packages
+# libclang1-10 libdouble-conversion3 libegl-dev libgl-dev libglu1-mesa-dev
+# libglx-dev libllvm10 libpthread-stubs0-dev libqt5concurrent5 libqt5core5a
+# libqt5dbus5 libqt5designer5 libqt5designercomponents5 libqt5gui5 libqt5help5
+# libqt5network5 libqt5opengl5 libqt5opengl5-dev libqt5positioning5
+# libqt5printsupport5 libqt5qml5 libqt5quick5 libqt5quickwidgets5
+# libqt5sensors5 libqt5sql5 libqt5sql5-sqlite libqt5svg5 libqt5test5
+# libqt5webchannel5 libqt5webkit5 libqt5widgets5 libqt5xml5 libvulkan-dev
+# libx11-dev libxau-dev libxcb-xinerama0 libxcb-xinput0 libxcb1-dev
+# libxdmcp-dev libxext-dev qdoc-qt5 qhelpgenerator-qt5 qt5-assistant
+# qt5-default qt5-gtk-platformtheme qt5-qmake qt5-qmake-bin
+# qtattributionsscanner-qt5 qtbase5-dev qtbase5-dev-tools qttools5-dev-tools
+# qttranslations5-l10n x11proto-core-dev x11proto-dev x11proto-xext-dev
+# xorg-sgml-doctools xtrans-dev
+$ sudo apt install \
+libqt5svg5 \
+libqt5svg5-dev
+
+# when installed in clean pop os 20.04 v6
+# installed packages
+# appmenu-gtk3-module libappmenu-gtk3-parser0
+$ sudo apt install \
+appmenu-gtk3-module
+
+# Packages needed
+# Compile-time
+$ apt install \
+g++ \
+build-essential \
+qt5-default \
+qt5-qmake \
+qttools5-dev-tools
+
+# Run-time
+$ apt install libqt5dbus5 \
+libqt5network5 \
+libqt5core5a \
+libqt5widgets5 \
+libqt5gui5 \
+libqt5svg5-dev
+
+# Optional
+$ apt install git \
+openssl \
+ca-certificates
+
+# hard way, from github
+# install in $HOME/bin
+$ cd $HOME
+$ git clone https://github.com/lupoDharkael/flameshot
+$ cd flameshot/
+$ mkdir build/
+$ cd build/
+$ qmake ../
+$ make
+$ cp flameshot $HOME/bin
+$ cd $HOME
+$ rm -rf flameshot/
+
+{{ $HOME }}/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
+
+# flameshot.conf
+[General]
+closeAfterScreenshot=true
+disabledTrayIcon=false
+filenamePattern=fs_%Y-%m-%d_%H-%M-%S
+showDesktopNotification=true
+startupLaunch=true
+
+# another example of flameshot.conf
+[General]
+closeAfterScreenshot=false
+disabledTrayIcon=false
+drawColor=#ff0000
+drawThickness=1
+filenamePattern=fs_%Y-%m-%d_%H-%M-%S
+savePath={{ $HOME }}/Pictures
+showDesktopNotification=false
+startupLaunch=true
+uiColor=#930096
+```
+
+```
+Couldn't install in $HOME/bin
+Seems to be a limitation between $PATH, Gnome (shell, extensions, menu, not sure)
+because when I install via apt it works (it install in /usr/bin/flameshot) and calling
+from command declaration in custom keyboard shortcut is not a problem
+but when build binary and execute ./flameshot gui, nothing appears, nothing work
+```
+
+- Directories used:
+
+```bash
+$HOME/.config/Dharkael/flameshot.ini
+```
 
     ```bash
     # install via pip
