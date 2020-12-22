@@ -1228,31 +1228,62 @@ To manage a Personal Knowledge Base:
 
 ## Extra Commands & Tools
 
-- [git](https://git-scm.com/)
-    - [code](https://github.com/git/git)
+### [git](https://git-scm.com/)
+
+[GitHub](https://github.com/git/git)
+
+Install it
+
+```bash
+$ sudo apt-add-repository ppa:git-core/ppa
+$ sudo apt update
+$ sudo apt install git
+```
+
+Complementary tools
+
+- [gitk](https://git-scm.com/docs/gitk) - The Git repository browser
+
+    Install it
 
     ```bash
-    $ apt-add-repository ppa:git-core/ppa
-    $ apt update
-    $ apt install git
-
-    # extra tool -> gitk
-    $ apt install gitk
-
-    # extra tool -> gitg
-    $ apt install gitg
-
-    # extra tool -> git cola
-    # (2020-05-27 14:37:31)
-    # Inst git-cola (3.6-1 Ubuntu:20.04/focal [all])
-    $ sudo apt install git-cola
-    # settings file: $HOME/.config/git-cola/settings
+    $ sudo apt install gitk
     ```
 
-- [git-cola](https://github.com/git-cola/git-cola) - The highly caffeinated Git GUI
+- [Gitg](https://wiki.gnome.org/Apps/Gitg/) - GNOME GUI client to view git repositories.
+
+    [GitLab](https://gitlab.gnome.org/GNOME/gitg)
+
+    Install it
+
+    ```bash
+    $ sudo apt install gitg
+    ```
+
+- [Git Cola](https://git-cola.github.io/) - sleek and powerful graphical user interface for Git
+
+    [GitHub](https://github.com/git-cola/git-cola) - The highly caffeinated Git GUI
+
+    Install via `apt`
+
+    ```bash
+    $ sudo apt install git-cola
+    ```
+
+    Settings file - `$HOME/.config/git-cola/settings`
+
+    Personal settings
+    - GUI theme -> Flat dark grey
+    - Icon theme -> Dark theme
+    - Hide Branches
+    - Hide Submodules
+    - Move Status to right
+
+    Install from `master` branch
+
     - Clone repo (if you already have it, update it)
 
-        ```
+        ```bash
         $ mkdir -p $HOME/bin-sources/
         $ cd $HOME/bin-sources/
         $ git clone https://github.com/git-cola/git-cola
@@ -1260,55 +1291,55 @@ To manage a Personal Knowledge Base:
 
     - Install dependencies
 
-        ```
+        ```bash
         $ pip install PyQt5
         ```
 
     - Create soft links inside `$HOME/bin` folder
 
-        ```
+        ```bash
         $ ln -s $HOME/bin-sources/git-cola/bin/git-cola $HOME/bin/
         $ ln -s $HOME/bin-sources/git-cola/bin/git-dag $HOME/bin/
         ```
 
-    - Create **.desktop** file into */usr/share/applications/* or *$HOME/.local/share/applications*
+    - Create `.desktop` file in `$HOME/.local/share/applications`  (or `/usr/share/applications/`)
 
         ```bash
         $ touch $HOME/.local/share/applications/git-cola.desktop
         $ touch $HOME/.local/share/applications/git-dag.desktop
         ```
 
-        - `git-cola.desktop` file content (example [here](https://github.com/git-cola/git-cola/blob/main/share/applications/git-cola.desktop))
+        `git-cola.desktop` (example [here](https://github.com/git-cola/git-cola/blob/main/share/applications/git-cola.desktop))
 
-            ```
-            [Desktop Entry]
-            Name=Git Cola
-            Comment=The highly caffeinated Git GUI
-            Comment[zh_TW]=高咖啡因含量的 Git 圖形介面
-            TryExec=git-cola
-            Exec=$HOME/bin/git-cola --prompt
-            Icon=git-cola
-            StartupNotify=true
-            Terminal=false
-            Type=Application
-            Categories=Development;RevisionControl;
-            X-KDE-SubstituteUID=false
-            ```
+        ```
+        [Desktop Entry]
+        Name=Git Cola
+        Comment=The highly caffeinated Git GUI
+        Comment[zh_TW]=高咖啡因含量的 Git 圖形介面
+        TryExec=git-cola
+        Exec=$HOME/bin/git-cola --prompt
+        Icon=git-cola
+        StartupNotify=true
+        Terminal=false
+        Type=Application
+        Categories=Development;RevisionControl;
+        X-KDE-SubstituteUID=false
+        ```
 
-        - `git-dag.desktop` file content (example [here](https://github.com/git-cola/git-cola/blob/main/share/applications/git-dag.desktop))
+        `git-dag.desktop` (example [here](https://github.com/git-cola/git-cola/blob/main/share/applications/git-dag.desktop))
 
-            ```
-            [Desktop Entry]
-            Name=Git DAG
-            Comment=Git DAG visualizer
-            Exec=git-dag --prompt
-            Icon=git-cola
-            StartupNotify=true
-            Terminal=false
-            Type=Application
-            Categories=Development;RevisionControl;
-            X-KDE-SubstituteUID=false
-            ```
+        ```
+        [Desktop Entry]
+        Name=Git DAG
+        Comment=Git DAG visualizer
+        Exec=git-dag --prompt
+        Icon=git-cola
+        StartupNotify=true
+        Terminal=false
+        Type=Application
+        Categories=Development;RevisionControl;
+        X-KDE-SubstituteUID=false
+        ```
 
     - Add icons
 
@@ -1324,16 +1355,16 @@ To manage a Personal Knowledge Base:
         $ update-desktop-database $HOME/.local/share/applications/
         ```
 
-    - Remove everything
+    Uninstall / remove it
 
-        ```bash
-        $ rm $HOME/.local/share/icons/git-cola
-        $ rm $HOME/.local/share/applications/git-cola.desktop
-        $ rm $HOME/.local/share/applications/git-dag.desktop
-        $ rm $HOME/bin-sources/git-cola/bin/git-cola
-        $ rm $HOME/bin-sources/git-cola/bin/git-dag
-        $ rm -rf $HOME/bin-sources/git-cola/
-        ```
+    ```bash
+    $ rm $HOME/.local/share/icons/git-cola
+    $ rm $HOME/.local/share/applications/git-cola.desktop
+    $ rm $HOME/.local/share/applications/git-dag.desktop
+    $ rm $HOME/bin-sources/git-cola/bin/git-cola
+    $ rm $HOME/bin-sources/git-cola/bin/git-dag
+    $ rm -rf $HOME/bin-sources/git-cola/
+    ```
 
     - Settings
 
