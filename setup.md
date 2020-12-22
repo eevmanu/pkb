@@ -9,7 +9,7 @@
   - [Issue to be aware](#issue-to-be-aware)
     - [Bluetooth](#bluetooth)
     - [Wireless](#wireless)
-  - [Revert upgrading PopOS verison](#revert-upgrading-popos-verison)
+  - [Revert partial upgrade PopOS verison](#revert-partial-upgrade-popos-verison)
   - [Linux software distributions](#linux-software-distributions)
     - [Snapcraft](#snapcraft)
     - [flatpak](#flatpak)
@@ -625,7 +625,7 @@ Setup Amazon Echo device as speaker
 
 [System76 - Support - Solve Wireless Issues](https://support.system76.com/articles/wireless/)
 
-## Revert upgrading PopOS verison
+## Revert partial upgrade PopOS verison
 
 ☝ [Table of contents](#table-of-contents)
 
