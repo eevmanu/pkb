@@ -1388,6 +1388,64 @@ Install it
 $ sudo apt install xclip
 ```
 
+### [htop](https://htop.dev/)
+
+An interactive process viewer
+
+[GitHub](https://github.com/htop-dev/htop)
+
+Package dependencies
+
+```
+autoconf
+automake
+autopoint
+autoreconf
+autotools-dev
+debhelper
+dh-autoreconf
+dh-strip-nondeterminism
+dwz
+gettext
+intltool-debian
+libarchive-cpio-perl
+libarchive-zip-perl
+libcroco3
+libdebhelper-perl
+libfile-stripnondeterminism-perl
+libltdl-dev
+libmail-sendmail-perl
+libncursesw5
+libncursesw5-dev
+libsigsegv2
+libsub-override-perl
+libsys-hostname-long-perl
+libtool
+m4
+po-debconf
+```
+
+Install via `apt`
+
+```bash
+$ sudo apt install htop
+```
+
+Install from `master` branch
+
+```bash
+$ cd $HOME
+$ git clone https://github.com/hishamhm/htop
+$ cd htop
+$ ./autogen.sh
+$ ./configure
+$ make
+$ cp htop $HOME/bin
+$ cd $HOME
+$ rm -rf $HOME/htop
+```
+
+Config file - `$HOME/.config/htop/htoprc`
 - [docker-compose](https://github.com/docker/compose)
 
     ```bash
