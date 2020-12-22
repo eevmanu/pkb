@@ -1553,6 +1553,26 @@ $ cd $HOME
 $ rm -rf $HOME/tmux
 ```
 
+### [tree](http://mama.indstate.edu/users/ice/tree/)
+
+Recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors if the `LS_COLORS` environment variable is set and output is to tty.
+
+[GitHub](https://github.com/nodakai/tree-command)
+
+Install it
+
+```bash
+# -a   All files are listed.
+# -f   Print the full path prefix for each file.
+# -d   only folders
+# -L   {{ number }}, where {{ number }} is level of depth
+# -p   Print the protections for each file.
+
+$ sudo apt install tree
+```
+
+Related links
+- 2019-10-04 - [Linux ‘tree Command’ Usage Examples for Beginners](https://www.tecmint.com/linux-tree-command-examples/)
 - [docker-compose](https://github.com/docker/compose)
 
     ```bash
