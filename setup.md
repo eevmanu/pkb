@@ -2089,6 +2089,9 @@ Related tools
 
 ### opensnitch
 
+OpenSnitch is a GNU/Linux port of the Little Snitch application firewall
+
+[GitHub](https://github.com/evilsocket/opensnitch)
 ## Troubleshooting
 
 ### Spotify
