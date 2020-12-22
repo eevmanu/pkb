@@ -2092,6 +2092,18 @@ Related tools
 OpenSnitch is a GNU/Linux port of the Little Snitch application firewall
 
 [GitHub](https://github.com/evilsocket/opensnitch)
+
+### exiftool
+
+Meta information reader/writer
+
+[GitHub](https://github.com/exiftool/exiftool)
+
+Set date time on pictures
+
+```bash
+$ exiftool -AllDates="2015:09:22 12:00:00"
+```
 ## Troubleshooting
 
 ### Spotify
