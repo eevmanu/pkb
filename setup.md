@@ -2049,33 +2049,27 @@ Similar tools
 - in [Go](https://github.com/davecheney/httpstat)
 - in [Python](https://github.com/reorx/httpstat)
 
+### hwinfo
 
-- [iotop](https://linux.die.net/man/1/iotop)
+Hardware information tool
 
-- [perf top](https://linux.die.net/man/1/perf-top)
-- `ncdu`
-- `nmon`
-- `bmon`
+[GitHub](https://github.com/openSUSE/hwinfo)
 
-- [AWS CLI](https://aws.amazon.com/cli/)
-    - [Install - Version 2](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
-    - [Configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
-    - [code](https://github.com/aws/aws-cli)
-    - [More info, AWS Guides @ Gihub](https://github.com/open-guides/og-aws)
+Install via `apt`
 
-- [carbon](https://github.com/carbon-app/carbon) - Create and share beautiful images of your source code
+```bash
+$ apt install hwinfo
+```
 
-- [jupyter](https://jupyter.org/)
-    - [code](https://github.com/jupyter/jupyter)
-    - [Installing the Jupyter Software](https://jupyter.org/install)
+Usage
 
-    ```bash
-    # install dependent packages
-    $ sudo apt install ipython ipython-notebook
-    $ pip install jupyterlab
-    $ pip install notebook
+```bash
+$ hwinfo --disk
+...
+Device Files: /dev/nvme0n1, /dev/disk/by-id/nvme-Samsung_SSD_950_PRO_512GB_S2GMNX0H413184R
+...
+```
 
-    $ jupyter notebook
     ```
 
 - Java (Oracle version, not OpenJDK), in case a program required it
