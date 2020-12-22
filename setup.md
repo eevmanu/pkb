@@ -2070,12 +2070,24 @@ Device Files: /dev/nvme0n1, /dev/disk/by-id/nvme-Samsung_SSD_950_PRO_512GB_S2GMN
 ...
 ```
 
+### [ufw](https://help.ubuntu.com/community/UFW)
+
+Uncomplicated Firewall
+
+```bash
+$ sudo apt install ufw
+```
+
+Related tools
+- [Gufw](https://help.ubuntu.com/community/Gufw) - firewall powered by UFW
+
+    Install it
+
+    ```
+    $ sudo apt install gufw
     ```
 
-- Java (Oracle version, not OpenJDK), in case a program required it
-  - [How to Install Java on Ubuntu 18.04](https://linuxize.com/post/install-java-on-ubuntu-18-04/)
-  - [How To Install Oracle Java 14 (JDK 14) On Ubuntu, Debian Or Linux Mint From APT PPA Repository](https://www.linuxuprising.com/2020/03/how-to-install-oracle-java-14-jdk14-on.html)
-  - [How To Install Java with Apt on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-20-04)
+### opensnitch
 
 ## Troubleshooting
 
