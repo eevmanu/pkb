@@ -1640,6 +1640,23 @@ Install it
 $ sudo apt install unrar
 ```
 
+### [ffmpeg](https://ffmpeg.org/)
+
+A complete, cross-platform solution to record, convert and stream audio and video.
+
+[GitHub](https://github.com/FFmpeg/FFmpeg)
+
+Install it
+
+```bash
+# 2020-05-28 18:30:43
+$ sudo apt install ffmpeg
+# Conf ffmpeg (7:4.2.2-1ubuntu1 Ubuntu:20.04/focal [amd64])
+```
+
+Related links
+- [Ubuntu 20.04 FFmpeg installation](https://linuxconfig.org/ubuntu-20-04-ffmpeg-installation)
+
 
     ```bash
     # Install
