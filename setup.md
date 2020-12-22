@@ -2167,6 +2167,34 @@ Create and share beautiful images of your source code
 
 [GitHub](https://github.com/carbon-app/carbon)
 
+### [Project Jupyter](https://jupyter.org/)
+
+Project Jupyter exists to develop open-source software, open-standards, and services for interactive computing across dozens of programming languages.
+
+[GitHub](https://github.com/jupyter/jupyter)
+
+Install dependencies
+
+```bash
+$ sudo apt install ipython ipython-notebook
+```
+
+Install via `pip`
+
+```bash
+$ pip install jupyterlab
+$ pip install notebook
+```
+
+Try it
+
+```bash
+$ jupyter notebook
+```
+
+Related links
+- [Installing the Jupyter Software](https://jupyter.org/install)
+
 ## Troubleshooting
 
 ### Spotify
