@@ -2104,6 +2104,53 @@ Set date time on pictures
 ```bash
 $ exiftool -AllDates="2015:09:22 12:00:00"
 ```
+
+### [powertop](https://01.org/powertop)
+
+The Linux PowerTOP tool
+
+[GitHub](https://github.com/fenrus75/powertop)
+
+Packages needed
+
+```
+- Pciutils-devel   -> libpci-dev
+- Ncurses-devel    -> libncurses5-dev
+- Libnl-devel      -> libnl-genl-3-dev
+- autopoint
+- dh-autoreconf
+- autoconf-archive
+```
+
+Download `.tar.gz` file
+
+```bash
+$ wget \
+    -O powertop.tar.gz \
+    https://01.org/sites/default/files/downloads/powertop-2.12.tar.gz
+```
+
+
+Install via `GitHub`
+
+```bash
+$ git clone https://github.com/fenrus75/powertop
+$ git checkout v2.12
+$ cd powertop/
+$ ./autogen.sh
+$ ./configure
+$ make
+$ cp src/powertop $HOME/bin/
+$ cd $HOME
+$ rm -rf powertop/
+```
+
+Related tools
+- [iotop](https://linux.die.net/man/1/iotop) - simple top-like I/O monitor
+- [perf top](https://linux.die.net/man/1/perf-top) - System profiling tool
+- [ncdu](https://dev.yorhel.nl/ncdu) - Ncdu is a disk usage analyzer with an ncurses interface.
+- [nmon](http://nmon.sourceforge.net/pmwiki.php) - Nigel's performance Monitor for Linux
+- [bmon](https://linux.die.net/man/1/bmon) - Portable bandwidth monitor and rate estimator - [GitHub](https://github.com/tgraf/bmon)
 ## Troubleshooting
 
 ### Spotify
