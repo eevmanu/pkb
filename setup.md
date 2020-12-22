@@ -1366,134 +1366,27 @@ Complementary tools
     $ rm -rf $HOME/bin-sources/git-cola/
     ```
 
-    - Settings
+### xclip
 
-        ```
-        GUI theme -> Flat dark grey
-        Icon theme -> Dark theme
-        Hide Branches
-        Hide Submodules
-        Move Status to right
-        ```
+Command line interface to the X11 clipboard
 
-    - Settings folder path - `$HOME/.config/git-cola/settings`
+[GitHub](https://github.com/astrand/xclip)
 
-- [xclip](https://github.com/astrand/xclip) - for `myts` personal commands
+For personal `myts` commands
 
-    ```bash
-    # $ sudo apt install xclip
-    # (2020-05-27 14:33:23)
-    # Inst xclip (0.13-1 Ubuntu:20.04/focal [amd64])
-    $ sudo apt install xclip
-    ```
+Simulate to check version to install
 
-- [htop](https://github.com/htop-dev/htop) - htop - an interactive process viewer
+```bash
+# 2020-05-27 14:33:23
+$ apt install -s xclip
+# Inst xclip (0.13-1 Ubuntu:20.04/focal [amd64])
+```
 
-    ```bash
-    # easy way
-    $ apt install htop
+Install it
 
-    # Packages needed
-    # autoconf automake autopoint autotools-dev debhelper dh-autoreconf
-    # dh-strip-nondeterminism dwz gettext intltool-debian libarchive-cpio-perl
-    # libarchive-zip-perl libcroco3 libdebhelper-perl libfile-stripnondeterminism-perl
-    # libltdl-dev libmail-sendmail-perl libsigsegv2 libsub-override-perl
-    # libsys-hostname-long-perl libtool m4 po-debconf
-    $ apt search autoreconf
-
-    # Packages needed
-    # libncursesw5
-    # libncursesw5-dev
-    $ apt install libncursesw5 libncursesw5-dev
-
-    # hard way - from source
-    # install in $HOME/bin
-    $ cd $HOME
-    $ git clone https://github.com/hishamhm/htop
-    $ cd htop
-    $ ./autogen.sh
-    $ ./configure
-    $ make
-    $ cp htop $HOME/bin
-    $ cd $HOME
-    $ rm -rf htop/
-
-    # config file
-    $HOME/.config/htop/htoprc
-    ```
-
-- [speedtest](https://github.com/sivel/speedtest-cli) - Command line interface for testing internet bandwidth using speedtest.net
-
-    ```bash
-    # verify `env python` works
-    # install in $HOME/bin
-    $ wget -O $HOME/bin/speedtest https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
-    $ chmod +x $HOME/bin/speedtest
-    ```
-
-- [httpie](https://github.com/jakubroztocil/httpie) - As easy as HTTPie /aitch-tee-tee-pie/ pie Modern command-line HTTP client – user-friendly curl alternative with intuitive UI, JSON support, syntax highlighting, wget-like downloads, extensions, etc
-
-    ```bash
-    # install in /usr/bin or /usr/local/bin
-    $ sudo pip install -U httpie
-
-    # install in $HOME/.local/bin
-    $ pip install --user -U httpie
-    # if pip was already installed with --user,
-    # don't need `sudo` not `--user`
-    $ pip install -U httpie
-    ```
-
-- [tmux](https://github.com/tmux/tmux) - tmux is a terminal multiplexer
-
-    ```bash
-    # check which version is included in your package repositories (Ubunut)
-    $ apt install -s bash
-    ...
-    tmux is already the newest version (2.1-3build1)
-    ...
-
-    # easy way
-    $ apt install bash
-
-    # Packages needed
-    # libevent-dev
-
-    # hard way, from github
-    # install in $HOME/bin
-    $ cd $HOME
-    $ git clone https://github.com/tmux/tmux
-    $ cd tmux/
-    $ ./autogen.sh
-    $ ./configure
-    $ make
-    $ cp tmux $HOME/bin
-    $ cd $HOME
-    $ rm -rf tmux/
-    ```
-
-- [tree](https://github.com/nodakai/tree-command) - handy little utility to display a tree view of directories
-    - [Linux ‘tree Command’ Usage Examples for Beginners](https://www.tecmint.com/linux-tree-command-examples/)
-
-    ```bash
-    # -a All files are listed.
-    # -f Print the full path prefix for each file.
-    # -d, only folders
-    # -L {{ number }}, where {{ number }} is level of depth
-    # -p Print the protections for each file.
-
-    $ sudo apt install tree
-    ```
-
-- [docker](https://github.com/moby/moby)
-    - [install @ ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-    - [post setup as non root user](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user)
-
-    - in case you have problem downloading **Docker’s official GPG key**
-
-        ```bash
-        $ sudo wget -O /etc/apt/trusted.gpg.d/docker.asc "https://download.docker.com/linux/ubuntu/gpg"
-        ```
+```bash
+$ sudo apt install xclip
+```
 
 - [docker-compose](https://github.com/docker/compose)
 
