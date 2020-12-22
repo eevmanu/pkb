@@ -1630,6 +1630,16 @@ collection of userspace utilities for controlling and monitoring various aspects
 | netstat           | ip -s, ss, ip route           | Show various networking statistics    |
 | brctl             | bridge                        | Handle bridge addresses and devices   |
 
+### unrar
+
+Unarchiver for .rar files
+
+Install it
+
+```bash
+$ sudo apt install unrar
+```
+
 
     ```bash
     # Install
