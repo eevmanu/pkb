@@ -1573,14 +1573,35 @@ $ sudo apt install tree
 
 Related links
 - 2019-10-04 - [Linux ‘tree Command’ Usage Examples for Beginners](https://www.tecmint.com/linux-tree-command-examples/)
+
+### Docker
+
+[Install Docker Engine on Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
+In case you have problem downloading **Docker’s official GPG key**
+
+```bash
+$ sudo wget \
+    -O /etc/apt/trusted.gpg.d/docker.asc \
+    "https://download.docker.com/linux/ubuntu/gpg"
+```
+
+Related tools
+
+- [moby/moby](https://github.com/moby/moby) - Moby Project - a collaborative project for the container ecosystem to assemble container-based systems
+
+- [containerd/containerd](https://github.com/containerd/containerd) - An open and reliable container runtime
+
 - [docker-compose](https://github.com/docker/compose)
 
-    ```bash
-    # install via pip (python package manager)
-    $ pip install -U docker-compose
+    Install from `GitHub`
 
+    ```bash
     # install via github in /usr/local/bin
-    $ curl -L https://github.com/docker/compose/releases/download/1.25.5/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+    $ curl \
+        -L https://github.com/docker/compose/releases/download/1.25.5/docker-compose-`uname -s`-`uname -m` \
+        -o /usr/local/bin/docker-compose
+
     $ chmod +x /usr/local/bin/docker-compose
     ```
 
