@@ -1997,63 +1997,23 @@ $HOME/.config/Dharkael/flameshot.ini
 
 - Install it via flatpak
 
+### [ngrok](https://ngrok.com/)
 
-        - Create `.desktop` file on `$HOME/.local/share/applications/ksnip.desktop`
+Public URLs for exposing your local web server.
 
-            ```
-            #!/usr/bin/env xdg-open
-            [Desktop Entry]
-            Type=Application
-            Exec={{ $HOME }}/bin/ksnip
-            Name=ksnip
-            GenericName=ksnip Screenshot Tool
-            Comment=Qt based cross-platform screenshot tool that provides many annotation features for your screenshots.
-            Icon=ksnip
-            Terminal=false
-            StartupNotify=true
-            Categories=Utility;
-            ```
+Install it
 
-        - Update manually desktop file database
+```bash
+# https://ngrok.com/download
+$ cd $HOME
+$ wget \
+    -O $HOME/ngrok.zip \
+    https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+$ unzip $HOME/ngrok.zip
+$ mv $HOME/ngrok $HOME/bin/
+$ rm ngrok.zip
+```
 
-            ```bash
-            $ update-desktop-database $HOME/.local/share/applications/
-            ```
-
-        - Uninstall and remove completely
-
-            ```bash
-            $ rm -rf $HOME/.local/share/ksnip
-            $ rm -rf $HOME/.config/ksnip
-            $ rm $HOME/bin/ksnip
-            ```
-
-    - Install it via flatpak
-
-- [ngrok](https://ngrok.com/) - Public URLs for exposing your local web server.
-
-    ```bash
-    # install in $HOME/bin
-    $ cd $HOME
-    # dowload from https://ngrok.com/download
-    $ wget -O $HOME/ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-    $ unzip $HOME/ngrok.zip
-    $ mv $HOME/ngrok $HOME/bin/
-    $ rm ngrok.zip
-    ```
-
-- `httpstat` - It's like curl -v, with graphs and colors
-    - in [bash](https://github.com/b4b4r07/httpstat)
-    - in [Go](https://github.com/davecheney/httpstat)
-    - in [Python](https://github.com/reorx/httpstat)
-
-    ```bash
-    # install in $HOME/bin
-    $ wget -O $HOME/bin/httpstat https://raw.githubusercontent.com/b4b4r07/httpstat/master/httpstat.sh
-    $ chmod +x $HOME/bin/httpstat
-
-    # install in $GOPATH/bin (Go)
-    $ go get github.com/davecheney/httpstat
 
     # install where `pip` points (Python)
     $ pip install httpstat
