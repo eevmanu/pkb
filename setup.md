@@ -1486,6 +1486,73 @@ $ pip install -U httpie
 $ sudo pip install -U httpie
 ```
 
+### tmux
+
+Terminal multiplexer
+
+[GitHub](https://github.com/tmux/tmux)
+
+Simulate install to check package version in your package repository
+
+```bash
+$ apt install -s tmux
+...
+tmux is already the newest version (3.0a-2ubuntu0.2).
+...
+```
+
+Package dependencies
+
+```
+autoconf
+automake
+autopoint
+autoreconf
+autotools-dev
+debhelper
+dh-autoreconf
+dh-strip-nondeterminism
+dwz
+gettext
+intltool-debian
+libarchive-cpio-perl
+libarchive-zip-perl
+libcroco3
+libdebhelper-perl
+libevent-dev
+libfile-stripnondeterminism-perl
+libltdl-dev
+libmail-sendmail-perl
+libncursesw5
+libncursesw5-dev
+libsigsegv2
+libsub-override-perl
+libsys-hostname-long-perl
+libtool
+m4
+po-debconf
+```
+
+Install via `apt`
+
+```bash
+$ sudo apt install bash
+```
+
+Install from `master` branch
+
+```bash
+$ cd $HOME
+$ git clone https://github.com/tmux/tmux
+$ cd tmux/
+$ ./autogen.sh
+$ ./configure
+$ make
+$ cp tmux $HOME/bin
+$ cd $HOME
+$ rm -rf $HOME/tmux
+```
+
 - [docker-compose](https://github.com/docker/compose)
 
     ```bash
