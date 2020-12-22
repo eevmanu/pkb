@@ -1464,6 +1464,28 @@ $ wget \
 $ chmod u+x $HOME/bin/speedtest
 ```
 
+### [httpie](https://httpie.io/)
+
+As easy as HTTPie /aitch-tee-tee-pie/ pie Modern command-line HTTP client – user-friendly curl alternative with intuitive UI, JSON support, syntax highlighting, wget-like downloads, extensions, etc
+
+[GitHub](https://github.com/jakubroztocil/httpie)
+
+Install via `pip`
+
+```bash
+# install in $HOME/.local/bin
+$ pip install --user -U httpie
+
+# if pip was already installed with --user,
+# don't need `sudo` neither `--user`
+$ pip install -U httpie
+
+# install in /usr/bin or /usr/local/bin
+# because pip is installed at system directory
+# requires `sudo`
+$ sudo pip install -U httpie
+```
+
 - [docker-compose](https://github.com/docker/compose)
 
     ```bash
