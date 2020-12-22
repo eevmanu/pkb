@@ -1733,6 +1733,24 @@ Alternatives
 Related links
 - [denji/awesome-http-benchmark](https://github.com/denji/awesome-http-benchmark) - HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful)
 
+### [youtube-dl](https://ytdl-org.github.io/youtube-dl/)
+
+Command-line program to download videos from YouTube.com and other video sites
+
+[GitHub](https://github.com/ytdl-org/youtube-dl)
+
+Install it
+
+```bash
+# install directly from github using wget on $HOME/bin (could be $HOME/.local/bin)
+# without using sudo
+$ wget \
+    -O $HOME/bin/youtube-dl \
+    https://yt-dl.org/downloads/latest/youtube-dl
+
+$ chmod u+rx $HOME/bin/youtube-dl
+```
+
 
     ```bash
     # install via pip
