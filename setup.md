@@ -1871,226 +1871,132 @@ but when build binary and execute ./flameshot gui, nothing appears, nothing work
 $HOME/.config/Dharkael/flameshot.ini
 ```
 
-    ```bash
-    # install via pip
-    $ pip install -U youtube-dl
+### [ksnip](https://github.com/ksnip/ksnip)
 
-    # install direct from github
-    $ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-    $ sudo chmod a+rx /usr/local/bin/youtube-dl
-    # download with wget
-    # install on $HOME/bin (could be $HOME/.local/bin)
-    $ wget https://yt-dl.org/downloads/latest/youtube-dl -O $HOME/bin/youtube-dl
-    $ chmod a+rx $HOME/bin/youtube-dl
-    ```
-
-- [flameshot](https://github.com/lupoDharkael/flameshot) - Powerful yet simple to use screenshot software
-    - [Install @ Ubuntu](https://flameshot.js.org/#/getting-start?id=debianubuntu)
+- Install using `.AppImage`
 
     ```bash
-    # add `Super + Print` as keyboard shortcut
-    # add `Print` as keyboard shortcut but
-    # don't forget to check where `Take a screenshot` default shortcut is
-    # -d, delay time in miliseconds
-    # -p, path where capture will be saved
-    /usr/local/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
-    /usr/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
-
-    # easy way
-    $ apt install flameshot
-
-    # when installed in clean pop os 20.04 v6
-    $ apt install qtchooser
-
-    # when installed in clean pop os 20.04 v6
-    # installed packages
-    # libclang1-10 libdouble-conversion3 libegl-dev libgl-dev libglu1-mesa-dev
-    # libglx-dev libllvm10 libpthread-stubs0-dev libqt5concurrent5 libqt5core5a
-    # libqt5dbus5 libqt5designer5 libqt5designercomponents5 libqt5gui5 libqt5help5
-    # libqt5network5 libqt5opengl5 libqt5opengl5-dev libqt5positioning5
-    # libqt5printsupport5 libqt5qml5 libqt5quick5 libqt5quickwidgets5
-    # libqt5sensors5 libqt5sql5 libqt5sql5-sqlite libqt5svg5 libqt5test5
-    # libqt5webchannel5 libqt5webkit5 libqt5widgets5 libqt5xml5 libvulkan-dev
-    # libx11-dev libxau-dev libxcb-xinerama0 libxcb-xinput0 libxcb1-dev
-    # libxdmcp-dev libxext-dev qdoc-qt5 qhelpgenerator-qt5 qt5-assistant
-    # qt5-default qt5-gtk-platformtheme qt5-qmake qt5-qmake-bin
-    # qtattributionsscanner-qt5 qtbase5-dev qtbase5-dev-tools qttools5-dev-tools
-    # qttranslations5-l10n x11proto-core-dev x11proto-dev x11proto-xext-dev
-    # xorg-sgml-doctools xtrans-dev
-    $ sudo apt install \
-        libqt5svg5 \
-        libqt5svg5-dev
-
-    # when installed in clean pop os 20.04 v6
-    # installed packages
-    # appmenu-gtk3-module libappmenu-gtk3-parser0
-    $ sudo apt install \
-        appmenu-gtk3-module
-
-    # Packages needed
-    # Compile-time
-    $ apt install \
-        g++ \
-        build-essential \
-        qt5-default \
-        qt5-qmake \
-        qttools5-dev-tools
-
-    # Run-time
-    $ apt install libqt5dbus5 \
-        libqt5network5 \
-        libqt5core5a \
-        libqt5widgets5 \
-        libqt5gui5 \
-        libqt5svg5-dev
-
-    # Optional
-    $ apt install git \
-        openssl \
-        ca-certificates
-
-    # hard way, from github
-    # install in $HOME/bin
     $ cd $HOME
-    $ git clone https://github.com/lupoDharkael/flameshot
-    $ cd flameshot/
-    $ mkdir build/
-    $ cd build/
-    $ qmake ../
-    $ make
-    $ cp flameshot $HOME/bin
-    $ cd $HOME
-    $ rm -rf flameshot/
-
-    {{ $HOME }}/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
-
-    # flameshot.conf
-    [General]
-    closeAfterScreenshot=true
-    disabledTrayIcon=false
-    filenamePattern=fs_%Y-%m-%d_%H-%M-%S
-    showDesktopNotification=true
-    startupLaunch=true
-
-    # another example of flameshot.conf
-    [General]
-    closeAfterScreenshot=false
-    disabledTrayIcon=false
-    drawColor=#ff0000
-    drawThickness=1
-    filenamePattern=fs_%Y-%m-%d_%H-%M-%S
-    savePath={{ $HOME }}/Pictures
-    showDesktopNotification=false
-    startupLaunch=true
-    uiColor=#930096
+    $ wget -O ksnip https://github.com/ksnip/ksnip/releases/download/v1.7.3/ksnip-1.7.3-x86_64.AppImage
+    $ chmod +x ksnip
+    $ mv ksnip $HOME/bin
     ```
 
-    ```
-    Couldn't install in $HOME/bin
-    Seems to be a limitation between $PATH, Gnome (shell, extensions, menu, not sure)
-    because when I install via apt it works (it install in /usr/bin/flameshot) and calling
-    from command declaration in custom keyboard shortcut is not a problem
-    but when build binary and execute ./flameshot gui, nothing appears, nothing work
-    ```
-
-    - Directories used:
+    - Download icon files
 
         ```bash
-        $HOME/.config/Dharkael/flameshot.ini
+        $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.svg
+        $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.ico
+        # Copy 64x64 and 128x128 png file from flatpak installation
         ```
 
-- [ksnip](https://github.com/ksnip/ksnip)
-    - Install using `.AppImage`
+    - Create folder hierarchy for `icon` files
+        - [Icon size to provide for unity .desktop, and the syntax to reference it](https://askubuntu.com/questions/393104/icon-size-to-provide-for-unity-desktop-and-the-syntax-to-reference-it)
 
         ```bash
-        $ cd $HOME
-        $ wget -O ksnip https://github.com/ksnip/ksnip/releases/download/v1.7.3/ksnip-1.7.3-x86_64.AppImage
-        $ chmod +x ksnip
-        $ mv ksnip $HOME/bin
+        # $HOME/.icons or $HOME/.local/share/icons
+        $ mkdir $HOME/.icons/hicolor/64x64/apps/
+        $ mkdir $HOME/.icons/hicolor/128x128/apps/
         ```
 
-        - Download icon files
+    - Copy icon files respectively
 
-            ```bash
-            $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.svg
-            $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.ico
-            # Copy 64x64 and 128x128 png file from flatpak installation
-            ```
+        ```bash
+        $ cp ksnip_64x64.png $HOME/.icons/hicolor/64x64/apps/ksnip.png
+        $ cp ksnip_128x128.png $HOME/.icons/hicolor/128x128/apps/ksnip.png
+        ```
 
-        - Create folder hierarchy for `icon` files
-            - [Icon size to provide for unity .desktop, and the syntax to reference it](https://askubuntu.com/questions/393104/icon-size-to-provide-for-unity-desktop-and-the-syntax-to-reference-it)
+    - Move icon files downloaded from github
 
-            ```bash
-            # $HOME/.icons or $HOME/.local/share/icons
-            $ mkdir $HOME/.icons/hicolor/64x64/apps/
-            $ mkdir $HOME/.icons/hicolor/128x128/apps/
-            ```
+        ```bash
+        $ mv ksnip.icon .icons/
+        $ mv ksnip.svg .icons/
+        ```
 
-        - Copy icon files respectively
+    - Setup shortcut
 
-            ```bash
-            $ cp ksnip_64x64.png $HOME/.icons/hicolor/64x64/apps/ksnip.png
-            $ cp ksnip_128x128.png $HOME/.icons/hicolor/128x128/apps/ksnip.png
-            ```
+        ```
+        Ksnip
+        {{ $HOME }}/bin/ksnip -r -d 0.1
+        Shift + Print or Print
+        ```
 
-        - Move icon files downloaded from github
+    - Change config inside app
 
-            ```bash
-            $ mv ksnip.icon .icons/
-            $ mv ksnip.svg .icons/
-            ```
+        ```
+        [Application]
+        ApplicationStyle=Fusion
+        AutoCopyToClipboardNewCaptures=true
+        CloseToTray=false
+        MinimizeToTray=false
+        PromptSaveBeforeExit=false
+        RememberLastSaveDirectory=true
+        SaveDirectory={{ $HOME }}/Pictures
+        SaveFilename=$Y-$M-$D_$T
+        StartMinimizedToTray=false
+        UseTabs=false
+        UseTrayIcon=false
 
-        - Setup shortcut
+        [ImageGrabber]
+        LastRectArea=@Rect(2341 182 1058 426)
 
-            ```
-            Ksnip
-            {{ $HOME }}/bin/ksnip -r -d 0.1
-            Shift + Print or Print
-            ```
+        [Imgur]
+        AlwaysCopyToClipboard=true
+        ForceAnonymous=true
+        OpenLinkDirectlyToImage=true
 
-        - Change config inside app
+        [MainWindow]
+        Position=@Point(2253 69)
 
-            ```
-            [Application]
-            ApplicationStyle=Fusion
-            AutoCopyToClipboardNewCaptures=true
-            CloseToTray=false
-            MinimizeToTray=false
-            PromptSaveBeforeExit=false
-            RememberLastSaveDirectory=true
-            SaveDirectory={{ $HOME }}/Pictures
-            SaveFilename=$Y-$M-$D_$T
-            StartMinimizedToTray=false
-            UseTabs=false
-            UseTrayIcon=false
+        [Painter]
+        ItemShadowEnabled=false
+        NumberFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@>\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0K\x10)
+        RotateWatermark=false
+        TextFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@(\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0\x32\x10)
 
-            [ImageGrabber]
-            LastRectArea=@Rect(2341 182 1058 426)
+        [UploadScript]
+        UploadScriptStoOnStdErr=false
 
-            [Imgur]
-            AlwaysCopyToClipboard=true
-            ForceAnonymous=true
-            OpenLinkDirectlyToImage=true
+        ```
 
-            [MainWindow]
-            Position=@Point(2253 69)
+    - Path to config file
 
-            [Painter]
-            ItemShadowEnabled=false
-            NumberFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@>\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0K\x10)
-            RotateWatermark=false
-            TextFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@(\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0\x32\x10)
+        ```bash
+        $ cat $HOME/.config/ksnip/ksnip.conf
+        ```
 
-            [UploadScript]
-            UploadScriptStoOnStdErr=false
+    - Create `.desktop` file on `$HOME/.local/share/applications/ksnip.desktop`
 
-            ```
+        ```
+        #!/usr/bin/env xdg-open
+        [Desktop Entry]
+        Type=Application
+        Exec={{ $HOME }}/bin/ksnip
+        Name=ksnip
+        GenericName=ksnip Screenshot Tool
+        Comment=Qt based cross-platform screenshot tool that provides many annotation features for your screenshots.
+        Icon=ksnip
+        Terminal=false
+        StartupNotify=true
+        Categories=Utility;
+        ```
 
-        - Path to config file
+    - Update manually desktop file database
 
-            ```bash
-            $ cat $HOME/.config/ksnip/ksnip.conf
-            ```
+        ```bash
+        $ update-desktop-database $HOME/.local/share/applications/
+        ```
+
+    - Uninstall and remove completely
+
+        ```bash
+        $ rm -rf $HOME/.local/share/ksnip
+        $ rm -rf $HOME/.config/ksnip
+        $ rm $HOME/bin/ksnip
+        ```
+
+- Install it via flatpak
+
 
         - Create `.desktop` file on `$HOME/.local/share/applications/ksnip.desktop`
 
