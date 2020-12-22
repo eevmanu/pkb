@@ -2413,6 +2413,15 @@ Related links
         /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
     ```
 
+- Fix `Stop`
+
+    ```bash
+    $ dbus-send \
+        --print-reply \
+        --dest=org.mpris.MediaPlayer2.spotify \
+        /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop
+    ```
+
 - Fix `Next`
 
     ```bash
@@ -2430,6 +2439,13 @@ Related links
         --dest=org.mpris.MediaPlayer2.spotify \
         /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
     ```
+
+- Other option: disable hardware-media-key-handling from chrome [link](chrome://flags/#hardware-media-key-handling)
+
+- Related links
+    - Google - [gnome play button spotify](https://www.google.com/search?q=gnome+play+button+spotify)
+    - [Spotify Media Keys Fix on Ubuntu 20.04 Gnome | TUTORIAL |](https://www.youtube.com/watch?v=Z3bqIjA8Dso)
+    - [Media controls on Gnome like play, pause, next, volume up/down](https://www.reddit.com/r/gnome/comments/ghg7y0/media_controls_on_gnome_like_play_pause_next/)
 
 ### VS Code
 
