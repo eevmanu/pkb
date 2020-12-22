@@ -72,7 +72,9 @@
 
 ## Backup & Restore
 
-Show sizes from list of folders you want to backup
+☝ [Table of contents](#table-of-contents)
+
+Show folder sizes you want to backup
 
 <!-- adding code section is like adding an identation level -->
 ```bash
@@ -85,7 +87,7 @@ $ du -sh \
     $HOME/Videos/
 ```
 
-Check for big unneed files
+Check for big unneeded files
 
 ```bash
 $ du -ah $HOME | \
@@ -147,7 +149,7 @@ $ sudo rsync -aPv "/media/$USER/manu/Projects/"  "$HOME/Projects/"
 $ sudo rsync -aPv "/media/$USER/manu/Videos/"    "$HOME/Videos/"
 ```
 
-Tools to consider
+Related tools
 <!-- TODO maybe turn this into a table -->
 <!-- details open -->
 - <details >
@@ -219,17 +221,19 @@ Related links
 
 ## Things to do after install PopOS
 
+☝ [Table of contents](#table-of-contents)
+
 Be aware of [Pop!_OS Keyboard Shortcuts](https://support.system76.com/articles/pop-keyboard-shortcuts/)
 
-Add `Spanish (Latin American)` keyboard layout
+Add keyboard layouts
 
 - `Settings` -> `Keyboard` -> `Input Sources` -> Add `Spanish (Latin American)`
 
-Set my preferred global `Format`
+Set system Format
 
 - `Settings` -> `Region & Language` -> `Formats` -> Set `United States (English)`
 
-Change system `Fonts`
+Update system Fonts
 
 - Default on **PopOS**
 
@@ -240,7 +244,7 @@ Change system `Fonts`
     | Sans-serif font   | Sans              |
     | Fixed-width font  | Monospace         |
 
-- Optional fonts to consider
+- Extra fonts
     - [tonsky/FiraCode](https://github.com/tonsky/FiraCode)
     - [source-foundry/Hack](https://github.com/source-foundry/Hack)
     - [adobe-fonts/source-code-pro](https://github.com/adobe-fonts/source-code-pro)
@@ -249,31 +253,36 @@ Change system `Fonts`
     - [rsms/inter](https://github.com/rsms/inter)
     - [most starred repo with `font`](https://github.com/search?q=font&s=stars&type=Repositories)
 
-- Related links:
+- Related links
     - [Go fonts](https://blog.golang.org/go-fonts)
     - [Best 20 Fonts for Ubuntu](https://linuxhint.com/best_fonts_ubuntu_linux/)
     - [List of monospaced typefaces](https://en.wikipedia.org/wiki/List_of_monospaced_typefaces)
 
 `Python` scripts
 
-```bash
-# Clean up your Python bytecode.
-# https://github.com/bittner/pyclean
-# https://manpages.ubuntu.com/manpages/trusty/man1/py3clean.1.html
-$ py3clean
+- Clean up your Python bytecode - [man](https://manpages.ubuntu.com/manpages/trusty/man1/py3clean.1.html) - [GitHub](https://github.com/bittner/pyclean)
 
-# byte compile Python 3 source files
-# https://manpages.ubuntu.com/manpages/bionic/man1/py3compile.1.html
-$ py3compile
+    ```bash
+    $ py3clean
+    ```
 
-# print python3 version information
-# https://manpages.ubuntu.com/manpages/bionic/man1/py3versions.1.html
-$ py3versions
+- Byte compile Python 3 source files - [man](https://manpages.ubuntu.com/manpages/bionic/man1/py3compile.1.html)
 
-# the Python documentation tool
-# https://manpages.ubuntu.com/manpages/disco/man1/pydoc3.8.1.html
-$ pydoc3.8
-```
+    ```bash
+    $ py3compile
+    ```
+
+- Print python3 version information - [man](https://manpages.ubuntu.com/manpages/bionic/man1/py3versions.1.html)
+
+    ```bash
+    $ py3versions
+    ```
+
+- The Python documentation tool - [man](https://manpages.ubuntu.com/manpages/disco/man1/pydoc3.8.1.html)
+
+    ```bash
+    $ pydoc3.8
+    ```
 
 **GNOME** `Update Manager`
 
@@ -287,12 +296,18 @@ $ pydoc3.8
     ...
     ```
 
+- Simulate install to verify package version able to install
+
+    ```bash
+    # download latest package information from all configured sources
+    $ sudo apt install update
+
+    $ sudo apt install -s update-manager
+    ```
+
 - Install it
 
     ```bash
-    # simulate install
-    $ apt install -s update-manager
-
     $ sudo apt install update-manager
     ```
 
@@ -314,30 +329,25 @@ $ pydoc3.8
     `General` -> `Animations` -> `Turn off`
 
     `Interface text` -> Fira Sans book 10 (default)
-
     - [How do I change fonts and adjust their size?](https://askubuntu.com/questions/19770/how-do-i-change-fonts-and-adjust-their-size)
 
-    Setup keyboard shortcut (`Alt` +  `Space`) to change keyboard layout
-
-    - Install `Gnome Tweaks`
-    - Open it
-    - Go to `Keyboard & Mouse`
+    Setup keyboard shortcut (`Alt+Space`) to change keyboard layout
+    - Open `Tweaks`
+    - Go to `Keyboard & Mouse` tab
     - Click on `Additional Layout Options`
     - Unfold `Switching to another layout`
     - Check `Alt+Space` option - [img](https://i.imgur.com/aSZxajn.png)
 
-
 **GNOME** `Shell integration` - install [chrome extension](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
 
-**GNOME** `extensions` to install
+**GNOME** `Extensions` to install
 
 - [Ubuntu AppIndicators](https://extensions.gnome.org/extension/1301/ubuntu-appindicators/)
 
 - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
 
     Avoid overwrite **Super+Q** used to close program
-
-    - Open `Tweaks` app
+    - Open `Tweaks`
     - Go to `Extensions` tab
     - Click on `Dash to dock` config
     - Go to `Behaviour` tab
@@ -365,8 +375,6 @@ $ pydoc3.8
 - [Dynamic Panel Transparency](https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/)
 
 - [List of extensions installed locally](https://extensions.gnome.org/local/)
-
-    ```
     - Alt Tab: Raise First Window
     - AlternateTab
     - Always Show Workspaces
@@ -382,13 +390,15 @@ $ pydoc3.8
     - System76 Power
     - Tweaks in System Menu
     - Ubuntu AppIndicators
-    ```
 
 PulseAudio
 
-- Simulate before install
+- Simulate install to verify package version able to install
 
     ```bash
+    # download latest package information from all configured sources
+    $ sudo apt install update
+
     $ apt install -s pulseaudio
     ...
     pulseaudio is already the newest version (1:13.99.1-1ubuntu3.8).
@@ -489,10 +499,12 @@ PulseAudio
     - Get logs from `journalctl`
 
         ```bash
-        # https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs
         $ journalctl --pager-end
         $ journalctl --follow
         ```
+
+        Related links
+        - 2018-02-20 - [How To Use Journalctl to View and Manipulate Systemd Logs](https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs)
 
 - Related links
     - [Things to do after installing Pop!_OS 20.04 (Apps, Settings, and Tweaks)](https://mutschler.eu/linux/install-guides/pop-os-post-install/) - [archive](https://web.archive.org/web/20201217152053/https://mutschler.eu/linux/install-guides/pop-os-post-install/)
@@ -500,6 +512,8 @@ PulseAudio
 ## Issue to be aware
 
 ### Bluetooth
+
+☝ [Table of contents](#table-of-contents)
 
 Setup Amazon Echo device as speaker
 
@@ -516,9 +530,12 @@ Setup Amazon Echo device as speaker
 
     Blueman is a GTK+ Bluetooth Manager
 
-    Simulate if already installed
+    Simulate install to verify package version able to install or installed
 
     ```bash
+    # download latest package information from all configured sources
+    $ sudo apt install update
+
     $ apt install -s blueman
     ...
     Inst blueman (2.2-git1601238013r3bcd6003-python3.8-1 cschramm.eu [amd64])
@@ -573,7 +590,7 @@ Setup Amazon Echo device as speaker
     ```
 
     Related links
-    - Github Wiki: [Troubleshooting](https://github.com/blueman-project/blueman/wiki/Troubleshooting)
+    - Github Wiki - [Troubleshooting](https://github.com/blueman-project/blueman/wiki/Troubleshooting)
 
 - Steps
     - Connect laptop to speaker (not viceversa)
@@ -591,7 +608,7 @@ Setup Amazon Echo device as speaker
     - [Troubleshoot Bluetooth Issues](https://support.system76.com/articles/bluetooth/)
     - [BluetoothUser a2dp](https://wiki.debian.org/BluetoothUser/a2dp)
     - ArchLinux - [PulseAudio/Troubleshooting](https://wiki.archlinux.org/index.php/PulseAudio/Troubleshooting)
-    - [blueman-project/blueman - Troubleshooting](https://github.com/blueman-project/blueman/wiki/Troubleshooting)
+    - blueman-project/blueman - Wiki - [Troubleshooting](https://github.com/blueman-project/blueman/wiki/Troubleshooting)
     - [pylover/a2dp.py](https://gist.github.com/pylover/d68be364adac5f946887b85e6ed6e7ae) - Fixing bluetooth stereo headphone/headset problem in ubuntu 16.04, 16.10 and also debian jessie, with bluez5.
 
 - Questions:
@@ -604,9 +621,13 @@ Setup Amazon Echo device as speaker
 
 ### Wireless
 
+☝ [Table of contents](#table-of-contents)
+
 [System76 - Support - Solve Wireless Issues](https://support.system76.com/articles/wireless/)
 
 ## Revert upgrading PopOS verison
+
+☝ [Table of contents](#table-of-contents)
 
 Assuming you already click on `Download` button from `Settings` - `OS Upgrade` section
 
@@ -628,6 +649,8 @@ Activate all PPA files where commented by `Download` button action
 
 ### [Snapcraft](https://snapcraft.io/)
 
+☝ [Table of contents](#table-of-contents)
+
 Install it
 
 ```bash
@@ -640,15 +663,21 @@ Related links
 
 ### [flatpak](https://flatpak.org/)
 
+☝ [Table of contents](#table-of-contents)
+
 Directories used
 - `$HOME/.cache/flatpak`
 - `$HOME/.local/share/flatpak`
 
 ### [AppImage](https://appimage.org/)
 
+☝ [Table of contents](#table-of-contents)
+
 ## Apps
 
 ### Synaptic
+
+☝ [Table of contents](#table-of-contents)
 
 Graphical package manager
 
@@ -657,6 +686,8 @@ $ apt install synaptic
 ```
 
 ### [Flux](https://justgetflux.com/)
+
+☝ [Table of contents](#table-of-contents)
 
 Better lighting for your computer
 
@@ -689,12 +720,12 @@ $ sudo apt install fluxgui
 ```
 
 Alternatives
-
 - [jonls/redshift](https://github.com/jonls/redshift)
-
 - Gnome - [Night light](https://www.gnome.org/news/2017/03/gnome-3-24-released/attachment/night-light/)
 
 ### [Chrome](https://www.google.com/chrome/)
+
+☝ [Table of contents](#table-of-contents)
 
 Download it
 
@@ -719,7 +750,6 @@ Personal settings
 - To allow downloads from Google Drive, add drive.google.com to **Sites that can always use cookies**, mark **Including third-party cookies on this site**.
 
 Alternatives
-
 - [Brave](https://brave.com/) - browser with real privacy
 
     Install dependencies
@@ -773,17 +803,25 @@ Alternatives
 
 ### [Dropbox](https://www.dropbox.com/install-linux)
 
+☝ [Table of contents](#table-of-contents)
+
 Install via `.deb` file
 
 ```bash
-$ wget -O dropbox.deb https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb
+$ wget \
+    -O dropbox.deb \
+    https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb
 ```
 
 Dropbox Headless Install via command line
 
 ```bash
 
-$ cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+$ cd ~ && \
+    wget \
+        -O - \
+        "https://www.dropbox.com/download?plat=lnx.x86_64" | \
+    tar xzf -
 ```
 
 Install via `flatpak`
@@ -801,6 +839,8 @@ Add to `Startup Applications`
 - Confirm to add it
 
 ### [Spotify](https://www.spotify.com/download/linux/)
+
+☝ [Table of contents](#table-of-contents)
 
 Install via `flatpak` (recommended / preferred way)
 
@@ -848,6 +888,8 @@ Related links
 
 ### [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux)
 
+☝ [Table of contents](#table-of-contents)
+
 Install via `.deb`
 
 TODO
@@ -883,6 +925,8 @@ Related links:
 
 ### [Telegram](https://telegram.org/dl/desktop/linux)
 
+☝ [Table of contents](#table-of-contents)
+
 Install via `flatpak`
 
 ```bash
@@ -906,6 +950,8 @@ Related links
 
 ### [Slack](https://slack.com/intl/en-us/downloads/linux)
 
+☝ [Table of contents](#table-of-contents)
+
 Install via `.deb`
 
 ```bash
@@ -927,7 +973,9 @@ $ snap install --classic slack
 Related links
 - [Release notes for Linux](https://slack.com/intl/en-us/release-notes/linux)
 
-### [VLC](https://www.videolan.org/vlc/)
+### [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html)
+
+☝ [Table of contents](#table-of-contents)
 
 [GitHub](https://github.com/videolan/vlc)
 
@@ -943,10 +991,9 @@ Install via `Snap`
 $ snap install vlc
 ```
 
-Related links
-- [VLC media player for Ubuntu](https://www.videolan.org/vlc/download-ubuntu.html)
-
 ### [Foxit PDF Reader](https://www.foxitsoftware.com/pdf-reader/)
+
+☝ [Table of contents](#table-of-contents)
 
 Industry’s Most Powerful PDF Reader
 
@@ -983,13 +1030,14 @@ Choose any of the following paths as `Installation Folder`
 - `/opt/foxitsoftware/foxitreader`
 
 Alternatives
-
 - [Master PDF Editor](https://code-industry.net/free-pdf-editor/)
 
 Related links
 - 2020-05-12 - [PDF viewer list on Ubuntu 20.04 Focal Fossa Linux](https://linuxconfig.org/pdf-viewer-list-on-ubuntu-20-04-focal-fossa-linux)
 
 ### [Zoom](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux)
+
+☝ [Table of contents](#table-of-contents)
 
 Install via `flatpak`
 
@@ -1014,6 +1062,8 @@ Related links
 
 ### [Skype](https://www.skype.com/en/get-skype/download-skype-for-desktop/)
 
+☝ [Table of contents](#table-of-contents)
+
 Install via `.deb`
 
 ```bash
@@ -1029,6 +1079,8 @@ $ snap install skype
 ```
 
 ### [TeamViewer](https://www.teamviewer.com/en/download/linux/)
+
+☝ [Table of contents](#table-of-contents)
 
 Install via `.deb`
 
@@ -1052,6 +1104,8 @@ $ sudo teamviewer repo default
 
 ### [OBS Studio](https://obsproject.com/wiki/install-instructions#linux)
 
+☝ [Table of contents](#table-of-contents)
+
 [GitHub](https://github.com/obsproject/obs-studio)
 
 Install it
@@ -1063,6 +1117,8 @@ $ sudo apt install obs-studio
 ```
 
 ### [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/)
+
+☝ [Table of contents](#table-of-contents)
 
 Record programs and games.
 
@@ -1084,6 +1140,8 @@ Related links
 - 2020-06-10 - [5 Tools To Record Your Linux Desktop (Screencast) In 2020](https://www.linuxuprising.com/2020/01/4-tools-to-record-your-linux-desktop.html)
 
 ### [Wireshark](https://www.wireshark.org/download.html)
+
+☝ [Table of contents](#table-of-contents)
 
 World’s foremost and widely-used network protocol analyzer
 
@@ -1112,6 +1170,8 @@ Related links
 
 ### [BleachBit](https://www.bleachbit.org/)
 
+☝ [Table of contents](#table-of-contents)
+
 Cleans files to free disk space and to maintain privacy.
 
 [GitHub](https://github.com/bleachbit/bleachbit)
@@ -1136,6 +1196,8 @@ $ rm -rf $HOME/bleachbit/
 ### Markdown editor apps
 
 #### [Joplin](https://joplinapp.org/)
+
+☝ [Table of contents](#table-of-contents)
 
 An open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS. Forum: discourse.joplinapp.org
 
@@ -1172,6 +1234,8 @@ Create `.desktop` file
 ```
 
 #### [Marktext](https://marktext.app/)
+
+☝ [Table of contents](#table-of-contents)
 
 A simple and elegant markdown editor, available for Linux, macOS and Windows.
 
@@ -1242,6 +1306,8 @@ Related links
 
 #### [vnote](https://vnotex.github.io/vnote/en_us/)
 
+☝ [Table of contents](#table-of-contents)
+
 A note-taking application that knows programmers and Markdown better.
 
 [GitHub](https://github.com/tamlok/vnote)
@@ -1266,7 +1332,9 @@ Directories needed
 - `$HOME/.local/share/VNote/`
 - `$HOME/.local/share/VNote-2.9.1-x86_64.AppImage/`
 
-#### More alternatives
+#### PKB alternatives
+
+☝ [Table of contents](#table-of-contents)
 
 To manage a Personal Knowledge Base:
 
@@ -1296,9 +1364,11 @@ To manage a Personal Knowledge Base:
 - [Zotero](https://www.zotero.org/)
 - [ZETTELKASTEN - The Archive](https://zettelkasten.de/the-archive/)
 
-## Extra Commands & Tools
+## Commands
 
 ### [git](https://git-scm.com/)
+
+☝ [Table of contents](#table-of-contents)
 
 [GitHub](https://github.com/git/git)
 
@@ -1438,6 +1508,8 @@ Complementary tools
 
 ### xclip
 
+☝ [Table of contents](#table-of-contents)
+
 Command line interface to the X11 clipboard
 
 [GitHub](https://github.com/astrand/xclip)
@@ -1459,6 +1531,8 @@ $ sudo apt install xclip
 ```
 
 ### [htop](https://htop.dev/)
+
+☝ [Table of contents](#table-of-contents)
 
 An interactive process viewer
 
@@ -1519,6 +1593,8 @@ Config file - `$HOME/.config/htop/htoprc`
 
 ### speedtest
 
+☝ [Table of contents](#table-of-contents)
+
 Command line interface for testing internet bandwidth using speedtest.net
 
 [GitHub](https://github.com/sivel/speedtest-cli)
@@ -1535,6 +1611,8 @@ $ chmod u+x $HOME/bin/speedtest
 ```
 
 ### [httpie](https://httpie.io/)
+
+☝ [Table of contents](#table-of-contents)
 
 As easy as HTTPie /aitch-tee-tee-pie/ pie Modern command-line HTTP client – user-friendly curl alternative with intuitive UI, JSON support, syntax highlighting, wget-like downloads, extensions, etc
 
@@ -1557,6 +1635,8 @@ $ sudo pip install -U httpie
 ```
 
 ### tmux
+
+☝ [Table of contents](#table-of-contents)
 
 Terminal multiplexer
 
@@ -1625,6 +1705,8 @@ $ rm -rf $HOME/tmux
 
 ### [tree](http://mama.indstate.edu/users/ice/tree/)
 
+☝ [Table of contents](#table-of-contents)
+
 Recursive directory listing command that produces a depth indented listing of files, which is colorized ala dircolors if the `LS_COLORS` environment variable is set and output is to tty.
 
 [GitHub](https://github.com/nodakai/tree-command)
@@ -1645,6 +1727,8 @@ Related links
 - 2019-10-04 - [Linux ‘tree Command’ Usage Examples for Beginners](https://www.tecmint.com/linux-tree-command-examples/)
 
 ### Docker
+
+☝ [Table of contents](#table-of-contents)
 
 [Install Docker Engine on Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
@@ -1687,6 +1771,8 @@ Related links
 
 ### [iproute2](https://en.wikipedia.org/wiki/Iproute2)
 
+☝ [Table of contents](#table-of-contents)
+
 collection of userspace utilities for controlling and monitoring various aspects of networking in the Linux kernel, including routing, network interfaces, tunnels, traffic control, and network-related device drivers.
 
 | Legacy utility    | Replacement command           | Note                                  |
@@ -1702,6 +1788,8 @@ collection of userspace utilities for controlling and monitoring various aspects
 
 ### unrar
 
+☝ [Table of contents](#table-of-contents)
+
 Unarchiver for .rar files
 
 Install it
@@ -1711,6 +1799,8 @@ $ sudo apt install unrar
 ```
 
 ### [ffmpeg](https://ffmpeg.org/)
+
+☝ [Table of contents](#table-of-contents)
 
 A complete, cross-platform solution to record, convert and stream audio and video.
 
@@ -1728,6 +1818,8 @@ Related links
 - [Ubuntu 20.04 FFmpeg installation](https://linuxconfig.org/ubuntu-20-04-ffmpeg-installation)
 
 ### jq
+
+☝ [Table of contents](#table-of-contents)
 
 Command-line JSON processor
 
@@ -1756,6 +1848,8 @@ Usage
     ```
 
 ### wrk
+
+☝ [Table of contents](#table-of-contents)
 
 Modern HTTP benchmarking tool
 
@@ -1805,6 +1899,8 @@ Related links
 
 ### [youtube-dl](https://ytdl-org.github.io/youtube-dl/)
 
+☝ [Table of contents](#table-of-contents)
+
 Command-line program to download videos from YouTube.com and other video sites
 
 [GitHub](https://github.com/ytdl-org/youtube-dl)
@@ -1822,6 +1918,8 @@ $ chmod u+rx $HOME/bin/youtube-dl
 ```
 
 ### flameshot
+
+☝ [Table of contents](#table-of-contents)
 
 Powerful yet simple to use screenshot software
 
@@ -1942,6 +2040,8 @@ $HOME/.config/Dharkael/flameshot.ini
 ```
 
 ### [ksnip](https://github.com/ksnip/ksnip)
+
+☝ [Table of contents](#table-of-contents)
 
 - Install using `.AppImage`
 
@@ -2069,6 +2169,8 @@ $HOME/.config/Dharkael/flameshot.ini
 
 ### [ngrok](https://ngrok.com/)
 
+☝ [Table of contents](#table-of-contents)
+
 Public URLs for exposing your local web server.
 
 Install it
@@ -2085,6 +2187,8 @@ $ rm ngrok.zip
 ```
 
 ### httpstat
+
+☝ [Table of contents](#table-of-contents)
 
 It's like curl -v, with graphs and colors
 
@@ -2121,6 +2225,8 @@ Similar tools
 
 ### hwinfo
 
+☝ [Table of contents](#table-of-contents)
+
 Hardware information tool
 
 [GitHub](https://github.com/openSUSE/hwinfo)
@@ -2142,6 +2248,8 @@ Device Files: /dev/nvme0n1, /dev/disk/by-id/nvme-Samsung_SSD_950_PRO_512GB_S2GMN
 
 ### [ufw](https://help.ubuntu.com/community/UFW)
 
+☝ [Table of contents](#table-of-contents)
+
 Uncomplicated Firewall
 
 ```bash
@@ -2159,11 +2267,15 @@ Related tools
 
 ### opensnitch
 
+☝ [Table of contents](#table-of-contents)
+
 OpenSnitch is a GNU/Linux port of the Little Snitch application firewall
 
 [GitHub](https://github.com/evilsocket/opensnitch)
 
 ### exiftool
+
+☝ [Table of contents](#table-of-contents)
 
 Meta information reader/writer
 
@@ -2176,6 +2288,8 @@ $ exiftool -AllDates="2015:09:22 12:00:00"
 ```
 
 ### [powertop](https://01.org/powertop)
+
+☝ [Table of contents](#table-of-contents)
 
 The Linux PowerTOP tool
 
@@ -2224,6 +2338,8 @@ Related tools
 
 ### [AWS CLI](https://aws.amazon.com/cli/)
 
+☝ [Table of contents](#table-of-contents)
+
 [GitHub](https://github.com/aws/aws-cli)
 
 Related links
@@ -2233,11 +2349,15 @@ Related links
 
 ### [Carbon](https://carbon.now.sh/)
 
+☝ [Table of contents](#table-of-contents)
+
 Create and share beautiful images of your source code
 
 [GitHub](https://github.com/carbon-app/carbon)
 
 ### [Project Jupyter](https://jupyter.org/)
+
+☝ [Table of contents](#table-of-contents)
 
 Project Jupyter exists to develop open-source software, open-standards, and services for interactive computing across dozens of programming languages.
 
@@ -2267,6 +2387,8 @@ Related links
 
 ### Java
 
+☝ [Table of contents](#table-of-contents)
+
 Related links
 - [How to Install Java on Ubuntu 18.04](https://linuxize.com/post/install-java-on-ubuntu-18-04/)
 - [How To Install Oracle Java 14 (JDK 14) On Ubuntu, Debian Or Linux Mint From APT PPA Repository](https://www.linuxuprising.com/2020/03/how-to-install-oracle-java-14-jdk14-on.html)
@@ -2276,37 +2398,61 @@ Related links
 
 ### Spotify
 
-- [SOLVED: Spotify desktop client communication failed | Mike Dixson](https://mikedixson.com/2014/11/solved-spotify-desktop-client-communication-failed/)
+☝ [Table of contents](#table-of-contents)
 
-- [Spotify keyboard controls not working](https://askubuntu.com/a/1152539/879600)
+[SOLVED: Spotify desktop client communication failed | Mike Dixson](https://mikedixson.com/2014/11/solved-spotify-desktop-client-communication-failed/)
+
+[Spotify keyboard controls not working](https://askubuntu.com/a/1152539/879600)
+
+- Fix `Play/Stop`
 
     ```bash
-    # Play/Stop
-    $ dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+    $ dbus-send \
+        --print-reply \
+        --dest=org.mpris.MediaPlayer2.spotify \
+        /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+    ```
 
-    # Next
-    $ dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+- Fix `Next`
 
-    # Previous
-    $ dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+    ```bash
+    $ dbus-send \
+        --print-reply \
+        --dest=org.mpris.MediaPlayer2.spotify \
+        /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+    ```
+
+- Fix `Previous`
+
+    ```bash
+    $ dbus-send \
+        --print-reply \
+        --dest=org.mpris.MediaPlayer2.spotify \
+        /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
     ```
 
 ### VS Code
 
-- [[mitigated] Linux: Ctrl+Shift+E cannot be used as keybinding anymore](https://github.com/microsoft/vscode/issues/48480)
-    - Steps:
-        - Run `ibus-setup` on a terminal
-        - Go to `Emoji` tab
-        - Press `...` button next to `Emoji annotation`, this choice is to get `select keyboard shortcut for switching` window
-        - Press `delete` button to delete shortcut and leave nothing there
-        - Press OK
-        - Repeat process for `Unicode code point`
-        - Close
-        - Run `GTK_IM_MODULE=ibus` on a terminal. This should work!
-        - If it does just alias this as I put in the post above
-    - The idea is to remove content on shorcuts which appears [here](https://i.imgur.com/PMxFsuh.png)
+☝ [Table of contents](#table-of-contents)
 
-## Resource
+[[mitigated] Linux: Ctrl+Shift+E cannot be used as keybinding anymore](https://github.com/microsoft/vscode/issues/48480)
+
+- The idea is to remove content on shorcuts which appears [here](https://i.imgur.com/PMxFsuh.png)
+
+- Steps:
+    - Run `ibus-setup` on a terminal
+    - Go to `Emoji` tab
+    - Press `...` button next to `Emoji annotation`, this choice is to get `select keyboard shortcut for switching` window
+    - Press `delete` button to delete shortcut and leave nothing there
+    - Press OK
+    - Repeat process for `Unicode code point`
+    - Close
+    - Run `GTK_IM_MODULE=ibus` on a terminal. This should work!
+    - If it does just alias this as I put in the post above
+
+## Final links
+
+☝ [Table of contents](#table-of-contents)
 
 - [How To Delete A Repository And GPG Key In Ubuntu](https://www.ostechnix.com/how-to-delete-a-repository-and-gpg-key-in-ubuntu/)
 - [Lissy93/personal-security-checklist](https://github.com/Lissy93/personal-security-checklist) - A curated checklist of 300+ tips for protecting digital security and privacy in 2020
