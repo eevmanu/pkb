@@ -1605,49 +1605,31 @@ Related tools
     $ chmod +x /usr/local/bin/docker-compose
     ```
 
-- [iproute2](https://en.wikipedia.org/wiki/Iproute2) - collection of userspace utilities for controlling and monitoring various aspects of networking in the Linux kernel, including routing, network interfaces, tunnels, traffic control, and network-related device drivers.
-
-    | Legacy utility    | Replacement command           | Note                                  |
-    | ------------------|-------------------------------|---------------------------------------|
-    | ifconfig          | ip addr, ip link, ip -s       | Address and link configuration        |
-    | route             | ip route                      | Routing tables                        |
-    | arp               | ip neigh                      | Neighbors                             |
-    | iptunnel          | ip tunnel                     | Tunnels                               |
-    | nameif            | ifrename, ip link set name    | Rename network interfaces             |
-    | ipmaddr           | ip maddr                      | Multicast                             |
-    | netstat           | ip -s, ss, ip route           | Show various networking statistics    |
-    | brctl             | bridge                        | Handle bridge addresses and devices   |
-
-- `unrar` - Unarchiver for .rar files
+    Install via `pip`
 
     ```bash
-    $ apt install unrar
+    $ pip install -U docker-compose
     ```
 
-- [ffmpeg](https://ffmpeg.org/) - A complete, cross-platform solution to record, convert and stream audio and video.
-    - [code @ Github](https://github.com/FFmpeg/FFmpeg)
-    - [Ubuntu 20.04 FFmpeg installation](https://linuxconfig.org/ubuntu-20-04-ffmpeg-installation)
+Related links
+- [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user)
 
-    ```bash
-    # (2020-05-28 18:30:43)
-    # Conf ffmpeg (7:4.2.2-1ubuntu1 Ubuntu:20.04/focal [amd64])
-    $ sudo apt install ffmpeg
-    ```
 
-- [jq](https://github.com/stedolan/jq) - Command-line JSON processor
-    - Download and install binary
-        ```bash
-        $ wget -O $HOME/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
-        $ chmod +x $HOME/bin/jq
-        ```
-    - Usage
-        - Pretty print **ugly** json
-            ```bash
-            $ jq . {{ json file }}
-            ```
+### [iproute2](https://en.wikipedia.org/wiki/Iproute2)
 
-- [wrk](https://github.com/wg/wrk)
-    - [awesome-http-benchmark](https://github.com/denji/awesome-http-benchmark) - HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful)
+collection of userspace utilities for controlling and monitoring various aspects of networking in the Linux kernel, including routing, network interfaces, tunnels, traffic control, and network-related device drivers.
+
+| Legacy utility    | Replacement command           | Note                                  |
+| ------------------|-------------------------------|---------------------------------------|
+| ifconfig          | ip addr, ip link, ip -s       | Address and link configuration        |
+| route             | ip route                      | Routing tables                        |
+| arp               | ip neigh                      | Neighbors                             |
+| iptunnel          | ip tunnel                     | Tunnels                               |
+| nameif            | ifrename, ip link set name    | Rename network interfaces             |
+| ipmaddr           | ip maddr                      | Multicast                             |
+| netstat           | ip -s, ss, ip route           | Show various networking statistics    |
+| brctl             | bridge                        | Handle bridge addresses and devices   |
+
 
     ```bash
     # Install
