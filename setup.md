@@ -1446,6 +1446,24 @@ $ rm -rf $HOME/htop
 ```
 
 Config file - `$HOME/.config/htop/htoprc`
+
+### speedtest
+
+Command line interface for testing internet bandwidth using speedtest.net
+
+[GitHub](https://github.com/sivel/speedtest-cli)
+
+Install directly from GitHub
+
+```bash
+$ wget \
+    -O $HOME/bin/speedtest \
+    https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
+
+# verify `env python` (python shebang) works
+$ chmod u+x $HOME/bin/speedtest
+```
+
 - [docker-compose](https://github.com/docker/compose)
 
     ```bash
