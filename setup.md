@@ -857,7 +857,9 @@ $ snap install --classic slack
 Related links
 - [Release notes for Linux](https://slack.com/intl/en-us/release-notes/linux)
 
-### [VLC](https://github.com/videolan/vlc)
+### [VLC](https://www.videolan.org/vlc/)
+
+[GitHub](https://github.com/videolan/vlc)
 
 Install via `apt`
 
@@ -868,29 +870,30 @@ $ sudo apt install vlc
 Install via `Snap`
 
 ```bash
-
 $ snap install vlc
 ```
 
 Related links
 - [VLC media player for Ubuntu](https://www.videolan.org/vlc/download-ubuntu.html)
 
-### [Foxit reader](https://www.foxitsoftware.com/pdf-reader/)
+### [Foxit PDF Reader](https://www.foxitsoftware.com/pdf-reader/)
 
 Industry’s Most Powerful PDF Reader
 
 Download `.tar.gz` file
 
 ```bash
-$ wget https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
+$ wget \
+    -O FoxitReader.run.tar.gz \
+    https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
 ```
 
 Uncompress it
 
 ```bash
-$ gzip -d FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
+$ gzip -d FoxitReader.run.tar.gz
 
-$ tar xzvf FoxitReader.enu.setup.2.4.4.0911.x64.run.tar
+$ tar xzvf FoxitReader.run.tar
 ```
 
 Assign permissions to `.run` file
@@ -910,14 +913,13 @@ Choose any of the following paths as `Installation Folder`
 - `/opt/foxitsoftware/foxitreader`
 
 Alternatives
+
 - [Master PDF Editor](https://code-industry.net/free-pdf-editor/)
 
 Related links
 - 2020-05-12 - [PDF viewer list on Ubuntu 20.04 Focal Fossa Linux](https://linuxconfig.org/pdf-viewer-list-on-ubuntu-20-04-focal-fossa-linux)
 
 ### [Zoom](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux)
-
-Install [using the terminal](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_89c268b4-2a68-4e4c-882f-441e374b87cb)
 
 Install via `flatpak`
 
@@ -937,12 +939,17 @@ Install via [`Snap`](https://snapcraft.io/zoom-client)
 $ snap install zoom-client
 ```
 
+Related links
+- Install [using the terminal](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_89c268b4-2a68-4e4c-882f-441e374b87cb)
+
 ### [Skype](https://www.skype.com/en/get-skype/download-skype-for-desktop/)
 
 Install via `.deb`
 
 ```bash
-$ wget https://repo.skype.com/latest/skypeforlinux-64.deb
+$ wget \
+    -O skype.deb \
+    https://repo.skype.com/latest/skypeforlinux-64.deb
 ```
 
 Install via `Snap`
@@ -1005,7 +1012,6 @@ Alternatives
 
 Related links
 - 2020-06-10 - [5 Tools To Record Your Linux Desktop (Screencast) In 2020](https://www.linuxuprising.com/2020/01/4-tools-to-record-your-linux-desktop.html)
-
 
 ### [Wireshark](https://www.wireshark.org/download.html)
 
