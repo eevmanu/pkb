@@ -1,8 +1,8 @@
-# Setup
+# Personal Setup
 
 ## Table of contents
 
-- [Setup](#setup)
+- [Personal Setup](#personal-setup)
   - [Table of contents](#table-of-contents)
   - [Backup & Restore](#backup--restore)
   - [Things to do after install PopOS](#things-to-do-after-install-popos)
@@ -2404,7 +2404,7 @@ Related links
 
 [Spotify keyboard controls not working](https://askubuntu.com/a/1152539/879600)
 
-- Fix `Play/Stop`
+- Fix `Play/Pause`
 
     ```bash
     $ dbus-send \
