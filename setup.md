@@ -1428,6 +1428,27 @@ Alternatives
 Related links
 - 2020-06-10 - [5 Tools To Record Your Linux Desktop (Screencast) In 2020](https://www.linuxuprising.com/2020/01/4-tools-to-record-your-linux-desktop.html)
 
+### CopyQ - clipboard manager
+
+☝ [Table of contents](#table-of-contents)
+
+Clipboard manager with advanced features
+
+[GitHub](https://github.com/hluk/CopyQ)
+
+Install it
+
+```bash
+$ sudo add-apt-repository ppa:hluk/copyq
+$ sudo apt update
+$ sudo apt install copyq
+```
+
+Folders used
+- `$HOME/.config/copyq`
+- `$HOME/.local/share/copyq`
+- `$HOME/.var/app/com.github.hluk.copyq`
+
 ### 6.12. [TeamViewer](https://www.teamviewer.com/en/download/linux/) - remote control
 
 ☝ [Table of contents](#table-of-contents)
