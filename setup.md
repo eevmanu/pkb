@@ -626,6 +626,34 @@ Setup Amazon Echo device as speaker
 
 [System76 - Support - Solve Wireless Issues](https://support.system76.com/articles/wireless/)
 
+### Screen / Monitor
+
+☝ [Table of contents](#table-of-contents)
+
+Screen or Monitor doesn't wake up after suspend laptop
+
+- Install `laptop-mode-tools` utility - [GitHub](https://github.com/rickysarraf/laptop-mode-tools)
+
+    ```bash
+    $ sudo apt-get install laptop-mode-tools
+    ```
+
+- Mark `Enable module video-out` checkbox
+
+- Related links
+    - Google - [displayport monitor suspend ubuntu not turn on](https://www.google.com/search?q=displayport+monitor+suspend+ubuntu+not+turn+on)
+    - [DisplayPort Monitors No Longer Detected](https://askubuntu.com/questions/1204491/displayport-monitors-no-longer-detected)
+    - [External monitor not detected by Ubuntu 19.04 after sleep](https://askubuntu.com/questions/1167424/external-monitor-not-detected-by-ubuntu-19-04-after-sleep)
+    - [Ubuntu – Ubuntu 20.04 doesn’t wake up monitor](https://itectec.com/ubuntu/ubuntu-ubuntu-20-04-doesnt-wake-up-monitor/) - [archive](https://web.archive.org/web/20201222170345/https://itectec.com/ubuntu/ubuntu-ubuntu-20-04-doesnt-wake-up-monitor/)
+
+Deactive HiDPI Daemon if CPU spike without no reason
+
+- Related links
+    - Google - [hidpi daemon cpu spike](https://www.google.com/search?q=hidpi+daemon+cpu+spike)
+    - [Ubuntu 18.04 gnome-shell high CPU usage](https://askubuntu.com/questions/1036441/ubuntu-18-04-gnome-shell-high-cpu-usage)
+    - [HiDPI performance issues?](https://www.reddit.com/r/gnome/comments/7j5lkh/hidpi_performance_issues/)
+    - [All About the HiDPI Daemon](https://blog.system76.com/post/174414833678/all-about-the-hidpi-daemon)
+
 ## Revert partial upgrade PopOS verison
 
 ☝ [Table of contents](#table-of-contents)
