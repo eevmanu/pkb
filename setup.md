@@ -2723,6 +2723,16 @@ collection of userspace utilities for controlling and monitoring various aspects
 | brctl             | bridge                        | Handle bridge addresses and devices   |
 
 ### 7.22. [powertop](https://01.org/powertop) - monitor electrical power consumption
+Related tools
+
+- [iftop](https://linux.die.net/man/8/iftop) - display bandwidth usage on an interface by host
+- [traceroute](https://en.wikipedia.org/wiki/Traceroute) - computer network diagnostic commands for displaying possible routes (paths) and measuring transit delays of packets across an Internet Protocol (IP) network.
+- [mtr](https://linux.die.net/man/8/mtr) - a network diagnostic tool
+- [nethogs](https://linux.die.net/man/8/nethogs) - Net top tool grouping bandwidth per process
+- [nload](https://linux.die.net/man/1/nload) - displays the current network usage
+- [iPerf](https://iperf.fr/) - a tool for active measurements of the maximum achievable bandwidth on IP networks
+- [CBM](https://zenway.ru/page/cbm) - [GitHub](https://github.com/resurrecting-open-source-projects/cbm) - display in real time the network traffic speed
+
 
 ☝ [Table of contents](#table-of-contents)
 
