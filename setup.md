@@ -2163,6 +2163,37 @@ Alternatives
 
 - [nicolargo/glances](https://github.com/nicolargo/glances) - Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 
+- [bpytop](https://github.com/aristocratos/bpytop)
+
+    Initial verification before install it
+
+    ```bash
+    $ python -V
+    $ python -m pip -V
+    $ pyenv versions
+    $ pip list | grep bpytop
+    $ pip freeze | grep bpytop
+    ```
+
+    Package dependencies
+
+    ```bash
+    # python3-dev needed to compile psutil, which is dependency of bpytop
+    $ apt install python3-dev
+    ```
+
+    Install via `pip`
+
+    ```bash
+    $ pip install --upgrade bpytop
+    ```
+
+    Directories used
+    - `$HOME/.config/bpytop/bpytop.conf`
+    - `$HOME/.config/bpytop/error.log`
+    - `$HOME/.config/bpytop/themes/`
+
+
 ### 7.5. speedtest - internet bandwidth meter
 
 ☝ [Table of contents](#table-of-contents)
