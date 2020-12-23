@@ -40,26 +40,26 @@
         - [6.18.4. PKB alternatives](#6184-pkb-alternatives)
 - [7. Commands](#7-commands)
     - [7.1. git - version control manager](#71-git---version-control-manager)
-    - [7.2. xclip - clipboard manager](#72-xclip---clipboard-manager)
-    - [7.3. htop - monitor computer resources](#73-htop---monitor-computer-resources)
-    - [7.4. speedtest - internet bandwidth meter](#74-speedtest---internet-bandwidth-meter)
-    - [7.5. httpie - simple http requests on terminal](#75-httpie---simple-http-requests-on-terminal)
-    - [7.6. tmux - multiple sessions](#76-tmux---multiple-sessions)
-    - [7.7. tree - file / folder structure](#77-tree---file--folder-structure)
-    - [7.8. docker - containers](#78-docker---containers)
-    - [7.9. iproute2 - manage networking stuffs](#79-iproute2---manage-networking-stuffs)
-    - [7.10. unrar - decompress files](#710-unrar---decompress-files)
-    - [7.11. ffmpeg - handle multimedia files](#711-ffmpeg---handle-multimedia-files)
-    - [7.12. jq - handle json files](#712-jq---handle-json-files)
-    - [7.13. wrk - http benchmark](#713-wrk---http-benchmark)
-    - [7.14. youtube-dl - youtube downloader](#714-youtube-dl---youtube-downloader)
-    - [7.15. ksnip - screenshot tool](#715-ksnip---screenshot-tool)
-    - [7.16. ngrok - expose local web server to internet](#716-ngrok---expose-local-web-server-to-internet)
-    - [7.17. httpstat - stats about http requests](#717-httpstat---stats-about-http-requests)
+    - [7.2. docker - containers](#72-docker---containers)
+    - [7.3. xclip - clipboard manager](#73-xclip---clipboard-manager)
+    - [7.4. htop - monitor computer resources](#74-htop---monitor-computer-resources)
+    - [7.5. speedtest - internet bandwidth meter](#75-speedtest---internet-bandwidth-meter)
+    - [7.6. httpie - simple http requests on terminal](#76-httpie---simple-http-requests-on-terminal)
+    - [7.7. tmux - multiple sessions](#77-tmux---multiple-sessions)
+    - [7.8. tree - file / folder structure](#78-tree---file--folder-structure)
+    - [7.9. unrar - decompress files](#79-unrar---decompress-files)
+    - [7.10. ffmpeg - handle multimedia files](#710-ffmpeg---handle-multimedia-files)
+    - [7.11. jq - handle json files](#711-jq---handle-json-files)
+    - [7.12. wrk - http benchmark](#712-wrk---http-benchmark)
+    - [7.13. youtube-dl - youtube downloader](#713-youtube-dl---youtube-downloader)
+    - [7.14. ksnip - screenshot tool](#714-ksnip---screenshot-tool)
+    - [7.15. ngrok - expose local web server to internet](#715-ngrok---expose-local-web-server-to-internet)
+    - [7.16. httpstat - stats about http requests](#716-httpstat---stats-about-http-requests)
+    - [7.17. neofetch - info about your computer](#717-neofetch---info-about-your-computer)
     - [7.18. hwinfo - info about hardware devices](#718-hwinfo---info-about-hardware-devices)
     - [7.19. ufw - firewall tool](#719-ufw---firewall-tool)
-    - [7.20. opensnitch - firewall tool](#720-opensnitch---firewall-tool)
-    - [7.21. exiftool - manage meta info from files](#721-exiftool---manage-meta-info-from-files)
+    - [7.20. exiftool - manage meta info from files](#720-exiftool---manage-meta-info-from-files)
+    - [7.21. iproute2 - manage networking stuffs](#721-iproute2---manage-networking-stuffs)
     - [7.22. powertop - monitor electrical power consumption](#722-powertop---monitor-electrical-power-consumption)
     - [7.23. AWS CLI](#723-aws-cli)
     - [7.24. Carbon - beautify source code as img](#724-carbon---beautify-source-code-as-img)
@@ -1887,7 +1887,49 @@ Complementary tools
     $ rm -rf $HOME/bin-sources/git-cola/
     ```
 
-### 7.2. xclip - clipboard manager
+### 7.2. docker - containers
+
+☝ [Table of contents](#table-of-contents)
+
+[Install Docker Engine on Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
+In case you have problem downloading **Docker’s official GPG key**
+
+```bash
+$ sudo wget \
+    -O /etc/apt/trusted.gpg.d/docker.asc \
+    "https://download.docker.com/linux/ubuntu/gpg"
+```
+
+Related tools
+
+- [moby/moby](https://github.com/moby/moby) - Moby Project - a collaborative project for the container ecosystem to assemble container-based systems
+
+- [containerd/containerd](https://github.com/containerd/containerd) - An open and reliable container runtime
+
+- [docker-compose](https://github.com/docker/compose)
+
+    Install from `GitHub`
+
+    ```bash
+    # install via github in /usr/local/bin
+    $ curl \
+        -L https://github.com/docker/compose/releases/download/1.25.5/docker-compose-`uname -s`-`uname -m` \
+        -o /usr/local/bin/docker-compose
+
+    $ chmod +x /usr/local/bin/docker-compose
+    ```
+
+    Install via `pip`
+
+    ```bash
+    $ pip install -U docker-compose
+    ```
+
+Related links
+- [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user)
+
+### 7.3. xclip - clipboard manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1911,7 +1953,7 @@ Install it
 $ sudo apt install xclip
 ```
 
-### 7.3. [htop](https://htop.dev/) - monitor computer resources
+### 7.4. [htop](https://htop.dev/) - monitor computer resources
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1972,7 +2014,7 @@ $ rm -rf $HOME/htop
 
 Config file - `$HOME/.config/htop/htoprc`
 
-### 7.4. speedtest - internet bandwidth meter
+### 7.5. speedtest - internet bandwidth meter
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2038,7 +2080,7 @@ Commands
     }
     ```
 
-### 7.5. [httpie](https://httpie.io/) - simple http requests on terminal
+### 7.6. [httpie](https://httpie.io/) - simple http requests on terminal
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2062,7 +2104,7 @@ $ pip install -U httpie
 $ sudo pip install -U httpie
 ```
 
-### 7.6. tmux - multiple sessions
+### 7.7. tmux - multiple sessions
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2131,7 +2173,7 @@ $ cd $HOME
 $ rm -rf $HOME/tmux
 ```
 
-### 7.7. [tree](http://mama.indstate.edu/users/ice/tree/) - file / folder structure
+### 7.8. [tree](http://mama.indstate.edu/users/ice/tree/) - file / folder structure
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2154,67 +2196,7 @@ $ sudo apt install tree
 Related links
 - 2019-10-04 - [Linux ‘tree Command’ Usage Examples for Beginners](https://www.tecmint.com/linux-tree-command-examples/)
 
-### 7.8. docker - containers
-
-☝ [Table of contents](#table-of-contents)
-
-[Install Docker Engine on Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-
-In case you have problem downloading **Docker’s official GPG key**
-
-```bash
-$ sudo wget \
-    -O /etc/apt/trusted.gpg.d/docker.asc \
-    "https://download.docker.com/linux/ubuntu/gpg"
-```
-
-Related tools
-
-- [moby/moby](https://github.com/moby/moby) - Moby Project - a collaborative project for the container ecosystem to assemble container-based systems
-
-- [containerd/containerd](https://github.com/containerd/containerd) - An open and reliable container runtime
-
-- [docker-compose](https://github.com/docker/compose)
-
-    Install from `GitHub`
-
-    ```bash
-    # install via github in /usr/local/bin
-    $ curl \
-        -L https://github.com/docker/compose/releases/download/1.25.5/docker-compose-`uname -s`-`uname -m` \
-        -o /usr/local/bin/docker-compose
-
-    $ chmod +x /usr/local/bin/docker-compose
-    ```
-
-    Install via `pip`
-
-    ```bash
-    $ pip install -U docker-compose
-    ```
-
-Related links
-- [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user)
-
-
-### 7.9. [iproute2](https://en.wikipedia.org/wiki/Iproute2) - manage networking stuffs
-
-☝ [Table of contents](#table-of-contents)
-
-collection of userspace utilities for controlling and monitoring various aspects of networking in the Linux kernel, including routing, network interfaces, tunnels, traffic control, and network-related device drivers.
-
-| Legacy utility    | Replacement command           | Note                                  |
-| ------------------|-------------------------------|---------------------------------------|
-| ifconfig          | ip addr, ip link, ip -s       | Address and link configuration        |
-| route             | ip route                      | Routing tables                        |
-| arp               | ip neigh                      | Neighbors                             |
-| iptunnel          | ip tunnel                     | Tunnels                               |
-| nameif            | ifrename, ip link set name    | Rename network interfaces             |
-| ipmaddr           | ip maddr                      | Multicast                             |
-| netstat           | ip -s, ss, ip route           | Show various networking statistics    |
-| brctl             | bridge                        | Handle bridge addresses and devices   |
-
-### 7.10. unrar - decompress files
+### 7.9. unrar - decompress files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2226,7 +2208,7 @@ Install it
 $ sudo apt install unrar
 ```
 
-### 7.11. [ffmpeg](https://ffmpeg.org/) - handle multimedia files
+### 7.10. [ffmpeg](https://ffmpeg.org/) - handle multimedia files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2245,7 +2227,7 @@ $ sudo apt install ffmpeg
 Related links
 - [Ubuntu 20.04 FFmpeg installation](https://linuxconfig.org/ubuntu-20-04-ffmpeg-installation)
 
-### 7.12. jq - handle json files
+### 7.11. jq - handle json files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2275,7 +2257,7 @@ Usage
     $ jq . {{ json file }}
     ```
 
-### 7.13. wrk - http benchmark
+### 7.12. wrk - http benchmark
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2326,7 +2308,7 @@ Related links
 - [denji/awesome-http-benchmark](https://github.com/denji/awesome-http-benchmark) - HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful)
 - TechEmpower - [Benchmarks](https://www.techempower.com/benchmarks/) - [GitHub](https://github.com/TechEmpower/FrameworkBenchmarks) - Source for the TechEmpower Framework Benchmarks project
 
-### 7.14. [youtube-dl](https://ytdl-org.github.io/youtube-dl/) - youtube downloader
+### 7.13. [youtube-dl](https://ytdl-org.github.io/youtube-dl/) - youtube downloader
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2346,7 +2328,7 @@ $ wget \
 $ chmod u+rx $HOME/bin/youtube-dl
 ```
 
-### 7.15. [ksnip](https://github.com/ksnip/ksnip) - screenshot tool
+### 7.14. [ksnip](https://github.com/ksnip/ksnip) - screenshot tool
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2560,7 +2542,7 @@ Related tools
 - [sindresorhus/capture-website-cli](https://github.com/sindresorhus/capture-website-cli) - Capture screenshots of websites from the command-line
 - [gildas-lormeau/SingleFile](https://github.com/gildas-lormeau/SingleFile) - Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file
 
-### 7.16. [ngrok](https://ngrok.com/) - expose local web server to internet
+### 7.15. [ngrok](https://ngrok.com/) - expose local web server to internet
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2579,7 +2561,7 @@ $ mv $HOME/ngrok $HOME/bin/
 $ rm ngrok.zip
 ```
 
-### 7.17. httpstat - stats about http requests
+### 7.16. httpstat - stats about http requests
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2616,6 +2598,20 @@ Similar tools
 - in [Go](https://github.com/davecheney/httpstat)
 - in [Python](https://github.com/reorx/httpstat)
 
+### 7.17. neofetch - info about your computer
+
+☝ [Table of contents](#table-of-contents)
+
+A command-line system information tool written in bash 3.2+
+
+[GitHub](https://github.com/dylanaraps/neofetch)
+
+Install via `apt`
+
+```bash
+$ sudo apt install neofetch
+```
+
 ### 7.18. hwinfo - info about hardware devices
 
 ☝ [Table of contents](#table-of-contents)
@@ -2650,23 +2646,20 @@ $ sudo apt install ufw
 ```
 
 Related tools
+
 - [Gufw](https://help.ubuntu.com/community/Gufw) - firewall powered by UFW
 
     Install it
 
-    ```
+    ```bash
     $ sudo apt install gufw
     ```
 
-### 7.20. opensnitch - firewall tool
+- [evilsocket/opensnitch](https://github.com/evilsocket/opensnitch) - OpenSnitch is a GNU/Linux port of the Little Snitch application firewall
 
-☝ [Table of contents](#table-of-contents)
+    [Installation](https://github.com/gustavo-iniguez-goya/opensnitch/wiki/Installation)
 
-OpenSnitch is a GNU/Linux port of the Little Snitch application firewall
-
-[GitHub](https://github.com/evilsocket/opensnitch)
-
-### 7.21. exiftool - manage meta info from files
+### 7.20. exiftool - manage meta info from files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2679,6 +2672,23 @@ Set date time on pictures
 ```bash
 $ exiftool -AllDates="2015:09:22 12:00:00"
 ```
+
+### 7.21. [iproute2](https://en.wikipedia.org/wiki/Iproute2) - manage networking stuffs
+
+☝ [Table of contents](#table-of-contents)
+
+collection of userspace utilities for controlling and monitoring various aspects of networking in the Linux kernel, including routing, network interfaces, tunnels, traffic control, and network-related device drivers.
+
+| Legacy utility    | Replacement command           | Note                                  |
+| ------------------|-------------------------------|---------------------------------------|
+| ifconfig          | ip addr, ip link, ip -s       | Address and link configuration        |
+| route             | ip route                      | Routing tables                        |
+| arp               | ip neigh                      | Neighbors                             |
+| iptunnel          | ip tunnel                     | Tunnels                               |
+| nameif            | ifrename, ip link set name    | Rename network interfaces             |
+| ipmaddr           | ip maddr                      | Multicast                             |
+| netstat           | ip -s, ss, ip route           | Show various networking statistics    |
+| brctl             | bridge                        | Handle bridge addresses and devices   |
 
 ### 7.22. [powertop](https://01.org/powertop) - monitor electrical power consumption
 
