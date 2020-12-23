@@ -1620,6 +1620,14 @@ $ cp bleachbit.py $HOME/bin/bleachbit
 $ rm -rf $HOME/bleachbit/
 ```
 
+### Stacer - monitor system resources
+
+☝ [Table of contents](#table-of-contents)
+
+Linux System Optimizer and Monitoring
+
+[GitHub](https://github.com/oguzhaninan/Stacer)
+
 ### 6.16. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
 
 ☝ [Table of contents](#table-of-contents)
