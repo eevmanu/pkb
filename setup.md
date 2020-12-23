@@ -2014,6 +2014,10 @@ $ rm -rf $HOME/htop
 
 Config file - `$HOME/.config/htop/htoprc`
 
+Alternatives
+
+- [nicolargo/glances](https://github.com/nicolargo/glances) - Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
+
 ### 7.5. speedtest - internet bandwidth meter
 
 ☝ [Table of contents](#table-of-contents)
