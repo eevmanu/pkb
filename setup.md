@@ -1860,6 +1860,7 @@ To manage a Personal Knowledge Base:
 - [Trilium notes](https://github.com/zadam/trilium)
 - [TiddlyWiki](https://tiddlywiki.com/)
 - [Wiki js](https://wiki.js.org/)
+- [Xournal++](https://github.com/xournalpp/xournalpp)
 - [Zettlr](https://www.zettlr.com/) - [github](https://github.com/Zettlr/Zettlr)
 - [Zim](https://zim-wiki.org/) - A Desktop Wiki
 - [Zotero](https://www.zotero.org/)
