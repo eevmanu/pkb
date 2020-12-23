@@ -29,14 +29,15 @@
     - [6.11. SimpleScreenRecorder - record screen](#611-simplescreenrecorder---record-screen)
     - [6.12. TeamViewer - remote control](#612-teamviewer---remote-control)
     - [6.13. OBS Studio - streaming](#613-obs-studio---streaming)
-    - [6.14. BleachBit - clean disk space](#614-bleachbit---clean-disk-space)
-    - [6.15. Wireshark - monitor network traffic](#615-wireshark---monitor-network-traffic)
-    - [6.16. Dropbox - online storage](#616-dropbox---online-storage)
-    - [6.17. Markdown editor apps](#617-markdown-editor-apps)
-        - [6.17.1. Joplin](#6171-joplin)
-        - [6.17.2. Marktext](#6172-marktext)
-        - [6.17.3. vnote](#6173-vnote)
-        - [6.17.4. PKB alternatives](#6174-pkb-alternatives)
+    - [6.14. DBeaver - database tool](#614-dbeaver---database-tool)
+    - [6.15. BleachBit - clean disk space](#615-bleachbit---clean-disk-space)
+    - [6.16. Wireshark - monitor network traffic](#616-wireshark---monitor-network-traffic)
+    - [6.17. Dropbox - online storage](#617-dropbox---online-storage)
+    - [6.18. Markdown editor apps](#618-markdown-editor-apps)
+        - [6.18.1. Joplin](#6181-joplin)
+        - [6.18.2. Marktext](#6182-marktext)
+        - [6.18.3. vnote](#6183-vnote)
+        - [6.18.4. PKB alternatives](#6184-pkb-alternatives)
 - [7. Commands](#7-commands)
     - [7.1. git - version control manager](#71-git---version-control-manager)
     - [7.2. xclip - clipboard manager](#72-xclip---clipboard-manager)
@@ -1165,7 +1166,6 @@ Alternatives
     Related links
     - 2020-05-28 - [How to install Firefox Developer Edition on Linux](https://linuxconfig.org/how-to-install-firefox-developer-edition-on-linux)
 
-
 ### 6.4. [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html) - play multimedia files
 
 ☝ [Table of contents](#table-of-contents)
@@ -1466,7 +1466,24 @@ $ sudo apt update
 $ sudo apt install obs-studio
 ```
 
-### 6.14. [BleachBit](https://www.bleachbit.org/) - clean disk space
+### 6.14. [DBeaver](https://dbeaver.io/) - database tool
+
+☝ [Table of contents](#table-of-contents)
+
+Free multi-platform database tool for developers, database administrators, analysts and all people who need to work with databases. Supports all popular databases: MySQL, PostgreSQL, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Apache Hive, Phoenix, Presto, etc.
+
+[GitHub](https://github.com/dbeaver/dbeaver)
+
+Install via `flatpak`
+
+```bash
+$ flatpak install flathub io.dbeaver.DBeaverCommunity
+
+# run
+$ flatpak run io.dbeaver.DBeaverCommunity
+```
+
+### 6.15. [BleachBit](https://www.bleachbit.org/) - clean disk space
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1491,7 +1508,7 @@ $ cp bleachbit.py $HOME/bin/bleachbit
 $ rm -rf $HOME/bleachbit/
 ```
 
-### 6.15. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
+### 6.16. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1520,7 +1537,7 @@ Related links
 - [How to Install and Use Wireshark on Ubuntu](https://linuxhint.com/install_wireshark_ubuntu/)
 - [How to install Wireshark](https://askubuntu.com/questions/700712/how-to-install-wireshark)
 
-### 6.16. [Dropbox](https://www.dropbox.com/install-linux) - online storage
+### 6.17. [Dropbox](https://www.dropbox.com/install-linux) - online storage
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1557,9 +1574,9 @@ Add to `Startup Applications`
 - Enter `dropbox` (should appear if was installed via `flatpak`)
 - Confirm to add it
 
-### 6.17. Markdown editor apps
+### 6.18. Markdown editor apps
 
-#### 6.17.1. [Joplin](https://joplinapp.org/)
+#### 6.18.1. [Joplin](https://joplinapp.org/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1597,7 +1614,7 @@ Create `.desktop` file
 # TODO
 ```
 
-#### 6.17.2. [Marktext](https://marktext.app/)
+#### 6.18.2. [Marktext](https://marktext.app/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1668,7 +1685,7 @@ Config folder - `$HOME/.config/marktext`
 Related links
 - Fix issue with [icon](https://askubuntu.com/questions/333133/how-to-set-app-icon-in-the-desktop-file-of-an-ubuntu-touch-application)
 
-#### 6.17.3. [vnote](https://vnotex.github.io/vnote/en_us/)
+#### 6.18.3. [vnote](https://vnotex.github.io/vnote/en_us/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1696,7 +1713,7 @@ Directories needed
 - `$HOME/.local/share/VNote/`
 - `$HOME/.local/share/VNote-2.9.1-x86_64.AppImage/`
 
-#### 6.17.4. PKB alternatives
+#### 6.18.4. PKB alternatives
 
 ☝ [Table of contents](#table-of-contents)
 
