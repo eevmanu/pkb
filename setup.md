@@ -2635,6 +2635,34 @@ Device Files: /dev/nvme0n1, /dev/disk/by-id/nvme-Samsung_SSD_950_PRO_512GB_S2GMN
 ...
 ```
 
+### [geekbench](https://www.geekbench.com/) - cross-platform benchmark
+
+☝ [Table of contents](#table-of-contents)
+
+Download it
+
+```bash
+$ wget https://cdn.geekbench.com/Geekbench-5.3.1-Linux.tar.gz
+```
+
+Uncompress it
+
+```bash
+$ tar -xvz -f Geekbench-5.3.1-Linux.tar.gz
+```
+
+Use it
+
+```bash
+$ ./geekbench5 --cpu
+```
+
+Related links
+- [2020-12-23 results](https://browser.geekbench.com/v5/cpu/5493141)
+- [Geekbench 5 Pro Command Line Tool](http://support.primatelabs.com/kb/geekbench/geekbench-5-pro-command-line-tool)
+- [Installing Geekbench 5 on Linux](http://support.primatelabs.com/kb/geekbench/installing-geekbench-5-on-linux)
+
+
 ### 7.19. [ufw](https://help.ubuntu.com/community/UFW) - firewall tool
 
 ☝ [Table of contents](#table-of-contents)
