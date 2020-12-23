@@ -27,17 +27,22 @@
     - [6.9. Zoom - video call app](#69-zoom---video-call-app)
     - [6.10. Telegram - IM app](#610-telegram---im-app)
     - [6.11. SimpleScreenRecorder - record screen](#611-simplescreenrecorder---record-screen)
-    - [6.12. TeamViewer - remote control](#612-teamviewer---remote-control)
-    - [6.13. OBS Studio - streaming](#613-obs-studio---streaming)
-    - [6.14. DBeaver - database tool](#614-dbeaver---database-tool)
-    - [6.15. BleachBit - clean disk space](#615-bleachbit---clean-disk-space)
-    - [6.16. Wireshark - monitor network traffic](#616-wireshark---monitor-network-traffic)
-    - [6.17. Dropbox - online storage](#617-dropbox---online-storage)
-    - [6.18. Markdown editor apps](#618-markdown-editor-apps)
-        - [6.18.1. Joplin](#6181-joplin)
-        - [6.18.2. Marktext](#6182-marktext)
-        - [6.18.3. vnote](#6183-vnote)
-        - [6.18.4. PKB alternatives](#6184-pkb-alternatives)
+    - [6.12. CopyQ - clipboard manager](#612-copyq---clipboard-manager)
+    - [6.13. TeamViewer - remote control](#613-teamviewer---remote-control)
+    - [6.14. OBS Studio - streaming](#614-obs-studio---streaming)
+    - [6.15. DBeaver - database tool](#615-dbeaver---database-tool)
+    - [6.16. BleachBit - clean disk space](#616-bleachbit---clean-disk-space)
+    - [6.17. Stacer - monitor system resources](#617-stacer---monitor-system-resources)
+    - [6.18. Wireshark - monitor network traffic](#618-wireshark---monitor-network-traffic)
+    - [6.19. Dropbox - online storage](#619-dropbox---online-storage)
+    - [6.20. Markdown editor apps](#620-markdown-editor-apps)
+        - [6.20.1. Joplin](#6201-joplin)
+        - [6.20.2. Marktext](#6202-marktext)
+        - [6.20.3. vnote](#6203-vnote)
+        - [6.20.4. PKB alternatives](#6204-pkb-alternatives)
+    - [6.21. Math](#621-math)
+    - [6.22. Finance](#622-finance)
+    - [6.23. Extra](#623-extra)
 - [7. Commands](#7-commands)
     - [7.1. git - version control manager](#71-git---version-control-manager)
     - [7.2. docker - containers](#72-docker---containers)
@@ -57,14 +62,15 @@
     - [7.16. httpstat - stats about http requests](#716-httpstat---stats-about-http-requests)
     - [7.17. neofetch - info about your computer](#717-neofetch---info-about-your-computer)
     - [7.18. hwinfo - info about hardware devices](#718-hwinfo---info-about-hardware-devices)
-    - [7.19. ufw - firewall tool](#719-ufw---firewall-tool)
-    - [7.20. exiftool - manage meta info from files](#720-exiftool---manage-meta-info-from-files)
-    - [7.21. iproute2 - manage networking stuffs](#721-iproute2---manage-networking-stuffs)
-    - [7.22. powertop - monitor electrical power consumption](#722-powertop---monitor-electrical-power-consumption)
-    - [7.23. AWS CLI](#723-aws-cli)
-    - [7.24. Carbon - beautify source code as img](#724-carbon---beautify-source-code-as-img)
-    - [7.25. Project Jupyter - interactive notebook](#725-project-jupyter---interactive-notebook)
-    - [7.26. Java](#726-java)
+    - [7.19. geekbench - cross-platform benchmark](#719-geekbench---cross-platform-benchmark)
+    - [7.20. ufw - firewall tool](#720-ufw---firewall-tool)
+    - [7.21. exiftool - manage meta info from files](#721-exiftool---manage-meta-info-from-files)
+    - [7.22. iproute2 - manage networking stuffs](#722-iproute2---manage-networking-stuffs)
+    - [7.23. powertop - monitor electrical power consumption](#723-powertop---monitor-electrical-power-consumption)
+    - [7.24. AWS CLI](#724-aws-cli)
+    - [7.25. Carbon - beautify source code as img](#725-carbon---beautify-source-code-as-img)
+    - [7.26. Project Jupyter - interactive notebook](#726-project-jupyter---interactive-notebook)
+    - [7.27. Java](#727-java)
 - [8. Troubleshooting](#8-troubleshooting)
     - [8.1. Spotify](#81-spotify)
     - [8.2. VS Code](#82-vs-code)
@@ -790,8 +796,10 @@ Personal settings
 - [[Help] Subframe: Google Drive randomly spiking CPU usage](https://www.reddit.com/r/chrome/comments/foehds/help_subframe_google_drive_randomly_spiking_cpu/)
 - [Enable sharing page via QR Code](chrome://flags/#sharing-qr-code-generator)
 - To allow downloads from Google Drive, add drive.google.com to **Sites that can always use cookies**, mark **Including third-party cookies on this site**.
+- Check which Chrome Extensions needs **Allow access to file URLs** Permission (Markdown one of them)
 
 Alternatives
+
 - [Brave](https://brave.com/)
 
     Install dependencies
@@ -1519,7 +1527,7 @@ Alternatives
 Related links
 - 2020-06-10 - [5 Tools To Record Your Linux Desktop (Screencast) In 2020](https://www.linuxuprising.com/2020/01/4-tools-to-record-your-linux-desktop.html)
 
-### CopyQ - clipboard manager
+### 6.12. CopyQ - clipboard manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1540,7 +1548,7 @@ Folders used
 - `$HOME/.local/share/copyq`
 - `$HOME/.var/app/com.github.hluk.copyq`
 
-### 6.12. [TeamViewer](https://www.teamviewer.com/en/download/linux/) - remote control
+### 6.13. [TeamViewer](https://www.teamviewer.com/en/download/linux/) - remote control
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1564,7 +1572,7 @@ Set package repository url as default
 $ sudo teamviewer repo default
 ```
 
-### 6.13. [OBS Studio](https://obsproject.com/wiki/install-instructions#linux) - streaming
+### 6.14. [OBS Studio](https://obsproject.com/wiki/install-instructions#linux) - streaming
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1578,7 +1586,7 @@ $ sudo apt update
 $ sudo apt install obs-studio
 ```
 
-### 6.14. [DBeaver](https://dbeaver.io/) - database tool
+### 6.15. [DBeaver](https://dbeaver.io/) - database tool
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1595,7 +1603,7 @@ $ flatpak install flathub io.dbeaver.DBeaverCommunity
 $ flatpak run io.dbeaver.DBeaverCommunity
 ```
 
-### 6.15. [BleachBit](https://www.bleachbit.org/) - clean disk space
+### 6.16. [BleachBit](https://www.bleachbit.org/) - clean disk space
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1620,7 +1628,7 @@ $ cp bleachbit.py $HOME/bin/bleachbit
 $ rm -rf $HOME/bleachbit/
 ```
 
-### Stacer - monitor system resources
+### 6.17. Stacer - monitor system resources
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1628,7 +1636,7 @@ Linux System Optimizer and Monitoring
 
 [GitHub](https://github.com/oguzhaninan/Stacer)
 
-### 6.16. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
+### 6.18. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1657,7 +1665,7 @@ Related links
 - [How to Install and Use Wireshark on Ubuntu](https://linuxhint.com/install_wireshark_ubuntu/)
 - [How to install Wireshark](https://askubuntu.com/questions/700712/how-to-install-wireshark)
 
-### 6.17. [Dropbox](https://www.dropbox.com/install-linux) - online storage
+### 6.19. [Dropbox](https://www.dropbox.com/install-linux) - online storage
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1694,9 +1702,9 @@ Add to `Startup Applications`
 - Enter `dropbox` (should appear if was installed via `flatpak`)
 - Confirm to add it
 
-### 6.18. Markdown editor apps
+### 6.20. Markdown editor apps
 
-#### 6.18.1. [Joplin](https://joplinapp.org/)
+#### 6.20.1. [Joplin](https://joplinapp.org/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1734,7 +1742,7 @@ Create `.desktop` file
 # TODO
 ```
 
-#### 6.18.2. [Marktext](https://marktext.app/)
+#### 6.20.2. [Marktext](https://marktext.app/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1805,7 +1813,7 @@ Config folder - `$HOME/.config/marktext`
 Related links
 - Fix issue with [icon](https://askubuntu.com/questions/333133/how-to-set-app-icon-in-the-desktop-file-of-an-ubuntu-touch-application)
 
-#### 6.18.3. [vnote](https://vnotex.github.io/vnote/en_us/)
+#### 6.20.3. [vnote](https://vnotex.github.io/vnote/en_us/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1833,7 +1841,7 @@ Directories needed
 - `$HOME/.local/share/VNote/`
 - `$HOME/.local/share/VNote-2.9.1-x86_64.AppImage/`
 
-#### 6.18.4. PKB alternatives
+#### 6.20.4. PKB alternatives
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1866,7 +1874,7 @@ To manage a Personal Knowledge Base:
 - [Zotero](https://www.zotero.org/)
 - [ZETTELKASTEN - The Archive](https://zettelkasten.de/the-archive/)
 
-### Math
+### 6.21. Math
 
 List
 
@@ -1879,14 +1887,14 @@ Related links
 
 - [What’s another good online calculator like Desmos, but without the graphing, and more space for equations?](https://www.quora.com/What%E2%80%99s-another-good-online-calculator-like-Desmos-but-without-the-graphing-and-more-space-for-equations/answer/Jules-Opeth-Manson)
 
-### Finance
+### 6.22. Finance
 
 List
 
 - [GNU Cash](https://flathub.org/apps/details/org.gnucash.GnuCash)
 - [firefly-iii](https://github.com/firefly-iii/firefly-iii)
 
-### Extra
+### 6.23. Extra
 
 - [uw-labs/bloomrpc](https://github.com/uw-labs/bloomrpc) - The missing GUI Client for GRPC services
 
@@ -2815,7 +2823,7 @@ Device Files: /dev/nvme0n1, /dev/disk/by-id/nvme-Samsung_SSD_950_PRO_512GB_S2GMN
 ...
 ```
 
-### [geekbench](https://www.geekbench.com/) - cross-platform benchmark
+### 7.19. [geekbench](https://www.geekbench.com/) - cross-platform benchmark
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2843,7 +2851,7 @@ Related links
 - [Installing Geekbench 5 on Linux](http://support.primatelabs.com/kb/geekbench/installing-geekbench-5-on-linux)
 
 
-### 7.19. [ufw](https://help.ubuntu.com/community/UFW) - firewall tool
+### 7.20. [ufw](https://help.ubuntu.com/community/UFW) - firewall tool
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2867,7 +2875,7 @@ Related tools
 
     [Installation](https://github.com/gustavo-iniguez-goya/opensnitch/wiki/Installation)
 
-### 7.20. exiftool - manage meta info from files
+### 7.21. exiftool - manage meta info from files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2881,7 +2889,7 @@ Set date time on pictures
 $ exiftool -AllDates="2015:09:22 12:00:00"
 ```
 
-### 7.21. [iproute2](https://en.wikipedia.org/wiki/Iproute2) - manage networking stuffs
+### 7.22. [iproute2](https://en.wikipedia.org/wiki/Iproute2) - manage networking stuffs
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2898,7 +2906,6 @@ collection of userspace utilities for controlling and monitoring various aspects
 | netstat           | ip -s, ss, ip route           | Show various networking statistics    |
 | brctl             | bridge                        | Handle bridge addresses and devices   |
 
-### 7.22. [powertop](https://01.org/powertop) - monitor electrical power consumption
 Related tools
 
 - [iftop](https://linux.die.net/man/8/iftop) - display bandwidth usage on an interface by host
@@ -2909,6 +2916,7 @@ Related tools
 - [iPerf](https://iperf.fr/) - a tool for active measurements of the maximum achievable bandwidth on IP networks
 - [CBM](https://zenway.ru/page/cbm) - [GitHub](https://github.com/resurrecting-open-source-projects/cbm) - display in real time the network traffic speed
 
+### 7.23. [powertop](https://01.org/powertop) - monitor electrical power consumption
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2935,7 +2943,6 @@ $ wget \
     https://01.org/sites/default/files/downloads/powertop-2.12.tar.gz
 ```
 
-
 Install via `GitHub`
 
 ```bash
@@ -2958,7 +2965,7 @@ Related tools
 - [bmon](https://linux.die.net/man/1/bmon) - Portable bandwidth monitor and rate estimator - [GitHub](https://github.com/tgraf/bmon)
 - [lm-sensors](https://hwmon.wiki.kernel.org/lm_sensors) - [GitHub](https://github.com/lm-sensors/lm-sensors) - Linux hardware monitoring
 
-### 7.23. [AWS CLI](https://aws.amazon.com/cli/)
+### 7.24. [AWS CLI](https://aws.amazon.com/cli/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2969,7 +2976,7 @@ Related links
 - [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 - [open-guides/og-aws](https://github.com/open-guides/og-aws) - :books: Amazon Web Services — a practical guide
 
-### 7.24. [Carbon](https://carbon.now.sh/) - beautify source code as img
+### 7.25. [Carbon](https://carbon.now.sh/) - beautify source code as img
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2980,7 +2987,7 @@ Create and share beautiful images of your source code
 Related tools
 - [octref/polacode](https://github.com/octref/polacode) - 📸 Polaroid for your code
 
-### 7.25. [Project Jupyter](https://jupyter.org/) - interactive notebook
+### 7.26. [Project Jupyter](https://jupyter.org/) - interactive notebook
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3010,7 +3017,7 @@ $ jupyter notebook
 Related links
 - [Installing the Jupyter Software](https://jupyter.org/install)
 
-### 7.26. Java
+### 7.27. Java
 
 ☝ [Table of contents](#table-of-contents)
 
