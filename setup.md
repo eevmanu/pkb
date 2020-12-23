@@ -1650,6 +1650,53 @@ $ wget \
 $ chmod u+x $HOME/bin/speedtest
 ```
 
+Commands
+
+- Get `json` output
+
+    ```bash
+    $ speedtest --json --single
+    ```
+
+    e.g.:
+
+    ```
+    {
+        "download": 92807569.08109826,
+        "upload": 9310265.771436416,
+        "ping": 14.002,
+        "server": {
+            "url": "http://speedtest11.amx.com.pe:8080/speedtest/upload.php",
+            "lat": "",
+            "lon": "-",
+            "name": "",
+            "country": "",
+            "cc": "",
+            "sponsor": "",
+            "id": "",
+            "host": "speedtest11.amx.com.pe:8080",
+            "d": 1.6140678358667562,
+            "latency": 14.002
+        },
+        "timestamp": "2020-09-01T03:47:54.290416Z",
+        "bytes_sent": 11739136,
+        "bytes_received": 116184700,
+        "share": null,
+        "client": {
+            "ip": "",
+            "lat": "",
+            "lon": "",
+            "isp": "",
+            "isprating": "3.7",
+            "rating": "",
+            "ispdlavg": "",
+            "ispulavg": "",
+            "loggedin": "",
+            "country": ""
+        }
+    }
+    ```
+
 ### 7.5. [httpie](https://httpie.io/) - simple http requests on terminal
 
 ☝ [Table of contents](#table-of-contents)
