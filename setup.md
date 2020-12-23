@@ -1166,6 +1166,67 @@ Alternatives
     Related links
     - 2020-05-28 - [How to install Firefox Developer Edition on Linux](https://linuxconfig.org/how-to-install-firefox-developer-edition-on-linux)
 
+- [ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium) - Google Chromium, sans integration with Google
+
+    Install via `.deb` file
+
+    ```bash
+    $ wget \
+        https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/amd64/ungoogled-chromium_81.0.4044.138-1.focal1_amd64.deb \
+        -O $HOME/ungoogled_chromium.deb
+    ```
+
+    Install via package repository
+
+    - Add package repository url
+
+    ```bash
+    $ echo 'deb http://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/ /' | \
+        sudo tee /etc/apt/sources.list.d/home:ungoogled_chromium.list
+    ```
+
+    - Add key
+
+    ```bash
+    $ sudo wget \
+        -O "/etc/apt/trusted.gpg.d/home:ungoogled_chromium.asc" \
+        -nv \
+            https://download.opensuse.org/repositories/home:ungoogled_chromium/Ubuntu_Focal/Release.key
+    ```
+
+    - Update package repository
+
+    ```
+    $ sudo apt update
+    ```
+
+    - Install it
+
+    ```bash
+    # 2020-06-08
+    $ apt install -s ungoogled-chromium
+    # Inst ungoogled-chromium (81.0.4044.138-1.focal1 home:ungoogled_chromium:download.opensuse.org [amd64])
+
+    $ sudo apt install ungoogled-chromium
+    ```
+
+    Remove it
+
+    ```bash
+    # remove links with apt
+    $ sudo rm /etc/apt/trusted.gpg.d/home\:ungoogled_chromium.asc
+    $ sudo rm /etc/apt/sources.list.d/home\:ungoogled_chromium.list
+    $ sudo rm /etc/apt/sources.list.d/home\:ungoogled_chromium.list.save
+
+    $ sudo apt remove ungoogled-chromium
+    $ sudo apt purge ungoogled-chromium
+    $ sudo apt autoremove
+    ```
+
+
+    Related links
+    - [ungoogled-chromium from home:ungoogled_chromium project @ opensuse](https://software.opensuse.org/download/package?package=ungoogled-chromium&project=home:ungoogled_chromium)
+
 ### 6.4. [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html) - play multimedia files
 
 ☝ [Table of contents](#table-of-contents)
