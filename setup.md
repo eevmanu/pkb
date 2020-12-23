@@ -1461,6 +1461,16 @@ $HOME/.local/share/TelegramDesktop/
 $HOME/.var/app/org.telegram.desktop/
 ```
 
+Alternatives
+
+- For Whatsapp with multiple accounts
+    - [franz](https://github.com/meetfranz/franz)
+    - [ferdi](https://github.com/getferdi/ferdi)
+    - [altus](https://github.com/amanharwara/altus)
+    - [ttth](https://github.com/yafp/ttth)
+    - [ramboxapp](https://github.com/ramboxapp/community-edition)
+    - [hamsket](https://github.com/TheGoddessInari/hamsket)
+
 Related links
 - [Changelog - Version history](https://desktop.telegram.org/changelog)
 - [Wiki](https://github.com/telegramdesktop/tdesktop/wiki)
