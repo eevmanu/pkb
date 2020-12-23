@@ -842,6 +842,330 @@ Alternatives
     Related links
     - [Install instructions for Linux](https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux)
 
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+
+    [Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta)
+
+    - Install it
+
+        Download `.tar.bz2` file
+
+        ```bash
+        $ wget \
+            -O firefox-beta.tar.bz2 \
+            "https://download.mozilla.org/?product=firefox-beta-latest-ssl&os=linux64&lang=en-US"
+        ```
+
+        Unextract file
+
+        ```bash
+        $ tar \
+            --extract \
+            --verbose \
+            --preserve-permissions \
+            --bzip2 \
+            --file firefox-beta.tar.bz2
+        ```
+
+        Change folder name
+
+        ```bash
+        $ mv firefox/ firefox-beta/
+        ```
+
+        Move to right place
+
+        ```bash
+        $ mv firefox-beta/ $HOME/.local/opt/
+        ```
+
+        Create symlink
+
+        ```bash
+        $ ln -s $HOME/.local/opt/firefox-beta/firefox $HOME/bin/firefox-beta
+        ```
+
+        Add / Update `.desktop` file
+
+        ```bash
+        $ nano $HOME/.local/share/applications/firefox-beta.desktop
+        ```
+
+        - `$HOME/.local/share/applications/firefox-beta.desktop`
+
+            ```ini
+            [Desktop Entry]
+            Name=Firefox Beta Edition
+            GenericName=Web Browser
+            Exec={{ /path/to/home }}/bin/firefox-beta %u
+            Icon={{ /path/to/home }}/.local/opt/firefox-beta/browser/chrome/icons/default/default128.png
+            Terminal=false
+            Type=Application
+            MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;
+            StartupNotify=true
+            Categories=Network;WebBrowser;
+            Keywords=web;browser;internet;
+            Actions=new-window;new-private-window;
+            StartupWMClass=Firefox Beta Edition
+
+            [Desktop Action new-window]
+            Name=Open a New Window
+            Exec={{ /path/to/home }}/bin/firefox-beta %u
+
+            [Desktop Action new-private-window]
+            Name=Open a New Private Window
+            Exec={{ /path/to/home }}/bin/firefox-beta --private-window %u
+            ```
+
+        Build cache database of MIME types handled by desktop files
+
+        ```bash
+        $ update-desktop-database $HOME/.local/share/applications/
+        ```
+
+    - Update it
+
+        Download recent version
+
+        ```bash
+        $ wget \
+            -O firefox-beta.tar.bz2 \
+            "https://download.mozilla.org/?product=firefox-beta-latest-ssl&os=linux64&lang=en-US"
+        ```
+
+        Extract it
+
+        Apply `rsync` command
+
+        ```
+        $ rsync \
+            -av \
+            --delete firefox/ \
+            $HOME/.local/opt/firefox-beta
+        ```
+
+        Remove unneeded folder
+
+        ```
+        $ rm -rf firefox/
+        ```
+
+    [Developer](https://www.mozilla.org/en-US/firefox/developer/)
+
+    - Install it
+
+        Download `.tar.bz2` file
+
+        ```bash
+        $ wget \
+            -O firefox-dev.tar.bz2 \
+            "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=linux64&lang=en-US"
+        ```
+
+        Unextract file
+
+        ```bash
+        $ tar \
+            --extract \
+            --verbose \
+            --preserve-permissions \
+            --bzip2 \
+            --file firefox-dev.tar.bz2
+        ```
+
+        Change folder name
+
+        ```bash
+        $ mv firefox/ firefox-dev/
+        ```
+
+        Move to right place
+
+        ```bash
+        $ mv firefox-dev/ $HOME/.local/opt/
+        ```
+
+        Create symlink
+
+        ```bash
+        $ ln -s $HOME/.local/opt/firefox-dev/firefox $HOME/bin/firefox-dev
+        ```
+
+        Add / Update `.desktop` file
+
+        ```bash
+        $ nano $HOME/.local/share/applications/firefox-dev.desktop
+        ```
+
+        - `$HOME/.local/share/applications/firefox-dev.desktop`
+
+            ```ini
+            [Desktop Entry]
+            Name=Firefox Developer Edition
+            GenericName=Web Browser
+            Exec={{ /path/to/home }}/bin/firefox-dev %u
+            Icon={{ /path/to/home }}/.local/opt/firefox-dev/browser/chrome/icons/default/default128.png
+            Terminal=false
+            Type=Application
+            MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;
+            StartupNotify=true
+            Categories=Network;WebBrowser;
+            Keywords=web;browser;internet;
+            Actions=new-window;new-private-window;
+            StartupWMClass=Firefox Developer Edition
+
+            [Desktop Action new-window]
+            Name=Open a New Window
+            Exec={{ /path/to/home }}/bin/firefox-dev %u
+
+            [Desktop Action new-private-window]
+            Name=Open a New Private Window
+            Exec={{ /path/to/home }}/bin/firefox-dev --private-window %u
+            ```
+
+        Build cache database of MIME types handled by desktop files
+
+        ```bash
+        $ update-desktop-database $HOME/.local/share/applications/
+        ```
+
+    - Update it
+
+        Download recent version
+
+        ```bash
+        $ wget \
+            -O firefox-beta.tar.bz2 \
+            "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=linux64&lang=en-US"
+        ```
+
+        Extract it
+
+        Apply `rsync` command
+
+        ```
+        $ rsync \
+            -av \
+            --delete firefox/ \
+            $HOME/.local/opt/firefox-dev
+        ```
+
+        Remove unneeded folder
+
+        ```
+        $ rm -rf firefox/
+        ```
+
+    [Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly)
+
+    - Install it
+
+        Download `.tar.bz2` file
+
+        ```bash
+        $ wget \
+            -O firefox-nightly.tar.bz2 \
+            "https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=linux64&lang=en-US"
+        ```
+
+        Unextract file
+
+        ```bash
+        $ tar \
+            --extract \
+            --verbose \
+            --preserve-permissions \
+            --bzip2 \
+            --file firefox-nightly.tar.bz2
+        ```
+
+        Change folder name
+
+        ```bash
+        $ mv firefox/ firefox-nightly/
+        ```
+
+        Move to right place
+
+        ```bash
+        $ mv firefox-nightly/ $HOME/.local/opt/
+        ```
+
+        Create symlink
+
+        ```bash
+        $ ln -s $HOME/.local/opt/firefox-nightly/firefox $HOME/bin/firefox-nightly
+        ```
+
+        Add / Update `.desktop` file
+
+        ```bash
+        $ nano $HOME/.local/share/applications/firefox-nightly.desktop
+        ```
+
+        - `$HOME/.local/share/applications/firefox-nightly.desktop`
+
+            ```ini
+            [Desktop Entry]
+            Name=Firefox Nightly Edition
+            GenericName=Web Browser
+            Exec={{ /path/to/home }}/bin/firefox-nightly %u
+            Icon={{ /path/to/home }}/.local/opt/firefox-nightly/browser/chrome/icons/default/default128.png
+            Terminal=false
+            Type=Application
+            MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;
+            StartupNotify=true
+            Categories=Network;WebBrowser;
+            Keywords=web;browser;internet;
+            Actions=new-window;new-private-window;
+            StartupWMClass=Firefox Nightly Edition
+
+            [Desktop Action new-window]
+            Name=Open a New Window
+            Exec={{ /path/to/home }}/bin/firefox-nightly %u
+
+            [Desktop Action new-private-window]
+            Name=Open a New Private Window
+            Exec={{ /path/to/home }}/bin/firefox-nightly --private-window %u
+            ```
+
+        Build cache database of MIME types handled by desktop files
+
+        ```bash
+        $ update-desktop-database $HOME/.local/share/applications/
+        ```
+
+    - Update it
+
+        Download recent version
+
+        ```bash
+        $ wget \
+            -O firefox-beta.tar.bz2 \
+            "https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=linux64&lang=en-US"
+        ```
+
+        Extract it
+
+        Apply `rsync` command
+
+        ```
+        $ rsync \
+            -av \
+            --delete firefox/ \
+            $HOME/.local/opt/firefox-nightly
+        ```
+
+        Remove unneeded folder
+
+        ```
+        $ rm -rf firefox/
+        ```
+
+    Related links
+    - 2020-05-28 - [How to install Firefox Developer Edition on Linux](https://linuxconfig.org/how-to-install-firefox-developer-edition-on-linux)
+
+
 ### 6.4. [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html) - play multimedia files
 
 ☝ [Table of contents](#table-of-contents)
