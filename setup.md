@@ -1,77 +1,75 @@
+<!-- omit in toc -->
 # Personal Setup
 
+<!-- omit in toc -->
 ## Table of contents
 
-- [Personal Setup](#personal-setup)
-    - [Table of contents](#table-of-contents)
-    - [Backup & Restore](#backup--restore)
-    - [Things to do after install PopOS](#things-to-do-after-install-popos)
-    - [Issue to be aware](#issue-to-be-aware)
-        - [Bluetooth](#bluetooth)
-        - [Wireless](#wireless)
-        - [Screen / Monitor](#screen--monitor)
-    - [Revert partial upgrade PopOS verison](#revert-partial-upgrade-popos-verison)
-    - [Linux software distributions](#linux-software-distributions)
-        - [Snapcraft](#snapcraft)
-        - [flatpak](#flatpak)
-        - [AppImage](#appimage)
-    - [Apps](#apps)
-        - [Synaptic](#synaptic)
-        - [Flux](#flux)
-        - [Chrome](#chrome)
-        - [Dropbox](#dropbox)
-        - [Spotify](#spotify)
-        - [Visual Studio Code](#visual-studio-code)
-        - [Telegram](#telegram)
-        - [Slack](#slack)
-        - [VLC media player](#vlc-media-player)
-        - [Foxit PDF Reader](#foxit-pdf-reader)
-        - [Zoom](#zoom)
-        - [Skype](#skype)
-        - [TeamViewer](#teamviewer)
-        - [OBS Studio](#obs-studio)
-        - [SimpleScreenRecorder](#simplescreenrecorder)
-        - [Wireshark](#wireshark)
-        - [BleachBit](#bleachbit)
-        - [Markdown editor apps](#markdown-editor-apps)
-            - [Joplin](#joplin)
-            - [Marktext](#marktext)
-            - [vnote](#vnote)
-            - [PKB alternatives](#pkb-alternatives)
-    - [Commands](#commands)
-        - [git](#git)
-        - [xclip](#xclip)
-        - [htop](#htop)
-        - [speedtest](#speedtest)
-        - [httpie](#httpie)
-        - [tmux](#tmux)
-        - [tree](#tree)
-        - [Docker](#docker)
-        - [iproute2](#iproute2)
-        - [unrar](#unrar)
-        - [ffmpeg](#ffmpeg)
-        - [jq](#jq)
-        - [wrk](#wrk)
-        - [youtube-dl](#youtube-dl)
-        - [flameshot](#flameshot)
-        - [ksnip](#ksnip)
-        - [ngrok](#ngrok)
-        - [httpstat](#httpstat)
-        - [hwinfo](#hwinfo)
-        - [ufw](#ufw)
-        - [opensnitch](#opensnitch)
-        - [exiftool](#exiftool)
-        - [powertop](#powertop)
-        - [AWS CLI](#aws-cli)
-        - [Carbon](#carbon)
-        - [Project Jupyter](#project-jupyter)
-        - [Java](#java)
-    - [Troubleshooting](#troubleshooting)
-        - [Spotify](#spotify-1)
-        - [VS Code](#vs-code)
-    - [Final links](#final-links)
+- [1. Backup & Restore](#1-backup--restore)
+- [2. Things to do after install PopOS](#2-things-to-do-after-install-popos)
+- [3. Issue to be aware](#3-issue-to-be-aware)
+    - [3.1. Bluetooth](#31-bluetooth)
+    - [3.2. Wireless](#32-wireless)
+    - [3.3. Screen / Monitor](#33-screen--monitor)
+- [4. Revert partial upgrade PopOS verison](#4-revert-partial-upgrade-popos-verison)
+- [5. Linux software distributions](#5-linux-software-distributions)
+    - [5.1. Snapcraft](#51-snapcraft)
+    - [5.2. flatpak](#52-flatpak)
+    - [5.3. AppImage](#53-appimage)
+- [6. Apps](#6-apps)
+    - [6.1. Synaptic - package manager](#61-synaptic---package-manager)
+    - [6.2. Flux - eye care](#62-flux---eye-care)
+    - [6.3. Chrome - browser](#63-chrome---browser)
+    - [6.4. VLC media player - play multimedia files](#64-vlc-media-player---play-multimedia-files)
+    - [6.5. Visual Studio Code - code editor](#65-visual-studio-code---code-editor)
+    - [6.6. Foxit PDF Reader - pdf viewer](#66-foxit-pdf-reader---pdf-viewer)
+    - [6.7. Spotify - music streaming](#67-spotify---music-streaming)
+    - [6.8. Slack - IM app](#68-slack---im-app)
+    - [6.9. Zoom - video call app](#69-zoom---video-call-app)
+    - [6.10. Telegram - IM app](#610-telegram---im-app)
+    - [6.11. SimpleScreenRecorder - record screen](#611-simplescreenrecorder---record-screen)
+    - [6.12. TeamViewer - remote control](#612-teamviewer---remote-control)
+    - [6.13. OBS Studio - streaming](#613-obs-studio---streaming)
+    - [6.14. BleachBit - clean disk space](#614-bleachbit---clean-disk-space)
+    - [6.15. Wireshark - monitor network traffic](#615-wireshark---monitor-network-traffic)
+    - [6.16. Dropbox - online storage](#616-dropbox---online-storage)
+    - [6.17. Markdown editor apps](#617-markdown-editor-apps)
+        - [6.17.1. Joplin](#6171-joplin)
+        - [6.17.2. Marktext](#6172-marktext)
+        - [6.17.3. vnote](#6173-vnote)
+        - [6.17.4. PKB alternatives](#6174-pkb-alternatives)
+- [7. Commands](#7-commands)
+    - [7.1. git - version control manager](#71-git---version-control-manager)
+    - [7.2. xclip - clipboard manager](#72-xclip---clipboard-manager)
+    - [7.3. htop - monitor computer resources](#73-htop---monitor-computer-resources)
+    - [7.4. speedtest - internet bandwidth meter](#74-speedtest---internet-bandwidth-meter)
+    - [7.5. httpie - simple http requests on terminal](#75-httpie---simple-http-requests-on-terminal)
+    - [7.6. tmux - multiple sessions](#76-tmux---multiple-sessions)
+    - [7.7. tree - file / folder structure](#77-tree---file--folder-structure)
+    - [7.8. docker - containers](#78-docker---containers)
+    - [7.9. iproute2 - manage networking stuffs](#79-iproute2---manage-networking-stuffs)
+    - [7.10. unrar - decompress files](#710-unrar---decompress-files)
+    - [7.11. ffmpeg - handle multimedia files](#711-ffmpeg---handle-multimedia-files)
+    - [7.12. jq - handle json files](#712-jq---handle-json-files)
+    - [7.13. wrk - http benchmark](#713-wrk---http-benchmark)
+    - [7.14. youtube-dl - youtube downloader](#714-youtube-dl---youtube-downloader)
+    - [7.15. ksnip - screenshot tool](#715-ksnip---screenshot-tool)
+    - [7.16. ngrok - expose local web server to internet](#716-ngrok---expose-local-web-server-to-internet)
+    - [7.17. httpstat - stats about http requests](#717-httpstat---stats-about-http-requests)
+    - [7.18. hwinfo - info about hardware devices](#718-hwinfo---info-about-hardware-devices)
+    - [7.19. ufw - firewall tool](#719-ufw---firewall-tool)
+    - [7.20. opensnitch - firewall tool](#720-opensnitch---firewall-tool)
+    - [7.21. exiftool - manage meta info from files](#721-exiftool---manage-meta-info-from-files)
+    - [7.22. powertop - monitor electrical power consumption](#722-powertop---monitor-electrical-power-consumption)
+    - [7.23. AWS CLI](#723-aws-cli)
+    - [7.24. Carbon - beautify source code as img](#724-carbon---beautify-source-code-as-img)
+    - [7.25. Project Jupyter - interactive notebook](#725-project-jupyter---interactive-notebook)
+    - [7.26. Java](#726-java)
+- [8. Troubleshooting](#8-troubleshooting)
+    - [8.1. Spotify](#81-spotify)
+    - [8.2. VS Code](#82-vs-code)
+- [9. Final links](#9-final-links)
 
-## Backup & Restore
+## 1. Backup & Restore
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -216,11 +214,25 @@ Related tools
 
 </details>
 
+- <details>
+    <summary>
+    <a href="https://github.com/duplicati/duplicati">
+    duplicati/duplicati
+    </a>
+    </summary>
+
+    Store securely encrypted backups in the cloud!
+
+</details>
+
+- Backblaze - [B2 Cloud Storage](https://www.backblaze.com/b2/cloud-storage.html)
+
 Related links
 - [most starred repo with `backup`](https://github.com/search?q=backup&s=stars&type=Repositories)
 - [most starred repo with `sync`](https://github.com/search?q=sync&s=stars&type=Repositories)
+- [Online Storage vs. Online Backup](https://www.backblaze.com/online-storage-vs-online-backup.html) -
 
-## Things to do after install PopOS
+## 2. Things to do after install PopOS
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -510,9 +522,9 @@ PulseAudio
 - Related links
     - [Things to do after installing Pop!_OS 20.04 (Apps, Settings, and Tweaks)](https://mutschler.eu/linux/install-guides/pop-os-post-install/) - [archive](https://web.archive.org/web/20201217152053/https://mutschler.eu/linux/install-guides/pop-os-post-install/)
 
-## Issue to be aware
+## 3. Issue to be aware
 
-### Bluetooth
+### 3.1. Bluetooth
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -620,13 +632,13 @@ Setup Amazon Echo device as speaker
     - [Bluetooth speaker no sound in Ubuntu 16.04](https://askubuntu.com/questions/763539/bluetooth-speaker-no-sound-in-ubuntu-16-04)
     - [A2DP sink without pulseaudio](https://stackoverflow.com/questions/12338621/a2dp-sink-without-pulseaudio)
 
-### Wireless
+### 3.2. Wireless
 
 ☝ [Table of contents](#table-of-contents)
 
 [System76 - Support - Solve Wireless Issues](https://support.system76.com/articles/wireless/)
 
-### Screen / Monitor
+### 3.3. Screen / Monitor
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -654,7 +666,7 @@ Deactive HiDPI Daemon if CPU spike without no reason
     - [HiDPI performance issues?](https://www.reddit.com/r/gnome/comments/7j5lkh/hidpi_performance_issues/)
     - [All About the HiDPI Daemon](https://blog.system76.com/post/174414833678/all-about-the-hidpi-daemon)
 
-## Revert partial upgrade PopOS verison
+## 4. Revert partial upgrade PopOS verison
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -674,9 +686,9 @@ Run `apt update`
 
 Activate all PPA files where commented by `Download` button action
 
-## Linux software distributions
+## 5. Linux software distributions
 
-### [Snapcraft](https://snapcraft.io/)
+### 5.1. [Snapcraft](https://snapcraft.io/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -690,7 +702,7 @@ $ sudo apt install snapd
 Related links
 - [Install on Ubuntu](https://snapcraft.io/docs/installing-snap-on-ubuntu)
 
-### [flatpak](https://flatpak.org/)
+### 5.2. [flatpak](https://flatpak.org/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -698,13 +710,13 @@ Directories used
 - `$HOME/.cache/flatpak`
 - `$HOME/.local/share/flatpak`
 
-### [AppImage](https://appimage.org/)
+### 5.3. [AppImage](https://appimage.org/)
 
 ☝ [Table of contents](#table-of-contents)
 
-## Apps
+## 6. Apps
 
-### Synaptic
+### 6.1. Synaptic - package manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -714,7 +726,7 @@ Graphical package manager
 $ apt install synaptic
 ```
 
-### [Flux](https://justgetflux.com/)
+### 6.2. [Flux](https://justgetflux.com/) - eye care
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -752,7 +764,7 @@ Alternatives
 - [jonls/redshift](https://github.com/jonls/redshift)
 - Gnome - [Night light](https://www.gnome.org/news/2017/03/gnome-3-24-released/attachment/night-light/)
 
-### [Chrome](https://www.google.com/chrome/)
+### 6.3. [Chrome](https://www.google.com/chrome/) - browser
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -779,7 +791,7 @@ Personal settings
 - To allow downloads from Google Drive, add drive.google.com to **Sites that can always use cookies**, mark **Including third-party cookies on this site**.
 
 Alternatives
-- [Brave](https://brave.com/) - browser with real privacy
+- [Brave](https://brave.com/)
 
     Install dependencies
 
@@ -830,44 +842,106 @@ Alternatives
     Related links
     - [Install instructions for Linux](https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux)
 
-### [Dropbox](https://www.dropbox.com/install-linux)
+### 6.4. [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html) - play multimedia files
 
 ☝ [Table of contents](#table-of-contents)
 
-Install via `.deb` file
+[GitHub](https://github.com/videolan/vlc)
+
+Install via `apt`
+
+```bash
+$ sudo apt install vlc
+```
+
+Install via `Snap`
+
+```bash
+$ snap install vlc
+```
+
+### 6.5. [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux) - code editor
+
+☝ [Table of contents](#table-of-contents)
+
+Install via `.deb`
+
+TODO
+
+Install via `snap`
+
+```bash
+$ snap install code
+```
+
+Set `Code` as default editor
+
+```bash
+# manually
+$ sudo update-alternatives --set editor /usr/bin/code
+# for code insiders version
+$ sudo update-alternatives --set editor /usr/bin/code-insiders
+
+# interactively
+$ sudo update-alternatives --config editor
+```
+
+Alternatives
+- [VSCodium/vscodium](https://github.com/VSCodium/vscodium)
+- Visual Studio Code [Insiders](https://code.visualstudio.com/insiders/)
+
+Related links:
+- [FAQ](https://code.visualstudio.com/docs/supporting/faq)
+- [User and Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings)
+- [How can you export the Visual Studio Code extension list?](https://stackoverflow.com/questions/35773299/how-can-you-export-the-visual-studio-code-extension-list)
+- [How do I remove VS Code & settings from Ubuntu?](https://superuser.com/questions/1113022/how-do-i-remove-vs-code-settings-from-ubuntu)
+- [How to change indentation in Visual Studio Code?](https://stackoverflow.com/questions/34174207/how-to-change-indentation-in-visual-studio-code)
+
+### 6.6. [Foxit PDF Reader](https://www.foxitsoftware.com/pdf-reader/) - pdf viewer
+
+☝ [Table of contents](#table-of-contents)
+
+Industry’s Most Powerful PDF Reader
+
+Download `.tar.gz` file
 
 ```bash
 $ wget \
-    -O dropbox.deb \
-    https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb
+    -O FoxitReader.run.tar.gz \
+    https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
 ```
 
-Dropbox Headless Install via command line
+Uncompress it
 
 ```bash
+$ gzip -d FoxitReader.run.tar.gz
 
-$ cd ~ && \
-    wget \
-        -O - \
-        "https://www.dropbox.com/download?plat=lnx.x86_64" | \
-    tar xzf -
+$ tar xzvf FoxitReader.run.tar
 ```
 
-Install via `flatpak`
+Assign permissions to `.run` file
 
 ```bash
-$ flatpak install flathub com.dropbox.Client
+$ chmod u+x FoxitReader*.run
 ```
 
-Add to `Startup Applications`
-- Open `Gnome Tweaks`
-- Go to option `Startup Applications`
-- Click in `+` to add a application
-- Click on search icon
-- Enter `dropbox` (should appear if was installed via `flatpak`)
-- Confirm to add it
+Run installer
 
-### [Spotify](https://www.spotify.com/download/linux/)
+```bash
+$ ./FoxitReader.enu.setup.2.4.4.0911\(r057d814\).x64.run
+```
+
+Choose any of the following paths as `Installation Folder`
+- `$HOME/.local/opt/foxitsoftware/foxitreader`
+- `/opt/foxitsoftware/foxitreader`
+
+Alternatives
+- [Master PDF Editor](https://code-industry.net/free-pdf-editor/)
+
+Related links
+- 2020-05-12 - [PDF viewer list on Ubuntu 20.04 Focal Fossa Linux](https://linuxconfig.org/pdf-viewer-list-on-ubuntu-20-04-focal-fossa-linux)
+
+### 6.7. [Spotify](https://www.spotify.com/download/linux/) - music streaming
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -915,69 +989,7 @@ TODO
 Related links
 - [archive](https://web.archive.org/web/20201221183349/https://www.spotify.com/pe/download/linux/)
 
-### [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux)
-
-☝ [Table of contents](#table-of-contents)
-
-Install via `.deb`
-
-TODO
-
-Install via `snap`
-
-```bash
-$ snap install code
-```
-
-Set `Code` as default editor
-
-```bash
-# manually
-$ sudo update-alternatives --set editor /usr/bin/code
-# for code insiders version
-$ sudo update-alternatives --set editor /usr/bin/code-insiders
-
-# interactively
-$ sudo update-alternatives --config editor
-```
-
-Alternatives
-- [VSCodium/vscodium](https://github.com/VSCodium/vscodium)
-- Visual Studio Code [Insiders](https://code.visualstudio.com/insiders/)
-
-Related links:
-- [FAQ](https://code.visualstudio.com/docs/supporting/faq)
-- [User and Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings)
-- [How can you export the Visual Studio Code extension list?](https://stackoverflow.com/questions/35773299/how-can-you-export-the-visual-studio-code-extension-list)
-- [How do I remove VS Code & settings from Ubuntu?](https://superuser.com/questions/1113022/how-do-i-remove-vs-code-settings-from-ubuntu)
-- [How to change indentation in Visual Studio Code?](https://stackoverflow.com/questions/34174207/how-to-change-indentation-in-visual-studio-code)
-
-### [Telegram](https://telegram.org/dl/desktop/linux)
-
-☝ [Table of contents](#table-of-contents)
-
-Install via `flatpak`
-
-```bash
-$ flatpak install flathub org.telegram.desktop
-```
-
-Telegram icon location - `$HOME/.local/share/icons/telegram.png`
-
-Telegram folders used via `flatpak` installation
-
-```bash
-# folders used for Telegram via Flatpak
-$HOME/.local/share/TelegramDesktop/
-$HOME/.var/app/org.telegram.desktop/
-```
-
-Related links
-- [Changelog - Version history](https://desktop.telegram.org/changelog)
-- [Wiki](https://github.com/telegramdesktop/tdesktop/wiki)
-    - [Keyboard Shortcuts](https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts)
-
-### [Slack](https://slack.com/intl/en-us/downloads/linux)
+### 6.8. [Slack](https://slack.com/intl/en-us/downloads/linux) - IM app
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1002,69 +1014,7 @@ $ snap install --classic slack
 Related links
 - [Release notes for Linux](https://slack.com/intl/en-us/release-notes/linux)
 
-### [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html)
-
-☝ [Table of contents](#table-of-contents)
-
-[GitHub](https://github.com/videolan/vlc)
-
-Install via `apt`
-
-```bash
-$ sudo apt install vlc
-```
-
-Install via `Snap`
-
-```bash
-$ snap install vlc
-```
-
-### [Foxit PDF Reader](https://www.foxitsoftware.com/pdf-reader/)
-
-☝ [Table of contents](#table-of-contents)
-
-Industry’s Most Powerful PDF Reader
-
-Download `.tar.gz` file
-
-```bash
-$ wget \
-    -O FoxitReader.run.tar.gz \
-    https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
-```
-
-Uncompress it
-
-```bash
-$ gzip -d FoxitReader.run.tar.gz
-
-$ tar xzvf FoxitReader.run.tar
-```
-
-Assign permissions to `.run` file
-
-```bash
-$ chmod u+x FoxitReader*.run
-```
-
-Run installer
-
-```bash
-$ ./FoxitReader.enu.setup.2.4.4.0911\(r057d814\).x64.run
-```
-
-Choose any of the following paths as `Installation Folder`
-- `$HOME/.local/opt/foxitsoftware/foxitreader`
-- `/opt/foxitsoftware/foxitreader`
-
-Alternatives
-- [Master PDF Editor](https://code-industry.net/free-pdf-editor/)
-
-Related links
-- 2020-05-12 - [PDF viewer list on Ubuntu 20.04 Focal Fossa Linux](https://linuxconfig.org/pdf-viewer-list-on-ubuntu-20-04-focal-fossa-linux)
-
-### [Zoom](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux)
+### 6.9. [Zoom](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux) - video call app
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1086,28 +1036,75 @@ Install via [`Snap`](https://snapcraft.io/zoom-client)
 $ snap install zoom-client
 ```
 
+Alternatives
+
+- [Skype](https://www.skype.com/en/get-skype/download-skype-for-desktop/)
+
+    Install via `.deb`
+
+    ```bash
+    $ wget \
+        -O skype.deb \
+        https://repo.skype.com/latest/skypeforlinux-64.deb
+    ```
+
+    Install via `Snap`
+
+    ```bash
+    $ snap install skype
+    ```
 Related links
 - Install [using the terminal](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_89c268b4-2a68-4e4c-882f-441e374b87cb)
 
-### [Skype](https://www.skype.com/en/get-skype/download-skype-for-desktop/)
+### 6.10. [Telegram](https://telegram.org/dl/desktop/linux) - IM app
 
 ☝ [Table of contents](#table-of-contents)
 
-Install via `.deb`
+Install via `flatpak`
 
 ```bash
-$ wget \
-    -O skype.deb \
-    https://repo.skype.com/latest/skypeforlinux-64.deb
+$ flatpak install flathub org.telegram.desktop
 ```
 
-Install via `Snap`
+Telegram icon location - `$HOME/.local/share/icons/telegram.png`
+
+Telegram folders used via `flatpak` installation
 
 ```bash
-$ snap install skype
+# folders used for Telegram via Flatpak
+$HOME/.local/share/TelegramDesktop/
+$HOME/.var/app/org.telegram.desktop/
 ```
 
-### [TeamViewer](https://www.teamviewer.com/en/download/linux/)
+Related links
+- [Changelog - Version history](https://desktop.telegram.org/changelog)
+- [Wiki](https://github.com/telegramdesktop/tdesktop/wiki)
+    - [Keyboard Shortcuts](https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts)
+
+### 6.11. [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/) - record screen
+
+☝ [Table of contents](#table-of-contents)
+
+Record programs and games.
+
+[GitHub](https://github.com/MaartenBaert/ssr)
+
+Install it
+
+```bash
+$ sudo apt-add-repository ppa:maarten-baert/simplescreenrecorder
+$ sudo apt-get update
+$ sudo apt-get install simplescreenrecorder
+```
+
+Alternatives
+- [hzbd/kazam](https://github.com/hzbd/kazam)
+- [GNOME/cheese](https://gitlab.gnome.org/GNOME/cheese)
+
+Related links
+- 2020-06-10 - [5 Tools To Record Your Linux Desktop (Screencast) In 2020](https://www.linuxuprising.com/2020/01/4-tools-to-record-your-linux-desktop.html)
+
+### 6.12. [TeamViewer](https://www.teamviewer.com/en/download/linux/) - remote control
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1131,7 +1128,7 @@ Set package repository url as default
 $ sudo teamviewer repo default
 ```
 
-### [OBS Studio](https://obsproject.com/wiki/install-instructions#linux)
+### 6.13. [OBS Studio](https://obsproject.com/wiki/install-instructions#linux) - streaming
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1145,30 +1142,32 @@ $ sudo apt update
 $ sudo apt install obs-studio
 ```
 
-### [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/)
+### 6.14. [BleachBit](https://www.bleachbit.org/) - clean disk space
 
 ☝ [Table of contents](#table-of-contents)
 
-Record programs and games.
+Cleans files to free disk space and to maintain privacy.
 
-[GitHub](https://github.com/MaartenBaert/ssr)
+[GitHub](https://github.com/bleachbit/bleachbit)
 
-Install it
+Install via `apt`
 
 ```bash
-$ sudo apt-add-repository ppa:maarten-baert/simplescreenrecorder
-$ sudo apt-get update
-$ sudo apt-get install simplescreenrecorder
+$ sudo apt install bleachbit
 ```
 
-Alternatives
-- [hzbd/kazam](https://github.com/hzbd/kazam)
-- [GNOME/cheese](https://gitlab.gnome.org/GNOME/cheese)
+Install from `master` branch
 
-Related links
-- 2020-06-10 - [5 Tools To Record Your Linux Desktop (Screencast) In 2020](https://www.linuxuprising.com/2020/01/4-tools-to-record-your-linux-desktop.html)
+```bash
+$ cd $HOME
+$ git clone https://github.com/bleachbit/bleachbit
+$ cd bleachbit/
+$ make -C po local
+$ cp bleachbit.py $HOME/bin/bleachbit
+$ rm -rf $HOME/bleachbit/
+```
 
-### [Wireshark](https://www.wireshark.org/download.html)
+### 6.15. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1197,34 +1196,46 @@ Related links
 - [How to Install and Use Wireshark on Ubuntu](https://linuxhint.com/install_wireshark_ubuntu/)
 - [How to install Wireshark](https://askubuntu.com/questions/700712/how-to-install-wireshark)
 
-### [BleachBit](https://www.bleachbit.org/)
+### 6.16. [Dropbox](https://www.dropbox.com/install-linux) - online storage
 
 ☝ [Table of contents](#table-of-contents)
 
-Cleans files to free disk space and to maintain privacy.
-
-[GitHub](https://github.com/bleachbit/bleachbit)
-
-Install via `apt`
+Install via `.deb` file
 
 ```bash
-$ sudo apt install bleachbit
+$ wget \
+    -O dropbox.deb \
+    https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb
 ```
 
-Install from `master` branch
+Dropbox Headless Install via command line
 
 ```bash
-$ cd $HOME
-$ git clone https://github.com/bleachbit/bleachbit
-$ cd bleachbit/
-$ make -C po local
-$ cp bleachbit.py $HOME/bin/bleachbit
-$ rm -rf $HOME/bleachbit/
+
+$ cd ~ && \
+    wget \
+        -O - \
+        "https://www.dropbox.com/download?plat=lnx.x86_64" | \
+    tar xzf -
 ```
 
-### Markdown editor apps
+Install via `flatpak`
 
-#### [Joplin](https://joplinapp.org/)
+```bash
+$ flatpak install flathub com.dropbox.Client
+```
+
+Add to `Startup Applications`
+- Open `Gnome Tweaks`
+- Go to option `Startup Applications`
+- Click in `+` to add a application
+- Click on search icon
+- Enter `dropbox` (should appear if was installed via `flatpak`)
+- Confirm to add it
+
+### 6.17. Markdown editor apps
+
+#### 6.17.1. [Joplin](https://joplinapp.org/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1262,7 +1273,7 @@ Create `.desktop` file
 # TODO
 ```
 
-#### [Marktext](https://marktext.app/)
+#### 6.17.2. [Marktext](https://marktext.app/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1333,7 +1344,7 @@ Config folder - `$HOME/.config/marktext`
 Related links
 - Fix issue with [icon](https://askubuntu.com/questions/333133/how-to-set-app-icon-in-the-desktop-file-of-an-ubuntu-touch-application)
 
-#### [vnote](https://vnotex.github.io/vnote/en_us/)
+#### 6.17.3. [vnote](https://vnotex.github.io/vnote/en_us/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1361,7 +1372,7 @@ Directories needed
 - `$HOME/.local/share/VNote/`
 - `$HOME/.local/share/VNote-2.9.1-x86_64.AppImage/`
 
-#### PKB alternatives
+#### 6.17.4. PKB alternatives
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1393,9 +1404,9 @@ To manage a Personal Knowledge Base:
 - [Zotero](https://www.zotero.org/)
 - [ZETTELKASTEN - The Archive](https://zettelkasten.de/the-archive/)
 
-## Commands
+## 7. Commands
 
-### [git](https://git-scm.com/)
+### 7.1. [git](https://git-scm.com/) - version control manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1535,7 +1546,7 @@ Complementary tools
     $ rm -rf $HOME/bin-sources/git-cola/
     ```
 
-### xclip
+### 7.2. xclip - clipboard manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1559,7 +1570,7 @@ Install it
 $ sudo apt install xclip
 ```
 
-### [htop](https://htop.dev/)
+### 7.3. [htop](https://htop.dev/) - monitor computer resources
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1620,7 +1631,7 @@ $ rm -rf $HOME/htop
 
 Config file - `$HOME/.config/htop/htoprc`
 
-### speedtest
+### 7.4. speedtest - internet bandwidth meter
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1639,7 +1650,7 @@ $ wget \
 $ chmod u+x $HOME/bin/speedtest
 ```
 
-### [httpie](https://httpie.io/)
+### 7.5. [httpie](https://httpie.io/) - simple http requests on terminal
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1663,7 +1674,7 @@ $ pip install -U httpie
 $ sudo pip install -U httpie
 ```
 
-### tmux
+### 7.6. tmux - multiple sessions
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1732,7 +1743,7 @@ $ cd $HOME
 $ rm -rf $HOME/tmux
 ```
 
-### [tree](http://mama.indstate.edu/users/ice/tree/)
+### 7.7. [tree](http://mama.indstate.edu/users/ice/tree/) - file / folder structure
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1755,7 +1766,7 @@ $ sudo apt install tree
 Related links
 - 2019-10-04 - [Linux ‘tree Command’ Usage Examples for Beginners](https://www.tecmint.com/linux-tree-command-examples/)
 
-### Docker
+### 7.8. docker - containers
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1798,7 +1809,7 @@ Related links
 - [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user)
 
 
-### [iproute2](https://en.wikipedia.org/wiki/Iproute2)
+### 7.9. [iproute2](https://en.wikipedia.org/wiki/Iproute2) - manage networking stuffs
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1815,7 +1826,7 @@ collection of userspace utilities for controlling and monitoring various aspects
 | netstat           | ip -s, ss, ip route           | Show various networking statistics    |
 | brctl             | bridge                        | Handle bridge addresses and devices   |
 
-### unrar
+### 7.10. unrar - decompress files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1827,7 +1838,7 @@ Install it
 $ sudo apt install unrar
 ```
 
-### [ffmpeg](https://ffmpeg.org/)
+### 7.11. [ffmpeg](https://ffmpeg.org/) - handle multimedia files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1846,7 +1857,7 @@ $ sudo apt install ffmpeg
 Related links
 - [Ubuntu 20.04 FFmpeg installation](https://linuxconfig.org/ubuntu-20-04-ffmpeg-installation)
 
-### jq
+### 7.12. jq - handle json files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1876,7 +1887,7 @@ Usage
     $ jq . {{ json file }}
     ```
 
-### wrk
+### 7.13. wrk - http benchmark
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1925,8 +1936,9 @@ Alternatives
 
 Related links
 - [denji/awesome-http-benchmark](https://github.com/denji/awesome-http-benchmark) - HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful)
+- TechEmpower - [Benchmarks](https://www.techempower.com/benchmarks/) - [GitHub](https://github.com/TechEmpower/FrameworkBenchmarks) - Source for the TechEmpower Framework Benchmarks project
 
-### [youtube-dl](https://ytdl-org.github.io/youtube-dl/)
+### 7.14. [youtube-dl](https://ytdl-org.github.io/youtube-dl/) - youtube downloader
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1946,257 +1958,221 @@ $ wget \
 $ chmod u+rx $HOME/bin/youtube-dl
 ```
 
-### flameshot
+### 7.15. [ksnip](https://github.com/ksnip/ksnip) - screenshot tool
 
 ☝ [Table of contents](#table-of-contents)
 
-Powerful yet simple to use screenshot software
-
-[GitHub](https://github.com/lupoDharkael/flameshot)
-
-- [Install @ Ubuntu](https://flameshot.js.org/#/getting-start?id=debianubuntu)
+Install using `.AppImage`
 
 ```bash
-# add `Super + Print` as keyboard shortcut
-# add `Print` as keyboard shortcut but
-# don't forget to check where `Take a screenshot` default shortcut is
-# -d, delay time in miliseconds
-# -p, path where capture will be saved
-/usr/local/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
-/usr/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
-
-# easy way
-$ apt install flameshot
-
-# when installed in clean pop os 20.04 v6
-$ apt install qtchooser
-
-# when installed in clean pop os 20.04 v6
-# installed packages
-# libclang1-10 libdouble-conversion3 libegl-dev libgl-dev libglu1-mesa-dev
-# libglx-dev libllvm10 libpthread-stubs0-dev libqt5concurrent5 libqt5core5a
-# libqt5dbus5 libqt5designer5 libqt5designercomponents5 libqt5gui5 libqt5help5
-# libqt5network5 libqt5opengl5 libqt5opengl5-dev libqt5positioning5
-# libqt5printsupport5 libqt5qml5 libqt5quick5 libqt5quickwidgets5
-# libqt5sensors5 libqt5sql5 libqt5sql5-sqlite libqt5svg5 libqt5test5
-# libqt5webchannel5 libqt5webkit5 libqt5widgets5 libqt5xml5 libvulkan-dev
-# libx11-dev libxau-dev libxcb-xinerama0 libxcb-xinput0 libxcb1-dev
-# libxdmcp-dev libxext-dev qdoc-qt5 qhelpgenerator-qt5 qt5-assistant
-# qt5-default qt5-gtk-platformtheme qt5-qmake qt5-qmake-bin
-# qtattributionsscanner-qt5 qtbase5-dev qtbase5-dev-tools qttools5-dev-tools
-# qttranslations5-l10n x11proto-core-dev x11proto-dev x11proto-xext-dev
-# xorg-sgml-doctools xtrans-dev
-$ sudo apt install \
-libqt5svg5 \
-libqt5svg5-dev
-
-# when installed in clean pop os 20.04 v6
-# installed packages
-# appmenu-gtk3-module libappmenu-gtk3-parser0
-$ sudo apt install \
-appmenu-gtk3-module
-
-# Packages needed
-# Compile-time
-$ apt install \
-g++ \
-build-essential \
-qt5-default \
-qt5-qmake \
-qttools5-dev-tools
-
-# Run-time
-$ apt install libqt5dbus5 \
-libqt5network5 \
-libqt5core5a \
-libqt5widgets5 \
-libqt5gui5 \
-libqt5svg5-dev
-
-# Optional
-$ apt install git \
-openssl \
-ca-certificates
-
-# hard way, from github
-# install in $HOME/bin
 $ cd $HOME
-$ git clone https://github.com/lupoDharkael/flameshot
-$ cd flameshot/
-$ mkdir build/
-$ cd build/
-$ qmake ../
-$ make
-$ cp flameshot $HOME/bin
-$ cd $HOME
-$ rm -rf flameshot/
-
-{{ $HOME }}/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
-
-# flameshot.conf
-[General]
-closeAfterScreenshot=true
-disabledTrayIcon=false
-filenamePattern=fs_%Y-%m-%d_%H-%M-%S
-showDesktopNotification=true
-startupLaunch=true
-
-# another example of flameshot.conf
-[General]
-closeAfterScreenshot=false
-disabledTrayIcon=false
-drawColor=#ff0000
-drawThickness=1
-filenamePattern=fs_%Y-%m-%d_%H-%M-%S
-savePath={{ $HOME }}/Pictures
-showDesktopNotification=false
-startupLaunch=true
-uiColor=#930096
+$ wget -O ksnip https://github.com/ksnip/ksnip/releases/download/v1.7.3/ksnip-1.7.3-x86_64.AppImage
+$ chmod +x ksnip
+$ mv ksnip $HOME/bin
 ```
 
-```
-Couldn't install in $HOME/bin
-Seems to be a limitation between $PATH, Gnome (shell, extensions, menu, not sure)
-because when I install via apt it works (it install in /usr/bin/flameshot) and calling
-from command declaration in custom keyboard shortcut is not a problem
-but when build binary and execute ./flameshot gui, nothing appears, nothing work
-```
+- Download icon files
 
-- Directories used:
+    ```bash
+    $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.svg
+    $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.ico
+    # Copy 64x64 and 128x128 png file from flatpak installation
+    ```
+
+- Create folder hierarchy for `icon` files
+    - [Icon size to provide for unity .desktop, and the syntax to reference it](https://askubuntu.com/questions/393104/icon-size-to-provide-for-unity-desktop-and-the-syntax-to-reference-it)
+
+    ```bash
+    # $HOME/.icons or $HOME/.local/share/icons
+    $ mkdir $HOME/.icons/hicolor/64x64/apps/
+    $ mkdir $HOME/.icons/hicolor/128x128/apps/
+    ```
+
+- Copy icon files respectively
+
+    ```bash
+    $ cp ksnip_64x64.png $HOME/.icons/hicolor/64x64/apps/ksnip.png
+    $ cp ksnip_128x128.png $HOME/.icons/hicolor/128x128/apps/ksnip.png
+    ```
+
+- Move icon files downloaded from github
+
+    ```bash
+    $ mv ksnip.icon .icons/
+    $ mv ksnip.svg .icons/
+    ```
+
+- Setup shortcut
+
+    ```
+    Ksnip
+    {{ $HOME }}/bin/ksnip -r -d 0.1
+    Shift + Print or Print
+    ```
+
+- Change config inside app
+
+    ```
+    [Application]
+    ApplicationStyle=Fusion
+    AutoCopyToClipboardNewCaptures=true
+    CloseToTray=false
+    MinimizeToTray=false
+    PromptSaveBeforeExit=false
+    RememberLastSaveDirectory=true
+    SaveDirectory={{ $HOME }}/Pictures
+    SaveFilename=$Y-$M-$D_$T
+    StartMinimizedToTray=false
+    UseTabs=false
+    UseTrayIcon=false
+
+    [ImageGrabber]
+    LastRectArea=@Rect(2341 182 1058 426)
+
+    [Imgur]
+    AlwaysCopyToClipboard=true
+    ForceAnonymous=true
+    OpenLinkDirectlyToImage=true
+
+    [MainWindow]
+    Position=@Point(2253 69)
+
+    [Painter]
+    ItemShadowEnabled=false
+    NumberFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@>\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0K\x10)
+    RotateWatermark=false
+    TextFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@(\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0\x32\x10)
+
+    [UploadScript]
+    UploadScriptStoOnStdErr=false
+
+    ```
+
+- Path to config file
+
+    ```bash
+    $ cat $HOME/.config/ksnip/ksnip.conf
+    ```
+
+- Create `.desktop` file on `$HOME/.local/share/applications/ksnip.desktop`
+
+    ```
+    #!/usr/bin/env xdg-open
+    [Desktop Entry]
+    Type=Application
+    Exec={{ $HOME }}/bin/ksnip
+    Name=ksnip
+    GenericName=ksnip Screenshot Tool
+    Comment=Qt based cross-platform screenshot tool that provides many annotation features for your screenshots.
+    Icon=ksnip
+    Terminal=false
+    StartupNotify=true
+    Categories=Utility;
+    ```
+
+- Update manually desktop file database
+
+    ```bash
+    $ update-desktop-database $HOME/.local/share/applications/
+    ```
+
+- Uninstall and remove completely
+
+    ```bash
+    $ rm -rf $HOME/.local/share/ksnip
+    $ rm -rf $HOME/.config/ksnip
+    $ rm $HOME/bin/ksnip
+    ```
+
+Install it via `flatpak`
 
 ```bash
-$HOME/.config/Dharkael/flameshot.ini
+$ flatpak install flathub org.ksnip.ksnip
+
+# run
+$ flatpak run org.ksnip.ksnip
 ```
 
-### [ksnip](https://github.com/ksnip/ksnip)
+Alternatives
 
-☝ [Table of contents](#table-of-contents)
+- [lupoDharkael/flameshot](https://github.com/lupoDharkael/flameshot) - Powerful yet simple to use screenshot software
 
-- Install using `.AppImage`
+    Install via `apt`
+
+    ```bash
+    # simulate install
+    $ apt install -s flameshot
+
+    $ sudo apt install flameshot
+    ```
+
+    Create keyboard shortcut
+
+    - Command to use
+
+        ```bash
+        # -d, delay time in miliseconds
+        # -p, path where capture will be saved
+        /usr/local/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
+        /usr/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
+        ```
+
+    - Key combination: `Super+Print` or `Print`
+
+    - Disable shorcuts assign by default to key combination to use
+
+    Install from `master` branch
 
     ```bash
     $ cd $HOME
-    $ wget -O ksnip https://github.com/ksnip/ksnip/releases/download/v1.7.3/ksnip-1.7.3-x86_64.AppImage
-    $ chmod +x ksnip
-    $ mv ksnip $HOME/bin
+    $ git clone https://github.com/lupoDharkael/flameshot
+    $ cd flameshot/
+    $ mkdir build/
+    $ cd build/
+    $ qmake ../
+    $ make
+    $ cp flameshot $HOME/bin
+    $ cd $HOME
+    $ rm -rf flameshot/
     ```
 
-    - Download icon files
+    - If create a keyboard shortcut, update command
 
         ```bash
-        $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.svg
-        $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.ico
-        # Copy 64x64 and 128x128 png file from flatpak installation
+        $ {{ $HOME }}/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
         ```
 
-    - Create folder hierarchy for `icon` files
-        - [Icon size to provide for unity .desktop, and the syntax to reference it](https://askubuntu.com/questions/393104/icon-size-to-provide-for-unity-desktop-and-the-syntax-to-reference-it)
+    - Location of config file - `$HOME/.config/Dharkael/flameshot.ini`
+
+    - Example of config file
 
         ```bash
-        # $HOME/.icons or $HOME/.local/share/icons
-        $ mkdir $HOME/.icons/hicolor/64x64/apps/
-        $ mkdir $HOME/.icons/hicolor/128x128/apps/
+        # example 1
+        [General]
+        closeAfterScreenshot=true
+        disabledTrayIcon=false
+        filenamePattern=fs_%Y-%m-%d_%H-%M-%S
+        showDesktopNotification=true
+        startupLaunch=true
+
+        # example 2
+        [General]
+        closeAfterScreenshot=false
+        disabledTrayIcon=false
+        drawColor=#ff0000
+        drawThickness=1
+        filenamePattern=fs_%Y-%m-%d_%H-%M-%S
+        savePath={{ $HOME }}/Pictures
+        showDesktopNotification=false
+        startupLaunch=true
+        uiColor=#930096
         ```
 
-    - Copy icon files respectively
+Related tools
+- [sindresorhus/capture-website-cli](https://github.com/sindresorhus/capture-website-cli) - Capture screenshots of websites from the command-line
+- [gildas-lormeau/SingleFile](https://github.com/gildas-lormeau/SingleFile) - Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file
 
-        ```bash
-        $ cp ksnip_64x64.png $HOME/.icons/hicolor/64x64/apps/ksnip.png
-        $ cp ksnip_128x128.png $HOME/.icons/hicolor/128x128/apps/ksnip.png
-        ```
-
-    - Move icon files downloaded from github
-
-        ```bash
-        $ mv ksnip.icon .icons/
-        $ mv ksnip.svg .icons/
-        ```
-
-    - Setup shortcut
-
-        ```
-        Ksnip
-        {{ $HOME }}/bin/ksnip -r -d 0.1
-        Shift + Print or Print
-        ```
-
-    - Change config inside app
-
-        ```
-        [Application]
-        ApplicationStyle=Fusion
-        AutoCopyToClipboardNewCaptures=true
-        CloseToTray=false
-        MinimizeToTray=false
-        PromptSaveBeforeExit=false
-        RememberLastSaveDirectory=true
-        SaveDirectory={{ $HOME }}/Pictures
-        SaveFilename=$Y-$M-$D_$T
-        StartMinimizedToTray=false
-        UseTabs=false
-        UseTrayIcon=false
-
-        [ImageGrabber]
-        LastRectArea=@Rect(2341 182 1058 426)
-
-        [Imgur]
-        AlwaysCopyToClipboard=true
-        ForceAnonymous=true
-        OpenLinkDirectlyToImage=true
-
-        [MainWindow]
-        Position=@Point(2253 69)
-
-        [Painter]
-        ItemShadowEnabled=false
-        NumberFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@>\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0K\x10)
-        RotateWatermark=false
-        TextFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@(\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0\x32\x10)
-
-        [UploadScript]
-        UploadScriptStoOnStdErr=false
-
-        ```
-
-    - Path to config file
-
-        ```bash
-        $ cat $HOME/.config/ksnip/ksnip.conf
-        ```
-
-    - Create `.desktop` file on `$HOME/.local/share/applications/ksnip.desktop`
-
-        ```
-        #!/usr/bin/env xdg-open
-        [Desktop Entry]
-        Type=Application
-        Exec={{ $HOME }}/bin/ksnip
-        Name=ksnip
-        GenericName=ksnip Screenshot Tool
-        Comment=Qt based cross-platform screenshot tool that provides many annotation features for your screenshots.
-        Icon=ksnip
-        Terminal=false
-        StartupNotify=true
-        Categories=Utility;
-        ```
-
-    - Update manually desktop file database
-
-        ```bash
-        $ update-desktop-database $HOME/.local/share/applications/
-        ```
-
-    - Uninstall and remove completely
-
-        ```bash
-        $ rm -rf $HOME/.local/share/ksnip
-        $ rm -rf $HOME/.config/ksnip
-        $ rm $HOME/bin/ksnip
-        ```
-
-- Install it via flatpak
-
-### [ngrok](https://ngrok.com/)
+### 7.16. [ngrok](https://ngrok.com/) - expose local web server to internet
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2215,7 +2191,7 @@ $ mv $HOME/ngrok $HOME/bin/
 $ rm ngrok.zip
 ```
 
-### httpstat
+### 7.17. httpstat - stats about http requests
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2252,7 +2228,7 @@ Similar tools
 - in [Go](https://github.com/davecheney/httpstat)
 - in [Python](https://github.com/reorx/httpstat)
 
-### hwinfo
+### 7.18. hwinfo - info about hardware devices
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2275,7 +2251,7 @@ Device Files: /dev/nvme0n1, /dev/disk/by-id/nvme-Samsung_SSD_950_PRO_512GB_S2GMN
 ...
 ```
 
-### [ufw](https://help.ubuntu.com/community/UFW)
+### 7.19. [ufw](https://help.ubuntu.com/community/UFW) - firewall tool
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2294,7 +2270,7 @@ Related tools
     $ sudo apt install gufw
     ```
 
-### opensnitch
+### 7.20. opensnitch - firewall tool
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2302,7 +2278,7 @@ OpenSnitch is a GNU/Linux port of the Little Snitch application firewall
 
 [GitHub](https://github.com/evilsocket/opensnitch)
 
-### exiftool
+### 7.21. exiftool - manage meta info from files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2316,7 +2292,7 @@ Set date time on pictures
 $ exiftool -AllDates="2015:09:22 12:00:00"
 ```
 
-### [powertop](https://01.org/powertop)
+### 7.22. [powertop](https://01.org/powertop) - monitor electrical power consumption
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2364,8 +2340,9 @@ Related tools
 - [ncdu](https://dev.yorhel.nl/ncdu) - Ncdu is a disk usage analyzer with an ncurses interface.
 - [nmon](http://nmon.sourceforge.net/pmwiki.php) - Nigel's performance Monitor for Linux
 - [bmon](https://linux.die.net/man/1/bmon) - Portable bandwidth monitor and rate estimator - [GitHub](https://github.com/tgraf/bmon)
+- [lm-sensors](https://hwmon.wiki.kernel.org/lm_sensors) - [GitHub](https://github.com/lm-sensors/lm-sensors) - Linux hardware monitoring
 
-### [AWS CLI](https://aws.amazon.com/cli/)
+### 7.23. [AWS CLI](https://aws.amazon.com/cli/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2376,7 +2353,7 @@ Related links
 - [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 - [open-guides/og-aws](https://github.com/open-guides/og-aws) - :books: Amazon Web Services — a practical guide
 
-### [Carbon](https://carbon.now.sh/)
+### 7.24. [Carbon](https://carbon.now.sh/) - beautify source code as img
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2384,7 +2361,10 @@ Create and share beautiful images of your source code
 
 [GitHub](https://github.com/carbon-app/carbon)
 
-### [Project Jupyter](https://jupyter.org/)
+Related tools
+- [octref/polacode](https://github.com/octref/polacode) - 📸 Polaroid for your code
+
+### 7.25. [Project Jupyter](https://jupyter.org/) - interactive notebook
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2414,7 +2394,7 @@ $ jupyter notebook
 Related links
 - [Installing the Jupyter Software](https://jupyter.org/install)
 
-### Java
+### 7.26. Java
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2423,9 +2403,9 @@ Related links
 - [How To Install Oracle Java 14 (JDK 14) On Ubuntu, Debian Or Linux Mint From APT PPA Repository](https://www.linuxuprising.com/2020/03/how-to-install-oracle-java-14-jdk14-on.html)
 - [How To Install Java with Apt on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-20-04)
 
-## Troubleshooting
+## 8. Troubleshooting
 
-### Spotify
+### 8.1. Spotify
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2476,7 +2456,7 @@ Related links
     - [Spotify Media Keys Fix on Ubuntu 20.04 Gnome | TUTORIAL |](https://www.youtube.com/watch?v=Z3bqIjA8Dso)
     - [Media controls on Gnome like play, pause, next, volume up/down](https://www.reddit.com/r/gnome/comments/ghg7y0/media_controls_on_gnome_like_play_pause_next/)
 
-### VS Code
+### 8.2. VS Code
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2495,7 +2475,7 @@ Related links
     - Run `GTK_IM_MODULE=ibus` on a terminal. This should work!
     - If it does just alias this as I put in the post above
 
-## Final links
+## 9. Final links
 
 ☝ [Table of contents](#table-of-contents)
 
