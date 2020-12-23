@@ -1865,6 +1865,30 @@ To manage a Personal Knowledge Base:
 - [Zotero](https://www.zotero.org/)
 - [ZETTELKASTEN - The Archive](https://zettelkasten.de/the-archive/)
 
+### Math
+
+List
+
+- [GNU Octave](https://flathub.org/apps/details/org.octave.Octave)
+- [ZeGrapher](https://github.com/AdelKS/ZeGrapher)
+- [desmos](https://www.desmos.com/calculator)
+- [GeoGebra ](https://www.geogebra.org/graphing)
+
+Related links
+
+- [What’s another good online calculator like Desmos, but without the graphing, and more space for equations?](https://www.quora.com/What%E2%80%99s-another-good-online-calculator-like-Desmos-but-without-the-graphing-and-more-space-for-equations/answer/Jules-Opeth-Manson)
+
+### Finance
+
+List
+
+- [GNU Cash](https://flathub.org/apps/details/org.gnucash.GnuCash)
+- [firefly-iii](https://github.com/firefly-iii/firefly-iii)
+
+### Extra
+
+- [uw-labs/bloomrpc](https://github.com/uw-labs/bloomrpc) - The missing GUI Client for GRPC services
+
 ## 7. Commands
 
 ### 7.1. [git](https://git-scm.com/) - version control manager
