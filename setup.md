@@ -2322,7 +2322,33 @@ List
 
     [Flathub](https://flathub.org/apps/details/org.gnome.meld)
 
-- [kovidgoyal/calibre](https://github.com/kovidgoyal/calibre) - ebook manager
+- [Calibre](https://calibre-ebook.com/) - ebook manager
+
+    [Github](https://github.com/kovidgoyal/calibre)
+
+    [Flathub](https://flathub.org/apps/details/com.calibre_ebook.calibre)
+
+    Install it
+
+    ```bash
+    $ flatpak install flathub com.calibre_ebook.calibre
+
+    # run
+    $ flatpak run com.calibre_ebook.calibre
+    ```
+
+    Convert `.epub` to `.pdf`
+
+    ```bash
+    $ flatpak run \
+        --command=ebook-convert \
+        com.calibre_ebook.calibre \
+        file.pdf \
+        file.epub \
+        --enable-heuristics
+    ```
+
+
 
 ## 7. Commands
 
