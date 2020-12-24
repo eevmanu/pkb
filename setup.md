@@ -760,6 +760,23 @@ $ apt install -s synaptic
 $ sudo apt install synaptic
 ```
 
+### Flatseal - flatpak permissions manager
+
+☝ [Table of contents](#table-of-contents)
+
+Manage Flatpak permissions
+
+[GitHub](https://github.com/tchx84/flatseal)
+
+[Flathub](https://flathub.org/apps/details/com.github.tchx84.Flatseal)
+
+Install via `flatpak`
+
+```bash
+$ flatpak install flathub com.github.tchx84.Flatseal
+
+# run
+$ flatpak run com.github.tchx84.Flatseal
 ```
 
 ### 6.2. [Flux](https://justgetflux.com/) - eye care
