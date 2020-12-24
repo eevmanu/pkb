@@ -1876,6 +1876,36 @@ Folders used
 - `$HOME/.local/share/copyq`
 - `$HOME/.var/app/com.github.hluk.copyq`
 
+### [Albert](https://albertlauncher.github.io/) - keyboard launcher
+
+☝ [Table of contents](#table-of-contents)
+
+Albert is a desktop agnostic launcher. Its goals are usability and beauty, performance and extensibility. It is written in C++ and based on the Qt framework.
+
+[GitHub](https://github.com/albertlauncher/albert)
+
+Install it
+
+```bash
+$ curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
+
+$ echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
+
+$ sudo wget \
+    -O "/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc" \
+    -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key
+
+$ sudo apt update
+
+$ apt install -s albert
+
+$ sudo apt install albert
+```
+
+Related links
+- [Using it](https://albertlauncher.github.io/docs/using/)
+- [GPG Signature error for Ubuntu Repo - Solution](https://github.com/albertlauncher/albert/issues/865#issuecomment-572396128)
+
 ### 6.16. [TeamViewer](https://www.teamviewer.com/en/download/linux/) - remote control
 
 ☝ [Table of contents](#table-of-contents)
