@@ -554,6 +554,18 @@ LibreOffice
 
     `Format` > `Print ranges` > `Edit...` ([img](https://i.imgur.com/fbmfJdP.png))
 
+Camera
+
+- Turn `ON/OFF` via terminal
+
+    ```bash
+    # ON (default)
+    $ sudo modprobe uvcvideo
+
+    # OFF
+    $ sudo modprobe -r uvcvideo
+    ```
+
 ## 3. Issue to be aware
 
 ### 3.1. Bluetooth
