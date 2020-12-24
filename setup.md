@@ -1530,7 +1530,223 @@ Related links
 - [Wiki](https://github.com/telegramdesktop/tdesktop/wiki)
     - [Keyboard Shortcuts](https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts)
 
-### 6.11. [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/) - record screen
+### 6.12. [Ksnip](https://github.com/ksnip/ksnip) - screenshot tool
+
+☝ [Table of contents](#table-of-contents)
+
+Install via `flatpak`
+
+```bash
+$ flatpak install flathub org.ksnip.ksnip
+
+# run
+$ flatpak run org.ksnip.ksnip
+```
+
+Install via `AppImage`
+
+- Download `.AppImage` file
+
+    ```bash
+    $ cd $HOME
+    $ wget -O ksnip https://github.com/ksnip/ksnip/releases/download/v1.7.3/ksnip-1.7.3-x86_64.AppImage
+    $ chmod +x ksnip
+    $ mv ksnip $HOME/bin
+    ```
+
+- Download icon files
+
+    ```bash
+    $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.svg
+    $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.ico
+    # Copy 64x64 and 128x128 png file from flatpak installation
+    ```
+
+- Create folder hierarchy for `icon` files
+    - [Icon size to provide for unity .desktop, and the syntax to reference it](https://askubuntu.com/questions/393104/icon-size-to-provide-for-unity-desktop-and-the-syntax-to-reference-it)
+
+    ```bash
+    # $HOME/.icons or $HOME/.local/share/icons
+    $ mkdir $HOME/.icons/hicolor/64x64/apps/
+    $ mkdir $HOME/.icons/hicolor/128x128/apps/
+    ```
+
+- Copy icon files respectively
+
+    ```bash
+    $ cp ksnip_64x64.png $HOME/.icons/hicolor/64x64/apps/ksnip.png
+    $ cp ksnip_128x128.png $HOME/.icons/hicolor/128x128/apps/ksnip.png
+    ```
+
+- Move icon files downloaded from github
+
+    ```bash
+    $ mv ksnip.icon .icons/
+    $ mv ksnip.svg .icons/
+    ```
+
+- Setup shortcut
+
+    ```
+    Ksnip
+    {{ $HOME }}/bin/ksnip -r -d 0.1
+    Shift + Print or Print
+    ```
+
+- Change config inside app
+
+    ```
+    [Application]
+    ApplicationStyle=Fusion
+    AutoCopyToClipboardNewCaptures=true
+    CloseToTray=false
+    MinimizeToTray=false
+    PromptSaveBeforeExit=false
+    RememberLastSaveDirectory=true
+    SaveDirectory={{ $HOME }}/Pictures
+    SaveFilename=$Y-$M-$D_$T
+    StartMinimizedToTray=false
+    UseTabs=false
+    UseTrayIcon=false
+
+    [ImageGrabber]
+    LastRectArea=@Rect(2341 182 1058 426)
+
+    [Imgur]
+    AlwaysCopyToClipboard=true
+    ForceAnonymous=true
+    OpenLinkDirectlyToImage=true
+
+    [MainWindow]
+    Position=@Point(2253 69)
+
+    [Painter]
+    ItemShadowEnabled=false
+    NumberFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@>\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0K\x10)
+    RotateWatermark=false
+    TextFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@(\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0\x32\x10)
+
+    [UploadScript]
+    UploadScriptStoOnStdErr=false
+
+    ```
+
+- Path to config file
+
+    ```bash
+    $ cat $HOME/.config/ksnip/ksnip.conf
+    ```
+
+- Create `.desktop` file on `$HOME/.local/share/applications/ksnip.desktop`
+
+    ```
+    #!/usr/bin/env xdg-open
+    [Desktop Entry]
+    Type=Application
+    Exec={{ $HOME }}/bin/ksnip
+    Name=ksnip
+    GenericName=ksnip Screenshot Tool
+    Comment=Qt based cross-platform screenshot tool that provides many annotation features for your screenshots.
+    Icon=ksnip
+    Terminal=false
+    StartupNotify=true
+    Categories=Utility;
+    ```
+
+- Update manually desktop file database
+
+    ```bash
+    $ update-desktop-database $HOME/.local/share/applications/
+    ```
+
+- Uninstall and remove completely
+
+    ```bash
+    $ rm -rf $HOME/.local/share/ksnip
+    $ rm -rf $HOME/.config/ksnip
+    $ rm $HOME/bin/ksnip
+    ```
+
+Alternatives
+
+- [lupoDharkael/flameshot](https://github.com/lupoDharkael/flameshot) - Powerful yet simple to use screenshot software
+
+    Install via `apt`
+
+    ```bash
+    # simulate install
+    $ apt install -s flameshot
+
+    $ sudo apt install flameshot
+    ```
+
+    Create keyboard shortcut
+
+    - Command to use
+
+        ```bash
+        # -d, delay time in miliseconds
+        # -p, path where capture will be saved
+        /usr/local/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
+        /usr/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
+        ```
+
+    - Key combination: `Super+Print` or `Print`
+
+    - Disable shorcuts assign by default to key combination to use
+
+    Install from `master` branch
+
+    ```bash
+    $ cd $HOME
+    $ git clone https://github.com/lupoDharkael/flameshot
+    $ cd flameshot/
+    $ mkdir build/
+    $ cd build/
+    $ qmake ../
+    $ make
+    $ cp flameshot $HOME/bin
+    $ cd $HOME
+    $ rm -rf flameshot/
+    ```
+
+    - If create a keyboard shortcut, update command
+
+        ```bash
+        $ {{ $HOME }}/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
+        ```
+
+    - Location of config file - `$HOME/.config/Dharkael/flameshot.ini`
+
+    - Example of config file
+
+        ```bash
+        # example 1
+        [General]
+        closeAfterScreenshot=true
+        disabledTrayIcon=false
+        filenamePattern=fs_%Y-%m-%d_%H-%M-%S
+        showDesktopNotification=true
+        startupLaunch=true
+
+        # example 2
+        [General]
+        closeAfterScreenshot=false
+        disabledTrayIcon=false
+        drawColor=#ff0000
+        drawThickness=1
+        filenamePattern=fs_%Y-%m-%d_%H-%M-%S
+        savePath={{ $HOME }}/Pictures
+        showDesktopNotification=false
+        startupLaunch=true
+        uiColor=#930096
+        ```
+
+Related tools
+- [sindresorhus/capture-website-cli](https://github.com/sindresorhus/capture-website-cli) - Capture screenshots of websites from the command-line
+- [gildas-lormeau/SingleFile](https://github.com/gildas-lormeau/SingleFile) - Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file
+
+### 6.13. [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/) - record screen
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2571,220 +2787,6 @@ $ wget \
 
 $ chmod u+rx $HOME/bin/youtube-dl
 ```
-
-### 7.14. [ksnip](https://github.com/ksnip/ksnip) - screenshot tool
-
-☝ [Table of contents](#table-of-contents)
-
-Install using `.AppImage`
-
-```bash
-$ cd $HOME
-$ wget -O ksnip https://github.com/ksnip/ksnip/releases/download/v1.7.3/ksnip-1.7.3-x86_64.AppImage
-$ chmod +x ksnip
-$ mv ksnip $HOME/bin
-```
-
-- Download icon files
-
-    ```bash
-    $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.svg
-    $ wget https://raw.githubusercontent.com/ksnip/ksnip/master/icons/ksnip.ico
-    # Copy 64x64 and 128x128 png file from flatpak installation
-    ```
-
-- Create folder hierarchy for `icon` files
-    - [Icon size to provide for unity .desktop, and the syntax to reference it](https://askubuntu.com/questions/393104/icon-size-to-provide-for-unity-desktop-and-the-syntax-to-reference-it)
-
-    ```bash
-    # $HOME/.icons or $HOME/.local/share/icons
-    $ mkdir $HOME/.icons/hicolor/64x64/apps/
-    $ mkdir $HOME/.icons/hicolor/128x128/apps/
-    ```
-
-- Copy icon files respectively
-
-    ```bash
-    $ cp ksnip_64x64.png $HOME/.icons/hicolor/64x64/apps/ksnip.png
-    $ cp ksnip_128x128.png $HOME/.icons/hicolor/128x128/apps/ksnip.png
-    ```
-
-- Move icon files downloaded from github
-
-    ```bash
-    $ mv ksnip.icon .icons/
-    $ mv ksnip.svg .icons/
-    ```
-
-- Setup shortcut
-
-    ```
-    Ksnip
-    {{ $HOME }}/bin/ksnip -r -d 0.1
-    Shift + Print or Print
-    ```
-
-- Change config inside app
-
-    ```
-    [Application]
-    ApplicationStyle=Fusion
-    AutoCopyToClipboardNewCaptures=true
-    CloseToTray=false
-    MinimizeToTray=false
-    PromptSaveBeforeExit=false
-    RememberLastSaveDirectory=true
-    SaveDirectory={{ $HOME }}/Pictures
-    SaveFilename=$Y-$M-$D_$T
-    StartMinimizedToTray=false
-    UseTabs=false
-    UseTrayIcon=false
-
-    [ImageGrabber]
-    LastRectArea=@Rect(2341 182 1058 426)
-
-    [Imgur]
-    AlwaysCopyToClipboard=true
-    ForceAnonymous=true
-    OpenLinkDirectlyToImage=true
-
-    [MainWindow]
-    Position=@Point(2253 69)
-
-    [Painter]
-    ItemShadowEnabled=false
-    NumberFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@>\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0K\x10)
-    RotateWatermark=false
-    TextFont=@Variant(\0\0\0@\0\0\0\x12\0\x46\0i\0r\0\x61\0 \0\x43\0o\0\x64\0\x65@(\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0\x32\x10)
-
-    [UploadScript]
-    UploadScriptStoOnStdErr=false
-
-    ```
-
-- Path to config file
-
-    ```bash
-    $ cat $HOME/.config/ksnip/ksnip.conf
-    ```
-
-- Create `.desktop` file on `$HOME/.local/share/applications/ksnip.desktop`
-
-    ```
-    #!/usr/bin/env xdg-open
-    [Desktop Entry]
-    Type=Application
-    Exec={{ $HOME }}/bin/ksnip
-    Name=ksnip
-    GenericName=ksnip Screenshot Tool
-    Comment=Qt based cross-platform screenshot tool that provides many annotation features for your screenshots.
-    Icon=ksnip
-    Terminal=false
-    StartupNotify=true
-    Categories=Utility;
-    ```
-
-- Update manually desktop file database
-
-    ```bash
-    $ update-desktop-database $HOME/.local/share/applications/
-    ```
-
-- Uninstall and remove completely
-
-    ```bash
-    $ rm -rf $HOME/.local/share/ksnip
-    $ rm -rf $HOME/.config/ksnip
-    $ rm $HOME/bin/ksnip
-    ```
-
-Install it via `flatpak`
-
-```bash
-$ flatpak install flathub org.ksnip.ksnip
-
-# run
-$ flatpak run org.ksnip.ksnip
-```
-
-Alternatives
-
-- [lupoDharkael/flameshot](https://github.com/lupoDharkael/flameshot) - Powerful yet simple to use screenshot software
-
-    Install via `apt`
-
-    ```bash
-    # simulate install
-    $ apt install -s flameshot
-
-    $ sudo apt install flameshot
-    ```
-
-    Create keyboard shortcut
-
-    - Command to use
-
-        ```bash
-        # -d, delay time in miliseconds
-        # -p, path where capture will be saved
-        /usr/local/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
-        /usr/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
-        ```
-
-    - Key combination: `Super+Print` or `Print`
-
-    - Disable shorcuts assign by default to key combination to use
-
-    Install from `master` branch
-
-    ```bash
-    $ cd $HOME
-    $ git clone https://github.com/lupoDharkael/flameshot
-    $ cd flameshot/
-    $ mkdir build/
-    $ cd build/
-    $ qmake ../
-    $ make
-    $ cp flameshot $HOME/bin
-    $ cd $HOME
-    $ rm -rf flameshot/
-    ```
-
-    - If create a keyboard shortcut, update command
-
-        ```bash
-        $ {{ $HOME }}/bin/flameshot gui -d 100 -p {{ $HOME }}/Pictures
-        ```
-
-    - Location of config file - `$HOME/.config/Dharkael/flameshot.ini`
-
-    - Example of config file
-
-        ```bash
-        # example 1
-        [General]
-        closeAfterScreenshot=true
-        disabledTrayIcon=false
-        filenamePattern=fs_%Y-%m-%d_%H-%M-%S
-        showDesktopNotification=true
-        startupLaunch=true
-
-        # example 2
-        [General]
-        closeAfterScreenshot=false
-        disabledTrayIcon=false
-        drawColor=#ff0000
-        drawThickness=1
-        filenamePattern=fs_%Y-%m-%d_%H-%M-%S
-        savePath={{ $HOME }}/Pictures
-        showDesktopNotification=false
-        startupLaunch=true
-        uiColor=#930096
-        ```
-
-Related tools
-- [sindresorhus/capture-website-cli](https://github.com/sindresorhus/capture-website-cli) - Capture screenshots of websites from the command-line
-- [gildas-lormeau/SingleFile](https://github.com/gildas-lormeau/SingleFile) - Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file
 
 ### 7.15. [ngrok](https://ngrok.com/) - expose local web server to internet
 
