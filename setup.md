@@ -1944,6 +1944,16 @@ List
 
 - [uw-labs/bloomrpc](https://github.com/uw-labs/bloomrpc) - The missing GUI Client for GRPC services
 
+- [Meld](http://meldmerge.org/)
+
+    Visual diff and merge tool targeted at developers.
+
+    [GitLab](https://gitlab.gnome.org/GNOME/meld)
+
+    [Flathub](https://flathub.org/apps/details/org.gnome.meld)
+
+- [kovidgoyal/calibre](https://github.com/kovidgoyal/calibre) - ebook manager
+
 ## 7. Commands
 
 ### 7.1. [git](https://git-scm.com/) - version control manager
