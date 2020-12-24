@@ -529,6 +529,28 @@ PulseAudio
 - Related links
     - [Things to do after installing Pop!_OS 20.04 (Apps, Settings, and Tweaks)](https://mutschler.eu/linux/install-guides/pop-os-post-install/) - [archive](https://web.archive.org/web/20201217152053/https://mutschler.eu/linux/install-guides/pop-os-post-install/)
 
+LibreOffice
+
+- [how do I change from inches to cm in page setup etc [closed]](https://ask.libreoffice.org/en/question/178466/how-do-i-change-from-inches-to-cm-in-page-setup-etc/)
+
+    Preferences > LibreOffice Writer > General > Settings > Measurement Unit
+
+- [How to enable the “Tabbed Ribbon” interface style in LibreOffice 6](https://www.reallinuxuser.com/how-to-enable-the-tabbed-ribbon-interface-style-in-libreoffice-6/)
+
+    `View` > `User Interface` > `Tabbed`
+
+    `...` / `View` > `Menubar`
+
+- [How to Enable ‘Dark Mode’ in LibreOffice](https://www.debugpoint.com/2020/01/how-to-enable-dark-mode-libreoffice/)
+
+    `Tools` > `Options` > `Personalization` > Dark **Preinstalled Theme**
+
+    `Tools` > `Options` > `Application Colors` > `Document Background` > Dark Grey 1 / 2 and **Automatic** on other options
+
+- [How to hide default print range/page break lines after clearing a print range?](https://ask.libreoffice.org/en/question/71003/how-to-hide-default-print-rangepage-break-lines-after-clearing-a-print-range/)
+
+    `Format` > `Print ranges` > `Edit...` ([img](https://i.imgur.com/fbmfJdP.png))
+
 ## 3. Issue to be aware
 
 ### 3.1. Bluetooth
