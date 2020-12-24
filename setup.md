@@ -2932,6 +2932,23 @@ Related tools
     [Installation](https://github.com/gustavo-iniguez-goya/opensnitch/wiki/Installation)
 
 ### 7.21. exiftool - manage meta info from files
+### googler - googling via terminal
+
+☝ [Table of contents](#table-of-contents)
+
+[GitHub](https://github.com/jarun/googler)
+
+Install it
+
+```bash
+# download binary
+$ wget \
+    -O $HOME/bin/googler \
+    https://raw.githubusercontent.com/jarun/googler/v4.1/googler
+
+# assign permissions
+$ chmod u+x $HOME/bin/googler
+```
 
 ☝ [Table of contents](#table-of-contents)
 
