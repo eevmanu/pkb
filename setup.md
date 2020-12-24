@@ -1764,25 +1764,6 @@ $ sudo apt-get install simplescreenrecorder
 
 Alternatives
 
-- [phw/peek](https://github.com/phw/peek)
-
-    Package dependencies
-
-    ```
-    ffmpeg
-    gstreamer1.0-libav
-    gstreamer1.0-plugins-good
-    gstreamer1.0-plugins-ugly
-    ```
-
-    Install via `flatpak`
-
-    ```bash
-    $ flatpak install flathub com.uploadedlobster.peek
-    ```
-
-    Folder used - `$HOME/.var/app/com.uploadedlobster.peek/`
-
 - [hzbd/kazam](https://github.com/hzbd/kazam)
 - [GNOME/cheese](https://gitlab.gnome.org/GNOME/cheese)
 
@@ -1790,6 +1771,29 @@ Related links
 - 2020-06-10 - [5 Tools To Record Your Linux Desktop (Screencast) In 2020](https://www.linuxuprising.com/2020/01/4-tools-to-record-your-linux-desktop.html)
 
 ### 6.12. CopyQ - clipboard manager
+### 6.14. Peek - record screen
+
+☝ [Table of contents](#table-of-contents)
+
+[GitHub](https://github.com/phw/peek)
+
+Package dependencies
+
+```
+- ffmpeg
+- gstreamer1.0-libav
+- gstreamer1.0-plugins-good
+- gstreamer1.0-plugins-ugly
+```
+
+Install via `flatpak`
+
+```bash
+$ flatpak install flathub com.uploadedlobster.peek
+```
+
+Folder used - `$HOME/.var/app/com.uploadedlobster.peek/`
+
 
 ☝ [Table of contents](#table-of-contents)
 
