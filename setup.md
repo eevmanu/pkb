@@ -1906,6 +1906,64 @@ Related links
 - [Using it](https://albertlauncher.github.io/docs/using/)
 - [GPG Signature error for Ubuntu Repo - Solution](https://github.com/albertlauncher/albert/issues/865#issuecomment-572396128)
 
+### [Activity Watch](https://activitywatch.net/) - time tracker
+
+☝ [Table of contents](#table-of-contents)
+
+Open-source time tracker
+
+[GitHub](https://github.com/ActivityWatch/activitywatch)
+
+Install and setup
+
+- Download `zip` file
+
+    ```bash
+    $ wget https://github.com/ActivityWatch/activitywatch/releases/download/v0.9.2/activitywatch-v0.9.2-linux-x86_64.zip
+    ```
+
+- Unzip in correct path `$HOME/.local/opt/...`
+
+    ```bash
+    $ cp {{ zip file }} $HOME/.local/opt
+    $ unzip {{ zip file }}
+    ```
+
+- Copy `.desktop` to correct path `.local/share/applications/...`
+
+    ```bash
+    $ cp \
+        $HOME/.local/opt/activitywatch/aw-qt.desktop \
+        $HOME/.local/share/applications/
+    ```
+
+- Edit `.desktop` file with right binary path
+
+    ```ini
+    ...
+    Exec={{ $HOME }}/.local/opt/activitywatch/aw-qt
+    ...
+    ```
+
+- Download logo file
+
+    ```bash
+    # could dowload in $HOME/.icons or $HOME/.local/share/icons
+    $ wget \
+        -O $HOME/.icons/activitywatch.png \
+        https://github.com/ActivityWatch/media/raw/master/logo/logo.png
+    ```
+
+- Edit `.desktop` file with right icon path
+
+    ```ini
+    ...
+    Icon=activitywatch
+    ...
+    ```
+
+- Add binary path to **Startup Applications**
+
 ### 6.16. [TeamViewer](https://www.teamviewer.com/en/download/linux/) - remote control
 
 ☝ [Table of contents](#table-of-contents)
