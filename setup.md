@@ -17,32 +17,35 @@
     - [5.3. AppImage](#53-appimage)
 - [6. Apps](#6-apps)
     - [6.1. Synaptic - package manager](#61-synaptic---package-manager)
-    - [6.2. Flux - eye care](#62-flux---eye-care)
-    - [6.3. Chrome - browser](#63-chrome---browser)
-    - [6.4. VLC media player - play multimedia files](#64-vlc-media-player---play-multimedia-files)
-    - [6.5. Visual Studio Code - code editor](#65-visual-studio-code---code-editor)
-    - [6.6. Foxit PDF Reader - pdf viewer](#66-foxit-pdf-reader---pdf-viewer)
-    - [6.7. Spotify - music streaming](#67-spotify---music-streaming)
-    - [6.8. Slack - IM app](#68-slack---im-app)
-    - [6.9. Zoom - video call app](#69-zoom---video-call-app)
-    - [6.10. Telegram - IM app](#610-telegram---im-app)
-    - [6.11. SimpleScreenRecorder - record screen](#611-simplescreenrecorder---record-screen)
-    - [6.12. CopyQ - clipboard manager](#612-copyq---clipboard-manager)
-    - [6.13. TeamViewer - remote control](#613-teamviewer---remote-control)
-    - [6.14. OBS Studio - streaming](#614-obs-studio---streaming)
-    - [6.15. DBeaver - database tool](#615-dbeaver---database-tool)
-    - [6.16. BleachBit - clean disk space](#616-bleachbit---clean-disk-space)
-    - [6.17. Stacer - monitor system resources](#617-stacer---monitor-system-resources)
-    - [6.18. Wireshark - monitor network traffic](#618-wireshark---monitor-network-traffic)
-    - [6.19. Dropbox - online storage](#619-dropbox---online-storage)
-    - [6.20. Markdown editor apps](#620-markdown-editor-apps)
-        - [6.20.1. Joplin](#6201-joplin)
-        - [6.20.2. Marktext](#6202-marktext)
-        - [6.20.3. vnote](#6203-vnote)
-        - [6.20.4. PKB alternatives](#6204-pkb-alternatives)
-    - [6.21. Math](#621-math)
-    - [6.22. Finance](#622-finance)
-    - [6.23. Extra](#623-extra)
+    - [6.2. Flatseal - flatpak permissions manager](#62-flatseal---flatpak-permissions-manager)
+    - [6.3. Flux - eye care](#63-flux---eye-care)
+    - [6.4. Chrome - browser](#64-chrome---browser)
+    - [6.5. VLC media player - play multimedia files](#65-vlc-media-player---play-multimedia-files)
+    - [6.6. Visual Studio Code - code editor](#66-visual-studio-code---code-editor)
+    - [6.7. Foxit PDF Reader - pdf viewer](#67-foxit-pdf-reader---pdf-viewer)
+    - [6.8. Spotify - music streaming](#68-spotify---music-streaming)
+    - [6.9. Slack - IM app](#69-slack---im-app)
+    - [6.10. Zoom - video call app](#610-zoom---video-call-app)
+    - [6.11. Telegram - IM app](#611-telegram---im-app)
+    - [6.12. Ksnip - screenshot tool](#612-ksnip---screenshot-tool)
+    - [6.13. SimpleScreenRecorder - record screen](#613-simplescreenrecorder---record-screen)
+    - [6.14. Peek - record screen](#614-peek---record-screen)
+    - [6.15. CopyQ - clipboard manager](#615-copyq---clipboard-manager)
+    - [6.16. TeamViewer - remote control](#616-teamviewer---remote-control)
+    - [6.17. OBS Studio - streaming](#617-obs-studio---streaming)
+    - [6.18. DBeaver - database tool](#618-dbeaver---database-tool)
+    - [6.19. BleachBit - clean disk space](#619-bleachbit---clean-disk-space)
+    - [6.20. Stacer - monitor system resources](#620-stacer---monitor-system-resources)
+    - [6.21. Wireshark - monitor network traffic](#621-wireshark---monitor-network-traffic)
+    - [6.22. Dropbox - online storage](#622-dropbox---online-storage)
+    - [6.23. Markdown editor apps](#623-markdown-editor-apps)
+        - [6.23.1. Joplin](#6231-joplin)
+        - [6.23.2. Marktext](#6232-marktext)
+        - [6.23.3. vnote](#6233-vnote)
+        - [6.23.4. PKB alternatives](#6234-pkb-alternatives)
+    - [6.24. Math](#624-math)
+    - [6.25. Finance](#625-finance)
+    - [6.26. Extra](#626-extra)
 - [7. Commands](#7-commands)
     - [7.1. git - version control manager](#71-git---version-control-manager)
     - [7.2. docker - containers](#72-docker---containers)
@@ -57,13 +60,13 @@
     - [7.11. jq - handle json files](#711-jq---handle-json-files)
     - [7.12. wrk - http benchmark](#712-wrk---http-benchmark)
     - [7.13. youtube-dl - youtube downloader](#713-youtube-dl---youtube-downloader)
-    - [7.14. ksnip - screenshot tool](#714-ksnip---screenshot-tool)
-    - [7.15. ngrok - expose local web server to internet](#715-ngrok---expose-local-web-server-to-internet)
-    - [7.16. httpstat - stats about http requests](#716-httpstat---stats-about-http-requests)
-    - [7.17. neofetch - info about your computer](#717-neofetch---info-about-your-computer)
-    - [7.18. hwinfo - info about hardware devices](#718-hwinfo---info-about-hardware-devices)
-    - [7.19. geekbench - cross-platform benchmark](#719-geekbench---cross-platform-benchmark)
-    - [7.20. ufw - firewall tool](#720-ufw---firewall-tool)
+    - [7.14. ngrok - expose local web server to internet](#714-ngrok---expose-local-web-server-to-internet)
+    - [7.15. httpstat - stats about http requests](#715-httpstat---stats-about-http-requests)
+    - [7.16. neofetch - info about your computer](#716-neofetch---info-about-your-computer)
+    - [7.17. hwinfo - info about hardware devices](#717-hwinfo---info-about-hardware-devices)
+    - [7.18. geekbench - cross-platform benchmark](#718-geekbench---cross-platform-benchmark)
+    - [7.19. ufw - firewall tool](#719-ufw---firewall-tool)
+    - [7.20. googler - googling via terminal](#720-googler---googling-via-terminal)
     - [7.21. exiftool - manage meta info from files](#721-exiftool---manage-meta-info-from-files)
     - [7.22. iproute2 - manage networking stuffs](#722-iproute2---manage-networking-stuffs)
     - [7.23. powertop - monitor electrical power consumption](#723-powertop---monitor-electrical-power-consumption)
@@ -760,7 +763,7 @@ $ apt install -s synaptic
 $ sudo apt install synaptic
 ```
 
-### Flatseal - flatpak permissions manager
+### 6.2. Flatseal - flatpak permissions manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -779,7 +782,7 @@ $ flatpak install flathub com.github.tchx84.Flatseal
 $ flatpak run com.github.tchx84.Flatseal
 ```
 
-### 6.2. [Flux](https://justgetflux.com/) - eye care
+### 6.3. [Flux](https://justgetflux.com/) - eye care
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -817,7 +820,7 @@ Alternatives
 - [jonls/redshift](https://github.com/jonls/redshift)
 - Gnome - [Night light](https://www.gnome.org/news/2017/03/gnome-3-24-released/attachment/night-light/)
 
-### 6.3. [Chrome](https://www.google.com/chrome/) - browser
+### 6.4. [Chrome](https://www.google.com/chrome/) - browser
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1281,7 +1284,7 @@ Alternatives
     Related links
     - [ungoogled-chromium from home:ungoogled_chromium project @ opensuse](https://software.opensuse.org/download/package?package=ungoogled-chromium&project=home:ungoogled_chromium)
 
-### 6.4. [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html) - play multimedia files
+### 6.5. [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html) - play multimedia files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1299,7 +1302,7 @@ Install via `Snap`
 $ snap install vlc
 ```
 
-### 6.5. [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux) - code editor
+### 6.6. [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux) - code editor
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1336,7 +1339,7 @@ Related links:
 - [How do I remove VS Code & settings from Ubuntu?](https://superuser.com/questions/1113022/how-do-i-remove-vs-code-settings-from-ubuntu)
 - [How to change indentation in Visual Studio Code?](https://stackoverflow.com/questions/34174207/how-to-change-indentation-in-visual-studio-code)
 
-### 6.6. [Foxit PDF Reader](https://www.foxitsoftware.com/pdf-reader/) - pdf viewer
+### 6.7. [Foxit PDF Reader](https://www.foxitsoftware.com/pdf-reader/) - pdf viewer
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1380,7 +1383,7 @@ Alternatives
 Related links
 - 2020-05-12 - [PDF viewer list on Ubuntu 20.04 Focal Fossa Linux](https://linuxconfig.org/pdf-viewer-list-on-ubuntu-20-04-focal-fossa-linux)
 
-### 6.7. [Spotify](https://www.spotify.com/download/linux/) - music streaming
+### 6.8. [Spotify](https://www.spotify.com/download/linux/) - music streaming
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1428,7 +1431,7 @@ TODO
 Related links
 - [archive](https://web.archive.org/web/20201221183349/https://www.spotify.com/pe/download/linux/)
 
-### 6.8. [Slack](https://slack.com/intl/en-us/downloads/linux) - IM app
+### 6.9. [Slack](https://slack.com/intl/en-us/downloads/linux) - IM app
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1453,7 +1456,7 @@ $ snap install --classic slack
 Related links
 - [Release notes for Linux](https://slack.com/intl/en-us/release-notes/linux)
 
-### 6.9. [Zoom](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux) - video call app
+### 6.10. [Zoom](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux) - video call app
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1495,7 +1498,7 @@ Alternatives
 Related links
 - Install [using the terminal](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_89c268b4-2a68-4e4c-882f-441e374b87cb)
 
-### 6.10. [Telegram](https://telegram.org/dl/desktop/linux) - IM app
+### 6.11. [Telegram](https://telegram.org/dl/desktop/linux) - IM app
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1770,7 +1773,6 @@ Alternatives
 Related links
 - 2020-06-10 - [5 Tools To Record Your Linux Desktop (Screencast) In 2020](https://www.linuxuprising.com/2020/01/4-tools-to-record-your-linux-desktop.html)
 
-### 6.12. CopyQ - clipboard manager
 ### 6.14. Peek - record screen
 
 ☝ [Table of contents](#table-of-contents)
@@ -1794,6 +1796,7 @@ $ flatpak install flathub com.uploadedlobster.peek
 
 Folder used - `$HOME/.var/app/com.uploadedlobster.peek/`
 
+### 6.15. CopyQ - clipboard manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1814,7 +1817,7 @@ Folders used
 - `$HOME/.local/share/copyq`
 - `$HOME/.var/app/com.github.hluk.copyq`
 
-### 6.13. [TeamViewer](https://www.teamviewer.com/en/download/linux/) - remote control
+### 6.16. [TeamViewer](https://www.teamviewer.com/en/download/linux/) - remote control
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1838,7 +1841,7 @@ Set package repository url as default
 $ sudo teamviewer repo default
 ```
 
-### 6.14. [OBS Studio](https://obsproject.com/wiki/install-instructions#linux) - streaming
+### 6.17. [OBS Studio](https://obsproject.com/wiki/install-instructions#linux) - streaming
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1852,7 +1855,7 @@ $ sudo apt update
 $ sudo apt install obs-studio
 ```
 
-### 6.15. [DBeaver](https://dbeaver.io/) - database tool
+### 6.18. [DBeaver](https://dbeaver.io/) - database tool
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1869,7 +1872,7 @@ $ flatpak install flathub io.dbeaver.DBeaverCommunity
 $ flatpak run io.dbeaver.DBeaverCommunity
 ```
 
-### 6.16. [BleachBit](https://www.bleachbit.org/) - clean disk space
+### 6.19. [BleachBit](https://www.bleachbit.org/) - clean disk space
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1894,7 +1897,7 @@ $ cp bleachbit.py $HOME/bin/bleachbit
 $ rm -rf $HOME/bleachbit/
 ```
 
-### 6.17. Stacer - monitor system resources
+### 6.20. Stacer - monitor system resources
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1902,7 +1905,7 @@ Linux System Optimizer and Monitoring
 
 [GitHub](https://github.com/oguzhaninan/Stacer)
 
-### 6.18. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
+### 6.21. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1931,7 +1934,7 @@ Related links
 - [How to Install and Use Wireshark on Ubuntu](https://linuxhint.com/install_wireshark_ubuntu/)
 - [How to install Wireshark](https://askubuntu.com/questions/700712/how-to-install-wireshark)
 
-### 6.19. [Dropbox](https://www.dropbox.com/install-linux) - online storage
+### 6.22. [Dropbox](https://www.dropbox.com/install-linux) - online storage
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1968,9 +1971,9 @@ Add to `Startup Applications`
 - Enter `dropbox` (should appear if was installed via `flatpak`)
 - Confirm to add it
 
-### 6.20. Markdown editor apps
+### 6.23. Markdown editor apps
 
-#### 6.20.1. [Joplin](https://joplinapp.org/)
+#### 6.23.1. [Joplin](https://joplinapp.org/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2008,7 +2011,7 @@ Create `.desktop` file
 # TODO
 ```
 
-#### 6.20.2. [Marktext](https://marktext.app/)
+#### 6.23.2. [Marktext](https://marktext.app/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2079,7 +2082,7 @@ Config folder - `$HOME/.config/marktext`
 Related links
 - Fix issue with [icon](https://askubuntu.com/questions/333133/how-to-set-app-icon-in-the-desktop-file-of-an-ubuntu-touch-application)
 
-#### 6.20.3. [vnote](https://vnotex.github.io/vnote/en_us/)
+#### 6.23.3. [vnote](https://vnotex.github.io/vnote/en_us/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2107,7 +2110,7 @@ Directories needed
 - `$HOME/.local/share/VNote/`
 - `$HOME/.local/share/VNote-2.9.1-x86_64.AppImage/`
 
-#### 6.20.4. PKB alternatives
+#### 6.23.4. PKB alternatives
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2140,7 +2143,7 @@ To manage a Personal Knowledge Base:
 - [Zotero](https://www.zotero.org/)
 - [ZETTELKASTEN - The Archive](https://zettelkasten.de/the-archive/)
 
-### 6.21. Math
+### 6.24. Math
 
 List
 
@@ -2153,14 +2156,14 @@ Related links
 
 - [What’s another good online calculator like Desmos, but without the graphing, and more space for equations?](https://www.quora.com/What%E2%80%99s-another-good-online-calculator-like-Desmos-but-without-the-graphing-and-more-space-for-equations/answer/Jules-Opeth-Manson)
 
-### 6.22. Finance
+### 6.25. Finance
 
 List
 
 - [GNU Cash](https://flathub.org/apps/details/org.gnucash.GnuCash)
 - [firefly-iii](https://github.com/firefly-iii/firefly-iii)
 
-### 6.23. Extra
+### 6.26. Extra
 
 - [uw-labs/bloomrpc](https://github.com/uw-labs/bloomrpc) - The missing GUI Client for GRPC services
 
@@ -2792,7 +2795,7 @@ $ wget \
 $ chmod u+rx $HOME/bin/youtube-dl
 ```
 
-### 7.15. [ngrok](https://ngrok.com/) - expose local web server to internet
+### 7.14. [ngrok](https://ngrok.com/) - expose local web server to internet
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2811,7 +2814,7 @@ $ mv $HOME/ngrok $HOME/bin/
 $ rm ngrok.zip
 ```
 
-### 7.16. httpstat - stats about http requests
+### 7.15. httpstat - stats about http requests
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2848,7 +2851,7 @@ Similar tools
 - in [Go](https://github.com/davecheney/httpstat)
 - in [Python](https://github.com/reorx/httpstat)
 
-### 7.17. neofetch - info about your computer
+### 7.16. neofetch - info about your computer
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2862,7 +2865,7 @@ Install via `apt`
 $ sudo apt install neofetch
 ```
 
-### 7.18. hwinfo - info about hardware devices
+### 7.17. hwinfo - info about hardware devices
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2885,7 +2888,7 @@ Device Files: /dev/nvme0n1, /dev/disk/by-id/nvme-Samsung_SSD_950_PRO_512GB_S2GMN
 ...
 ```
 
-### 7.19. [geekbench](https://www.geekbench.com/) - cross-platform benchmark
+### 7.18. [geekbench](https://www.geekbench.com/) - cross-platform benchmark
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2913,7 +2916,7 @@ Related links
 - [Installing Geekbench 5 on Linux](http://support.primatelabs.com/kb/geekbench/installing-geekbench-5-on-linux)
 
 
-### 7.20. [ufw](https://help.ubuntu.com/community/UFW) - firewall tool
+### 7.19. [ufw](https://help.ubuntu.com/community/UFW) - firewall tool
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2937,8 +2940,7 @@ Related tools
 
     [Installation](https://github.com/gustavo-iniguez-goya/opensnitch/wiki/Installation)
 
-### 7.21. exiftool - manage meta info from files
-### googler - googling via terminal
+### 7.20. googler - googling via terminal
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2955,6 +2957,8 @@ $ wget \
 # assign permissions
 $ chmod u+x $HOME/bin/googler
 ```
+
+### 7.21. exiftool - manage meta info from files
 
 ☝ [Table of contents](#table-of-contents)
 
