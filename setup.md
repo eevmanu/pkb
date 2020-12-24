@@ -751,8 +751,15 @@ Directories used
 
 Graphical package manager
 
+Install via `apt`
+
 ```bash
-$ apt install synaptic
+# simulate to check package version
+$ apt install -s synaptic
+
+$ sudo apt install synaptic
+```
+
 ```
 
 ### 6.2. [Flux](https://justgetflux.com/) - eye care
