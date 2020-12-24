@@ -566,6 +566,42 @@ Camera
     $ sudo modprobe -r uvcvideo
     ```
 
+Preview thumbnails at file / folder manager
+
+- Via `Nautilus`
+
+    [Best way to check if Nautilus File Manager is running?](https://unix.stackexchange.com/questions/546241/best-way-to-check-if-nautilus-file-manager-is-running)
+
+    ```bash
+    # check if you have Nautilus
+    $ gdbus \
+        introspect \
+            --session \
+            --dest org.gnome.Nautilus \
+            --object-path /org/gnome/Nautilus \
+            --recurse \
+        | \
+        awk '/^ *node /{print $2}'
+    ```
+
+    Install `gnome-sushi`
+
+    ```bash
+    # (2020-05-29 22:29:30)
+    # simulate to check package version
+    $ sudo apt install -s gnome-sushi
+    ...
+    Inst gnome-sushi (3.34.0-2 Ubuntu:20.04/focal [amd64])
+    ...
+
+    $ sudo apt install gnome-sushi
+    ```
+
+- Via `gThumb`
+
+- Related links
+    - [What's the best way to preview many images?](https://www.reddit.com/r/pop_os/comments/gmefd2/whats_the_best_way_to_preview_many_images/)
+
 ## 3. Issue to be aware
 
 ### 3.1. Bluetooth
