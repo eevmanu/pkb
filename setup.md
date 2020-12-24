@@ -2349,6 +2349,21 @@ List
     ```
 
 
+- [Stoplight Studio](https://github.com/stoplightio/studio/) - API docs editor
+
+    The modern editor for API Design and Technical Writing.
+
+    Install it
+
+    ```bash
+    # download binary
+    $ wget \
+        -O $HOME/bin/stoplight-studio \
+        https://github.com/stoplightio/studio/releases/download/v2.0.0/stoplight-studio-linux-x86_64.AppImage
+
+    # assign permissions
+    $ chmod u+x $HOME/bin/stoplight-studio
+    ```
 
 ## 7. Commands
 
