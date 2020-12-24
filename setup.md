@@ -1852,7 +1852,18 @@ Clipboard manager with advanced features
 
 [GitHub](https://github.com/hluk/CopyQ)
 
-Install it
+[Flathub](https://flathub.org/apps/details/com.github.hluk.copyq)
+
+Install via `flatpak`
+
+```bash
+$ flatpak install flathub com.github.hluk.copyq
+
+# run
+$ flatpak run com.github.hluk.copyq
+```
+
+Install via package repository from creator
 
 ```bash
 $ sudo add-apt-repository ppa:hluk/copyq
