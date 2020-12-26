@@ -2023,6 +2023,27 @@ Set package repository url as default
 $ sudo teamviewer repo default
 ```
 
+Alternatives
+
+- [RealVNC](https://realvnc.com)
+
+    For `Server` side on `Linux`
+
+    - [Download VNC Server for Linux](https://www.realvnc.com/en/connect/download/vnc/linux/)
+
+        ```bash
+        $ wget \
+            -O realvnc.deb \
+            https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.7.2-Linux-x64.deb
+        ```
+
+    - Verify file with `SHA-256` sum
+
+    For `Client` side on `Android` phone, download app or install `.apk` file
+
+    Related links
+    - 2018-08-01 - [Install and Configure RealVNC in Linux Ubuntu 18.04 LTS](https://www.zealfortechnology.com/2018/08/install-and-configure-realvnc-in-linux.html) - [archive](https://web.archive.org/web/20201226150515/https://www.zealfortechnology.com/2018/08/install-and-configure-realvnc-in-linux.html)
+
 ### 6.19. [OBS Studio](https://obsproject.com/wiki/install-instructions#linux) - streaming
 
 ☝ [Table of contents](#table-of-contents)
