@@ -31,49 +31,56 @@
     - [6.13. SimpleScreenRecorder - record screen](#613-simplescreenrecorder---record-screen)
     - [6.14. Peek - record screen](#614-peek---record-screen)
     - [6.15. CopyQ - clipboard manager](#615-copyq---clipboard-manager)
-    - [6.16. TeamViewer - remote control](#616-teamviewer---remote-control)
-    - [6.17. OBS Studio - streaming](#617-obs-studio---streaming)
-    - [6.18. DBeaver - database tool](#618-dbeaver---database-tool)
-    - [6.19. BleachBit - clean disk space](#619-bleachbit---clean-disk-space)
-    - [6.20. Stacer - monitor system resources](#620-stacer---monitor-system-resources)
-    - [6.21. Wireshark - monitor network traffic](#621-wireshark---monitor-network-traffic)
-    - [6.22. Dropbox - online storage](#622-dropbox---online-storage)
-    - [6.23. Markdown editor apps](#623-markdown-editor-apps)
-        - [6.23.1. Joplin](#6231-joplin)
-        - [6.23.2. Marktext](#6232-marktext)
-        - [6.23.3. vnote](#6233-vnote)
-        - [6.23.4. PKB alternatives](#6234-pkb-alternatives)
-    - [6.24. Math](#624-math)
-    - [6.25. Finance](#625-finance)
-    - [6.26. Extra](#626-extra)
+    - [6.16. Albert - keyboard launcher](#616-albert---keyboard-launcher)
+    - [6.17. Activity Watch - time tracker](#617-activity-watch---time-tracker)
+    - [6.18. TeamViewer - remote control](#618-teamviewer---remote-control)
+    - [6.19. OBS Studio - streaming](#619-obs-studio---streaming)
+    - [6.20. DBeaver - database tool](#620-dbeaver---database-tool)
+    - [6.21. BleachBit - clean disk space](#621-bleachbit---clean-disk-space)
+    - [6.22. Stacer - monitor system resources](#622-stacer---monitor-system-resources)
+    - [6.23. Wireshark - monitor network traffic](#623-wireshark---monitor-network-traffic)
+    - [6.24. Dropbox - online storage](#624-dropbox---online-storage)
+    - [6.25. scrcpy - control android device from your computer](#625-scrcpy---control-android-device-from-your-computer)
+    - [6.26. droidcam - turn mobile device into webcam](#626-droidcam---turn-mobile-device-into-webcam)
+    - [6.27. Thinkorswim - Trading Platforms](#627-thinkorswim---trading-platforms)
+    - [6.28. Markdown editor apps](#628-markdown-editor-apps)
+        - [6.28.1. Joplin](#6281-joplin)
+        - [6.28.2. Marktext](#6282-marktext)
+        - [6.28.3. vnote](#6283-vnote)
+        - [6.28.4. PKB alternatives](#6284-pkb-alternatives)
+    - [6.29. Math](#629-math)
+    - [6.30. Finance](#630-finance)
+    - [6.31. Extra](#631-extra)
 - [7. Commands](#7-commands)
     - [7.1. git - version control manager](#71-git---version-control-manager)
     - [7.2. docker - containers](#72-docker---containers)
     - [7.3. xclip - clipboard manager](#73-xclip---clipboard-manager)
     - [7.4. htop - monitor computer resources](#74-htop---monitor-computer-resources)
     - [7.5. speedtest - internet bandwidth meter](#75-speedtest---internet-bandwidth-meter)
-    - [7.6. httpie - simple http requests on terminal](#76-httpie---simple-http-requests-on-terminal)
-    - [7.7. tmux - multiple sessions](#77-tmux---multiple-sessions)
-    - [7.8. tree - file / folder structure](#78-tree---file--folder-structure)
-    - [7.9. unrar - decompress files](#79-unrar---decompress-files)
-    - [7.10. ffmpeg - handle multimedia files](#710-ffmpeg---handle-multimedia-files)
-    - [7.11. jq - handle json files](#711-jq---handle-json-files)
-    - [7.12. wrk - http benchmark](#712-wrk---http-benchmark)
-    - [7.13. youtube-dl - youtube downloader](#713-youtube-dl---youtube-downloader)
-    - [7.14. ngrok - expose local web server to internet](#714-ngrok---expose-local-web-server-to-internet)
-    - [7.15. httpstat - stats about http requests](#715-httpstat---stats-about-http-requests)
-    - [7.16. neofetch - info about your computer](#716-neofetch---info-about-your-computer)
-    - [7.17. hwinfo - info about hardware devices](#717-hwinfo---info-about-hardware-devices)
-    - [7.18. geekbench - cross-platform benchmark](#718-geekbench---cross-platform-benchmark)
-    - [7.19. ufw - firewall tool](#719-ufw---firewall-tool)
-    - [7.20. googler - googling via terminal](#720-googler---googling-via-terminal)
-    - [7.21. exiftool - manage meta info from files](#721-exiftool---manage-meta-info-from-files)
-    - [7.22. iproute2 - manage networking stuffs](#722-iproute2---manage-networking-stuffs)
-    - [7.23. powertop - monitor electrical power consumption](#723-powertop---monitor-electrical-power-consumption)
-    - [7.24. AWS CLI](#724-aws-cli)
-    - [7.25. Carbon - beautify source code as img](#725-carbon---beautify-source-code-as-img)
-    - [7.26. Project Jupyter - interactive notebook](#726-project-jupyter---interactive-notebook)
-    - [7.27. Java](#727-java)
+    - [7.6. vnstat - network traffic monitor](#76-vnstat---network-traffic-monitor)
+    - [7.7. httpie - simple http requests on terminal](#77-httpie---simple-http-requests-on-terminal)
+    - [7.8. tmux - multiple sessions](#78-tmux---multiple-sessions)
+    - [7.9. tree - file / folder structure](#79-tree---file--folder-structure)
+    - [7.10. unrar - decompress files](#710-unrar---decompress-files)
+    - [7.11. ffmpeg - handle multimedia files](#711-ffmpeg---handle-multimedia-files)
+    - [7.12. jq - handle json files](#712-jq---handle-json-files)
+    - [7.13. wrk - http benchmark](#713-wrk---http-benchmark)
+    - [7.14. youtube-dl - youtube downloader](#714-youtube-dl---youtube-downloader)
+    - [7.15. ngrok - expose local web server to internet](#715-ngrok---expose-local-web-server-to-internet)
+    - [7.16. httpstat - stats about http requests](#716-httpstat---stats-about-http-requests)
+    - [7.17. neofetch - info about your computer](#717-neofetch---info-about-your-computer)
+    - [7.18. hwinfo - info about hardware devices](#718-hwinfo---info-about-hardware-devices)
+    - [7.19. geekbench - cross-platform benchmark](#719-geekbench---cross-platform-benchmark)
+    - [7.20. ufw - firewall tool](#720-ufw---firewall-tool)
+    - [7.21. googler - googling via terminal](#721-googler---googling-via-terminal)
+    - [7.22. screenkey - display key pressed](#722-screenkey---display-key-pressed)
+    - [7.23. exiftool - manage meta info from files](#723-exiftool---manage-meta-info-from-files)
+    - [7.24. iproute2 - manage networking stuffs](#724-iproute2---manage-networking-stuffs)
+    - [7.25. powertop - monitor electrical power consumption](#725-powertop---monitor-electrical-power-consumption)
+    - [7.26. AWS CLI](#726-aws-cli)
+    - [7.27. Carbon - beautify source code as img](#727-carbon---beautify-source-code-as-img)
+    - [7.28. Project Jupyter - interactive notebook](#728-project-jupyter---interactive-notebook)
+    - [7.29. Java](#729-java)
 - [8. Troubleshooting](#8-troubleshooting)
     - [8.1. Spotify](#81-spotify)
     - [8.2. VS Code](#82-vs-code)
@@ -1883,7 +1890,7 @@ Folders used
 - `$HOME/.local/share/copyq`
 - `$HOME/.var/app/com.github.hluk.copyq`
 
-### [Albert](https://albertlauncher.github.io/) - keyboard launcher
+### 6.16. [Albert](https://albertlauncher.github.io/) - keyboard launcher
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1934,7 +1941,7 @@ Related links
 - [Using it](https://albertlauncher.github.io/docs/using/)
 - [GPG Signature error for Ubuntu Repo - Solution](https://github.com/albertlauncher/albert/issues/865#issuecomment-572396128)
 
-### [Activity Watch](https://activitywatch.net/) - time tracker
+### 6.17. [Activity Watch](https://activitywatch.net/) - time tracker
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1992,7 +1999,7 @@ Install and setup
 
 - Add binary path to **Startup Applications**
 
-### 6.16. [TeamViewer](https://www.teamviewer.com/en/download/linux/) - remote control
+### 6.18. [TeamViewer](https://www.teamviewer.com/en/download/linux/) - remote control
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2016,7 +2023,7 @@ Set package repository url as default
 $ sudo teamviewer repo default
 ```
 
-### 6.17. [OBS Studio](https://obsproject.com/wiki/install-instructions#linux) - streaming
+### 6.19. [OBS Studio](https://obsproject.com/wiki/install-instructions#linux) - streaming
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2030,7 +2037,7 @@ $ sudo apt update
 $ sudo apt install obs-studio
 ```
 
-### 6.18. [DBeaver](https://dbeaver.io/) - database tool
+### 6.20. [DBeaver](https://dbeaver.io/) - database tool
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2047,7 +2054,7 @@ $ flatpak install flathub io.dbeaver.DBeaverCommunity
 $ flatpak run io.dbeaver.DBeaverCommunity
 ```
 
-### 6.19. [BleachBit](https://www.bleachbit.org/) - clean disk space
+### 6.21. [BleachBit](https://www.bleachbit.org/) - clean disk space
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2072,7 +2079,7 @@ $ cp bleachbit.py $HOME/bin/bleachbit
 $ rm -rf $HOME/bleachbit/
 ```
 
-### 6.20. Stacer - monitor system resources
+### 6.22. Stacer - monitor system resources
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2080,7 +2087,7 @@ Linux System Optimizer and Monitoring
 
 [GitHub](https://github.com/oguzhaninan/Stacer)
 
-### 6.21. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
+### 6.23. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2109,7 +2116,7 @@ Related links
 - [How to Install and Use Wireshark on Ubuntu](https://linuxhint.com/install_wireshark_ubuntu/)
 - [How to install Wireshark](https://askubuntu.com/questions/700712/how-to-install-wireshark)
 
-### 6.22. [Dropbox](https://www.dropbox.com/install-linux) - online storage
+### 6.24. [Dropbox](https://www.dropbox.com/install-linux) - online storage
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2146,7 +2153,7 @@ Add to `Startup Applications`
 - Enter `dropbox` (should appear if was installed via `flatpak`)
 - Confirm to add it
 
-### scrcpy - control android device from your computer
+### 6.25. scrcpy - control android device from your computer
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2210,7 +2217,7 @@ Related links
 - 2018-05-14 - [Open Source Project: Scrcpy now works wirelessly!](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/)
 - [sisco311/scrcpy-snap](https://github.com/sisco311/scrcpy-snap)
 
-### [droidcam](https://www.dev47apps.com/) - turn mobile device into webcam
+### 6.26. [droidcam](https://www.dev47apps.com/) - turn mobile device into webcam
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2342,7 +2349,7 @@ Categories=GNOME;GTK;Video;
 Related links
 - [Linux instructions](https://www.dev47apps.com/droidcam/linux/)
 
-### [Thinkorswim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.page) - Trading Platforms
+### 6.27. [Thinkorswim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.page) - Trading Platforms
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2468,9 +2475,9 @@ Related links
 - [Installation on Linux Using the Zulu Docker Registry](https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOLinuxUsingZuluDockerRegistry.htm)
 <!-- https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOnLinuxUsingAPTRepository.htm -->
 
-### 6.23. Markdown editor apps
+### 6.28. Markdown editor apps
 
-#### 6.23.1. [Joplin](https://joplinapp.org/)
+#### 6.28.1. [Joplin](https://joplinapp.org/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2508,7 +2515,7 @@ Create `.desktop` file
 # TODO
 ```
 
-#### 6.23.2. [Marktext](https://marktext.app/)
+#### 6.28.2. [Marktext](https://marktext.app/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2579,7 +2586,7 @@ Config folder - `$HOME/.config/marktext`
 Related links
 - Fix issue with [icon](https://askubuntu.com/questions/333133/how-to-set-app-icon-in-the-desktop-file-of-an-ubuntu-touch-application)
 
-#### 6.23.3. [vnote](https://vnotex.github.io/vnote/en_us/)
+#### 6.28.3. [vnote](https://vnotex.github.io/vnote/en_us/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2607,7 +2614,7 @@ Directories needed
 - `$HOME/.local/share/VNote/`
 - `$HOME/.local/share/VNote-2.9.1-x86_64.AppImage/`
 
-#### 6.23.4. PKB alternatives
+#### 6.28.4. PKB alternatives
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2640,7 +2647,7 @@ To manage a Personal Knowledge Base:
 - [Zotero](https://www.zotero.org/)
 - [ZETTELKASTEN - The Archive](https://zettelkasten.de/the-archive/)
 
-### 6.24. Math
+### 6.29. Math
 
 List
 
@@ -2653,14 +2660,14 @@ Related links
 
 - [What’s another good online calculator like Desmos, but without the graphing, and more space for equations?](https://www.quora.com/What%E2%80%99s-another-good-online-calculator-like-Desmos-but-without-the-graphing-and-more-space-for-equations/answer/Jules-Opeth-Manson)
 
-### 6.25. Finance
+### 6.30. Finance
 
 List
 
 - [GNU Cash](https://flathub.org/apps/details/org.gnucash.GnuCash)
 - [firefly-iii](https://github.com/firefly-iii/firefly-iii)
 
-### 6.26. Extra
+### 6.31. Extra
 
 - [GIMP](https://www.gimp.org/) - GNU IMAGE MANIPULATION PROGRAM
 
@@ -3097,7 +3104,7 @@ Commands
     }
     ```
 
-### vnstat - network traffic monitor
+### 7.6. vnstat - network traffic monitor
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3161,7 +3168,7 @@ Related links
 - [Monitoring Network Bandwidth and Speed in Linux](https://itsfoss.com/network-speed-monitor-linux/)
 - [Ubuntu install vnstat console network traffic monitor](https://www.cyberciti.biz/faq/ubuntu-install-vnstat-console-network-traffic-monitor/)
 
-### 7.6. [httpie](https://httpie.io/) - simple http requests on terminal
+### 7.7. [httpie](https://httpie.io/) - simple http requests on terminal
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3185,7 +3192,7 @@ $ pip install -U httpie
 $ sudo pip install -U httpie
 ```
 
-### 7.7. tmux - multiple sessions
+### 7.8. tmux - multiple sessions
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3254,7 +3261,7 @@ $ cd $HOME
 $ rm -rf $HOME/tmux
 ```
 
-### 7.8. [tree](http://mama.indstate.edu/users/ice/tree/) - file / folder structure
+### 7.9. [tree](http://mama.indstate.edu/users/ice/tree/) - file / folder structure
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3277,7 +3284,7 @@ $ sudo apt install tree
 Related links
 - 2019-10-04 - [Linux ‘tree Command’ Usage Examples for Beginners](https://www.tecmint.com/linux-tree-command-examples/)
 
-### 7.9. unrar - decompress files
+### 7.10. unrar - decompress files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3289,7 +3296,7 @@ Install it
 $ sudo apt install unrar
 ```
 
-### 7.10. [ffmpeg](https://ffmpeg.org/) - handle multimedia files
+### 7.11. [ffmpeg](https://ffmpeg.org/) - handle multimedia files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3308,7 +3315,7 @@ $ sudo apt install ffmpeg
 Related links
 - [Ubuntu 20.04 FFmpeg installation](https://linuxconfig.org/ubuntu-20-04-ffmpeg-installation)
 
-### 7.11. jq - handle json files
+### 7.12. jq - handle json files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3338,7 +3345,7 @@ Usage
     $ jq . {{ json file }}
     ```
 
-### 7.12. wrk - http benchmark
+### 7.13. wrk - http benchmark
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3389,7 +3396,7 @@ Related links
 - [denji/awesome-http-benchmark](https://github.com/denji/awesome-http-benchmark) - HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful)
 - TechEmpower - [Benchmarks](https://www.techempower.com/benchmarks/) - [GitHub](https://github.com/TechEmpower/FrameworkBenchmarks) - Source for the TechEmpower Framework Benchmarks project
 
-### 7.13. [youtube-dl](https://ytdl-org.github.io/youtube-dl/) - youtube downloader
+### 7.14. [youtube-dl](https://ytdl-org.github.io/youtube-dl/) - youtube downloader
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3409,7 +3416,7 @@ $ wget \
 $ chmod u+rx $HOME/bin/youtube-dl
 ```
 
-### 7.14. [ngrok](https://ngrok.com/) - expose local web server to internet
+### 7.15. [ngrok](https://ngrok.com/) - expose local web server to internet
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3428,7 +3435,7 @@ $ mv $HOME/ngrok $HOME/bin/
 $ rm ngrok.zip
 ```
 
-### 7.15. httpstat - stats about http requests
+### 7.16. httpstat - stats about http requests
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3465,7 +3472,7 @@ Similar tools
 - in [Go](https://github.com/davecheney/httpstat)
 - in [Python](https://github.com/reorx/httpstat)
 
-### 7.16. neofetch - info about your computer
+### 7.17. neofetch - info about your computer
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3479,7 +3486,7 @@ Install via `apt`
 $ sudo apt install neofetch
 ```
 
-### 7.17. hwinfo - info about hardware devices
+### 7.18. hwinfo - info about hardware devices
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3502,7 +3509,7 @@ Device Files: /dev/nvme0n1, /dev/disk/by-id/nvme-Samsung_SSD_950_PRO_512GB_S2GMN
 ...
 ```
 
-### 7.18. [geekbench](https://www.geekbench.com/) - cross-platform benchmark
+### 7.19. [geekbench](https://www.geekbench.com/) - cross-platform benchmark
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3530,7 +3537,7 @@ Related links
 - [Installing Geekbench 5 on Linux](http://support.primatelabs.com/kb/geekbench/installing-geekbench-5-on-linux)
 
 
-### 7.19. [ufw](https://help.ubuntu.com/community/UFW) - firewall tool
+### 7.20. [ufw](https://help.ubuntu.com/community/UFW) - firewall tool
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3554,7 +3561,7 @@ Related tools
 
     [Installation](https://github.com/gustavo-iniguez-goya/opensnitch/wiki/Installation)
 
-### 7.20. googler - googling via terminal
+### 7.21. googler - googling via terminal
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3572,7 +3579,7 @@ $ wget \
 $ chmod u+x $HOME/bin/googler
 ```
 
-### screenkey - display key pressed
+### 7.22. screenkey - display key pressed
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3616,7 +3623,7 @@ $HOME/.local/bin/screenkey
 
 Config file - `$HOME/.config/screenkey.json`
 
-### 7.21. exiftool - manage meta info from files
+### 7.23. exiftool - manage meta info from files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3630,7 +3637,7 @@ Set date time on pictures
 $ exiftool -AllDates="2015:09:22 12:00:00"
 ```
 
-### 7.22. [iproute2](https://en.wikipedia.org/wiki/Iproute2) - manage networking stuffs
+### 7.24. [iproute2](https://en.wikipedia.org/wiki/Iproute2) - manage networking stuffs
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3657,7 +3664,7 @@ Related tools
 - [iPerf](https://iperf.fr/) - a tool for active measurements of the maximum achievable bandwidth on IP networks
 - [CBM](https://zenway.ru/page/cbm) - [GitHub](https://github.com/resurrecting-open-source-projects/cbm) - display in real time the network traffic speed
 
-### 7.23. [powertop](https://01.org/powertop) - monitor electrical power consumption
+### 7.25. [powertop](https://01.org/powertop) - monitor electrical power consumption
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3706,7 +3713,7 @@ Related tools
 - [bmon](https://linux.die.net/man/1/bmon) - Portable bandwidth monitor and rate estimator - [GitHub](https://github.com/tgraf/bmon)
 - [lm-sensors](https://hwmon.wiki.kernel.org/lm_sensors) - [GitHub](https://github.com/lm-sensors/lm-sensors) - Linux hardware monitoring
 
-### 7.24. [AWS CLI](https://aws.amazon.com/cli/)
+### 7.26. [AWS CLI](https://aws.amazon.com/cli/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3717,7 +3724,7 @@ Related links
 - [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 - [open-guides/og-aws](https://github.com/open-guides/og-aws) - :books: Amazon Web Services — a practical guide
 
-### 7.25. [Carbon](https://carbon.now.sh/) - beautify source code as img
+### 7.27. [Carbon](https://carbon.now.sh/) - beautify source code as img
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3728,7 +3735,7 @@ Create and share beautiful images of your source code
 Related tools
 - [octref/polacode](https://github.com/octref/polacode) - 📸 Polaroid for your code
 
-### 7.26. [Project Jupyter](https://jupyter.org/) - interactive notebook
+### 7.28. [Project Jupyter](https://jupyter.org/) - interactive notebook
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3758,7 +3765,7 @@ $ jupyter notebook
 Related links
 - [Installing the Jupyter Software](https://jupyter.org/install)
 
-### 7.27. Java
+### 7.29. Java
 
 ☝ [Table of contents](#table-of-contents)
 
