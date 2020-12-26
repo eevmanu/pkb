@@ -1902,6 +1902,27 @@ $ apt install -s albert
 $ sudo apt install albert
 ```
 
+Personal settings
+
+- On `General` tab
+    - Hotkey - `Ctrl+Shift+Space`
+    - Check `Show tray icon`
+    - Check `Autostart on login`
+    - Theme - `Dark`
+    - Check `Display icons`
+    - Check `Display shadow`
+    - Check `Always center Albert`
+    - Check `Always on top`
+    - Check `Hide on focus out`
+- On `Extensions` tab
+    - Check `Applications`
+    - Check `Calculator`
+    - Check `Files`
+        - `Paths` - Add `$HOME`
+        - `Indexed MIME Types` - `Advanced` - move `text/plain` from `MIME Types` to `Filter patterns`
+    - Check `System`
+    - Check `WebSearch`
+
 Related links
 - [Using it](https://albertlauncher.github.io/docs/using/)
 - [GPG Signature error for Ubuntu Repo - Solution](https://github.com/albertlauncher/albert/issues/865#issuecomment-572396128)
