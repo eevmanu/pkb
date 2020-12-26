@@ -3713,6 +3713,14 @@ Related tools
 - [bmon](https://linux.die.net/man/1/bmon) - Portable bandwidth monitor and rate estimator - [GitHub](https://github.com/tgraf/bmon)
 - [lm-sensors](https://hwmon.wiki.kernel.org/lm_sensors) - [GitHub](https://github.com/lm-sensors/lm-sensors) - Linux hardware monitoring
 
+### espanso -  text expander
+
+☝ [Table of contents](#table-of-contents)
+
+Cross-platform Text Expander written in Rust
+
+[GitHub](https://github.com/federico-terzi/espanso)
+
 ### 7.26. [AWS CLI](https://aws.amazon.com/cli/)
 
 ☝ [Table of contents](#table-of-contents)
