@@ -3238,6 +3238,50 @@ $ wget \
 $ chmod u+x $HOME/bin/googler
 ```
 
+### screenkey - display key pressed
+
+☝ [Table of contents](#table-of-contents)
+
+[GitLab](https://gitlab.com/screenkey/screenkey)
+
+Package dependencies
+
+- [naelstrof/slop](https://github.com/naelstrof/slop)
+
+    slop (Select Operation) is an application that queries for a selection from the user and prints the region to stdout.
+
+    Install via `apt`
+
+    ```bash
+    # simulate install to check package version
+    # (2020-06-01 17:50:59)
+    $ apt install -s slop
+    # slop is already the newest version (7.4-1ubuntu2).
+
+    $ sudo apt install slop
+    ```
+
+Install it
+
+```bash
+$ git clone https://gitlab.com/screenkey/screenkey
+
+$ cd screenkey
+
+$ ./screenkey --show-settings
+
+$ ./setup.py install --user --record files.txt
+
+$ cat files.txt
+$HOME/.local/lib/python3.8/site-packages/screenkey-1.1-py3.8.egg
+$HOME/.local/bin/screenkey
+
+$ which -a screenkey
+$HOME/.local/bin/screenkey
+```
+
+Config file - `$HOME/.config/screenkey.json`
+
 ### 7.21. exiftool - manage meta info from files
 
 ☝ [Table of contents](#table-of-contents)
