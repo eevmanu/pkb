@@ -2146,6 +2146,68 @@ Add to `Startup Applications`
 - Enter `dropbox` (should appear if was installed via `flatpak`)
 - Confirm to add it
 
+### scrcpy - control android device from your computer
+
+☝ [Table of contents](#table-of-contents)
+
+Display and control your Android device
+
+[GitHub](https://github.com/Genymobile/scrcpy)
+
+
+Requirements
+- On `android` device - `USB preferences` - `no data transfer` -> `file transfer`
+
+- On `android` device -  `developer options` - `active USB debugging`
+
+    YT - [Google Pixel 3a: How to Enable Developer Options](https://www.youtube.com/watch?v=qzl8KLIxj2Y)
+
+- Install `adb` (Optional: `scrcpy` from `snap` comes with `scrcpy.adb`)
+    - [Platform Tools](https://developer.android.com/studio/releases/platform-tools)
+    - [ADB](https://developer.android.com/studio/command-line/adb.html)
+    - [platform-tools-latest-linux.zip](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
+    - [How to install adb windows mac](https://beebom.com/how-to-install-adb-windows-mac/)
+    - [Install adb windows macos linux](https://www.xda-developers.com/install-adb-windows-macos-linux/)
+    - Verify `adb` version
+
+        ```bash
+        $ ./adb version
+        Android Debug Bridge version 1.0.41
+        Version 30.0.3-6597393
+        Installed as {{ $HOME }}/platform-tools/adb
+        ```
+
+Install via `snap`
+
+```bash
+$ sudo snap install scrcpy
+```
+
+Verify `port` is not being used
+
+```bash
+$ sudo ss -tulpn | grep :5555
+```
+
+Commands
+
+```bash
+$ scrcpy.adb start-server
+$ scrcpy.adb devices
+$ scrcpy.adb tcpip 5555
+$ scrcpy.adb connect {{ android IP }}:5555
+$ scrcpy -b2M -m800
+$ scrcpy.adb kill-server
+```
+
+Considerations
+- Don't forget to allow connection on android phone
+- client (scrcpy) and server (scrcpy.adb) should be from same version, otherwise won't work
+
+Related links
+- 2018-05-14 - [Open Source Project: Scrcpy now works wirelessly!](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/)
+- [sisco311/scrcpy-snap](https://github.com/sisco311/scrcpy-snap)
+
 ### 6.23. Markdown editor apps
 
 #### 6.23.1. [Joplin](https://joplinapp.org/)
