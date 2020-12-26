@@ -1315,8 +1315,8 @@ Alternatives
 
     ```bash
     $ wget \
-        https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/amd64/ungoogled-chromium_81.0.4044.138-1.focal1_amd64.deb \
-        -O $HOME/ungoogled_chromium.deb
+        -O $HOME/ungoogled_chromium.deb \
+        https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/amd64/ungoogled-chromium_81.0.4044.138-1.focal1_amd64.deb
     ```
 
     Install via package repository
@@ -1332,9 +1332,9 @@ Alternatives
 
     ```bash
     $ sudo wget \
-        -O "/etc/apt/trusted.gpg.d/home:ungoogled_chromium.asc" \
         -nv \
-            https://download.opensuse.org/repositories/home:ungoogled_chromium/Ubuntu_Focal/Release.key
+        -O "/etc/apt/trusted.gpg.d/home:ungoogled_chromium.asc" \
+        https://download.opensuse.org/repositories/home:ungoogled_chromium/Ubuntu_Focal/Release.key
     ```
 
     - Update package repository
@@ -1370,12 +1370,12 @@ Alternatives
     - [ungoogled-chromium from home:ungoogled_chromium project @ opensuse](https://software.opensuse.org/download/package?package=ungoogled-chromium&project=home:ungoogled_chromium)
 
 Change to `DuckDuckGo` search engine
-    - [Search Syntax](https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/)
-    - [URL Params](https://duckduckgo.com/params)
-    - [!Bang lite](https://duckduckgo.com/bang_lite.html)
-    - [All DuckDuckGo bang operators on one page (mosermichael.github.io)](https://news.ycombinator.com/item?id=24618447)
-    - [ordered by date](https://www.reddit.com/r/duckduckgo/comments/3glmr1/ordered_by_date/)
-    - [The ultimate guide to DuckDuckGo](https://brettterpstra.com/2019/03/07/the-ultimate-guide-to-duckduckgo/)
+- [Search Syntax](https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/)
+- [URL Params](https://duckduckgo.com/params)
+- [!Bang lite](https://duckduckgo.com/bang_lite.html)
+- [All DuckDuckGo bang operators on one page (mosermichael.github.io)](https://news.ycombinator.com/item?id=24618447)
+- [ordered by date](https://www.reddit.com/r/duckduckgo/comments/3glmr1/ordered_by_date/)
+- [The ultimate guide to DuckDuckGo](https://brettterpstra.com/2019/03/07/the-ultimate-guide-to-duckduckgo/)
 
 ### 6.5. [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html) - play multimedia files
 
@@ -1938,7 +1938,8 @@ $ echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbu
 
 $ sudo wget \
     -O "/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc" \
-    -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key
+    -nv \
+    https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key
 
 $ sudo apt update
 
@@ -2138,6 +2139,14 @@ $ rm -rf $HOME/bleachbit/
 Linux System Optimizer and Monitoring
 
 [GitHub](https://github.com/oguzhaninan/Stacer)
+
+Install it
+
+```bash
+$ sudo add-apt-repository ppa:oguzhaninan/stacer -y
+$ sudo apt-get update
+$ sudo apt-get install stacer -y
+```
 
 ### 6.23. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
 
@@ -2755,9 +2764,7 @@ List
 
 ### 6.32. Extra
 
-- [Audacity](https://www.audacityteam.org/)
-
-    Free, open source, cross-platform audio software
+- [Audacity](https://www.audacityteam.org/) - Free, open source, cross-platform audio software
 
     [GitHub](https://github.com/audacity/audacity)
 
@@ -2788,12 +2795,14 @@ List
     - [How to set up Audacity](https://manual.audacityteam.org/man/how_to_set_up_audacity.html)
     - [Tutorial - Recording Computer Playback on Linux](https://manual.audacityteam.org/man/tutorial_recording_computer_playback_on_linux.html)
 
-- [GIMP](https://www.gimp.org/) - GNU IMAGE MANIPULATION PROGRAM
+- [GIMP](https://www.gimp.org/) - GNU Image Manipulation Program
 
     [GitLab](https://gitlab.gnome.org/GNOME/gimp)
 
     Alternatives
     - [Glimpse](https://github.com/glimpse-editor/glimpse/)
+
+    Related tools
     - [figma-linux](https://github.com/figma-linux/figma-linux)
 
         Figma electron app (unofficial)
@@ -2818,9 +2827,7 @@ List
     Directories used
     - `$HOME/.var/app/org.gimp.GIMP/`
 
-- [Shotcut](https://www.shotcut.org/)
-
-    Free, open source, cross-platform (Qt), open-source (GPLv3) video editor
+- [Shotcut](https://www.shotcut.org/) - Free, open source, cross-platform (Qt), open-source (GPLv3) video editor
 
     [GitHub](https://github.com/mltframework/shotcut)
 
@@ -3877,14 +3884,17 @@ KeePassXC is a cross-platform community-driven port of the Windows application â
 
 [GitHub](https://github.com/keepassxreboot/keepassxc)
 
-Installation it
+Install via `.AppImage` file
 
 ```bash
-$ wget -O $HOME/bin/keepassxc https://github.com/keepassxreboot/keepassxc/releases/download/2.6.1/KeePassXC-2.6.1-x86_64.AppImage
-$ chmod +x $HOME/bin/keepassxc
+$ wget \
+    -O $HOME/bin/keepassxc \
+    https://github.com/keepassxreboot/keepassxc/releases/download/2.6.1/KeePassXC-2.6.1-x86_64.AppImage
+
+$ chmod u+x $HOME/bin/keepassxc
 ```
 
-`.desktop` file - `$HOME/.local/share/applications/keepassxc.desktop`
+Create `.desktop` file on `$HOME/.local/share/applications/keepassxc.desktop`
 
 ```ini
 [Desktop Entry]
@@ -3911,7 +3921,7 @@ $ wget \
     https://github.com/keepassxreboot/keepassxc/raw/develop/share/icons/application/scalable/apps/keepassxc.svg
 ```
 
-Refresh configurations to detect new `.desktop` file
+Build cache database of MIME types handled by desktop files
 
 ```bash
 $ update-desktop-database $HOME/.local/share/applications/
