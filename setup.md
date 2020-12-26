@@ -2758,6 +2758,26 @@ List
 
     Alternatives
     - [Glimpse](https://github.com/glimpse-editor/glimpse/)
+    - [figma-linux](https://github.com/figma-linux/figma-linux)
+
+        Figma electron app (unofficial)
+
+        Install via `AppImage`
+
+        ```bash
+        $ wget \
+            -O figma-linux \
+            https://github.com/Figma-Linux/figma-linux/releases/download/v0.6.4/figma-linux-0.6.4.AppImage
+
+        $ chmod u+x figma-linux
+
+        $ mv figma-linux $HOME/bin
+        ```
+
+        <!-- TODO Create `.desktop` file -->
+
+        Directories used:
+        - `$HOME/.config/figma-linux`
 
     Directories used
     - `$HOME/.var/app/org.gimp.GIMP/`
