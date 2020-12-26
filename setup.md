@@ -2679,6 +2679,15 @@ List
     Directories used
     - `$HOME/.var/app/org.gimp.GIMP/`
 
+- [Shotcut](https://www.shotcut.org/)
+
+    Free, open source, cross-platform (Qt), open-source (GPLv3) video editor
+
+    [GitHub](https://github.com/mltframework/shotcut)
+
+    Alternatives
+    - [kdenlive](https://github.com/KDE/kdenlive) - Free and open source video editor, based on MLT Framework and KDE Frameworks 5
+
 - [Meld](http://meldmerge.org/) - Visual diff and merge tool targeted at developers.
 
     [GitLab](https://gitlab.gnome.org/GNOME/meld)
