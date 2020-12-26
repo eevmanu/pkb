@@ -2752,6 +2752,39 @@ List
 
 ### 6.31. Extra
 
+- [Audacity](https://www.audacityteam.org/)
+
+    Free, open source, cross-platform audio software
+
+    [GitHub](https://github.com/audacity/audacity)
+
+    Install via `flatpak`
+
+    ```bash
+    $ flatpak install flathub org.audacityteam.Audacity
+
+    # run
+    $ flatpak run org.audacityteam.Audacity
+    ```
+
+    Related tool
+    - `pavucontrol` - Pulse Audio Volume Control
+
+        ```bash
+        $ sudo apt install pavucontrol
+        ```
+
+    Alternatives
+    - [audiomass](https://audiomass.co/) - open-source web based audio and waveform editing tool.
+
+
+    Directories used:
+    - `$HOME/.var/app/org.audacityteam.Audacity/`
+
+    Related links
+    - [How to set up Audacity](https://manual.audacityteam.org/man/how_to_set_up_audacity.html)
+    - [Tutorial - Recording Computer Playback on Linux](https://manual.audacityteam.org/man/tutorial_recording_computer_playback_on_linux.html)
+
 - [GIMP](https://www.gimp.org/) - GNU IMAGE MANIPULATION PROGRAM
 
     [GitLab](https://gitlab.gnome.org/GNOME/gimp)
