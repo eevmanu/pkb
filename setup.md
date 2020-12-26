@@ -2705,7 +2705,7 @@ Command line interface for testing internet bandwidth using speedtest.net
 
 [GitHub](https://github.com/sivel/speedtest-cli)
 
-Install directly from GitHub
+Install from `master`
 
 ```bash
 $ wget \
@@ -2762,6 +2762,70 @@ Commands
         }
     }
     ```
+
+### vnstat - network traffic monitor
+
+☝ [Table of contents](#table-of-contents)
+
+Network traffic monitor for Linux and BSD
+
+[GitHub](https://github.com/vergoh/vnstat)
+
+Install via `apt`
+
+```bash
+# simulate install to check package version
+$ apt instal -s vnstat
+
+$ sudo apt install vnstat vnstati
+```
+
+List your network interfaces
+
+```bash
+$ vnstat --iflist
+Available interfaces: {{ INTERFACE_NAME }} (1000 Mbit) ...
+```
+
+Setup network interface to use
+
+```bash
+$ sudo vnstat --iface {{ INTERFACE_NAME }}
+$ sudo vnstat --update --iface {{ INTERFACE_NAME }}
+```
+
+Start `systemd` service
+
+```bash
+$ sudo systemctl enable vnstat.service
+```
+
+Generate graph about traffic
+
+```bash
+$ vnstati \
+    -vs \
+    -i {{ INTERFACE_NAME }} \
+    -o $HOME/traffic-monitor-summary.png
+```
+
+Database path - `/var/lib/vnstat/vnstat.db`
+
+Configuration file - `/etc/vnstat.conf`
+
+Related tools
+
+- [vnstat-dashboard](https://github.com/alexandermarston/vnstat-dashboard)
+
+    A responsive web UI to view network traffic statistics provided by vnStat (with support for version 2.x)
+
+    Issues
+    - lots of warnings with debian 8.11 and php 7.2 #47 - [fix](https://github.com/alexandermarston/vnstat-dashboard/issues/47#issuecomment-653746262)
+
+Related links
+- [How can you monitor total internet data usage across reboots?](https://askubuntu.com/questions/1459/how-can-you-monitor-total-internet-data-usage-across-reboots)
+- [Monitoring Network Bandwidth and Speed in Linux](https://itsfoss.com/network-speed-monitor-linux/)
+- [Ubuntu install vnstat console network traffic monitor](https://www.cyberciti.biz/faq/ubuntu-install-vnstat-console-network-traffic-monitor/)
 
 ### 7.6. [httpie](https://httpie.io/) - simple http requests on terminal
 
