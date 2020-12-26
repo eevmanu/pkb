@@ -2475,6 +2475,40 @@ Related links
 - [Installation on Linux Using the Zulu Docker Registry](https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOLinuxUsingZuluDockerRegistry.htm)
 <!-- https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOnLinuxUsingAPTRepository.htm -->
 
+### [Virtualbox](https://www.virtualbox.org/) - virtualization
+
+☝ [Table of contents](#table-of-contents)
+
+[Steps to install](https://www.virtualbox.org/wiki/Linux_Downloads)
+
+```bash
+$ wget \
+    -O virtualbox.deb \
+    https://download.virtualbox.org/virtualbox/6.1.16/virtualbox-6.1_6.1.16-140961~Ubuntu~eoan_amd64.deb
+```
+
+[Changelog / Release Notes](https://www.virtualbox.org/wiki/Changelog)
+
+[Linux build instructions](https://www.virtualbox.org/wiki/Linux%20build%20instructions)
+
+Extra packages when installed (6.1.10 <-> 6.1.14)
+
+```
+- libpython2-stdlib
+- libpython2.7-minimal
+- libpython2.7-stdlib
+- libsdl1.2debian
+- python-is-python2
+- python2
+- python2-minimal
+- python2.7
+- python2.7-minimal
+```
+
+`Windows 10` ova & iso files:
+- [OVA](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/) (Open Virtualization Format)
+- [ISO](https://www.microsoft.com/en-us/software-download/windows10ISO)
+
 ### 6.28. Markdown editor apps
 
 #### 6.28.1. [Joplin](https://joplinapp.org/)
