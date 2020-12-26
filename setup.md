@@ -1328,9 +1328,16 @@ Alternatives
     $ sudo apt autoremove
     ```
 
-
     Related links
     - [ungoogled-chromium from home:ungoogled_chromium project @ opensuse](https://software.opensuse.org/download/package?package=ungoogled-chromium&project=home:ungoogled_chromium)
+
+Change to `DuckDuckGo` search engine
+    - [Search Syntax](https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/)
+    - [URL Params](https://duckduckgo.com/params)
+    - [!Bang lite](https://duckduckgo.com/bang_lite.html)
+    - [All DuckDuckGo bang operators on one page (mosermichael.github.io)](https://news.ycombinator.com/item?id=24618447)
+    - [ordered by date](https://www.reddit.com/r/duckduckgo/comments/3glmr1/ordered_by_date/)
+    - [The ultimate guide to DuckDuckGo](https://brettterpstra.com/2019/03/07/the-ultimate-guide-to-duckduckgo/)
 
 ### 6.5. [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html) - play multimedia files
 
