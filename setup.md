@@ -43,14 +43,15 @@
     - [6.25. scrcpy - control android device from your computer](#625-scrcpy---control-android-device-from-your-computer)
     - [6.26. droidcam - turn mobile device into webcam](#626-droidcam---turn-mobile-device-into-webcam)
     - [6.27. Thinkorswim - Trading Platforms](#627-thinkorswim---trading-platforms)
-    - [6.28. Markdown editor apps](#628-markdown-editor-apps)
-        - [6.28.1. Joplin](#6281-joplin)
-        - [6.28.2. Marktext](#6282-marktext)
-        - [6.28.3. vnote](#6283-vnote)
-        - [6.28.4. PKB alternatives](#6284-pkb-alternatives)
-    - [6.29. Math](#629-math)
-    - [6.30. Finance](#630-finance)
-    - [6.31. Extra](#631-extra)
+    - [6.28. Virtualbox - virtualization](#628-virtualbox---virtualization)
+    - [6.29. Markdown editor apps](#629-markdown-editor-apps)
+        - [6.29.1. Joplin](#6291-joplin)
+        - [6.29.2. Marktext](#6292-marktext)
+        - [6.29.3. vnote](#6293-vnote)
+        - [6.29.4. PKB alternatives](#6294-pkb-alternatives)
+    - [6.30. Math](#630-math)
+    - [6.31. Finance](#631-finance)
+    - [6.32. Extra](#632-extra)
 - [7. Commands](#7-commands)
     - [7.1. git - version control manager](#71-git---version-control-manager)
     - [7.2. docker - containers](#72-docker---containers)
@@ -77,10 +78,12 @@
     - [7.23. exiftool - manage meta info from files](#723-exiftool---manage-meta-info-from-files)
     - [7.24. iproute2 - manage networking stuffs](#724-iproute2---manage-networking-stuffs)
     - [7.25. powertop - monitor electrical power consumption](#725-powertop---monitor-electrical-power-consumption)
-    - [7.26. AWS CLI](#726-aws-cli)
-    - [7.27. Carbon - beautify source code as img](#727-carbon---beautify-source-code-as-img)
-    - [7.28. Project Jupyter - interactive notebook](#728-project-jupyter---interactive-notebook)
-    - [7.29. Java](#729-java)
+    - [7.26. espanso -  text expander](#726-espanso----text-expander)
+    - [7.27. Keepassxc - password manager](#727-keepassxc---password-manager)
+    - [7.28. AWS CLI](#728-aws-cli)
+    - [7.29. Carbon - beautify source code as img](#729-carbon---beautify-source-code-as-img)
+    - [7.30. Project Jupyter - interactive notebook](#730-project-jupyter---interactive-notebook)
+    - [7.31. Java](#731-java)
 - [8. Troubleshooting](#8-troubleshooting)
     - [8.1. Spotify](#81-spotify)
     - [8.2. VS Code](#82-vs-code)
@@ -2524,7 +2527,7 @@ Related links
 - [Installation on Linux Using the Zulu Docker Registry](https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOLinuxUsingZuluDockerRegistry.htm)
 <!-- https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOnLinuxUsingAPTRepository.htm -->
 
-### [Virtualbox](https://www.virtualbox.org/) - virtualization
+### 6.28. [Virtualbox](https://www.virtualbox.org/) - virtualization
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2558,9 +2561,9 @@ Extra packages when installed (6.1.10 <-> 6.1.14)
 - [OVA](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/) (Open Virtualization Format)
 - [ISO](https://www.microsoft.com/en-us/software-download/windows10ISO)
 
-### 6.28. Markdown editor apps
+### 6.29. Markdown editor apps
 
-#### 6.28.1. [Joplin](https://joplinapp.org/)
+#### 6.29.1. [Joplin](https://joplinapp.org/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2598,7 +2601,7 @@ Create `.desktop` file
 # TODO
 ```
 
-#### 6.28.2. [Marktext](https://marktext.app/)
+#### 6.29.2. [Marktext](https://marktext.app/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2669,7 +2672,7 @@ Config folder - `$HOME/.config/marktext`
 Related links
 - Fix issue with [icon](https://askubuntu.com/questions/333133/how-to-set-app-icon-in-the-desktop-file-of-an-ubuntu-touch-application)
 
-#### 6.28.3. [vnote](https://vnotex.github.io/vnote/en_us/)
+#### 6.29.3. [vnote](https://vnotex.github.io/vnote/en_us/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2697,7 +2700,7 @@ Directories needed
 - `$HOME/.local/share/VNote/`
 - `$HOME/.local/share/VNote-2.9.1-x86_64.AppImage/`
 
-#### 6.28.4. PKB alternatives
+#### 6.29.4. PKB alternatives
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2730,7 +2733,7 @@ To manage a Personal Knowledge Base:
 - [Zotero](https://www.zotero.org/)
 - [ZETTELKASTEN - The Archive](https://zettelkasten.de/the-archive/)
 
-### 6.29. Math
+### 6.30. Math
 
 List
 
@@ -2743,14 +2746,14 @@ Related links
 
 - [What’s another good online calculator like Desmos, but without the graphing, and more space for equations?](https://www.quora.com/What%E2%80%99s-another-good-online-calculator-like-Desmos-but-without-the-graphing-and-more-space-for-equations/answer/Jules-Opeth-Manson)
 
-### 6.30. Finance
+### 6.31. Finance
 
 List
 
 - [GNU Cash](https://flathub.org/apps/details/org.gnucash.GnuCash)
 - [firefly-iii](https://github.com/firefly-iii/firefly-iii)
 
-### 6.31. Extra
+### 6.32. Extra
 
 - [Audacity](https://www.audacityteam.org/)
 
@@ -3858,7 +3861,7 @@ Related tools
 - [bmon](https://linux.die.net/man/1/bmon) - Portable bandwidth monitor and rate estimator - [GitHub](https://github.com/tgraf/bmon)
 - [lm-sensors](https://hwmon.wiki.kernel.org/lm_sensors) - [GitHub](https://github.com/lm-sensors/lm-sensors) - Linux hardware monitoring
 
-### espanso -  text expander
+### 7.26. espanso -  text expander
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3866,7 +3869,7 @@ Cross-platform Text Expander written in Rust
 
 [GitHub](https://github.com/federico-terzi/espanso)
 
-### Keepassxc - password manager
+### 7.27. Keepassxc - password manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3918,7 +3921,7 @@ Related links
 - [How do I use the KeePassXC CLI tool with the AppImage?](https://keepassxc.org/docs/#faq-appsnap-appimage-cli)
 - [KeepassXC Question about CLI](https://www.reddit.com/r/KeePass/comments/a5tjx2/keepassxc_question_about_cli/)
 
-### 7.26. [AWS CLI](https://aws.amazon.com/cli/)
+### 7.28. [AWS CLI](https://aws.amazon.com/cli/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3929,7 +3932,7 @@ Related links
 - [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 - [open-guides/og-aws](https://github.com/open-guides/og-aws) - :books: Amazon Web Services — a practical guide
 
-### 7.27. [Carbon](https://carbon.now.sh/) - beautify source code as img
+### 7.29. [Carbon](https://carbon.now.sh/) - beautify source code as img
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3940,7 +3943,7 @@ Create and share beautiful images of your source code
 Related tools
 - [octref/polacode](https://github.com/octref/polacode) - 📸 Polaroid for your code
 
-### 7.28. [Project Jupyter](https://jupyter.org/) - interactive notebook
+### 7.30. [Project Jupyter](https://jupyter.org/) - interactive notebook
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3970,7 +3973,7 @@ $ jupyter notebook
 Related links
 - [Installing the Jupyter Software](https://jupyter.org/install)
 
-### 7.29. Java
+### 7.31. Java
 
 ☝ [Table of contents](#table-of-contents)
 
