@@ -2208,6 +2208,138 @@ Related links
 - 2018-05-14 - [Open Source Project: Scrcpy now works wirelessly!](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/)
 - [sisco311/scrcpy-snap](https://github.com/sisco311/scrcpy-snap)
 
+### [droidcam](https://www.dev47apps.com/) - turn mobile device into webcam
+
+☝ [Table of contents](#table-of-contents)
+
+Requirements
+
+```bash
+# verify requirements are met
+$ apt install -s gcc make linux-headers-$(uname -r)
+...
+gcc is already the newest version
+make is already the newest version
+linux-headers-5.4.0-7634-generic is already the newest version
+...
+```
+
+Download `zip` file
+
+```bash
+# download required files
+$ wget https://files.dev47apps.net/linux/droidcam_latest.zip
+```
+
+Verify `zip` file
+
+```bash
+# verify zip file
+$ echo "73db3a4c0f52a285b6ac1f8c43d5b4c7 droidcam_latest.zip" | md5sum -c --
+droidcam_latest.zip: OK
+```
+
+Uncompress `zip` file
+
+```bash
+# unzip it
+$ unzip droidcam_latest.zip -d droidcam
+```
+
+Run installer
+
+```bash
+$ cd ./droidcam/
+$ sudo ./install
+```
+
+Verify modules added to linux kernel
+
+```bash
+# verify if modules were added to linux kernel
+$ lsmod | grep v4l2loopback_dc
+v4l2loopback_dc        24576  0
+videodev              225280  4 videobuf2_v4l2,v4l2loopback_dc,uvcvideo,videobuf2_common
+```
+
+Install loopback device
+
+```bash
+# install loopback device for get sound from phone
+$ sudo ./install-sound
+Loading Loopback device
+Done
+Use 'pacmd load-module module-alsa-source device=hw:Loopback,1,0' to load the card into PulseAudio while droidcam is running
+```
+
+Some util commands
+
+```bash
+# load new device to module-alsa-source module
+$ pacmd load-module module-alsa-source device=hw:Loopback,1,0
+# $ pacmd load-module module-alsa-source device=hw:Loopback,1,1
+
+# if previous command doens't work, edit directly this file
+$ sudo nano /etc/pulse/default.pa
+
+# kill pulseaudio and restart it as daemon to get new conf
+$ pulseaudio -k ; pulseaudio -D
+
+# find pulseaudio process
+$ ps aux | grep pulseaudio
+
+# get modules loaded on pulseaudio
+$ pacmd list-modules
+# find index of module-alsa-source, probably last one
+
+# get description about a specific module, in this case module-alsa-source
+$ pacmd describe-module module-alsa-source
+
+# unload specific module from pulseaudio
+$ pacmd unload-module {{ $NUM }}
+
+# get devices from ALSA sound card driver
+$ arecord -l
+
+# soundcard mixer of ALSA sound card driver, using ncurses interface
+$ alsamixer
+
+# volume control of Pulse Audio sound server
+$ pavucontrol
+```
+
+Important files and paths
+- `/etc/modules`
+- `/etc/modprobe.d/droidcam.conf`
+- `/etc/modules-load.d/cups-filters.conf`
+- `/etc/modules-load.d/droidcam.conf`
+- `/etc/modules-load.d/modules.conf`
+- `/opt/droidcam-uninstall`
+
+Download and save icon
+
+```
+$ wget \
+    -O $HOME/.local/share/icons/droidcam \
+    https://files.dev47apps.net/img/app_icon.png
+```
+
+Create desktop file - `$HOME/.local/share/applications/droidcam.desktop`
+
+```ini
+[Desktop Entry]
+Type=Application
+Name=Droidcam
+Comment=Use your Android phone as a wireless webcam!
+Icon={{ $HOME }}/.local/share/icons/droidcam
+Exec=/usr/bin/droidcam
+Terminal=false
+Categories=GNOME;GTK;Video;
+```
+
+Related links
+- [Linux instructions](https://www.dev47apps.com/droidcam/linux/)
+
 ### 6.23. Markdown editor apps
 
 #### 6.23.1. [Joplin](https://joplinapp.org/)
