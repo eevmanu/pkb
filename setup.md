@@ -2154,7 +2154,6 @@ Display and control your Android device
 
 [GitHub](https://github.com/Genymobile/scrcpy)
 
-
 Requirements
 - On `android` device - `USB preferences` - `no data transfer` -> `file transfer`
 
@@ -2203,6 +2202,9 @@ $ scrcpy.adb kill-server
 Considerations
 - Don't forget to allow connection on android phone
 - client (scrcpy) and server (scrcpy.adb) should be from same version, otherwise won't work
+
+Alternatives
+- [KDEConnect](https://community.kde.org/KDEConnect) - control your phone remotely
 
 Related links
 - 2018-05-14 - [Open Source Project: Scrcpy now works wirelessly!](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/)
@@ -2660,11 +2662,17 @@ List
 
 ### 6.26. Extra
 
-- [uw-labs/bloomrpc](https://github.com/uw-labs/bloomrpc) - The missing GUI Client for GRPC services
+- [GIMP](https://www.gimp.org/) - GNU IMAGE MANIPULATION PROGRAM
 
-- [Meld](http://meldmerge.org/)
+    [GitLab](https://gitlab.gnome.org/GNOME/gimp)
 
-    Visual diff and merge tool targeted at developers.
+    Alternatives
+    - [Glimpse](https://github.com/glimpse-editor/glimpse/)
+
+    Directories used
+    - `$HOME/.var/app/org.gimp.GIMP/`
+
+- [Meld](http://meldmerge.org/) - Visual diff and merge tool targeted at developers.
 
     [GitLab](https://gitlab.gnome.org/GNOME/meld)
 
@@ -2696,6 +2704,10 @@ List
         --enable-heuristics
     ```
 
+- [NoiseTorch](https://github.com/lawl/NoiseTorch) - Real-time microphone noise suppression on Linux.
+
+    Alternatives
+    - [krisp.ai](https://krisp.ai/)
 
 - [Stoplight Studio](https://github.com/stoplightio/studio/) - API docs editor
 
@@ -2712,6 +2724,8 @@ List
     # assign permissions
     $ chmod u+x $HOME/bin/stoplight-studio
     ```
+
+- [uw-labs/bloomrpc](https://github.com/uw-labs/bloomrpc) - The missing GUI Client for GRPC services
 
 ## 7. Commands
 
