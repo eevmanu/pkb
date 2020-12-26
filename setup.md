@@ -609,6 +609,34 @@ Preview thumbnails at file / folder manager
 - Related links
     - [What's the best way to preview many images?](https://www.reddit.com/r/pop_os/comments/gmefd2/whats_the_best_way_to_preview_many_images/)
 
+`GNOME` File indexer
+
+```bash
+$ systemctl --user mask \
+    tracker-store.service \
+    tracker-miner-fs.service \
+    tracker-miner-rss.service \
+    tracker-extract.service \
+    tracker-miner-apps.service \
+    tracker-writeback.service
+
+$ tracker reset --hard
+
+$ systemctl --user unmask \
+    tracker-store.service \
+    tracker-miner-fs.service \
+    tracker-miner-rss.service \
+    tracker-extract.service \
+    tracker-miner-apps.service \
+    tracker-writeback.service
+
+$ tracker status
+```
+
+- Related links
+    - 2020-04-27 - [How To Completely Disable Tracker, GNOME's File Indexing And Search Tool](https://www.linuxuprising.com/2019/07/how-to-completely-disable-tracker.html) - [archive](https://web.archive.org/web/20201226151700/https://www.linuxuprising.com/2019/07/how-to-completely-disable-tracker.html)
+    - [vancluever/gnome-tracker-disable.md](https://gist.github.com/vancluever/d34b41eb77e6d077887c) -  GNOME Tracker Disable
+
 ## 3. Issue to be aware
 
 ### 3.1. Bluetooth
