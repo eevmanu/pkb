@@ -1016,7 +1016,18 @@ Resources:
     - [Logging Levels](https://docs.python.org/3/library/logging.html#logging-levels)
     - [A little log decorator for debugging, more info in comments](https://www.reddit.com/r/Python/comments/ijkdem/a_little_log_decorator_for_debugging_more_info_in/)
     - [The Most Diabolical Python Antipattern](https://realpython.com/the-most-diabolical-python-antipattern/)
-    - [onelivesleft/PrettyErrors](https://github.com/onelivesleft/PrettyErrors) - Prettify Python exception output to make it legible. - [reddit](https://www.reddit.com/r/Python/comments/jui7zw/prettyerrors_a_module_to_format_exception_reports/)
+    - [onelivesleft/PrettyErrors](https://github.com/onelivesleft/PrettyErrors) ([reddit](https://www.reddit.com/r/Python/comments/jui7zw/prettyerrors_a_module_to_format_exception_reports/), [usage stats](https://pypistats.org/packages/pretty-errors)) - Prettify Python exception output to make it legible.
+
+- Debugging:
+    - [cool-RR/PySnooper](https://github.com/cool-RR/PySnooper) ([usage stats](https://pypistats.org/packages/pysnooper)) - Never use print for debugging again
+    - [cknd/stackprinter](https://github.com/cknd/stackprinter) ([usage stats](https://pypistats.org/packages/stackprinter)) - Debugging-friendly exceptions for Python
+    - [Delgan/loguru](https://github.com/Delgan/loguru) ([usage stats](https://pypistats.org/packages/loguru)) - Python logging made (stupidly) simple
+    - [getsentry/sentry](https://github.com/getsentry/sentry) ([usage stats](https://pypistats.org/packages/sentry)) - Sentry is cross-platform application monitoring, with a focus on error reporting.
+    - [laike9m/Cyberbrain](https://github.com/laike9m/Cyberbrain) ([reddit](https://www.reddit.com/r/Python/comments/k32p48/cyberbrain_python_debugging_redefined/), [usage stats](https://pypistats.org/packages/cyberbrain)) - Python debugging, redefined.
+    - [inducer/pudb](https://github.com/inducer/pudb) ([usage stats](https://pypistats.org/packages/pudb)) - Full-screen console debugger for Python
+    - [gruns/icecream](https://github.com/gruns/icecream) ([usage stats](https://pypistats.org/packages/icecream)) - Never use print() to debug again.
+    - [pdbpp/pdbpp](https://github.com/pdbpp/pdbpp) ([usage stats](https://pypistats.org/packages/pdbpp)) - pdb++, a drop-in replacement for pdb (the Python debugger)
+    - [Debugging Cheat Sheet](https://www.reddit.com/r/Python/comments/iehths/debugging_cheat_sheet/)
 
 - Testing
     - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python
@@ -1043,12 +1054,6 @@ Resources:
             - ...
     - [nedbat/coveragepy](https://github.com/nedbat/coveragepy) - Code coverage measurement for Python
     - Python Wiki - [pytest](https://wiki.python.org/moin/pytest)
-
-- Debugging:
-    - [PySnooper](https://github.com/cool-RR/PySnooper) - Never use print for debugging again
-    - [stackprinter](https://github.com/cknd/stackprinter) - Debugging-friendly exceptions for Python
-    - [loguru](https://github.com/Delgan/loguru) - Python logging made (stupidly) simple
-    - [getsentry/sentry](https://github.com/getsentry/sentry) - Sentry is cross-platform application monitoring, with a focus on error reporting.
 
 - Concurrency / Parallelism / Multiprocessing / Multithreading / Asynchronous (async/await) related:
     - Some facts:
@@ -1319,7 +1324,6 @@ Resources:
         - [Save a dictionary to a file](https://pythonspot.com/save-a-dictionary-to-a-file/)
         - [EAFP - Easier to ask for forgiveness than permission](https://docs.python.org/3/glossary.html#term-eafp)
         - [Python args and kwargs: Demystified](https://realpython.com/python-kwargs-and-args/)
-        - [Debugging Cheat Sheet](https://www.reddit.com/r/Python/comments/iehths/debugging_cheat_sheet/)
         - [Python Software Foundation Newsletter](https://us19.campaign-archive.com/home/?u=5697f493c3a48994f504d4deb&id=167eaa449b)
     - Dated
         - 2020-12-21 - [NumPy Illustrated: The Visual Guide to NumPy](https://medium.com/better-programming/numpy-illustrated-the-visual-guide-to-numpy-3b1d4976de1d)
