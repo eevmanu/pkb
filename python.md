@@ -1205,6 +1205,7 @@ Resources:
     - [hooram/ownphotos](https://github.com/hooram/ownphotos) - Self hosted alternative to Google Photos
     - [gilesknap/gphotos-sync](https://github.com/gilesknap/gphotos-sync) - Google Photos and Albums backup with Google Photos Library API
     - [ytdl-org/youtube-dl](https://github.com/ytdl-org/youtube-dl) - Command-line program to download videos from YouTube.com and other video sites
+    - [asciinema/asciinema](https://github.com/asciinema/asciinema) - Terminal session recorder video_camera
     - Reloading:
         - [reloading](https://github.com/julvo/reloading) - Change Python code while it's running using a reloading loop
         - [watchgod](https://github.com/samuelcolvin/watchgod) - Simple, modern file watching and code reload in python.
