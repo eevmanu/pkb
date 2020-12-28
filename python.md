@@ -375,7 +375,7 @@ $ cat .python-version
 3.9.0
 ```
 
-Check which version (and binary) is executing `pip` in a specific context
+Check which version (or path to binary) is executing `pip` in your specific context
 
 ```bash
 $ pyenv which pip
@@ -466,18 +466,16 @@ Activate environment
 $ source {{ /path/to/env }}/bin/activate
 ```
 
+Update `pip`, `setuptools`, and `wheel` after creating new environment
+
+```bash
+$ pip install -U pip setuptools wheel
+```
+
 Deactivate environment
 
 ```bash
 $ deactivate
-```
-
-Update `pip`, `setuptools` & `wheel`, after creating new environment
-
-```bash
-# activate environment
-$ source myenv/bin/activate
-$ pip install -U pip setuptools wheel
 ```
 
 ### Linters
