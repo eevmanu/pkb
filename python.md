@@ -962,6 +962,7 @@ Resources:
     - [elements-of-python-style](https://github.com/amontalenti/elements-of-python-style) - Goes beyond PEP8 to discuss what makes Python code feel great. A Strunk & White for Python.
     - [Khan Python Style Guide](https://github.com/Khan/style-guides/blob/master/style/python.md)
     - [ultimate-python](https://github.com/huangsam/ultimate-python) - Ultimate Python study guide for newcomers and professionals alike.
+    - [wemake-services/wemake-python-styleguide](https://github.com/wemake-services/wemake-python-styleguide) - The strictest and most opinionated python linter ever!
 
 - Web frameworks (!= web server):
     - [Web frameworks for Python, most starred on Github](https://github.com/mingrammer/python-web-framework-stars)
