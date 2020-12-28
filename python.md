@@ -1,8 +1,222 @@
+<!-- omit in toc -->
 # Python
 
-## Basic stuffs
+<!-- omit in toc -->
+## Table of contents
 
-Check version:
+- [Install latest version](#install-latest-version)
+    - [Via ppa:deadsnakes/ppa](#via-ppadeadsnakesppa)
+    - [Via Pyenv](#via-pyenv)
+        - [Extra commands](#extra-commands)
+        - [Update](#update)
+- [Extra commands](#extra-commands-1)
+- [pip](#pip)
+    - [Install](#install)
+    - [Troubleshooting](#troubleshooting)
+- [Virtual environments](#virtual-environments)
+    - [virtualenv & virtualenvwrapper](#virtualenv--virtualenvwrapper)
+- [Personal setup](#personal-setup)
+    - [Basics](#basics)
+    - [Venv](#venv)
+    - [Linters](#linters)
+    - [Code formatters](#code-formatters)
+- [Debugging](#debugging)
+- [Troubleshooting](#troubleshooting-1)
+- [Interview tips](#interview-tips)
+    - [Iterator](#iterator)
+    - [Generator](#generator)
+    - [Functional programming](#functional-programming)
+    - [Decorators](#decorators)
+    - [GIL - global interpreter lock](#gil---global-interpreter-lock)
+    - [Context Manager](#context-manager)
+    - [Function-based views vs Class-based views](#function-based-views-vs-class-based-views)
+- [Resources](#resources)
+
+## Install latest version
+
+### Via ppa:deadsnakes/ppa
+
+☝ [Table of contents](#table-of-contents)
+
+[Website](https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa)
+
+Install package dependencies
+
+```bash
+# simulate install to check package version
+$ apt install -s software-properties-common
+
+$ sudo apt install software-properties-common
+```
+
+Add repository url
+
+```bash
+$ sudo add-apt-repository ppa:deadsnakes/ppa
+
+# download package information from all configured sources
+$ sudo apt update
+```
+
+Install `python` version
+
+```bash
+$ sudo apt install python3.8
+```
+
+Related links
+- 2020-03-22 - [How To Install Python 3.8 On Ubuntu 18.04 LTS](https://python.tutorials24x7.com/blog/how-to-install-python-3-8-on-ubuntu-1804-lts)
+
+### Via Pyenv
+
+☝ [Table of contents](#table-of-contents)
+
+Simple Python version management
+
+[GitHub](https://github.com/pyenv/pyenv)
+
+Clone `pyenv` github repo into `$HOME/.pyenv`
+
+```bash
+$ git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
+```
+
+Define environment variables needed
+
+```bash
+# inside your .bashrc file
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+```
+
+Add `pyenv init` validation to my shell / terminal init script
+
+```bash
+# inside your .bashrc file
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
+```
+
+Restart your shell / terminal
+
+```bash
+$ exec $SHELL
+```
+
+Install [Python dependencies](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
+
+```bash
+$ sudo apt-get update && \
+    sudo apt-get install \
+        --no-install-recommends \
+            make \
+            build-essential \
+            libssl-dev \
+            zlib1g-dev \
+            libbz2-dev \
+            libreadline-dev \
+            libsqlite3-dev \
+            wget \
+            curl \
+            llvm \
+            libncurses5-dev \
+            xz-utils \
+            tk-dev \
+            libxml2-dev \
+            libxmlsec1-dev \
+            libffi-dev \
+            liblzma-dev
+```
+
+Install any specific `python` version you want
+
+```bash
+$ pyenv install 3.9.0
+```
+
+#### Extra commands
+
+☝ [Table of contents](#table-of-contents)
+
+List all available versions
+
+```bash
+$ pyenv install -l
+```
+
+List all available versions in your local machine
+
+```bash
+$ pyenv versions
+* system (set by $HOME/.pyenv/version)
+  3.6.11
+  3.6.12
+  3.8.5
+  3.9.0
+```
+
+Show version in local context
+
+```bash
+$ pyenv local
+3.8.5
+
+# or this when is not set
+$ pyenv local
+pyenv: no local version configured for this directory
+```
+
+Set a version for local context
+
+```bash
+$ pyenv local 3.9.0
+
+$ pyenv versions
+  system
+  3.6.11
+  3.6.12
+  3.8.5
+* 3.9.0 (set by /path/to/a/folder/.python-version)
+
+$ cat .python-version
+3.9.0
+```
+
+Check which version (or path to binary) is executing `pip` in your specific context
+
+```bash
+$ pyenv which pip
+$HOME/.pyenv/versions/3.8.5/bin/pip
+$HOME/.local/bin/pip
+```
+
+#### Update
+
+☝ [Table of contents](#table-of-contents)
+
+Latest development version (latest commit in github repo)
+
+```bash
+$ cd $(pyenv root)
+$ git pull
+```
+
+Specific version (using tag)
+
+```bash
+$ cd $(pyenv root)
+$ git fetch
+$ git tag
+$ git checkout v1.2.21
+```
+
+## Extra commands
+
+☝ [Table of contents](#table-of-contents)
+
+Check version
 
 ```bash
 $ python --version
@@ -10,7 +224,7 @@ $ python --version
 $ python3 --version
 ```
 
-Get `python` binary paths
+Check binary path
 
 ```bash
 $ which python
@@ -20,50 +234,39 @@ $ which python3
 /path/to/python3
 ```
 
-Install from `ppa:deadsnakes/ppa` repository, more info [here](https://python.tutorials24x7.com/blog/how-to-install-python-3-8-on-ubuntu-1804-lts)
-
-```bash
-# update available packages
-$ sudo apt update
-
-# install prerequisites to use add-apt-repository
-$ sudo apt install software-properties-common
-
-# add `deadsnakes` package archive
-$ sudo add-apt-repository ppa:deadsnakes/ppa
-
-# update available packages, including last package archive included
-$ sudo apt update
-
-# install python 3.8
-$ sudo apt install python3.8
-```
-
-Start up a minimal http server
+Start `http` server
 
 ```bash
 # Python 3
-$ python3.7 -m http.server 8000 --bind 0.0.0.0
+$ python3 -m http.server 8000 --bind 0.0.0.0
 
 # Python 2
 $ python -m SimpleHTTPServer
 ```
 
-## [pip](https://github.com/pypa/pip) - The Python package installer
+## pip
 
-Download it:
+☝ [Table of contents](#table-of-contents)
+
+[pypa/pip](https://github.com/pypa/pip) - The Python package installer
+
+### Install
+
+☝ [Table of contents](#table-of-contents)
+
+**Avoid** installing it via `apt`
+
+~`$ sudo apt install python3-pip`~
+
+Download `python` installer script
 
 ```bash
 $ wget https://bootstrap.pypa.io/get-pip.py
 ```
 
-Prefer to not install it via `apt` packages:
+Install `pip` at `user` level (inside `$HOME`)
 
-```bash
-$ sudo apt install python3-pip
-```
-
-Install `pip` for your user (inside `$HOME`) using the path to your core python binary
+Check to use right `python` version (through binary path) when executing script
 
 ```bash
 # --user
@@ -74,26 +277,39 @@ $ $(which python) get-pip.py --user
 $ $(which python3) get-pip.py --user
 ```
 
-Verify paths to `pip` if `pip` was installed successfully for your user
+Verify `pip`'s path
+
+If `pip` was installed successfully, `pip` should be inside `$HOME/.local/bin`
 
 ```bash
 $ ls -la $(which pip)
 -rwxrwxr-x 1 $USER $USER 223 ............ $HOME/.local/bin/pip
+
 $ ls -la $(which pip3)
 -rwxrwxr-x 1 $USER $USER 223 ............ $HOME/.local/bin/pip3
+
 $ ls -la $(which pip3.8)
 -rwxrwxr-x 1 $USER $USER 223 ............ $HOME/.local/bin/pip3.8
-
-# this will create a pip command appended to the python version used to install it
-$ pip3.8
 ```
 
-Change `pip3` to `pip` (*dirty trick*) **[OPTIONAL]**
+Update `pip`, `setuptools` and `wheel`
 
 ```bash
+$ pip install -U pip setuptools wheel
+```
+
+### Troubleshooting
+
+☝ [Table of contents](#table-of-contents)
+
+[WORKAROUND] - Make `pip3` command points to `pip`
+
+```bash
+# global installed
 $ pip --version
 pip 20.1 from /usr/local/lib/python2.7/dist-packages/pip (python 2.7)
 
+# global installed
 $ pip3 --version
 pip 20.1 from /usr/local/lib/python3.7/dist-packages/pip (python 3.7)
 
@@ -125,14 +341,6 @@ $ ls -la /usr/local/bin/pip*
 $ cp /path/to/pip3 /path/to/pip
 ```
 
-Update `pip` and *core packages*: **setuptools**, **wheel**
-
-```bash
-$ pip install -U pip setuptools wheel
-```
-
-### Troubleshooting
-
 Avoid warnings because of `locale`
 
 ```bash
@@ -141,14 +349,14 @@ $ export LC_ALL=C
 
 Warning: `> Defaulting to user installation because normal site-packages is not writeable`
 
-Idea behind (because `pip` was installed with `--user` parameter)
-- Don't have `/usr/local/lib/pythonX.Y/site-packages`
-- Don't have `/usr/lib/python3/site-packages`
-- Have `$HOME/.local/lib/pythonX.Y/site-packages`
+- Idea behind (because `pip` was installed with `--user` parameter)
+    - Don't have `/usr/local/lib/pythonX.Y/site-packages`
+    - Don't have `/usr/lib/python3/site-packages`
+    - Have `$HOME/.local/lib/pythonX.Y/site-packages`
 
-Things to verify:
+- Things to verify
 
-- Global `site-packages`:
+    Global `site-packages`
 
     ```bash
     $ python3 -c 'import site; print(site.getsitepackages())'
@@ -169,15 +377,14 @@ Things to verify:
     ENABLE_USER_SITE: True
     ```
 
-- Local `site-packages`:
+    Local `site-packages`
 
     ```bash
     $ python3 -m site --user-site
     $HOME/.local/lib/python3.8/site-packages
     ```
 
-### Resources
-
+Extra links
 - [Installing with get-pip.py](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
 - [User Guide](https://pip.pypa.io/en/stable/user_guide/)
 - [Github: Releases](https://github.com/pypa/pip/releases)
@@ -266,139 +473,6 @@ $ lsvirtualenv
 
 # change working directory to virtual environment folder
 $ cdvirtualenv
-```
-
-### Pyenv
-
-#### Setup
-
-Clone `pyenv` github repo into `$HOME/.pyenv`
-
-```bash
-$  git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
-```
-
-Define environment variables needed
-
-```bash
-# inside your .bashrc file
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-```
-
-Add `pyenv init` validation to my shell
-
-```bash
-# inside your .bashrc file
-if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-fi
-```
-
-Restart your shell
-
-```bash
-$ exec $SHELL
-```
-
-Install [Python dependencies](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
-
-```bash
-$ sudo apt-get update && \
-    sudo apt-get install \
-        --no-install-recommends \
-            make \
-            build-essential \
-            libssl-dev \
-            zlib1g-dev \
-            libbz2-dev \
-            libreadline-dev \
-            libsqlite3-dev \
-            wget \
-            curl \
-            llvm \
-            libncurses5-dev \
-            xz-utils \
-            tk-dev \
-            libxml2-dev \
-            libxmlsec1-dev \
-            libffi-dev \
-            liblzma-dev
-```
-
-List all available versions
-
-```bash
-$ pyenv install -l
-```
-
-Install version you want
-
-```bash
-$ pyenv install 3.7.8
-```
-
-List all your available versions installed in your system
-
-```bash
-$ pyenv versions
-* system (set by $HOME/.pyenv/version)
-  3.6.11
-  3.6.12
-  3.8.5
-  3.9.0
-```
-
-Show version in local context
-
-```bash
-$ pyenv local
-3.8.5
-# or this when is not set
-pyenv: no local version configured for this directory
-```
-
-Set a version for local context
-
-```bash
-$ pyenv local 3.9.0
-
-$ pyenv versions
-  system
-  3.6.11
-  3.6.12
-  3.8.5
-* 3.9.0 (set by /path/to/a/folder/.python-version)
-
-$ cat .python-version
-3.9.0
-```
-
-Check which version (or path to binary) is executing `pip` in your specific context
-
-```bash
-$ pyenv which pip
-$HOME/.pyenv/versions/3.8.5/bin/pip
-$HOME/.local/bin/pip
-```
-
-#### Update
-
-Latest development version (latest commit in github repo)
-
-```bash
-$ cd $(pyenv root)
-$ git pull
-```
-
-Specific version (using tag)
-
-```bash
-$ cd $(pyenv root)
-$ git fetch
-$ git tag
-$ git checkout v1.2.21
 ```
 
 
