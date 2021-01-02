@@ -1399,6 +1399,8 @@ $ snap install vlc
 
 ☝ [Table of contents](#table-of-contents)
 
+Also called VSCode
+
 Install via `.deb`
 
 TODO
@@ -1429,6 +1431,19 @@ Related links:
 - [FAQ](https://code.visualstudio.com/docs/supporting/faq)
 - [User and Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings)
 - [How can you export the Visual Studio Code extension list?](https://stackoverflow.com/questions/35773299/how-can-you-export-the-visual-studio-code-extension-list)
+
+    ```bash
+    $ code --list-extensions
+
+    $ code-insiders --list-extensions
+
+    $ code --list-extensions | xargs -L 1 echo code --install-extension
+
+    $ code-insiders --list-extensions | xargs -L 1 echo code-insiders --install-extension
+    ```
+
+    [List of extensions](vscode-extensions.md)
+
 - [How do I remove VS Code & settings from Ubuntu?](https://superuser.com/questions/1113022/how-do-i-remove-vs-code-settings-from-ubuntu)
 - [How to change indentation in Visual Studio Code?](https://stackoverflow.com/questions/34174207/how-to-change-indentation-in-visual-studio-code)
 
