@@ -1412,6 +1412,9 @@ Change to `DuckDuckGo` search engine
 - [ordered by date](https://www.reddit.com/r/duckduckgo/comments/3glmr1/ordered_by_date/)
 - [The ultimate guide to DuckDuckGo](https://brettterpstra.com/2019/03/07/the-ultimate-guide-to-duckduckgo/)
 
+Related links
+- [CRXcavator](https://crxcavator.io/) - Submit a Chrome Extension ID to scan
+
 ### 6.5. [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html) - play multimedia files
 
 ☝ [Table of contents](#table-of-contents)
