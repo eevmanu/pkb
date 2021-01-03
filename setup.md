@@ -918,6 +918,9 @@ $ wget \
     https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 ```
 
+Useful internal urls:
+- [chrome://system/](chrome://system/) - System diagnostic data
+
 Useful Extensions
 - [ActivityWatch Web Watcher](https://chrome.google.com/webstore/detail/activitywatch-web-watcher/nglaklhklhcoonedhgnpgddginnjdadi)
 - [Canvas Blocker (Fingerprint protect)](https://chrome.google.com/webstore/detail/canvas-blocker-fingerprin/nomnklagbgmgghhjidfhnoelnjfndfpd/)
