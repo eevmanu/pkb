@@ -2893,6 +2893,10 @@ List
 
     [Flathub](https://flathub.org/apps/details/org.gnome.meld)
 
+    Personal settings
+    - `Preferences` - `Display` - `Highlight current line`
+    - `Preferences` - `Display` - `Show line numbers`
+
 - [Calibre](https://calibre-ebook.com/) - ebook manager
 
     [Github](https://github.com/kovidgoyal/calibre)
