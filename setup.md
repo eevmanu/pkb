@@ -10,6 +10,7 @@
     - [3.1. Bluetooth](#31-bluetooth)
     - [3.2. Wireless](#32-wireless)
     - [3.3. Screen / Monitor](#33-screen--monitor)
+    - [3.4. Keyboard - Keychron k4 v1](#34-keyboard---keychron-k4-v1)
 - [4. Revert partial upgrade PopOS verison](#4-revert-partial-upgrade-popos-verison)
 - [5. Linux software distributions](#5-linux-software-distributions)
     - [5.1. Snapcraft](#51-snapcraft)
@@ -35,23 +36,24 @@
     - [6.17. Activity Watch - time tracker](#617-activity-watch---time-tracker)
     - [6.18. TeamViewer - remote control](#618-teamviewer---remote-control)
     - [6.19. OBS Studio - streaming](#619-obs-studio---streaming)
-    - [6.20. DBeaver - database tool](#620-dbeaver---database-tool)
-    - [6.21. BleachBit - clean disk space](#621-bleachbit---clean-disk-space)
-    - [6.22. Stacer - monitor system resources](#622-stacer---monitor-system-resources)
-    - [6.23. Wireshark - monitor network traffic](#623-wireshark---monitor-network-traffic)
-    - [6.24. Dropbox - online storage](#624-dropbox---online-storage)
-    - [6.25. scrcpy - control android device from your computer](#625-scrcpy---control-android-device-from-your-computer)
-    - [6.26. droidcam - turn mobile device into webcam](#626-droidcam---turn-mobile-device-into-webcam)
-    - [6.27. Thinkorswim - Trading Platforms](#627-thinkorswim---trading-platforms)
-    - [6.28. Virtualbox - virtualization](#628-virtualbox---virtualization)
-    - [6.29. Markdown editor apps](#629-markdown-editor-apps)
-        - [6.29.1. Joplin](#6291-joplin)
-        - [6.29.2. Marktext](#6292-marktext)
-        - [6.29.3. vnote](#6293-vnote)
-        - [6.29.4. PKB alternatives](#6294-pkb-alternatives)
-    - [6.30. Math](#630-math)
-    - [6.31. Finance](#631-finance)
-    - [6.32. Extra](#632-extra)
+    - [6.20. Autokey - desktop automation utility](#620-autokey---desktop-automation-utility)
+    - [6.21. DBeaver - database tool](#621-dbeaver---database-tool)
+    - [6.22. BleachBit - clean disk space](#622-bleachbit---clean-disk-space)
+    - [6.23. Stacer - monitor system resources](#623-stacer---monitor-system-resources)
+    - [6.24. Wireshark - monitor network traffic](#624-wireshark---monitor-network-traffic)
+    - [6.25. Dropbox - online storage](#625-dropbox---online-storage)
+    - [6.26. scrcpy - control android device from your computer](#626-scrcpy---control-android-device-from-your-computer)
+    - [6.27. droidcam - turn mobile device into webcam](#627-droidcam---turn-mobile-device-into-webcam)
+    - [6.28. Thinkorswim - Trading Platforms](#628-thinkorswim---trading-platforms)
+    - [6.29. Virtualbox - virtualization](#629-virtualbox---virtualization)
+    - [6.30. Markdown editor apps](#630-markdown-editor-apps)
+        - [6.30.1. Joplin](#6301-joplin)
+        - [6.30.2. Marktext](#6302-marktext)
+        - [6.30.3. vnote](#6303-vnote)
+        - [6.30.4. PKB alternatives](#6304-pkb-alternatives)
+    - [6.31. Math](#631-math)
+    - [6.32. Finance](#632-finance)
+    - [6.33. Extra](#633-extra)
 - [7. Commands](#7-commands)
     - [7.1. git - version control manager](#71-git---version-control-manager)
     - [7.2. docker - containers](#72-docker---containers)
@@ -2279,7 +2281,6 @@ $ sudo apt update
 $ sudo apt install obs-studio
 ```
 
-### 6.20. [DBeaver](https://dbeaver.io/) - database tool
 ### 6.20. Autokey - desktop automation utility
 
 ☝ [Table of contents](#table-of-contents)
@@ -2317,6 +2318,7 @@ $ sudo apt remove autokey-gtk &&
     sudo apt autoremove
 ```
 
+### 6.21. [DBeaver](https://dbeaver.io/) - database tool
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2333,7 +2335,7 @@ $ flatpak install flathub io.dbeaver.DBeaverCommunity
 $ flatpak run io.dbeaver.DBeaverCommunity
 ```
 
-### 6.21. [BleachBit](https://www.bleachbit.org/) - clean disk space
+### 6.22. [BleachBit](https://www.bleachbit.org/) - clean disk space
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2358,7 +2360,7 @@ $ cp bleachbit.py $HOME/bin/bleachbit
 $ rm -rf $HOME/bleachbit/
 ```
 
-### 6.22. Stacer - monitor system resources
+### 6.23. Stacer - monitor system resources
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2374,7 +2376,7 @@ $ sudo apt-get update
 $ sudo apt-get install stacer -y
 ```
 
-### 6.23. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
+### 6.24. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2403,7 +2405,7 @@ Related links
 - [How to Install and Use Wireshark on Ubuntu](https://linuxhint.com/install_wireshark_ubuntu/)
 - [How to install Wireshark](https://askubuntu.com/questions/700712/how-to-install-wireshark)
 
-### 6.24. [Dropbox](https://www.dropbox.com/install-linux) - online storage
+### 6.25. [Dropbox](https://www.dropbox.com/install-linux) - online storage
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2440,7 +2442,7 @@ Add to `Startup Applications`
 - Enter `dropbox` (should appear if was installed via `flatpak`)
 - Confirm to add it
 
-### 6.25. scrcpy - control android device from your computer
+### 6.26. scrcpy - control android device from your computer
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2504,7 +2506,7 @@ Related links
 - 2018-05-14 - [Open Source Project: Scrcpy now works wirelessly!](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/)
 - [sisco311/scrcpy-snap](https://github.com/sisco311/scrcpy-snap)
 
-### 6.26. [droidcam](https://www.dev47apps.com/) - turn mobile device into webcam
+### 6.27. [droidcam](https://www.dev47apps.com/) - turn mobile device into webcam
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2636,7 +2638,7 @@ Categories=GNOME;GTK;Video;
 Related links
 - [Linux instructions](https://www.dev47apps.com/droidcam/linux/)
 
-### 6.27. [Thinkorswim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.page) - Trading Platforms
+### 6.28. [Thinkorswim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.page) - Trading Platforms
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2762,7 +2764,7 @@ Related links
 - [Installation on Linux Using the Zulu Docker Registry](https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOLinuxUsingZuluDockerRegistry.htm)
 <!-- https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOnLinuxUsingAPTRepository.htm -->
 
-### 6.28. [Virtualbox](https://www.virtualbox.org/) - virtualization
+### 6.29. [Virtualbox](https://www.virtualbox.org/) - virtualization
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2796,9 +2798,9 @@ Extra packages when installed (6.1.10 <-> 6.1.14)
 - [OVA](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/) (Open Virtualization Format)
 - [ISO](https://www.microsoft.com/en-us/software-download/windows10ISO)
 
-### 6.29. Markdown editor apps
+### 6.30. Markdown editor apps
 
-#### 6.29.1. [Joplin](https://joplinapp.org/)
+#### 6.30.1. [Joplin](https://joplinapp.org/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2836,7 +2838,7 @@ Create `.desktop` file
 # TODO
 ```
 
-#### 6.29.2. [Marktext](https://marktext.app/)
+#### 6.30.2. [Marktext](https://marktext.app/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2907,7 +2909,7 @@ Config folder - `$HOME/.config/marktext`
 Related links
 - Fix issue with [icon](https://askubuntu.com/questions/333133/how-to-set-app-icon-in-the-desktop-file-of-an-ubuntu-touch-application)
 
-#### 6.29.3. [vnote](https://vnotex.github.io/vnote/en_us/)
+#### 6.30.3. [vnote](https://vnotex.github.io/vnote/en_us/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2935,7 +2937,7 @@ Directories needed
 - `$HOME/.local/share/VNote/`
 - `$HOME/.local/share/VNote-2.9.1-x86_64.AppImage/`
 
-#### 6.29.4. PKB alternatives
+#### 6.30.4. PKB alternatives
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2968,7 +2970,7 @@ To manage a Personal Knowledge Base:
 - [Zotero](https://www.zotero.org/)
 - [ZETTELKASTEN - The Archive](https://zettelkasten.de/the-archive/)
 
-### 6.30. Math
+### 6.31. Math
 
 List
 
@@ -2981,14 +2983,14 @@ Related links
 
 - [What’s another good online calculator like Desmos, but without the graphing, and more space for equations?](https://www.quora.com/What%E2%80%99s-another-good-online-calculator-like-Desmos-but-without-the-graphing-and-more-space-for-equations/answer/Jules-Opeth-Manson)
 
-### 6.31. Finance
+### 6.32. Finance
 
 List
 
 - [GNU Cash](https://flathub.org/apps/details/org.gnucash.GnuCash)
 - [firefly-iii](https://github.com/firefly-iii/firefly-iii)
 
-### 6.32. Extra
+### 6.33. Extra
 
 - [Audacity](https://www.audacityteam.org/) - Free, open source, cross-platform audio software
 
