@@ -784,6 +784,98 @@ Deactive HiDPI Daemon if CPU spike without no reason
     - [HiDPI performance issues?](https://www.reddit.com/r/gnome/comments/7j5lkh/hidpi_performance_issues/)
     - [All About the HiDPI Daemon](https://blog.system76.com/post/174414833678/all-about-the-hidpi-daemon)
 
+### 3.4. Keyboard - Keychron k4 v1
+
+☝ [Table of contents](#table-of-contents)
+
+In `v1` a set of keys in a specific order didn't make easy my shortcuts, reason why I take the decision to remap for my specific needs.
+
+Retrieve info about keycaps
+
+```bash
+$ xmodmap -pke > .Xmodmap
+```
+
+Detect keycode I'm pressing
+
+```bash
+$ xev -event keyboard
+```
+
+Related links
+- [How to remap or swap special keyboard keys in Linux?](https://ictsolved.github.io/remap-key-in-linux/)
+- [Remap keys in the keyboard in Ubuntu](https://dev.to/0xbf/remap-keys-in-the-keyboard-in-ubuntu-5a36)
+
+Map:
+- `home` -> `del`
+- `end` -> `home`
+- `pgup` -> `end`
+- `pgdn` -> `pgup`
+- `del` -> `pgdown`
+
+I use two `.desktop` files for this
+
+Create `$HOME/.local/share/applications/keychronk4map-apply.desktop`
+
+```ini
+[Desktop Entry]
+Name=Apply Keychron K4 keycap map
+Description=Change map on key caps to adapt change on my keychron k4 v1
+Exec=xmodmap -e "keycode 110 = Delete NoSymbol Delete NoSymbol Delete" && xmodmap -e "keycode 115 = Home NoSymbol Home NoSymbol Home" && xmodmap -e "keycode 112 = End NoSymbol End NoSymbol End" && xmodmap -e "keycode 117 = Prior NoSymbol Prior NoSymbol Prior" && xmodmap -e "keycode 119 = Next NoSymbol Next NoSymbol Next"
+Terminal=false
+Type=Application
+```
+
+Create `$HOME/.local/share/applications/keychronk4map-rollback.desktop`
+
+```ini
+[Desktop Entry]
+Name=Rollback keychron k4 keycap map
+Description=Change map to normal map instead of adapt for specific use on my keychron k4 v1 keyboard
+Exec=xmodmap -e "keycode 110 = Home NoSymbol Home NoSymbol Home" && xmodmap -e "keycode 115 = End NoSymbol End NoSymbol End" && xmodmap -e "keycode 112 = Prior NoSymbol Prior NoSymbol Prior" && xmodmap -e "keycode 117 = Next NoSymbol Next NoSymbol Next" && xmodmap -e "keycode 119 = Delete NoSymbol Delete NoSymbol Delete"
+Terminal=false
+Type=Application
+```
+
+Create `$HOME/bin/keychronk4map-apply.sh`
+
+```bash
+xmodmap -e "keycode 110 = Delete NoSymbol Delete NoSymbol Delete" && \
+xmodmap -e "keycode 115 = Home NoSymbol Home NoSymbol Home" && \
+xmodmap -e "keycode 112 = End NoSymbol End NoSymbol End" && \
+xmodmap -e "keycode 117 = Prior NoSymbol Prior NoSymbol Prior" && \
+xmodmap -e "keycode 119 = Next NoSymbol Next NoSymbol Next"
+```
+
+Create `$HOME/bin/keychronk4map-rollback.sh`
+
+```bash
+xmodmap -e "keycode 110 = Home NoSymbol Home NoSymbol Home" && \
+xmodmap -e "keycode 115 = End NoSymbol End NoSymbol End" && \
+xmodmap -e "keycode 112 = Prior NoSymbol Prior NoSymbol Prior" && \
+xmodmap -e "keycode 117 = Next NoSymbol Next NoSymbol Next" && \
+xmodmap -e "keycode 119 = Delete NoSymbol Delete NoSymbol Delete"
+```
+
+Assign execution permissions to scripts
+
+```bash
+$ chmod u+x $HOME/bin/keychronk4map-apply.sh
+$ chmod u+x $HOME/bin/keychronk4map-rollback.sh
+```
+
+Build cache database of MIME types handled by desktop files
+
+```bash
+$ update-desktop-database $HOME/.local/share/applications/
+```
+
+TODO
+- missing make desktop files work
+- missing have a shortcut (could be a script) to execute when startup application
+- remap `f1` to `f12` to right keycodes
+- find a solution to `print screen`
+
 ## 4. Revert partial upgrade PopOS verison
 
 ☝ [Table of contents](#table-of-contents)
