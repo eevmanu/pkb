@@ -1022,12 +1022,19 @@ Useful Extensions
 - [Cookie-AutoDelete](https://chrome.google.com/webstore/detail/cookie-autodelete/fhcgjolkccmbidfldomjliifgaodjagh) - [GitHub](https://github.com/Cookie-AutoDelete/Cookie-AutoDelete)
 - [Cookie Editor](https://chrome.google.com/webstore/detail/cookie-editor/iphcomljdfghbkdcfndaijbokpgddeno)
 - [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg)
+- [Extensity](https://chrome.google.com/webstore/detail/extensity/jjmflmamggggndanpgfnpelongoepncg)
 - [GNOME Shell integration](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
 - [GoFullPage - Full Page Screen Capture](https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl)
 - [History Trends Unlimited](https://chrome.google.com/webstore/detail/history-trends-unlimited/pnmchffiealhkdloeffcdnbgdnedheme)
 - [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
 - [Improve YouTube! (Open-Source for YouTube)](https://chrome.google.com/webstore/detail/improve-youtube-open-sour/bnomihfieiccainjcjblhegjgglakjdd)
 - [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
+- [Just Read](https://chrome.google.com/webstore/detail/just-read/dgmanlpmmkibanfdgjocnabmcaclkmod/)
+
+    Create extension for `Open the Just Read format for the current page` - `Ctrl+Shift+1`
+
+    [Dark theme](https://gist.github.com/dflock/d102df29dae3229481af71b2ff91aa70)
+
 - [LastPass: Free Password Manager](https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd)
 - [LIFX Web Control](https://chrome.google.com/webstore/detail/lifx-web-control/ohedkkoibkekbipjoeehpofmjbmmkhin)
 - [Link to Text Fragment](https://chrome.google.com/webstore/detail/link-to-text-fragment/pbcodcjpfjdpcineamnnmbkkmkdpajjg)
@@ -1050,6 +1057,10 @@ Useful Extensions
     - Tampermonkey
     - Toggle track
     - URL render
+    - [Screen Shader | Smart Screen Tinting](https://chrome.google.com/webstore/detail/screen-shader-smart-scree/fmlboobidmkelggdainpknloccojpppi)
+    - [MarkUp For Chrome](https://chrome.google.com/webstore/detail/markup-for-chrome/llbkdcpbiogplgmefnkbgcdfiopfphbc)
+    - [AlphaText - Make text readable!](https://chrome.google.com/webstore/detail/alphatext-make-text-reada/lpcaoilgpobajbkiamaojipjddpkkida)
+    - [Volume Master](https://chrome.google.com/webstore/detail/volume-master/jghecgabfgfdldnmbfkhmffcabddioke)
 
 Personal settings
 - [How to restore the default Google search engine in Chrome?](https://superuser.com/questions/578228/how-to-restore-the-default-google-search-engine-in-chrome)
