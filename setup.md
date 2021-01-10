@@ -2236,6 +2236,43 @@ $ sudo apt install obs-studio
 ```
 
 ### 6.20. [DBeaver](https://dbeaver.io/) - database tool
+### 6.20. Autokey - desktop automation utility
+
+☝ [Table of contents](#table-of-contents)
+
+[GitHub](https://github.com/autokey/autokey)
+
+Simulate install to verify which packages are going to be installed
+
+```bash
+# 2021-01-10
+$ apt install -s autokey-gtk
+...
+Inst python3-pyinotify (0.9.6-1.2ubuntu1 Ubuntu:20.04/focal [all])
+Inst wmctrl (1.07-7build1 Ubuntu:20.04/focal [amd64])
+Inst autokey-common (0.95.10-1 Ubuntu:20.04/focal [all])
+Inst gir1.2-appindicator3-0.1 (12.10.1+20.04.20200408.1-0ubuntu1 Ubuntu:20.04/focal [amd64])
+Inst libgtksourceview-3.0-common (3.24.11-2 Ubuntu:20.04/focal [all])
+Inst libgtksourceview-3.0-1 (3.24.11-2 Ubuntu:20.04/focal [amd64])
+Inst gir1.2-gtksource-3.0 (3.24.11-2 Ubuntu:20.04/focal [amd64])
+Inst autokey-gtk (0.95.10-1 Ubuntu:20.04/focal [all])
+...
+```
+
+Install it
+
+```bash
+$ sudo apt install autokey-gtk
+```
+
+Remove it
+
+```bash
+$ sudo apt remove autokey-gtk &&
+    sudo apt purge autokey-gtk &&
+    sudo apt autoremove
+```
+
 
 ☝ [Table of contents](#table-of-contents)
 
