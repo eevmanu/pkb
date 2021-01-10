@@ -1525,17 +1525,49 @@ Related links
 
 [GitHub](https://github.com/videolan/vlc)
 
+Simulate install to verify package version
+
+```bash
+# 2021-01-07
+$ apt install -s vlc
+...
+Inst vlc (3.0.9.2-1 Ubuntu:20.04/focal [amd64])
+...
+```
+
 Install via `apt`
 
 ```bash
 $ sudo apt install vlc
 ```
 
-Install via `Snap`
+Install via `flatpak` - [Flathub](https://flathub.org/apps/details/org.videolan.VLC)
+
+```bash
+$ flatpak install flathub org.videolan.VLC
+
+# run
+$ flatpak run org.videolan.VLC
+```
+
+Install via `snap`
 
 ```bash
 $ snap install vlc
 ```
+
+Shortucts
+- `e` - Next frame
+- `[` - speed down
+- `]` - speed up
+- `Shift + ⬅️` - move backward 3 sec
+- `Shift + ➡️` - move forward 3 sec
+- `Ctrl + ⬅️` - move backward 1 min
+- `Ctrl + ➡️` - move forward 1 min
+
+Related links
+- [Changelog](https://www.videolan.org/developers/vlc-branch/NEWS)
+- [Releases](https://www.videolan.org/vlc/releases/)
 
 ### 6.6. [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux) - code editor
 
