@@ -1012,6 +1012,7 @@ $ wget \
 
 Useful internal urls:
 - [chrome://system/](chrome://system/) - System diagnostic data
+- [chrome://extensions/shortcuts](chrome://extensions/shortcuts) - Extension shortcuts
 
 Useful Extensions
 - [ActivityWatch Web Watcher](https://chrome.google.com/webstore/detail/activitywatch-web-watcher/nglaklhklhcoonedhgnpgddginnjdadi)
