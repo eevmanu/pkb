@@ -100,22 +100,32 @@ $ source $HOME/.bashrc
 Related links
 - [Optional environment variables](https://golang.org/doc/install/source#environment)
 
+### Manage multiple Go versions
+
+☝ [Table of contents](#table-of-contents)
+
+Managing Go installations - [Installing multiple Go versions](https://golang.org/doc/manage-install#installing-multiple)
+
+Download (`go get`) any version
 
 ```bash
+$ go get golang.org/dl/go1.XX.YY
+
+# e.g.:
 $ go get golang.org/dl/go1.14.10
 ```
 
-Verify version
+Verify
 
 ```bash
 $ go1.14.10 version
-go1.14.10: not downloaded. Run 'go1.14.10 download' to install to {{ $HOME }}/sdk/go1.14.10
+go1.14.10: not downloaded. Run 'go1.14.10 download' to install to $HOME/sdk/go1.14.10
 
-$ ls -la `$GOPATH`/bin/
--rwxrwxr-x 1 {{ $USER }} {{ $USER }} 7050753 Oct 17 18:29 go1.14.10
+$ ls -la $GOPATH/bin/
+-rwxrwxr-x 1 $USER $USER 7050753 Oct 17 18:29 go1.14.10
 
-$ ls -la `$GOPATH`/src/
-drwxrwxr-x 3 {{ $USER }} {{ $USER }} 4096 Oct 17 18:29 golang.org
+$ ls -la $GOPATHl/src/
+drwxrwxr-x 3 $USER $USER 4096 Oct 17 18:29 golang.org
 ```
 
 Download version
@@ -135,7 +145,7 @@ Downloaded  78.6% ( 97268736 / 123767519 bytes) ...
 Downloaded  88.2% (109196288 / 123767519 bytes) ...
 Downloaded  97.6% (120828928 / 123767519 bytes) ...
 Downloaded 100.0% (123767519 / 123767519 bytes)
-Unpacking {{ $HOME }}/sdk/go1.14.10/go1.14.10.linux-amd64.tar.gz ...
+Unpacking $HOME/sdk/go1.14.10/go1.14.10.linux-amd64.tar.gz ...
 Success. You may now run 'go1.14.10'
 ```
 
@@ -145,11 +155,10 @@ Verify again
 $ go1.14.10 version
 go version go1.14.10 linux/amd64
 
-$ ls -la {{ $HOME }}/sdk/
-drwxr-xr-x 10 {{ $USER }} {{ $USER }} 4096 Oct 17 18:32 go1.14.10
+$ ls -la $HOME/sdk/
+drwxr-xr-x 10 $USER $USER 4096 Oct 17 18:32 go1.14.10
 ```
 
-## [Uninstall](https://golang.org/doc/install#uninstall)
 
 - Remove lines below from `$HOME/.bashrc` or `$HOME/.profile`
 
