@@ -385,6 +385,22 @@ Related links
 - [GOPATH in the VS Code Go extension](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension) (GitHub - microsoft/vscode-go - Wiki)
 - [Debugging Go code using VS Code](https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code) (GitHub - microsoft/vscode-go - Wiki)
 
+## Dependency management
+
+### Modules
+
+☝ [Table of contents](#table-of-contents)
+
+<!--
+TODO
+write more details about dependency management with Go Modules
+write if dep is still an option
+-->
+
+- [Tutorial: Create a module](https://golang.org/doc/tutorial/create-module.html) (Go - Documentation - Getting Started)
+- [Modules](https://github.com/golang/go/wiki/Modules) (GitHub - golang/go - Wiki)
+- [Modules](https://github.com/golang/vscode-go/blob/master/docs/modules.md) (GitHub - golang/vscode-go - Docs)
+
 
     ```bash
     $HOME/.config/Code - Insiders/User/settings.json
