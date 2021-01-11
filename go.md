@@ -1,8 +1,38 @@
+<!-- omit in toc -->
 # Go
 
-## [Install / Update / Upgrade](https://golang.org/doc/install#install)
+<!-- omit in toc -->
+## Table of contents
 
-Check latest go version [here](https://golang.org/dl/)
+- [Install](#install)
+    - [Manage multiple Go versions](#manage-multiple-go-versions)
+- [Uninstall](#uninstall)
+- [Useful commands](#useful-commands)
+- [VSCode Setup](#vscode-setup)
+- [Dependency management](#dependency-management)
+    - [Modules](#modules)
+- [Extra tools](#extra-tools)
+    - [Linters](#linters)
+    - [Logging / Debugger / Tracing / ...](#logging--debugger--tracing--)
+- [Language Server](#language-server)
+- [Important notes](#important-notes)
+- [Resources](#resources)
+    - [Learn / 101](#learn--101)
+    - [Project structures](#project-structures)
+    - [Interfaces](#interfaces)
+    - [Channels](#channels)
+    - [Concurrency](#concurrency)
+    - [Error handling](#error-handling)
+    - [Web applications](#web-applications)
+    - [Testing](#testing)
+    - [Benchmark](#benchmark)
+    - [Data tools](#data-tools)
+    - [Extra tools](#extra-tools-1)
+    - [Generics](#generics)
+    - [Algorithms / Data structures](#algorithms--data-structures)
+    - [Design patterns](#design-patterns)
+    - [Roadmap / Study Guides / Training / Interview Questions / Exercises / Problems / Examples / ...](#roadmap--study-guides--training--interview-questions--exercises--problems--examples--)
+
 
 ## Install
 
