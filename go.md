@@ -4,14 +4,9 @@
 
 Check latest go version [here](https://golang.org/dl/)
 
-Download, verify and install and delete unneeded files
 ## Install
 
 ☝ [Table of contents](#table-of-contents)
-
-[Download and install](https://golang.org/doc/install) - installation process, step by step
-
-[Downloads](https://golang.org/dl/) - to check latest `Go` version
 
 Download
 
@@ -19,7 +14,10 @@ Download
 $ wget \
     -O go.tar.gz \
     https://golang.org/dl/go1.15.6.linux-amd64.tar.gz
-# https://dl.google.com/go/go1.XX.Y.linux-amd64.tar.gz
+
+# $ wget \
+#     -O go.tar.gz \
+#     https://dl.google.com/go/go1.XX.Y.linux-amd64.tar.gz
 ```
 
 Verify
@@ -38,10 +36,15 @@ $ sudo tar --directory=/usr/local/ -xzf go.tar.gz
 $ rm go.tar.gz
 ```
 
-Add `Go` instalation path to `$PATH`
+Create `$HOME/go/bin` (aka `$GOPATH/bin` or `$GOBIN`) folder
 
+```bash
+$ mkdir -p $HOME/go/bin/
+```
 
-- Option 1, without `$GOROOT`
+Add `Go` installation path (`$GOROOT`) to `$PATH`
+
+- without set `$GOROOT`
 
     Add line below to `$HOME/.bashrc` or `$HOME/.profile`
 
@@ -49,7 +52,7 @@ Add `Go` instalation path to `$PATH`
     export PATH=$PATH:/usr/local/go/bin
     ```
 
-- Option 2, with `$GOROOT`
+- with `$GOROOT`
 
     Add line below to `$HOME/.bashrc` or `$HOME/.profile`
 
@@ -58,21 +61,9 @@ Add `Go` instalation path to `$PATH`
     export PATH=$PATH:$GOROOT/bin
     ```
 
-Source recent changes
-
-```bash
-$ source $HOME/.bashrc
-```
-
-Create `$HOME/go/bin` folder
-
-```bash
-$ mkdir -p $HOME/go/bin/
-```
-
 Add `$GOPATH`
 
-- Option 1, without `$GOBIN`
+- with `$GOPATH`, without `$GOBIN`
 
     Add line below to `$HOME/.bashrc` or `$HOME/.profile`
 
@@ -81,13 +72,13 @@ Add `$GOPATH`
     export PATH=$PATH:$GOPATH/bin
     ```
 
-- Option 2, with `$GOBIN`
+- with `$GOPATH` and `$GOBIN`
 
     Add line below to `$HOME/.bashrc` or `$HOME/.profile`
 
     ```bash
-    export GOPATH="$HOME/go"
-    export GOBIN="$GOPATH/bin"
+    export GOPATH=$HOME/go
+    export GOBIN=$GOPATH/bin
     export PATH=$PATH:$GOBIN
     ```
 
@@ -98,6 +89,8 @@ $ source $HOME/.bashrc
 ```
 
 Related links
+- [Download and install](https://golang.org/doc/install) (Go - Documentation - Getting Started)
+- [Downloads](https://golang.org/dl/)
 - [Optional environment variables](https://golang.org/doc/install/source#environment)
 
 ### Manage multiple Go versions
