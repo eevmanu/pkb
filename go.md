@@ -97,8 +97,6 @@ Related links
 
 ☝ [Table of contents](#table-of-contents)
 
-Managing Go installations - [Installing multiple Go versions](https://golang.org/doc/manage-install#installing-multiple)
-
 Download (`go get`) any version
 
 ```bash
@@ -151,6 +149,9 @@ go version go1.14.10 linux/amd64
 $ ls -la $HOME/sdk/
 drwxr-xr-x 10 $USER $USER 4096 Oct 17 18:32 go1.14.10
 ```
+
+Related links
+- [Installing multiple Go versions](https://golang.org/doc/manage-install#installing-multiple) (Go - Documentation - Getting Started - Download and install - Managing Go installations)
 
 ## Uninstall
 
