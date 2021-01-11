@@ -467,6 +467,13 @@ $ go get -uv github.com/go-delve/delve/cmd/dlv
 
 [google/gops](https://github.com/google/gops) - A tool to list and diagnose Go processes currently running on your system
 
+## Language Server
+
+☝ [Table of contents](#table-of-contents)
+
+[gopls](https://github.com/golang/tools/blob/master/gopls/README.md) - gopls documentation - official language server for the Go language (part of [golang.org/x/tools](https://godoc.org/golang.org/x/tools) - [mirror] Go Tools - [GitHub](https://github.com/golang/tools/))
+- [doc/user.md](https://github.com/golang/tools/blob/master/gopls/doc/user.md) - User Guide
+- [doc/vscode.md](https://github.com/golang/tools/blob/master/gopls/doc/vscode.md) - VSCode
 
 ## Resources
 
