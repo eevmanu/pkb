@@ -157,8 +157,6 @@ Related links
 
 ☝ [Table of contents](#table-of-contents)
 
-Managing Go installations - Uninstalling Go - [Linux / macOS / FreeBSD](https://golang.org/doc/manage-install#linux-mac-bsd)
-
 Remove lines below from `$HOME/.bashrc` or `$HOME/.profile`
 
 ```bash
@@ -183,6 +181,9 @@ Remove cache folders (Command go - [Build and test caching](https://golang.org/c
 ```bash
 $ rm -rf $HOME/.cache/go-build/
 ```
+
+Related links
+- [Linux / macOS / FreeBSD](https://golang.org/doc/manage-install#linux-mac-bsd) (Go - Documentation - Getting Started - Download and install - Managing Go installations - Uninstalling Go)
 
 ## Useful commands
 
