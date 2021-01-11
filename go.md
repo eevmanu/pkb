@@ -159,29 +159,36 @@ $ ls -la $HOME/sdk/
 drwxr-xr-x 10 $USER $USER 4096 Oct 17 18:32 go1.14.10
 ```
 
+## Uninstall
 
-- Remove lines below from `$HOME/.bashrc` or `$HOME/.profile`
+☝ [Table of contents](#table-of-contents)
 
-    ```bash
-    export GOROOT=/usr/local/go
-    export GOPATH="$HOME/go"
-    export GOBIN="$GOPATH/bin"
+Managing Go installations - Uninstalling Go - [Linux / macOS / FreeBSD](https://golang.org/doc/manage-install#linux-mac-bsd)
 
-    export PATH=$PATH:$GOROOT/bin
-    export PATH=$PATH:$GOPATH/bin
-    # export PATH=$PATH:$GOBIN
-    ```
+Remove lines below from `$HOME/.bashrc` or `$HOME/.profile`
 
-- Remove installation path and GOPATH folders
+```bash
+export GOROOT=/usr/local/go
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
 
-    ```bash
-    $ sudo rm -rf /usr/local/go/
-    $ rm -rf $HOME/go/
-    # https://golang.org/cmd/go/#hdr-Build_and_test_caching
-    $ rm -rf $HOME/.cache/go-build/
-    ```
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin
+# export PATH=$PATH:$GOBIN
+```
 
-## Commands
+Remove installation path and `GOPATH` folders
+
+```bash
+$ sudo rm -rf /usr/local/go/
+$ rm -rf $HOME/go/
+```
+
+Remove cache folders (Command go - [Build and test caching](https://golang.org/cmd/go/#hdr-Build_and_test_caching))
+
+```bash
+$ rm -rf $HOME/.cache/go-build/
+```
 
 ```bash
 # build binary object file from code
