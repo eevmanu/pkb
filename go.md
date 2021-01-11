@@ -17,7 +17,7 @@
 - [Language Server](#language-server)
 - [Important notes](#important-notes)
 - [Resources](#resources)
-    - [Learn / 101](#learn--101)
+    - [Learn / 101 / Beginner / Entry-level](#learn--101--beginner--entry-level)
     - [Project structures](#project-structures)
     - [Interfaces](#interfaces)
     - [Channels](#channels)
@@ -485,66 +485,47 @@ Naming convention on `lowercase`: on first letter to declare xxx as private
 
 ## Resources
 
-- Structure:
-    - Learn / 101:
-    - Language specific rules:
-    - Setup VS Code:
+### Learn / 101 / Beginner / Entry-level
 
-    - Project structures:
+☝ [Table of contents](#table-of-contents)
 
-    - Interfaces:
-    - Channels:
-    - Concurrency - Parallelism - Multiprocessing - Multithreading - Asynchronous(async/await):
-
-    - Error handling:
-    - Web Frameworks:
-    - Testing:
-
-    - Data related tools:
-    - Data structures / Algorithm
-
-    - Best practices & Style Guide:
-    - Roadmap / Study Guides / Training / Interview Questions / Exercises / Problems / Examples
-    - Design patterns:
-
-    - Benchmark:
-    - Performance:
-
-    - Generics
-    - Unikernel
-
-    - Extra tools:
-
-    - News sources:
-    - Reddit:
-    - Youtube:
-    - Books:
-    - Podcasts:
-
-    - Why Go / Success stories
-
-    - Conferences
-
-    - Release notes / Changelog / Updates about the language:
-    - Interesting blogs from people / groups / companies:
-
-    - Highlighted posts:
-    - Final posts:
-
-
-- Learn / 101:
+Go - Documentation
+- [Getting Started](https://golang.org/doc/#getting-started)
+    - [Tutorial: Getting Started](https://golang.org/doc/tutorial/getting-started)
+- [Learning Go](https://golang.org/doc/#learning)
     - [A Tour of Go](https://tour.golang.org/)
+    - [How to write Go code](https://golang.org/doc/code.html)
     - [Effective Go](https://golang.org/doc/effective_go.html)
-    - [Gophercises](https://gophercises.com/)
-    - [Go 101](https://go101.org/article/101.html)
-        - [github](https://github.com/go101/go101)
-        - [Go Tips 101](https://go101.org/article/tips.html)
-        - [Go Details 101](https://go101.org/article/details.html)
-        - [Go FAQ 101](https://go101.org/article/unofficial-faq.html)
-    - [Go Code Review Comments](https://github.com/golang/go/wiki/CodeReviewComments)
-    - [Go by Example](https://gobyexample.com/)
-    - 2020-03-18 - [Getting started with Go guide](https://dominicstpierre.com/getting-started-with-go-guide) - [reddit](https://www.reddit.com/r/golang/comments/fkw2rx/i_wrote_a_guide_for_beginners_wanting_to_get/) - [archive](https://web.archive.org/web/20201125045730/https://dominicstpierre.com/getting-started-with-go-guide)
+    - Diagnostics
+    - [FAQ](https://golang.org/doc/faq)
+    - [Tutorials](https://golang.org/doc/tutorial/)
+    - [Wiki](https://github.com/golang/go/wiki/)
+        - [Learn](https://github.com/golang/go/wiki/Learn)
+- [References](https://golang.org/doc/#references)
+    - Package Documentation
+    - Command Documentation
+    - Language Specification
+    - The Go Memory Model
+    - Release History
+- Articles
+    - [Blog](https://blog.golang.org/)
+    - ...
+- Talks
+    - Wiki - [Talks](https://github.com/golang/go/wiki/GoTalks) (last updated: 2018-08-18)
+    - [GoTalks](https://talks.golang.org/) - subdirectories per year
 
+[Go by Example](https://gobyexample.com/)
+
+[Go 101](https://go101.org/article/101.html) - [GitHub](https://github.com/go101/go101)
+- [Tips](https://go101.org/article/tips.html)
+- [Details](https://go101.org/article/details.html)
+- [FAQ](https://go101.org/article/unofficial-faq.html)
+
+[Gophercises](https://gophercises.com/)
+
+Related links
+- [Code Review Comments](https://github.com/golang/go/wiki/CodeReviewComments) (GitHub - golang/go - Wiki)
+- 2020-03-18 - [Getting started with Go guide](https://dominicstpierre.com/getting-started-with-go-guide) - [reddit](https://www.reddit.com/r/golang/comments/fkw2rx/i_wrote_a_guide_for_beginners_wanting_to_get/) - [archive](https://web.archive.org/web/20201125045730/https://dominicstpierre.com/getting-started-with-go-guide)
     - 2020-10-21 - [When Too Much Concurrency Slows You Down (Golang)](https://www.reddit.com/r/golang/comments/jfi21j/when_too_much_concurrency_slows_you_down_golang/)
     - 2020-09-01 - [Even in Go, concurrency is still not easy (with an example)](https://utcc.utoronto.ca/~cks/space/blog/programming/GoConcurrencyStillNotEasy) - [archive](https://web.archive.org/web/20201026045240/https://utcc.utoronto.ca/~cks/space/blog/programming/GoConcurrencyStillNotEasy) - [hn](https://news.ycombinator.com/item?id=24359650)
     - 2020-02-19 - [Advanced Go concurrency primitives](https://www.reddit.com/r/golang/comments/f6fzv2/advanced_go_concurrency_primitives/)
