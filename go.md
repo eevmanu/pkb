@@ -242,42 +242,24 @@ $ go generate
 $ go tool vet --shadow
 ```
 
+## VSCode Setup
 
-- Linters:
-    - [golangci/golangci-lint](https://github.com/golangci/golangci-lint) - Fast linters Runner for Go
-        - [linters](https://golangci-lint.run/usage/linters/)
-        ```bash
-        # to install
-        $ curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
-        ```
-    - [dominikh/go-tools - Staticcheck](https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck) - Go static analysis, detecting bugs, performance issues, and much more.
-    - [mgechev/revive](https://github.com/mgechev/revive) - ~6x faster, stricter, configurable, extensible, and beautiful drop-in replacement for golint.
-    - [kisielk/errcheck](https://github.com/kisielk/errcheck) - errcheck checks that you checked errors.
+☝ [Table of contents](#table-of-contents)
 
-- Debugger / Logging / Tracing / ...:
-    - [go-delve/delve](https://github.com/go-delve/delve) - Delve is a debugger for the Go programming language.
-        ```bash
-        $ go get -uv github.com/go-delve/delve/cmd/dlv
-        ```
-    - [davecgh/go-spew](https://github.com/davecgh/go-spew) - Implements a deep pretty printer for Go data structures to aid in debugging
-    - [y0ssar1an/q](https://github.com/y0ssar1an/q) - Quick and dirty debugging output for tired Go programmers
-    - [sanity-io/litter](https://github.com/sanity-io/litter) - Litter is a pretty printer library for Go data structures to aid in debugging and testing.
-    - [google/gops](https://github.com/google/gops) - A tool to list and diagnose Go processes currently running on your system
+[Go in Visual Studio Code](https://code.visualstudio.com/docs/languages/go)
 
-### VSCode GO extension
+[Extension](https://marketplace.visualstudio.com/items?itemName=golang.Go)
 
-- [Extension](https://marketplace.visualstudio.com/items?itemName=golang.Go)
-
-- [Settings](https://github.com/golang/vscode-go/blob/master/docs/settings.md)
-
-- [List of Tools](https://github.com/golang/vscode-go/blob/master/docs/tools.md)
+[GitHub](https://github.com/golang/vscode-go) - Go extension for Visual Studio Code
+- [docs/settings.md](https://github.com/golang/vscode-go/blob/master/docs/settings.md)
+- [docs/tools.md](https://github.com/golang/vscode-go/blob/master/docs/tools.md)
 
     <details>
     <summary>
-    Updated as 2020-07-27
+    List of Tools
     </summary>
 
-    ```
+    Updated as `2020-07-27`
     - dlv
     - fillstruct
     - go-outline
@@ -295,27 +277,34 @@ $ go tool vet --shadow
     - gotests
     - guru
     - impl
-    ```
 
     </details>
 
-- [Modules](https://github.com/golang/vscode-go/blob/master/docs/modules.md)
+Create alternative folder for VSCode Go extension tools, to use it as `GOPATH`
 
-- Create alternative folder to use as `GOPATH` for this modules
+```bash
+$ mkdir $HOME/vscodetools
+```
 
-    ```bash
-    $ mkdir $HOME/vscodetools
-    ```
+Change Go Tools path on VSCode User settings
 
-- Change on VSCode settings path for Go Tools
+```json
+{
+    ...
+    "go.toolsGopath": "{{ $HOME }}/vscodetools",
+    ...
+}
+```
 
-    ```json
-    {
-        ...
-        "go.toolsGopath": "{{ $HOME }}/vscodetools",
-        ...
-    }
-    ```
+- User Settings
+    - `$HOME/.config/Code - Insiders/User/settings.json`
+    - `$HOME/.config/Code/User/settings.json`
+
+Open VSCode and run `Go: Install/Update Tools`
+
+Related links
+- Wiki - [GOPATH in the VS Code Go extension](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
+- Wiki - [Debugging Go code using VS Code](https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code)
 
     <details>
     <summary>
