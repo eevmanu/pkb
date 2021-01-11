@@ -449,6 +449,24 @@ Linter is a tool that analyzes source code. Some use cases are:
 
 [jstemmer/gotags](https://github.com/jstemmer/gotags) - ctags-compatible tag generator for Go
 
+### Logging / Debugger / Tracing / ...
+
+☝ [Table of contents](#table-of-contents)
+
+[go-delve/delve](https://github.com/go-delve/delve) - Delve is a debugger for the Go programming language.
+
+```bash
+$ go get -uv github.com/go-delve/delve/cmd/dlv
+```
+
+[davecgh/go-spew](https://github.com/davecgh/go-spew) - Implements a deep pretty printer for Go data structures to aid in debugging
+
+[y0ssar1an/q](https://github.com/y0ssar1an/q) - Quick and dirty debugging output for tired Go programmers
+
+[sanity-io/litter](https://github.com/sanity-io/litter) - Litter is a pretty printer library for Go data structures to aid in debugging and testing.
+
+[google/gops](https://github.com/google/gops) - A tool to list and diagnose Go processes currently running on your system
+
 
 ## Resources
 
