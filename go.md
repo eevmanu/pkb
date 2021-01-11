@@ -243,39 +243,70 @@ $ go tool vet --shadow
 
 [Go in Visual Studio Code](https://code.visualstudio.com/docs/languages/go)
 
-[Extension](https://marketplace.visualstudio.com/items?itemName=golang.Go)
+[Go - Official Extension @ VSCode](https://marketplace.visualstudio.com/items?itemName=golang.Go)
+- [GitHub](https://github.com/golang/vscode-go)
+    - [docs/settings.md](https://github.com/golang/vscode-go/blob/master/docs/settings.md)
+    - [docs/tools.md](https://github.com/golang/vscode-go/blob/master/docs/tools.md)
+        <details>
+        <summary>
+        List of Tools
+        </summary>
 
-[GitHub](https://github.com/golang/vscode-go) - Go extension for Visual Studio Code
-- [docs/settings.md](https://github.com/golang/vscode-go/blob/master/docs/settings.md)
-- [docs/tools.md](https://github.com/golang/vscode-go/blob/master/docs/tools.md)
+        Updated as `2021-01-11`
+        <!-- TODO verify this an actual project in Go -->
+        <!--
+        Updated as `2020-07-27`
+        - dlv
+        - fillstruct
+        - go-outline
+        - go-symbols
+        - gocode
+        - gocode-gomod
+        - godef
+        - godoctor
+        - golint
+        - gomodifytags
+        - gopkgs
+        - goplay
+        - gorename
+        - goreturns
+        - gotests
+        - guru
+        - impl
+        - -->
+        - Go toolchain
+        - gocode
+        - gopkgs
+        - go-outline
+        - go-symbols
+        - guru
+        - gorename
+        - godoctor
+        - delve
+        - gomodifytags
+        - goplay
+        - impl
+        - gotests
+        - fillstruct
+        - Documentation
+            - gogetdoc
+            - godef
+            - godoc
+        - Formatting
+            - goreturns
+            - goimports
+            - gofmt
+            - goformat
+        - Diagnostics
+            - gotype-live
+            - golint
+            - staticcheck
+            - golangci-lint
+            - revive
 
-    <details>
-    <summary>
-    List of Tools
-    </summary>
+        </details>
 
-    Updated as `2020-07-27`
-    - dlv
-    - fillstruct
-    - go-outline
-    - go-symbols
-    - gocode
-    - gocode-gomod
-    - godef
-    - godoctor
-    - golint
-    - gomodifytags
-    - gopkgs
-    - goplay
-    - gorename
-    - goreturns
-    - gotests
-    - guru
-    - impl
-
-    </details>
-
-Create alternative folder for VSCode Go extension tools, to use it as `GOPATH`
+Create alternative folder for VSCode Go extension tools, to use it as `$GOPATH`
 
 ```bash
 $ mkdir $HOME/vscodetools
@@ -297,14 +328,33 @@ Change Go Tools path on VSCode User settings
 
 Open VSCode and run `Go: Install/Update Tools`
 
-Related links
-- Wiki - [GOPATH in the VS Code Go extension](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
-- Wiki - [Debugging Go code using VS Code](https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code)
+Personal Settings
 
-    <details>
-    <summary>
-    User Settings
-    </summary>
+```json
+{
+    // TODO
+    "go.autocompleteUnimportedPackages": true,
+    "go.toolsGopath": "{{ $HOME }}/vscodetools",
+    "go.docsTool": "",
+    "go.buildOnSave" : "",
+    "go.buildFlags" : "",
+    "go.vetOnSave" : "",
+    "go.vetFlags" : "",
+    "go.lintOnSave" : "",
+    "go.lintFlags" : "",
+    "go.lintTool" : "",
+    "go.testOnSave" : "",
+    "go.formatTool": "",
+    "[go]": {
+        "editor.formatOnSave": false
+    }
+}
+```
+
+Related links
+- [GOPATH in the VS Code Go extension](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension) (GitHub - microsoft/vscode-go - Wiki)
+- [Debugging Go code using VS Code](https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code) (GitHub - microsoft/vscode-go - Wiki)
+
 
     ```bash
     $HOME/.config/Code - Insiders/User/settings.json
