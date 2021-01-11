@@ -401,21 +401,54 @@ write if dep is still an option
 - [Modules](https://github.com/golang/go/wiki/Modules) (GitHub - golang/go - Wiki)
 - [Modules](https://github.com/golang/vscode-go/blob/master/docs/modules.md) (GitHub - golang/vscode-go - Docs)
 
+## Extra tools
+
+### Linters
+
+☝ [Table of contents](#table-of-contents)
+
+Linter is a tool that analyzes source code. Some use cases are:
+- programming errors
+- detect bugs
+- stylistic errors
+- suspicious constructs
+- static analysis
+- memory leaks
+- count SLOC
+- code standarizing
+- security issues
+- performance improvements
+- measure codebase health
+- spread awareness and ownership
+- manage technical debts
+
+[golangci/golangci-lint](https://github.com/golangci/golangci-lint) - Fast linters Runner for Go
+
+- List of [linters](https://golangci-lint.run/usage/linters/)
+
+- Install
 
     ```bash
-    $HOME/.config/Code - Insiders/User/settings.json
-    $HOME/.config/Code/User/settings.json
+    $ curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | \
+        sh -s -- -b $(go env GOPATH)/bin v1.24.0
     ```
 
-    </details>
+[dominikh/go-tools](https://github.com/dominikh/go-tools) - Go static analysis, detecting bugs, performance issues, and much more.
 
-- Open VSCode and run `Go: Install/Update Tools`
+- [cmd/staticcheck](https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck)
 
-### Go Language Server
+[mgechev/revive](https://github.com/mgechev/revive) - ~6x faster, stricter, configurable, extensible, and beautiful drop-in replacement for golint.
 
-- [Docs related to VSCode](https://github.com/golang/tools/blob/master/gopls/doc/vscode.md)
+[kisielk/errcheck](https://github.com/kisielk/errcheck) - errcheck checks that you checked errors.
 
-------------------------------------------------------------------------------------------------
+[mdempsky/gocode](https://github.com/mdempsky/gocode) - An autocompletion daemon for the Go programming language
+- < Go 1.8 or 1.10 - [nsf/gocode](https://github.com/nsf/gocode)
+- work with Go Modules - [stamblerre/gocode](https://github.com/stamblerre/gocode)
+
+[rogpeppe/godef](https://github.com/rogpeppe/godef) - Print where symbols are defined in Go source code
+
+[jstemmer/gotags](https://github.com/jstemmer/gotags) - ctags-compatible tag generator for Go
+
 
 ## Resources
 
