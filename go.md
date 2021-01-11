@@ -190,25 +190,42 @@ Remove cache folders (Command go - [Build and test caching](https://golang.org/c
 $ rm -rf $HOME/.cache/go-build/
 ```
 
+## Useful commands
+
+☝ [Table of contents](#table-of-contents)
+
 ```bash
 # build binary object file from code
 # (for libraries don't produce an executable file)
 $ go build
+```
 
+```bash
 # move binary object file to $GOPATH/bin/
 $ go install
-# e.g.
-$ go install github.com/eevmanu/xxxx
-# inside just one file with yyyy.go filename, distinct from folder name
 
+# e.g.
+$ go install github.com/xxxx/yyyy
+# inside just one file with yyyy.go filename, distinct from folder name
+```
+
+```bash
 # remove binary object files from $GOPATH/src/.../project/
 # internally go install use go clean
 $ go clean
 
-$ go test
-# e.g.
-$ go tests github.com/eevmanu/learninggo
+# removes all cached test results, but not cached build results
+$ go clean -testcache
+```
 
+```bash
+$ go test
+
+# e.g.
+$ go tests github.com/XXX/YYY
+```
+
+```bash
 $ go run
 
 $ go get
@@ -218,12 +235,13 @@ $ go env
 $ go vet
 
 $ go generate
+```
 
+```bash
 # check for shadowed variables
 $ go tool vet --shadow
 ```
 
-## Extra tools
 
 - Linters:
     - [golangci/golangci-lint](https://github.com/golangci/golangci-lint) - Fast linters Runner for Go
