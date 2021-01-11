@@ -5,40 +5,66 @@
 Check latest go version [here](https://golang.org/dl/)
 
 Download, verify and install and delete unneeded files
+## Install
+
+☝ [Table of contents](#table-of-contents)
+
+[Download and install](https://golang.org/doc/install) - installation process, step by step
+
+[Downloads](https://golang.org/dl/) - to check latest `Go` version
+
+Download
 
 ```bash
-$ cd $HOME
+$ wget \
+    -O go.tar.gz \
+    https://golang.org/dl/go1.15.6.linux-amd64.tar.gz
+# https://dl.google.com/go/go1.XX.Y.linux-amd64.tar.gz
+```
 
-# Download
-$ wget -O go.tar.gz https://golang.org/dl/go1.15.3.linux-amd64.tar.gz
-# OR
-# $ wget -O go.tar.gz https://dl.google.com/go/go1.XX.Y.linux-amd64.tar.gz
+Verify
 
-# Verify
-$ echo "010a88df924a81ec21b293b5da8f9b11c176d27c0ee3962dc1738d2352d3c02d go.tar.gz" | sha256sum --check
+```bash
+$ echo "3918e6cc85e7eaaa6f859f1bdbaac772e7a825b0eb423c63d3ae68b21f84b844 go.tar.gz" | \
+    sha256sum --check
 go.tar.gz: OK
+```
 
-# Install (untar)
+Install / Update (overwrite)
+
+```bash
 $ sudo rm -rf /usr/local/go/
 $ sudo tar --directory=/usr/local/ -xzf go.tar.gz
 $ rm go.tar.gz
 ```
 
-Add instalation path to `$PATH` and source it
+Add `Go` instalation path to `$PATH`
+
+
+- Option 1, without `$GOROOT`
+
+    Add line below to `$HOME/.bashrc` or `$HOME/.profile`
+
+    ```bash
+    export PATH=$PATH:/usr/local/go/bin
+    ```
+
+- Option 2, with `$GOROOT`
+
+    Add line below to `$HOME/.bashrc` or `$HOME/.profile`
+
+    ```bash
+    export GOROOT=/usr/local/go
+    export PATH=$PATH:$GOROOT/bin
+    ```
+
+Source recent changes
 
 ```bash
-# add lines below to $HOME/.bashrc or $HOME/.profile
-# option 1
-export PATH=$PATH:/usr/local/go/bin
-# option 2
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
-
-# ...and source it
 $ source $HOME/.bashrc
 ```
 
-Create `$HOME/go/bin` directory structure
+Create `$HOME/go/bin` folder
 
 ```bash
 $ mkdir -p $HOME/go/bin/
@@ -46,25 +72,34 @@ $ mkdir -p $HOME/go/bin/
 
 Add `$GOPATH`
 
-- [Optional environment variables](https://golang.org/doc/install/source#environment)
+- Option 1, without `$GOBIN`
+
+    Add line below to `$HOME/.bashrc` or `$HOME/.profile`
 
     ```bash
-    # add lines below to $HOME/.bashrc or $HOME/.profile
-    # option 1
     export GOPATH=$HOME/go
     export PATH=$PATH:$GOPATH/bin
-    # option 2
+    ```
+
+- Option 2, with `$GOBIN`
+
+    Add line below to `$HOME/.bashrc` or `$HOME/.profile`
+
+    ```bash
     export GOPATH="$HOME/go"
     export GOBIN="$GOPATH/bin"
     export PATH=$PATH:$GOBIN
-
-    # ...and source it
-    $ source $HOME/.bashrc
     ```
 
-## [Install multiple versions](https://golang.org/doc/manage-install#installing-multiple)
+Soruce recent changes
 
-Download any version you want
+```bash
+$ source $HOME/.bashrc
+```
+
+Related links
+- [Optional environment variables](https://golang.org/doc/install/source#environment)
+
 
 ```bash
 $ go get golang.org/dl/go1.14.10
