@@ -475,6 +475,14 @@ $ go get -uv github.com/go-delve/delve/cmd/dlv
 - [doc/user.md](https://github.com/golang/tools/blob/master/gopls/doc/user.md) - User Guide
 - [doc/vscode.md](https://github.com/golang/tools/blob/master/gopls/doc/vscode.md) - VSCode
 
+## Important notes
+
+☝ [Table of contents](#table-of-contents)
+
+Naming convention on `uppercase / capital`: on first letter to declare xxx as public
+
+Naming convention on `lowercase`: on first letter to declare xxx as private
+
 ## Resources
 
 - Structure:
