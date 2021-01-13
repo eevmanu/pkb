@@ -526,6 +526,12 @@ Go - Documentation
 Related links
 - [Code Review Comments](https://github.com/golang/go/wiki/CodeReviewComments) (GitHub - golang/go - Wiki)
 - 2020-03-18 - [Getting started with Go guide](https://dominicstpierre.com/getting-started-with-go-guide) - [reddit](https://www.reddit.com/r/golang/comments/fkw2rx/i_wrote_a_guide_for_beginners_wanting_to_get/) - [archive](https://web.archive.org/web/20201125045730/https://dominicstpierre.com/getting-started-with-go-guide)
+- tuvtran/project-based-learning - [Go](https://github.com/tuvtran/project-based-learning#go)
+- [chai2010/advanced-go-programming-book](https://github.com/chai2010/advanced-go-programming-book)
+- [enocom/gopher-reading-list](https://github.com/enocom/gopher-reading-list) - A curated selection of blog posts on Go
+- [Top **Go** Open Source Projects](https://awesomeopensource.com/projects/go)
+- [Top **Golang** Open Source Projects](https://awesomeopensource.com/projects/golang)
+
     - 2020-10-21 - [When Too Much Concurrency Slows You Down (Golang)](https://www.reddit.com/r/golang/comments/jfi21j/when_too_much_concurrency_slows_you_down_golang/)
     - 2020-09-01 - [Even in Go, concurrency is still not easy (with an example)](https://utcc.utoronto.ca/~cks/space/blog/programming/GoConcurrencyStillNotEasy) - [archive](https://web.archive.org/web/20201026045240/https://utcc.utoronto.ca/~cks/space/blog/programming/GoConcurrencyStillNotEasy) - [hn](https://news.ycombinator.com/item?id=24359650)
     - 2020-02-19 - [Advanced Go concurrency primitives](https://www.reddit.com/r/golang/comments/f6fzv2/advanced_go_concurrency_primitives/)
