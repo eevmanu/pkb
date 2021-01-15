@@ -10,7 +10,8 @@
 - [Useful commands](#useful-commands)
 - [VSCode Setup](#vscode-setup)
 - [Dependency management](#dependency-management)
-    - [Modules](#modules)
+    - [Official: Modules](#official-modules)
+    - [Deprecated toolss](#deprecated-toolss)
 - [Extra tools](#extra-tools)
     - [Linters](#linters)
     - [Logging / Debugger / Tracing / ...](#logging--debugger--tracing--)
@@ -18,7 +19,7 @@
 - [Important notes](#important-notes)
 - [Resources](#resources)
     - [Learn / 101 / Beginner / Entry-level](#learn--101--beginner--entry-level)
-    - [Project structures](#project-structures)
+    - [Design patterns](#design-patterns)
     - [Interfaces](#interfaces)
     - [Channels](#channels)
     - [Concurrency](#concurrency)
@@ -30,7 +31,6 @@
     - [Extra tools](#extra-tools-1)
     - [Generics](#generics)
     - [Algorithms / Data structures](#algorithms--data-structures)
-    - [Design patterns](#design-patterns)
     - [Roadmap / Study Guides / Training / Interview Questions / Exercises / Problems / Examples / ...](#roadmap--study-guides--training--interview-questions--exercises--problems--examples--)
 
 ## Install
