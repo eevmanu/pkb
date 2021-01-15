@@ -33,7 +33,6 @@
     - [Design patterns](#design-patterns)
     - [Roadmap / Study Guides / Training / Interview Questions / Exercises / Problems / Examples / ...](#roadmap--study-guides--training--interview-questions--exercises--problems--examples--)
 
-
 ## Install
 
 ☝ [Table of contents](#table-of-contents)
@@ -342,7 +341,7 @@ Create alternative folder for VSCode Go extension tools, to use it as `$GOPATH`
 $ mkdir $HOME/vscodetools
 ```
 
-Change Go Tools path on VSCode User settings
+Change VSCode Go Tools `$GOPATH` on User settings
 
 ```json
 {
@@ -387,7 +386,7 @@ Related links
 
 ## Dependency management
 
-### Modules
+### Official: Modules
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -400,6 +399,12 @@ write if dep is still an option
 - [Tutorial: Create a module](https://golang.org/doc/tutorial/create-module.html) (Go - Documentation - Getting Started)
 - [Modules](https://github.com/golang/go/wiki/Modules) (GitHub - golang/go - Wiki)
 - [Modules](https://github.com/golang/vscode-go/blob/master/docs/modules.md) (GitHub - golang/vscode-go - Docs)
+
+### Deprecated toolss
+
+[Masterminds/glide](https://github.com/Masterminds/glide)
+
+[golang/dep](https://github.com/golang/dep)
 
 ## Extra tools
 
@@ -435,7 +440,7 @@ Linter is a tool that analyzes source code. Some use cases are:
 
 [dominikh/go-tools](https://github.com/dominikh/go-tools) - Go static analysis, detecting bugs, performance issues, and much more.
 
-- [cmd/staticcheck](https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck)
+- [cmd/staticcheck](https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck) - extensive analysis of Go code
 
 [mgechev/revive](https://github.com/mgechev/revive) - ~6x faster, stricter, configurable, extensible, and beautiful drop-in replacement for golint.
 
