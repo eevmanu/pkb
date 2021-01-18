@@ -86,6 +86,7 @@
     - [7.29. Carbon - beautify source code as img](#729-carbon---beautify-source-code-as-img)
     - [7.30. Project Jupyter - interactive notebook](#730-project-jupyter---interactive-notebook)
     - [7.31. Java](#731-java)
+    - [7.32. Z](#732-z)
 - [8. Troubleshooting](#8-troubleshooting)
     - [8.1. Spotify](#81-spotify)
     - [8.2. VS Code](#82-vs-code)
@@ -4223,6 +4224,32 @@ Related links
 - [How to Install Java on Ubuntu 18.04](https://linuxize.com/post/install-java-on-ubuntu-18-04/)
 - [How To Install Oracle Java 14 (JDK 14) On Ubuntu, Debian Or Linux Mint From APT PPA Repository](https://www.linuxuprising.com/2020/03/how-to-install-oracle-java-14-jdk14-on.html)
 - [How To Install Java with Apt on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-20-04)
+
+### 7.32. Z
+
+☝ [Table of contents](#table-of-contents)
+
+[GitHub](https://github.com/rupa/z/blob/master/z.sh) - z - jump around
+
+Download script
+
+```bash
+$ wget -O $HOME/bin/z.sh https://raw.githubusercontent.com/rupa/z/master/z.sh
+```
+
+Assign permission to execute
+
+```bash
+$ chmod u+x $HOME/bin/z.sh
+```
+
+Add setup to `$HOME/.bashrc`
+
+```text
+...
+. $HOME/bin/z.sh
+...
+```
 
 ## 8. Troubleshooting
 

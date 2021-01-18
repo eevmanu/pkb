@@ -182,8 +182,7 @@ HISTTIMEFORMAT='%F %T - '
 
 # =============== "z" command
 
-# https://github.com/rupa/z
-. $HOME/bin/z
+. $HOME/bin/z.sh
 
 # ===============================================
 
