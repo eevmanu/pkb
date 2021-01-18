@@ -212,10 +212,28 @@ alias gitconfa="git config --list"
 
 # ====================== Manage updates
 
-alias myupdate="sudo apt update; apt list --upgradable"
-# -a gives too much info (rows / versions) for some packages, like code and code-insiders
-# alias myupdate="sudo apt update; apt list --upgradable -a"
-alias myupgrade="sudo apt upgrade -y; sudo apt autoremove -y"
+myupd(){
+  sudo apt update && sudo apt list --upgradable
+  # -a gives too much info (rows / versions) for some packages, like code and code-insiders
+}
+
+myupg(){
+  # What is “dist-upgrade” and why does it upgrade more than “upgrade”?
+  # https://askubuntu.com/questions/81585/what-is-dist-upgrade-and-why-does-it-upgrade-more-than-upgrade
+  sudo apt full-upgrade -y
+  # sudo apt upgrade -y && sudo apt dist-upgrade -y
+
+  # What is difference between the options “autoclean”, “autoremove” and “clean”?
+  # https://askubuntu.com/questions/3167/what-is-difference-between-the-options-autoclean-autoremove-and-clean
+  sudo apt autoclean -y && sudo apt autoremove -y
+}
+
+myfwupd(){
+  sudo fwupdmgr get-devices
+  sudo fwupdmgr get-updates
+  sudo fwupdmgr update
+  sudo reboot now
+}
 
 # ===============================================
 
