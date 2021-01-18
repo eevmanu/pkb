@@ -201,7 +201,12 @@ gitlogformat="log \
 git config --global alias.lg "$gitlogformat"
 alias gitlg="git $gitlogformat"
 
-alias gitft="git fetch --all; git fetch --prune"
+alias gitftp="git fetch --all && git fetch --prune"
+
+alias gitconfl="git config --list --local"
+alias gitconfs="git config --list --system"
+alias gitconfg="git config --list --global"
+alias gitconfa="git config --list"
 
 # ===============================================
 
