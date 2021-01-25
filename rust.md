@@ -10,8 +10,18 @@
     - [rust-learning](https://github.com/ctjhoa/rust-learning) - A bunch of links to blog posts, articles, videos, etc for learning Rust
 
 - Search:
-    - [sonic](https://github.com/valeriansaliou/sonic) - Fast, lightweight & schema-less search backend. An alternative to Elasticsearch that runs on a few MBs of RAM.
-    - [MeiliSearch](https://github.com/meilisearch/MeiliSearch) - Lightning Fast, Ultra Relevant, and Typo-Tolerant Search Engine
+    - [valeriansaliou/sonic](https://github.com/valeriansaliou/sonic) - Fast, lightweight & schema-less search backend. An alternative to Elasticsearch that runs on a few MBs of RAM.
+    - [meilisearch/MeiliSearch](https://github.com/meilisearch/MeiliSearch) - Lightning Fast, Ultra Relevant, and Typo-Tolerant Search Engine
+    - [tantivy-search/tantivy](https://github.com/tantivy-search/tantivy)
+    - [toshi-search/Toshi](https://github.com/toshi-search/Toshi)
+    - [tinysearch/tinysearch](https://github.com/tinysearch/tinysearch)
+    - [bayard-search/bayard](https://github.com/bayard-search/bayard)
+    - [jameslittle230/stork](https://github.com/jameslittle230/stork)
+    - [markdtw/awesome-architecture-search](https://github.com/markdtw/awesome-architecture-search)
+    - [open-guides/og-search-engineering](https://github.com/open-guides/og-search-engineering)
+    - [frutik/awesome-search](https://github.com/frutik/awesome-search)
+    - [opensemanticsearch/open-semantic-search-apps](https://github.com/opensemanticsearch/open-semantic-search-apps)
+    - [Top **Search** Open Source Projects](https://awesomeopensource.com/projects/search)
 
 - Interesting blogs from people / groups / companies:
     - [rust blog](https://github.com/pretzelhammer/rust-blog) - Educational blog posts for Rust beginners
