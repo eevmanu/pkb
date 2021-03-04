@@ -4,95 +4,96 @@
 <!-- omit in toc -->
 ## Table of contents
 
-- [1. Backup & Restore](#1-backup--restore)
-- [2. Things to do after install PopOS](#2-things-to-do-after-install-popos)
-- [3. Issue to be aware](#3-issue-to-be-aware)
-    - [3.1. Bluetooth](#31-bluetooth)
-    - [3.2. Wireless](#32-wireless)
-    - [3.3. Screen / Monitor](#33-screen--monitor)
-    - [3.4. Keyboard - Keychron k4 v1](#34-keyboard---keychron-k4-v1)
-- [4. Revert partial upgrade PopOS verison](#4-revert-partial-upgrade-popos-verison)
-- [5. Linux software distributions](#5-linux-software-distributions)
-    - [5.1. Snapcraft](#51-snapcraft)
-    - [5.2. flatpak](#52-flatpak)
-    - [5.3. AppImage](#53-appimage)
-- [6. Apps](#6-apps)
-    - [6.1. Synaptic - package manager](#61-synaptic---package-manager)
-    - [6.2. Flatseal - flatpak permissions manager](#62-flatseal---flatpak-permissions-manager)
-    - [6.3. Flux - eye care](#63-flux---eye-care)
-    - [6.4. Chrome - browser](#64-chrome---browser)
-    - [6.5. VLC media player - play multimedia files](#65-vlc-media-player---play-multimedia-files)
-    - [6.6. Visual Studio Code - code editor](#66-visual-studio-code---code-editor)
-    - [6.7. Foxit PDF Reader - pdf viewer](#67-foxit-pdf-reader---pdf-viewer)
-    - [6.8. Spotify - music streaming](#68-spotify---music-streaming)
-    - [6.9. Slack - IM app](#69-slack---im-app)
-    - [6.10. Zoom - video call app](#610-zoom---video-call-app)
-    - [6.11. Telegram - IM app](#611-telegram---im-app)
-    - [6.12. Ksnip - screenshot tool](#612-ksnip---screenshot-tool)
-    - [6.13. SimpleScreenRecorder - record screen](#613-simplescreenrecorder---record-screen)
-    - [6.14. Peek - record screen](#614-peek---record-screen)
-    - [6.15. CopyQ - clipboard manager](#615-copyq---clipboard-manager)
-    - [6.16. Albert - keyboard launcher](#616-albert---keyboard-launcher)
-    - [6.17. Activity Watch - time tracker](#617-activity-watch---time-tracker)
-    - [6.18. TeamViewer - remote control](#618-teamviewer---remote-control)
-    - [6.19. OBS Studio - streaming](#619-obs-studio---streaming)
-    - [6.20. Autokey - desktop automation utility](#620-autokey---desktop-automation-utility)
-    - [6.21. DBeaver - database tool](#621-dbeaver---database-tool)
-    - [6.22. BleachBit - clean disk space](#622-bleachbit---clean-disk-space)
-    - [6.23. Stacer - monitor system resources](#623-stacer---monitor-system-resources)
-    - [6.24. Wireshark - monitor network traffic](#624-wireshark---monitor-network-traffic)
-    - [6.25. Dropbox - online storage](#625-dropbox---online-storage)
-    - [6.26. scrcpy - control android device from your computer](#626-scrcpy---control-android-device-from-your-computer)
-    - [6.27. droidcam - turn mobile device into webcam](#627-droidcam---turn-mobile-device-into-webcam)
-    - [6.28. Thinkorswim - Trading Platforms](#628-thinkorswim---trading-platforms)
-    - [6.29. Virtualbox - virtualization](#629-virtualbox---virtualization)
-    - [6.30. Markdown editor apps](#630-markdown-editor-apps)
-        - [6.30.1. Joplin](#6301-joplin)
-        - [6.30.2. Marktext](#6302-marktext)
-        - [6.30.3. vnote](#6303-vnote)
-        - [6.30.4. PKB alternatives](#6304-pkb-alternatives)
-    - [6.31. Math](#631-math)
-    - [6.32. Finance](#632-finance)
-    - [6.33. Extra](#633-extra)
-- [7. Commands](#7-commands)
-    - [7.1. git - version control manager](#71-git---version-control-manager)
-    - [7.2. docker - containers](#72-docker---containers)
-    - [7.3. xclip - clipboard manager](#73-xclip---clipboard-manager)
-    - [7.4. htop - monitor computer resources](#74-htop---monitor-computer-resources)
-    - [7.5. speedtest - internet bandwidth meter](#75-speedtest---internet-bandwidth-meter)
-    - [7.6. vnstat - network traffic monitor](#76-vnstat---network-traffic-monitor)
-    - [7.7. httpie - simple http requests on terminal](#77-httpie---simple-http-requests-on-terminal)
-    - [7.8. tmux - multiple sessions](#78-tmux---multiple-sessions)
-    - [7.9. tree - file / folder structure](#79-tree---file--folder-structure)
-    - [7.10. unrar - decompress files](#710-unrar---decompress-files)
-    - [7.11. ffmpeg - handle multimedia files](#711-ffmpeg---handle-multimedia-files)
-    - [7.12. jq - handle json files](#712-jq---handle-json-files)
-    - [7.13. wrk - http benchmark](#713-wrk---http-benchmark)
-    - [7.14. youtube-dl - youtube downloader](#714-youtube-dl---youtube-downloader)
-    - [7.15. ngrok - expose local web server to internet](#715-ngrok---expose-local-web-server-to-internet)
-    - [7.16. httpstat - stats about http requests](#716-httpstat---stats-about-http-requests)
-    - [7.17. neofetch - info about your computer](#717-neofetch---info-about-your-computer)
-    - [7.18. hwinfo - info about hardware devices](#718-hwinfo---info-about-hardware-devices)
-    - [7.19. geekbench - cross-platform benchmark](#719-geekbench---cross-platform-benchmark)
-    - [7.20. ufw - firewall tool](#720-ufw---firewall-tool)
-    - [7.21. googler - googling via terminal](#721-googler---googling-via-terminal)
-    - [7.22. screenkey - display key pressed](#722-screenkey---display-key-pressed)
-    - [7.23. exiftool - manage meta info from files](#723-exiftool---manage-meta-info-from-files)
-    - [7.24. iproute2 - manage networking stuffs](#724-iproute2---manage-networking-stuffs)
-    - [7.25. powertop - monitor electrical power consumption](#725-powertop---monitor-electrical-power-consumption)
-    - [7.26. espanso -  text expander](#726-espanso----text-expander)
-    - [7.27. Keepassxc - password manager](#727-keepassxc---password-manager)
-    - [7.28. AWS CLI](#728-aws-cli)
-    - [7.29. Carbon - beautify source code as img](#729-carbon---beautify-source-code-as-img)
-    - [7.30. Project Jupyter - interactive notebook](#730-project-jupyter---interactive-notebook)
-    - [7.31. Java](#731-java)
-    - [7.32. Z](#732-z)
-- [8. Troubleshooting](#8-troubleshooting)
-    - [8.1. Spotify](#81-spotify)
-    - [8.2. VS Code](#82-vs-code)
-- [9. Final links](#9-final-links)
+- [Backup & Restore](#backup--restore)
+- [Things to do after install PopOS](#things-to-do-after-install-popos)
+- [Issue to be aware](#issue-to-be-aware)
+    - [Bluetooth](#bluetooth)
+    - [Wireless](#wireless)
+    - [Screen / Monitor](#screen--monitor)
+    - [Keyboard - Keychron k4 v1](#keyboard---keychron-k4-v1)
+- [Revert partial upgrade PopOS verison](#revert-partial-upgrade-popos-verison)
+- [Linux software distributions](#linux-software-distributions)
+    - [Snapcraft](#snapcraft)
+    - [flatpak](#flatpak)
+    - [AppImage](#appimage)
+- [Apps](#apps)
+    - [Synaptic - package manager](#synaptic---package-manager)
+    - [Flatseal - flatpak permissions manager](#flatseal---flatpak-permissions-manager)
+    - [Flux - eye care](#flux---eye-care)
+    - [Chrome - browser](#chrome---browser)
+    - [VLC media player - play multimedia files](#vlc-media-player---play-multimedia-files)
+    - [Visual Studio Code - code editor](#visual-studio-code---code-editor)
+    - [Foxit PDF Reader - pdf viewer](#foxit-pdf-reader---pdf-viewer)
+    - [Spotify - music streaming](#spotify---music-streaming)
+    - [Slack - IM app](#slack---im-app)
+    - [Zoom - video call app](#zoom---video-call-app)
+    - [Telegram - IM app](#telegram---im-app)
+    - [Ksnip - screenshot tool](#ksnip---screenshot-tool)
+    - [SimpleScreenRecorder - record screen](#simplescreenrecorder---record-screen)
+    - [Peek - record screen](#peek---record-screen)
+    - [CopyQ - clipboard manager](#copyq---clipboard-manager)
+    - [Albert - keyboard launcher](#albert---keyboard-launcher)
+    - [Activity Watch - time tracker](#activity-watch---time-tracker)
+    - [TeamViewer - remote control](#teamviewer---remote-control)
+    - [OBS Studio - streaming](#obs-studio---streaming)
+    - [Autokey - desktop automation utility](#autokey---desktop-automation-utility)
+    - [DBeaver - database tool](#dbeaver---database-tool)
+    - [BleachBit - clean disk space](#bleachbit---clean-disk-space)
+    - [Stacer - monitor system resources](#stacer---monitor-system-resources)
+    - [Wireshark - monitor network traffic](#wireshark---monitor-network-traffic)
+    - [Dropbox - online storage](#dropbox---online-storage)
+    - [scrcpy - control android device from your computer](#scrcpy---control-android-device-from-your-computer)
+    - [droidcam - turn mobile device into webcam](#droidcam---turn-mobile-device-into-webcam)
+    - [Thinkorswim - Trading Platforms](#thinkorswim---trading-platforms)
+    - [Virtualbox - virtualization](#virtualbox---virtualization)
+    - [Markdown editor apps](#markdown-editor-apps)
+        - [Joplin](#joplin)
+        - [Marktext](#marktext)
+        - [vnote](#vnote)
+        - [PKB alternatives](#pkb-alternatives)
+    - [Math](#math)
+    - [Finance](#finance)
+    - [Extra](#extra)
+- [Commands](#commands)
+    - [git - version control manager](#git---version-control-manager)
+    - [docker - containers](#docker---containers)
+    - [xclip - clipboard manager](#xclip---clipboard-manager)
+    - [htop - monitor computer resources](#htop---monitor-computer-resources)
+    - [speedtest - internet bandwidth meter](#speedtest---internet-bandwidth-meter)
+    - [vnstat - network traffic monitor](#vnstat---network-traffic-monitor)
+    - [httpie - simple http requests on terminal](#httpie---simple-http-requests-on-terminal)
+    - [tmux - multiple sessions](#tmux---multiple-sessions)
+    - [tree - file / folder structure](#tree---file--folder-structure)
+    - [unrar - decompress files](#unrar---decompress-files)
+    - [ffmpeg - handle multimedia files](#ffmpeg---handle-multimedia-files)
+    - [jq - handle json files](#jq---handle-json-files)
+    - [wrk - http benchmark](#wrk---http-benchmark)
+    - [youtube-dl - youtube downloader](#youtube-dl---youtube-downloader)
+    - [ngrok - expose local web server to internet](#ngrok---expose-local-web-server-to-internet)
+    - [httpstat - stats about http requests](#httpstat---stats-about-http-requests)
+    - [neofetch - info about your computer](#neofetch---info-about-your-computer)
+    - [hwinfo - info about hardware devices](#hwinfo---info-about-hardware-devices)
+    - [geekbench - cross-platform benchmark](#geekbench---cross-platform-benchmark)
+    - [ufw - firewall tool](#ufw---firewall-tool)
+    - [googler - googling via terminal](#googler---googling-via-terminal)
+    - [screenkey - display key pressed](#screenkey---display-key-pressed)
+    - [exiftool - manage meta info from files](#exiftool---manage-meta-info-from-files)
+    - [iproute2 - manage networking stuffs](#iproute2---manage-networking-stuffs)
+    - [powertop - monitor electrical power consumption](#powertop---monitor-electrical-power-consumption)
+    - [espanso -  text expander](#espanso----text-expander)
+    - [Keepassxc - password manager](#keepassxc---password-manager)
+    - [AWS CLI](#aws-cli)
+    - [Carbon - beautify source code as img](#carbon---beautify-source-code-as-img)
+    - [Project Jupyter - interactive notebook](#project-jupyter---interactive-notebook)
+    - [Java](#java)
+    - [Z](#z)
+    - [direnv](#direnv)
+- [Troubleshooting](#troubleshooting)
+    - [Spotify](#spotify)
+    - [VS Code](#vs-code)
+- [Final links](#final-links)
 
-## 1. Backup & Restore
+## Backup & Restore
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -255,7 +256,7 @@ Related links
 - [most starred repo with `sync`](https://github.com/search?q=sync&s=stars&type=Repositories)
 - [Online Storage vs. Online Backup](https://www.backblaze.com/online-storage-vs-online-backup.html) -
 
-## 2. Things to do after install PopOS
+## Things to do after install PopOS
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -643,9 +644,9 @@ $ tracker status
     - 2020-04-27 - [How To Completely Disable Tracker, GNOME's File Indexing And Search Tool](https://www.linuxuprising.com/2019/07/how-to-completely-disable-tracker.html) - [archive](https://web.archive.org/web/20201226151700/https://www.linuxuprising.com/2019/07/how-to-completely-disable-tracker.html)
     - [vancluever/gnome-tracker-disable.md](https://gist.github.com/vancluever/d34b41eb77e6d077887c) -  GNOME Tracker Disable
 
-## 3. Issue to be aware
+## Issue to be aware
 
-### 3.1. Bluetooth
+### Bluetooth
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -753,13 +754,13 @@ Setup Amazon Echo device as speaker
     - [Bluetooth speaker no sound in Ubuntu 16.04](https://askubuntu.com/questions/763539/bluetooth-speaker-no-sound-in-ubuntu-16-04)
     - [A2DP sink without pulseaudio](https://stackoverflow.com/questions/12338621/a2dp-sink-without-pulseaudio)
 
-### 3.2. Wireless
+### Wireless
 
 ☝ [Table of contents](#table-of-contents)
 
 [System76 - Support - Solve Wireless Issues](https://support.system76.com/articles/wireless/)
 
-### 3.3. Screen / Monitor
+### Screen / Monitor
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -787,7 +788,7 @@ Deactive HiDPI Daemon if CPU spike without no reason
     - [HiDPI performance issues?](https://www.reddit.com/r/gnome/comments/7j5lkh/hidpi_performance_issues/)
     - [All About the HiDPI Daemon](https://blog.system76.com/post/174414833678/all-about-the-hidpi-daemon)
 
-### 3.4. Keyboard - Keychron k4 v1
+### Keyboard - Keychron k4 v1
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -879,7 +880,7 @@ TODO
 - remap `f1` to `f12` to right keycodes
 - find a solution to `print screen`
 
-## 4. Revert partial upgrade PopOS verison
+## Revert partial upgrade PopOS verison
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -899,9 +900,9 @@ Run `apt update`
 
 Activate all PPA files where commented by `Download` button action
 
-## 5. Linux software distributions
+## Linux software distributions
 
-### 5.1. [Snapcraft](https://snapcraft.io/)
+### [Snapcraft](https://snapcraft.io/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -915,7 +916,7 @@ $ sudo apt install snapd
 Related links
 - [Install on Ubuntu](https://snapcraft.io/docs/installing-snap-on-ubuntu)
 
-### 5.2. [flatpak](https://flatpak.org/)
+### [flatpak](https://flatpak.org/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -923,13 +924,13 @@ Directories used
 - `$HOME/.cache/flatpak`
 - `$HOME/.local/share/flatpak`
 
-### 5.3. [AppImage](https://appimage.org/)
+### [AppImage](https://appimage.org/)
 
 ☝ [Table of contents](#table-of-contents)
 
-## 6. Apps
+## Apps
 
-### 6.1. Synaptic - package manager
+### Synaptic - package manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -944,7 +945,7 @@ $ apt install -s synaptic
 $ sudo apt install synaptic
 ```
 
-### 6.2. Flatseal - flatpak permissions manager
+### Flatseal - flatpak permissions manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -963,7 +964,7 @@ $ flatpak install flathub com.github.tchx84.Flatseal
 $ flatpak run com.github.tchx84.Flatseal
 ```
 
-### 6.3. [Flux](https://justgetflux.com/) - eye care
+### [Flux](https://justgetflux.com/) - eye care
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1001,7 +1002,7 @@ Alternatives
 - [jonls/redshift](https://github.com/jonls/redshift)
 - Gnome - [Night light](https://www.gnome.org/news/2017/03/gnome-3-24-released/attachment/night-light/)
 
-### 6.4. [Chrome](https://www.google.com/chrome/) - browser
+### [Chrome](https://www.google.com/chrome/) - browser
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1522,7 +1523,7 @@ Change to `DuckDuckGo` search engine
 Related links
 - [CRXcavator](https://crxcavator.io/) - Submit a Chrome Extension ID to scan
 
-### 6.5. [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html) - play multimedia files
+### [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html) - play multimedia files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1572,7 +1573,7 @@ Related links
 - [Changelog](https://www.videolan.org/developers/vlc-branch/NEWS)
 - [Releases](https://www.videolan.org/vlc/releases/)
 
-### 6.6. [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux) - code editor
+### [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux) - code editor
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1624,7 +1625,7 @@ Related links:
 - [How do I remove VS Code & settings from Ubuntu?](https://superuser.com/questions/1113022/how-do-i-remove-vs-code-settings-from-ubuntu)
 - [How to change indentation in Visual Studio Code?](https://stackoverflow.com/questions/34174207/how-to-change-indentation-in-visual-studio-code)
 
-### 6.7. [Foxit PDF Reader](https://www.foxitsoftware.com/pdf-reader/) - pdf viewer
+### [Foxit PDF Reader](https://www.foxitsoftware.com/pdf-reader/) - pdf viewer
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1668,7 +1669,7 @@ Alternatives
 Related links
 - 2020-05-12 - [PDF viewer list on Ubuntu 20.04 Focal Fossa Linux](https://linuxconfig.org/pdf-viewer-list-on-ubuntu-20-04-focal-fossa-linux)
 
-### 6.8. [Spotify](https://www.spotify.com/download/linux/) - music streaming
+### [Spotify](https://www.spotify.com/download/linux/) - music streaming
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1716,7 +1717,7 @@ TODO
 Related links
 - [archive](https://web.archive.org/web/20201221183349/https://www.spotify.com/pe/download/linux/)
 
-### 6.9. [Slack](https://slack.com/intl/en-us/downloads/linux) - IM app
+### [Slack](https://slack.com/intl/en-us/downloads/linux) - IM app
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1741,7 +1742,7 @@ $ snap install --classic slack
 Related links
 - [Release notes for Linux](https://slack.com/intl/en-us/release-notes/linux)
 
-### 6.10. [Zoom](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux) - video call app
+### [Zoom](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux) - video call app
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1783,7 +1784,7 @@ Alternatives
 Related links
 - Install [using the terminal](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux#h_89c268b4-2a68-4e4c-882f-441e374b87cb)
 
-### 6.11. [Telegram](https://telegram.org/dl/desktop/linux) - IM app
+### [Telegram](https://telegram.org/dl/desktop/linux) - IM app
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -1818,7 +1819,7 @@ Related links
 - [Wiki](https://github.com/telegramdesktop/tdesktop/wiki)
     - [Keyboard Shortcuts](https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts)
 
-### 6.12. [Ksnip](https://github.com/ksnip/ksnip) - screenshot tool
+### [Ksnip](https://github.com/ksnip/ksnip) - screenshot tool
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2034,7 +2035,7 @@ Related tools
 - [sindresorhus/capture-website-cli](https://github.com/sindresorhus/capture-website-cli) - Capture screenshots of websites from the command-line
 - [gildas-lormeau/SingleFile](https://github.com/gildas-lormeau/SingleFile) - Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file
 
-### 6.13. [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/) - record screen
+### [SimpleScreenRecorder](http://www.maartenbaert.be/simplescreenrecorder/) - record screen
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2058,7 +2059,7 @@ Alternatives
 Related links
 - 2020-06-10 - [5 Tools To Record Your Linux Desktop (Screencast) In 2020](https://www.linuxuprising.com/2020/01/4-tools-to-record-your-linux-desktop.html)
 
-### 6.14. Peek - record screen
+### Peek - record screen
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2081,7 +2082,7 @@ $ flatpak install flathub com.uploadedlobster.peek
 
 Folder used - `$HOME/.var/app/com.uploadedlobster.peek/`
 
-### 6.15. CopyQ - clipboard manager
+### CopyQ - clipboard manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2113,7 +2114,7 @@ Folders used
 - `$HOME/.local/share/copyq`
 - `$HOME/.var/app/com.github.hluk.copyq`
 
-### 6.16. [Albert](https://albertlauncher.github.io/) - keyboard launcher
+### [Albert](https://albertlauncher.github.io/) - keyboard launcher
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2165,7 +2166,7 @@ Related links
 - [Using it](https://albertlauncher.github.io/docs/using/)
 - [GPG Signature error for Ubuntu Repo - Solution](https://github.com/albertlauncher/albert/issues/865#issuecomment-572396128)
 
-### 6.17. [Activity Watch](https://activitywatch.net/) - time tracker
+### [Activity Watch](https://activitywatch.net/) - time tracker
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2223,7 +2224,7 @@ Install and setup
 
 - Add binary path to **Startup Applications**
 
-### 6.18. [TeamViewer](https://www.teamviewer.com/en/download/linux/) - remote control
+### [TeamViewer](https://www.teamviewer.com/en/download/linux/) - remote control
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2268,7 +2269,7 @@ Alternatives
     Related links
     - 2018-08-01 - [Install and Configure RealVNC in Linux Ubuntu 18.04 LTS](https://www.zealfortechnology.com/2018/08/install-and-configure-realvnc-in-linux.html) - [archive](https://web.archive.org/web/20201226150515/https://www.zealfortechnology.com/2018/08/install-and-configure-realvnc-in-linux.html)
 
-### 6.19. [OBS Studio](https://obsproject.com/wiki/install-instructions#linux) - streaming
+### [OBS Studio](https://obsproject.com/wiki/install-instructions#linux) - streaming
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2282,7 +2283,7 @@ $ sudo apt update
 $ sudo apt install obs-studio
 ```
 
-### 6.20. Autokey - desktop automation utility
+### Autokey - desktop automation utility
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2319,7 +2320,7 @@ $ sudo apt remove autokey-gtk &&
     sudo apt autoremove
 ```
 
-### 6.21. [DBeaver](https://dbeaver.io/) - database tool
+### [DBeaver](https://dbeaver.io/) - database tool
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2336,7 +2337,7 @@ $ flatpak install flathub io.dbeaver.DBeaverCommunity
 $ flatpak run io.dbeaver.DBeaverCommunity
 ```
 
-### 6.22. [BleachBit](https://www.bleachbit.org/) - clean disk space
+### [BleachBit](https://www.bleachbit.org/) - clean disk space
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2361,7 +2362,7 @@ $ cp bleachbit.py $HOME/bin/bleachbit
 $ rm -rf $HOME/bleachbit/
 ```
 
-### 6.23. Stacer - monitor system resources
+### Stacer - monitor system resources
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2377,7 +2378,7 @@ $ sudo apt-get update
 $ sudo apt-get install stacer -y
 ```
 
-### 6.24. [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
+### [Wireshark](https://www.wireshark.org/download.html) - monitor network traffic
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2406,7 +2407,7 @@ Related links
 - [How to Install and Use Wireshark on Ubuntu](https://linuxhint.com/install_wireshark_ubuntu/)
 - [How to install Wireshark](https://askubuntu.com/questions/700712/how-to-install-wireshark)
 
-### 6.25. [Dropbox](https://www.dropbox.com/install-linux) - online storage
+### [Dropbox](https://www.dropbox.com/install-linux) - online storage
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2443,7 +2444,7 @@ Add to `Startup Applications`
 - Enter `dropbox` (should appear if was installed via `flatpak`)
 - Confirm to add it
 
-### 6.26. scrcpy - control android device from your computer
+### scrcpy - control android device from your computer
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2507,7 +2508,7 @@ Related links
 - 2018-05-14 - [Open Source Project: Scrcpy now works wirelessly!](https://www.genymotion.com/blog/open-source-project-scrcpy-now-works-wirelessly/)
 - [sisco311/scrcpy-snap](https://github.com/sisco311/scrcpy-snap)
 
-### 6.27. [droidcam](https://www.dev47apps.com/) - turn mobile device into webcam
+### [droidcam](https://www.dev47apps.com/) - turn mobile device into webcam
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2639,7 +2640,7 @@ Categories=GNOME;GTK;Video;
 Related links
 - [Linux instructions](https://www.dev47apps.com/droidcam/linux/)
 
-### 6.28. [Thinkorswim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.page) - Trading Platforms
+### [Thinkorswim](https://www.tdameritrade.com/tools-and-platforms/thinkorswim.page) - Trading Platforms
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2765,7 +2766,7 @@ Related links
 - [Installation on Linux Using the Zulu Docker Registry](https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOLinuxUsingZuluDockerRegistry.htm)
 <!-- https://docs.azul.com/zulu/zuludocs/ZuluUserGuide/InstallingZulu/InstallOnLinuxUsingAPTRepository.htm -->
 
-### 6.29. [Virtualbox](https://www.virtualbox.org/) - virtualization
+### [Virtualbox](https://www.virtualbox.org/) - virtualization
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2799,9 +2800,9 @@ Extra packages when installed (6.1.10 <-> 6.1.14)
 - [OVA](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/) (Open Virtualization Format)
 - [ISO](https://www.microsoft.com/en-us/software-download/windows10ISO)
 
-### 6.30. Markdown editor apps
+### Markdown editor apps
 
-#### 6.30.1. [Joplin](https://joplinapp.org/)
+#### [Joplin](https://joplinapp.org/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2839,7 +2840,7 @@ Create `.desktop` file
 # TODO
 ```
 
-#### 6.30.2. [Marktext](https://marktext.app/)
+#### [Marktext](https://marktext.app/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2910,7 +2911,7 @@ Config folder - `$HOME/.config/marktext`
 Related links
 - Fix issue with [icon](https://askubuntu.com/questions/333133/how-to-set-app-icon-in-the-desktop-file-of-an-ubuntu-touch-application)
 
-#### 6.30.3. [vnote](https://vnotex.github.io/vnote/en_us/)
+#### [vnote](https://vnotex.github.io/vnote/en_us/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2938,7 +2939,7 @@ Directories needed
 - `$HOME/.local/share/VNote/`
 - `$HOME/.local/share/VNote-2.9.1-x86_64.AppImage/`
 
-#### 6.30.4. PKB alternatives
+#### PKB alternatives
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -2971,7 +2972,7 @@ To manage a Personal Knowledge Base:
 - [Zotero](https://www.zotero.org/)
 - [ZETTELKASTEN - The Archive](https://zettelkasten.de/the-archive/)
 
-### 6.31. Math
+### Math
 
 List
 
@@ -2984,14 +2985,14 @@ Related links
 
 - [What’s another good online calculator like Desmos, but without the graphing, and more space for equations?](https://www.quora.com/What%E2%80%99s-another-good-online-calculator-like-Desmos-but-without-the-graphing-and-more-space-for-equations/answer/Jules-Opeth-Manson)
 
-### 6.32. Finance
+### Finance
 
 List
 
 - [GNU Cash](https://flathub.org/apps/details/org.gnucash.GnuCash)
 - [firefly-iii](https://github.com/firefly-iii/firefly-iii)
 
-### 6.33. Extra
+### Extra
 
 - [Audacity](https://www.audacityteam.org/) - Free, open source, cross-platform audio software
 
@@ -3122,9 +3123,9 @@ List
 
 - [uw-labs/bloomrpc](https://github.com/uw-labs/bloomrpc) - The missing GUI Client for GRPC services
 
-## 7. Commands
+## Commands
 
-### 7.1. [git](https://git-scm.com/) - version control manager
+### [git](https://git-scm.com/) - version control manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3264,7 +3265,7 @@ Complementary tools
     $ rm -rf $HOME/bin-sources/git-cola/
     ```
 
-### 7.2. docker - containers
+### docker - containers
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3306,7 +3307,7 @@ Related tools
 Related links
 - [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user)
 
-### 7.3. xclip - clipboard manager
+### xclip - clipboard manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3330,7 +3331,7 @@ Install it
 $ sudo apt install xclip
 ```
 
-### 7.4. [htop](https://htop.dev/) - monitor computer resources
+### [htop](https://htop.dev/) - monitor computer resources
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3426,7 +3427,7 @@ Alternatives
     - `$HOME/.config/bpytop/themes/`
 
 
-### 7.5. speedtest - internet bandwidth meter
+### speedtest - internet bandwidth meter
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3492,7 +3493,7 @@ Commands
     }
     ```
 
-### 7.6. vnstat - network traffic monitor
+### vnstat - network traffic monitor
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3556,7 +3557,7 @@ Related links
 - [Monitoring Network Bandwidth and Speed in Linux](https://itsfoss.com/network-speed-monitor-linux/)
 - [Ubuntu install vnstat console network traffic monitor](https://www.cyberciti.biz/faq/ubuntu-install-vnstat-console-network-traffic-monitor/)
 
-### 7.7. [httpie](https://httpie.io/) - simple http requests on terminal
+### [httpie](https://httpie.io/) - simple http requests on terminal
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3580,7 +3581,7 @@ $ pip install -U httpie
 $ sudo pip install -U httpie
 ```
 
-### 7.8. tmux - multiple sessions
+### tmux - multiple sessions
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3649,7 +3650,7 @@ $ cd $HOME
 $ rm -rf $HOME/tmux
 ```
 
-### 7.9. [tree](http://mama.indstate.edu/users/ice/tree/) - file / folder structure
+### [tree](http://mama.indstate.edu/users/ice/tree/) - file / folder structure
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3672,7 +3673,7 @@ $ sudo apt install tree
 Related links
 - 2019-10-04 - [Linux ‘tree Command’ Usage Examples for Beginners](https://www.tecmint.com/linux-tree-command-examples/)
 
-### 7.10. unrar - decompress files
+### unrar - decompress files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3684,7 +3685,7 @@ Install it
 $ sudo apt install unrar
 ```
 
-### 7.11. [ffmpeg](https://ffmpeg.org/) - handle multimedia files
+### [ffmpeg](https://ffmpeg.org/) - handle multimedia files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3703,7 +3704,7 @@ $ sudo apt install ffmpeg
 Related links
 - [Ubuntu 20.04 FFmpeg installation](https://linuxconfig.org/ubuntu-20-04-ffmpeg-installation)
 
-### 7.12. jq - handle json files
+### jq - handle json files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3733,7 +3734,7 @@ Usage
     $ jq . {{ json file }}
     ```
 
-### 7.13. wrk - http benchmark
+### wrk - http benchmark
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3784,7 +3785,7 @@ Related links
 - [denji/awesome-http-benchmark](https://github.com/denji/awesome-http-benchmark) - HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful)
 - TechEmpower - [Benchmarks](https://www.techempower.com/benchmarks/) - [GitHub](https://github.com/TechEmpower/FrameworkBenchmarks) - Source for the TechEmpower Framework Benchmarks project
 
-### 7.14. [youtube-dl](https://ytdl-org.github.io/youtube-dl/) - youtube downloader
+### [youtube-dl](https://ytdl-org.github.io/youtube-dl/) - youtube downloader
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3804,7 +3805,7 @@ $ wget \
 $ chmod u+rx $HOME/bin/youtube-dl
 ```
 
-### 7.15. [ngrok](https://ngrok.com/) - expose local web server to internet
+### [ngrok](https://ngrok.com/) - expose local web server to internet
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3823,7 +3824,7 @@ $ mv $HOME/ngrok $HOME/bin/
 $ rm ngrok.zip
 ```
 
-### 7.16. httpstat - stats about http requests
+### httpstat - stats about http requests
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3860,7 +3861,7 @@ Similar tools
 - in [Go](https://github.com/davecheney/httpstat)
 - in [Python](https://github.com/reorx/httpstat)
 
-### 7.17. neofetch - info about your computer
+### neofetch - info about your computer
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3874,7 +3875,7 @@ Install via `apt`
 $ sudo apt install neofetch
 ```
 
-### 7.18. hwinfo - info about hardware devices
+### hwinfo - info about hardware devices
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3897,7 +3898,7 @@ Device Files: /dev/nvme0n1, /dev/disk/by-id/nvme-Samsung_SSD_950_PRO_512GB_S2GMN
 ...
 ```
 
-### 7.19. [geekbench](https://www.geekbench.com/) - cross-platform benchmark
+### [geekbench](https://www.geekbench.com/) - cross-platform benchmark
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3925,7 +3926,7 @@ Related links
 - [Installing Geekbench 5 on Linux](http://support.primatelabs.com/kb/geekbench/installing-geekbench-5-on-linux)
 
 
-### 7.20. [ufw](https://help.ubuntu.com/community/UFW) - firewall tool
+### [ufw](https://help.ubuntu.com/community/UFW) - firewall tool
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3949,7 +3950,7 @@ Related tools
 
     [Installation](https://github.com/gustavo-iniguez-goya/opensnitch/wiki/Installation)
 
-### 7.21. googler - googling via terminal
+### googler - googling via terminal
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -3967,7 +3968,7 @@ $ wget \
 $ chmod u+x $HOME/bin/googler
 ```
 
-### 7.22. screenkey - display key pressed
+### screenkey - display key pressed
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -4011,7 +4012,7 @@ $HOME/.local/bin/screenkey
 
 Config file - `$HOME/.config/screenkey.json`
 
-### 7.23. exiftool - manage meta info from files
+### exiftool - manage meta info from files
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -4025,7 +4026,7 @@ Set date time on pictures
 $ exiftool -AllDates="2015:09:22 12:00:00"
 ```
 
-### 7.24. [iproute2](https://en.wikipedia.org/wiki/Iproute2) - manage networking stuffs
+### [iproute2](https://en.wikipedia.org/wiki/Iproute2) - manage networking stuffs
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -4052,7 +4053,7 @@ Related tools
 - [iPerf](https://iperf.fr/) - a tool for active measurements of the maximum achievable bandwidth on IP networks
 - [CBM](https://zenway.ru/page/cbm) - [GitHub](https://github.com/resurrecting-open-source-projects/cbm) - display in real time the network traffic speed
 
-### 7.25. [powertop](https://01.org/powertop) - monitor electrical power consumption
+### [powertop](https://01.org/powertop) - monitor electrical power consumption
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -4101,7 +4102,7 @@ Related tools
 - [bmon](https://linux.die.net/man/1/bmon) - Portable bandwidth monitor and rate estimator - [GitHub](https://github.com/tgraf/bmon)
 - [lm-sensors](https://hwmon.wiki.kernel.org/lm_sensors) - [GitHub](https://github.com/lm-sensors/lm-sensors) - Linux hardware monitoring
 
-### 7.26. espanso -  text expander
+### espanso -  text expander
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -4109,7 +4110,7 @@ Cross-platform Text Expander written in Rust
 
 [GitHub](https://github.com/federico-terzi/espanso)
 
-### 7.27. Keepassxc - password manager
+### Keepassxc - password manager
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -4164,7 +4165,7 @@ Related links
 - [How do I use the KeePassXC CLI tool with the AppImage?](https://keepassxc.org/docs/#faq-appsnap-appimage-cli)
 - [KeepassXC Question about CLI](https://www.reddit.com/r/KeePass/comments/a5tjx2/keepassxc_question_about_cli/)
 
-### 7.28. [AWS CLI](https://aws.amazon.com/cli/)
+### [AWS CLI](https://aws.amazon.com/cli/)
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -4175,7 +4176,7 @@ Related links
 - [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 - [open-guides/og-aws](https://github.com/open-guides/og-aws) - :books: Amazon Web Services — a practical guide
 
-### 7.29. [Carbon](https://carbon.now.sh/) - beautify source code as img
+### [Carbon](https://carbon.now.sh/) - beautify source code as img
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -4186,7 +4187,7 @@ Create and share beautiful images of your source code
 Related tools
 - [octref/polacode](https://github.com/octref/polacode) - 📸 Polaroid for your code
 
-### 7.30. [Project Jupyter](https://jupyter.org/) - interactive notebook
+### [Project Jupyter](https://jupyter.org/) - interactive notebook
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -4216,7 +4217,7 @@ $ jupyter notebook
 Related links
 - [Installing the Jupyter Software](https://jupyter.org/install)
 
-### 7.31. Java
+### Java
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -4225,7 +4226,7 @@ Related links
 - [How To Install Oracle Java 14 (JDK 14) On Ubuntu, Debian Or Linux Mint From APT PPA Repository](https://www.linuxuprising.com/2020/03/how-to-install-oracle-java-14-jdk14-on.html)
 - [How To Install Java with Apt on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-20-04)
 
-### 7.32. Z
+### Z
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -4251,9 +4252,13 @@ Add setup to `$HOME/.bashrc`
 ...
 ```
 
-## 8. Troubleshooting
+### direnv
 
-### 8.1. Spotify
+
+
+## Troubleshooting
+
+### Spotify
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -4304,7 +4309,7 @@ Add setup to `$HOME/.bashrc`
     - [Spotify Media Keys Fix on Ubuntu 20.04 Gnome | TUTORIAL |](https://www.youtube.com/watch?v=Z3bqIjA8Dso)
     - [Media controls on Gnome like play, pause, next, volume up/down](https://www.reddit.com/r/gnome/comments/ghg7y0/media_controls_on_gnome_like_play_pause_next/)
 
-### 8.2. VS Code
+### VS Code
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -4323,7 +4328,7 @@ Add setup to `$HOME/.bashrc`
     - Run `GTK_IM_MODULE=ibus` on a terminal. This should work!
     - If it does just alias this as I put in the post above
 
-## 9. Final links
+## Final links
 
 ☝ [Table of contents](#table-of-contents)
 
