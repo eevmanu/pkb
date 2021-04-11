@@ -1564,9 +1564,11 @@ Change to `DuckDuckGo` search engine
 Related links
 - [CRXcavator](https://crxcavator.io/) - Submit a Chrome Extension ID to scan
 
-### [VLC media player](https://www.videolan.org/vlc/download-ubuntu.html) - play multimedia files
+### VLC media player - play multimedia files
 
 ☝ [Table of contents](#table-of-contents)
+
+[Download Ubuntu](https://www.videolan.org/vlc/download-ubuntu.html)
 
 [GitHub](https://github.com/videolan/vlc)
 
@@ -1613,6 +1615,7 @@ Shortucts
 Related links
 - [Changelog](https://www.videolan.org/developers/vlc-branch/NEWS)
 - [Releases](https://www.videolan.org/vlc/releases/)
+- [QtHotkeys](https://wiki.videolan.org/QtHotkeys/)
 
 ### [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux) - code editor
 
