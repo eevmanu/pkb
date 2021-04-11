@@ -1,47 +1,36 @@
-# INSTRUCTIONS
+# ====================== INSTRUCTIONS ======================
 
-# To load this instructions in your terminal
+# To source / load this file in your terminal
 
-# 1.
-# source this file at user'sn $HOME/.bashrc file
+# 1. add lines below (source this) at the end of $HOME/.bashrc and $HOME/.profile
 # (https://stackoverflow.com/questions/4952177/include-additional-files-in-bashrc)
-# add lines below at the end of $HOME/.bashrc file
+
 # if [ -f $HOME/mybashrc.sh ]; then
 #     . $HOME/mybashrc.sh
 # fi
 
-# 2.
-# create a symbolic file at user's $HOME folder, pointing to this file
+# 2. create a symbolic file at user's $HOME folder, pointing to this file
+
 # $ ln -sT $(pwd)/mybashrc.sh $HOME/mybashrc.sh
-
-# ====================== "bin" folders
-
-# add bin directory from user's $HOME to $PATH
-PATH="$PATH:$HOME/.local/bin"
-
-# add personal bin folder (where I put personal useful binaries) to $PATH
-PATH="$PATH:$HOME/bin"
-
-# if `snap` is installed
-# add snap bin folder to $PATH
-# PATH="$PATH:/snap/bin"
-
-# add exiftool bin folder to $PATH
-# if you don't have `su` access, you can run ExifTool in your own account by
-# moving "exiftool" and its "lib" directory to any convenient location,
-# preferably somewhere in your PATH.
-# PATH="$PATH:$HOME/bin/exiftool"
-# https://exiftool.org/install.html#Unix
-# docs - https://exiftool.org/exiftool_pod.html
-# releases - https://github.com/exiftool/exiftool/releases
 
 # ===============================================
 
-# ====================== Python
+# ====================== "bin" folders ======================
 
-# pip
-# if `pip` is installed locally
-# add $HOME/.local/bin/ to $PATH
+# https://unix.stackexchange.com/q/316765/
+PATH="$PATH:$HOME/.local/bin"
+
+# add "personal" bin folder to $PATH
+PATH="$PATH:$HOME/bin"
+
+# add "snap" bin folder to $PATH
+# PATH="$PATH:/snap/bin"
+
+# ===============================================
+
+# ====================== Python ======================
+
+# pip, if is installed locally (--user), add $HOME/.local/bin/ to $PATH
 # PATH="$PATH:$HOME/.local/bin"
 
 # virtualenv + virtualenvwrapper
@@ -82,7 +71,7 @@ fi
 
 # ===============================================
 
-# ====================== Go (Golang)
+# ====================== Go (Golang) ======================
 
 export GOROOT=/usr/local/go
 export GOPATH="$HOME/go"
@@ -96,7 +85,7 @@ alias gosrc="cd $HOME/go/src"
 
 # ===============================================
 
-# ====================== Google Cloud SDK
+# ====================== Google Cloud SDK ======================
 
 # https://cloud.google.com/sdk/docs/downloads-apt-get
 # https://cloud.google.com/sdk/docs/downloads-snap
@@ -112,7 +101,7 @@ alias gosrc="cd $HOME/go/src"
 
 # ===============================================
 
-# ====================== Docker Engine & Docker Compose
+# ====================== Docker Engine & Docker Compose ======================
 
 function dockerpid() {
   docker inspect --format '{{ .State.Pid }}' $1
@@ -139,7 +128,7 @@ alias dclogs="docker-compose logs -ft --tail=10"
 
 # ===============================================
 
-# ====================== Colorful ever-changing prompt
+# ====================== Colorful ever-changing prompt ======================
 
 # https://twitter.com/captainsafia/status/868104255059750913
 function prompt_party {
@@ -171,7 +160,7 @@ PROMPT_COMMAND=prompt_party
 
 # ===============================================
 
-# =============== "history" command
+# =============== "history" command ======================
 
 HISTSIZE=1000000
 HISTFILESIZE=2000000
@@ -180,13 +169,13 @@ HISTTIMEFORMAT='%F %T - '
 
 # ===============================================
 
-# =============== "z" command
+# =============== "z" command ======================
 
 . $HOME/bin/z.sh
 
 # ===============================================
 
-# =============== Git
+# ====================== Git ======================
 
 # in case miswrite `git`
 alias gti="git"
@@ -201,16 +190,25 @@ gitlogformat="log \
 git config --global alias.lg "$gitlogformat"
 alias gitlg="git $gitlogformat"
 
-alias gitftp="git fetch --all && git fetch --prune"
-
 alias gitconfl="git config --list --local"
 alias gitconfs="git config --list --system"
 alias gitconfg="git config --list --global"
 alias gitconfa="git config --list"
 
+alias gitfetch="git fetch --all --tags --progress"
+alias gitfetchprune="git fetch --prune --progress origin"
+
+# avoid merging in wrong branchs
+alias gitpull="git pull origin master:master"
+# alias gitpull="git pull origin main:main"
+
+gitpush() {
+  git push origin $(git branch --show-current):$(git branch --show-current)
+}
+
 # ===============================================
 
-# ====================== Manage updates
+# ====================== apt - manage updates and upgrades ======================
 
 myupd(){
   sudo apt update && sudo apt list --upgradable
@@ -220,7 +218,7 @@ myupd(){
 myupg(){
   # What is “dist-upgrade” and why does it upgrade more than “upgrade”?
   # https://askubuntu.com/questions/81585/what-is-dist-upgrade-and-why-does-it-upgrade-more-than-upgrade
-  sudo apt full-upgrade -y
+  sudo apt full-upgrade -y --allow-downgrades
   # sudo apt upgrade -y && sudo apt dist-upgrade -y
 
   # What is difference between the options “autoclean”, “autoremove” and “clean”?
@@ -237,30 +235,18 @@ myfwupd(){
 
 # ===============================================
 
-# ====================== EXTRAS
+# ====================== deactivate unicode code point ======================
 
-myts() {
-  echo "$(date +"%Y-%m-%d_%H-%M-%S")" | xclip -quiet -selection clipboard
-  # echo "$(date +"%Y-%m-%d %H:%M:%S")" | xclip -selection clipboard
-}
-myday() {
-  echo "$(date +"%Y-%m-%d")" | xclip -quiet -selection clipboard
-}
-# TODO
-# mytsdk() {
-#   echo "$(date +"%Y-%m-%d_%H-%-%S")" | xclip -selection clipboard
-# }
-# [Desktop Entry]
-# Type=Application
-# Version=0.0.1
-# Name=My Timestamp
-# Comment=Copy timestamp to clipboard
-# Exec=mytsdk
-# Terminal=false
-# Categories=Utility;
-# touch $HOME/.local/share/applications/mytsdk.desktop
-# nano $HOME/.local/share/applications/mytsdk.desktop
-# update-desktop-database $HOME/.local/share/applications/
+# deactivate unicode code point
+# https://unix.stackexchange.com/a/626136/309458
+# https://superuser.com/q/358749/
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
+# ===============================================
+
+# ====================== final ones ======================
 
 myip() {
   curl -4 ifconfig.co
@@ -275,6 +261,6 @@ alias open=xdg-open
 
 # ===============================================
 
-if [ -f extras.sh ]; then
-  . extras.sh
+if [ -f $HOME/extras.sh ]; then
+  . $HOME/extras.sh
 fi
