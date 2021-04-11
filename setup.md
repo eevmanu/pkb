@@ -1693,9 +1693,11 @@ Related links:
 - [How to change indentation in Visual Studio Code?](https://stackoverflow.com/questions/34174207/)
 - [Choose folders to be ignored during search in VS Code](https://stackoverflow.com/questions/29971600/)
 
-### [Foxit PDF Reader](https://www.foxitsoftware.com/pdf-reader/) - pdf viewer
+### Foxit PDF Reader - pdf viewer
 
 ☝ [Table of contents](#table-of-contents)
+
+[Webpage](https://www.foxitsoftware.com/pdf-reader/)
 
 Industry’s Most Powerful PDF Reader
 
