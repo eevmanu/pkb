@@ -646,6 +646,8 @@ $ systemctl --user unmask \
 $ tracker status
 ```
 
+Restart Gnome: `Alt` + `F2`, enter `r` and press `enter`
+
 - Related links
     - 2020-04-27 - [How To Completely Disable Tracker, GNOME's File Indexing And Search Tool](https://www.linuxuprising.com/2019/07/how-to-completely-disable-tracker.html) - [archive](https://web.archive.org/web/20201226151700/https://www.linuxuprising.com/2019/07/how-to-completely-disable-tracker.html)
     - [vancluever/gnome-tracker-disable.md](https://gist.github.com/vancluever/d34b41eb77e6d077887c) -  GNOME Tracker Disable
