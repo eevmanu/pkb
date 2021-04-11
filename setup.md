@@ -4426,9 +4426,11 @@ Related links
 - [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 - [open-guides/og-aws](https://github.com/open-guides/og-aws) - :books: Amazon Web Services — a practical guide
 
-### [Carbon](https://carbon.now.sh/) - beautify source code as img
+### Carbon - beautify source code as img
 
 ☝ [Table of contents](#table-of-contents)
+
+[Website](https://carbon.now.sh/)
 
 Create and share beautiful images of your source code
 
@@ -4436,6 +4438,8 @@ Create and share beautiful images of your source code
 
 Related tools
 - [octref/polacode](https://github.com/octref/polacode) - 📸 Polaroid for your code
+- [kufii/CodeSnap](https://github.com/kufii/CodeSnap) - 📸 Take beautiful screenshots of your code in VS Code!
+- [Ray.so](https://ray.so/)
 
 ### [Project Jupyter](https://jupyter.org/) - interactive notebook
 
