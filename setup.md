@@ -288,9 +288,13 @@ Update system Fonts
     - [source-foundry/Hack](https://github.com/source-foundry/Hack)
     - [adobe-fonts/source-code-pro](https://github.com/adobe-fonts/source-code-pro)
     - [microsoft/cascadia-code](https://github.com/microsoft/cascadia-code)
+    - [be5invis/Iosevka](https://github.com/be5invis/Iosevka)
     - [pop-os/fonts](https://github.com/pop-os/fonts)
     - [rsms/inter](https://github.com/rsms/inter)
-    - [most starred repo with `font`](https://github.com/search?q=font&s=stars&type=Repositories)
+    - [kiliman/operator-mono-lig](https://github.com/kiliman/operator-mono-lig)
+    - [GitHub: font (sort: Most stars)](https://github.com/search?q=font&s=stars&type=Repositories)
+    - [GitHub: ligature (sort: Most stars)](https://github.com/search?q=ligature&s=stars&type=Repositories)
+    - [Circular](https://lineto.com/typefaces/circular/) - 190 CHF
 
 - Related links
     - [Go fonts](https://blog.golang.org/go-fonts)
