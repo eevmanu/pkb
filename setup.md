@@ -4144,11 +4144,24 @@ Meta information reader/writer
 
 [GitHub](https://github.com/exiftool/exiftool)
 
-Set date time on pictures
+Use case: set date time on pictures
 
 ```bash
 $ exiftool -AllDates="2015:09:22 12:00:00"
 ```
+
+[If you don't have su access, you can run ExifTool in your own account by moving "exiftool" and its "lib" directory to any convenient location, preferably somewhere in your PATH](https://exiftool.org/install.html#:~:text=If%20you%20don't%20have%20su%20access%2C,location%2C%20preferably%20somewhere%20in%20your%20PATH)
+
+Add `exiftool` **bin** folder into `$PATH`
+
+```bash
+PATH="$PATH:$HOME/bin/exiftool"
+```
+
+Related links
+- [Install - Unix Platforms](https://exiftool.org/install.html#Unix)
+- [Application Documentation](https://exiftool.org/exiftool_pod.html)
+- [Github - Releases](https://github.com/exiftool/exiftool/releases)
 
 ### [iproute2](https://en.wikipedia.org/wiki/Iproute2) - manage networking stuffs
 
