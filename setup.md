@@ -3399,18 +3399,22 @@ Related tools
 
 - [docker-compose](https://github.com/docker/compose)
 
-    Install from `GitHub`
+    Install from **GitHub** [releases](https://github.com/docker/compose/releases)
 
     ```bash
-    # install via github in /usr/local/bin
-    $ curl \
-        -L https://github.com/docker/compose/releases/download/1.25.5/docker-compose-`uname -s`-`uname -m` \
+    $ sudo curl \
+        -L https://github.com/docker/compose/releases/download/1.28.5/docker-compose-`uname -s`-`uname -m` \
         -o /usr/local/bin/docker-compose
 
-    $ chmod +x /usr/local/bin/docker-compose
+    $ sudo wget \
+        -O /usr/local/bin/docker-compose \
+        https://github.com/docker/compose/releases/download/1.28.5/docker-compose-`uname -s`-`uname -m`
+
+    $ sudo chmod +x /usr/local/bin/docker-compose
+    # $ sudo chmod u+x /usr/local/bin/docker-compose
     ```
 
-    Install via `pip`
+    Install via `pip` (if installed with `--user`, no need of sudo)
 
     ```bash
     $ pip install -U docker-compose
