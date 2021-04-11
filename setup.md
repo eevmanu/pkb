@@ -1617,11 +1617,13 @@ Related links
 - [Releases](https://www.videolan.org/vlc/releases/)
 - [QtHotkeys](https://wiki.videolan.org/QtHotkeys/)
 
-### [Visual Studio Code](https://code.visualstudio.com/docs/setup/linux) - code editor
+### Visual Studio Code - code editor
 
 ☝ [Table of contents](#table-of-contents)
 
 Also called VSCode
+
+[Visual Studio Code on Linux](https://code.visualstudio.com/docs/setup/linux)
 
 Install via `.deb`
 
@@ -1645,6 +1647,27 @@ $ sudo update-alternatives --set editor /usr/bin/code-insiders
 $ sudo update-alternatives --config editor
 ```
 
+Save `User` settings as symlink
+
+```bash
+# Copy to another place
+$ cp ${HOME}/.config/"Code - Insiders"/User/settings.json ${HOME}/Projects/vscode.user.settings.json
+# Remove the actual one
+$ rm ${HOME}/.config/"Code - Insiders"/User/settings.json
+# Create symlink reference
+$ ln -sT ${HOME}/Projects/vscode.user.settings.json ${HOME}/.config/"Code - Insiders"/User/settings.json
+```
+
+Personal custom shortcuts:
+
+```json
+{
+  "key": "ctrl+'",
+  "command": "workbench.files.action.collapseExplorerFolders",
+  "when": "viewContainer.workbench.view.explorer.enabled"
+}
+```
+
 Alternatives
 - [VSCodium/vscodium](https://github.com/VSCodium/vscodium)
 - Visual Studio Code [Insiders](https://code.visualstudio.com/insiders/)
@@ -1664,10 +1687,11 @@ Related links:
     $ code-insiders --list-extensions | xargs -L 1 echo code-insiders --install-extension
     ```
 
-    [List of extensions](vscode-extensions.md)
+    [List of extensions](./vscode-extensions.md)
 
-- [How do I remove VS Code & settings from Ubuntu?](https://superuser.com/questions/1113022/how-do-i-remove-vs-code-settings-from-ubuntu)
-- [How to change indentation in Visual Studio Code?](https://stackoverflow.com/questions/34174207/how-to-change-indentation-in-visual-studio-code)
+- [How do I remove VS Code & settings from Ubuntu?](https://superuser.com/questions/1113022/)
+- [How to change indentation in Visual Studio Code?](https://stackoverflow.com/questions/34174207/)
+- [Choose folders to be ignored during search in VS Code](https://stackoverflow.com/questions/29971600/)
 
 ### [Foxit PDF Reader](https://www.foxitsoftware.com/pdf-reader/) - pdf viewer
 
