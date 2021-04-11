@@ -667,74 +667,6 @@ Setup Amazon Echo device as speaker
     input.conf  main.conf  network.conf
     ```
 
-- Try with [Blueman]((https://github.com/blueman-project/blueman))
-
-    <!-- TODO move to apps when apps is clean -->
-
-    Blueman is a GTK+ Bluetooth Manager
-
-    Simulate install to verify package version able to install or installed
-
-    ```bash
-    # download latest package information from all configured sources
-    $ sudo apt install update
-
-    $ apt install -s blueman
-    ...
-    Inst blueman (2.2-git1601238013r3bcd6003-python3.8-1 cschramm.eu [amd64])
-    ...
-    ```
-
-    Install dependencies
-
-    ```bash
-    $ sudo apt install \
-        apt-transport-https \
-        curl
-    ```
-
-    Add [APT repository](https://blueman.cschramm.eu/debian/) with git snapshots
-
-    ```bash
-    $ curl https://blueman.cschramm.eu/debian/blueman.gpg.key | \
-        sudo apt-key add -
-    ```
-
-    Set right `python` version to use in APT repository
-
-    ```bash
-    # create file
-    $ sudo touch /etc/apt/sources.list.d/blueman.list
-
-    # edit it
-    $ sudo nano /etc/apt/sources.list.d/blueman.list
-
-    # add lines below
-    deb https://cschramm.eu/blueman/debian/ python3.8 main
-    deb-src https://cschramm.eu/blueman/debian/ python3.8 main
-    ```
-
-    Start `blueman` applet with `debug` logs
-
-    ```bash
-    $ blueman-applet --loglevel debug
-    ```
-
-    Error: `AttributeError: 'NetConf' object has no attribute 'ip4_address'` - [img](https://i.imgur.com/pD8Ukd1.png)
-
-    ```
-    g-dbus-error-quark: GDBus.Error:org.freedesktop.DBus.Error.Failed: Traceback (most recent call last):
-    File "/usr/lib/python3/dist-packages/blueman/main/DbusService.py", line 126, in _handle_method_call
-        ok(method(*args))
-    File "/usr/lib/python3/dist-packages/blueman/plugins/mechanism/Network.py", line 56, in _reload_network
-        if nc.ip4_address is None or nc.ip4_mask is None:
-    AttributeError: 'NetConf' object has no attribute 'ip4_address'
-    (0)
-    ```
-
-    Related links
-    - Github Wiki - [Troubleshooting](https://github.com/blueman-project/blueman/wiki/Troubleshooting)
-
 - Steps
     - Connect laptop to speaker (not viceversa)
     - After connect, if output device selected is on bluetooth speaker, move to another device and move back to check it works properly
@@ -761,6 +693,87 @@ Setup Amazon Echo device as speaker
     - [Bluetooth speaker connected but not listed in sound output](https://askubuntu.com/questions/824404/bluetooth-speaker-connected-but-not-listed-in-sound-output)
     - [Bluetooth speaker no sound in Ubuntu 16.04](https://askubuntu.com/questions/763539/bluetooth-speaker-no-sound-in-ubuntu-16-04)
     - [A2DP sink without pulseaudio](https://stackoverflow.com/questions/12338621/a2dp-sink-without-pulseaudio)
+
+#### Blueman
+
+[Github](https://github.com/blueman-project/blueman)
+
+<!-- TODO move to apps when apps is clean -->
+
+Blueman is a GTK+ Bluetooth Manager
+
+Simulate install to verify package version able to install or installed
+
+```bash
+# download latest package information from all configured sources
+$ sudo apt install update
+
+$ apt install -s blueman
+...
+Inst blueman (2.2-git1601238013r3bcd6003-python3.8-1 cschramm.eu [amd64])
+...
+```
+
+Install dependencies
+
+```bash
+$ sudo apt install \
+    apt-transport-https \
+    curl
+```
+
+Add [APT repository](https://blueman.cschramm.eu/debian/) with git snapshots
+
+```bash
+$ curl https://blueman.cschramm.eu/debian/blueman.gpg.key | \
+    sudo apt-key add -
+```
+
+Set right `python` version to use in APT repository
+
+```bash
+# create file
+$ sudo touch /etc/apt/sources.list.d/blueman.list
+
+# edit it
+$ sudo nano /etc/apt/sources.list.d/blueman.list
+
+# add lines below
+deb https://cschramm.eu/blueman/debian/ python3.8 main
+deb-src https://cschramm.eu/blueman/debian/ python3.8 main
+```
+
+Start `blueman` applet with `debug` logs
+
+```bash
+$ blueman-applet --loglevel debug
+```
+
+Error: `AttributeError: 'NetConf' object has no attribute 'ip4_address'` - [img](https://i.imgur.com/pD8Ukd1.png)
+
+```
+g-dbus-error-quark: GDBus.Error:org.freedesktop.DBus.Error.Failed: Traceback (most recent call last):
+File "/usr/lib/python3/dist-packages/blueman/main/DbusService.py", line 126, in _handle_method_call
+    ok(method(*args))
+File "/usr/lib/python3/dist-packages/blueman/plugins/mechanism/Network.py", line 56, in _reload_network
+    if nc.ip4_address is None or nc.ip4_mask is None:
+AttributeError: 'NetConf' object has no attribute 'ip4_address'
+(0)
+```
+
+Uninstall / remove
+
+- Command
+
+    ```
+    $ sudo apt remove blueman && sudo apt purge blueman
+    ```
+
+- Remove apt list from `/etc/apt/sources.list.d/`
+
+Related links
+
+- Github Wiki - [Troubleshooting](https://github.com/blueman-project/blueman/wiki/Troubleshooting)
 
 ### Wireless
 
