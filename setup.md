@@ -3199,10 +3199,38 @@ List
     # download binary
     $ wget \
         -O $HOME/bin/stoplight-studio \
-        https://github.com/stoplightio/studio/releases/download/v2.0.0/stoplight-studio-linux-x86_64.AppImage
+        https://github.com/stoplightio/studio/releases/download/v2.3.0-stable.5448.git-f63f57f/stoplight-studio-linux-x86_64.AppImage
 
     # assign permissions
     $ chmod u+x $HOME/bin/stoplight-studio
+    ```
+
+    Download logo and add in `$HOME/.local/share/icons` or `$HOME/.icons/`
+
+    ```bash
+    $ wget \
+            -O $HOME/.local/share/icons/spotlight-studio \
+                https://stoplight.io/images/home/logo-blue-black.png
+    ```
+
+    Create `spotlight-studio.desktop` file in `$HOME/.local/share/applications`  (or `/usr/share/applications/`)
+
+    ```ini
+    [Desktop Entry]
+    Name=Stoplight Studio
+    Description=Effortless API Design
+    Exec=/home/eevmanu/bin/stoplight-studio
+    Icon=/home/eevmanu/.local/share/icons/spotlight-studio
+    StartupNotify=true
+    Terminal=false
+    Type=Application
+    Categories=Development;
+    ```
+
+    Build cache database of MIME types handled by desktop files
+
+    ```bash
+    $ update-desktop-database $HOME/.local/share/applications/
     ```
 
 - [uw-labs/bloomrpc](https://github.com/uw-labs/bloomrpc) - The missing GUI Client for GRPC services
