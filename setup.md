@@ -3901,9 +3901,11 @@ Related links
 - [denji/awesome-http-benchmark](https://github.com/denji/awesome-http-benchmark) - HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful)
 - TechEmpower - [Benchmarks](https://www.techempower.com/benchmarks/) - [GitHub](https://github.com/TechEmpower/FrameworkBenchmarks) - Source for the TechEmpower Framework Benchmarks project
 
-### [youtube-dl](https://ytdl-org.github.io/youtube-dl/) - youtube downloader
+### youtube-dl - youtube downloader
 
 ☝ [Table of contents](#table-of-contents)
+
+[Website](https://ytdl-org.github.io/youtube-dl/)
 
 Command-line program to download videos from YouTube.com and other video sites
 
@@ -3920,6 +3922,12 @@ $ wget \
 
 $ chmod u+rx $HOME/bin/youtube-dl
 ```
+
+Related links
+
+- [Combining youtube-dl and VLC without a pipe](https://unix.stackexchange.com/questions/498751/)
+- [How to stream Youtube videos using youtube-dl and VLC ?](https://www.raspberrypi.org/forums/viewtopic.php?f=91&t=252300&sid=75df3835b47a1e10699f19b9cc71ba54)
+- [Stream to vlc](https://github.com/ytdl-org/youtube-dl/issues/2124)
 
 ### [ngrok](https://ngrok.com/) - expose local web server to internet
 
