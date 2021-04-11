@@ -1895,9 +1895,11 @@ Related links
 - [Wiki](https://github.com/telegramdesktop/tdesktop/wiki)
     - [Keyboard Shortcuts](https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts)
 
-### [Ksnip](https://github.com/ksnip/ksnip) - screenshot tool
+### Ksnip - screenshot tool
 
 ☝ [Table of contents](#table-of-contents)
+
+[Github](https://github.com/ksnip/ksnip)
 
 Install via `flatpak`
 
@@ -1915,7 +1917,7 @@ Install via `AppImage`
     ```bash
     $ cd $HOME
     $ wget -O ksnip https://github.com/ksnip/ksnip/releases/download/v1.7.3/ksnip-1.7.3-x86_64.AppImage
-    $ chmod +x ksnip
+    $ chmod u+x ksnip
     $ mv ksnip $HOME/bin
     ```
 
