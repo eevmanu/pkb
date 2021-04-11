@@ -2347,9 +2347,11 @@ Alternatives
     Related links
     - 2018-08-01 - [Install and Configure RealVNC in Linux Ubuntu 18.04 LTS](https://www.zealfortechnology.com/2018/08/install-and-configure-realvnc-in-linux.html) - [archive](https://web.archive.org/web/20201226150515/https://www.zealfortechnology.com/2018/08/install-and-configure-realvnc-in-linux.html)
 
-### [OBS Studio](https://obsproject.com/wiki/install-instructions#linux) - streaming
+### OBS Studio - streaming
 
 ☝ [Table of contents](#table-of-contents)
+
+[Instructions to install](https://obsproject.com/wiki/install-instructions#linux)
 
 [GitHub](https://github.com/obsproject/obs-studio)
 
@@ -2360,6 +2362,10 @@ $ sudo add-apt-repository ppa:obsproject/obs-studio
 $ sudo apt update
 $ sudo apt install obs-studio
 ```
+
+Config I use to record:
+- Audio output -> Select `Built-in Audio Analog Stereo` which have the option to point to speaker / headphone (the second in my case), not default one
+- Audio input -> Select `Built-in Audio Analog Stereo` which have the option to point to microphone (plugged or unplugged, the first one in my case), not default one
 
 ### Autokey - desktop automation utility
 
