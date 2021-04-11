@@ -1787,9 +1787,11 @@ TODO
 Related links
 - [archive](https://web.archive.org/web/20201221183349/https://www.spotify.com/pe/download/linux/)
 
-### [Slack](https://slack.com/intl/en-us/downloads/linux) - IM app
+### Slack - IM app
 
 ☝ [Table of contents](#table-of-contents)
+
+[Download for Linux](https://slack.com/intl/en-us/downloads/linux)
 
 Install via `.deb`
 
@@ -1808,6 +1810,10 @@ $ snap install slack
 $ snap install slack --classic
 $ snap install --classic slack
 ```
+
+Allow shortcut to `link`, basically deactivating **unicode code point**
+- [How Can I Disable the Global Shortcut CTRL + SHIFT + U in Linux Mint?](https://unix.stackexchange.com/q/604207)
+- [How to disable Ctrl+Shift+U?](https://superuser.com/q/358749)
 
 Related links
 - [Release notes for Linux](https://slack.com/intl/en-us/release-notes/linux)
