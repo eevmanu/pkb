@@ -80,7 +80,7 @@
     - [exiftool - manage meta info from files](#exiftool---manage-meta-info-from-files)
     - [iproute2 - manage networking stuffs](#iproute2---manage-networking-stuffs)
     - [powertop - monitor electrical power consumption](#powertop---monitor-electrical-power-consumption)
-    - [espanso -  text expander](#espanso----text-expander)
+    - [espanso - text expander](#espanso---text-expander)
     - [Keepassxc - password manager](#keepassxc---password-manager)
     - [AWS CLI](#aws-cli)
     - [Carbon - beautify source code as img](#carbon---beautify-source-code-as-img)
@@ -159,6 +159,7 @@ $ sudo rsync -aPv --delete "$HOME/Music/"     "/media/$USER/manu/Music/"
 $ sudo rsync -aPv --delete "$HOME/Pictures/"  "/media/$USER/manu/Pictures/"
 $ sudo rsync -aPv --delete "$HOME/Projects/"  "/media/$USER/manu/Projects/"
 $ sudo rsync -aPv --delete "$HOME/Videos/"    "/media/$USER/manu/Videos/"
+<!-- TODO backup $HOME/.config/espanso -->
 ```
 
 Restore folders from external drive
@@ -4102,13 +4103,126 @@ Related tools
 - [bmon](https://linux.die.net/man/1/bmon) - Portable bandwidth monitor and rate estimator - [GitHub](https://github.com/tgraf/bmon)
 - [lm-sensors](https://hwmon.wiki.kernel.org/lm_sensors) - [GitHub](https://github.com/lm-sensors/lm-sensors) - Linux hardware monitoring
 
-### espanso -  text expander
+### espanso - text expander
 
 ☝ [Table of contents](#table-of-contents)
 
 Cross-platform Text Expander written in Rust
 
-[GitHub](https://github.com/federico-terzi/espanso)
+Find it on `snap`
+
+```bash
+$ snap find espanso
+```
+
+Check `confinement` level
+
+```bash
+$ snap info --verbose espanso
+...
+notes:
+  private:     false
+  confinement: classic
+...
+```
+
+Install it via `snap` (on `Linux`, instructions [here](https://espanso.org/install/linux/#installing-on-ubuntu--debian))
+
+```bash
+$ snap install espanso --classic
+```
+
+If install without `sudo` will request your password through a pop-up
+
+Where it installed
+
+```bash
+$ which espanso
+/snap/bin/espanso
+```
+
+How to start it
+
+```bash
+$ espanso start
+espanso must be registered to systemd (user level) first. Do you want to proceed? yes
+Creating service entry: ${HOME}/.config/systemd/user/espanso.service
+Entry will point to: /snap/espanso/84/bin/espanso
+Service file created correctly!
+Enabling espanso for systemd...
+Created symlink ${HOME}/.config/systemd/user/default.target.wants/espanso.service → ${HOME}/.config/systemd/user/espanso.service.
+Service registered correctly!
+Daemon started correctly!
+```
+
+In case next error:
+
+```
+Error: 'notify-send' command is needed for espanso to work correctly, please install it.
+
+Pre-check was not successful, espanso could not be started.
+```
+
+install `libnotify-bin` dependecy
+
+```bash
+$ sudo apt install libnotify-bin
+```
+
+Installing [modulo](https://github.com/federico-terzi/modulo/)
+
+```bash
+$ wget \
+    -O $HOME/bin/modulo \
+    https://github.com/federico-terzi/modulo/releases/download/v0.1.1/modulo-x86_64.AppImage
+
+$ chmod u+x $HOME/bin/modulo
+```
+
+Show configuration folders
+
+```bash
+$ espanso path
+Config: ${HOME}/.config/espanso
+Packages: ${HOME}/.local/share/espanso/packages
+Data: ${HOME}/.local/share/espanso
+```
+
+Edit configuration
+
+```bash
+$ espanso edit
+```
+
+My configuration
+
+```yaml
+matches:
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+
+  - trigger: ":dt"
+    replace: "{{mydatetime}}"
+    vars:
+      - name: mydatetime
+        type: date
+        params:
+          format: "%F %T"
+```
+
+
+To activate/deactivate press `Alt` twice
+
+
+- [GitHub](https://github.com/federico-terzi/espanso)
+- [Docs](https://espanso.org/docs/)
+    - [Getting Started](https://espanso.org/docs/get-started/)
+    - [Configuration](https://espanso.org/docs/configuration/)
 
 ### Keepassxc - password manager
 
