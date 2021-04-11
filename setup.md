@@ -895,11 +895,15 @@ Build cache database of MIME types handled by desktop files
 $ update-desktop-database $HOME/.local/share/applications/
 ```
 
+Remap `f1` to `f12` from multimedia keycodes to functional keycodes
+- [adam-savard/keychron-k2-function-keys-linux](https://github.com/adam-savard/keychron-k2-function-keys-linux) - A small script to allow the Keychron K2 Keyboard to boot up with function keys enabled by default.
+
+Solution to `print screen` featur, map `ksnip` to `f3`
+
 TODO
-- missing make desktop files work
-- missing have a shortcut (could be a script) to execute when startup application
-- remap `f1` to `f12` to right keycodes
-- find a solution to `print screen`
+- add  `.desktop` files
+- add script to load at startup application
+    - everytime when start run `keychronk4map-apply.sh`
 
 ## Revert partial upgrade PopOS verison
 
