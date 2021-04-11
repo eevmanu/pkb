@@ -88,6 +88,7 @@
     - [Java](#java)
     - [Z](#z)
     - [direnv](#direnv)
+    - [Node.js Javascript runtime](#node.js-javascript-runtime)
 - [Troubleshooting](#troubleshooting)
     - [Spotify](#spotify)
     - [VS Code](#vs-code)
@@ -4369,6 +4370,78 @@ Add setup to `$HOME/.bashrc`
 ### direnv
 
 
+### Node.js Javascript runtime
+
+First install nvm
+
+```bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+...
+=> Appending nvm source string to $HOME/.bashrc
+=> Appending bash_completion source string to $HOME/.bashrc
+=> Close and reopen your terminal to start using nvm or run the following to use it now:
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+
+Verify installation
+
+```bash
+$ command -v nvm
+```
+
+Node versions available
+
+```bash
+$ nvm list-remote
+```
+
+Install a specific version of node
+
+```bash
+$ nvm install v14.16.0
+Downloading and installing node v14.16.0...
+Downloading https://nodejs.org/dist/v14.16.0/node-v14.16.0-linux-x64.tar.xz...
+######################################################################## 100.0%
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v14.16.0 (npm v6.14.11)
+Creating default alias: default -> v14.16.0
+```
+
+Retrieve nvm setup with node version already installed
+
+```bash
+$ nvm list
+->     v14.16.0
+default -> v14.16.0
+iojs -> N/A (default)
+unstable -> N/A (default)
+node -> stable (-> v14.16.0) (default)
+stable -> 14.16 (-> v14.16.0) (default)
+lts/* -> lts/fermium (-> v14.16.0)
+lts/argon -> v4.9.1 (-> N/A)
+lts/boron -> v6.17.1 (-> N/A)
+lts/carbon -> v8.17.0 (-> N/A)
+lts/dubnium -> v10.24.0 (-> N/A)
+lts/erbium -> v12.21.0 (-> N/A)
+lts/fermium -> v14.16.0
+```
+
+Use a node version
+
+```bash
+$ nvm use v14.16.0
+```
+
+Valide node version
+
+```bash
+$ node -v
+v14.16.0
+```
 
 ## Troubleshooting
 
