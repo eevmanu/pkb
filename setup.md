@@ -1046,6 +1046,9 @@ Useful internal urls:
 
 Useful Extensions
 - [ActivityWatch Web Watcher](https://chrome.google.com/webstore/detail/activitywatch-web-watcher/nglaklhklhcoonedhgnpgddginnjdadi)
+- [Bitwarden - Free Password Manager](https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb)
+    - Activate `Auto-fill the last used login for the current website`
+    - Activate `Generate and copy a new random password to the clipboard`
 - [Canvas Blocker (Fingerprint protect)](https://chrome.google.com/webstore/detail/canvas-blocker-fingerprin/nomnklagbgmgghhjidfhnoelnjfndfpd/)
     - [Browser leaks - HTML5 Canvas Fingerprinting](https://browserleaks.com/canvas)
 - [ClearUrls](https://chrome.google.com/webstore/detail/clearurls/lckanjgmijmafbedllaakclkaicjfmnk) - [GitHub](https://gitlab.com/KevinRoebert/ClearUrls)
@@ -1061,36 +1064,48 @@ Useful Extensions
 - [Improve YouTube! (Open-Source for YouTube)](https://chrome.google.com/webstore/detail/improve-youtube-open-sour/bnomihfieiccainjcjblhegjgglakjdd)
 - [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
 - [Just Read](https://chrome.google.com/webstore/detail/just-read/dgmanlpmmkibanfdgjocnabmcaclkmod/)
-
-    Create extension for `Open the Just Read format for the current page` - `Ctrl+Shift+1`
-
-    [Dark theme](https://gist.github.com/dflock/d102df29dae3229481af71b2ff91aa70)
-
+    - Create extension for `Open the Just Read format for the current page` - `Ctrl+Shift+1`
+    - [Dark theme](https://gist.github.com/dflock/d102df29dae3229481af71b2ff91aa70)
 - [LastPass: Free Password Manager](https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd)
 - [LIFX Web Control](https://chrome.google.com/webstore/detail/lifx-web-control/ohedkkoibkekbipjoeehpofmjbmmkhin)
 - [Link to Text Fragment](https://chrome.google.com/webstore/detail/link-to-text-fragment/pbcodcjpfjdpcineamnnmbkkmkdpajjg)
 - [Markdown Viewer](https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk)
+    - Theme -> `GITHUB DARK`
+    - Compiler -> `MARKED`, activate:
+        - `gfm`
+        - `breaks`
+        - `smartLists`
+        - `smartypants`
+    - Content, activate:
+        - `scroll`
+        - `autoreload`
+        - `emoji`
+        - `mermaid`
+        - `mathjax`
 - [Onetab](https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall)
 - [PocketTube: Youtube Subscription Manager](https://chrome.google.com/webstore/detail/kdmnjgijlmjgmimahnillepgcgeemffb)
+- [Proxy SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif)
 - [Pushbullet](https://chrome.google.com/webstore/detail/pushbullet/chlffgpmiacpedhhbkiomidkjlcfhogd)
 - [Refined GitHub](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf)
 - [Refined Hacker News](https://chrome.google.com/webstore/detail/refined-hacker-news/gcibdgjaladjjloeocimnijdgopejkfk)
 - [Requestly: Redirect Url, Modify Headers etc](https://chrome.google.com/webstore/detail/requestly-redirect-url-mo/mdnleldcmiljblolnjhpnblkcekpdkpa)
 - [SimilarWeb - Traffic Rank & Website Analysis](https://chrome.google.com/webstore/detail/similarweb-traffic-rank-w/hoklmmgfnpapgjgcpechhaamimifchmp)
+- [The Marvellous Suspender](https://chrome.google.com/webstore/detail/the-marvellous-suspender/noogafoofpebimajpfpamcfhoaifemoa)
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
 - [Unlimited Email Tracker](https://chrome.google.com/webstore/detail/unlimited-email-tracker/gojogohjgpelafgaeejgelmplndppifh)
 - [Video Speed Controller](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)
 - [vidIQ Vision for YouTube](https://chrome.google.com/webstore/detail/vidiq-vision-for-youtube/pachckjkecffpdphbpmfolblodfkgbhl)
 - Optionals
-    - Distill web monitor
-    - Honey
-    - Singlefile
-    - Tampermonkey
-    - Toggle track
-    - URL render
-    - [Screen Shader | Smart Screen Tinting](https://chrome.google.com/webstore/detail/screen-shader-smart-scree/fmlboobidmkelggdainpknloccojpppi)
-    - [MarkUp For Chrome](https://chrome.google.com/webstore/detail/markup-for-chrome/llbkdcpbiogplgmefnkbgcdfiopfphbc)
     - [AlphaText - Make text readable!](https://chrome.google.com/webstore/detail/alphatext-make-text-reada/lpcaoilgpobajbkiamaojipjddpkkida)
+    - [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp)
+    - [Distill web monitor](https://chrome.google.com/webstore/detail/distill-web-monitor/inlikjemeeknofckkjolnjbpehgadgge)
+    - [Honey](https://chrome.google.com/webstore/detail/honey/bmnlcjabgnpnenekpadlanbbkooimhnj)
+    - [MarkUp For Chrome](https://chrome.google.com/webstore/detail/markup-for-chrome/llbkdcpbiogplgmefnkbgcdfiopfphbc)
+    - [Screen Shader | Smart Screen Tinting](https://chrome.google.com/webstore/detail/screen-shader-smart-scree/fmlboobidmkelggdainpknloccojpppi)
+    - [Singlefile](https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle)
+    - [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+    - [Toggle track](https://chrome.google.com/webstore/detail/toggl-track-productivity/oejgccbfbmkkpaidnkphaiaecficdnfn)
+    - [URL render](https://chrome.google.com/webstore/detail/url-render/flhclpkhoiajoikkabbfbinnjapaflog)
     - [Volume Master](https://chrome.google.com/webstore/detail/volume-master/jghecgabfgfdldnmbfkhmffcabddioke)
 
 Personal settings
