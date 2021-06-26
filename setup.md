@@ -296,6 +296,16 @@ Update system Fonts
     - [GitHub: ligature (sort: Most stars)](https://github.com/search?q=ligature&s=stars&type=Repositories)
     - [Circular](https://lineto.com/typefaces/circular/) - 190 CHF
 
+- Setup [nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+  - When ready, don't forget to setup on `Preferences` on the Terminal
+
+```bash
+$ cd ~/.local/share/fonts/
+$ wget \
+  -O "Fira Code Retina for Powerline Nerd Font Complete.ttf" \
+  https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Retina/complete/Fira%20Code%20Retina%20Nerd%20Font%20Complete.ttf
+```
+
 - Related links
     - [Go fonts](https://blog.golang.org/go-fonts)
     - [Best 20 Fonts for Ubuntu](https://linuxhint.com/best_fonts_ubuntu_linux/)
