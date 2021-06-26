@@ -228,48 +228,64 @@ function custom_prompt {
 
   # PS1="$PS1> "
 
+  # https://tldp.org/HOWTO/Bash-Prompt-HOWTO/bash-prompt-escape-sequences.html
+  # \e == \033
+
+  # Select Graphic Rendition parameters
+  # 30–37 selected the foreground color
+  # 40–47 selected the background color
+
   # prompt
-  FMT_BOLD="\[\e[1m\]"
-  FMT_DIM="\[\e[2m\]"
-  FMT_RESET="\[\e[0m\]"
-  FMT_UNBOLD="\[\e[22m\]"
-  FMT_UNDIM="\[\e[22m\]"
+   FMT_RESET="\[\e[0m\]"
+    FMT_BOLD="\[\e[1m\]"
+     FMT_DIM="\[\e[2m\]"
+  FMT_NORMAL="\[\e[22m\]"
 
-  FG_BLACK="\[\e[30m\]"
-  FG_BLUE="\[\e[34m\]"
-  FG_CYAN="\[\e[36m\]"
-  FG_GREEN="\[\e[32m\]"
+    FG_BLACK="\[\e[30m\]"
+      FG_RED="\[\e[31m\]"
+    FG_GREEN="\[\e[32m\]"
+   FG_YELLOW="\[\e[33m\]"
+     FG_BLUE="\[\e[34m\]"
   FG_MAGENTA="\[\e[35m\]"
+     FG_CYAN="\[\e[36m\]"
+    FG_WHITE="\[\e[37m\]"
 
-  FG_GREY="\[\e[37m\]"
-  FG_RED="\[\e[31m\]"
-  FG_WHITE="\[\e[97m\]"
-
-  BG_BLACK="\[\e[40m\]"
-  BG_BLUE="\[\e[44m\]"
-  BG_CYAN="\[\e[46m\]"
-  BG_GREEN="\[\e[42m\]"
+    BG_BLACK="\[\e[40m\]"
+      BG_RED="\[\e[41m\]"
+    BG_GREEN="\[\e[42m\]"
+   BG_YELLOW="\[\e[43m\]"
+     BG_BLUE="\[\e[44m\]"
   BG_MAGENTA="\[\e[45m\]"
+     BG_CYAN="\[\e[46m\]"
+    BG_WHITE="\[\e[47m\]"
+
+  FG_BRIGHT_WHITE="\[\e[97m\]"
 
   PS1="\n "
   PS1+="${FG_BLUE}╭─" # begin arrow to prompt
-  PS1+="${FG_CYAN}" # begin USERNAME container
-  PS1+="${BG_CYAN} 👋" # print OS icon
+  PS1+="${FMT_RESET}${FG_CYAN}" # begin USERNAME container
+  PS1+="${BG_CYAN} "
+  PS1+="${BG_CYAN}👋" # print OS icon
 
   if [ ! -z "$ENV_NAME" -a "$ENV_NAME" != " " ]; then
     # echo "$ENV_NAME is not null or space"
-    PS1+="${BG_CYAN}${FG_WHITE} ${ENV_NAME}"
+    PS1+="${BG_CYAN} "
+    PS1+="${BG_CYAN}${FG_BRIGHT_WHITE}${ENV_NAME}${FMT_NORMAL}"
   fi
 
-  PS1+="${BG_CYAN}${FG_BLACK} ${DT}"
-
-  PS1+="${BG_CYAN} ${FG_CYAN}${BG_MAGENTA} " # begin USERNAME container
-  PS1+="${FMT_BOLD}${FG_WHITE}\u${FMT_UNBOLD}" # print username
-  PS1+=" " # end USERNAME container
-  PS1+="${FG_MAGENTA}${BG_BLUE} " # begin DIRECTORY container
-  PS1+="${FG_GREY}\w" # print directory
-  PS1+=" " # end DIRECTORY container
-  PS1+="${FG_BLUE}${BG_CYAN} " # begin FILES container
+  PS1+="${BG_CYAN} "
+  PS1+="${BG_CYAN}${FG_BLACK}${DT}${FMT_NORMAL}"
+  PS1+="${BG_CYAN} "
+  PS1+="${FG_CYAN}${BG_MAGENTA}" # begin USERNAME container
+  PS1+="${BG_MAGENTA} "
+  PS1+="${FG_BRIGHT_WHITE}${FMT_BOLD}\u@\H${FMT_NORMAL}" # print username
+  PS1+="${BG_MAGENTA} " # end USERNAME container
+  PS1+="${FG_MAGENTA}${BG_BLUE}" # begin DIRECTORY container
+  PS1+="${BG_BLUE} "
+  PS1+="${FG_WHITE}\w${FMT_NORMAL}" # print directory
+  PS1+="${BG_BLUE} " # end DIRECTORY container
+  PS1+="${FG_BLUE}${BG_CYAN}" # begin FILES container
+  PS1+="${BG_CYAN} "
   PS1+="${FG_BLACK}"
   PS1+=" \$(find . -mindepth 1 -maxdepth 1 -type d | wc -l) " # print number of folders
   PS1+=" \$(find . -mindepth 1 -maxdepth 1 -type f | wc -l) " # print number of files
@@ -280,7 +296,12 @@ function custom_prompt {
   if [ ! "${BRANCH}" == "" ]
   then
     STAT=`parse_git_dirty`
-    PS1+="${BG_GREEN} ${FG_BLACK} ${BRANCH}${STAT}${FMT_RESET}${FG_GREEN}"
+    PS1+="${BG_GREEN}"
+    PS1+="${BG_GREEN} "
+    PS1+="${BG_GREEN}${FG_BLACK}${FMT_NORMAL}"
+    PS1+="${BG_GREEN} "
+    PS1+="${BG_GREEN}${FG_BLACK}${BRANCH}${STAT}${FMT_RESET}"
+    PS1+="${FG_GREEN}"
   fi
 
   PS1+="\n " # end last container (either FILES or BRANCH)
