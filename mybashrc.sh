@@ -128,14 +128,72 @@ alias dclogs="docker-compose logs -ft --tail=10"
 
 # ===============================================
 
-# ====================== Colorful ever-changing prompt ======================
+# ====================== Custom prompt ======================
 
+# https://ezprompt.net/
+# https://gist.github.com/justintv/168835#gistcomment-3401716
+# https://gist.github.com/justintv/168835#gistcomment-3554316
+# https://gist.github.com/justintv/168835#gistcomment-3567209
+# https://gist.github.com/justintv/168835#gistcomment-3718502
 # https://twitter.com/captainsafia/status/868104255059750913
-function prompt_party {
+
+# get current branch in git repo
+function parse_git_branch() {
+  BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+  if [ ! "${BRANCH}" == "" ]
+  then
+    STAT=`parse_git_dirty`
+    echo "[${BRANCH}${STAT}]"
+  else
+    echo ""
+  fi
+}
+
+# get current status of git repo
+function parse_git_dirty {
+  status=`git status 2>&1 | tee`
+  dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
+  untracked=`echo -n "${status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?"`
+  ahead=`echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?"`
+  newfile=`echo -n "${status}" 2> /dev/null | grep "new file:" &> /dev/null; echo "$?"`
+  renamed=`echo -n "${status}" 2> /dev/null | grep "renamed:" &> /dev/null; echo "$?"`
+  deleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
+  bits=''
+  if [ "${renamed}" == "0" ]; then
+    bits=">${bits}"
+  fi
+  if [ "${ahead}" == "0" ]; then
+    bits="*${bits}"
+  fi
+  if [ "${newfile}" == "0" ]; then
+    bits="+${bits}"
+  fi
+  if [ "${untracked}" == "0" ]; then
+    bits="?${bits}"
+  fi
+  if [ "${deleted}" == "0" ]; then
+    bits="x${bits}"
+  fi
+  if [ "${dirty}" == "0" ]; then
+    bits="!${bits}"
+  fi
+  if [ ! "${bits}" == "" ]; then
+    echo " ${bits}"
+  else
+    echo ""
+  fi
+}
+
+function custom_prompt {
   # when using virtual envs
   # match string until first space so could catch another string
-  ENV_NAME=`echo $PS1 | awk '{print $1}'`
-  ENV_NAME="$ENV_NAME "
+  # input  👉 (.venv) \[\033[38;5;21m\]\u\[\033[00m\]\[\033[38;5;33m\]@\[\033[00m\]\[\033[38;5;13m\]\h\[\033[00m\] \[\033[38;5;36m\]\w\[\033[00m\]>
+  # output 👉 (.venv)
+  TMP_ENV_NAME=`echo $PS1 | awk '{print $1}'`
+  ENV_NAME=""
+  if [[ $TMP_ENV_NAME == *"("* && $TMP_ENV_NAME == *")"* ]]; then
+    ENV_NAME=$TMP_ENV_NAME
+  fi
 
   # sudo apt install athena-jot
   # PS1="\[\033[38;5;$(jot -r 1 1 256)m\]\u\[\033[00m\]"
@@ -150,13 +208,87 @@ function prompt_party {
   # PS1="$PS1\[\033[38;5;$(shuf -i1-256 -n1)m\]\w\[\033[00m\]> "
 
   # with RANDOM
-  PS1="\[\033[38;5;$(($(($RANDOM%$256))+1))m\]\u\[\033[00m\]"
-  PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]@\[\033[00m\]"
-  PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]\h\[\033[00m\] "
-  PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]\w\[\033[00m\]> "
-  PS1="$ENV_NAME$PS1"
+  # PS1=""
+  # PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]\u\[\033[00m\]"
+  # PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]@\[\033[00m\]"
+  # PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]\h\[\033[00m\]"
+  # PS1="$PS1 "
+  # PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\][\w]\[\033[00m\]"
+
+  # DT="\D{%Y-%m-%d} \t\[$(tput sgr0)\]"
+  DT="\t\[$(tput sgr0)\]"
+
+  # if [ ! -z "$ENV_NAME" -a "$ENV_NAME" != " " ]; then
+  #   # echo "$ENV_NAME is not null or space"
+  #   PS1="$ENV_NAME $DT $PS1 \`parse_git_branch\`"
+  # else
+  #   # echo "$ENV_NAME is null or space"
+  #   PS1="$DT $PS1 \`parse_git_branch\`"
+  # fi
+
+  # PS1="$PS1> "
+
+  # prompt
+  FMT_BOLD="\[\e[1m\]"
+  FMT_DIM="\[\e[2m\]"
+  FMT_RESET="\[\e[0m\]"
+  FMT_UNBOLD="\[\e[22m\]"
+  FMT_UNDIM="\[\e[22m\]"
+
+  FG_BLACK="\[\e[30m\]"
+  FG_BLUE="\[\e[34m\]"
+  FG_CYAN="\[\e[36m\]"
+  FG_GREEN="\[\e[32m\]"
+  FG_MAGENTA="\[\e[35m\]"
+
+  FG_GREY="\[\e[37m\]"
+  FG_RED="\[\e[31m\]"
+  FG_WHITE="\[\e[97m\]"
+
+  BG_BLACK="\[\e[40m\]"
+  BG_BLUE="\[\e[44m\]"
+  BG_CYAN="\[\e[46m\]"
+  BG_GREEN="\[\e[42m\]"
+  BG_MAGENTA="\[\e[45m\]"
+
+  PS1="\n "
+  PS1+="${FG_BLUE}╭─" # begin arrow to prompt
+  PS1+="${FG_CYAN}" # begin USERNAME container
+  PS1+="${BG_CYAN} 👋" # print OS icon
+
+  if [ ! -z "$ENV_NAME" -a "$ENV_NAME" != " " ]; then
+    # echo "$ENV_NAME is not null or space"
+    PS1+="${BG_CYAN}${FG_WHITE} ${ENV_NAME}"
+  fi
+
+  PS1+="${BG_CYAN}${FG_BLACK} ${DT}"
+
+  PS1+="${BG_CYAN} ${FG_CYAN}${BG_MAGENTA} " # begin USERNAME container
+  PS1+="${FMT_BOLD}${FG_WHITE}\u${FMT_UNBOLD}" # print username
+  PS1+=" " # end USERNAME container
+  PS1+="${FG_MAGENTA}${BG_BLUE} " # begin DIRECTORY container
+  PS1+="${FG_GREY}\w" # print directory
+  PS1+=" " # end DIRECTORY container
+  PS1+="${FG_BLUE}${BG_CYAN} " # begin FILES container
+  PS1+="${FG_BLACK}"
+  PS1+=" \$(find . -mindepth 1 -maxdepth 1 -type d | wc -l) " # print number of folders
+  PS1+=" \$(find . -mindepth 1 -maxdepth 1 -type f | wc -l) " # print number of files
+  PS1+=" \$(find . -mindepth 1 -maxdepth 1 -type l | wc -l) " # print number of symlinks
+  PS1+="${FMT_RESET}${FG_CYAN}"
+
+  BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+  if [ ! "${BRANCH}" == "" ]
+  then
+    STAT=`parse_git_dirty`
+    PS1+="${BG_GREEN} ${FG_BLACK} ${BRANCH}${STAT}${FMT_RESET}${FG_GREEN}"
+  fi
+
+  PS1+="\n " # end last container (either FILES or BRANCH)
+  PS1+="${FG_BLUE}╰ " # end arrow to prompt
+  PS1+="${FG_CYAN}\\$ " # print prompt
+  PS1+="${FMT_RESET}"
 }
-PROMPT_COMMAND=prompt_party
+PROMPT_COMMAND=custom_prompt
 
 # ===============================================
 
