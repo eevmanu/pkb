@@ -351,9 +351,9 @@ alias gitconfa="git config --list"
 alias gitfetch="git fetch --all --tags --progress"
 alias gitfetchprune="git fetch --prune --progress origin"
 
-# avoid merging in wrong branchs
-alias gitpull="git pull origin master:master"
-# alias gitpull="git pull origin main:main"
+gitpull(){
+  git pull origin $(git branch --show-current):$(git branch --show-current)
+}
 
 gitpush() {
   git push origin $(git branch --show-current):$(git branch --show-current)
