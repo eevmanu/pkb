@@ -131,12 +131,13 @@ alias dclogs="docker-compose logs -ft --tail=10"
 
 # ====================== Custom prompt ======================
 
-# https://ezprompt.net/
+# https://twitter.com/captainsafia/status/868104255059750913
 # https://gist.github.com/justintv/168835#gistcomment-3401716
 # https://gist.github.com/justintv/168835#gistcomment-3554316
 # https://gist.github.com/justintv/168835#gistcomment-3567209
 # https://gist.github.com/justintv/168835#gistcomment-3718502
-# https://twitter.com/captainsafia/status/868104255059750913
+# https://ezprompt.net/
+# https://gist.github.com/romanlevin/5e9422045bb6a5eb6558cbe371cd8635
 
 # get current branch in git repo
 function parse_git_branch() {
@@ -268,23 +269,35 @@ function custom_prompt {
   PS1+="${BG_CYAN} "
   PS1+="${BG_CYAN}👋" # print OS icon
 
+  PS1+="${BG_CYAN} "
+  PS1+="${BG_CYAN}${FG_BLACK}${DT}${FMT_NORMAL}"
+
   if [ ! -z "$ENV_NAME" -a "$ENV_NAME" != " " ]; then
     # echo "$ENV_NAME is not null or space"
     PS1+="${BG_CYAN} "
     PS1+="${BG_CYAN}${FG_BRIGHT_WHITE}${ENV_NAME}${FMT_NORMAL}"
   fi
 
+  if command -v pyenv 1>/dev/null 2>&1; then
+    if [[ `pyenv version-name` != "system" ]] ; then
+      PYENV_VERSION="[🐍 `pyenv version-name`]"
+      PS1+="${BG_CYAN} "
+      PS1+="${BG_CYAN}${FG_BRIGHT_WHITE}${PYENV_VERSION}${FMT_NORMAL}"
+    fi
+  fi
+
   PS1+="${BG_CYAN} "
-  PS1+="${BG_CYAN}${FG_BLACK}${DT}${FMT_NORMAL}"
-  PS1+="${BG_CYAN} "
+
   PS1+="${FG_CYAN}${BG_MAGENTA}" # begin USERNAME container
   PS1+="${BG_MAGENTA} "
   PS1+="${FG_BRIGHT_WHITE}${FMT_BOLD}\u@\H${FMT_NORMAL}" # print username
   PS1+="${BG_MAGENTA} " # end USERNAME container
+
   PS1+="${FG_MAGENTA}${BG_BLUE}" # begin DIRECTORY container
   PS1+="${BG_BLUE} "
   PS1+="${FG_WHITE}\w${FMT_NORMAL}" # print directory
   PS1+="${BG_BLUE} " # end DIRECTORY container
+
   PS1+="${FG_BLUE}${BG_CYAN}" # begin FILES container
   PS1+="${BG_CYAN} "
   PS1+="${FG_BLACK}"
