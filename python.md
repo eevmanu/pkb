@@ -230,38 +230,6 @@ $ git fetch --all --tags --progress && \
 $ git checkout v1.2.21
 ```
 
-## Extra commands
-
-☝ [Table of contents](#table-of-contents)
-
-Check version
-
-```bash
-$ python --version
-
-$ python3 --version
-```
-
-Check binary path
-
-```bash
-$ which python
-/usr/bin/python
-
-$ which python3
-/path/to/python3
-```
-
-Start `http` server
-
-```bash
-# Python 3
-$ python3 -m http.server 8000 --bind 0.0.0.0
-
-# Python 2
-$ python -m SimpleHTTPServer
-```
-
 ## pip
 
 ☝ [Table of contents](#table-of-contents)
@@ -618,17 +586,305 @@ References
 - [How do I find out my python path using python?](https://stackoverflow.com/q/1489599/)
 - [Modern Python Environments - dependency and workspace management](https://testdriven.io/blog/python-environments/)
 
-## Virtual environments
+
+## Personal setup
+
+### Basics
+
+☝ [Table of contents](#table-of-contents)
+
+Create `python` soft link to `python3` command on `$HOME/bin`
+
+Important: `$HOME/bin` should be inside `$PATH`
+
+```bash
+$ ln -s /usr/bin/python3 $HOME/bin/python
+```
+
+Install `pip` locally (in `$USER` home directory)
+
+Verify which `python` executable version you want to use (through its installation path)
+
+```bash
+$ which python3.8
+/path/to/python3.8
+```
+
+Verify which `pip` executable version you want to use (through its installation path)
+
+```bash
+$ /path/to/python3.8 -m pip --version
+```
+
+Execute `pip` installer with `--user` parameter
+
+```bash
+$ /path/to/python3.8 get-pip.py --user
+```
+
+Check if `pip` was installed in right places
+
+```bash
+# where binaries are saved
+$ ls ${HOME}/.local/bin/
+
+# where libraries download and installed via pip (locally) are saved
+$ ls ${HOME}/.local/lib/
+
+# where libraries are downloaded temporarily is you want to install again
+$ ls ${HOME}/.cache/pip/
+```
+
+### venv
+
+☝ [Table of contents](#table-of-contents)
+
+[venv](https://docs.python.org/3/library/venv.html) - Creation of virtual environments
+
+Create a environment
+
+```bash
+$ python -m venv $__VENV_NAME__
+$ python -m venv --prompt $__VENV_PROMPT__ $__VENV_NAME__
+
+# e.g.:
+$ python -m venv venv
+$ python -m venv .venv
+$ python -m venv --prompt . .venv
+```
+
+Activate environment
+
+```bash
+$ source $__VENV_NAME__/bin/activate
+($__VENV_PROMPT__) $
+```
+
+Upgrade `pip` and build tools: `setuptools` and `wheel`, after creating new environment
+
+```bash
+$ pip install --no-cache-dir -U pip setuptools wheel
+
+# using cache directory
+$ pip install -U pip setuptools wheel
+```
+
+(Optional) Upgrade [distribution tool](https://docs.python.org/3/distributing/index.html#installing-the-tools:~:text=python%20%2Dm%20pip%20install%20setuptools%20wheel%20twine): `twine` if you plan to create a distribute a package via Python Package Index
+
+```bash
+$ pip install -U pip setuptools wheel twine
+```
+
+Deactivate environment
+
+```bash
+$ deactivate
+```
+
+xkcd - [Python Environment](https://xkcd.com/1987/)
+
+### Linters
+
+☝ [Table of contents](#table-of-contents)
+
+If you're going to use for one project, install on a virtual environment
+
+[flake8](https://gitlab.com/pycqa/flake8) - flake8 is a python tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code. - [github](https://github.com/PyCQA/flake8) - [PyPi](https://pypi.org/project/flake8/) - [stats](https://pypistats.org/packages/flake8)
+
+- Config on VS Code
+
+  ```json
+  {
+      ...
+      "python.linting.enabled": true,
+      "python.linting.lintOnSave": true,
+      "python.linting.pylintEnabled": false,
+      "python.linting.flake8Enabled": true,
+      "python.linting.flake8Path": "/.../{{ $__VENV_NAME__ }}/bin/flake8",
+      "python.linting.flake8Args": [
+          // "--ignore=E24,W504,E203,W503",
+          "--max-line-length=88",
+          "--extend-ignore=E203",
+          "--verbose",
+      ],
+      ...
+  }
+  ```
+
+[pycodestyle](https://github.com/PyCQA/pycodestyle)
+
+- Config on VS Code
+
+  ```json
+  {
+      ...
+      "python.pythonPath": "/.../{{ $__VENV_NAME__ }}/bin/python",
+      "python.linting.pycodestyleEnabled": true,
+      "python.linting.pycodestyleArgs": [
+          "--max-line-length=80"
+      ],
+      ...
+  }
+  ```
+
+[pylint](https://github.com/PyCQA/pylint)
+
+- Config on VS Code
+
+  ```json
+  {
+      ...
+      "python.pythonPath": "/.../{{ $__VENV_NAME__ }}/bin/python",
+      "python.linting.enabled": true,
+      "python.linting.lintOnSave": true,
+      "python.linting.pylintEnabled": true,
+      "python.linting.pylintArgs": [
+          ...
+      ],
+      ...
+  }
+  ```
+
+References
+
+- [VS Code - Docs - Python - Linting - flake8](https://code.visualstudio.com/docs/python/linting#_flake8)
+- [VS Code - Docs - Python - Linting - pylint](https://code.visualstudio.com/docs/python/linting#_pylint)
+- [PyCQA/flake8-bugbear](https://github.com/PyCQA/flake8-bugbear) - A plugin for Flake8 finding likely bugs and design problems in your program. Contains warnings that don't belong in pyflakes and pycodestyle.
+- [PyCQA/pep8-naming](https://github.com/PyCQA/pep8-naming) - Naming Convention checker for Python
+- [OrkoHunter/pep8speaks](https://github.com/OrkoHunter/pep8speaks) - A GitHub app to automatically review Python code style over Pull Requests
+- [amperser/proselint](https://github.com/amperser/proselint) - A linter for prose. - [stats](https://pypistats.org/packages/proselint)
+- [Readable pylint messages](https://github.com/janjur/readable-pylint-messages/blob/master/README.md)
+- [PyLint Messages - all codes](http://pylint-messages.wikidot.com/all-codes)
+
+### Code formatters
+
+☝ [Table of contents](#table-of-contents)
+
+If you're going to use for one project, install on an isolated virtual environment (or on each virtual environment per project)
+
+[black](https://github.com/psf/black)
+
+- Config for VSCode
+
+    ```json
+    {
+        ...
+        "python.formatting.provider": "black",
+        "python.formatting.blackPath": "/.../{{ $__VENV_NAME__ }}/bin/black",
+        "python.formatting.blackArgs": [
+            "--line-length=80"
+        ],
+        ...
+    }
+    ```
+
+References
+
+- [Python code formatters](https://deepsource.io/blog/python-code-formatters/)
+- [VSCode: How do you autoformat on save?](https://stackoverflow.com/questions/50606758)
+
+### VS Code setup
+
+Make Pylance detect a specific path
+
+```json
+{
+    ...
+    "python.analysis.extraPaths": [
+        "./oracle_example",
+    ]
+    ...
+}
+```
+
+References
+
+- Code analysis - [Python Language Server settings](https://code.visualstudio.com/docs/python/settings-reference#_python-language-server-settings) - python.analysis.extraPaths
+  - If you use `Pylance`
+- Code analysis - [AutoComplete settings](https://code.visualstudio.com/docs/python/settings-reference#_autocomplete-settings) - python.autoComplete.extraPaths
+  - If you use `IntelliSense` (default)
+  - This is an old setting
+- [.env file with PYTHONPATH=... is not supported](https://github.com/microsoft/pylance-release/issues/275)
+- [Support variable substitution in python.analysis settings](https://github.com/microsoft/pylance-release/issues/548#issuecomment-747749100)
+- [python.analysis.extraPaths should support "${workspaceFolder}"](https://github.com/microsoft/pylance-release/issues/384#issuecomment-694490043)
+  - `"${workspaceFolder}/oracle_example"`
+- [python.analysis.extraPaths setting supported?](https://github.com/microsoft/pylance-release/issues/29#issuecomment-714614549)
+  - `"${workspaceFolder}\\oracle_example\\.venv.deploy-lambda\\Lib\\python3.7\\site-packages/"`
+- [\\ on Windows](https://code.visualstudio.com/docs/editor/variables-reference#:~:text=macOS%20or%20linux%2C-,%5C%5C%20on%20Windows,-Tip%3A%20Use%20IntelliSense)
+
+Allow smart heuristic import
+
+```json
+{
+  ...
+  "python.analysis.importHeuristic": true,
+  ...
+}
+```
+
+References
+
+- [Local imports not resolving correctly](https://github.com/microsoft/pylance-release/issues/68#issuecomment-840634731)
+
+Enforce `typeCheckingMode` for `Pylance`
+
+```json
+{
+  ...
+  "python.analysis.typeCheckingMode": "basic",
+  ...
+}
+```
+
+References
+
+- Code analysis - [Python Language Server settings](https://code.visualstudio.com/docs/python/settings-reference#_python-language-server-settings) - python.analysis.typeCheckingMode
+
+If you're using [microsoft/python-language-server](https://github.com/microsoft/python-language-server), consider using `"python.analysis.logLevel": "Trace"`
+
+## Extra commands
+
+☝ [Table of contents](#table-of-contents)
+
+Check version
+
+```bash
+$ python --version
+
+$ python3 --version
+```
+
+Check binary path
+
+```bash
+$ which python
+/usr/bin/python
+
+$ which python3
+/path/to/python3
+```
+
+Start `http` server
+
+```bash
+# Python 3
+$ python3 -m http.server 8000 --bind 0.0.0.0
+
+# Python 2
+$ python -m SimpleHTTPServer
+```
 
 ### virtualenv & virtualenvwrapper
 
-Install `virtualenv` & `virtualenvwrapper`
+☝ [Table of contents](#table-of-contents)
+
+Install via `pip`
 
 ```bash
-$ pip install -U virtualenv virtualenvwrapper
 # (2020-06-01 16:43:58)
-# Successfully installed appdirs-1.4.4 distlib-0.3.0 filelock-3.0.12 virtualenv-20.0.21
-# Successfully installed stevedore-1.32.0 virtualenv-clone-0.5.4 virtualenvwrapper-4.8.4
+$ pip install -U virtualenv virtualenvwrapper
+# Successfully installed ... virtualenv-20.0.21
+# Successfully installed ... virtualenvwrapper-4.8.4
 ```
 
 Verify `shebang` of `virtualenv` executable file
@@ -645,184 +901,79 @@ $ head -n 1 /path/to/virtualenv
 #!/usr/bin/python3.8
 ```
 
-Verify pip executable used to install those packages is the right one
+Verify to use right `pip` binary
 
 ```bash
 $ /usr/bin/python -m pip --version
 pip 20.1.1 from $HOME/.local/lib/python3.8/site-packages/pip (python 3.8)
+# .local/... because pip was installed with --user
 ```
 
-Add extra configuration to your `.bashrc` file
+Add config to shell startup script
 
 ```bash
 $ nano $HOME/.bashrc
-# ---- while editing---
+# ---- while editing ---
 ...
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.9
 export WORKON_HOME=$HOME/Envs
 mkdir -p $WORKON_HOME
 source /usr/local/bin/virtualenvwrapper.sh
 ...
 ```
 
-Load extra configurations to shell
+Load config to shell
 
 ```bash
 $ source $HOME/.bashrc
 ```
 
-Management commands
+### virtualenvwrapper commands
+
+☝ [Table of contents](#table-of-contents)
+
+Create virtual environment
 
 ```bash
-# create a virtual environment
 $ mkvirtualenv
 $ mkvirtualenv -p python3.8 {{ virtualenv name }}
 $ mkvirtualenv -p /usr/bin/python3.8 {{ virtualenv name }}
 $ mkvirtualenv --python=python3.8 {{ virtualenv name }}
 $ mkvirtualenv --python=/usr/bin/python3.8 {{ virtualenv name }}
 
-# after creating a virtual environment, don't forget to update pip setuptools and wheel packages
-# $ pip install -U pip setuptools wheel
+# don't forget to update pip, setuptools and wheel once you create a virtual environment
+```
 
-# enter to a virtual environment
+Access to virtual environment
+
+```bash
 $ workon {{ name of virutal environment }}
 ({{ name of virtual environment }})$
+```
 
-# logout off virtual environment
+Logout of virtual environment
+
+```bash
 ({{ name of virtual environment }})$ deactivate
+```
 
-# delete a virtual environment
-$ rmvirtualenv
+Delete a virtual environment
 
-# list all virtual environment
+```bash
+$ rmvirtualenv {{ name of virtual environment }}
+```
+
+List virtual environments
+
+```bash
 $ lsvirtualenv
+```
 
-# change working directory to virtual environment folder
+Change directory to root of virtual environment
+
+```bash
 $ cdvirtualenv
 ```
-
-
-
-## Personal setup
-
-### Basics
-
-Create `python` executable command, if your machine only have `python3`, in `$HOME/bin`
-
-Important: `$HOME/bin` should be inside `$PATH`
-
-```bash
-$ ln -s /usr/bin/python3 $HOME/bin/python
-```
-
-Install `pip` locally (in `$USER` home directory)
-
-- Verify which `python` executable version you want to use (through its installation path)
-
-    ```bash
-    $ which python3.8
-    /path/to/python3.8
-    ```
-
-- Verify which `pip` executable version you want to use (through its installation path)
-
-    ```bash
-    $ /path/to/python3.8 -m pip --version
-    ```
-
-- Execute `pip` installer with `--user` parameter
-
-    ```bash
-    $ /path/to/python3.8 get-pip.py --user
-    ```
-
-- Check if `pip` was installed in right places
-
-    ```bash
-    # where binaries are saved
-    $ ls ${HOME}/.local/bin/
-
-    # where libraries download and installed via pip (locally) are saved
-    $ ls ${HOME}/.local/lib/
-
-    # where libraries are downloaded temporarily is you want to install again
-    $ ls ${HOME}/.cache/pip/
-    ```
-
-
-### Venv
-
-Create a environment
-
-```bash
-$ python -m venv {{ /path/to/env }}
-# e.g.:
-$ python -m venv env
-```
-
-Activate environment
-
-```bash
-$ source {{ /path/to/env }}/bin/activate
-```
-
-Update `pip`, `setuptools`, and `wheel` after creating new environment
-
-```bash
-$ pip install -U pip setuptools wheel
-```
-
-Deactivate environment
-
-```bash
-$ deactivate
-```
-
-### Linters
-
-If you're going to use for one project, install on a virtual environment
-
-[pycodestyle](https://github.com/PyCQA/pycodestyle)
-
-- Config for VSCode
-
-    ```bash
-        # Workspace settings file
-        # pycodestyle path to python binary path used
-        ...
-        "python.pythonPath": "/path/to/project/venv/bin/python",
-        ...
-        "python.linting.pycodestyleEnabled": true,
-        "python.linting.pycodestyleArgs": [
-            "--max-line-length=80"
-        ],
-        ...
-    ```
-
-[pylint](https://github.com/PyCQA/pylint)
-
-- [Readable pylint messages](https://github.com/janjur/readable-pylint-messages/blob/master/README.md)
-- [@ Visual Studio Code Docs](https://code.visualstudio.com/docs/python/linting#_pylint)
-- [PyLint Messages - all codes](http://pylint-messages.wikidot.com/all-codes)
-
-### Code formatters
-
-If you're going to use for one project, install on an isolated virtual environment (or on each virtual environment per project)
-
-[black](https://github.com/psf/black)
-
-- Config for VSCode
-
-    ```bash
-        # Workspace settings file
-        ...
-        "python.formatting.provider": "black",
-        "python.formatting.blackPath": "/path/to/project/venv/bin/black",
-        "python.formatting.blackArgs": [
-            "--line-length=80"
-        ],
-        ...
-    ```
 
 ## Debugging
 
