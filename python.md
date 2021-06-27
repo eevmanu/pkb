@@ -32,9 +32,9 @@
     - [Function-based views vs Class-based views](#function-based-views-vs-class-based-views)
 - [Resources](#resources)
 
-## Install latest version
+## Install
 
-### Via ppa:deadsnakes/ppa
+### ppa:deadsnakes/ppa
 
 ☝ [Table of contents](#table-of-contents)
 
@@ -67,86 +67,85 @@ $ sudo apt install python3.8
 Related links
 - 2020-03-22 - [How To Install Python 3.8 On Ubuntu 18.04 LTS](https://python.tutorials24x7.com/blog/how-to-install-python-3-8-on-ubuntu-1804-lts)
 
-### Via Pyenv
+### pyenv
 
 ☝ [Table of contents](#table-of-contents)
 
-Simple Python version management
+[GitHub](https://github.com/pyenv/pyenv) - Simple Python version management
 
-[GitHub](https://github.com/pyenv/pyenv)
+#### Install
 
-Clone `pyenv` github repo into `$HOME/.pyenv`
+Clone `pyenv` github repo into `$HOME/.pyenv` folder
 
 ```bash
 $ git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
 ```
 
-Define environment variables needed
+Load needed environment variables on your shell startup script, `.bashrc` in my case
 
 ```bash
-# inside your .bashrc file
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 ```
 
-Add `pyenv init` validation to my shell / terminal init script
+Load `pyenv` initializer on your shell startup script, `.bashrc` in my case
 
 ```bash
-# inside your .bashrc file
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
 fi
 ```
 
-Restart your shell / terminal
+Restart your **terminal**
 
 ```bash
 $ exec $SHELL
 ```
 
-Install [Python dependencies](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
+Install [dependencies](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
 
 ```bash
 $ sudo apt-get update && \
     sudo apt-get install \
         --no-install-recommends \
-            make \
             build-essential \
-            libssl-dev \
-            zlib1g-dev \
+            curl \
             libbz2-dev \
+            libffi-dev \
+            liblzma-dev \
+            libncurses5-dev \
             libreadline-dev \
             libsqlite3-dev \
-            wget \
-            curl \
-            llvm \
-            libncurses5-dev \
-            xz-utils \
-            tk-dev \
+            libssl-dev \
             libxml2-dev \
             libxmlsec1-dev \
-            libffi-dev \
-            liblzma-dev
+            llvm \
+            make \
+            tk-dev \
+            wget \
+            xz-utils \
+            zlib1g-dev
 ```
 
-Install any specific `python` version you want
+Install `python` version you want
 
 ```bash
 $ pyenv install 3.9.0
 ```
 
-#### Extra commands
+If error because of C compiler not found, check [Python: No acceptable C compiler found in $PATH when installing python](https://stackoverflow.com/q/19816275)
+
+#### Usage commands
 
 ☝ [Table of contents](#table-of-contents)
 
-List all available versions
+List all versions available to install
 
 ```bash
 $ pyenv install -l
 ```
 
-List all available versions in your local machine
+List all versions installed in your local machine
 
 ```bash
 $ pyenv versions
@@ -157,18 +156,18 @@ $ pyenv versions
   3.9.0
 ```
 
-Show version in local context
+Show version detected by the local context / working directory
 
 ```bash
 $ pyenv local
 3.8.5
 
-# or this when is not set
+# when not set
 $ pyenv local
 pyenv: no local version configured for this directory
 ```
 
-Set a version for local context
+Set a version for local context / working directory
 
 ```bash
 $ pyenv local 3.9.0
@@ -178,37 +177,56 @@ $ pyenv versions
   3.6.11
   3.6.12
   3.8.5
-* 3.9.0 (set by /path/to/a/folder/.python-version)
+* 3.9.0 (set by /.../.python-version)
+```
 
+Verify version through `.python-version` file
+
+```bash
 $ cat .python-version
 3.9.0
 ```
 
-Check which version (or path to binary) is executing `pip` in your specific context
+Check `pip` binary is using in your specific context
 
 ```bash
 $ pyenv which pip
-$HOME/.pyenv/versions/3.8.5/bin/pip
+# pip script installed by `python get-pip.py --user`
 $HOME/.local/bin/pip
+# pip script installed by `pyenv install 3.8.5`
+$HOME/.pyenv/versions/3.8.5/bin/pip
+
+# if doubts, verify all matches of `pip`
+$ which -a pip
 ```
+
+To unset `python` version through `pyenv local $VERSION`, remove `.python-version` file from folder
 
 #### Update
 
 ☝ [Table of contents](#table-of-contents)
 
-Latest development version (latest commit in github repo)
+Move working directory to `pyenv` installation folder
 
 ```bash
 $ cd $(pyenv root)
-$ git pull
+```
+
+To latest version (latest commit on default branch from github repo)
+
+```bash
+$ git checkout master && \
+  git pull origin master
 ```
 
 Specific version (using tag)
 
 ```bash
-$ cd $(pyenv root)
-$ git fetch
-$ git tag
+# update references, list all tags and choose a specific one
+$ git fetch --all --tags --progress && \
+  git tag
+
+# e.g.:
 $ git checkout v1.2.21
 ```
 
