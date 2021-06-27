@@ -1,4 +1,18 @@
+<!-- omit in toc -->
 # Extensions
+
+- [Editor UI](#editor-ui)
+  - [Readability](#readability)
+  - [Productivity](#productivity)
+  - [Git](#git)
+- [Python](#python)
+- [Go](#go)
+- [Markdown](#markdown)
+- [Personal Knowledge Management](#personal-knowledge-management)
+- [JSON](#json)
+- [CSV](#csv)
+- [Extra tools](#extra-tools)
+- [Suggested](#suggested)
 
 ## Editor UI
 
