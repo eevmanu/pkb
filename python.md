@@ -266,15 +266,9 @@ $ python -m SimpleHTTPServer
 
 ☝ [Table of contents](#table-of-contents)
 
-[pypa/pip](https://github.com/pypa/pip) - The Python package installer
+The Python package installer - [GitHub](https://github.com/pypa/pip)
 
-### Install
-
-☝ [Table of contents](#table-of-contents)
-
-**Avoid** installing it via `apt`
-
-~`$ sudo apt install python3-pip`~
+**Avoid** installing it via `apt`: ~`$ sudo apt install python3-pip`~
 
 Download `python` installer script
 
@@ -289,7 +283,7 @@ Check to use right `python` version (through binary path) when executing script
 ```bash
 # --user
 # Install to the Python user install directory for your platform.
-# Typically ~/.local/, or %APPDATA%Python on Windows.
+# Typically $HOME/.local/, or %APPDATA%Python on Windows.
 # (See the Python documentation for site.USER_BASE for full details.)
 $ $(which python) get-pip.py --user
 $ $(which python3) get-pip.py --user
@@ -310,17 +304,48 @@ $ ls -la $(which pip3.8)
 -rwxrwxr-x 1 $USER $USER 223 ............ $HOME/.local/bin/pip3.8
 ```
 
+If `pip` script is not pointing to the right path of `python` binary we want to user, edit `pip` script and fix the bash shebang used there.
+
+e.g: from this
+
+```python
+#!/usr/bin/python
+...
+```
+
+to this
+
+```python
+#!{{ $HOME }}/bin/python
+...
+```
+
+or this
+
+```python
+#!/usr/bin/env python3
+```
+
+and also this
+
+```python
+#!/usr/bin/env python3
+```
+
 Update `pip`, `setuptools` and `wheel`
 
 ```bash
-$ pip install -U pip setuptools wheel
+$ pip install --no-cache-dir -U pip setuptools wheel
+
+# in case want to use explicitly a python interpreter
+# $ /path/to/python -m pip install --no-cache-dir -U pip setuptools wheel
 ```
 
 ### Troubleshooting
 
 ☝ [Table of contents](#table-of-contents)
 
-[WORKAROUND] - Make `pip3` command points to `pip`
+Make `pip3` command points to `pip`
 
 ```bash
 # global installed
@@ -365,6 +390,14 @@ Avoid warnings because of `locale`
 $ export LC_ALL=C
 ```
 
+[pyvenv not working because ensurepip is not available](https://stackoverflow.com/questions/39539110/)
+
+```bash
+$ export LC_ALL="en_US.UTF-8"
+$ export LC_CTYPE="en_US.UTF-8"
+sudo dpkg-reconfigure locales
+```
+
 Warning: `> Defaulting to user installation because normal site-packages is not writeable`
 
 - Idea behind (because `pip` was installed with `--user` parameter)
@@ -374,41 +407,216 @@ Warning: `> Defaulting to user installation because normal site-packages is not 
 
 - Things to verify
 
-    Global `site-packages`
+  - `python` from OS
+
+    Run [site](https://docs.python.org/3/library/site.html) module as script
 
     ```bash
-    $ python3 -c 'import site; print(site.getsitepackages())'
-    ['/usr/local/lib/python3.8/dist-packages', '/usr/lib/python3/dist-packages', '/usr/lib/python3.8/dist-packages']
-
-    $ python3 -m site
+    $ python -m site
     sys.path = [
         '$HOME',
         '/usr/lib/python38.zip',
         '/usr/lib/python3.8',
         '/usr/lib/python3.8/lib-dynload',
         '$HOME/.local/lib/python3.8/site-packages',
+        ...
         '/usr/local/lib/python3.8/dist-packages',
         '/usr/lib/python3/dist-packages',
     ]
     USER_BASE: '$HOME/.local' (exists)
     USER_SITE: '$HOME/.local/lib/python3.8/site-packages' (exists)
     ENABLE_USER_SITE: True
+
+    $ python -c "import sys; print('\n'.join(sys.path))"
+    /usr/lib/python38.zip
+    /usr/lib/python3.8
+    /usr/lib/python3.8/lib-dynload
+    $HOME/.local/lib/python3.8/site-packages
+    ...
+    /usr/local/lib/python3.8/dist-packages
+    /usr/lib/python3/dist-packages
     ```
 
-    Local `site-packages`
+    User base
 
     ```bash
-    $ python3 -m site --user-site
+    $ python -m site --user-base
+    $HOME/.local
+
+    $ python -c 'import site; print(site.getuserbase())'
+    $HOME/.local
+
+    $ python -c 'import site; print(site.USER_BASE)'
+    $HOME/.local
+    ```
+
+    Global `site-packages` (contains User `site-packages` path)
+
+    ```bash
+    $ python -c 'import site; print(site.getsitepackages())'
+    ['/usr/local/lib/python3.8/dist-packages', '/usr/lib/python3/dist-packages', '/usr/lib/python3.8/dist-packages']
+    ```
+
+    User `site-packages`
+
+    ```bash
+    $ python -m site --user-site
+    $HOME/.local/lib/python3.8/site-packages
+
+    $ python -c 'import site; print(site.getusersitepackages())'
+    $HOME/.local/lib/python3.8/site-packages
+
+    $ python -c 'import site; print(site.USER_SITE)'
     $HOME/.local/lib/python3.8/site-packages
     ```
 
-Extra links
+  - `python` from `pyenv`
+
+    Before start
+
+    ```bash
+    $ pyenv versions
+    ...
+    * 3.7.10 (set by .../.python-version)
+    ...
+
+    $ python -V
+    3.7.10
+
+    $ pyenv which python
+    $PYENV_ROOT/versions/3.7.10/bin/python
+    ```
+
+    Run [site](https://docs.python.org/3/library/site.html) module as script
+
+    ```bash
+    $ python -m site
+    sys.path = [
+        '$PWD',
+        '$PYENV_ROOT/versions/3.7.10/lib/python37.zip',
+        '$PYENV_ROOT/versions/3.7.10/lib/python3.7',
+        '$PYENV_ROOT/versions/3.7.10/lib/python3.7/lib-dynload',
+        '$PYENV_ROOT/versions/3.7.10/lib/python3.7/site-packages',
+    ]
+    USER_BASE: '$HOME/.local' (exists)
+    USER_SITE: '$HOME/.local/lib/python3.7/site-packages' (doesn\'t exist)
+    ENABLE_USER_SITE: True
+
+    $ python -c "import sys; print('\n'.join(sys.path))"
+
+    $PYENV_ROOT/versions/3.7.10/lib/python37.zip
+    $PYENV_ROOT/versions/3.7.10/lib/python3.7
+    $PYENV_ROOT/versions/3.7.10/lib/python3.7/lib-dynload
+    $PYENV_ROOT/versions/3.7.10/lib/python3.7/site-packages
+    ```
+
+    User base
+
+    ```bash
+    $ python -m site --user-base
+    $HOME/.local
+
+    $ python -c 'import site; print(site.getuserbase())'
+    $HOME/.local
+
+    $ python -c 'import site; print(site.USER_BASE)'
+    $HOME/.local
+    ```
+
+    Global `site-packages` (contains User `site-packages` path)
+
+    ```bash
+    $ python -c 'import site; print(site.getsitepackages())'
+    ['$PYENV_ROOT/versions/3.7.10/lib/python3.7/site-packages']
+    ```
+
+    User `site-packages`
+
+    ```bash
+    $ python -m site --user-site
+    $HOME/.local/lib/python3.7/site-packages
+
+    $ python -c 'import site; print(site.getusersitepackages())'
+    $HOME/.local/lib/python3.7/site-packages
+
+    $ python -c 'import site; print(site.USER_SITE)'
+    $HOME/.local/lib/python3.7/site-packages
+    ```
+
+  - `python` from `pyenv` & `venv`
+
+    Run [site](https://docs.python.org/3/library/site.html) module as script
+
+    ```bash
+    $ python -m site
+    sys.path = [
+        '$PWD',
+        '$PYENV_ROOT/versions/3.7.10/lib/python37.zip',
+        '$PYENV_ROOT/versions/3.7.10/lib/python3.7',
+        '$PYENV_ROOT/versions/3.7.10/lib/python3.7/lib-dynload',
+        '$VIRTUAL_ENV/lib/python3.7/site-packages',
+    ]
+    USER_BASE: '$HOME/.local' (exists)
+    USER_SITE: '$HOME/.local/lib/python3.7/site-packages' (doesn\'t exist)
+    ENABLE_USER_SITE: False
+
+    $ python -c "import sys; print('\n'.join(sys.path))"
+
+    $PYENV_ROOT/versions/3.7.10/lib/python37.zip
+    $PYENV_ROOT/versions/3.7.10/lib/python3.7
+    $PYENV_ROOT/versions/3.7.10/lib/python3.7/lib-dynload
+    $VIRTUAL_ENV/lib/python3.7/site-packages
+    ```
+
+    User base
+
+    ```bash
+    $ python -m site --user-base
+    $HOME/.local
+
+    $ python -c 'import site; print(site.getuserbase())'
+    $HOME/.local
+
+    $ python -c 'import site; print(site.USER_BASE)'
+    $HOME/.local
+    ```
+
+    Global `site-packages` (contains User `site-packages` path)
+
+    ```bash
+    $ python -c 'import site; print(site.getsitepackages())'
+    ['$VIRTUAL_ENV/lib/python3.7/site-packages']
+    ```
+
+    User `site-packages`
+
+    ```bash
+    $ python -m site --user-site
+    $HOME/.local/lib/python3.7/site-packages
+
+    $ python -c 'import site; print(site.getusersitepackages())'
+    $HOME/.local/lib/python3.7/site-packages
+
+    $ python -c 'import site; print(site.USER_SITE)'
+    $HOME/.local/lib/python3.7/site-packages
+    ```
+
+References
+
+- Documentation
+  - Python Setup and Usage » [1. Command line and environment](https://docs.python.org/3/using/cmdline.html) » [PYTHONPATH](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH)
+  - The Python Standard Library » Python Runtime Services » [sys — System-specific parameters and functions](https://docs.python.org/3/library/sys.html) » [sys.path](https://docs.python.org/3/library/sys.html#sys.path)
+  - The Python Standard Library » Python Runtime Services » [site — Site-specific configuration hook](https://docs.python.org/3/library/site.html)
+  - The Python Tutorial » 6. Modules » [6.1.2. The Module Search Path](https://docs.python.org/3/tutorial/modules.html#the-module-search-path)
+  - The Python Standard Library » Software Packaging and Distribution » venv — Creation of virtual environments » ... [VIRTUAL_ENV](https://docs.python.org/3/library/venv.html#:~:text=is%20active%2C%20the-,VIRTUAL_ENV,-environment%20variable%20is)
 - [Installing with get-pip.py](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
 - [User Guide](https://pip.pypa.io/en/stable/user_guide/)
-- [Github: Releases](https://github.com/pypa/pip/releases)
-- [How do I find the location of my Python site-packages directory?](https://stackoverflow.com/questions/122327/how-do-i-find-the-location-of-my-python-site-packages-directory)
-- [What is the purpose of “pip install --user …”?](https://stackoverflow.com/questions/42988977/what-is-the-purpose-of-pip-install-user)
+- [pypa/pip/releases](https://github.com/pypa/pip/releases)
+- [How do I find the location of my Python site-packages directory?](https://stackoverflow.com/q/122327)
+- [What is the purpose of “pip install --user …”?](https://stackoverflow.com/q/42988977)
 - [Default to --user #1668 @ Github](https://github.com/pypa/pip/issues/1668)
+- [How do I find out my python path using python?](https://stackoverflow.com/q/1489599/)
+- [Modern Python Environments - dependency and workspace management](https://testdriven.io/blog/python-environments/)
 
 ## Virtual environments
 
