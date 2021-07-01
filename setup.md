@@ -825,7 +825,7 @@ Deactive HiDPI Daemon if CPU spike without no reason
 
 In `v1` a set of keys in a specific order didn't make easy my shortcuts, reason why I take the decision to remap for my specific needs.
 
-Retrieve info about keycaps
+[Print current keymap table](https://manpages.ubuntu.com/manpages/focal/en/man1/xmodmap.1.html#:~:text=the%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20standard%20output.-,-pke,-This%20%20option%20%20indicates)
 
 ```bash
 $ xmodmap -pke > .Xmodmap
@@ -841,14 +841,23 @@ Related links
 - [How to remap or swap special keyboard keys in Linux?](https://ictsolved.github.io/remap-key-in-linux/)
 - [Remap keys in the keyboard in Ubuntu](https://dev.to/0xbf/remap-keys-in-the-keyboard-in-ubuntu-5a36)
 
-Map:
-- `home` -> `del`
-- `end` -> `home`
-- `pgup` -> `end`
-- `pgdn` -> `pgup`
-- `del` -> `pgdown`
+Problem:
 
-I use two `.desktop` files for this
+Change default behaviour of keycodes: `home`, `end`, `pgup`, `pgdn`, and `del`.
+
+Goal:
+
+before | after
+-------|---------
+`home` | `del`
+`end`  | `home`
+`pgup` | `end`
+`pgdn` | `pgup`
+`del`  | `pgdown`
+
+Solution 1:
+
+Use two `.desktop` files for this
 
 Create `$HOME/.local/share/applications/keychronk4map-apply.desktop`
 
@@ -872,48 +881,72 @@ Terminal=false
 Type=Application
 ```
 
-Create `$HOME/bin/keychronk4map-apply.sh`
-
-```bash
-xmodmap -e "keycode 110 = Delete NoSymbol Delete NoSymbol Delete" && \
-xmodmap -e "keycode 115 = Home NoSymbol Home NoSymbol Home" && \
-xmodmap -e "keycode 112 = End NoSymbol End NoSymbol End" && \
-xmodmap -e "keycode 117 = Prior NoSymbol Prior NoSymbol Prior" && \
-xmodmap -e "keycode 119 = Next NoSymbol Next NoSymbol Next"
-```
-
-Create `$HOME/bin/keychronk4map-rollback.sh`
-
-```bash
-xmodmap -e "keycode 110 = Home NoSymbol Home NoSymbol Home" && \
-xmodmap -e "keycode 115 = End NoSymbol End NoSymbol End" && \
-xmodmap -e "keycode 112 = Prior NoSymbol Prior NoSymbol Prior" && \
-xmodmap -e "keycode 117 = Next NoSymbol Next NoSymbol Next" && \
-xmodmap -e "keycode 119 = Delete NoSymbol Delete NoSymbol Delete"
-```
-
-Assign execution permissions to scripts
-
-```bash
-$ chmod u+x $HOME/bin/keychronk4map-apply.sh
-$ chmod u+x $HOME/bin/keychronk4map-rollback.sh
-```
-
 Build cache database of MIME types handled by desktop files
 
 ```bash
 $ update-desktop-database $HOME/.local/share/applications/
 ```
 
+Solution 2:
+
+Create `$HOME/bin/keychronk4map-apply.sh`
+
+```bash
+xmodmap -e "keycode 110 = Delete NoSymbol Delete NoSymbol Delete" && \
+  xmodmap -e "keycode 115 = Home NoSymbol Home NoSymbol Home" && \
+  xmodmap -e "keycode 112 = End NoSymbol End NoSymbol End" && \
+  xmodmap -e "keycode 117 = Prior NoSymbol Prior NoSymbol Prior" && \
+  xmodmap -e "keycode 119 = Next NoSymbol Next NoSymbol Next" && \
+  [ command -v notify-send 1>/dev/null 2>&1 ] && notify-send "Apply keychron map"
+```
+
+Create `$HOME/bin/keychronk4map-rollback.sh`
+
+```bash
+xmodmap -e "keycode 110 = Home NoSymbol Home NoSymbol Home" && \
+  xmodmap -e "keycode 115 = End NoSymbol End NoSymbol End" && \
+  xmodmap -e "keycode 112 = Prior NoSymbol Prior NoSymbol Prior" && \
+  xmodmap -e "keycode 117 = Next NoSymbol Next NoSymbol Next" && \
+  xmodmap -e "keycode 119 = Delete NoSymbol Delete NoSymbol Delete" && \
+  [ command -v notify-send 1>/dev/null 2>&1 ] && notify-send "Rollback keychron map"
+```
+
+Assign permission to execute by user to the scripts
+
+```bash
+$ chmod u+x $HOME/bin/keychronk4map-apply.sh
+$ chmod u+x $HOME/bin/keychronk4map-rollback.sh
+```
+
+Edit actual user crontab
+
+```shell
+$ crontab -u $USER -e
+```
+
+Add next cron jobs
+
+```shell
+@reboot       $HOME/bin/keychronk4map-apply.sh
+0,30 * * * *  $HOME/bin/keychronk4map-apply.sh
+```
+
+Problem:
+
+`f1` to `f12` has multimedia keycodes as priority
+
+Solution:
+
 Remap `f1` to `f12` from multimedia keycodes to functional keycodes
 - [adam-savard/keychron-k2-function-keys-linux](https://github.com/adam-savard/keychron-k2-function-keys-linux) - A small script to allow the Keychron K2 Keyboard to boot up with function keys enabled by default.
 
-Solution to `print screen` featur, map `ksnip` to `f3`
+Problem:
 
-TODO
-- add  `.desktop` files
-- add script to load at startup application
-    - everytime when start run `keychronk4map-apply.sh`
+`print screen` keycode missing
+
+Solution:
+
+Map `ksnip` to `f3` keycode
 
 ## Revert partial upgrade PopOS verison
 
