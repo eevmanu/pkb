@@ -1262,6 +1262,58 @@
     ```
 
 
+## Crontab
+
+[command manual](https://manpages.ubuntu.com/manpages/focal/en/man1/crontab.1.html) - [file format manual](https://manpages.ubuntu.com/manpages/focal/en/man5/crontab.5.html)
+
+[Where is the cron / crontab log?](https://askubuntu.com/questions/56683/where-is-the-cron-crontab-log)
+
+```shell
+$ grep CRON /var/log/syslog
+$ grep -i CRON /var/log/syslog
+```
+
+[How to set up a root cron job properly](https://askubuntu.com/questions/419548/how-to-set-up-a-root-cron-job-properly)
+
+```shell
+$ crontab -e
+
+$ sudo crontab -e
+```
+
+[What is the correct way to edit a crontab file?](https://askubuntu.com/questions/609850/what-is-the-correct-way-to-edit-a-crontab-file)
+
+```shell
+$ crontab -l
+```
+
+[Why crontab scripts are not working?](https://askubuntu.com/questions/23009/why-crontab-scripts-are-not-working)
+
+```shell
+$ crontab -e
+
+* * * * * env > /tmp/env.output
+
+$ env > tmp.env
+
+# check differences between $PATH and $SHELL
+```
+
+[Changing default crontab editor](https://askubuntu.com/questions/55022/changing-default-crontab-editor)
+
+[How to run a cron job using the sudo command](https://askubuntu.com/questions/173924/how-to-run-a-cron-job-using-the-sudo-command)
+
+It's a bad idea.
+
+[Verify if crontab works](https://askubuntu.com/questions/85558/verify-if-crontab-works)
+
+```shell
+$ service cron status
+$ service cron stop
+$ service cron start
+```
+
+[How do you set the timezone for crontab?](https://askubuntu.com/questions/54364/how-do-you-set-the-timezone-for-crontab)
 
 ## Resources
 
