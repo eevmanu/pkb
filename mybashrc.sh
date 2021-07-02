@@ -186,7 +186,7 @@ function parse_git_dirty {
   fi
 }
 
-function custom_prompt {
+function custom_prompt_as_before {
   # when using virtual envs
   # match string until first space so could catch another string
   # input  👉 (.venv) \[\033[38;5;21m\]\u\[\033[00m\]\[\033[38;5;33m\]@\[\033[00m\]\[\033[38;5;13m\]\h\[\033[00m\] \[\033[38;5;36m\]\w\[\033[00m\]>
@@ -197,39 +197,29 @@ function custom_prompt {
     ENV_NAME=$TMP_ENV_NAME
   fi
 
-  # sudo apt install athena-jot
-  # PS1="\[\033[38;5;$(jot -r 1 1 256)m\]\u\[\033[00m\]"
-  # PS1="$PS1\[\033[38;5;$(jot -r 1 1 256)m\]@\[\033[00m\]"
-  # PS1="$PS1\[\033[38;5;$(jot -r 1 1 256)m\]\h\[\033[00m\] "
-  # PS1="$PS1\[\033[38;5;$(jot -r 1 1 256)m\]\w\[\033[00m\]> "
-
-  # with shuf
-  # PS1="\[\033[38;5;$(shuf -i1-256 -n1)m\]\u\[\033[00m\]"
-  # PS1="$PS1\[\033[38;5;$(shuf -i1-256 -n1)m\]@\[\033[00m\]"
-  # PS1="$PS1\[\033[38;5;$(shuf -i1-256 -n1)m\]\h\[\033[00m\] "
-  # PS1="$PS1\[\033[38;5;$(shuf -i1-256 -n1)m\]\w\[\033[00m\]> "
-
   # with RANDOM
-  # PS1=""
-  # PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]\u\[\033[00m\]"
-  # PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]@\[\033[00m\]"
-  # PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]\h\[\033[00m\]"
-  # PS1="$PS1 "
-  # PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\][\w]\[\033[00m\]"
+  PS1=""
+  PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]\u\[\033[00m\]"
+  PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]@\[\033[00m\]"
+  PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\]\h\[\033[00m\]"
+  PS1="$PS1 "
+  PS1="$PS1\[\033[38;5;$(($(($RANDOM%$256))+1))m\][\w]\[\033[00m\]"
 
   # DT="\D{%Y-%m-%d} \t\[$(tput sgr0)\]"
   DT="\t\[$(tput sgr0)\]"
 
-  # if [ ! -z "$ENV_NAME" -a "$ENV_NAME" != " " ]; then
-  #   # echo "$ENV_NAME is not null or space"
-  #   PS1="$ENV_NAME $DT $PS1 \`parse_git_branch\`"
-  # else
-  #   # echo "$ENV_NAME is null or space"
-  #   PS1="$DT $PS1 \`parse_git_branch\`"
-  # fi
+  if [ ! -z "$ENV_NAME" -a "$ENV_NAME" != " " ]; then
+    # echo "$ENV_NAME is not null or space"
+    PS1="$ENV_NAME $DT $PS1 \`parse_git_branch\`"
+  else
+    # echo "$ENV_NAME is null or space"
+    PS1="$DT $PS1 \`parse_git_branch\`"
+  fi
 
-  # PS1="$PS1> "
+  PS1="$PS1> "
+}
 
+function custom_prompt {
   # https://tldp.org/HOWTO/Bash-Prompt-HOWTO/bash-prompt-escape-sequences.html
   # \e == \033
 
@@ -270,12 +260,15 @@ function custom_prompt {
   PS1+="${BG_CYAN}👋" # print OS icon
 
   PS1+="${BG_CYAN} "
+  # DT="\D{%Y-%m-%d} \t\[$(tput sgr0)\]"
+  DT="\t\[$(tput sgr0)\]"
   PS1+="${BG_CYAN}${FG_BLACK}${DT}${FMT_NORMAL}"
 
-  if [ ! -z "$ENV_NAME" -a "$ENV_NAME" != " " ]; then
-    # echo "$ENV_NAME is not null or space"
+  # not reliable enough
+  # https://stackoverflow.com/q/1871549
+  if [ ! -z "$VIRTUAL_ENV" -a "$VIRTUAL_ENV" != " " ]; then
     PS1+="${BG_CYAN} "
-    PS1+="${BG_CYAN}${FG_BRIGHT_WHITE}${ENV_NAME}${FMT_NORMAL}"
+    PS1+="${BG_CYAN}${FG_BRIGHT_WHITE}($(basename ${VIRTUAL_ENV}))${FMT_NORMAL}"
   fi
 
   if command -v pyenv 1>/dev/null 2>&1; then
@@ -323,6 +316,7 @@ function custom_prompt {
   PS1+="${FG_CYAN}\\$ " # print prompt
   PS1+="${FMT_RESET}"
 }
+# PROMPT_COMMAND=custom_prompt_as_before
 PROMPT_COMMAND=custom_prompt
 
 # ===============================================
