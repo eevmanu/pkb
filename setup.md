@@ -837,9 +837,31 @@ Detect keycode I'm pressing
 $ xev -event keyboard
 ```
 
-Related links
+References
+
 - [How to remap or swap special keyboard keys in Linux?](https://ictsolved.github.io/remap-key-in-linux/)
 - [Remap keys in the keyboard in Ubuntu](https://dev.to/0xbf/remap-keys-in-the-keyboard-in-ubuntu-5a36)
+- [What is the Mode_switch modifier for?](https://unix.stackexchange.com/q/55076)
+- [ArchLinux - xmodmap](https://wiki.archlinux.org/title/xmodmap)
+  - [ArchLinux - X keyboard extension](https://wiki.archlinux.org/title/X_keyboard_extension)
+    - all eight keysym are available for the US(intl)
+  - [Linux: xmodmap Tutorial](http://xahlee.info/linux/linux_xmodmap_tutorial.html)
+  - [Deskthority WIKI - Xmodmap](https://deskthority.net/wiki/Xmodmap)
+
+  ```
+  1 Key
+  2 Shift+Key
+  3 Mode_switch+Key
+  4 Mode_switch+Shift+Key
+  5 ISO_Level3_Shift+Key
+  6 ISO_Level3_Shift+Shift+Key
+  ```
+
+- [Accessing Columns 5-8 of xmodmap](https://askubuntu.com/q/372263)
+  - `Ctrl Alt F3`
+- [“xmodmap -pke” shows more than 6 columns](https://unix.stackexchange.com/q/299258)
+
+#### Problems
 
 Problem:
 
@@ -855,60 +877,42 @@ before | after
 `pgdn` | `pgup`
 `del`  | `pgdown`
 
-Solution 1:
+Solution:
 
-Use two `.desktop` files for this
-
-Create `$HOME/.local/share/applications/keychronk4map-apply.desktop`
-
-```ini
-[Desktop Entry]
-Name=Apply Keychron K4 keycap map
-Description=Change map on key caps to adapt change on my keychron k4 v1
-Exec=xmodmap -e "keycode 110 = Delete NoSymbol Delete NoSymbol Delete" && xmodmap -e "keycode 115 = Home NoSymbol Home NoSymbol Home" && xmodmap -e "keycode 112 = End NoSymbol End NoSymbol End" && xmodmap -e "keycode 117 = Prior NoSymbol Prior NoSymbol Prior" && xmodmap -e "keycode 119 = Next NoSymbol Next NoSymbol Next"
-Terminal=false
-Type=Application
-```
-
-Create `$HOME/.local/share/applications/keychronk4map-rollback.desktop`
-
-```ini
-[Desktop Entry]
-Name=Rollback keychron k4 keycap map
-Description=Change map to normal map instead of adapt for specific use on my keychron k4 v1 keyboard
-Exec=xmodmap -e "keycode 110 = Home NoSymbol Home NoSymbol Home" && xmodmap -e "keycode 115 = End NoSymbol End NoSymbol End" && xmodmap -e "keycode 112 = Prior NoSymbol Prior NoSymbol Prior" && xmodmap -e "keycode 117 = Next NoSymbol Next NoSymbol Next" && xmodmap -e "keycode 119 = Delete NoSymbol Delete NoSymbol Delete"
-Terminal=false
-Type=Application
-```
-
-Build cache database of MIME types handled by desktop files
-
-```bash
-$ update-desktop-database $HOME/.local/share/applications/
-```
-
-Solution 2:
+This solution assume `$HOME/bin` is part of your `$PATH`
 
 Create `$HOME/bin/keychronk4map-apply.sh`
 
 ```bash
-xmodmap -e "keycode 110 = Delete NoSymbol Delete NoSymbol Delete" && \
-  xmodmap -e "keycode 115 = Home NoSymbol Home NoSymbol Home" && \
-  xmodmap -e "keycode 112 = End NoSymbol End NoSymbol End" && \
-  xmodmap -e "keycode 117 = Prior NoSymbol Prior NoSymbol Prior" && \
-  xmodmap -e "keycode 119 = Next NoSymbol Next NoSymbol Next" && \
-  [ command -v notify-send 1>/dev/null 2>&1 ] && notify-send "Apply keychron map"
+set -eu
+# set -eux
+
+export DISPLAY=:1 && \
+  export XAUTHORITY=/run/user/$(id -u)/gdm/Xauthority && \
+  /usr/bin/xmodmap -e "keycode 110 = Delete NoSymbol Delete NoSymbol Delete" && \
+  /usr/bin/xmodmap -e "keycode 115 = Home NoSymbol Home NoSymbol Home" && \
+  /usr/bin/xmodmap -e "keycode 112 = End NoSymbol End NoSymbol End" && \
+  /usr/bin/xmodmap -e "keycode 117 = Prior NoSymbol Prior NoSymbol Prior" && \
+  /usr/bin/xmodmap -e "keycode 119 = Next NoSymbol Next NoSymbol Next" && \
+  [ -e /usr/bin/notify-send ] && \
+  XDG_RUNTIME_DIR=/run/user/$(id -u) /usr/bin/notify-send "Apply keychron map"
 ```
 
 Create `$HOME/bin/keychronk4map-rollback.sh`
 
 ```bash
-xmodmap -e "keycode 110 = Home NoSymbol Home NoSymbol Home" && \
-  xmodmap -e "keycode 115 = End NoSymbol End NoSymbol End" && \
-  xmodmap -e "keycode 112 = Prior NoSymbol Prior NoSymbol Prior" && \
-  xmodmap -e "keycode 117 = Next NoSymbol Next NoSymbol Next" && \
-  xmodmap -e "keycode 119 = Delete NoSymbol Delete NoSymbol Delete" && \
-  [ command -v notify-send 1>/dev/null 2>&1 ] && notify-send "Rollback keychron map"
+set -eu
+# set -eux
+
+export DISPLAY=:1 && \
+  export XAUTHORITY=/run/user/$(id -u)/gdm/Xauthority && \
+  /usr/bin/xmodmap -e "keycode 110 = Home NoSymbol Home NoSymbol Home" && \
+  /usr/bin/xmodmap -e "keycode 115 = End NoSymbol End NoSymbol End" && \
+  /usr/bin/xmodmap -e "keycode 112 = Prior NoSymbol Prior NoSymbol Prior" && \
+  /usr/bin/xmodmap -e "keycode 117 = Next NoSymbol Next NoSymbol Next" && \
+  /usr/bin/xmodmap -e "keycode 119 = Delete NoSymbol Delete NoSymbol Delete" && \
+  [ -e /usr/bin/notify-send ] && \
+  XDG_RUNTIME_DIR=/run/user/$(id -u) /usr/bin/notify-send "Rollback keychron map"
 ```
 
 Assign permission to execute by user to the scripts
@@ -927,9 +931,40 @@ $ crontab -u $USER -e
 Add next cron jobs
 
 ```shell
-@reboot       $HOME/bin/keychronk4map-apply.sh
-0,30 * * * *  $HOME/bin/keychronk4map-apply.sh
+# complete /.../ 👇
+@reboot       /.../keychronk4map-apply.sh >>/tmp/keychronk4map.log 2>&1
+0,30 * * * *  /.../keychronk4map-apply.sh >>/tmp/keychronk4map.log 2>&1
 ```
+
+Check logs
+
+```shell
+$ tail -f /tmp/keychronk4map.log
+$ grep -i keychronk4map /var/log/syslog
+$ grep CRON /var/log/syslog
+$ grep -i CRON /var/log/syslog
+$ journalctl -u cron.service --since="2021-07-02 10:52:50" -r
+$ journalctl -t CROND --since="2021-07-02 10:52:50" -r
+```
+
+In case you want to debug your cron job script, be sure it runs with $SHELL used by crontab, which most of the cases is `/bin/sh`
+
+```shell
+$ ls -la /bin/sh
+lrwxrwxrwx 1 root root 4 Apr  3  2020 /bin/sh -> dash
+$ dash
+$ sh
+# after command below, you can test any command if it would works on crontab shell
+```
+
+References:
+
+- [Cron with notify-send](https://stackoverflow.com/q/16519673)
+- [Notify-send doesn't work from crontab](https://askubuntu.com/q/298608)
+- [How to check if a file exists in a shell script](https://stackoverflow.com/q/40082346)
+- [Where is the cron / crontab log?](https://askubuntu.com/q/56683)
+- [“set -e -o pipefail” not working on bash script on Ubuntu 16](https://askubuntu.com/q/886537)
+- [“(CRON) info (No MTA installed, discarding output)” error in the syslog](https://askubuntu.com/q/222512)
 
 Problem:
 
