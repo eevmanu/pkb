@@ -87,6 +87,17 @@ $ git config --local pull.rebase false
 # git config --local pull.ff false
 ```
 
+References:
+
+- [How to deal with this git warning? “Pulling without specifying how to reconcile divergent branches is discouraged”](https://stackoverflow.com/q/62653114/)
+- [Pull request merge strategies](https://confluence.atlassian.com/bitbucketserver/pull-request-merge-strategies-844499235.html)
+    - from `main` to `featureX`: Rebase, fast-forward / Rebase, merge
+    - from `featureX` to `main`: Squash
+- [Git tips: Use only fast-forward merges (with rebase)](https://medium.com/@mvuksano/git-tips-use-only-fast-forward-merges-with-rebase-c80c9d260a83)
+- [git fast-forward merge vs git rebase, same thing?](https://www.reddit.com/r/git/comments/56ie0x/git_fastforward_merge_vs_git_rebase_same_thing/)
+
+## Merge tool
+
 Instructions related to use `merge` as diff tool
 
 ```bash
