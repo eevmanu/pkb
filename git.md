@@ -591,6 +591,20 @@ alias gti="git"
 - [git-tips/tips](https://github.com/git-tips/tips) - Most commonly used git tips and tricks. http://git.io/git-tips
 - [agis/git-style-guide](https://github.com/agis/git-style-guide)
 - [Operaciones Git - Git Tips](https://gist.github.com/jelcaf/1404619) - Mini-trucos de Git para facilitarme la tarea
+### Stack Overflow Q&A
+
+- [Git merge master into feature branch](https://stackoverflow.com/q/16955980/)
+- [Git/GitHub branching standards & conventions](https://gist.github.com/digitaljhelms/4287848)
+- [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
+- [Git pull/fetch with refspec differences](https://stackoverflow.com/q/7169103/)
+- [How do I delete a Git branch locally and remotely?](https://stackoverflow.com/q/2003505/)
+- [How do I force “git pull” to overwrite local files?](https://stackoverflow.com/q/1125968/)
+- [How do I revert a Git repository to a previous commit?](https://stackoverflow.com/q/4114095/)
+- [How do I check out a remote Git branch?](https://stackoverflow.com/q/1783405/)
+- [How do I undo 'git add' before commit?](https://stackoverflow.com/q/348170/)
+- [How to recover a dropped stash in Git?](https://stackoverflow.com/q/89332/)
+- [Visualize branches on GitHub](https://stackoverflow.com/q/27469952)
+
 - [Git Command Explorer](https://gitexplorer.com/) - Find the right commands you need without digging through the web.
 - [git cheat sheet](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf)
 - [Easily rename your Git default branch from 'master' to 'main' ](https://twitter.com/shanselman/status/1269838158650195968)
