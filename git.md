@@ -206,7 +206,7 @@ https://backlog.com/git-tutorial/using-branches/git-switch-branches/
 
     ```bash
     # in case you want to add recent changes to last commit without changing commit message
-    git commit --amend --no-edit
+    $ git commit --amend --no-edit
     ```
 
 [git checkout](https://git-scm.com/docs/git-checkout)
@@ -221,6 +221,8 @@ https://backlog.com/git-tutorial/using-branches/git-switch-branches/
 
     ```bash
     $ git checkout master
+
+    # or new name of master: main
     $ git checkout main
     ```
 
@@ -252,7 +254,7 @@ https://backlog.com/git-tutorial/using-branches/git-switch-branches/
     $ git branch -m {{ current branch name }} {{ new branch name }}
     ```
 
-- delete branch, locally (not on remotes)
+- delete branch on local (not on remotes)
 
     ```bash
     # -D, Shortcut for --delete --force
@@ -261,16 +263,24 @@ https://backlog.com/git-tutorial/using-branches/git-switch-branches/
 
 [git fetch](https://git-scm.com/docs/git-fetch)
 
-- fetch with all remotes and remove untracked branch (ones already deleted)
+- Before fetching, remove any remote-tracking references that no longer exist on the remote "origin"
 
     ```bash
-    $ git fetch --all && git fetch --prune
+    $ git fetch --dry-run --prune origin
+    $ git fetch --prune --progress origin
+    ```
+
+- Fetch all remotes
+
+    ```bash
+    $ git fetch --all --tags --dry-run
+    $ git fetch --all --tags --progress
     ```
 
 - fetch with a specific remote and remove untracked branch (ones already deleted)
 
     ```bash
-    $ git fetch {{ remote name }} --prune
+    $ git fetch --prune {{ remote name }}
     ```
 
 [git clean](https://git-scm.com/docs/git-clean)
@@ -285,9 +295,21 @@ https://backlog.com/git-tutorial/using-branches/git-switch-branches/
     ```
 
 - not remove, just **simulate**
+
     ```bash
     # -n --dry-run
     $ git clean -dfn
+    ```
+
+- remove files without taking into consideration `.gitignore`
+
+    ```bash
+    # This allows removing all untracked files, including build products
+    # This can be used to create a pristine working directory to test a clean build.
+    $ git clean -dfxn
+
+    # without dry run
+    $ git clean -dfx
     ```
 
 - remove only files ignored by Git, considering files and folders on `.gitignore`
@@ -296,6 +318,9 @@ https://backlog.com/git-tutorial/using-branches/git-switch-branches/
     # -X
     # This may be useful to rebuild everything from scratch, but keep manually created files.
     $ git clean -dfXn
+
+    # without dry run
+    $ git clean -dfX
     ```
 
 [git log](https://git-scm.com/docs/git-log)
@@ -319,7 +344,7 @@ https://backlog.com/git-tutorial/using-branches/git-switch-branches/
 -  search a string on whole git database, [git log -S{search term}](https://git-scm.com/docs/git-log#Documentation/git-log.txt--Sltstringgt)
 
     ```bash
-    $ git log -S""
+    $ git log -S"{{ search term }}"
     ```
 
 [git show](https://git-scm.com/docs/git-show)
@@ -407,6 +432,12 @@ https://backlog.com/git-tutorial/using-branches/git-switch-branches/
     $ git remote -v
     ```
 
+- change remote - [How to change the URI (URL) for a remote Git repository?](https://stackoverflow.com/q/2432764/)
+
+    ```bash
+    $ git remote set-url origin {{ url }}
+    ```
+
 [git push](https://git-scm.com/docs/git-push)
 
 - push all branch to remote server
@@ -422,7 +453,35 @@ https://backlog.com/git-tutorial/using-branches/git-switch-branches/
     $ git push origin --delete {{ branch name }}
     ```
 
+[git pull](https://git-scm.com/docs/git-pull)
 
+- runs `git fetch` with the given parameters and calls `git merge` to merge the retrieved branch heads into the current branch
+- With `--rebase`, it runs `git rebase` instead of git merge
+
+- default version
+
+    ```bash
+    $ git pull origin <src (in origin remote)>:<dest (in my local machine)>
+    $ git pull origin master:master
+    $ git pull origin main:main
+    ```
+
+- Merge remote branch `next` into current branch:
+
+    ```bash
+    $ git pull origin next
+
+    $ git fetch origin
+    $ git merge origin/next
+    ```
+
+[git merge](https://git-scm.com/docs/git-merge)
+
+- Merging local `master` branch into current branch
+
+    ```bash
+    $ git merge master
+    ```
 
 [git diff](https://git-scm.com/docs/git-diff)
 
@@ -448,24 +507,89 @@ https://backlog.com/git-tutorial/using-branches/git-switch-branches/
     $ git diff --color-words=. /path/to/file1 /path/to/file2
     ```
 
-[git reset](https://git-scm.com/docs/git-reset)
+[git restore](https://git-scm.com/docs/git-restore)
 
-- **hard** reset
+- remove unstashed changes to get file version from latest commit
 
     ```bash
-    # --hard Resets the index and working tree.
-    git reset --hard {{ commit id }}
-    git reset --hard {{ remote name }}/{{ branch name }}
+    $ git restore path/to/file
     ```
 
-- **soft** reset
+[git reset](https://git-scm.com/docs/git-reset)
+
+- **mixed** mode
+
+    ```bash
+    # implicit
+    $ git reset HEAD~
+
+    # explicit
+    $ git reset HEAD~
+    ```
+
+- **soft** mode
 
     ```bash
     # un-commit last un-pushed git commit without losing the changes
-    git reset --soft HEAD~1
+    $ git reset --soft HEAD~1
     ```
 
-Extras
+- **hard** mode
+
+    ```bash
+    # --hard Resets the index and working tree.
+    $ git reset --hard {{ commit id }}
+    $ git reset --hard {{ remote name }}/{{ branch name }}
+
+    $ git reset --hard HEAD~1
+    ```
+
+References:
+
+- [How do I undo the most recent local commits in Git?](https://stackoverflow.com/q/927358/)
+- [What's the difference between HEAD^ and HEAD~ in Git?](https://stackoverflow.com/q/2221658/)
+
+[git rev-parse](https://git-scm.com/docs/git-rev-parse)
+
+- get latest commit from actual branch
+
+    ```bash
+    $ git rev-parse --short HEAD
+    iao90oi
+    ```
+
+[git rebase](https://git-scm.com/docs/git-rebase)
+
+- [When do you use Git rebase instead of Git merge? [closed]](https://stackoverflow.com/q/804115/)
+
+```bash
+$ git branch --show-current
+main
+
+$ git checkout cool-feature
+$ git rebase main
+
+$ git branch --show-current
+cool-feature
+
+$ git checkout main
+$ git merge cool-feature
+```
+
+[git rm](https://git-scm.com/docs/git-rm)
+
+```bash
+$ git rm -r --cached ..
+```
+
+[gitignore](https://git-scm.com/docs/gitignore)
+
+- An asterisk "`*`" matches anything except a slash.
+- A leading "`**`" followed by a slash "`/`" means match in all directories.
+- A trailing "`/**`" matches everything inside.
+- A slash followed by two consecutive asterisks then ("`a/**/b`") a slash matches zero or more directories.
+
+### Extras
 
 ```bash
 # set VS Code for git
@@ -478,8 +602,10 @@ git config --global --unset gui.editor
 
 # set short command for "git status"
 git config --global alias.st status
+git config --local alias.st status
 # and to unset it
 git config --global --unset alias.st
+git config --local --unset alias.st
 
 # avoid asking to reenter password for 1 hour = 3600 sec, local setting
 git config --local credential.helper "cache --timeout=3600"
