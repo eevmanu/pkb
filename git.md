@@ -1,6 +1,29 @@
+<!-- omit in toc -->
 # Git
 
-## Rules for commit message
+<!-- omit in toc -->
+## Table of contents
+
+- [Commit message: best practices](#commit-message-best-practices)
+- [Manage configs](#manage-configs)
+- [My configs](#my-configs)
+- [Merge strategy](#merge-strategy)
+- [Merge tool](#merge-tool)
+- [Commands](#commands)
+  - [Extras](#extras)
+- [Branch-based workflow / strategy](#branch-based-workflow--strategy)
+- [How to contribute](#how-to-contribute)
+- [Github](#github)
+  - [Setup SSH Key](#setup-ssh-key)
+  - [Setup GPG Key](#setup-gpg-key)
+  - [Project management features](#project-management-features)
+- [References](#references)
+  - [Git official docs - important concepts](#git-official-docs---important-concepts)
+  - [Github repos & gists](#github-repos--gists)
+  - [Stack Overflow Q&A](#stack-overflow-qa)
+  - [Pending](#pending)
+
+## Commit message: best practices
 
 - Separate **subject** from **body** with a *blank line*
 - Limit the **subject** (max 70 characters)
@@ -21,6 +44,7 @@ References:
 - [commitizen-tools/commitizen](https://github.com/commitizen-tools/commitizen) - Create committing rules for projects 🚀 auto bump versions ⬆️ and auto changelog generation 📂
 - [Can you recommend a good commit message template / guidelines to enforce in the company? [closed]](https://softwareengineering.stackexchange.com/q/42110)
 
+## Manage configs
 
 [Docs: git config](https://git-scm.com/docs/git-config)
 
@@ -57,6 +81,8 @@ $ git config --system --unset {{ property key }}
 $ git config --system --unset user.name
 ```
 
+## My configs
+
 Generic local config for any github repo (not work related)
 
 ```bash
@@ -77,14 +103,16 @@ $ git config --local user.email {{ work email }}
 # e.g.:
 ```
 
-Specify **merge** strategy by default when `git pull`
+## Merge strategy
+
+Specify **merge** strategy by default when `git pull`, avoid a warning on every `git pull` since version `2.27`
 
 ```bash
 # Pulling without specifying how to reconcile divergent branches is discouraged.
 $ git config --local pull.rebase false
 
-# TODO try it
-# git config --local pull.ff false
+# if `main` branch is not being altered locally, is safe to choose this option
+$ git config --local pull.ff only
 ```
 
 References:
@@ -173,11 +201,13 @@ $ git config --local merge.guitool {{ }}
         $ git config --global --unset difftool.meld_flatpak.cmd
         ```
 
-- Related links:
-    - [How to set up a flatpak version of Meld as git mergetool?](https://stackoverflow.com/questions/55881383/how-to-set-up-a-flatpak-version-of-meld-as-git-mergetool)
-    - [How to configure “flatpak run org.gnome.meld” as git diff.tool and merge.tool](https://askubuntu.com/questions/1140455/how-to-configure-flatpak-run-org-gnome-meld-as-git-diff-tool-and-merge-tool)
-    - [Using flatpak version of Meld as an external git diff tool fails #1423](https://github.com/flatpak/flatpak/issues/1423)
-    - [Allowing /tmp for git difftool #11](https://github.com/flathub/org.gnome.meld/issues/11)
+References:
+
+- [Setting up and using Meld as your git difftool and mergetool](https://stackoverflow.com/q/34119866)
+- [How to set up a flatpak version of Meld as git mergetool?](https://stackoverflow.com/q/55881383)
+- [How to configure “flatpak run org.gnome.meld” as git diff.tool and merge.tool](https://askubuntu.com/q/1140455)
+- [Using flatpak version of Meld as an external git diff tool fails #1423](https://github.com/flatpak/flatpak/issues/1423)
+- [Allowing /tmp for git difftool #11](https://github.com/flathub/org.gnome.meld/issues/11)
 
 ## Commands
 
