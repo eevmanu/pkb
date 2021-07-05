@@ -505,73 +505,100 @@ alias gti="git"
 
 ## Github
 
-### Setup
+### Setup SSH Key
 
-#### SSH Key
+Check in your github account any [SSH keys](https://github.com/settings/keys), more info [here](https://docs.github.com/en/github/authenticating-to-github/checking-for-existing-ssh-keys)
 
-- Check in your github account any [SSH keys](https://github.com/settings/keys), more info [here](https://docs.github.com/en/github/authenticating-to-github/checking-for-existing-ssh-keys)
+  ```bash
+  $ ls -la $HOME/.ssh
+  ```
 
-    ```bash
-    $ ls -la $HOME/.ssh
-    ```
+If don't have anyone, [generate one](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-- If don't have anyone, [generate one](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+  ```bash
+  $ ssh-keygen \
+      -t ed25519 \
+      -C "{{ your github username }}@users.noreply.github.com" \
+      -f $HOME/.ssh/{{ name you want }}
 
-    ```bash
-    $ ssh-keygen \
-        -t rsa \
-        -b 4096 \
-        -C "{{ your github username }}@users.noreply.github.com" \
-        -f $HOME/.ssh/{{ name you want }}
+  # e.g.:
+  $ ssh-keygen \
+      -t rsa \
+      -b 4096 \
+      -C "eevmanu@users.noreply.github.com" \
+      -f $HOME/.ssh/github
 
-    # e.g.:
-    $ ssh-keygen \
-        -t rsa \
-        -b 4096 \
-        -C "eevmanu@users.noreply.github.com" \
-        -f $HOME/.ssh/github
+  $ ssh-keygen \
+      -t rsa \
+      -b 4096 \
+      -C "manu->digitalocean.com" \
+      -f $HOME/.ssh/digitalocean
 
-    # after that, create a good passphrase
-    ```
+  # after that, create a good passphrase
+  ```
 
-    - [ssh-keygen(1) - Linux man page](https://linux.die.net/man/1/ssh-keygen)
+  - [ssh-keygen(1) - Linux man page](https://linux.die.net/man/1/ssh-keygen)
 
-- If key was added in `$HOME/.ssh`, don't need to add that identity, otherwise, add it:
+Verify ssh agent is up
 
-    ```bash
-    $ ssh-add $HOME/.ssh/{{ name you want }}
+  ```bash
+  $ eval "$(ssh-agent -s)"
+  ```
 
-    # e.g.:
-    $ ssh-add $HOME/.ssh/id_rsa
-    ```
+If key was added in `$HOME/.ssh`, don't need to add that identity, otherwise, add it:
 
-- Verify which identities are attached to you ssh-agent
+  ```bash
+  $ ssh-add $HOME/.ssh/{{ name you want }}
 
-    ```bash
-    $ ssh-add -l
-    $ ssh-add -L
-    ```
+  # e.g.:
+  $ ssh-add $HOME/.ssh/id_rsa
+  ```
 
-    - [How to list keys added to ssh-agent with ssh-add?](https://unix.stackexchange.com/questions/58969/how-to-list-keys-added-to-ssh-agent-with-ssh-add)
-    - [ssh-add(1) - Linux man page](https://linux.die.net/man/1/ssh-add)
+Verify which identities are attached to you ssh-agent
 
-- If needed, to remove an identity from ssh agent
+  ```bash
+  $ ssh-add -l
+  $ ssh-add -L
+  ```
 
-    ```bash
-    $ ssh-add -d
-    $ ssh-add -D
-    ```
+  - [How to list keys added to ssh-agent with ssh-add?](https://unix.stackexchange.com/q/58969/)
+  - [ssh-add(1) - Linux man page](https://linux.die.net/man/1/ssh-add)
 
-- Add previous generated SSH key to GitHub, steps [here](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
+If needed, to remove an identity from ssh agent
 
-- [Test connection](https://docs.github.com/en/github/authenticating-to-github/testing-your-ssh-connection)
+  ```bash
+  $ ssh-add -d
+  $ ssh-add -D
+  ```
 
-    ```bash
-    $ ssh -T git@github.com
-    # enter your passphrase
-    ```
+Add previous generated SSH key to GitHub, steps [here](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 
-- If you want to change passphrase, check [here](https://docs.github.com/en/github/authenticating-to-github/working-with-ssh-key-passphrases)
+[Test connection](https://docs.github.com/en/github/authenticating-to-github/testing-your-ssh-connection)
+
+  ```bash
+  $ ssh -vT git@github.com
+  # if you have passphrase, enter it
+  # check in output which keys is trying to use
+  ```
+
+If you want to change passphrase, check [here](https://docs.github.com/en/github/authenticating-to-github/working-with-ssh-key-passphrases)
+
+Copy public portion of your SSH key secure
+
+  ```bash
+  $ xclip -sel clip < /.../{{ name of your key }}.pub
+
+  # e.g.:
+  $ xclip -sel clip < ~/.ssh/id_rsa.pub
+  ```
+
+References:
+
+- [Upgrade Your SSH Key to Ed25519](https://medium.com/risan/upgrade-your-ssh-key-to-ed25519-c6e8d60d3c54)
+- [ECDSA vs ECDH vs Ed25519 vs Curve25519](https://security.stackexchange.com/q/50878/)
+- [RSA vs. DSA for SSH authentication keys](https://security.stackexchange.com/q/5096/)
+- [Serious Applied Cryptography in 280 characters or less](https://twitter.com/spazef0rze/status/1329511286191820800)
+- [SafeCurves: choosing safe curves for elliptic-curve cryptography](https://safecurves.cr.yp.to/)
 
 ### Setup GPG Key
 
