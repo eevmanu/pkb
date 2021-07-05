@@ -503,6 +503,12 @@ Replace `gti` to `git` when miswrite, add to your `$HOME/.bashrc` or `$HOME/.pro
 alias gti="git"
 ```
 
+## How to contribute
+
+- [Gist: Keeping a fork up to date](https://gist.github.com/CristinaSolana/1885435)
+- [How to keep your Git-Fork up to date](https://stefanbauer.me/articles/how-to-keep-your-git-fork-up-to-date)
+- [Syncing a fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
+
 ## Github
 
 ### Setup SSH Key
