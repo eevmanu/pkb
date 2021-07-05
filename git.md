@@ -503,6 +503,19 @@ Replace `gti` to `git` when miswrite, add to your `$HOME/.bashrc` or `$HOME/.pro
 alias gti="git"
 ```
 
+## Branch-based workflow / strategy
+
+- [GitHub flow](https://guides.github.com/introduction/flow/)
+- [Three flow](https://www.nomachetejuggling.com/2017/04/09/a-different-branching-strategy/)
+- [Simplified Git flow](https://medium.com/goodtogoat/simplified-git-flow-5dc37ba76ea8)
+- [Release flow](https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/release-flow)
+- [Gitlab flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html)
+- [Git DMZ flow](https://gist.github.com/djspiewak/9f2f91085607a4859a66)
+- [Trunk based development](https://trunkbaseddevelopment.com/)
+- [Git flow](https://nvie.com/posts/a-successful-git-branching-model/)
+- [Git(flow) workflow for web development](https://softwareengineering.stackexchange.com/q/285908/)
+- [What are the pros and cons of git-flow vs github-flow? [closed]](https://stackoverflow.com/q/18188492/)
+
 ## How to contribute
 
 - [Gist: Keeping a fork up to date](https://gist.github.com/CristinaSolana/1885435)
