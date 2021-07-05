@@ -573,24 +573,39 @@ alias gti="git"
 
 - If you want to change passphrase, check [here](https://docs.github.com/en/github/authenticating-to-github/working-with-ssh-key-passphrases)
 
-#### GPG Key
+### Setup GPG Key
 
 <!-- TODO -->
 
 - [Managing commit signature verification](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification)
 
-### Resources
+### Project management features
 
+- [Github - Project Management](https://github.com/features/project-management/)
+- [Managing project boards](https://docs.github.com/en/github/managing-your-work-on-github/managing-project-boards)
+- [About project boards](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards)
+- [GitHub Project Management Tutorial - Setup GitHub Projects & Automations](https://www.youtube.com/watch?v=ff5cBkPg-bQ)
+
+## References
+
+### Git official docs - important concepts
+
+- [2.2 Git Basics - Recording Changes to the Repository](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
 - [2.4 Git Basics - Undoing Things](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things)
 - [3.1 Git Branching - Branches in a Nutshell](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
 - [7.7 Git Tools - Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified)
+
+### Github repos & gists
+
 - [tj/git-extras](https://github.com/tj/git-extras) - GIT utilities -- repo summary, repl, changelog population, author commit percentages and more
 - [awslabs/git-secrets](https://github.com/awslabs/git-secrets) - Prevents you from committing secrets and credentials into git repositories
 - [kamranahmedse/git-standup](https://github.com/kamranahmedse/git-standup) - Recall what you did on the last working day.
 - [tiimgreen/github-cheat-sheet](https://github.com/tiimgreen/github-cheat-sheet) - A list of cool features of Git and GitHub. http://git.io/sheet
 - [git-tips/tips](https://github.com/git-tips/tips) - Most commonly used git tips and tricks. http://git.io/git-tips
-- [agis/git-style-guide](https://github.com/agis/git-style-guide)
-- [Operaciones Git - Git Tips](https://gist.github.com/jelcaf/1404619) - Mini-trucos de Git para facilitarme la tarea
+- [agis/git-style-guide](https://github.com/agis/git-style-guide) - A Git Style Guide
+- [jelcaf/1404619](https://gist.github.com/jelcaf/1404619) - Git Tips - Mini-trucos de Git para facilitarme la tarea
+- [lisawolderiksen/f9747a3ae1e58e9daa7d176ab98f1bad](https://gist.github.com/lisawolderiksen/f9747a3ae1e58e9daa7d176ab98f1bad) - Add co-authors to Git commits
+
 ### Stack Overflow Q&A
 
 - [Git merge master into feature branch](https://stackoverflow.com/q/16955980/)
@@ -605,12 +620,17 @@ alias gti="git"
 - [How to recover a dropped stash in Git?](https://stackoverflow.com/q/89332/)
 - [Visualize branches on GitHub](https://stackoverflow.com/q/27469952)
 
+### Pending
+
 - [Git Command Explorer](https://gitexplorer.com/) - Find the right commands you need without digging through the web.
 - [git cheat sheet](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf)
 - [Easily rename your Git default branch from 'master' to 'main' ](https://twitter.com/shanselman/status/1269838158650195968)
     - [Easily rename your Git default branch from master to main](https://www.hanselman.com/blog/EasilyRenameYourGitDefaultBranchFromMasterToMain.aspx)
 - [A survey of git best practices](https://xdg.me/blog/a-survey-of-git-best-practices/)
-- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 - 2020-04-19 - [Git branch naming conventions](https://deepsource.io/blog/git-branch-naming-conventions/)
 - 2019-02-08 - [Best practices for using Git](https://deepsource.io/blog/git-best-practices/)
-- [Git merge master into feature branch](https://stackoverflow.com/questions/16955980/git-merge-master-into-feature-branch)
+- [Duplicating a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/duplicating-a-repository)
+- [! [remote rejected] errors after mirroring a git repository](https://stackoverflow.com/q/34265266/)
+- [Learn Git Branching](https://learngitbranching.js.org/)
+- [sdras/awesome-actions](https://github.com/sdras/awesome-actions)
+- [Working tree vs working directory](https://stackoverflow.com/q/39128500)
