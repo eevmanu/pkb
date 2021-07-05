@@ -8,10 +8,19 @@
 - Use the body to explain **why**, **for what**  and **how**
 - [Writing system software: code comments.](http://antirez.com/news/124) - [backup](https://web.archive.org/web/20200910150753/http://antirez.com/news/124)
 
-Related links
-- [RomuloOliveira/commit-messages-guide](https://github.com/RomuloOliveira/commit-messages-guide)
+References:
 
-## Config
+- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+- [RomuloOliveira/commit-messages-guide](https://github.com/RomuloOliveira/commit-messages-guide)
+- [conventional-commits/conventionalcommits.org](https://github.com/conventional-commits/conventionalcommits.org) - The conventional commits specification
+- [erlang/otp/wiki/writing-good-commit-messages](https://github.com/erlang/otp/wiki/writing-good-commit-messages) - Writing good commit messages
+- [joelparkerhenderson/git-commit-message](https://github.com/joelparkerhenderson/git-commit-message) - Git commit message: how to write a great git commit message and commit template for version control
+- [robertpainsi/b632364184e70900af4ab688decf6f53](https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53) - Commit message guidelines
+- [stephenparish/9941e89d80e2bc58a153](https://gist.github.com/stephenparish/9941e89d80e2bc58a153) - AngularJS Git Commit Message Conventions
+- [lisawolderiksen/a7b99d94c92c6671181611be1641c733](https://gist.github.com/lisawolderiksen/a7b99d94c92c6671181611be1641c733) - Use a Git commit message template to write better commit messages
+- [commitizen-tools/commitizen](https://github.com/commitizen-tools/commitizen) - Create committing rules for projects 🚀 auto bump versions ⬆️ and auto changelog generation 📂
+- [Can you recommend a good commit message template / guidelines to enforce in the company? [closed]](https://softwareengineering.stackexchange.com/q/42110)
+
 
 [Docs: git config](https://git-scm.com/docs/git-config)
 
