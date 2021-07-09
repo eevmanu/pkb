@@ -271,11 +271,18 @@ function custom_prompt {
     PS1+="${BG_CYAN}${FG_BRIGHT_WHITE}($(basename ${VIRTUAL_ENV}))${FMT_NORMAL}"
   fi
 
-  if command -v pyenv 1>/dev/null 2>&1; then
-    if [[ `pyenv version-name` != "system" ]] ; then
-      PYENV_VERSION="[🐍 `pyenv version-name`]"
+  if [ ! -z "$VIRTUAL_ENV" -a "$VIRTUAL_ENV" != " " ]
+  then
+    PYTHON_VERSION="[🐍 `python -c "print(__import__('sys').version.split(' ')[0])"`]"
+    PS1+="${BG_CYAN} "
+    PS1+="${BG_CYAN}${FG_BRIGHT_WHITE}${PYTHON_VERSION}${FMT_NORMAL}"
+  elif command -v pyenv 1>/dev/null 2>&1
+  then
+    if [[ `pyenv version-name` != "system" ]]
+    then
+      PYTHON_VERSION="[🐍 `pyenv version-name`]"
       PS1+="${BG_CYAN} "
-      PS1+="${BG_CYAN}${FG_BRIGHT_WHITE}${PYENV_VERSION}${FMT_NORMAL}"
+      PS1+="${BG_CYAN}${FG_BRIGHT_WHITE}${PYTHON_VERSION}${FMT_NORMAL}"
     fi
   fi
 
